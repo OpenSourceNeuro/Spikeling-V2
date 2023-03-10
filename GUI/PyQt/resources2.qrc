@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="resources2">
+    <file>resources/spike.gif</file>
+  </qresource>
+</RCC>

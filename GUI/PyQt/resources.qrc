@@ -1,0 +1,40 @@
+<RCC>
+  <qresource prefix="resources">
+    <file>resources/LEDOFF.png</file>
+    <file>resources/LEDON.png</file>
+    <file>resources/Spiky_Logo.png</file>
+    <file>resources/SN-Logo.png</file>
+    <file>resources/SoundOFF.png</file>
+    <file>resources/SoundON.png</file>
+    <file>resources/SizeGrip.png</file>
+    <file>resources/StimGen.png</file>
+    <file>resources/Spiky.png</file>
+    <file>resources/About.png</file>
+    <file>resources/Artboard 1.png</file>
+    <file>resources/DataAnalysis.png</file>
+    <file>resources/Drop.png</file>
+    <file>resources/DropMenuLeft.png</file>
+    <file>resources/DropMenuRight.png</file>
+    <file>resources/ex.png</file>
+    <file>resources/Exercices.png</file>
+    <file>resources/Exit.png</file>
+    <file>resources/Expand.png</file>
+    <file>resources/GitHub.png</file>
+    <file>resources/Help.png</file>
+    <file>resources/Hide.png</file>
+    <file>resources/Imaging.png</file>
+    <file>resources/Neuron.png</file>
+    <file>resources/MenuLeft.png</file>
+    <file>resources/MenuRight.png</file>
+    <file>resources/Reduce.png</file>
+    <file>resources/Stimulus.png</file>
+    <file>resources/Tutorial.png</file>
+    <file>resources/izhik.png</file>
+    <file>resources/StimFrequency.png</file>
+    <file>resources/StimStrenght.png</file>
+    <file>resources/under_construction.svg</file>
+    <file>resources/Baden-Logo.png</file>
+    <file>resources/ON-Logo.png</file>
+    <file>resources/TReND-Logo.png</file>
+  </qresource>
+</RCC>
