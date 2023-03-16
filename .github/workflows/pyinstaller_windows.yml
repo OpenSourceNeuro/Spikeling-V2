@@ -10,10 +10,11 @@ jobs:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
         with:
-          python_ver: '3.8'
-          spec: 'GUI\PyQt\Main.spec'
+          python_ver: '3.11'
+          # spec: 'GUI\PyQt\Main.spec'
           requirements: 'GUI\PyQt\requirements.txt'
           #upload_exe_with_name: 'Spikeling'
-          options:  -F, -n Spikeling, -i GUI\PyQt\Spikeling.ico
+          options:  -F, # -n Spikeling   #, -i GUI/PyQt/Spikeling.ico
+          spec: 'GUI/PyQt/Main.py'
           exe_path: "./dist"
-          upload_exe_with_name: "Spikeling.exe"
+          upload_exe_with_name: "Main.exe"
