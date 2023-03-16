@@ -184,7 +184,8 @@ The custom 1, 2, 3 text has to be changed to the last three neuron mode implemen
 
 Cost estimation spreadsheet for production
 https://docs.google.com/spreadsheets/d/1JO1rpfb5DoqT5x59RL3RnkQFxRdzm5al6X8uEcsVFo8/edit#gid=0
-
+ 
+***
 
 building different versions of the GUI runs with GH actions using this tutorial:
 https://data-dive.com/multi-os-deployment-in-cloud-using-pyinstaller-and-github-actions/
