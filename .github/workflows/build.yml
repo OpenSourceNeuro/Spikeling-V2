@@ -72,14 +72,14 @@ jobs:
       run: |
         value=`cat release_url/release_url.txt`
         echo "{value}"
-        echo "{name}={value}" >> $GITHUB_OUTPUT        
+        echo "{name}={value}" >> upload_url        
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{GITHUB_OUTPUT}} #${{ steps.get_release_info.outputs.upload_url }}
+        upload_url: ${{ steps.get_release_info.outputs.upload_url }}
         asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
         asset_name: ${{ matrix.OUT_FILE_NAME}}
         asset_content_type: ${{ matrix.ASSET_MIME}}
