@@ -62,24 +62,32 @@ jobs:
         pip install -r GUI/PyQt/requirements.txt        
     - name: Build with pyinstaller for ${{matrix.TARGET}}
       run: ${{matrix.CMD_BUILD}}
+    
     - name: Load Release URL File from release job
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v3
+      #id: download
       with:
         name: release_url
-    - name: Get Release File Name & Upload URL
-      id: get_release_info
-      shell: bash
-      run: |
-        value=`cat release_url/release_url.txt`
-        echo "{value}"
-        echo "{name}={value}" >> upload_url        
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.get_release_info.outputs.upload_url }}
-        asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
-        asset_name: ${{ matrix.OUT_FILE_NAME}}
-        asset_content_type: ${{ matrix.ASSET_MIME}}
+        path: ~/download/
+    - name: Display structure of downloaded files
+      run: ls -R
+    #- name: 'Echo download path'
+    #  run: echo ${{steps.download.outputs.download-path}}
+    
+    #- name: Get Release File Name & Upload URL
+    #  id: get_release_info
+    #  shell: bash
+    #  run: |
+    #    value=`cat release_url/release_url.txt`
+    #    echo $value
+    #    echo "{name}={value}" >> upload_url        
+    #- name: Upload Release Asset
+    #  id: upload-release-asset
+    #  uses: actions/upload-release-asset@v1
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #  with:
+    #    upload_url: ${{ steps.download.outputs.download-path }}
+    #    asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
+    #    asset_name: ${{ matrix.OUT_FILE_NAME}}
+    #    asset_content_type: ${{ matrix.ASSET_MIME}}
