@@ -24,7 +24,7 @@ jobs:
     - name: Output Release URL File
       run: echo "${{ steps.create_release.outputs.upload_url }}" > release_url.txt
     - name: Save Release URL File for publish
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: release_url
         path: release_url.txt
@@ -39,8 +39,7 @@ jobs:
           #- os: macos-latest
           #  TARGET: macos
           #  CMD_BUILD: >
-          #      cd GUI/PyQt/ &&
-          #      pyinstaller -F -w -n Spikeling -i resources/clipster.icns cli.py &&
+          #      pyinstaller -F -w -n Spikeling -i GUI/PyQt/Spikeling.ico GUI/PyQt/Main.py &&
           #      cd dist/ &&
           #      zip -r9 Spikeling Spikeling.app/                
           #  OUT_FILE_NAME: Spikeling.zip
@@ -54,7 +53,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: 3.8
     - name: Install dependencies
@@ -72,6 +71,7 @@ jobs:
       shell: bash
       run: |
         value=`cat release_url/release_url.txt`
+        echo "{value}"
         echo "{name}={value}" >> $GITHUB_OUTPUT        
     - name: Upload Release Asset
       id: upload-release-asset
@@ -79,7 +79,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{secrets.GITHUB_OUTPUT}} #${{ steps.get_release_info.outputs.upload_url }}
+        upload_url: ${{secrets.$GITHUB_OUTPUT}} #${{ steps.get_release_info.outputs.upload_url }}
         asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
         asset_name: ${{ matrix.OUT_FILE_NAME}}
         asset_content_type: ${{ matrix.ASSET_MIME}}
