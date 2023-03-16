@@ -65,7 +65,7 @@ jobs:
     
     - name: Load Release URL File from release job
       uses: actions/download-artifact@v3
-      #id: download
+      id: download
       with:
         name: release_url
         path: ~/download/
