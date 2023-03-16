@@ -13,7 +13,7 @@ jobs:
           python_ver: '3.8'
           spec: 'GUI/PyQt/Main.py'
           requirements: 'GUI/PyQt/requirements.txt'
-          upload_exe_with_name: 'Spikeling'
-          options: -w -n Spikeling -i GUI/PyQt/Spikeling.ico
+          #upload_exe_with_name: 'Spikeling'
+          options: -w, -F, -n Spikeling, -i GUI/PyQt/Spikeling.ico
           exe_path: "./dist"
           upload_exe_with_name: "Spikeling.exe"
