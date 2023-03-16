@@ -71,16 +71,16 @@ jobs:
         path: ~/download/
     - name: Display structure of downloaded files
       run: ls -R
-    #- name: 'Echo download path'
-    #  run: echo ${{steps.download.outputs.download-path}}
+    - name: 'Echo download path'
+      run: echo ${{steps.download.outputs.download-path}}
     
-    #- name: Get Release File Name & Upload URL
-    #  id: get_release_info
-    #  shell: bash
-    #  run: |
-    #    value=`cat release_url/release_url.txt`
-    #    echo $value
-    #    echo "{name}={value}" >> upload_url        
+    - name: Get Release File Name & Upload URL
+      id: get_release_info
+      shell: bash
+      run: |
+        value=`cat release_url/release_url.txt`
+        echo $value
+        echo "{name}={value}" >> upload_url        
     #- name: Upload Release Asset
     #  id: upload-release-asset
     #  uses: actions/upload-release-asset@v1
