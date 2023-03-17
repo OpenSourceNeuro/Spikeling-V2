@@ -23,11 +23,19 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 
 from pyqtgraph import PlotWidget
 import resources_rc
-#import resources2_rc
-#import resources_rc
-#import resources2_rc
+import resources2_rc
+import resources_rc
+import resources2_rc
+import resources_rc
+import resources2_rc
+import resources_rc
+import resources2_rc
+import resources_rc
+import resources2_rc
+import resources_rc
+import resources2_rc
 
-class Ui_MainWindow(QWidget):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -6746,18 +6754,305 @@ class Ui_MainWindow(QWidget):
         self.mainbody_stackedWidget.addWidget(self.page_403)
         self.page_501 = QWidget()
         self.page_501.setObjectName(u"page_501")
-        self.frame_9 = QFrame(self.page_501)
-        self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setGeometry(QRect(90, 20, 860, 613))
-        self.frame_9.setFrameShape(QFrame.StyledPanel)
-        self.frame_9.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_159 = QHBoxLayout(self.frame_9)
+        self.horizontalLayout_192 = QHBoxLayout(self.page_501)
+        self.horizontalLayout_192.setObjectName(u"horizontalLayout_192")
+        self.Exercises_Main_frame = QFrame(self.page_501)
+        self.Exercises_Main_frame.setObjectName(u"Exercises_Main_frame")
+        self.Exercises_Main_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercises_Main_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_116 = QVBoxLayout(self.Exercises_Main_frame)
+        self.verticalLayout_116.setObjectName(u"verticalLayout_116")
+        self.Exercises_StackedWideget_frame = QFrame(self.Exercises_Main_frame)
+        self.Exercises_StackedWideget_frame.setObjectName(u"Exercises_StackedWideget_frame")
+        self.Exercises_StackedWideget_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercises_StackedWideget_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_159 = QHBoxLayout(self.Exercises_StackedWideget_frame)
+        self.horizontalLayout_159.setSpacing(0)
         self.horizontalLayout_159.setObjectName(u"horizontalLayout_159")
-        self.label_18 = QLabel(self.frame_9)
-        self.label_18.setObjectName(u"label_18")
-        self.label_18.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
+        self.horizontalLayout_159.setContentsMargins(0, 0, 0, 0)
+        self.Exercises_stackedWidget = QStackedWidget(self.Exercises_StackedWideget_frame)
+        self.Exercises_stackedWidget.setObjectName(u"Exercises_stackedWidget")
+        self.page501_01_01 = QWidget()
+        self.page501_01_01.setObjectName(u"page501_01_01")
+        self.verticalLayout_119 = QVBoxLayout(self.page501_01_01)
+        self.verticalLayout_119.setSpacing(0)
+        self.verticalLayout_119.setObjectName(u"verticalLayout_119")
+        self.verticalLayout_119.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Intro_frame = QFrame(self.page501_01_01)
+        self.Vm_Intro_frame.setObjectName(u"Vm_Intro_frame")
+        self.Vm_Intro_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Intro_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_117 = QVBoxLayout(self.Vm_Intro_frame)
+        self.verticalLayout_117.setSpacing(0)
+        self.verticalLayout_117.setObjectName(u"verticalLayout_117")
+        self.verticalLayout_117.setContentsMargins(0, 0, 0, 0)
+        self.Vm_IntroTitle_frame = QFrame(self.Vm_Intro_frame)
+        self.Vm_IntroTitle_frame.setObjectName(u"Vm_IntroTitle_frame")
+        self.Vm_IntroTitle_frame.setMaximumSize(QSize(16777215, 50))
+        self.Vm_IntroTitle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_IntroTitle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_193 = QHBoxLayout(self.Vm_IntroTitle_frame)
+        self.horizontalLayout_193.setSpacing(0)
+        self.horizontalLayout_193.setObjectName(u"horizontalLayout_193")
+        self.horizontalLayout_193.setContentsMargins(0, 0, 0, 0)
+        self.Vm_IntroTitle = QLabel(self.Vm_IntroTitle_frame)
+        self.Vm_IntroTitle.setObjectName(u"Vm_IntroTitle")
+        self.Vm_IntroTitle.setMaximumSize(QSize(16777215, 50))
+        font9 = QFont()
+        font9.setPointSize(18)
+        self.Vm_IntroTitle.setFont(font9)
+        self.Vm_IntroTitle.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_159.addWidget(self.label_18)
+        self.horizontalLayout_193.addWidget(self.Vm_IntroTitle)
+
+
+        self.verticalLayout_117.addWidget(self.Vm_IntroTitle_frame)
+
+        self.Vm_IntroText_frame = QFrame(self.Vm_Intro_frame)
+        self.Vm_IntroText_frame.setObjectName(u"Vm_IntroText_frame")
+        self.Vm_IntroText_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_IntroText_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_195 = QHBoxLayout(self.Vm_IntroText_frame)
+        self.horizontalLayout_195.setSpacing(0)
+        self.horizontalLayout_195.setObjectName(u"horizontalLayout_195")
+        self.horizontalLayout_195.setContentsMargins(0, 0, 0, 0)
+        self.Vm_IntroText = QLabel(self.Vm_IntroText_frame)
+        self.Vm_IntroText.setObjectName(u"Vm_IntroText")
+        self.Vm_IntroText.setWordWrap(True)
+
+        self.horizontalLayout_195.addWidget(self.Vm_IntroText)
+
+
+        self.verticalLayout_117.addWidget(self.Vm_IntroText_frame)
+
+
+        self.verticalLayout_119.addWidget(self.Vm_Intro_frame)
+
+        self.Exercises_stackedWidget.addWidget(self.page501_01_01)
+        self.page501_01_02 = QWidget()
+        self.page501_01_02.setObjectName(u"page501_01_02")
+        self.verticalLayout_118 = QVBoxLayout(self.page501_01_02)
+        self.verticalLayout_118.setSpacing(0)
+        self.verticalLayout_118.setObjectName(u"verticalLayout_118")
+        self.verticalLayout_118.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task01_frame = QFrame(self.page501_01_02)
+        self.Vm_Task01_frame.setObjectName(u"Vm_Task01_frame")
+        self.Vm_Task01_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task01_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_120 = QVBoxLayout(self.Vm_Task01_frame)
+        self.verticalLayout_120.setSpacing(0)
+        self.verticalLayout_120.setObjectName(u"verticalLayout_120")
+        self.verticalLayout_120.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task01_Title_frame = QFrame(self.Vm_Task01_frame)
+        self.Vm_Task01_Title_frame.setObjectName(u"Vm_Task01_Title_frame")
+        sizePolicy3.setHeightForWidth(self.Vm_Task01_Title_frame.sizePolicy().hasHeightForWidth())
+        self.Vm_Task01_Title_frame.setSizePolicy(sizePolicy3)
+        self.Vm_Task01_Title_frame.setMaximumSize(QSize(16777215, 50))
+        font10 = QFont()
+        font10.setPointSize(14)
+        self.Vm_Task01_Title_frame.setFont(font10)
+        self.Vm_Task01_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task01_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_194 = QHBoxLayout(self.Vm_Task01_Title_frame)
+        self.horizontalLayout_194.setSpacing(0)
+        self.horizontalLayout_194.setObjectName(u"horizontalLayout_194")
+        self.horizontalLayout_194.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task01_Title = QLabel(self.Vm_Task01_Title_frame)
+        self.Vm_Task01_Title.setObjectName(u"Vm_Task01_Title")
+        self.Vm_Task01_Title.setMaximumSize(QSize(16777215, 50))
+        self.Vm_Task01_Title.setFont(font9)
+        self.Vm_Task01_Title.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_194.addWidget(self.Vm_Task01_Title)
+
+
+        self.verticalLayout_120.addWidget(self.Vm_Task01_Title_frame)
+
+        self.Vm_Task01_Text_frame = QFrame(self.Vm_Task01_frame)
+        self.Vm_Task01_Text_frame.setObjectName(u"Vm_Task01_Text_frame")
+        self.Vm_Task01_Text_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task01_Text_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_188 = QHBoxLayout(self.Vm_Task01_Text_frame)
+        self.horizontalLayout_188.setSpacing(0)
+        self.horizontalLayout_188.setObjectName(u"horizontalLayout_188")
+        self.horizontalLayout_188.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task01_Text = QLabel(self.Vm_Task01_Text_frame)
+        self.Vm_Task01_Text.setObjectName(u"Vm_Task01_Text")
+        self.Vm_Task01_Text.setTextFormat(Qt.AutoText)
+        self.Vm_Task01_Text.setWordWrap(True)
+
+        self.horizontalLayout_188.addWidget(self.Vm_Task01_Text)
+
+
+        self.verticalLayout_120.addWidget(self.Vm_Task01_Text_frame)
+
+
+        self.verticalLayout_118.addWidget(self.Vm_Task01_frame)
+
+        self.Exercises_stackedWidget.addWidget(self.page501_01_02)
+        self.page501_01_03 = QWidget()
+        self.page501_01_03.setObjectName(u"page501_01_03")
+        self.verticalLayout_122 = QVBoxLayout(self.page501_01_03)
+        self.verticalLayout_122.setSpacing(0)
+        self.verticalLayout_122.setObjectName(u"verticalLayout_122")
+        self.verticalLayout_122.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task02_frame = QFrame(self.page501_01_03)
+        self.Vm_Task02_frame.setObjectName(u"Vm_Task02_frame")
+        self.Vm_Task02_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task02_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_121 = QVBoxLayout(self.Vm_Task02_frame)
+        self.verticalLayout_121.setSpacing(0)
+        self.verticalLayout_121.setObjectName(u"verticalLayout_121")
+        self.verticalLayout_121.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task02_Text_frame = QFrame(self.Vm_Task02_frame)
+        self.Vm_Task02_Text_frame.setObjectName(u"Vm_Task02_Text_frame")
+        self.Vm_Task02_Text_frame.setMaximumSize(QSize(16777215, 50))
+        self.Vm_Task02_Text_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task02_Text_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_196 = QHBoxLayout(self.Vm_Task02_Text_frame)
+        self.horizontalLayout_196.setSpacing(0)
+        self.horizontalLayout_196.setObjectName(u"horizontalLayout_196")
+        self.horizontalLayout_196.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task02_Text = QLabel(self.Vm_Task02_Text_frame)
+        self.Vm_Task02_Text.setObjectName(u"Vm_Task02_Text")
+        self.Vm_Task02_Text.setFont(font9)
+        self.Vm_Task02_Text.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_196.addWidget(self.Vm_Task02_Text)
+
+
+        self.verticalLayout_121.addWidget(self.Vm_Task02_Text_frame)
+
+        self.Vm_Task02_Title_frame = QFrame(self.Vm_Task02_frame)
+        self.Vm_Task02_Title_frame.setObjectName(u"Vm_Task02_Title_frame")
+        self.Vm_Task02_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task02_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_197 = QHBoxLayout(self.Vm_Task02_Title_frame)
+        self.horizontalLayout_197.setSpacing(0)
+        self.horizontalLayout_197.setObjectName(u"horizontalLayout_197")
+        self.horizontalLayout_197.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task02_Title = QLabel(self.Vm_Task02_Title_frame)
+        self.Vm_Task02_Title.setObjectName(u"Vm_Task02_Title")
+        self.Vm_Task02_Title.setWordWrap(True)
+
+        self.horizontalLayout_197.addWidget(self.Vm_Task02_Title)
+
+
+        self.verticalLayout_121.addWidget(self.Vm_Task02_Title_frame)
+
+
+        self.verticalLayout_122.addWidget(self.Vm_Task02_frame)
+
+        self.Exercises_stackedWidget.addWidget(self.page501_01_03)
+        self.page501_01_04 = QWidget()
+        self.page501_01_04.setObjectName(u"page501_01_04")
+        self.verticalLayout_124 = QVBoxLayout(self.page501_01_04)
+        self.verticalLayout_124.setSpacing(0)
+        self.verticalLayout_124.setObjectName(u"verticalLayout_124")
+        self.verticalLayout_124.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task03_frame = QFrame(self.page501_01_04)
+        self.Vm_Task03_frame.setObjectName(u"Vm_Task03_frame")
+        self.Vm_Task03_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task03_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_123 = QVBoxLayout(self.Vm_Task03_frame)
+        self.verticalLayout_123.setSpacing(0)
+        self.verticalLayout_123.setObjectName(u"verticalLayout_123")
+        self.verticalLayout_123.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task03_Title_frame = QFrame(self.Vm_Task03_frame)
+        self.Vm_Task03_Title_frame.setObjectName(u"Vm_Task03_Title_frame")
+        self.Vm_Task03_Title_frame.setMaximumSize(QSize(16777215, 50))
+        self.Vm_Task03_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task03_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_198 = QHBoxLayout(self.Vm_Task03_Title_frame)
+        self.horizontalLayout_198.setSpacing(0)
+        self.horizontalLayout_198.setObjectName(u"horizontalLayout_198")
+        self.horizontalLayout_198.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task03_Title = QLabel(self.Vm_Task03_Title_frame)
+        self.Vm_Task03_Title.setObjectName(u"Vm_Task03_Title")
+        self.Vm_Task03_Title.setMaximumSize(QSize(16777215, 50))
+        self.Vm_Task03_Title.setFont(font9)
+        self.Vm_Task03_Title.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_198.addWidget(self.Vm_Task03_Title)
+
+
+        self.verticalLayout_123.addWidget(self.Vm_Task03_Title_frame)
+
+        self.Vm_Task03_Text_frame = QFrame(self.Vm_Task03_frame)
+        self.Vm_Task03_Text_frame.setObjectName(u"Vm_Task03_Text_frame")
+        self.Vm_Task03_Text_frame.setFrameShape(QFrame.StyledPanel)
+        self.Vm_Task03_Text_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_199 = QHBoxLayout(self.Vm_Task03_Text_frame)
+        self.horizontalLayout_199.setSpacing(0)
+        self.horizontalLayout_199.setObjectName(u"horizontalLayout_199")
+        self.horizontalLayout_199.setContentsMargins(0, 0, 0, 0)
+        self.Vm_Task03_Text = QLabel(self.Vm_Task03_Text_frame)
+        self.Vm_Task03_Text.setObjectName(u"Vm_Task03_Text")
+        self.Vm_Task03_Text.setWordWrap(True)
+
+        self.horizontalLayout_199.addWidget(self.Vm_Task03_Text)
+
+
+        self.verticalLayout_123.addWidget(self.Vm_Task03_Text_frame)
+
+
+        self.verticalLayout_124.addWidget(self.Vm_Task03_frame)
+
+        self.Exercises_stackedWidget.addWidget(self.page501_01_04)
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.Exercises_stackedWidget.addWidget(self.page)
+
+        self.horizontalLayout_159.addWidget(self.Exercises_stackedWidget)
+
+
+        self.verticalLayout_116.addWidget(self.Exercises_StackedWideget_frame)
+
+        self.Exercises_Button_frame = QFrame(self.Exercises_Main_frame)
+        self.Exercises_Button_frame.setObjectName(u"Exercises_Button_frame")
+        self.Exercises_Button_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercises_Button_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_191 = QHBoxLayout(self.Exercises_Button_frame)
+        self.horizontalLayout_191.setSpacing(0)
+        self.horizontalLayout_191.setObjectName(u"horizontalLayout_191")
+        self.horizontalLayout_191.setContentsMargins(0, 0, 0, 0)
+        self.Exercises_PreviousButton_frame = QFrame(self.Exercises_Button_frame)
+        self.Exercises_PreviousButton_frame.setObjectName(u"Exercises_PreviousButton_frame")
+        self.Exercises_PreviousButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercises_PreviousButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_190 = QHBoxLayout(self.Exercises_PreviousButton_frame)
+        self.horizontalLayout_190.setSpacing(0)
+        self.horizontalLayout_190.setObjectName(u"horizontalLayout_190")
+        self.horizontalLayout_190.setContentsMargins(0, 0, 0, 0)
+        self.Exercises_PreviousButton_pushButton = QPushButton(self.Exercises_PreviousButton_frame)
+        self.Exercises_PreviousButton_pushButton.setObjectName(u"Exercises_PreviousButton_pushButton")
+
+        self.horizontalLayout_190.addWidget(self.Exercises_PreviousButton_pushButton)
+
+
+        self.horizontalLayout_191.addWidget(self.Exercises_PreviousButton_frame)
+
+        self.Exercises_AfterButton_frame = QFrame(self.Exercises_Button_frame)
+        self.Exercises_AfterButton_frame.setObjectName(u"Exercises_AfterButton_frame")
+        self.Exercises_AfterButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercises_AfterButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_189 = QHBoxLayout(self.Exercises_AfterButton_frame)
+        self.horizontalLayout_189.setSpacing(0)
+        self.horizontalLayout_189.setObjectName(u"horizontalLayout_189")
+        self.horizontalLayout_189.setContentsMargins(0, 0, 0, 0)
+        self.Exercises_AfterButton_pushButton = QPushButton(self.Exercises_AfterButton_frame)
+        self.Exercises_AfterButton_pushButton.setObjectName(u"Exercises_AfterButton_pushButton")
+
+        self.horizontalLayout_189.addWidget(self.Exercises_AfterButton_pushButton)
+
+
+        self.horizontalLayout_191.addWidget(self.Exercises_AfterButton_frame)
+
+
+        self.verticalLayout_116.addWidget(self.Exercises_Button_frame)
+
+
+        self.horizontalLayout_192.addWidget(self.Exercises_Main_frame)
 
         self.mainbody_stackedWidget.addWidget(self.page_501)
         self.page_502 = QWidget()
@@ -6973,10 +7268,11 @@ class Ui_MainWindow(QWidget):
         self.retranslateUi(MainWindow)
 
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
-        self.mainbody_stackedWidget.setCurrentIndex(7)
+        self.mainbody_stackedWidget.setCurrentIndex(0)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(1)
+        self.Exercises_stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7032,7 +7328,7 @@ class Ui_MainWindow(QWidget):
 "<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color"
                         ":#268bd2;\">The hardware is licensed under the </span><span style=\" font-size:10pt; font-weight:700; color:#268bd2;\">CERN OHL v1.2</span></p>\n"
 "<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:700; color:#268bd2;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#268bd2;\">https://github.com/MaxZimmer/Spikeling-V2</span></p></body></html>", None))
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#268bd2;\">https://github.com/OpenSourceNeuro/Spikeling-V2</span></p></body></html>", None))
         self.mainbody_content_SpikelingGif.setText("")
         self.mainbody_footer_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:8pt;\">Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">Originally developped in the Baden Lab at the University of Sussex, Spikeling is an </span><span style=\" font-size:8pt; font-style:italic;\">in-silico</span><span style=\" font-size:8pt;\"> neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach. The current version is the result of a collective work from on-field teaching experience, both in the UK and on the African continent and from users and students feedback.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">The GUI presented here proposed a full and didactic interaction with the neuronal model. It also contains various exercices wh"
                         "ich can be linked to classical neuroscience teachings from early to advanced degree students. Futhermore it offers the opportunity to teachers to prepare practical on: programming, data analysis scipting, methodology and protocol design. All very important skills for modern neuroscience academics but which is unfortunately widely lacking from neuroscience degrees education.</span></p></body></html>", None))
@@ -7311,7 +7607,23 @@ class Ui_MainWindow(QWidget):
         self.label_15.setText("")
         self.label_16.setText("")
         self.label_17.setText("")
-        self.label_18.setText("")
+        self.Vm_IntroTitle.setText(QCoreApplication.translate("MainWindow", u"Resting membrane potential", None))
+        self.Vm_IntroText.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">In the absence of a stimulus, the Spikeling neuron rests at -70 mV and should only spike sporadically.</span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The resting membrane voltage (Vm) can be adjust indirectly by the virtual stimulating electrode located at the bottom left of the unit. The dial sitting on the electrode drawing sets a constant input current increasing or decreasing the polarised state of the neuron. </span></p><p align=\"justify\"><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">In this session we are only  interested in the membrane potential trace (the red one on the oscilloscope) and the input current trace (the green one). </span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The red LED on the unit also tracks the Vm, and flashes with each spike which should also be accompanied by an audible \u201cclick\u201d. As human auditory frequency discrimination ( is higher than the visu"
+                        "al flicker fusion frequency (50-90Hz), electrophysiologists often connect a speaker to their recording of membrane voltage to get a direct audio feedback of what the neuron might respond to.</span></p></body></html>", None))
+#if QT_CONFIG(whatsthis)
+        self.Vm_Task01_Title.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.Vm_Task01_Title.setText(QCoreApplication.translate("MainWindow", u"What happens when you increase or decrease the static input current?", None))
+        self.Vm_Task01_Text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">You should observe that increasing the static input current drives Vm towards and beyond spike threshold. </span></p><p align=\"justify\"><span style=\" font-size:12pt;\">As you keep driving Vm upwards, you will elicit progressively higher spike rates. This is the simplest of all </span><span style=\" font-size:12pt; font-weight:700;\">neuronal codes</span><span style=\" font-size:12pt;\">: The intensity of a stimulus (here, simply the increased input current) is </span><span style=\" font-size:12pt; font-weight:700;\">encoded</span><span style=\" font-size:12pt;\"> in the frequency of spikes. Imagine you are the postsynaptic neuron and all you see is this spike pattern; you could easily infer from seeing more spikes in close succession that the input to the presynaptic neuron has probably increased. Most spiking neurons use this </span><span style=\" font-size:12pt; font-weight:700;\">rate code </span><span style=\" font-size:12pt;\">to "
+                        "signal input intensity.</span><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">On the screen, note that each spike is preceded by a shallow rise in Vm and followed by a brief dip below starting levels. This dip is the refractory period of the neuron. During this time, generating another spike is particularly difficult.</span></p><p align=\"justify\"><span style=\" font-size:12pt;\">At the extreme low point of Vm it is impossible to generate a spike, which in a biological neurons is because the sodium channels are blocked (not just closed). This absolute refractory time, together with the duration of the spike itself (1-2 ms) sets a limit on the maximum spike rate possible. In an average neuron, the </span><span style=\" font-size:12pt; font-weight:700;\">absolute refractory period</span><span style=\" font-size:12pt;\"> is a few milliseconds, and thus the maximal spike rate of most neurons is ~100-200 Hz. </span><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">Some specialised neuro"
+                        "ns can go a bit higher, but kHz range is out of question. This means that, by using a single spiking neuron, it is impossible to faithfully encode a time-varying stimulus above this frequency. However, there are a few tricks around this problem that the nervous system can use. We will pick up on this point later.</span></p></body></html>", None))
+        self.Vm_Task02_Text.setText(QCoreApplication.translate("MainWindow", u"What happens when you dial current up and then wait a few seconds? ", None))
+        self.Vm_Task02_Title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">If you drive up input current and leave it there for a few seconds, you should observe that spike rate first increases, but then will taper off to some new basal rate of activity which will be higher than the original rate (rate code), but lower than the peak rate. </span></p><p align=\"justify\"><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">This is an example of </span><span style=\" font-size:12pt; font-weight:700;\">adaptation</span><span style=\" font-size:12pt;\">. Neurons respond to a change in the input not only by firing more or fewer spikes, but in addition by adjusting their sensitivity to further changes based on recent stimulus history. </span></p><p align=\"justify\"><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">This is a fundamental property of neurons that allows them to extend their operating range, and to stay responsive to further changes in subsequent inputs. </span></p></body></html>", None))
+        self.Vm_Task03_Title.setText(QCoreApplication.translate("MainWindow", u"Does a rapid and a slow current increase generate the same voltage response?", None))
+        self.Vm_Task03_Text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">As you increase input current slowly or rapidly, you should observe that you can reach different peak spike rates. </span></p><p><br/></p><p><span style=\" font-size:12pt;\">A rapid increase in input current is a much more effective way to trigger multiple spikes in close succession. This is again because of </span><span style=\" font-size:12pt; font-weight:700;\">adaptation</span><span style=\" font-size:12pt;\">. </span><br/></p><p><span style=\" font-size:12pt;\">If you change input current fast enough, the neuron does not have time to adapt and therefore fires vigorously at first.</span></p><p><span style=\" font-size:12pt;\">If you change input current slowly enough, you should be able to drive it quite high without eliciting many extra spikes as it adapts while you slowly ramp up the current. This means that not only the absolute level of a stimulus can be encoded by a neuron, by also the rate of change. </span></p><p><br/><span style=\" font-size:12"
+                        "pt;\">Note that this creates ambiguity in the code, which is one important reason for the need of </span><span style=\" font-size:12pt; font-weight:700;\">parallelisation</span><span style=\" font-size:12pt;\">. This means that if you want to read both absolute levels of a stimulus and its rate of change, you may need two neurons with different properties. </span></p><p><br/></p><p><span style=\" font-family:'Arial','sans-serif'; font-size:12pt; font-style:italic;\">NB: The fact that the speed of change in the input is encoded in a neuron\u2019s firing also means that that spike thresholds are not fixed. Depending how quickly you stimulate a neuron, it can start firing at different Vm values!</span></p></body></html>", None))
+        self.Exercises_PreviousButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Previous", None))
+        self.Exercises_AfterButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Next", None))
         self.label_19.setText("")
         self.label_20.setText("")
         self.label_21.setText("")
