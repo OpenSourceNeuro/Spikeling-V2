@@ -1882,7 +1882,7 @@ p, li { white-space: pre-wrap; }
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="resources2.qrc">:/resources2/resources/spike.gif</pixmap>
+                       <pixmap>:/resources2/resources/spike.gif</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -15453,8 +15453,8 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="resources.qrc"/>
   <include location="resources2.qrc"/>
-  <include location="../../../../../.designer/backup/resources.qrc"/>
-  <include location="../../../../../.designer/backup/resources2.qrc"/>
+  <include location="resources.qrc"/>
+  <include location="resources2.qrc"/>
  </resources>
  <connections/>
 </ui>
