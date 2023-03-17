@@ -23,17 +23,6 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 
 from pyqtgraph import PlotWidget
 import resources_rc
-import resources2_rc
-import resources_rc
-import resources2_rc
-import resources_rc
-import resources2_rc
-import resources_rc
-import resources2_rc
-import resources_rc
-import resources2_rc
-import resources_rc
-import resources2_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -906,7 +895,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_115 = QHBoxLayout(self.mainbody_header_frame)
         self.horizontalLayout_115.setSpacing(0)
         self.horizontalLayout_115.setObjectName(u"horizontalLayout_115")
-        self.horizontalLayout_115.setContentsMargins(10, 5, 10, 5)
+        self.horizontalLayout_115.setContentsMargins(10, 0, 10, 5)
         self.mainbody_header_text = QLabel(self.mainbody_header_frame)
         self.mainbody_header_text.setObjectName(u"mainbody_header_text")
         sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
@@ -949,8 +938,8 @@ class Ui_MainWindow(object):
         self.mainbody_content_SpikelingGif.setObjectName(u"mainbody_content_SpikelingGif")
         sizePolicy5.setHeightForWidth(self.mainbody_content_SpikelingGif.sizePolicy().hasHeightForWidth())
         self.mainbody_content_SpikelingGif.setSizePolicy(sizePolicy5)
-        self.mainbody_content_SpikelingGif.setMinimumSize(QSize(320, 360))
-        self.mainbody_content_SpikelingGif.setMaximumSize(QSize(480, 540))
+        self.mainbody_content_SpikelingGif.setMinimumSize(QSize(0, 0))
+        self.mainbody_content_SpikelingGif.setMaximumSize(QSize(16777215, 16777215))
         self.mainbody_content_SpikelingGif.setAutoFillBackground(False)
         self.mainbody_content_SpikelingGif.setPixmap(QPixmap(u":/resources2/resources/spike.gif"))
         self.mainbody_content_SpikelingGif.setScaledContents(True)
@@ -967,7 +956,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_114 = QHBoxLayout(self.mainbody_footer_frame)
         self.horizontalLayout_114.setSpacing(0)
         self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
-        self.horizontalLayout_114.setContentsMargins(10, 5, 10, 5)
+        self.horizontalLayout_114.setContentsMargins(10, 0, 10, 5)
         self.mainbody_footer_text = QLabel(self.mainbody_footer_frame)
         self.mainbody_footer_text.setObjectName(u"mainbody_footer_text")
         sizePolicy3.setHeightForWidth(self.mainbody_footer_text.sizePolicy().hasHeightForWidth())
