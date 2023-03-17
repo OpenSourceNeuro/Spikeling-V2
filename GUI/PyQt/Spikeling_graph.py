@@ -27,6 +27,7 @@ downsampling = 5
 sampleinterval = 0.1
 timewindow = 250
 timewindowdisplay = 125
+penwidth = 1
 
 
 def SpikelingPlot(self):
@@ -209,20 +210,20 @@ def SetPlot(self):
 
 
 
-    self.curve0 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y0, pen=(Settings.DarkSolarized[3]))
+    self.curve0 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y0, pen=pg.mkPen(Settings.DarkSolarized[3], width=penwidth))
     self.curve0.clear()
-    self.curve3 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y3, pen=(Settings.DarkSolarized[6]))
+    self.curve3 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y3, pen=pg.mkPen(Settings.DarkSolarized[6], width=penwidth))
     self.curve3.clear()
-    self.curve5 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y5, pen=(Settings.DarkSolarized[8]))
+    self.curve5 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y5, pen=pg.mkPen(Settings.DarkSolarized[8], width=penwidth))
     self.curve5.clear()
 
-    self.curve1 = pg.PlotCurveItem(self.x, self.y1, pen=(Settings.DarkSolarized[5]))
+    self.curve1 = pg.PlotCurveItem(self.x, self.y1, pen=pg.mkPen(Settings.DarkSolarized[5], width=penwidth))
     self.curve1.clear()
-    self.curve2 = pg.PlotCurveItem(self.x, self.y2, pen=(Settings.DarkSolarized[4]))
+    self.curve2 = pg.PlotCurveItem(self.x, self.y2, pen=pg.mkPen(Settings.DarkSolarized[4], width=penwidth))
     self.curve2.clear()
-    self.curve4 = pg.PlotCurveItem(self.x, self.y4, pen=(Settings.DarkSolarized[7]))
+    self.curve4 = pg.PlotCurveItem(self.x, self.y4, pen=pg.mkPen(Settings.DarkSolarized[7], width=penwidth))
     self.curve4.clear()
-    self.curve6 = pg.PlotCurveItem(self.x, self.y6, pen=(Settings.DarkSolarized[10]))
+    self.curve6 = pg.PlotCurveItem(self.x, self.y6, pen=pg.mkPen(Settings.DarkSolarized[10], width=penwidth))
     self.curve6.clear()
 
     self.CurrentPlots.addItem(self.curve1)
