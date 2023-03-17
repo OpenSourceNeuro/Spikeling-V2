@@ -17,4 +17,4 @@ jobs:
           options:  -F, # -n Spikeling   #, -i GUI/PyQt/Spikeling.ico
           spec: 'GUI/PyQt/Main.py'
           exe_path: "./dist"
-          upload_exe_with_name: "Main.exe"
+          upload_exe_with_name: "Spikeling.exe"
