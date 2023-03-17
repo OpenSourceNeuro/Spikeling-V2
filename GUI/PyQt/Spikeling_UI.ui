@@ -1766,7 +1766,7 @@ centerMenuSubContainer_menu_stackedwidget{
                      <number>10</number>
                     </property>
                     <property name="topMargin">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <property name="rightMargin">
                      <number>10</number>
@@ -1865,14 +1865,14 @@ p, li { white-space: pre-wrap; }
                       </property>
                       <property name="minimumSize">
                        <size>
-                        <width>320</width>
-                        <height>360</height>
+                        <width>0</width>
+                        <height>0</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>480</width>
-                        <height>540</height>
+                        <width>16777215</width>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="autoFillBackground">
@@ -1908,7 +1908,7 @@ p, li { white-space: pre-wrap; }
                      <number>10</number>
                     </property>
                     <property name="topMargin">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <property name="rightMargin">
                      <number>10</number>
@@ -16128,16 +16128,6 @@ p, li { white-space: pre-wrap; }
  <resources>
   <include location="resources.qrc"/>
   <include location="resources2.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources2.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources2.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources2.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources2.qrc"/>
-  <include location="../../../../../.designer/backup/resources.qrc"/>
-  <include location="../../../../../.designer/backup/resources2.qrc"/>
  </resources>
  <connections/>
 </ui>
