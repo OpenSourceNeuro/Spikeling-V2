@@ -272,7 +272,7 @@ class MainWindow(QMainWindow):
     # Home Page - page000
         # Display Home page on start up
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_000)
-        self.GifMovie = QtGui.QMovie(u":/resources2/resources/spike.gif")
+        self.GifMovie = QtGui.QMovie("resources/spike.gif")
         self.ui.mainbody_content_SpikelingGif.setMovie(self.GifMovie)
         self.GifMovie.start()
         self.ui.appTitle_pushButton.clicked.connect(lambda: self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_000))
