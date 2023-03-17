@@ -104,20 +104,27 @@ void loop() {
   PD_Value_Average = PD_Value_Sum / PD_avg;       // ... then average them
 
   if (PDGain_Flag == true){
-    PD_PotValue = ADC1.readADC(pinPDPot) - bits/2 + bits/25; // Reads Photodiode Gain potentiometer value and scales it to -2048 to 2048
-    PD_Amp = PD_PotValue / PDPotScaling; 
+    PD_PotValue = ADC1.readADC(pinPDPot) - bits/2; // Reads Photodiode Gain potentiometer value and scales it to -2048 to 2048
+    PD_Amp = map(PD_PotValue, -bits/2, bits/2, -PD_PotRange, PD_PotRange)+1;
+  }
+
+  if (PD_Amp >= 0){
+    PD_Polarity = 1;
+  }
+  if (PD_Amp < 0){
+    PD_Polarity = -1;
   }
   
                    // Generates an amplification value from the reading and scales it from parameters 
 
-  I_PD = ( (PD_Value_Average * PD_Amp) / PD_Scaling ) * PD_Gain;  // Finally, generates a current input from the photodiode readings, amplified byt the PD_Gain readings
+  I_PD = (PD_Value_Average * PD_Amp / PD_Scaling) * PD_Gain;  // Finally, generates a current input from the photodiode readings, amplified byt the PD_Gain readings
 
   if (PDDecay_Flag == true){
     PD_Decay = 0.001;
   }
 
   if (PD_Gain > PD_gain_mini){                     // When PD_amp is above the minimum value:
-    PD_Gain -= PD_Decay * I_PD;                      // Adapts proportionally to I_PD
+    PD_Gain -= PD_Polarity * PD_Decay * I_PD;                      // Adapts proportionally to I_PD
     if (PD_Gain < PD_gain_mini){                     // If PD_amp becames lower than the minimum value:
       PD_Gain = PD_gain_mini;                          // Then PD_amp remains at the minimum value
     }
@@ -128,7 +135,7 @@ void loop() {
   }
 
   if (PD_Gain < 1.0){
-    PD_Gain += PD_Recovery;                        // Recovers by constant % per iteration
+    PD_Gain +=  PD_Recovery;                        // Recovers by constant % per iteration
   }
 
      
@@ -284,6 +291,5 @@ void loop() {
   Serial.print(I_Synapse1);   Serial.print(',');
   Serial.print(Syn2_Vm);      Serial.print(',');
   Serial.println(I_Synapse2);  
-
   delay(6);
 }

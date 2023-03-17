@@ -105,6 +105,7 @@ float Axon_AnalogOffset = -6.75;
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                      PhotoDiode parameters                        */
 float PDPotScaling  = bits/25;    // the lower, the stronger the impact on PD_Gain
+int   PD_PotRange = 10;
 float PD_Gain=1.0;
 float PD_PotValue;
 float PD_Amp;
@@ -119,6 +120,7 @@ float PD_Decay = 0.001;
 float PD_gain_mini = 0.0;  // the photodiode gain cannot decay below this value
 float PD_Recovery = 0.025;
 float I_PD;
+int PD_Polarity = 1;
 
 
 // // // // // // // // // // // // // // // // // // // // // // // //
