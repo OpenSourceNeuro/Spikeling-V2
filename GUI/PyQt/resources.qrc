@@ -2,14 +2,12 @@
   <qresource prefix="resources">
     <file>resources/LEDOFF.png</file>
     <file>resources/LEDON.png</file>
-    <file>resources/Spiky_Logo.png</file>
-    <file>resources/Banner.png</file>
     <file>resources/SN-Logo.png</file>
+    <file>resources/SpikyLogo.png</file>
     <file>resources/SoundOFF.png</file>
     <file>resources/SoundON.png</file>
     <file>resources/SizeGrip.png</file>
     <file>resources/StimGen.png</file>
-    <file>resources/Spiky.png</file>
     <file>resources/About.png</file>
     <file>resources/Artboard 1.png</file>
     <file>resources/DataAnalysis.png</file>
