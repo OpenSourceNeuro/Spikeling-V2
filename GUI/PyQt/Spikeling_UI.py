@@ -24,11 +24,11 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 from pyqtgraph import PlotWidget
 import resources_rc
 
-class Ui_MainWindow(object):
+class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 720)
+        MainWindow.resize(1296, 759)
         MainWindow.setMinimumSize(QSize(1280, 720))
         MainWindow.setStyleSheet(u"*{\n"
 "	border:none;\n"
@@ -41,11 +41,6 @@ class Ui_MainWindow(object):
 "\n"
 "#app_ID_frame QPushButton:hover{\n"
 "	background-color: rgb(0, 43, 54);\n"
-"}\n"
-"\n"
-"#mainbody_header_frame{\n"
-"	background-color: rgb(7, 54, 66);\n"
-"	color: rgb(238, 232, 213);\n"
 "}\n"
 "\n"
 "#centralwidget{\n"
@@ -76,12 +71,12 @@ class Ui_MainWindow(object):
 "#centerMenuSubContainer_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"centerMenuSubContainer_menu_stackedwidge"
-                        "t{\n"
+"centerMenuSubContainer_menu_stackedwidget{\n"
 "}\n"
 "#centerMenuSubContainer_menu_stackedwidget QPushButton{\n"
 "	text-align: center;\n"
-"	padding: 10px 0px;\n"
+"	padding: 10"
+                        "px 0px;\n"
 "	border-radius:20px;\n"
 "	background-color: rgb(7, 54, 66);\n"
 "}\n"
@@ -119,14 +114,14 @@ class Ui_MainWindow(object):
 "	border: 2px solid rgb(147,161,161);\n"
 "    background-color: rgb(7, 54, 66);\n"
 "}\n"
-"#Spikeling_DataRecording_box QC"
-                        "omboBox{\n"
+"#Spikeling_DataRecording_box QComboBox{\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	background-color: rgb(7, 54, 66);\n"
 "}\n"
 "\n"
 "\n"
-"#Spikeling_rightMenuSubContainer QPushButton{\n"
+"#"
+                        "Spikeling_rightMenuSubContainer QPushButton{\n"
 "	text-align: left;\n"
 "	padding: 20px 0px;\n"
 "	border-top-right-radius:20px;\n"
@@ -157,12 +152,12 @@ class Ui_MainWindow(object):
 "	background-color: rgb(0, 43, 54);\n"
 "}\n"
 "#Imaging_rightMenuSubContainer QPushButton{\n"
-"	text-a"
-                        "lign: left;\n"
+"	text-align: left;\n"
 "	padding: 20px 0px;\n"
 "	border-top-right-radius:20px;\n"
 "	border-bottom-right-radius: 20px;\n"
-"	background-color: rgb(0, 43, 54);\n"
+""
+                        "	background-color: rgb(0, 43, 54);\n"
 "}\n"
 "#Imaging_rightMenuSubContainer QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
@@ -192,12 +187,12 @@ class Ui_MainWindow(object):
 "#NeuronGenerator_subframe2 QPushButton{\n"
 "	background-color: rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
-"	b"
-                        "order-radius: 10px;\n"
+"	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
 "}\n"
 "#NeuronGenerator_subframe2 QComboBox{\n"
-"	background-color: rgb(7, 54, 66);\n"
+"	background-color: "
+                        "rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
@@ -233,14 +228,14 @@ class Ui_MainWindow(object):
 "	background-color: rgb(7,54,66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
-""
-                        "	padding: 2px;\n"
+"	padding: 2px;\n"
 "}\n"
 "\n"
 "\n"
 "#page_401 QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	border: 2px s"
+                        "olid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
@@ -903,17 +898,26 @@ class Ui_MainWindow(object):
         self.page_000 = QWidget()
         self.page_000.setObjectName(u"page_000")
         self.verticalLayout_30 = QVBoxLayout(self.page_000)
-        self.verticalLayout_30.setSpacing(0)
+        self.verticalLayout_30.setSpacing(5)
         self.verticalLayout_30.setObjectName(u"verticalLayout_30")
-        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_30.setContentsMargins(0, 0, 5, 0)
         self.mainbody_header_frame = QFrame(self.page_000)
         self.mainbody_header_frame.setObjectName(u"mainbody_header_frame")
+        self.mainbody_header_frame.setMaximumSize(QSize(16777215, 16777215))
         self.mainbody_header_frame.setFrameShape(QFrame.StyledPanel)
         self.mainbody_header_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_115 = QHBoxLayout(self.mainbody_header_frame)
         self.horizontalLayout_115.setSpacing(0)
         self.horizontalLayout_115.setObjectName(u"horizontalLayout_115")
-        self.horizontalLayout_115.setContentsMargins(10, 0, 10, 5)
+        self.horizontalLayout_115.setContentsMargins(0, 0, 0, 0)
+        self.label_8 = QLabel(self.mainbody_header_frame)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setMaximumSize(QSize(197, 125))
+        self.label_8.setPixmap(QPixmap(u":/resources/resources/SpikyLogo.png"))
+        self.label_8.setScaledContents(True)
+
+        self.horizontalLayout_115.addWidget(self.label_8, 0, Qt.AlignLeft)
+
         self.mainbody_header_text = QLabel(self.mainbody_header_frame)
         self.mainbody_header_text.setObjectName(u"mainbody_header_text")
         sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
@@ -941,52 +945,57 @@ class Ui_MainWindow(object):
         self.mainbody_content_frame.setFrameShape(QFrame.StyledPanel)
         self.mainbody_content_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_76 = QHBoxLayout(self.mainbody_content_frame)
-        self.horizontalLayout_76.setSpacing(20)
+        self.horizontalLayout_76.setSpacing(10)
         self.horizontalLayout_76.setObjectName(u"horizontalLayout_76")
-        self.horizontalLayout_76.setContentsMargins(10, 0, 10, 0)
-        self.mainbody_content_text = QLabel(self.mainbody_content_frame)
+        self.horizontalLayout_76.setContentsMargins(0, 0, 0, 0)
+        self.mainbody_content_text_frame = QFrame(self.mainbody_content_frame)
+        self.mainbody_content_text_frame.setObjectName(u"mainbody_content_text_frame")
+        self.mainbody_content_text_frame.setFrameShape(QFrame.StyledPanel)
+        self.mainbody_content_text_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_251 = QHBoxLayout(self.mainbody_content_text_frame)
+        self.horizontalLayout_251.setSpacing(0)
+        self.horizontalLayout_251.setObjectName(u"horizontalLayout_251")
+        self.horizontalLayout_251.setContentsMargins(0, 0, 0, 0)
+        self.mainbody_content_text = QLabel(self.mainbody_content_text_frame)
         self.mainbody_content_text.setObjectName(u"mainbody_content_text")
         sizePolicy5.setHeightForWidth(self.mainbody_content_text.sizePolicy().hasHeightForWidth())
         self.mainbody_content_text.setSizePolicy(sizePolicy5)
+        self.mainbody_content_text.setAlignment(Qt.AlignCenter)
         self.mainbody_content_text.setWordWrap(True)
 
-        self.horizontalLayout_76.addWidget(self.mainbody_content_text, 0, Qt.AlignVCenter)
+        self.horizontalLayout_251.addWidget(self.mainbody_content_text)
 
-        self.mainbody_content_SpikelingGif = QLabel(self.mainbody_content_frame)
+
+        self.horizontalLayout_76.addWidget(self.mainbody_content_text_frame)
+
+        self.mainbody_content_SpikelingGif_frame = QFrame(self.mainbody_content_frame)
+        self.mainbody_content_SpikelingGif_frame.setObjectName(u"mainbody_content_SpikelingGif_frame")
+        self.mainbody_content_SpikelingGif_frame.setMinimumSize(QSize(480, 540))
+        self.mainbody_content_SpikelingGif_frame.setMaximumSize(QSize(480, 540))
+        self.mainbody_content_SpikelingGif_frame.setFrameShape(QFrame.StyledPanel)
+        self.mainbody_content_SpikelingGif_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_114 = QHBoxLayout(self.mainbody_content_SpikelingGif_frame)
+        self.horizontalLayout_114.setSpacing(0)
+        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
+        self.horizontalLayout_114.setContentsMargins(0, 0, 0, 0)
+        self.mainbody_content_SpikelingGif = QLabel(self.mainbody_content_SpikelingGif_frame)
         self.mainbody_content_SpikelingGif.setObjectName(u"mainbody_content_SpikelingGif")
         sizePolicy5.setHeightForWidth(self.mainbody_content_SpikelingGif.sizePolicy().hasHeightForWidth())
         self.mainbody_content_SpikelingGif.setSizePolicy(sizePolicy5)
-        self.mainbody_content_SpikelingGif.setMinimumSize(QSize(0, 0))
-        self.mainbody_content_SpikelingGif.setMaximumSize(QSize(16777215, 16777215))
+        self.mainbody_content_SpikelingGif.setMinimumSize(QSize(480, 540))
+        self.mainbody_content_SpikelingGif.setMaximumSize(QSize(480, 540))
         self.mainbody_content_SpikelingGif.setAutoFillBackground(False)
+        self.mainbody_content_SpikelingGif.setStyleSheet(u"")
         self.mainbody_content_SpikelingGif.setPixmap(QPixmap(u":/resources2/resources/spike.gif"))
         self.mainbody_content_SpikelingGif.setScaledContents(True)
 
-        self.horizontalLayout_76.addWidget(self.mainbody_content_SpikelingGif)
+        self.horizontalLayout_114.addWidget(self.mainbody_content_SpikelingGif)
+
+
+        self.horizontalLayout_76.addWidget(self.mainbody_content_SpikelingGif_frame)
 
 
         self.verticalLayout_30.addWidget(self.mainbody_content_frame, 0, Qt.AlignVCenter)
-
-        self.mainbody_footer_frame = QFrame(self.page_000)
-        self.mainbody_footer_frame.setObjectName(u"mainbody_footer_frame")
-        self.mainbody_footer_frame.setFrameShape(QFrame.StyledPanel)
-        self.mainbody_footer_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_114 = QHBoxLayout(self.mainbody_footer_frame)
-        self.horizontalLayout_114.setSpacing(0)
-        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
-        self.horizontalLayout_114.setContentsMargins(10, 0, 10, 5)
-        self.mainbody_footer_text = QLabel(self.mainbody_footer_frame)
-        self.mainbody_footer_text.setObjectName(u"mainbody_footer_text")
-        sizePolicy3.setHeightForWidth(self.mainbody_footer_text.sizePolicy().hasHeightForWidth())
-        self.mainbody_footer_text.setSizePolicy(sizePolicy3)
-        self.mainbody_footer_text.setMinimumSize(QSize(0, 100))
-        self.mainbody_footer_text.setScaledContents(False)
-        self.mainbody_footer_text.setWordWrap(True)
-
-        self.horizontalLayout_114.addWidget(self.mainbody_footer_text)
-
-
-        self.verticalLayout_30.addWidget(self.mainbody_footer_frame)
 
         self.mainbody_stackedWidget.addWidget(self.page_000)
         self.page_101 = QWidget()
@@ -6818,7 +6827,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_216 = QHBoxLayout(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame)
         self.horizontalLayout_216.setSpacing(0)
         self.horizontalLayout_216.setObjectName(u"horizontalLayout_216")
-        self.horizontalLayout_216.setContentsMargins(50, 5, 0, 0)
+        self.horizontalLayout_216.setContentsMargins(75, 5, 0, 0)
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox = QCheckBox(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame)
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setObjectName(u"StimulusGenerator_Oscilloscope_widget_Stim_checkbox")
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setEnabled(False)
@@ -6867,6 +6876,423 @@ class Ui_MainWindow(object):
         self.StimulusGenerator_Parameter_stackedWidget.setObjectName(u"StimulusGenerator_Parameter_stackedWidget")
         self.page_IntensitySteps = QWidget()
         self.page_IntensitySteps.setObjectName(u"page_IntensitySteps")
+        self.verticalLayout_111 = QVBoxLayout(self.page_IntensitySteps)
+        self.verticalLayout_111.setObjectName(u"verticalLayout_111")
+        self.Step_Number_frame = QFrame(self.page_IntensitySteps)
+        self.Step_Number_frame.setObjectName(u"Step_Number_frame")
+        self.Step_Number_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Number_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_226 = QHBoxLayout(self.Step_Number_frame)
+        self.horizontalLayout_226.setSpacing(0)
+        self.horizontalLayout_226.setObjectName(u"horizontalLayout_226")
+        self.horizontalLayout_226.setContentsMargins(0, 0, 0, 0)
+        self.Step_Number_Label_frame = QFrame(self.Step_Number_frame)
+        self.Step_Number_Label_frame.setObjectName(u"Step_Number_Label_frame")
+        self.Step_Number_Label_frame.setMinimumSize(QSize(150, 0))
+        self.Step_Number_Label_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_Number_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Number_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_227 = QHBoxLayout(self.Step_Number_Label_frame)
+        self.horizontalLayout_227.setSpacing(0)
+        self.horizontalLayout_227.setObjectName(u"horizontalLayout_227")
+        self.horizontalLayout_227.setContentsMargins(0, 0, 0, 0)
+        self.Step_Number_Label = QLabel(self.Step_Number_Label_frame)
+        self.Step_Number_Label.setObjectName(u"Step_Number_Label")
+        self.Step_Number_Label.setFont(font1)
+        self.Step_Number_Label.setAlignment(Qt.AlignCenter)
+        self.Step_Number_Label.setWordWrap(True)
+
+        self.horizontalLayout_227.addWidget(self.Step_Number_Label)
+
+
+        self.horizontalLayout_226.addWidget(self.Step_Number_Label_frame)
+
+        self.Step_Number_Value_frame = QFrame(self.Step_Number_frame)
+        self.Step_Number_Value_frame.setObjectName(u"Step_Number_Value_frame")
+        self.Step_Number_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_Number_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Number_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_234 = QHBoxLayout(self.Step_Number_Value_frame)
+        self.horizontalLayout_234.setSpacing(0)
+        self.horizontalLayout_234.setObjectName(u"horizontalLayout_234")
+        self.horizontalLayout_234.setContentsMargins(0, 0, 0, 0)
+        self.Step_Number_Value = QLineEdit(self.Step_Number_Value_frame)
+        self.Step_Number_Value.setObjectName(u"Step_Number_Value")
+        self.Step_Number_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_Number_Value.setFont(font5)
+        self.Step_Number_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_234.addWidget(self.Step_Number_Value)
+
+
+        self.horizontalLayout_226.addWidget(self.Step_Number_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_Number_frame)
+
+        self.Step_Increment_frame = QFrame(self.page_IntensitySteps)
+        self.Step_Increment_frame.setObjectName(u"Step_Increment_frame")
+        self.Step_Increment_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Increment_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_231 = QHBoxLayout(self.Step_Increment_frame)
+        self.horizontalLayout_231.setSpacing(0)
+        self.horizontalLayout_231.setObjectName(u"horizontalLayout_231")
+        self.horizontalLayout_231.setContentsMargins(0, 0, 0, 0)
+        self.Step_Increment_Label_frame = QFrame(self.Step_Increment_frame)
+        self.Step_Increment_Label_frame.setObjectName(u"Step_Increment_Label_frame")
+        self.Step_Increment_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Increment_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_230 = QHBoxLayout(self.Step_Increment_Label_frame)
+        self.horizontalLayout_230.setSpacing(0)
+        self.horizontalLayout_230.setObjectName(u"horizontalLayout_230")
+        self.horizontalLayout_230.setContentsMargins(0, 0, 0, 0)
+        self.Step_Increment_Label = QLabel(self.Step_Increment_Label_frame)
+        self.Step_Increment_Label.setObjectName(u"Step_Increment_Label")
+        self.Step_Increment_Label.setMinimumSize(QSize(150, 0))
+        self.Step_Increment_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_Increment_Label.setFont(font1)
+        self.Step_Increment_Label.setAlignment(Qt.AlignCenter)
+        self.Step_Increment_Label.setWordWrap(True)
+
+        self.horizontalLayout_230.addWidget(self.Step_Increment_Label)
+
+
+        self.horizontalLayout_231.addWidget(self.Step_Increment_Label_frame)
+
+        self.Step_Increment_Value_frame = QFrame(self.Step_Increment_frame)
+        self.Step_Increment_Value_frame.setObjectName(u"Step_Increment_Value_frame")
+        self.Step_Increment_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_Increment_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Increment_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_229 = QHBoxLayout(self.Step_Increment_Value_frame)
+        self.horizontalLayout_229.setSpacing(0)
+        self.horizontalLayout_229.setObjectName(u"horizontalLayout_229")
+        self.horizontalLayout_229.setContentsMargins(0, 0, 0, 0)
+        self.Step_Increment_Value = QLineEdit(self.Step_Increment_Value_frame)
+        self.Step_Increment_Value.setObjectName(u"Step_Increment_Value")
+        self.Step_Increment_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_Increment_Value.setFont(font5)
+        self.Step_Increment_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_229.addWidget(self.Step_Increment_Value)
+
+
+        self.horizontalLayout_231.addWidget(self.Step_Increment_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_Increment_frame)
+
+        self.Step_First_frame = QFrame(self.page_IntensitySteps)
+        self.Step_First_frame.setObjectName(u"Step_First_frame")
+        self.Step_First_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_First_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_233 = QHBoxLayout(self.Step_First_frame)
+        self.horizontalLayout_233.setSpacing(0)
+        self.horizontalLayout_233.setObjectName(u"horizontalLayout_233")
+        self.horizontalLayout_233.setContentsMargins(0, 0, 0, 0)
+        self.Step_First_Label_frame = QFrame(self.Step_First_frame)
+        self.Step_First_Label_frame.setObjectName(u"Step_First_Label_frame")
+        self.Step_First_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_First_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_232 = QHBoxLayout(self.Step_First_Label_frame)
+        self.horizontalLayout_232.setSpacing(0)
+        self.horizontalLayout_232.setObjectName(u"horizontalLayout_232")
+        self.horizontalLayout_232.setContentsMargins(0, 0, 0, 0)
+        self.Step_First_Label = QLabel(self.Step_First_Label_frame)
+        self.Step_First_Label.setObjectName(u"Step_First_Label")
+        self.Step_First_Label.setMinimumSize(QSize(150, 0))
+        self.Step_First_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_First_Label.setFont(font1)
+        self.Step_First_Label.setAlignment(Qt.AlignCenter)
+        self.Step_First_Label.setWordWrap(True)
+
+        self.horizontalLayout_232.addWidget(self.Step_First_Label)
+
+
+        self.horizontalLayout_233.addWidget(self.Step_First_Label_frame)
+
+        self.Step_First_Value_frame = QFrame(self.Step_First_frame)
+        self.Step_First_Value_frame.setObjectName(u"Step_First_Value_frame")
+        self.Step_First_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_First_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_First_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_228 = QHBoxLayout(self.Step_First_Value_frame)
+        self.horizontalLayout_228.setSpacing(0)
+        self.horizontalLayout_228.setObjectName(u"horizontalLayout_228")
+        self.horizontalLayout_228.setContentsMargins(0, 0, 0, 0)
+        self.Step_First_Value = QLineEdit(self.Step_First_Value_frame)
+        self.Step_First_Value.setObjectName(u"Step_First_Value")
+        self.Step_First_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_First_Value.setFont(font5)
+        self.Step_First_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_228.addWidget(self.Step_First_Value)
+
+
+        self.horizontalLayout_233.addWidget(self.Step_First_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_First_frame)
+
+        self.Step_On_frame = QFrame(self.page_IntensitySteps)
+        self.Step_On_frame.setObjectName(u"Step_On_frame")
+        self.Step_On_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_On_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_237 = QHBoxLayout(self.Step_On_frame)
+        self.horizontalLayout_237.setSpacing(0)
+        self.horizontalLayout_237.setObjectName(u"horizontalLayout_237")
+        self.horizontalLayout_237.setContentsMargins(0, 0, 0, 0)
+        self.Step_On_Label_frame = QFrame(self.Step_On_frame)
+        self.Step_On_Label_frame.setObjectName(u"Step_On_Label_frame")
+        self.Step_On_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_On_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_236 = QHBoxLayout(self.Step_On_Label_frame)
+        self.horizontalLayout_236.setSpacing(0)
+        self.horizontalLayout_236.setObjectName(u"horizontalLayout_236")
+        self.horizontalLayout_236.setContentsMargins(0, 0, 0, 0)
+        self.Step_On_Label = QLabel(self.Step_On_Label_frame)
+        self.Step_On_Label.setObjectName(u"Step_On_Label")
+        self.Step_On_Label.setMinimumSize(QSize(150, 0))
+        self.Step_On_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_On_Label.setFont(font1)
+        self.Step_On_Label.setAlignment(Qt.AlignCenter)
+        self.Step_On_Label.setWordWrap(True)
+
+        self.horizontalLayout_236.addWidget(self.Step_On_Label)
+
+
+        self.horizontalLayout_237.addWidget(self.Step_On_Label_frame)
+
+        self.Step_On_Value_frame = QFrame(self.Step_On_frame)
+        self.Step_On_Value_frame.setObjectName(u"Step_On_Value_frame")
+        self.Step_On_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_On_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_On_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_235 = QHBoxLayout(self.Step_On_Value_frame)
+        self.horizontalLayout_235.setSpacing(0)
+        self.horizontalLayout_235.setObjectName(u"horizontalLayout_235")
+        self.horizontalLayout_235.setContentsMargins(0, 0, 0, 0)
+        self.Step_On_Value = QLineEdit(self.Step_On_Value_frame)
+        self.Step_On_Value.setObjectName(u"Step_On_Value")
+        self.Step_On_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_On_Value.setFont(font5)
+        self.Step_On_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_235.addWidget(self.Step_On_Value)
+
+
+        self.horizontalLayout_237.addWidget(self.Step_On_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_On_frame)
+
+        self.Step_Off_frame = QFrame(self.page_IntensitySteps)
+        self.Step_Off_frame.setObjectName(u"Step_Off_frame")
+        self.Step_Off_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Off_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_240 = QHBoxLayout(self.Step_Off_frame)
+        self.horizontalLayout_240.setSpacing(0)
+        self.horizontalLayout_240.setObjectName(u"horizontalLayout_240")
+        self.horizontalLayout_240.setContentsMargins(0, 0, 0, 0)
+        self.Step_Off_Label_frame = QFrame(self.Step_Off_frame)
+        self.Step_Off_Label_frame.setObjectName(u"Step_Off_Label_frame")
+        self.Step_Off_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Off_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_239 = QHBoxLayout(self.Step_Off_Label_frame)
+        self.horizontalLayout_239.setSpacing(0)
+        self.horizontalLayout_239.setObjectName(u"horizontalLayout_239")
+        self.horizontalLayout_239.setContentsMargins(0, 0, 0, 0)
+        self.Step_Off_Label = QLabel(self.Step_Off_Label_frame)
+        self.Step_Off_Label.setObjectName(u"Step_Off_Label")
+        self.Step_Off_Label.setMinimumSize(QSize(150, 0))
+        self.Step_Off_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_Off_Label.setFont(font1)
+        self.Step_Off_Label.setAlignment(Qt.AlignCenter)
+        self.Step_Off_Label.setWordWrap(True)
+
+        self.horizontalLayout_239.addWidget(self.Step_Off_Label)
+
+
+        self.horizontalLayout_240.addWidget(self.Step_Off_Label_frame)
+
+        self.Step_Off_Value_frame = QFrame(self.Step_Off_frame)
+        self.Step_Off_Value_frame.setObjectName(u"Step_Off_Value_frame")
+        self.Step_Off_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_Off_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Off_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_238 = QHBoxLayout(self.Step_Off_Value_frame)
+        self.horizontalLayout_238.setSpacing(0)
+        self.horizontalLayout_238.setObjectName(u"horizontalLayout_238")
+        self.horizontalLayout_238.setContentsMargins(0, 0, 0, 0)
+        self.Step_Off_Value = QLineEdit(self.Step_Off_Value_frame)
+        self.Step_Off_Value.setObjectName(u"Step_Off_Value")
+        self.Step_Off_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_Off_Value.setFont(font5)
+        self.Step_Off_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_238.addWidget(self.Step_Off_Value)
+
+
+        self.horizontalLayout_240.addWidget(self.Step_Off_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_Off_frame)
+
+        self.Step_OffInt_frame = QFrame(self.page_IntensitySteps)
+        self.Step_OffInt_frame.setObjectName(u"Step_OffInt_frame")
+        self.Step_OffInt_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_OffInt_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_249 = QHBoxLayout(self.Step_OffInt_frame)
+        self.horizontalLayout_249.setObjectName(u"horizontalLayout_249")
+        self.Step_OffInt_Label_frame = QFrame(self.Step_OffInt_frame)
+        self.Step_OffInt_Label_frame.setObjectName(u"Step_OffInt_Label_frame")
+        self.Step_OffInt_Label_frame.setMinimumSize(QSize(150, 0))
+        self.Step_OffInt_Label_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_OffInt_Label_frame.setFont(font1)
+        self.Step_OffInt_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_OffInt_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_248 = QHBoxLayout(self.Step_OffInt_Label_frame)
+        self.horizontalLayout_248.setSpacing(0)
+        self.horizontalLayout_248.setObjectName(u"horizontalLayout_248")
+        self.horizontalLayout_248.setContentsMargins(0, 0, 0, 0)
+        self.Step_OffInt_Label = QLabel(self.Step_OffInt_Label_frame)
+        self.Step_OffInt_Label.setObjectName(u"Step_OffInt_Label")
+        self.Step_OffInt_Label.setFont(font1)
+        self.Step_OffInt_Label.setAlignment(Qt.AlignCenter)
+        self.Step_OffInt_Label.setWordWrap(True)
+
+        self.horizontalLayout_248.addWidget(self.Step_OffInt_Label)
+
+
+        self.horizontalLayout_249.addWidget(self.Step_OffInt_Label_frame)
+
+        self.Step_OffInt_Value_frame = QFrame(self.Step_OffInt_frame)
+        self.Step_OffInt_Value_frame.setObjectName(u"Step_OffInt_Value_frame")
+        self.Step_OffInt_Value_frame.setMinimumSize(QSize(150, 0))
+        self.Step_OffInt_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_OffInt_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_OffInt_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_247 = QHBoxLayout(self.Step_OffInt_Value_frame)
+        self.horizontalLayout_247.setObjectName(u"horizontalLayout_247")
+        self.Step_OffInt_Value = QLineEdit(self.Step_OffInt_Value_frame)
+        self.Step_OffInt_Value.setObjectName(u"Step_OffInt_Value")
+        self.Step_OffInt_Value.setMinimumSize(QSize(100, 0))
+        self.Step_OffInt_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_OffInt_Value.setFont(font5)
+        self.Step_OffInt_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_247.addWidget(self.Step_OffInt_Value)
+
+
+        self.horizontalLayout_249.addWidget(self.Step_OffInt_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_OffInt_frame)
+
+        self.Step_Inter_frame = QFrame(self.page_IntensitySteps)
+        self.Step_Inter_frame.setObjectName(u"Step_Inter_frame")
+        self.Step_Inter_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Inter_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_243 = QHBoxLayout(self.Step_Inter_frame)
+        self.horizontalLayout_243.setSpacing(0)
+        self.horizontalLayout_243.setObjectName(u"horizontalLayout_243")
+        self.horizontalLayout_243.setContentsMargins(0, 0, 0, 0)
+        self.Step_Inter_Label_frame = QFrame(self.Step_Inter_frame)
+        self.Step_Inter_Label_frame.setObjectName(u"Step_Inter_Label_frame")
+        self.Step_Inter_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Inter_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_242 = QHBoxLayout(self.Step_Inter_Label_frame)
+        self.horizontalLayout_242.setSpacing(0)
+        self.horizontalLayout_242.setObjectName(u"horizontalLayout_242")
+        self.horizontalLayout_242.setContentsMargins(0, 0, 0, 0)
+        self.Step_Inter_Label = QLabel(self.Step_Inter_Label_frame)
+        self.Step_Inter_Label.setObjectName(u"Step_Inter_Label")
+        self.Step_Inter_Label.setMinimumSize(QSize(150, 0))
+        self.Step_Inter_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_Inter_Label.setFont(font1)
+        self.Step_Inter_Label.setAlignment(Qt.AlignCenter)
+        self.Step_Inter_Label.setWordWrap(True)
+
+        self.horizontalLayout_242.addWidget(self.Step_Inter_Label)
+
+
+        self.horizontalLayout_243.addWidget(self.Step_Inter_Label_frame)
+
+        self.Step_Inter_Value_frame = QFrame(self.Step_Inter_frame)
+        self.Step_Inter_Value_frame.setObjectName(u"Step_Inter_Value_frame")
+        self.Step_Inter_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_Inter_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_Inter_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_241 = QHBoxLayout(self.Step_Inter_Value_frame)
+        self.horizontalLayout_241.setSpacing(0)
+        self.horizontalLayout_241.setObjectName(u"horizontalLayout_241")
+        self.horizontalLayout_241.setContentsMargins(0, 0, 0, 0)
+        self.Step_Inter_Value = QLineEdit(self.Step_Inter_Value_frame)
+        self.Step_Inter_Value.setObjectName(u"Step_Inter_Value")
+        self.Step_Inter_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_Inter_Value.setFont(font5)
+        self.Step_Inter_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_241.addWidget(self.Step_Inter_Value)
+
+
+        self.horizontalLayout_243.addWidget(self.Step_Inter_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_Inter_frame)
+
+        self.Step_InterInt_frame = QFrame(self.page_IntensitySteps)
+        self.Step_InterInt_frame.setObjectName(u"Step_InterInt_frame")
+        self.Step_InterInt_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_InterInt_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_246 = QHBoxLayout(self.Step_InterInt_frame)
+        self.horizontalLayout_246.setSpacing(0)
+        self.horizontalLayout_246.setObjectName(u"horizontalLayout_246")
+        self.horizontalLayout_246.setContentsMargins(0, 0, 0, 0)
+        self.Step_InterInt_Label_frame = QFrame(self.Step_InterInt_frame)
+        self.Step_InterInt_Label_frame.setObjectName(u"Step_InterInt_Label_frame")
+        self.Step_InterInt_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_InterInt_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_245 = QHBoxLayout(self.Step_InterInt_Label_frame)
+        self.horizontalLayout_245.setSpacing(0)
+        self.horizontalLayout_245.setObjectName(u"horizontalLayout_245")
+        self.horizontalLayout_245.setContentsMargins(0, 0, 0, 0)
+        self.Step_InterInt_Label = QLabel(self.Step_InterInt_Label_frame)
+        self.Step_InterInt_Label.setObjectName(u"Step_InterInt_Label")
+        self.Step_InterInt_Label.setMinimumSize(QSize(150, 0))
+        self.Step_InterInt_Label.setMaximumSize(QSize(150, 16777215))
+        self.Step_InterInt_Label.setFont(font1)
+        self.Step_InterInt_Label.setAlignment(Qt.AlignCenter)
+        self.Step_InterInt_Label.setWordWrap(True)
+
+        self.horizontalLayout_245.addWidget(self.Step_InterInt_Label)
+
+
+        self.horizontalLayout_246.addWidget(self.Step_InterInt_Label_frame)
+
+        self.Step_InterInt_Value_frame = QFrame(self.Step_InterInt_frame)
+        self.Step_InterInt_Value_frame.setObjectName(u"Step_InterInt_Value_frame")
+        self.Step_InterInt_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Step_InterInt_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Step_InterInt_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_244 = QHBoxLayout(self.Step_InterInt_Value_frame)
+        self.horizontalLayout_244.setSpacing(0)
+        self.horizontalLayout_244.setObjectName(u"horizontalLayout_244")
+        self.horizontalLayout_244.setContentsMargins(0, 0, 0, 0)
+        self.Step_InterInt_Value = QLineEdit(self.Step_InterInt_Value_frame)
+        self.Step_InterInt_Value.setObjectName(u"Step_InterInt_Value")
+        self.Step_InterInt_Value.setMaximumSize(QSize(100, 16777215))
+        self.Step_InterInt_Value.setFont(font5)
+        self.Step_InterInt_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_244.addWidget(self.Step_InterInt_Value)
+
+
+        self.horizontalLayout_246.addWidget(self.Step_InterInt_Value_frame)
+
+
+        self.verticalLayout_111.addWidget(self.Step_InterInt_frame)
+
         self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_IntensitySteps)
         self.page_SineWave = QWidget()
         self.page_SineWave.setObjectName(u"page_SineWave")
@@ -7209,7 +7635,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_202 = QHBoxLayout(self.StimulusGenerator_SubContainer)
         self.horizontalLayout_202.setSpacing(100)
         self.horizontalLayout_202.setObjectName(u"horizontalLayout_202")
-        self.horizontalLayout_202.setContentsMargins(75, 0, 75, 5)
+        self.horizontalLayout_202.setContentsMargins(75, 10, 75, 10)
         self.StimulusGenerator_Display_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
         self.StimulusGenerator_Display_pushButton.setObjectName(u"StimulusGenerator_Display_pushButton")
         self.StimulusGenerator_Display_pushButton.setMinimumSize(QSize(200, 0))
@@ -7581,11 +8007,26 @@ class Ui_MainWindow(object):
         self.frame_12.setFrameShadow(QFrame.Raised)
         self.verticalLayout_114 = QVBoxLayout(self.frame_12)
         self.verticalLayout_114.setObjectName(u"verticalLayout_114")
-        self.label_21 = QLabel(self.frame_12)
-        self.label_21.setObjectName(u"label_21")
-        self.label_21.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
+        self.mainbody_footer_frame_2 = QFrame(self.frame_12)
+        self.mainbody_footer_frame_2.setObjectName(u"mainbody_footer_frame_2")
+        self.mainbody_footer_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.mainbody_footer_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_250 = QHBoxLayout(self.mainbody_footer_frame_2)
+        self.horizontalLayout_250.setSpacing(0)
+        self.horizontalLayout_250.setObjectName(u"horizontalLayout_250")
+        self.horizontalLayout_250.setContentsMargins(10, 0, 10, 5)
+        self.mainbody_footer_text_2 = QLabel(self.mainbody_footer_frame_2)
+        self.mainbody_footer_text_2.setObjectName(u"mainbody_footer_text_2")
+        sizePolicy3.setHeightForWidth(self.mainbody_footer_text_2.sizePolicy().hasHeightForWidth())
+        self.mainbody_footer_text_2.setSizePolicy(sizePolicy3)
+        self.mainbody_footer_text_2.setMinimumSize(QSize(0, 100))
+        self.mainbody_footer_text_2.setScaledContents(False)
+        self.mainbody_footer_text_2.setWordWrap(True)
 
-        self.verticalLayout_114.addWidget(self.label_21)
+        self.horizontalLayout_250.addWidget(self.mainbody_footer_text_2)
+
+
+        self.verticalLayout_114.addWidget(self.mainbody_footer_frame_2)
 
         self.mainbody_stackedWidget.addWidget(self.page_701)
         self.page_801 = QWidget()
@@ -7753,12 +8194,12 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
-        self.mainbody_stackedWidget.setCurrentIndex(9)
+        self.mainbody_stackedWidget.setCurrentIndex(0)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(1)
-        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(1)
-        self.Exercises_stackedWidget.setCurrentIndex(2)
+        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(0)
+        self.Exercises_stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7800,7 +8241,8 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Information about the project, sussex, TReND etc", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"GitHub", None))
-        self.mainbody_header_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; color:#eee8d5;\">Spikeling</span></p><p align=\"center\"><span style=\" font-size:10pt; font-weight:700;\">A hardware implementation of a spiking neuron for neursocience teaching and outreach</span></p><p align=\"right\"><span style=\" font-size:8pt; font-weight:700;\">Conceived and developed by M.J.Y. Zimmermann, A.M. Chagas, T. Baden</span><span style=\" font-size:8pt;\"/></p></body></html>", None))
+        self.label_8.setText("")
+        self.mainbody_header_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:16pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:16pt;\">A hardware implementation of spiking neurons for neursocience teaching and outreach</span></p><p align=\"right\"><span style=\" font-size:8pt; font-weight:700;\">Conceived and developed by M.J.Y. Zimmermann, A.M. Chagas, T. Baden</span></p></body></html>", None))
         self.mainbody_content_text.setText(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -7810,14 +8252,12 @@ class Ui_MainWindow(object):
 "<p align=\"ju"
                         "stify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.</span></p>\n"
 "<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\"><br /></span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#268bd2;\">This project is licensed under the </span><span style=\" font-size:10pt; font-weight:700; color:#268bd2;\">GNU General Public License v3.0</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color"
-                        ":#268bd2;\">The hardware is licensed under the </span><span style=\" font-size:10pt; font-weight:700; color:#268bd2;\">CERN OHL v1.2</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:700; color:#268bd2;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#268bd2;\">https://github.com/OpenSourceNeuro/Spikeling-V2</span></p></body></html>", None))
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color:#268bd2;\">This project is licensed under the </span><span style=\" font-size:12pt; font-weight:700; color:#268bd2;\">GNU General Public License v3.0</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color"
+                        ":#268bd2;\">The hardware is licensed under the </span><span style=\" font-size:12pt; font-weight:700; color:#268bd2;\">CERN OHL v1.2</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:700; color:#268bd2;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color:#268bd2;\">https://github.com/OpenSourceNeuro/Spikeling-V2</span></p></body></html>", None))
         self.mainbody_content_SpikelingGif.setText("")
-        self.mainbody_footer_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:8pt;\">Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">Originally developped in the Baden Lab at the University of Sussex, Spikeling is an </span><span style=\" font-size:8pt; font-style:italic;\">in-silico</span><span style=\" font-size:8pt;\"> neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach. The current version is the result of a collective work from on-field teaching experience, both in the UK and on the African continent and from users and students feedback.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">The GUI presented here proposed a full and didactic interaction with the neuronal model. It also contains various exercices wh"
-                        "ich can be linked to classical neuroscience teachings from early to advanced degree students. Futhermore it offers the opportunity to teachers to prepare practical on: programming, data analysis scipting, methodology and protocol design. All very important skills for modern neuroscience academics but which is unfortunately widely lacking from neuroscience degrees education.</span></p></body></html>", None))
         self.Spikeling_SelectPortLabel.setText(QCoreApplication.translate("MainWindow", u"Select Port :", None))
         self.Spikeling_SelectPortComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a COM port:", None))
 
@@ -8098,6 +8538,22 @@ class Ui_MainWindow(object):
         self.StimulusGenerator_Selection_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Binary noise", None))
 
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.Step_Number_Label.setText(QCoreApplication.translate("MainWindow", u"Number of steps", None))
+        self.Step_Number_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.Step_Increment_Label.setText(QCoreApplication.translate("MainWindow", u"Intensity increment (a.u.)", None))
+        self.Step_Increment_Value.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.Step_First_Label.setText(QCoreApplication.translate("MainWindow", u"First step intensity (a.u.)", None))
+        self.Step_First_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Step_On_Label.setText(QCoreApplication.translate("MainWindow", u"Step lenght (ms)", None))
+        self.Step_On_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
+        self.Step_Off_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Step length (ms)", None))
+        self.Step_Off_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Step_OffInt_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Step intensity (a.u.)", None))
+        self.Step_OffInt_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Step_Inter_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus length (ms)", None))
+        self.Step_Inter_Value.setText(QCoreApplication.translate("MainWindow", u"5000", None))
+        self.Step_InterInt_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus intensity (a.u.)", None))
+        self.Step_InterInt_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.SineWave_Amplitude_Label.setText(QCoreApplication.translate("MainWindow", u"Amplitude (a.u.)", None))
         self.SineWave_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
         self.SineWave_Frequency_Label.setText(QCoreApplication.translate("MainWindow", u"Frequency (Hz)", None))
@@ -8131,7 +8587,8 @@ class Ui_MainWindow(object):
         self.Exercises_AfterButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Next", None))
         self.label_19.setText("")
         self.label_20.setText("")
-        self.label_21.setText("")
+        self.mainbody_footer_text_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:8pt;\">Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">Originally developped in the Baden Lab at the University of Sussex, Spikeling is an </span><span style=\" font-size:8pt; font-style:italic;\">in-silico</span><span style=\" font-size:8pt;\"> neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach. The current version is the result of a collective work from on-field teaching experience, both in the UK and on the African continent and from users and students feedback.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">The GUI presented here proposed a full and didactic interaction with the neuronal model. It also contains various exercices wh"
+                        "ich can be linked to classical neuroscience teachings from early to advanced degree students. Futhermore it offers the opportunity to teachers to prepare practical on: programming, data analysis scipting, methodology and protocol design. All very important skills for modern neuroscience academics but which is unfortunately widely lacking from neuroscience degrees education.</span></p></body></html>", None))
         self.label_22.setText("")
         self.label_23.setText("")
         self.license_label.setText(QCoreApplication.translate("MainWindow", u"This project is licensed under the GNU General Public License v3.0", None))
