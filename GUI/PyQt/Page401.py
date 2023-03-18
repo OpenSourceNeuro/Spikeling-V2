@@ -26,11 +26,46 @@ class StimulusGenerator():
 
     def DrawStimulus(self):
         self.StimulusIndex = self.ui.StimulusGenerator_Selection_comboBox.currentIndex()
+        if self.StimulusIndex == 0:
+            StimulusGenerator.IntensitySteps(self)
         if self.StimulusIndex == 1:
             StimulusGenerator.SineWave(self)
 
+
     def SaveStimulus(self):
-        print("tada")
+        self.StimulusIndex = self.ui.StimulusGenerator_Selection_comboBox.currentIndex()
+        if self.StimulusIndex == 0:
+            StimulusGenerator.IntensitySteps(self)
+
+        if self.StimulusIndex == 1:
+            StimulusGenerator.SineWave(self)
+
+
+    def IntensitySteps(self):
+        self.nStep = int(self.ui.Step_Number_Value.text())
+        self.Increment = int(self.ui.Step_Increment_Value.text())
+        self.FirstStep = int(self.ui.Step_First_Value.text())
+        self.StepOn = int(self.ui.Step_On_Value.text())
+        self.StepOff = int(self.ui.Step_Off_Value.text())
+        self.iStepOff = int(self.ui.Step_OffInt_Value.text())
+        self.tInter = int(self.ui.Step_Inter_Value.text())
+        self.iInter = int(self.ui.Step_InterInt_Value.text())
+
+        self.StepDur = self.StepOn + self.StepOff
+        self.StimDur = self.StepDur * self.nStep + self.tInter
+        self.xStep = np.zeros(self.StepDur)
+        self.XStep = np.arange(self.StepDur)
+        self.xStim = np.zeros(self.StimDur)
+        self.XStim = np.arange(self.StimDur)
+
+        self.ui.StimulusGenerator_Oscilloscope_widget.clear()
+
+        for i in range (self.nStep):
+            self.xStep[1 : self.StepOn] = self.FirstStep + i*self.Increment
+            self.xStep[self.StepOn+1 :] = self.iStepOff
+            self.xStim[i*self.StepDur : (i+1)*self.StepDur] = self.xStep[:]
+            self.ui.StimulusGenerator_Oscilloscope_widget.plot(self.XStep, self.xStim[i*self.StepDur : (i+1)*self.StepDur], pen=(Settings.DarkSolarized[5]))
+
 
     def SineWave(self):
         self.Amplitude = int(self.ui.SineWave_Amplitude_Value.text())
