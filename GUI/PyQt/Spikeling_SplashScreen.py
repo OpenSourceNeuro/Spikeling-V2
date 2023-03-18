@@ -24,7 +24,7 @@ class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
         if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
-        SplashScreen.resize(1280, 720)
+        SplashScreen.resize(1314, 759)
         SplashScreen.setStyleSheet(u"QFrame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "	color: rgb(147, 161, 161);\n"
@@ -55,23 +55,37 @@ class Ui_SplashScreen(object):
         self.SplashFrame.setFrameShape(QFrame.StyledPanel)
         self.SplashFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.SplashFrame)
+        self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(15, 15, 15, 15)
         self.Header_Frame = QFrame(self.SplashFrame)
         self.Header_Frame.setObjectName(u"Header_Frame")
-        self.Header_Frame.setMinimumSize(QSize(0, 250))
-        self.Header_Frame.setMaximumSize(QSize(16777215, 250))
+        self.Header_Frame.setMinimumSize(QSize(0, 200))
+        self.Header_Frame.setMaximumSize(QSize(16777215, 200))
         self.Header_Frame.setFrameShape(QFrame.StyledPanel)
         self.Header_Frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.Header_Frame)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.Header_Frame)
+        self.frame = QFrame(self.Header_Frame)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_2 = QHBoxLayout(self.frame)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
-        self.label.setPixmap(QPixmap(u":/resources/resources/Banner.png"))
+        self.label.setMaximumSize(QSize(316, 200))
+        self.label.setPixmap(QPixmap(u":/resources/resources/SpikyLogo.png"))
         self.label.setScaledContents(True)
 
-        self.horizontalLayout.addWidget(self.label)
+        self.horizontalLayout_2.addWidget(self.label, 0, Qt.AlignLeft)
+
+
+        self.horizontalLayout.addWidget(self.frame, 0, Qt.AlignLeft|Qt.AlignTop)
 
 
         self.verticalLayout_5.addWidget(self.Header_Frame)
@@ -81,18 +95,16 @@ class Ui_SplashScreen(object):
         self.Status_Frame.setFrameShape(QFrame.StyledPanel)
         self.Status_Frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_6 = QVBoxLayout(self.Status_Frame)
+        self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.Status_Label = QLabel(self.Status_Frame)
-        self.Status_Label.setObjectName(u"Status_Label")
-        font = QFont()
-        font.setPointSize(18)
-        self.Status_Label.setFont(font)
-        self.Status_Label.setAlignment(Qt.AlignCenter)
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 100)
+        self.label_3 = QLabel(self.Status_Frame)
+        self.label_3.setObjectName(u"label_3")
 
-        self.verticalLayout_6.addWidget(self.Status_Label)
+        self.verticalLayout_6.addWidget(self.label_3, 0, Qt.AlignTop)
 
 
-        self.verticalLayout_5.addWidget(self.Status_Frame)
+        self.verticalLayout_5.addWidget(self.Status_Frame, 0, Qt.AlignTop)
 
         self.Loading_Frame = QFrame(self.SplashFrame)
         self.Loading_Frame.setObjectName(u"Loading_Frame")
@@ -101,26 +113,41 @@ class Ui_SplashScreen(object):
         self.Loading_Frame.setFrameShape(QFrame.StyledPanel)
         self.Loading_Frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.Loading_Frame)
+        self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(50, 50, 50, 0)
         self.Loading_ProgressBar = QProgressBar(self.Loading_Frame)
         self.Loading_ProgressBar.setObjectName(u"Loading_ProgressBar")
-        font1 = QFont()
-        font1.setPointSize(12)
-        font1.setBold(True)
-        self.Loading_ProgressBar.setFont(font1)
+        font = QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        self.Loading_ProgressBar.setFont(font)
         self.Loading_ProgressBar.setValue(24)
 
         self.verticalLayout_2.addWidget(self.Loading_ProgressBar)
 
-        self.Loading_Label = QLabel(self.Loading_Frame)
-        self.Loading_Label.setObjectName(u"Loading_Label")
-        self.Loading_Label.setFont(font1)
-        self.Loading_Label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_2.addWidget(self.Loading_Label)
-
 
         self.verticalLayout_5.addWidget(self.Loading_Frame)
+
+        self.frame_2 = QFrame(self.SplashFrame)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_6.setSpacing(0)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.Status_Label = QLabel(self.frame_2)
+        self.Status_Label.setObjectName(u"Status_Label")
+        font1 = QFont()
+        font1.setPointSize(18)
+        self.Status_Label.setFont(font1)
+        self.Status_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_6.addWidget(self.Status_Label, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_5.addWidget(self.frame_2)
 
         self.Footer_Frame = QFrame(self.SplashFrame)
         self.Footer_Frame.setObjectName(u"Footer_Frame")
@@ -230,8 +257,11 @@ class Ui_SplashScreen(object):
     def retranslateUi(self, SplashScreen):
         SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"MainWindow", None))
         self.label.setText("")
+#if QT_CONFIG(whatsthis)
+        self.label_3.setWhatsThis(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:28pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:18pt; color:#93a1a1;\">a Hardware implementation of spiking neurons</span></p><p align=\"center\"><span style=\" font-size:18pt; color:#93a1a1;\">for neuroscience teaching and outreach</span></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.label_3.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:16pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:18pt; color:#93a1a1;\">A hardware implementation of spiking neurons for neuroscience teaching and outreach</span></p></body></html>", None))
         self.Status_Label.setText(QCoreApplication.translate("SplashScreen", u"Welcome to Spikeling GUI", None))
-        self.Loading_Label.setText(QCoreApplication.translate("SplashScreen", u"Loading...", None))
         self.label_2.setText(QCoreApplication.translate("SplashScreen", u"This project is licensed under the GNU General Public License v3.0", None))
         self.Baden_Logo.setText("")
         self.ON_Logo.setText("")
