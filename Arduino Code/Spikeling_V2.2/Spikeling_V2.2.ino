@@ -196,7 +196,7 @@ void loop() {
   }
    
   Stim_val_D = abs((StimStrD * StimLED_scaling + StimLED_offset));             // The stimulus digital output value is proportional to the potentiometer reading and scaled from parameters
-  Stim_val_A = StimStrA * Stim_CurrentScaling;        // The stimulus analog output value is proportional to the potentiometer reading and scaled to parameters
+  Stim_val_A = abs(StimStrA) * Stim_CurrentScaling;        // The stimulus analog output value is proportional to the potentiometer reading and scaled to parameters
 
   if ( StimFre_Flag == true ) {
     StimFre_Value = ADC1.readADC(pinStimFrePot);          // Reads Stimulus Frequency potentiometer value
