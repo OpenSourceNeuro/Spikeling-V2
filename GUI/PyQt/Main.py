@@ -236,7 +236,7 @@ class MainWindow(QMainWindow):
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: Page301.ShowPage(self))
         self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: Page401.ShowPage(self))
-        self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: self.ui.centerMenuSubContainer_menu_stackedwidget.setCurrentWidget(self.ui.StimulusGenerator_SubMenu_page))
+        self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.ExercisesMenu_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.ExercisesMenu_pushButton.clicked.connect(lambda: self.ui.centerMenuSubContainer_menu_stackedwidget.setCurrentWidget(self.ui.Exercises_SubMenu_page))
         self.ui.centerMenuSubContainer_exit_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
@@ -428,13 +428,20 @@ class MainWindow(QMainWindow):
         self.ui.DisplayNeuronPushButton.clicked.connect(lambda: Page301.NeuronGenerator.DrawNeuron(self))
         # Load Pre-selected neurons
         self.ui.LoadNeuron_comboBox.currentIndexChanged.connect(lambda: Page301.NeuronGenerator.LoadNeuron(self))
-        # Save Current neuron
+        # Save current neuron
         self.ui.SaveNeuronPushButton.clicked.connect(lambda: Page301.NeuronGenerator.SaveNeuron(self))
+
 
     ########################################################################
     # Stimulus Generator Page - page401
         # Display page401
         self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: Page401.ShowPage(self))
+        # Change Stimulus parameter page
+        self.ui.StimulusGenerator_Selection_comboBox.currentIndexChanged.connect(lambda: Page401.ChangeStimulusParameter(self))
+        # Display stimulus generated
+        self.ui.StimulusGenerator_Display_pushButton.clicked.connect(lambda: Page401.StimulusGenerator.DrawStimulus(self))
+        # Save current stimulus
+        self.ui.StimulusGenerator_Save_pushButton.clicked.connect(lambda: Page401.StimulusGenerator.SaveStimulus(self))
 
 
     ########################################################################
