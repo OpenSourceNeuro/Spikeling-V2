@@ -24,7 +24,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 from pyqtgraph import PlotWidget
 import resources_rc
 
-class Ui_MainWindow(QWidget):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -236,7 +236,25 @@ class Ui_MainWindow(QWidget):
 ""
                         "	padding: 2px;\n"
 "}\n"
-"")
+"\n"
+"\n"
+"#page_401 QPushButton{\n"
+"	background-color: rgb(7,54,66);\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"	padding: 2px;\n"
+"}\n"
+"#StimulusGenerator_Container QComboBox{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"	padding: 5px 5px;\n"
+"	margin: 5px\n"
+"}\n"
+"#StimulusGenerator_Container QLineEdit{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setMinimumSize(QSize(1280, 720))
@@ -6693,54 +6711,532 @@ class Ui_MainWindow(QWidget):
         self.mainbody_stackedWidget.addWidget(self.page_301)
         self.page_401 = QWidget()
         self.page_401.setObjectName(u"page_401")
-        self.frame_5 = QFrame(self.page_401)
-        self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setGeometry(QRect(60, 10, 860, 613))
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_110 = QVBoxLayout(self.frame_5)
+        self.verticalLayout_110 = QVBoxLayout(self.page_401)
         self.verticalLayout_110.setSpacing(0)
         self.verticalLayout_110.setObjectName(u"verticalLayout_110")
         self.verticalLayout_110.setContentsMargins(0, 0, 0, 0)
-        self.label_15 = QLabel(self.frame_5)
-        self.label_15.setObjectName(u"label_15")
-        self.label_15.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
+        self.StimulusGenerator_Container = QFrame(self.page_401)
+        self.StimulusGenerator_Container.setObjectName(u"StimulusGenerator_Container")
+        self.StimulusGenerator_Container.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Container.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_203 = QHBoxLayout(self.StimulusGenerator_Container)
+        self.horizontalLayout_203.setSpacing(0)
+        self.horizontalLayout_203.setObjectName(u"horizontalLayout_203")
+        self.horizontalLayout_203.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_TopContainer = QFrame(self.StimulusGenerator_Container)
+        self.StimulusGenerator_TopContainer.setObjectName(u"StimulusGenerator_TopContainer")
+        self.StimulusGenerator_TopContainer.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_TopContainer.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_201 = QHBoxLayout(self.StimulusGenerator_TopContainer)
+        self.horizontalLayout_201.setSpacing(0)
+        self.horizontalLayout_201.setObjectName(u"horizontalLayout_201")
+        self.horizontalLayout_201.setContentsMargins(0, 0, 0, 0)
+        self.StimuluGenerator_LeftContainer = QFrame(self.StimulusGenerator_TopContainer)
+        self.StimuluGenerator_LeftContainer.setObjectName(u"StimuluGenerator_LeftContainer")
+        self.StimuluGenerator_LeftContainer.setFrameShape(QFrame.StyledPanel)
+        self.StimuluGenerator_LeftContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_127 = QVBoxLayout(self.StimuluGenerator_LeftContainer)
+        self.verticalLayout_127.setSpacing(0)
+        self.verticalLayout_127.setObjectName(u"verticalLayout_127")
+        self.verticalLayout_127.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Selection_frame = QFrame(self.StimuluGenerator_LeftContainer)
+        self.StimulusGenerator_Selection_frame.setObjectName(u"StimulusGenerator_Selection_frame")
+        self.StimulusGenerator_Selection_frame.setMinimumSize(QSize(0, 100))
+        self.StimulusGenerator_Selection_frame.setMaximumSize(QSize(16777215, 100))
+        self.StimulusGenerator_Selection_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Selection_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_200 = QHBoxLayout(self.StimulusGenerator_Selection_frame)
+        self.horizontalLayout_200.setSpacing(0)
+        self.horizontalLayout_200.setObjectName(u"horizontalLayout_200")
+        self.horizontalLayout_200.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Selection_Label_frame = QFrame(self.StimulusGenerator_Selection_frame)
+        self.StimulusGenerator_Selection_Label_frame.setObjectName(u"StimulusGenerator_Selection_Label_frame")
+        self.StimulusGenerator_Selection_Label_frame.setMinimumSize(QSize(250, 0))
+        self.StimulusGenerator_Selection_Label_frame.setMaximumSize(QSize(250, 16777215))
+        self.StimulusGenerator_Selection_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Selection_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_204 = QHBoxLayout(self.StimulusGenerator_Selection_Label_frame)
+        self.horizontalLayout_204.setSpacing(0)
+        self.horizontalLayout_204.setObjectName(u"horizontalLayout_204")
+        self.horizontalLayout_204.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Selection_Label = QLabel(self.StimulusGenerator_Selection_Label_frame)
+        self.StimulusGenerator_Selection_Label.setObjectName(u"StimulusGenerator_Selection_Label")
+        self.StimulusGenerator_Selection_Label.setFont(font1)
+        self.StimulusGenerator_Selection_Label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_110.addWidget(self.label_15)
+        self.horizontalLayout_204.addWidget(self.StimulusGenerator_Selection_Label)
+
+
+        self.horizontalLayout_200.addWidget(self.StimulusGenerator_Selection_Label_frame)
+
+        self.StimulusGenerator_Selection_comboBox_frame = QFrame(self.StimulusGenerator_Selection_frame)
+        self.StimulusGenerator_Selection_comboBox_frame.setObjectName(u"StimulusGenerator_Selection_comboBox_frame")
+        self.StimulusGenerator_Selection_comboBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Selection_comboBox_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_206 = QHBoxLayout(self.StimulusGenerator_Selection_comboBox_frame)
+        self.horizontalLayout_206.setSpacing(0)
+        self.horizontalLayout_206.setObjectName(u"horizontalLayout_206")
+        self.horizontalLayout_206.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Selection_comboBox = QComboBox(self.StimulusGenerator_Selection_comboBox_frame)
+        self.StimulusGenerator_Selection_comboBox.addItem("")
+        self.StimulusGenerator_Selection_comboBox.addItem("")
+        self.StimulusGenerator_Selection_comboBox.addItem("")
+        self.StimulusGenerator_Selection_comboBox.addItem("")
+        self.StimulusGenerator_Selection_comboBox.addItem("")
+        self.StimulusGenerator_Selection_comboBox.setObjectName(u"StimulusGenerator_Selection_comboBox")
+        self.StimulusGenerator_Selection_comboBox.setMinimumSize(QSize(400, 0))
+        self.StimulusGenerator_Selection_comboBox.setMaximumSize(QSize(400, 16777215))
+        self.StimulusGenerator_Selection_comboBox.setFont(font1)
+
+        self.horizontalLayout_206.addWidget(self.StimulusGenerator_Selection_comboBox)
+
+
+        self.horizontalLayout_200.addWidget(self.StimulusGenerator_Selection_comboBox_frame, 0, Qt.AlignLeft)
+
+
+        self.verticalLayout_127.addWidget(self.StimulusGenerator_Selection_frame)
+
+        self.StimulusGenerator_Oscilloscope_frame = QFrame(self.StimuluGenerator_LeftContainer)
+        self.StimulusGenerator_Oscilloscope_frame.setObjectName(u"StimulusGenerator_Oscilloscope_frame")
+        self.StimulusGenerator_Oscilloscope_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Oscilloscope_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_125 = QVBoxLayout(self.StimulusGenerator_Oscilloscope_frame)
+        self.verticalLayout_125.setSpacing(0)
+        self.verticalLayout_125.setObjectName(u"verticalLayout_125")
+        self.verticalLayout_125.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Oscilloscope_widget = PlotWidget(self.StimulusGenerator_Oscilloscope_frame)
+        self.StimulusGenerator_Oscilloscope_widget.setObjectName(u"StimulusGenerator_Oscilloscope_widget")
+        self.verticalLayout_128 = QVBoxLayout(self.StimulusGenerator_Oscilloscope_widget)
+        self.verticalLayout_128.setSpacing(0)
+        self.verticalLayout_128.setObjectName(u"verticalLayout_128")
+        self.verticalLayout_128.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame = QFrame(self.StimulusGenerator_Oscilloscope_widget)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame.setObjectName(u"StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame")
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame.setMaximumSize(QSize(16777215, 16777215))
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_216 = QHBoxLayout(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame)
+        self.horizontalLayout_216.setSpacing(0)
+        self.horizontalLayout_216.setObjectName(u"horizontalLayout_216")
+        self.horizontalLayout_216.setContentsMargins(50, 5, 0, 0)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox = QCheckBox(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setObjectName(u"StimulusGenerator_Oscilloscope_widget_Stim_checkbox")
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setEnabled(False)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setAutoFillBackground(False)
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setStyleSheet(u"color: rgb(38,139,210);")
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setChecked(True)
+
+        self.horizontalLayout_216.addWidget(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_128.addWidget(self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox_frame)
+
+
+        self.verticalLayout_125.addWidget(self.StimulusGenerator_Oscilloscope_widget)
+
+
+        self.verticalLayout_127.addWidget(self.StimulusGenerator_Oscilloscope_frame)
+
+
+        self.horizontalLayout_201.addWidget(self.StimuluGenerator_LeftContainer)
+
+        self.line_42 = QFrame(self.StimulusGenerator_TopContainer)
+        self.line_42.setObjectName(u"line_42")
+        self.line_42.setFrameShape(QFrame.VLine)
+        self.line_42.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_201.addWidget(self.line_42)
+
+        self.line_44 = QFrame(self.StimulusGenerator_TopContainer)
+        self.line_44.setObjectName(u"line_44")
+        self.line_44.setFrameShape(QFrame.VLine)
+        self.line_44.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_201.addWidget(self.line_44)
+
+        self.StimulusGenerator_Parameter_frame = QFrame(self.StimulusGenerator_TopContainer)
+        self.StimulusGenerator_Parameter_frame.setObjectName(u"StimulusGenerator_Parameter_frame")
+        self.StimulusGenerator_Parameter_frame.setMaximumSize(QSize(300, 16777215))
+        self.StimulusGenerator_Parameter_frame.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_Parameter_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_205 = QHBoxLayout(self.StimulusGenerator_Parameter_frame)
+        self.horizontalLayout_205.setSpacing(0)
+        self.horizontalLayout_205.setObjectName(u"horizontalLayout_205")
+        self.horizontalLayout_205.setContentsMargins(0, 0, 0, 0)
+        self.StimulusGenerator_Parameter_stackedWidget = QStackedWidget(self.StimulusGenerator_Parameter_frame)
+        self.StimulusGenerator_Parameter_stackedWidget.setObjectName(u"StimulusGenerator_Parameter_stackedWidget")
+        self.page_IntensitySteps = QWidget()
+        self.page_IntensitySteps.setObjectName(u"page_IntensitySteps")
+        self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_IntensitySteps)
+        self.page_SineWave = QWidget()
+        self.page_SineWave.setObjectName(u"page_SineWave")
+        self.verticalLayout_126 = QVBoxLayout(self.page_SineWave)
+        self.verticalLayout_126.setSpacing(20)
+        self.verticalLayout_126.setObjectName(u"verticalLayout_126")
+        self.verticalLayout_126.setContentsMargins(0, 0, 0, 5)
+        self.SineWave_Amplitude_frame = QFrame(self.page_SineWave)
+        self.SineWave_Amplitude_frame.setObjectName(u"SineWave_Amplitude_frame")
+        self.SineWave_Amplitude_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Amplitude_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_208 = QHBoxLayout(self.SineWave_Amplitude_frame)
+        self.horizontalLayout_208.setSpacing(0)
+        self.horizontalLayout_208.setObjectName(u"horizontalLayout_208")
+        self.horizontalLayout_208.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Amplitude_Label_frame = QFrame(self.SineWave_Amplitude_frame)
+        self.SineWave_Amplitude_Label_frame.setObjectName(u"SineWave_Amplitude_Label_frame")
+        self.SineWave_Amplitude_Label_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Amplitude_Label_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Amplitude_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Amplitude_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_209 = QHBoxLayout(self.SineWave_Amplitude_Label_frame)
+        self.horizontalLayout_209.setSpacing(0)
+        self.horizontalLayout_209.setObjectName(u"horizontalLayout_209")
+        self.horizontalLayout_209.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Amplitude_Label = QLabel(self.SineWave_Amplitude_Label_frame)
+        self.SineWave_Amplitude_Label.setObjectName(u"SineWave_Amplitude_Label")
+        self.SineWave_Amplitude_Label.setFont(font1)
+        self.SineWave_Amplitude_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_209.addWidget(self.SineWave_Amplitude_Label)
+
+
+        self.horizontalLayout_208.addWidget(self.SineWave_Amplitude_Label_frame)
+
+        self.SineWave_Amplitude_Value_frame = QFrame(self.SineWave_Amplitude_frame)
+        self.SineWave_Amplitude_Value_frame.setObjectName(u"SineWave_Amplitude_Value_frame")
+        self.SineWave_Amplitude_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Amplitude_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Amplitude_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Amplitude_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_212 = QHBoxLayout(self.SineWave_Amplitude_Value_frame)
+        self.horizontalLayout_212.setSpacing(0)
+        self.horizontalLayout_212.setObjectName(u"horizontalLayout_212")
+        self.horizontalLayout_212.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Amplitude_Value = QLineEdit(self.SineWave_Amplitude_Value_frame)
+        self.SineWave_Amplitude_Value.setObjectName(u"SineWave_Amplitude_Value")
+        self.SineWave_Amplitude_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_Amplitude_Value.setFont(font5)
+        self.SineWave_Amplitude_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_212.addWidget(self.SineWave_Amplitude_Value)
+
+
+        self.horizontalLayout_208.addWidget(self.SineWave_Amplitude_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_Amplitude_frame)
+
+        self.SineWave_Frequency_frame = QFrame(self.page_SineWave)
+        self.SineWave_Frequency_frame.setObjectName(u"SineWave_Frequency_frame")
+        self.SineWave_Frequency_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Frequency_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_207 = QHBoxLayout(self.SineWave_Frequency_frame)
+        self.horizontalLayout_207.setSpacing(0)
+        self.horizontalLayout_207.setObjectName(u"horizontalLayout_207")
+        self.horizontalLayout_207.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Frequency_Label_frame = QFrame(self.SineWave_Frequency_frame)
+        self.SineWave_Frequency_Label_frame.setObjectName(u"SineWave_Frequency_Label_frame")
+        self.SineWave_Frequency_Label_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Frequency_Label_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Frequency_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Frequency_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_210 = QHBoxLayout(self.SineWave_Frequency_Label_frame)
+        self.horizontalLayout_210.setSpacing(0)
+        self.horizontalLayout_210.setObjectName(u"horizontalLayout_210")
+        self.horizontalLayout_210.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Frequency_Label = QLabel(self.SineWave_Frequency_Label_frame)
+        self.SineWave_Frequency_Label.setObjectName(u"SineWave_Frequency_Label")
+        self.SineWave_Frequency_Label.setMinimumSize(QSize(150, 0))
+        self.SineWave_Frequency_Label.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Frequency_Label.setFont(font1)
+        self.SineWave_Frequency_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_210.addWidget(self.SineWave_Frequency_Label)
+
+
+        self.horizontalLayout_207.addWidget(self.SineWave_Frequency_Label_frame)
+
+        self.SineWave_Frequency_Value_frame = QFrame(self.SineWave_Frequency_frame)
+        self.SineWave_Frequency_Value_frame.setObjectName(u"SineWave_Frequency_Value_frame")
+        self.SineWave_Frequency_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Frequency_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Frequency_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Frequency_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_211 = QHBoxLayout(self.SineWave_Frequency_Value_frame)
+        self.horizontalLayout_211.setSpacing(0)
+        self.horizontalLayout_211.setObjectName(u"horizontalLayout_211")
+        self.horizontalLayout_211.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Frequency_Value = QLineEdit(self.SineWave_Frequency_Value_frame)
+        self.SineWave_Frequency_Value.setObjectName(u"SineWave_Frequency_Value")
+        self.SineWave_Frequency_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_Frequency_Value.setFont(font5)
+        self.SineWave_Frequency_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_211.addWidget(self.SineWave_Frequency_Value)
+
+
+        self.horizontalLayout_207.addWidget(self.SineWave_Frequency_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_Frequency_frame)
+
+        self.SineWave_Mean_frame = QFrame(self.page_SineWave)
+        self.SineWave_Mean_frame.setObjectName(u"SineWave_Mean_frame")
+        self.SineWave_Mean_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Mean_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_213 = QHBoxLayout(self.SineWave_Mean_frame)
+        self.horizontalLayout_213.setSpacing(0)
+        self.horizontalLayout_213.setObjectName(u"horizontalLayout_213")
+        self.horizontalLayout_213.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Mean_Label_frame = QFrame(self.SineWave_Mean_frame)
+        self.SineWave_Mean_Label_frame.setObjectName(u"SineWave_Mean_Label_frame")
+        self.SineWave_Mean_Label_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Mean_Label_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Mean_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Mean_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_214 = QHBoxLayout(self.SineWave_Mean_Label_frame)
+        self.horizontalLayout_214.setSpacing(0)
+        self.horizontalLayout_214.setObjectName(u"horizontalLayout_214")
+        self.horizontalLayout_214.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Mean_Label = QLabel(self.SineWave_Mean_Label_frame)
+        self.SineWave_Mean_Label.setObjectName(u"SineWave_Mean_Label")
+        self.SineWave_Mean_Label.setMinimumSize(QSize(150, 0))
+        self.SineWave_Mean_Label.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Mean_Label.setFont(font1)
+        self.SineWave_Mean_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_214.addWidget(self.SineWave_Mean_Label)
+
+
+        self.horizontalLayout_213.addWidget(self.SineWave_Mean_Label_frame)
+
+        self.SineWave_Mean_Value_frame = QFrame(self.SineWave_Mean_frame)
+        self.SineWave_Mean_Value_frame.setObjectName(u"SineWave_Mean_Value_frame")
+        self.SineWave_Mean_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_Mean_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_Mean_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_Mean_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_215 = QHBoxLayout(self.SineWave_Mean_Value_frame)
+        self.horizontalLayout_215.setSpacing(0)
+        self.horizontalLayout_215.setObjectName(u"horizontalLayout_215")
+        self.horizontalLayout_215.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_Mean_Value = QLineEdit(self.SineWave_Mean_Value_frame)
+        self.SineWave_Mean_Value.setObjectName(u"SineWave_Mean_Value")
+        self.SineWave_Mean_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_Mean_Value.setFont(font5)
+        self.SineWave_Mean_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_215.addWidget(self.SineWave_Mean_Value)
+
+
+        self.horizontalLayout_213.addWidget(self.SineWave_Mean_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_Mean_frame)
+
+        self.SineWave_StimOn_frame = QFrame(self.page_SineWave)
+        self.SineWave_StimOn_frame.setObjectName(u"SineWave_StimOn_frame")
+        self.SineWave_StimOn_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOn_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_220 = QHBoxLayout(self.SineWave_StimOn_frame)
+        self.horizontalLayout_220.setSpacing(0)
+        self.horizontalLayout_220.setObjectName(u"horizontalLayout_220")
+        self.horizontalLayout_220.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOn_Label_frame = QFrame(self.SineWave_StimOn_frame)
+        self.SineWave_StimOn_Label_frame.setObjectName(u"SineWave_StimOn_Label_frame")
+        self.SineWave_StimOn_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOn_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_219 = QHBoxLayout(self.SineWave_StimOn_Label_frame)
+        self.horizontalLayout_219.setSpacing(0)
+        self.horizontalLayout_219.setObjectName(u"horizontalLayout_219")
+        self.horizontalLayout_219.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOn_Label = QLabel(self.SineWave_StimOn_Label_frame)
+        self.SineWave_StimOn_Label.setObjectName(u"SineWave_StimOn_Label")
+        self.SineWave_StimOn_Label.setFont(font1)
+        self.SineWave_StimOn_Label.setAlignment(Qt.AlignCenter)
+        self.SineWave_StimOn_Label.setWordWrap(True)
+
+        self.horizontalLayout_219.addWidget(self.SineWave_StimOn_Label)
+
+
+        self.horizontalLayout_220.addWidget(self.SineWave_StimOn_Label_frame)
+
+        self.SineWave_StimOn_Value_frame = QFrame(self.SineWave_StimOn_frame)
+        self.SineWave_StimOn_Value_frame.setObjectName(u"SineWave_StimOn_Value_frame")
+        self.SineWave_StimOn_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_StimOn_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_StimOn_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOn_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_217 = QHBoxLayout(self.SineWave_StimOn_Value_frame)
+        self.horizontalLayout_217.setSpacing(0)
+        self.horizontalLayout_217.setObjectName(u"horizontalLayout_217")
+        self.horizontalLayout_217.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOn_Value = QLineEdit(self.SineWave_StimOn_Value_frame)
+        self.SineWave_StimOn_Value.setObjectName(u"SineWave_StimOn_Value")
+        self.SineWave_StimOn_Value.setMinimumSize(QSize(100, 0))
+        self.SineWave_StimOn_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_StimOn_Value.setFont(font5)
+        self.SineWave_StimOn_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_217.addWidget(self.SineWave_StimOn_Value)
+
+
+        self.horizontalLayout_220.addWidget(self.SineWave_StimOn_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_StimOn_frame)
+
+        self.SineWave_IntOff_frame = QFrame(self.page_SineWave)
+        self.SineWave_IntOff_frame.setObjectName(u"SineWave_IntOff_frame")
+        self.SineWave_IntOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_IntOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_225 = QHBoxLayout(self.SineWave_IntOff_frame)
+        self.horizontalLayout_225.setSpacing(0)
+        self.horizontalLayout_225.setObjectName(u"horizontalLayout_225")
+        self.horizontalLayout_225.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_IntOff_Label_frame = QFrame(self.SineWave_IntOff_frame)
+        self.SineWave_IntOff_Label_frame.setObjectName(u"SineWave_IntOff_Label_frame")
+        self.SineWave_IntOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_IntOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_224 = QHBoxLayout(self.SineWave_IntOff_Label_frame)
+        self.horizontalLayout_224.setSpacing(0)
+        self.horizontalLayout_224.setObjectName(u"horizontalLayout_224")
+        self.horizontalLayout_224.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_IntOff_Label = QLabel(self.SineWave_IntOff_Label_frame)
+        self.SineWave_IntOff_Label.setObjectName(u"SineWave_IntOff_Label")
+        self.SineWave_IntOff_Label.setFont(font1)
+        self.SineWave_IntOff_Label.setAlignment(Qt.AlignCenter)
+        self.SineWave_IntOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_224.addWidget(self.SineWave_IntOff_Label)
+
+
+        self.horizontalLayout_225.addWidget(self.SineWave_IntOff_Label_frame)
+
+        self.SineWave_IntOff_Value_frame = QFrame(self.SineWave_IntOff_frame)
+        self.SineWave_IntOff_Value_frame.setObjectName(u"SineWave_IntOff_Value_frame")
+        self.SineWave_IntOff_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_IntOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_IntOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_IntOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_223 = QHBoxLayout(self.SineWave_IntOff_Value_frame)
+        self.horizontalLayout_223.setSpacing(0)
+        self.horizontalLayout_223.setObjectName(u"horizontalLayout_223")
+        self.horizontalLayout_223.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_IntOff_Value = QLineEdit(self.SineWave_IntOff_Value_frame)
+        self.SineWave_IntOff_Value.setObjectName(u"SineWave_IntOff_Value")
+        self.SineWave_IntOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_IntOff_Value.setFont(font5)
+        self.SineWave_IntOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_223.addWidget(self.SineWave_IntOff_Value)
+
+
+        self.horizontalLayout_225.addWidget(self.SineWave_IntOff_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_IntOff_frame)
+
+        self.SineWave_StimOff_frame = QFrame(self.page_SineWave)
+        self.SineWave_StimOff_frame.setObjectName(u"SineWave_StimOff_frame")
+        self.SineWave_StimOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_221 = QHBoxLayout(self.SineWave_StimOff_frame)
+        self.horizontalLayout_221.setSpacing(0)
+        self.horizontalLayout_221.setObjectName(u"horizontalLayout_221")
+        self.horizontalLayout_221.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOff_Label_frame = QFrame(self.SineWave_StimOff_frame)
+        self.SineWave_StimOff_Label_frame.setObjectName(u"SineWave_StimOff_Label_frame")
+        self.SineWave_StimOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_218 = QHBoxLayout(self.SineWave_StimOff_Label_frame)
+        self.horizontalLayout_218.setSpacing(0)
+        self.horizontalLayout_218.setObjectName(u"horizontalLayout_218")
+        self.horizontalLayout_218.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOff_Label = QLabel(self.SineWave_StimOff_Label_frame)
+        self.SineWave_StimOff_Label.setObjectName(u"SineWave_StimOff_Label")
+        self.SineWave_StimOff_Label.setFont(font1)
+        self.SineWave_StimOff_Label.setAlignment(Qt.AlignCenter)
+        self.SineWave_StimOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_218.addWidget(self.SineWave_StimOff_Label)
+
+
+        self.horizontalLayout_221.addWidget(self.SineWave_StimOff_Label_frame)
+
+        self.SineWave_StimOff_Value_frame = QFrame(self.SineWave_StimOff_frame)
+        self.SineWave_StimOff_Value_frame.setObjectName(u"SineWave_StimOff_Value_frame")
+        self.SineWave_StimOff_Value_frame.setMinimumSize(QSize(150, 0))
+        self.SineWave_StimOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.SineWave_StimOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.SineWave_StimOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_222 = QHBoxLayout(self.SineWave_StimOff_Value_frame)
+        self.horizontalLayout_222.setSpacing(0)
+        self.horizontalLayout_222.setObjectName(u"horizontalLayout_222")
+        self.horizontalLayout_222.setContentsMargins(0, 0, 0, 0)
+        self.SineWave_StimOff_Value = QLineEdit(self.SineWave_StimOff_Value_frame)
+        self.SineWave_StimOff_Value.setObjectName(u"SineWave_StimOff_Value")
+        self.SineWave_StimOff_Value.setMinimumSize(QSize(100, 0))
+        self.SineWave_StimOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.SineWave_StimOff_Value.setFont(font5)
+        self.SineWave_StimOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_222.addWidget(self.SineWave_StimOff_Value)
+
+
+        self.horizontalLayout_221.addWidget(self.SineWave_StimOff_Value_frame)
+
+
+        self.verticalLayout_126.addWidget(self.SineWave_StimOff_frame)
+
+        self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_SineWave)
+
+        self.horizontalLayout_205.addWidget(self.StimulusGenerator_Parameter_stackedWidget)
+
+
+        self.horizontalLayout_201.addWidget(self.StimulusGenerator_Parameter_frame)
+
+
+        self.horizontalLayout_203.addWidget(self.StimulusGenerator_TopContainer)
+
+
+        self.verticalLayout_110.addWidget(self.StimulusGenerator_Container)
+
+        self.StimulusGenerator_SubContainer = QFrame(self.page_401)
+        self.StimulusGenerator_SubContainer.setObjectName(u"StimulusGenerator_SubContainer")
+        self.StimulusGenerator_SubContainer.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_SubContainer.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_202 = QHBoxLayout(self.StimulusGenerator_SubContainer)
+        self.horizontalLayout_202.setSpacing(100)
+        self.horizontalLayout_202.setObjectName(u"horizontalLayout_202")
+        self.horizontalLayout_202.setContentsMargins(75, 0, 75, 5)
+        self.StimulusGenerator_Display_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
+        self.StimulusGenerator_Display_pushButton.setObjectName(u"StimulusGenerator_Display_pushButton")
+        self.StimulusGenerator_Display_pushButton.setMinimumSize(QSize(200, 0))
+        self.StimulusGenerator_Display_pushButton.setMaximumSize(QSize(200, 16777215))
+        self.StimulusGenerator_Display_pushButton.setFont(font1)
+
+        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Display_pushButton)
+
+        self.StimulusGenerator_Save_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
+        self.StimulusGenerator_Save_pushButton.setObjectName(u"StimulusGenerator_Save_pushButton")
+        self.StimulusGenerator_Save_pushButton.setMinimumSize(QSize(200, 0))
+        self.StimulusGenerator_Save_pushButton.setMaximumSize(QSize(200, 16777215))
+        self.StimulusGenerator_Save_pushButton.setFont(font1)
+
+        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Save_pushButton)
+
+        self.frame_5 = QFrame(self.StimulusGenerator_SubContainer)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+
+        self.horizontalLayout_202.addWidget(self.frame_5)
+
+
+        self.verticalLayout_110.addWidget(self.StimulusGenerator_SubContainer)
 
         self.mainbody_stackedWidget.addWidget(self.page_401)
-        self.page_402 = QWidget()
-        self.page_402.setObjectName(u"page_402")
-        self.frame_7 = QFrame(self.page_402)
-        self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setGeometry(QRect(60, 20, 860, 613))
-        self.frame_7.setFrameShape(QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_111 = QVBoxLayout(self.frame_7)
-        self.verticalLayout_111.setObjectName(u"verticalLayout_111")
-        self.label_16 = QLabel(self.frame_7)
-        self.label_16.setObjectName(u"label_16")
-        self.label_16.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
-
-        self.verticalLayout_111.addWidget(self.label_16)
-
-        self.mainbody_stackedWidget.addWidget(self.page_402)
-        self.page_403 = QWidget()
-        self.page_403.setObjectName(u"page_403")
-        self.frame_8 = QFrame(self.page_403)
-        self.frame_8.setObjectName(u"frame_8")
-        self.frame_8.setGeometry(QRect(70, 20, 860, 613))
-        self.frame_8.setFrameShape(QFrame.StyledPanel)
-        self.frame_8.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_112 = QVBoxLayout(self.frame_8)
-        self.verticalLayout_112.setObjectName(u"verticalLayout_112")
-        self.label_17 = QLabel(self.frame_8)
-        self.label_17.setObjectName(u"label_17")
-        self.label_17.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
-
-        self.verticalLayout_112.addWidget(self.label_17)
-
-        self.mainbody_stackedWidget.addWidget(self.page_403)
         self.page_501 = QWidget()
         self.page_501.setObjectName(u"page_501")
         self.horizontalLayout_192 = QHBoxLayout(self.page_501)
@@ -7257,11 +7753,12 @@ class Ui_MainWindow(QWidget):
         self.retranslateUi(MainWindow)
 
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
-        self.mainbody_stackedWidget.setCurrentIndex(0)
+        self.mainbody_stackedWidget.setCurrentIndex(9)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(1)
-        self.Exercises_stackedWidget.setCurrentIndex(3)
+        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(1)
+        self.Exercises_stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7593,9 +8090,28 @@ class Ui_MainWindow(QWidget):
         self.LoadNeuron_comboBox.setItemText(11, QCoreApplication.translate("MainWindow", u"Resonator", None))
         self.LoadNeuron_comboBox.setItemText(12, QCoreApplication.translate("MainWindow", u"Integrator", None))
 
-        self.label_15.setText("")
-        self.label_16.setText("")
-        self.label_17.setText("")
+        self.StimulusGenerator_Selection_Label.setText(QCoreApplication.translate("MainWindow", u"Select stimulus type", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Intensity steps", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Sine wave", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Linear sine wave", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Chirp", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Binary noise", None))
+
+        self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.SineWave_Amplitude_Label.setText(QCoreApplication.translate("MainWindow", u"Amplitude (a.u.)", None))
+        self.SineWave_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.SineWave_Frequency_Label.setText(QCoreApplication.translate("MainWindow", u"Frequency (Hz)", None))
+        self.SineWave_Frequency_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.SineWave_Mean_Label.setText(QCoreApplication.translate("MainWindow", u"Mean (a.u.)", None))
+        self.SineWave_Mean_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.SineWave_StimOn_Label.setText(QCoreApplication.translate("MainWindow", u"Stimulus Time (ms)", None))
+        self.SineWave_StimOn_Value.setText(QCoreApplication.translate("MainWindow", u"500", None))
+        self.SineWave_IntOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus Intensity (a.u.)", None))
+        self.SineWave_IntOff_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.SineWave_StimOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus Time (ms)", None))
+        self.SineWave_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
+        self.StimulusGenerator_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Stimulus", None))
+        self.StimulusGenerator_Save_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Stimulus", None))
         self.Vm_IntroTitle.setText(QCoreApplication.translate("MainWindow", u"Resting membrane potential", None))
         self.Vm_IntroText.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">In the absence of a stimulus, the Spikeling neuron rests at -70 mV and should only spike sporadically.</span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The resting membrane voltage (Vm) can be adjust indirectly by the virtual stimulating electrode located at the bottom left of the unit. The dial sitting on the electrode drawing sets a constant input current increasing or decreasing the polarised state of the neuron. </span></p><p align=\"justify\"><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">In this session we are only  interested in the membrane potential trace (the red one on the oscilloscope) and the input current trace (the green one). </span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The red LED on the unit also tracks the Vm, and flashes with each spike which should also be accompanied by an audible \u201cclick\u201d. As human auditory frequency discrimination ( is higher than the visu"
                         "al flicker fusion frequency (50-90Hz), electrophysiologists often connect a speaker to their recording of membrane voltage to get a direct audio feedback of what the neuron might respond to.</span></p></body></html>", None))
