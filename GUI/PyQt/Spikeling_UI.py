@@ -106,13 +106,19 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(0, 30, 38);\n"
 "	padding: 2px;\n"
 "}\n"
+"#Spikeling_CustomStimulus_Selection_frame QPushButton{\n"
+"	padding: 4px 0px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
 "\n"
 "#Spikeling_DataRecording_box{\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#Spikeling_DataRecording_box QLineEdit{\n"
 "	border: 2px solid rgb(147,161,161);\n"
-"    background-color: rgb(7, 54, 66);\n"
+"    background-color: rgb(7, 54, 66);"
+                        "\n"
 "}\n"
 "#Spikeling_DataRecording_box QComboBox{\n"
 "	border: 2px solid rgb(147,161,161);\n"
@@ -120,8 +126,7 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "\n"
 "\n"
-"#"
-                        "Spikeling_rightMenuSubContainer QPushButton{\n"
+"#Spikeling_rightMenuSubContainer QPushButton{\n"
 "	text-align: left;\n"
 "	padding: 20px 0px;\n"
 "	border-top-right-radius:20px;\n"
@@ -151,13 +156,13 @@ class Ui_MainWindow(QWidget):
 "#Imaging_parameter_stackedWidget{\n"
 "	background-color: rgb(0, 43, 54);\n"
 "}\n"
-"#Imaging_rightMenuSubContainer QPushButton{\n"
+"#Imaging_righ"
+                        "tMenuSubContainer QPushButton{\n"
 "	text-align: left;\n"
 "	padding: 20px 0px;\n"
 "	border-top-right-radius:20px;\n"
 "	border-bottom-right-radius: 20px;\n"
-""
-                        "	background-color: rgb(0, 43, 54);\n"
+"	background-color: rgb(0, 43, 54);\n"
 "}\n"
 "#Imaging_rightMenuSubContainer QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
@@ -186,13 +191,13 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "#NeuronGenerator_subframe2 QPushButton{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	"
+                        "border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
 "}\n"
 "#NeuronGenerator_subframe2 QComboBox{\n"
-"	background-color: "
-                        "rgb(7, 54, 66);\n"
+"	background-color: rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
@@ -226,7 +231,8 @@ class Ui_MainWindow(QWidget):
 "\n"
 "#DataAnalysis_Display_frame QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	border: 2px solid rgb(1"
+                        "47,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
@@ -234,8 +240,7 @@ class Ui_MainWindow(QWidget):
 "\n"
 "#page_401 QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
-"	border: 2px s"
-                        "olid rgb(147,161,161);\n"
+"	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
@@ -1937,24 +1942,55 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_24.addWidget(self.Spikeling_CustomStimulus_Title_frame)
 
-        self.Spikeling_CustomStimulus_comboBox_frame = QFrame(self.Spikeling_CustomStimulus_frame)
-        self.Spikeling_CustomStimulus_comboBox_frame.setObjectName(u"Spikeling_CustomStimulus_comboBox_frame")
-        self.Spikeling_CustomStimulus_comboBox_frame.setFrameShape(QFrame.StyledPanel)
-        self.Spikeling_CustomStimulus_comboBox_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_45 = QHBoxLayout(self.Spikeling_CustomStimulus_comboBox_frame)
-        self.horizontalLayout_45.setSpacing(0)
+        self.Spikeling_CustomStimulus_Selection_frame = QFrame(self.Spikeling_CustomStimulus_frame)
+        self.Spikeling_CustomStimulus_Selection_frame.setObjectName(u"Spikeling_CustomStimulus_Selection_frame")
+        self.Spikeling_CustomStimulus_Selection_frame.setFrameShape(QFrame.StyledPanel)
+        self.Spikeling_CustomStimulus_Selection_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_45 = QHBoxLayout(self.Spikeling_CustomStimulus_Selection_frame)
+        self.horizontalLayout_45.setSpacing(5)
         self.horizontalLayout_45.setObjectName(u"horizontalLayout_45")
-        self.horizontalLayout_45.setContentsMargins(0, 0, 0, 0)
-        self.Spikeling_CustomStimulus_comboBox = QComboBox(self.Spikeling_CustomStimulus_comboBox_frame)
-        self.Spikeling_CustomStimulus_comboBox.setObjectName(u"Spikeling_CustomStimulus_comboBox")
-        self.Spikeling_CustomStimulus_comboBox.setEnabled(False)
-        sizePolicy3.setHeightForWidth(self.Spikeling_CustomStimulus_comboBox.sizePolicy().hasHeightForWidth())
-        self.Spikeling_CustomStimulus_comboBox.setSizePolicy(sizePolicy3)
+        self.horizontalLayout_45.setContentsMargins(0, 0, 5, 0)
+        self.Spikeling_CustomStimulus_StimLabel_frame = QFrame(self.Spikeling_CustomStimulus_Selection_frame)
+        self.Spikeling_CustomStimulus_StimLabel_frame.setObjectName(u"Spikeling_CustomStimulus_StimLabel_frame")
+        self.Spikeling_CustomStimulus_StimLabel_frame.setFrameShape(QFrame.StyledPanel)
+        self.Spikeling_CustomStimulus_StimLabel_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_253 = QHBoxLayout(self.Spikeling_CustomStimulus_StimLabel_frame)
+        self.horizontalLayout_253.setSpacing(0)
+        self.horizontalLayout_253.setObjectName(u"horizontalLayout_253")
+        self.horizontalLayout_253.setContentsMargins(0, 0, 0, 0)
+        self.Spikeling_CustomStimulus_StimLabel = QLabel(self.Spikeling_CustomStimulus_StimLabel_frame)
+        self.Spikeling_CustomStimulus_StimLabel.setObjectName(u"Spikeling_CustomStimulus_StimLabel")
+        self.Spikeling_CustomStimulus_StimLabel.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_45.addWidget(self.Spikeling_CustomStimulus_comboBox)
+        self.horizontalLayout_253.addWidget(self.Spikeling_CustomStimulus_StimLabel)
 
 
-        self.verticalLayout_24.addWidget(self.Spikeling_CustomStimulus_comboBox_frame)
+        self.horizontalLayout_45.addWidget(self.Spikeling_CustomStimulus_StimLabel_frame)
+
+        self.Spikeling_CustomStimulus_Load_frame = QFrame(self.Spikeling_CustomStimulus_Selection_frame)
+        self.Spikeling_CustomStimulus_Load_frame.setObjectName(u"Spikeling_CustomStimulus_Load_frame")
+        sizePolicy3.setHeightForWidth(self.Spikeling_CustomStimulus_Load_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_CustomStimulus_Load_frame.setSizePolicy(sizePolicy3)
+        self.Spikeling_CustomStimulus_Load_frame.setMinimumSize(QSize(50, 0))
+        self.Spikeling_CustomStimulus_Load_frame.setMaximumSize(QSize(50, 16777215))
+        self.Spikeling_CustomStimulus_Load_frame.setFrameShape(QFrame.StyledPanel)
+        self.Spikeling_CustomStimulus_Load_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_252 = QHBoxLayout(self.Spikeling_CustomStimulus_Load_frame)
+        self.horizontalLayout_252.setSpacing(0)
+        self.horizontalLayout_252.setObjectName(u"horizontalLayout_252")
+        self.horizontalLayout_252.setContentsMargins(0, 0, 0, 0)
+        self.Spikeling_CustomStimulus_Load_pushButton = QPushButton(self.Spikeling_CustomStimulus_Load_frame)
+        self.Spikeling_CustomStimulus_Load_pushButton.setObjectName(u"Spikeling_CustomStimulus_Load_pushButton")
+        self.Spikeling_CustomStimulus_Load_pushButton.setMinimumSize(QSize(50, 0))
+        self.Spikeling_CustomStimulus_Load_pushButton.setMaximumSize(QSize(50, 16777215))
+
+        self.horizontalLayout_252.addWidget(self.Spikeling_CustomStimulus_Load_pushButton)
+
+
+        self.horizontalLayout_45.addWidget(self.Spikeling_CustomStimulus_Load_frame)
+
+
+        self.verticalLayout_24.addWidget(self.Spikeling_CustomStimulus_Selection_frame)
 
         self.Spikeling_CustomStimulus_display_frame = QFrame(self.Spikeling_CustomStimulus_frame)
         self.Spikeling_CustomStimulus_display_frame.setObjectName(u"Spikeling_CustomStimulus_display_frame")
@@ -1964,7 +2000,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_44.setSpacing(0)
         self.horizontalLayout_44.setObjectName(u"horizontalLayout_44")
         self.horizontalLayout_44.setContentsMargins(0, 0, 0, 0)
-        self.Spikeling_CustomStimulus_display = QWidget(self.Spikeling_CustomStimulus_display_frame)
+        self.Spikeling_CustomStimulus_display = PlotWidget(self.Spikeling_CustomStimulus_display_frame)
         self.Spikeling_CustomStimulus_display.setObjectName(u"Spikeling_CustomStimulus_display")
         self.Spikeling_CustomStimulus_display.setEnabled(False)
         sizePolicy1.setHeightForWidth(self.Spikeling_CustomStimulus_display.sizePolicy().hasHeightForWidth())
@@ -7616,6 +7652,317 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_126.addWidget(self.SineWave_StimOff_frame)
 
         self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_SineWave)
+        self.page_TriangularWave = QWidget()
+        self.page_TriangularWave.setObjectName(u"page_TriangularWave")
+        self.verticalLayout_112 = QVBoxLayout(self.page_TriangularWave)
+        self.verticalLayout_112.setSpacing(0)
+        self.verticalLayout_112.setObjectName(u"verticalLayout_112")
+        self.verticalLayout_112.setContentsMargins(0, 0, 0, 0)
+        self.frame_7 = QFrame(self.page_TriangularWave)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_256 = QHBoxLayout(self.frame_7)
+        self.horizontalLayout_256.setSpacing(0)
+        self.horizontalLayout_256.setObjectName(u"horizontalLayout_256")
+        self.horizontalLayout_256.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Amplitude_Label_frame = QFrame(self.frame_7)
+        self.TriangleWave_Amplitude_Label_frame.setObjectName(u"TriangleWave_Amplitude_Label_frame")
+        self.TriangleWave_Amplitude_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Amplitude_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_255 = QHBoxLayout(self.TriangleWave_Amplitude_Label_frame)
+        self.horizontalLayout_255.setSpacing(0)
+        self.horizontalLayout_255.setObjectName(u"horizontalLayout_255")
+        self.horizontalLayout_255.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Amplitude_Label = QLabel(self.TriangleWave_Amplitude_Label_frame)
+        self.TriangleWave_Amplitude_Label.setObjectName(u"TriangleWave_Amplitude_Label")
+        self.TriangleWave_Amplitude_Label.setFont(font1)
+        self.TriangleWave_Amplitude_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_Amplitude_Label.setWordWrap(True)
+
+        self.horizontalLayout_255.addWidget(self.TriangleWave_Amplitude_Label)
+
+
+        self.horizontalLayout_256.addWidget(self.TriangleWave_Amplitude_Label_frame)
+
+        self.TriangleWave_Amplitude_Value_frame = QFrame(self.frame_7)
+        self.TriangleWave_Amplitude_Value_frame.setObjectName(u"TriangleWave_Amplitude_Value_frame")
+        self.TriangleWave_Amplitude_Value_frame.setMinimumSize(QSize(150, 0))
+        self.TriangleWave_Amplitude_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_Amplitude_Value_frame.setFont(font5)
+        self.TriangleWave_Amplitude_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Amplitude_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_254 = QHBoxLayout(self.TriangleWave_Amplitude_Value_frame)
+        self.horizontalLayout_254.setSpacing(0)
+        self.horizontalLayout_254.setObjectName(u"horizontalLayout_254")
+        self.horizontalLayout_254.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Amplitude_Value = QLineEdit(self.TriangleWave_Amplitude_Value_frame)
+        self.TriangleWave_Amplitude_Value.setObjectName(u"TriangleWave_Amplitude_Value")
+        self.TriangleWave_Amplitude_Value.setMinimumSize(QSize(100, 0))
+        self.TriangleWave_Amplitude_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_Amplitude_Value.setFont(font5)
+        self.TriangleWave_Amplitude_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_254.addWidget(self.TriangleWave_Amplitude_Value)
+
+
+        self.horizontalLayout_256.addWidget(self.TriangleWave_Amplitude_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.frame_7)
+
+        self.TriangleWave_Frequency_frame = QFrame(self.page_TriangularWave)
+        self.TriangleWave_Frequency_frame.setObjectName(u"TriangleWave_Frequency_frame")
+        self.TriangleWave_Frequency_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Frequency_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_259 = QHBoxLayout(self.TriangleWave_Frequency_frame)
+        self.horizontalLayout_259.setSpacing(0)
+        self.horizontalLayout_259.setObjectName(u"horizontalLayout_259")
+        self.horizontalLayout_259.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Frequency_Label_frame = QFrame(self.TriangleWave_Frequency_frame)
+        self.TriangleWave_Frequency_Label_frame.setObjectName(u"TriangleWave_Frequency_Label_frame")
+        self.TriangleWave_Frequency_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Frequency_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_258 = QHBoxLayout(self.TriangleWave_Frequency_Label_frame)
+        self.horizontalLayout_258.setSpacing(0)
+        self.horizontalLayout_258.setObjectName(u"horizontalLayout_258")
+        self.horizontalLayout_258.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Frequency_Label = QLabel(self.TriangleWave_Frequency_Label_frame)
+        self.TriangleWave_Frequency_Label.setObjectName(u"TriangleWave_Frequency_Label")
+        self.TriangleWave_Frequency_Label.setFont(font1)
+        self.TriangleWave_Frequency_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_Frequency_Label.setWordWrap(True)
+
+        self.horizontalLayout_258.addWidget(self.TriangleWave_Frequency_Label)
+
+
+        self.horizontalLayout_259.addWidget(self.TriangleWave_Frequency_Label_frame)
+
+        self.TriangleWave_Frequency_Value_frame = QFrame(self.TriangleWave_Frequency_frame)
+        self.TriangleWave_Frequency_Value_frame.setObjectName(u"TriangleWave_Frequency_Value_frame")
+        self.TriangleWave_Frequency_Value_frame.setMinimumSize(QSize(150, 0))
+        self.TriangleWave_Frequency_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_Frequency_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Frequency_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_257 = QHBoxLayout(self.TriangleWave_Frequency_Value_frame)
+        self.horizontalLayout_257.setSpacing(0)
+        self.horizontalLayout_257.setObjectName(u"horizontalLayout_257")
+        self.horizontalLayout_257.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Frequency_Value = QLineEdit(self.TriangleWave_Frequency_Value_frame)
+        self.TriangleWave_Frequency_Value.setObjectName(u"TriangleWave_Frequency_Value")
+        self.TriangleWave_Frequency_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_Frequency_Value.setFont(font5)
+        self.TriangleWave_Frequency_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_257.addWidget(self.TriangleWave_Frequency_Value)
+
+
+        self.horizontalLayout_259.addWidget(self.TriangleWave_Frequency_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.TriangleWave_Frequency_frame)
+
+        self.TriangleWave_Mean_frame = QFrame(self.page_TriangularWave)
+        self.TriangleWave_Mean_frame.setObjectName(u"TriangleWave_Mean_frame")
+        self.TriangleWave_Mean_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Mean_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_262 = QHBoxLayout(self.TriangleWave_Mean_frame)
+        self.horizontalLayout_262.setSpacing(0)
+        self.horizontalLayout_262.setObjectName(u"horizontalLayout_262")
+        self.horizontalLayout_262.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Mean_Label_frame = QFrame(self.TriangleWave_Mean_frame)
+        self.TriangleWave_Mean_Label_frame.setObjectName(u"TriangleWave_Mean_Label_frame")
+        self.TriangleWave_Mean_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Mean_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_261 = QHBoxLayout(self.TriangleWave_Mean_Label_frame)
+        self.horizontalLayout_261.setSpacing(0)
+        self.horizontalLayout_261.setObjectName(u"horizontalLayout_261")
+        self.horizontalLayout_261.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Mean_Label = QLabel(self.TriangleWave_Mean_Label_frame)
+        self.TriangleWave_Mean_Label.setObjectName(u"TriangleWave_Mean_Label")
+        self.TriangleWave_Mean_Label.setFont(font1)
+        self.TriangleWave_Mean_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_Mean_Label.setWordWrap(True)
+
+        self.horizontalLayout_261.addWidget(self.TriangleWave_Mean_Label)
+
+
+        self.horizontalLayout_262.addWidget(self.TriangleWave_Mean_Label_frame)
+
+        self.TriangleWave_Mean_Value_frame = QFrame(self.TriangleWave_Mean_frame)
+        self.TriangleWave_Mean_Value_frame.setObjectName(u"TriangleWave_Mean_Value_frame")
+        self.TriangleWave_Mean_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_Mean_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Mean_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_260 = QHBoxLayout(self.TriangleWave_Mean_Value_frame)
+        self.horizontalLayout_260.setSpacing(0)
+        self.horizontalLayout_260.setObjectName(u"horizontalLayout_260")
+        self.horizontalLayout_260.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_Mean_Value = QLineEdit(self.TriangleWave_Mean_Value_frame)
+        self.TriangleWave_Mean_Value.setObjectName(u"TriangleWave_Mean_Value")
+        self.TriangleWave_Mean_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_Mean_Value.setFont(font5)
+        self.TriangleWave_Mean_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_260.addWidget(self.TriangleWave_Mean_Value)
+
+
+        self.horizontalLayout_262.addWidget(self.TriangleWave_Mean_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.TriangleWave_Mean_frame)
+
+        self.TriangleWave_StimOn_frame = QFrame(self.page_TriangularWave)
+        self.TriangleWave_StimOn_frame.setObjectName(u"TriangleWave_StimOn_frame")
+        self.TriangleWave_StimOn_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOn_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_265 = QHBoxLayout(self.TriangleWave_StimOn_frame)
+        self.horizontalLayout_265.setSpacing(0)
+        self.horizontalLayout_265.setObjectName(u"horizontalLayout_265")
+        self.horizontalLayout_265.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOn_Label_frame = QFrame(self.TriangleWave_StimOn_frame)
+        self.TriangleWave_StimOn_Label_frame.setObjectName(u"TriangleWave_StimOn_Label_frame")
+        self.TriangleWave_StimOn_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOn_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_264 = QHBoxLayout(self.TriangleWave_StimOn_Label_frame)
+        self.horizontalLayout_264.setSpacing(0)
+        self.horizontalLayout_264.setObjectName(u"horizontalLayout_264")
+        self.horizontalLayout_264.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOn_Label = QLabel(self.TriangleWave_StimOn_Label_frame)
+        self.TriangleWave_StimOn_Label.setObjectName(u"TriangleWave_StimOn_Label")
+        self.TriangleWave_StimOn_Label.setFont(font1)
+        self.TriangleWave_StimOn_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_StimOn_Label.setWordWrap(True)
+
+        self.horizontalLayout_264.addWidget(self.TriangleWave_StimOn_Label)
+
+
+        self.horizontalLayout_265.addWidget(self.TriangleWave_StimOn_Label_frame)
+
+        self.TriangleWave_StimOn_Value_frame = QFrame(self.TriangleWave_StimOn_frame)
+        self.TriangleWave_StimOn_Value_frame.setObjectName(u"TriangleWave_StimOn_Value_frame")
+        self.TriangleWave_StimOn_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_StimOn_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOn_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_263 = QHBoxLayout(self.TriangleWave_StimOn_Value_frame)
+        self.horizontalLayout_263.setSpacing(0)
+        self.horizontalLayout_263.setObjectName(u"horizontalLayout_263")
+        self.horizontalLayout_263.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOn_Value = QLineEdit(self.TriangleWave_StimOn_Value_frame)
+        self.TriangleWave_StimOn_Value.setObjectName(u"TriangleWave_StimOn_Value")
+        self.TriangleWave_StimOn_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_StimOn_Value.setFont(font5)
+        self.TriangleWave_StimOn_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_263.addWidget(self.TriangleWave_StimOn_Value)
+
+
+        self.horizontalLayout_265.addWidget(self.TriangleWave_StimOn_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.TriangleWave_StimOn_frame)
+
+        self.TriangleWave_IntOff_frame = QFrame(self.page_TriangularWave)
+        self.TriangleWave_IntOff_frame.setObjectName(u"TriangleWave_IntOff_frame")
+        self.TriangleWave_IntOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_IntOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_268 = QHBoxLayout(self.TriangleWave_IntOff_frame)
+        self.horizontalLayout_268.setSpacing(0)
+        self.horizontalLayout_268.setObjectName(u"horizontalLayout_268")
+        self.horizontalLayout_268.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_IntOff_Label_frame = QFrame(self.TriangleWave_IntOff_frame)
+        self.TriangleWave_IntOff_Label_frame.setObjectName(u"TriangleWave_IntOff_Label_frame")
+        self.TriangleWave_IntOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_IntOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_267 = QHBoxLayout(self.TriangleWave_IntOff_Label_frame)
+        self.horizontalLayout_267.setSpacing(0)
+        self.horizontalLayout_267.setObjectName(u"horizontalLayout_267")
+        self.horizontalLayout_267.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_IntOff_Label = QLabel(self.TriangleWave_IntOff_Label_frame)
+        self.TriangleWave_IntOff_Label.setObjectName(u"TriangleWave_IntOff_Label")
+        self.TriangleWave_IntOff_Label.setFont(font1)
+        self.TriangleWave_IntOff_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_IntOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_267.addWidget(self.TriangleWave_IntOff_Label)
+
+
+        self.horizontalLayout_268.addWidget(self.TriangleWave_IntOff_Label_frame)
+
+        self.TriangleWave_IntOff_Value_frame = QFrame(self.TriangleWave_IntOff_frame)
+        self.TriangleWave_IntOff_Value_frame.setObjectName(u"TriangleWave_IntOff_Value_frame")
+        self.TriangleWave_IntOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_IntOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_IntOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_266 = QHBoxLayout(self.TriangleWave_IntOff_Value_frame)
+        self.horizontalLayout_266.setSpacing(0)
+        self.horizontalLayout_266.setObjectName(u"horizontalLayout_266")
+        self.horizontalLayout_266.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_IntOff_Value = QLineEdit(self.TriangleWave_IntOff_Value_frame)
+        self.TriangleWave_IntOff_Value.setObjectName(u"TriangleWave_IntOff_Value")
+        self.TriangleWave_IntOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_IntOff_Value.setFont(font5)
+        self.TriangleWave_IntOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_266.addWidget(self.TriangleWave_IntOff_Value)
+
+
+        self.horizontalLayout_268.addWidget(self.TriangleWave_IntOff_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.TriangleWave_IntOff_frame)
+
+        self.TriangleWave_StimOff_frame = QFrame(self.page_TriangularWave)
+        self.TriangleWave_StimOff_frame.setObjectName(u"TriangleWave_StimOff_frame")
+        self.TriangleWave_StimOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_271 = QHBoxLayout(self.TriangleWave_StimOff_frame)
+        self.horizontalLayout_271.setSpacing(0)
+        self.horizontalLayout_271.setObjectName(u"horizontalLayout_271")
+        self.horizontalLayout_271.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOff_Label_frame = QFrame(self.TriangleWave_StimOff_frame)
+        self.TriangleWave_StimOff_Label_frame.setObjectName(u"TriangleWave_StimOff_Label_frame")
+        self.TriangleWave_StimOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_270 = QHBoxLayout(self.TriangleWave_StimOff_Label_frame)
+        self.horizontalLayout_270.setSpacing(0)
+        self.horizontalLayout_270.setObjectName(u"horizontalLayout_270")
+        self.horizontalLayout_270.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOff_Label = QLabel(self.TriangleWave_StimOff_Label_frame)
+        self.TriangleWave_StimOff_Label.setObjectName(u"TriangleWave_StimOff_Label")
+        self.TriangleWave_StimOff_Label.setFont(font1)
+        self.TriangleWave_StimOff_Label.setAlignment(Qt.AlignCenter)
+        self.TriangleWave_StimOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_270.addWidget(self.TriangleWave_StimOff_Label)
+
+
+        self.horizontalLayout_271.addWidget(self.TriangleWave_StimOff_Label_frame)
+
+        self.TriangleWave_StimOff_Value_frame = QFrame(self.TriangleWave_StimOff_frame)
+        self.TriangleWave_StimOff_Value_frame.setObjectName(u"TriangleWave_StimOff_Value_frame")
+        self.TriangleWave_StimOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.TriangleWave_StimOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_StimOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_269 = QHBoxLayout(self.TriangleWave_StimOff_Value_frame)
+        self.horizontalLayout_269.setSpacing(0)
+        self.horizontalLayout_269.setObjectName(u"horizontalLayout_269")
+        self.horizontalLayout_269.setContentsMargins(0, 0, 0, 0)
+        self.TriangleWave_StimOff_Value = QLineEdit(self.TriangleWave_StimOff_Value_frame)
+        self.TriangleWave_StimOff_Value.setObjectName(u"TriangleWave_StimOff_Value")
+        self.TriangleWave_StimOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.TriangleWave_StimOff_Value.setFont(font5)
+        self.TriangleWave_StimOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_269.addWidget(self.TriangleWave_StimOff_Value)
+
+
+        self.horizontalLayout_271.addWidget(self.TriangleWave_StimOff_Value_frame)
+
+
+        self.verticalLayout_112.addWidget(self.TriangleWave_StimOff_frame)
+
+        self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_TriangularWave)
 
         self.horizontalLayout_205.addWidget(self.StimulusGenerator_Parameter_stackedWidget)
 
@@ -8194,11 +8541,11 @@ class Ui_MainWindow(QWidget):
         self.retranslateUi(MainWindow)
 
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
-        self.mainbody_stackedWidget.setCurrentIndex(0)
+        self.mainbody_stackedWidget.setCurrentIndex(8)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(1)
-        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(0)
+        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(2)
         self.Exercises_stackedWidget.setCurrentIndex(3)
 
 
@@ -8314,6 +8661,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_StimStr_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.Spikeling_StimStr_image.setText("")
         self.Spikeling_CustomStimulus_Label.setText(QCoreApplication.translate("MainWindow", u"Custom Stimulus", None))
+        self.Spikeling_CustomStimulus_StimLabel.setText(QCoreApplication.translate("MainWindow", u"Select a stimulus:", None))
+        self.Spikeling_CustomStimulus_Load_pushButton.setText(QCoreApplication.translate("MainWindow", u"Load", None))
         self.Spikeling_PR_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Photo-Receptor</span></p></body></html>", None))
         self.Spikeling_PR_Label.setText(QCoreApplication.translate("MainWindow", u"Photo-Gain (%)", None))
         self.Spikeling_PR_Photogain_readings.setText("")
@@ -8533,39 +8882,51 @@ class Ui_MainWindow(QWidget):
         self.StimulusGenerator_Selection_Label.setText(QCoreApplication.translate("MainWindow", u"Select stimulus type", None))
         self.StimulusGenerator_Selection_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Intensity steps", None))
         self.StimulusGenerator_Selection_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Sine wave", None))
-        self.StimulusGenerator_Selection_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Linear sine wave", None))
+        self.StimulusGenerator_Selection_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Triangular wave", None))
         self.StimulusGenerator_Selection_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Chirp", None))
         self.StimulusGenerator_Selection_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Binary noise", None))
 
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
         self.Step_Number_Label.setText(QCoreApplication.translate("MainWindow", u"Number of steps", None))
-        self.Step_Number_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.Step_Number_Value.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.Step_Increment_Label.setText(QCoreApplication.translate("MainWindow", u"Intensity increment (a.u.)", None))
-        self.Step_Increment_Value.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.Step_Increment_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.Step_First_Label.setText(QCoreApplication.translate("MainWindow", u"First step intensity (a.u.)", None))
-        self.Step_First_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Step_First_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.Step_On_Label.setText(QCoreApplication.translate("MainWindow", u"Step lenght (ms)", None))
-        self.Step_On_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
+        self.Step_On_Value.setText(QCoreApplication.translate("MainWindow", u"25", None))
         self.Step_Off_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Step length (ms)", None))
-        self.Step_Off_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Step_Off_Value.setText(QCoreApplication.translate("MainWindow", u"75", None))
         self.Step_OffInt_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Step intensity (a.u.)", None))
         self.Step_OffInt_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.Step_Inter_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus length (ms)", None))
-        self.Step_Inter_Value.setText(QCoreApplication.translate("MainWindow", u"5000", None))
+        self.Step_Inter_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.Step_InterInt_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus intensity (a.u.)", None))
         self.Step_InterInt_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.SineWave_Amplitude_Label.setText(QCoreApplication.translate("MainWindow", u"Amplitude (a.u.)", None))
         self.SineWave_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
         self.SineWave_Frequency_Label.setText(QCoreApplication.translate("MainWindow", u"Frequency (Hz)", None))
-        self.SineWave_Frequency_Value.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.SineWave_Frequency_Value.setText(QCoreApplication.translate("MainWindow", u"20", None))
         self.SineWave_Mean_Label.setText(QCoreApplication.translate("MainWindow", u"Mean (a.u.)", None))
         self.SineWave_Mean_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.SineWave_StimOn_Label.setText(QCoreApplication.translate("MainWindow", u"Stimulus Time (ms)", None))
-        self.SineWave_StimOn_Value.setText(QCoreApplication.translate("MainWindow", u"500", None))
+        self.SineWave_StimOn_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
         self.SineWave_IntOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus Intensity (a.u.)", None))
         self.SineWave_IntOff_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.SineWave_StimOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-Stimulus Time (ms)", None))
-        self.SineWave_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
+        self.SineWave_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.TriangleWave_Amplitude_Label.setText(QCoreApplication.translate("MainWindow", u"Amplitude (a.u.)", None))
+        self.TriangleWave_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.TriangleWave_Frequency_Label.setText(QCoreApplication.translate("MainWindow", u"Frequency (Hz)", None))
+        self.TriangleWave_Frequency_Value.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.TriangleWave_Mean_Label.setText(QCoreApplication.translate("MainWindow", u"Mean (a.u.)", None))
+        self.TriangleWave_Mean_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.TriangleWave_StimOn_Label.setText(QCoreApplication.translate("MainWindow", u"Stimulus Time (ms)", None))
+        self.TriangleWave_StimOn_Value.setText(QCoreApplication.translate("MainWindow", u"250", None))
+        self.TriangleWave_IntOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-stimulus intensity (a.u.)", None))
+        self.TriangleWave_IntOff_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.TriangleWave_StimOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-stimulus time (ms)", None))
+        self.TriangleWave_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.StimulusGenerator_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Stimulus", None))
         self.StimulusGenerator_Save_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Stimulus", None))
         self.Vm_IntroTitle.setText(QCoreApplication.translate("MainWindow", u"Resting membrane potential", None))
