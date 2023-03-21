@@ -324,6 +324,7 @@ class MainWindow(QMainWindow):
         self.ui.StimStr_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateStimStr(self))
         self.ui.Spikeling_StimStrSlider.valueChanged.connect(lambda: Page101.Spikeling101.GetStimStrSliderValue(self))
         self.ui.StimCus_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateCustomStimulus(self))
+        self.ui.Spikeling_CustomStimulus_Load_pushButton.clicked.connect(lambda: Page101.Spikeling101.LoadStimulus(self))
         self.ui.PhotoGain_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePhotoGain(self))
         self.ui.Spikeling_PR_PhotoGain_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetPhotoGain(self))
         self.ui.PhotoDecay_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePRDecay(self))
