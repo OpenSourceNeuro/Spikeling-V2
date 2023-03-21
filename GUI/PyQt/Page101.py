@@ -7,6 +7,7 @@ from Izhikevich_parameters import IzhikevichNeurons
 import serial
 import os
 import numpy as np
+import pandas as pd
 from sys import platform
 
 
@@ -25,6 +26,7 @@ class Spikeling101():
     def ShowPage(self):
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_101)
         self.ui.Spikeling_Oscilloscope_widget.setBackground(Settings.DarkSolarized[0])
+        self.ui.Spikeling_CustomStimulus_display.setBackground(Settings.DarkSolarized[0])
 
     # Serial Port Functions
     def ChangePort(self):
@@ -152,9 +154,43 @@ class Spikeling101():
     # Custom Stimulus
     def ActivateCustomStimulus(self):
             if self.ui.StimCus_toggleButton.isChecked():
-                    self.ui.Spikeling_CustomStimulus_comboBox.setEnabled(True)
+                self.StimCounter = 0
+                self.StimCusValue = self.df_yStim [self.StimCounter]
+
+                if self.serial_port.is_open:
+                    self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))
+
             else:
-                    self.ui.Spikeling_CustomStimulus_comboBox.setEnabled(False)
+                if self.serial_port.is_open:
+                    self.serial_port.write(str('SC0' + '\n').encode('utf-8'))
+
+
+
+    def LoadStimulus(self):
+        FileName, _ = QFileDialog.getOpenFileName(self,
+                                               caption='Select a custom stimulus',
+                                               dir="./Stimuli",
+                                               filter='csv files (*.csv)'
+                                               )
+        self.filename = os.path.splitext(os.path.basename(QFileInfo(FileName).fileName()))[0]
+        self.ui.Spikeling_CustomStimulus_StimLabel.setText(self.filename)
+
+        Df = pd.read_csv(FileName)
+        self.df_Stim = Df["Stim"]
+        self.df_Trigger = Df["Trigger"]
+
+        self.df_xStim = np.linspace(0, len(self.df_Stim)/10 - 1, len(self.df_Stim))
+
+        self.df_yStim = np.zeros(len(self.df_Stim))
+        self.df_yStim = self.df_Stim
+
+        self.df_yTrigger = np.zeros(len(self.df_Trigger))
+        self.df_yTrigger = self.df_Trigger
+
+        self.ui.Spikeling_CustomStimulus_display.clear()
+        self.ui.Spikeling_Oscilloscope_widget.showGrid(x=False, y=False)
+        self.ui.Spikeling_CustomStimulus_display.plot(x=self.df_xStim, y=self.df_yStim, pen=(Settings.DarkSolarized[5]))
+
 
 
     # PhotoGain
@@ -189,7 +225,7 @@ class Spikeling101():
                     self.ui.Spikeling_PR_Decay_readings.setText(str(self.PhotoDecay/100000))
                     self.ui.Spikeling_PR_Decay_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
                     if self.serial_port.is_open:
-                            self.serial_port.write(str('PD1 ' + str(self.PhotoDecay) + '\n').encode('utf-8'))
+                            self.serial_port.write(str('PD1 ' + str(self.PhotoDecay/100000) + '\n').encode('utf-8'))
             else:
                     self.ui.Spikeling_PR_Decay_slider.setEnabled(False)
                     self.ui.Spikeling_PR_Decay_slider.setValue(100)
@@ -202,7 +238,8 @@ class Spikeling101():
             self.ui.Spikeling_PR_Decay_readings.setText(str(self.PhotoDecay/100000))
             self.ui.Spikeling_PR_Decay_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
             if self.serial_port.is_open:
-                    self.serial_port.write(str('PD1 ' + str(self.PhotoDecay) + '\n').encode('utf-8'))
+                    self.serial_port.write(str('PD1 ' + str(self.PhotoDecay/100000) + '\n').encode('utf-8'))
+            print(self.PhotoDecay/100000)
 
 
     # PhotoRecovery
@@ -213,7 +250,7 @@ class Spikeling101():
                     self.ui.Spikeling_PR_Recovery_readings.setText(str(self.PhotoRecovery/1000))
                     self.ui.Spikeling_PR_Recovery_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
                     if self.serial_port.is_open:
-                            self.serial_port.write(str('PR1 ' + str(self.PhotoRecovery) + '\n').encode('utf-8'))
+                            self.serial_port.write(str('PR1 ' + str(self.PhotoRecovery/1000) + '\n').encode('utf-8'))
             else:
                     self.ui.Spikeling_PR_Recovery_slider.setEnabled(False)
                     self.ui.Spikeling_PR_Recovery_slider.setValue(25)
@@ -226,7 +263,7 @@ class Spikeling101():
             self.ui.Spikeling_PR_Recovery_readings.setText(str(self.PhotoRecovery/1000))
             self.ui.Spikeling_PR_Recovery_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
             if self.serial_port.is_open:
-                    self.serial_port.write(str('PR1 ' + str(self.PhotoRecovery) + '\n').encode('utf-8'))
+                    self.serial_port.write(str('PR1 ' + str(self.PhotoRecovery/1000) + '\n').encode('utf-8'))
 
 
     # PatchClamp
