@@ -53,6 +53,20 @@ def SpikelingPlot(self):
         if self.i_downsampling == downsampling - 1:
             self.i_downsampling = 0
 
+        if self.ui.StimCus_toggleButton.isChecked():
+            self.StimCusValue = self.df_yStim[self.StimCounter]
+            if self.serial_port.is_open:
+                self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))
+                #print("stim_custom: " + str(self.StimCusValue))
+                self.StimCounter += 1
+            if self.StimCounter > len(self.df_Stim) - 1:
+                self.StimCounter = 0
+
+        else:
+            if self.serial_port.is_open:
+                self.serial_port.write(str('SC0' + '\n').encode('utf-8'))
+
+
     def GetData(self):                               # Read Serial and return data array (7)
         self.rx = self.serial_port.readline()
         self.rx_serial = str(self.rx, 'utf8').strip()
