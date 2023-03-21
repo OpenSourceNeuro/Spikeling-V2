@@ -132,6 +132,9 @@ int StimStrA_mini = 10;
 int Stim_minStr         = 2;     // Minimum stength value percentage below which the digital output is equal to 0
 int Stim_val_D          = 0;     // Stimulus Digital output for stimulating LED
 int Stim_val_A          = 0;     // Stimulus Analog output ofr Current in pin
+int StimCus_val         = 0;
+int StimCus_D           = 0;
+int StimCus_A           = 0;
 float Stim_state;                  // Status of the stimulus (ON or OFF / 1 or 0);
 float StimLED_scaling     = 5.12;    // Scaling applied to the digital out value
 int StimLED_offset = 10;
@@ -161,7 +164,8 @@ float I_Noise;                   // Noise current
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                         Rx Tx parameters                          */
 boolean StimFre_Flag = true;  
-boolean StimStr_Flag = true;  
+boolean StimStr_Flag = true; 
+boolean StimCus_Flag = true; 
 boolean PDGain_Flag = true;
 boolean PDDecay_Flag = true;
 boolean PDRecovery_Flag = true;

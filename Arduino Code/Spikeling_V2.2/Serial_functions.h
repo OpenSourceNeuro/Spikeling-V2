@@ -70,6 +70,18 @@ void StimStr_off(){
 }
 
 
+void StimCus_on(){
+  StimCus_Flag = false;
+  char *arg;
+  arg = SCmd.next();
+  if (arg != NULL){
+    StimCus_val = atoi(arg);
+  }
+}
+void StimCus_off(){
+  StimCus_Flag = true;
+}
+
 void PDGain_on(){
   PDGain_Flag = false;
   char *arg;
@@ -88,7 +100,7 @@ void PDDecay_on(){
   char *arg;
   arg = SCmd.next();
   if (arg != NULL){
-    PD_Decay = atoi(arg)/100000;
+    PD_Decay = atof(arg);
   }
 }
 void PDDecay_off(){
@@ -101,7 +113,7 @@ void PDRecovery_on(){
   char *arg;
   arg = SCmd.next();
   if (arg != NULL){
-    PD_Recovery = atoi(arg)/1000;
+    PD_Recovery = atof(arg);
   }
 }
 void PDRecovery_off(){
