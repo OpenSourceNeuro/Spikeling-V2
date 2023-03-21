@@ -95,6 +95,11 @@ centerMenuSubContainer_menu_stackedwidget{
 	background-color: rgb(0, 30, 38);
 	padding: 2px;
 }
+#Spikeling_CustomStimulus_Selection_frame QPushButton{
+	padding: 4px 0px;
+	border-radius:10px;
+	background-color: rgb(0, 30, 38);
+}
 
 #Spikeling_DataRecording_box{
 	border: 2px solid rgb(147,161,161);
@@ -1744,7 +1749,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>8</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -4224,7 +4229,7 @@ background-color: rgb(220, 50, 47);</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="Spikeling_CustomStimulus_comboBox_frame">
+                            <widget class="QFrame" name="Spikeling_CustomStimulus_Selection_frame">
                              <property name="frameShape">
                               <enum>QFrame::StyledPanel</enum>
                              </property>
@@ -4233,7 +4238,7 @@ background-color: rgb(220, 50, 47);</string>
                              </property>
                              <layout class="QHBoxLayout" name="horizontalLayout_45">
                               <property name="spacing">
-                               <number>0</number>
+                               <number>5</number>
                               </property>
                               <property name="leftMargin">
                                <number>0</number>
@@ -4242,22 +4247,110 @@ background-color: rgb(220, 50, 47);</string>
                                <number>0</number>
                               </property>
                               <property name="rightMargin">
-                               <number>0</number>
+                               <number>5</number>
                               </property>
                               <property name="bottomMargin">
                                <number>0</number>
                               </property>
                               <item>
-                               <widget class="QComboBox" name="Spikeling_CustomStimulus_comboBox">
-                                <property name="enabled">
-                                 <bool>false</bool>
+                               <widget class="QFrame" name="Spikeling_CustomStimulus_StimLabel_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
                                 </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_253">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="Spikeling_CustomStimulus_StimLabel">
+                                   <property name="text">
+                                    <string>Select a stimulus:</string>
+                                   </property>
+                                   <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="Spikeling_CustomStimulus_Load_frame">
                                 <property name="sizePolicy">
                                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                   <horstretch>0</horstretch>
                                   <verstretch>0</verstretch>
                                  </sizepolicy>
                                 </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>50</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>50</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_252">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QPushButton" name="Spikeling_CustomStimulus_Load_pushButton">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>50</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>50</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="text">
+                                    <string>Load</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
                                </widget>
                               </item>
                              </layout>
@@ -4288,7 +4381,7 @@ background-color: rgb(220, 50, 47);</string>
                                <number>0</number>
                               </property>
                               <item>
-                               <widget class="QWidget" name="Spikeling_CustomStimulus_display" native="true">
+                               <widget class="PlotWidget" name="Spikeling_CustomStimulus_display" native="true">
                                 <property name="enabled">
                                  <bool>false</bool>
                                 </property>
@@ -15149,7 +15242,7 @@ p, li { white-space: pre-wrap; }
                                   </item>
                                   <item>
                                    <property name="text">
-                                    <string>Linear sine wave</string>
+                                    <string>Triangular wave</string>
                                    </property>
                                   </item>
                                   <item>
@@ -15320,7 +15413,7 @@ p, li { white-space: pre-wrap; }
                           <item>
                            <widget class="QStackedWidget" name="StimulusGenerator_Parameter_stackedWidget">
                             <property name="currentIndex">
-                             <number>0</number>
+                             <number>2</number>
                             </property>
                             <widget class="QWidget" name="page_IntensitySteps">
                              <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -15450,7 +15543,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>5</string>
+                                       <string>10</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -15589,7 +15682,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>20</string>
+                                       <string>5</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -15728,7 +15821,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>0</string>
+                                       <string>5</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -15867,7 +15960,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>250</string>
+                                       <string>25</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -16006,7 +16099,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>100</string>
+                                       <string>75</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -16271,7 +16364,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>5000</string>
+                                       <string>100</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -16725,7 +16818,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>5</string>
+                                       <string>20</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -17018,7 +17111,7 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
-                                       <string>500</string>
+                                       <string>250</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
@@ -17290,7 +17383,812 @@ p, li { white-space: pre-wrap; }
                                        </font>
                                       </property>
                                       <property name="text">
+                                       <string>100</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                            <widget class="QWidget" name="page_TriangularWave">
+                             <layout class="QVBoxLayout" name="verticalLayout_112">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QFrame" name="frame_7">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_256">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Amplitude_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_255">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_Amplitude_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Amplitude (a.u.)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Amplitude_Value_frame">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <pointsize>12</pointsize>
+                                     <bold>true</bold>
+                                    </font>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_254">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_Amplitude_Value">
+                                      <property name="minimumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>0</height>
+                                       </size>
+                                      </property>
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>50</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="TriangleWave_Frequency_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_259" stretch="0,0">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Frequency_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_258">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_Frequency_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Frequency (Hz)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Frequency_Value_frame">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>0</height>
+                                    </size>
+                                   </property>
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_257">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_Frequency_Value">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>20</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="TriangleWave_Mean_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_262">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Mean_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_261">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_Mean_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Mean (a.u.)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_Mean_Value_frame">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_260">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_Mean_Value">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>0</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="TriangleWave_StimOn_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_265">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_StimOn_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_264">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_StimOn_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Stimulus Time (ms)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_StimOn_Value_frame">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_263">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_StimOn_Value">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
                                        <string>250</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="TriangleWave_IntOff_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_268">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_IntOff_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_267">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_IntOff_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Inter-stimulus intensity (a.u.)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_IntOff_Value_frame">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_266">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_IntOff_Value">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>0</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QFrame" name="TriangleWave_StimOff_frame">
+                                <property name="frameShape">
+                                 <enum>QFrame::StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Raised</enum>
+                                </property>
+                                <layout class="QHBoxLayout" name="horizontalLayout_271" stretch="0,0">
+                                 <property name="spacing">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="leftMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="topMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="rightMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <property name="bottomMargin">
+                                  <number>0</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_StimOff_Label_frame">
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_270">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLabel" name="TriangleWave_StimOff_Label">
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>Inter-stimulus time (ms)</string>
+                                      </property>
+                                      <property name="alignment">
+                                       <set>Qt::AlignCenter</set>
+                                      </property>
+                                      <property name="wordWrap">
+                                       <bool>true</bool>
+                                      </property>
+                                     </widget>
+                                    </item>
+                                   </layout>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QFrame" name="TriangleWave_StimOff_Value_frame">
+                                   <property name="maximumSize">
+                                    <size>
+                                     <width>150</width>
+                                     <height>16777215</height>
+                                    </size>
+                                   </property>
+                                   <property name="frameShape">
+                                    <enum>QFrame::StyledPanel</enum>
+                                   </property>
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Raised</enum>
+                                   </property>
+                                   <layout class="QHBoxLayout" name="horizontalLayout_269">
+                                    <property name="spacing">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                     <number>0</number>
+                                    </property>
+                                    <item>
+                                     <widget class="QLineEdit" name="TriangleWave_StimOff_Value">
+                                      <property name="maximumSize">
+                                       <size>
+                                        <width>100</width>
+                                        <height>16777215</height>
+                                       </size>
+                                      </property>
+                                      <property name="font">
+                                       <font>
+                                        <pointsize>12</pointsize>
+                                        <bold>true</bold>
+                                       </font>
+                                      </property>
+                                      <property name="text">
+                                       <string>100</string>
                                       </property>
                                       <property name="alignment">
                                        <set>Qt::AlignCenter</set>
