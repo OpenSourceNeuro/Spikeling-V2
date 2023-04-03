@@ -9,26 +9,11 @@ import Data_recording
 import Settings
 import time
 
-TxStimFre = "F"; TxStimStr = "F"; TxStimCus = "F"
-TxPDGain = "F"; TxPDDecay = "F"; TxPDRecovery = "F"
-TxVm = "F"; TxNoise = "F"
-TxSyn1Gain = "F"; TxSyn1Decay = "F"
-TxSyn2Gain = "F"; TxSyn2Decay = "F"
-TxMode = "F"; Txa = "F"; Txb = "F"; Txc = "F"; Txd = "F"
-
-SerialTx = [TxStimFre,TxStimStr,TxStimCus,
-            TxPDGain,TxPDDecay,TxPDRecovery,
-            TxVm,TxNoise,
-            TxSyn1Gain,TxSyn1Decay,
-            TxSyn2Gain,TxSyn2Decay,
-            TxMode, Txa, Txb, Txc, Txd]
-
 downsampling = 5
 sampleinterval = 0.1
 timewindow = 250
 timewindowdisplay = 125
 penwidth = 1
-
 
 def SpikelingPlot(self):
 
@@ -57,25 +42,24 @@ def SpikelingPlot(self):
             self.StimCusValue = self.df_yStim[self.StimCounter]
             if self.serial_port.is_open:
                 self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))
-                #print("stim_custom: " + str(self.StimCusValue))
                 self.StimCounter += 1
             if self.StimCounter > len(self.df_Stim) - 1:
                 self.StimCounter = 0
-
         else:
             if self.serial_port.is_open:
                 self.serial_port.write(str('SC0' + '\n').encode('utf-8'))
 
 
-    def GetData(self):                               # Read Serial and return data array (7)
+    # Read Serial and return data array (7)
+    def GetData(self):
         self.rx = self.serial_port.readline()
         self.rx_serial = str(self.rx, 'utf8').strip()
         self.data = self.rx_serial.split(',')
-        #print(self.data)
         return self.data
 
 
-    def BuffData(self):                               # Append latest serial data point into buffer deque
+    # Append latest serial data point into buffer deque
+    def BuffData(self):
         self.databuffer0.append(self.Data[0])
         self.databuffer1.append(self.Data[1])
         self.databuffer2.append(self.Data[2])
@@ -84,7 +68,9 @@ def SpikelingPlot(self):
         self.databuffer5.append(self.Data[5])
         self.databuffer6.append(self.Data[6])
 
-    def PlotCurve(self):                             # If checked, plot latest buffer data points
+
+    # If checked, plot latest buffer data points
+    def PlotCurve(self):
         if self.ui.Spikeling_VmCheckbox.isChecked():
             self.y0[:] = self.databuffer0
             self.curve0.setData(self.x, self.y0)
@@ -126,6 +112,8 @@ def SpikelingPlot(self):
             self.curve6.setData(self.x, self.y6)
         else:
             self.curve6.clear()
+
+
 
 
 def SavePlotData(self):                              # Save latest buffer data and export them as csv
@@ -188,6 +176,7 @@ def SetPlotCurve(self):
     self.databuffer5 = collections.deque([0.0] * self._bufsize, self._bufsize)
     self.databuffer6 = collections.deque([0.0] * self._bufsize, self._bufsize)
 
+
     self.x = np.linspace(-timewindow, 0.0, self._bufsize)            # Create arrays of self._bufsize length
     self.y0 = np.zeros(self._bufsize, dtype=float)
     self.y1 = np.zeros(self._bufsize, dtype=float)
@@ -223,7 +212,6 @@ def SetPlot(self):
     self.ui.Spikeling_Oscilloscope_widget.getAxis("right").linkToView(self.CurrentPlots)
 
 
-
     self.curve0 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y0, pen=pg.mkPen(Settings.DarkSolarized[3], width=penwidth))
     self.curve0.clear()
     self.curve3 = self.ui.Spikeling_Oscilloscope_widget.plot(self.x, self.y3, pen=pg.mkPen(Settings.DarkSolarized[6], width=penwidth))
@@ -245,6 +233,9 @@ def SetPlot(self):
     self.CurrentPlots.addItem(self.curve4)
     self.CurrentPlots.addItem(self.curve6)
 
+
+
 def UpdateViews(self):
     self.CurrentPlots.setGeometry(self.ui.Spikeling_Oscilloscope_widget.getViewBox().sceneBoundingRect())
     self.CurrentPlots.linkedViewChanged(self.ui.Spikeling_Oscilloscope_widget.getViewBox(), self.CurrentPlots.XAxis)
+

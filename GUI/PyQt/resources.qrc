@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="resources">
+    <file>resources/Calcium.png</file>
     <file>resources/LEDOFF.png</file>
     <file>resources/LEDON.png</file>
     <file>resources/SN-Logo.png</file>

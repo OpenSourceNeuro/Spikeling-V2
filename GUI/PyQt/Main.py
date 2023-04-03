@@ -22,6 +22,7 @@ from py_toggle import PyToggle
 # Import GUI page scripts
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
 import Spikeling_graph
+import Imaging_graph
 
 
 # Setting UART parameters
@@ -206,6 +207,97 @@ class MainWindow(QMainWindow):
 
 
 
+        self.ui.Imaging_FrameRate_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                          circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                          active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                      )
+        self.ui.Imaging_PMT_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                    circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                    active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                    )
+        self.ui.Imaging_Laser_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                      circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                      active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                      )
+
+        self.ui.Imaging_CalciumDecay_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                             circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                             active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                             )
+        self.ui.Imaging_CalciumJump_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                            circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                            active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                            )
+        self.ui.Imaging_CalciumNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                             circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                             active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                             )
+        self.ui.Imaging_CalciumBaseline_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                                )
+
+        self.ui.Imaging_kd_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                   circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                   active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                   )
+        self.ui.Imaging_Hill_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                     circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                     active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                     )
+        self.ui.Imaging_PhotoShotNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                               circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                               active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                               )
+        self.ui.Imaging_FluoNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                          circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                          active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                          )
+        self.ui.Imaging_FluoScale_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                          circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                          active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                          )
+        self.ui.Imaging_FluoOffset_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                           circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                           active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                           )
+        self.ui.Imaging_Saturation_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                           circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                           active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                           )
+
+        self.ui.Imaging_FrameRate_Toggle_layout.addWidget(self.ui.Imaging_FrameRate_toggleButton)
+        self.ui.Imaging_FrameRate_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_PMT_Toggle_layout.addWidget(self.ui.Imaging_PMT_toggleButton)
+        self.ui.Imaging_PMT_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_Laser_Toggle_layout.addWidget(self.ui.Imaging_Laser_toggleButton)
+        self.ui.Imaging_Laser_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+        self.ui.Imaging_CalciumDecay_Toggle_layout.addWidget(self.ui.Imaging_CalciumDecay_toggleButton)
+        self.ui.Imaging_CalciumDecay_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_CalciumJump_Toggle_layout.addWidget(self.ui.Imaging_CalciumJump_toggleButton)
+        self.ui.Imaging_CalciumJump_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_CalciumNoise_Toggle_layout.addWidget(self.ui.Imaging_CalciumNoise_toggleButton)
+        self.ui.Imaging_CalciumNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_CalciumBaseline_Toggle_layout.addWidget(self.ui.Imaging_CalciumBaseline_toggleButton)
+        self.ui.Imaging_CalciumBaseline_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+        self.ui.Imaging_kd_Toggle_layout.addWidget(self.ui.Imaging_kd_toggleButton)
+        self.ui.Imaging_kd_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_Hill_Toggle_layout.addWidget(self.ui.Imaging_Hill_toggleButton)
+        self.ui.Imaging_Hill_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_PhotoShotNoise_Toggle_layout.addWidget(self.ui.Imaging_PhotoShotNoise_toggleButton)
+        self.ui.Imaging_PhotoShotNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_FluoNoise_Toggle_layout.addWidget(self.ui.Imaging_FluoNoise_toggleButton)
+        self.ui.Imaging_FluoNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_FluoScale_Toggle_layout.addWidget(self.ui.Imaging_FluoScale_toggleButton)
+        self.ui.Imaging_FluoScale_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_FluoOffset_Toggle_layout.addWidget(self.ui.Imaging_FluoOffset_toggleButton)
+        self.ui.Imaging_FluoOffset_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.Imaging_Saturation_Toggle_layout.addWidget(self.ui.Imaging_Saturation_toggleButton)
+        self.ui.Imaging_Saturation_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+
         # Custom Navigation bar movement
         self.ui.header_widget.mouseMoveEvent = moveWindow
 
@@ -264,8 +356,9 @@ class MainWindow(QMainWindow):
         self.ui.Imaging_rightMenuContainer.setMinimumSize(QSize(spikerightMenu_max, 16777215))
         self.ui.Imaging_rightMenuSubContainer_pushButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, self.ui.Imaging_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
                                                                                                           self.ui.Imaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
-        self.ui.Imaging_StimulusParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
-        self.ui.Imaging_NeuronParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Imaging_ImagingParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Imaging_CalciumParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Imaging_FluoParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_parameter_exit_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
 
     ########################################################################
@@ -293,6 +386,7 @@ class MainWindow(QMainWindow):
 
         # Start reading serial when connect button is clicked and plot the reading on the oscilloscope
         self.ui.Spikeling_ConnectButton.clicked.connect(lambda: Spikeling_graph.SpikelingPlot(self))
+        self.ui.Imaging_pushButton.clicked.connect(lambda: Imaging_graph.ImagingPlot(self))
 
         # Load previously conceived neurons
         self.ui.Spikeling_NeuronBrowsePushButton.clicked.connect(lambda: Page101.Spikeling101.BrowseNeuron(self))
@@ -324,6 +418,7 @@ class MainWindow(QMainWindow):
         self.ui.StimStr_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateStimStr(self))
         self.ui.Spikeling_StimStrSlider.valueChanged.connect(lambda: Page101.Spikeling101.GetStimStrSliderValue(self))
         self.ui.StimCus_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateCustomStimulus(self))
+
         self.ui.Spikeling_CustomStimulus_Load_pushButton.clicked.connect(lambda: Page101.Spikeling101.LoadStimulus(self))
         self.ui.PhotoGain_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePhotoGain(self))
         self.ui.Spikeling_PR_PhotoGain_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetPhotoGain(self))
@@ -408,8 +503,47 @@ class MainWindow(QMainWindow):
         # Display page201 when imaging button is clicked
         self.ui.ImagingStimulation_pushButton.clicked.connect(lambda: Page201.Imaging201.ShowPage(self))
 
+        # Imaging Parameters
+        self.ui.Imaging_ImagingParameter_pushButton.clicked.connect(lambda: self.ui.Imaging_parameter_stackedWidget.setCurrentWidget(self.ui.Imaging_ImagingParameter_page))
+        self.ui.Imaging_FrameRate_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFrameRate(self))
+        self.ui.Imaging_FrameRate_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetFrameRate(self))
+        self.ui.Imaging_PMT_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivatePMT(self))
+        self.ui.Imaging_PMT_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetPMT(self))
+        self.ui.Imaging_Laser_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateLaser(self))
+        self.ui.Imaging_Laser_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetLaser(self))
 
-    ########################################################################
+        # Calcium parameters
+        self.ui.Imaging_CalciumParameter_pushButton.clicked.connect(lambda: self.ui.Imaging_parameter_stackedWidget.setCurrentWidget(self.ui.Imaging_CalciumParameter_page))
+        self.ui.Imaging_CalciumDecay_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateCalciumDecay(self))
+        self.ui.Imaging_CalciumDecay_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetCalciumDecay(self))
+        self.ui.Imaging_CalciumJump_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateCalciumJump(self))
+        self.ui.Imaging_CalciumJump_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetCalciumJump(self))
+        self.ui.Imaging_CalciumNoise_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateCalciumNoise(self))
+        self.ui.Imaging_CalciumNoise_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetCalciumNoise(self))
+        self.ui.Imaging_CalciumBaseline_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateCalciumBaseline(self))
+        self.ui.Imaging_CalciumBaseline_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetCalciumBaseline(self))
+
+        # Fluorescence Parameters
+        self.ui.Imaging_FluoParameter_pushButton.clicked.connect(lambda: self.ui.Imaging_parameter_stackedWidget.setCurrentWidget(self.ui.Imaging_FluoParameter_page))
+        self.ui.Imaging_kd_toggleButton.setEnabled(False)
+        self.ui.Imaging_kd_toggleButton.toggled.connect(lambda: Page201.Imaging201.Activatekd(self))
+        self.ui.Imaging_kd_Slider.valueChanged.connect(lambda: Page201.Imaging201.Getkd(self))
+        self.ui.Imaging_Hill_toggleButton.setEnabled(False)
+        self.ui.Imaging_Hill_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateHill(self))
+        self.ui.Imaging_Hill_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetHill(self))
+        self.ui.Imaging_PhotoShotNoise_toggleButton.setEnabled(False)
+        self.ui.Imaging_PhotoShotNoise_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivatePhotoShotNoise(self))
+        self.ui.Imaging_PhotoShotNoise_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetPhotoShotNoise(self))
+        self.ui.Imaging_FluoNoise_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFluoNoise(self))
+        self.ui.Imaging_FluoNoise_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetFluoNoise(self))
+        self.ui.Imaging_FluoScale_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFluoScale(self))
+        self.ui.Imaging_FluoScale_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetFluoScale(self))
+        self.ui.Imaging_FluoOffset_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFluoOffset(self))
+        self.ui.Imaging_FluoOffset_Slider.valueChanged.connect(lambda: Page201.Imaging201.GetFluoOffset(self))
+        self.ui.Imaging_Saturation_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFluoSat(self))
+
+
+        ########################################################################
     # Imaging Tutorial - page202
         # Display page201 when imaging button is clicked
         self.ui.ImagingTutorial_pushButton.clicked.connect(lambda: Page202.Imaging202.ShowPage(self))
