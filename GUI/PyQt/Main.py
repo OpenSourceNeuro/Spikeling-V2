@@ -20,7 +20,7 @@ from Settings import *
 from py_toggle import PyToggle
 
 # Import GUI page scripts
-import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
+import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
 import Spikeling_graph
 import Imaging_graph
 
@@ -131,6 +131,7 @@ class MainWindow(QMainWindow):
                 event.accept()
 
 
+        # Generate toggle buttons for Spikeling Page
         self.ui.PatchClamp_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
                                                    circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
                                                    active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
@@ -205,8 +206,7 @@ class MainWindow(QMainWindow):
         self.ui.SpikelingPRRecovery_toggle_layout.addWidget(self.ui.PhotoRecovery_toggleButton)
         self.ui.SpikelingPRRecovery_toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
 
-
-
+        # Generate toggle buttons for Imaging Page
         self.ui.Imaging_FrameRate_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
                                                           circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
                                                           active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
@@ -298,6 +298,97 @@ class MainWindow(QMainWindow):
         self.ui.Imaging_Saturation_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
 
 
+        # Generate toggle buttons for Multiple Imaging Page
+        self.ui.MultipleImaging_FrameRate_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                  circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                  active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                  )
+        self.ui.MultipleImaging_PMT_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                            circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                            active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                            )
+        self.ui.MultipleImaging_Laser_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                              circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                              active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                              )
+
+        self.ui.MultipleImaging_CalciumDecay_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                     circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                     active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                                     )
+        self.ui.MultipleImaging_CalciumJump_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                    circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                    active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                                    )
+        self.ui.MultipleImaging_CalciumNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                     circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                     active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                                     )
+        self.ui.MultipleImaging_CalciumBaseline_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                        circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                        active_color='#%02x%02x%02x' % tuple(DarkSolarized[10])
+                                                                        )
+
+        self.ui.MultipleImaging_kd_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                           circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                           active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                           )
+        self.ui.MultipleImaging_Hill_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                             circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                             active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                             )
+        self.ui.MultipleImaging_PhotoShotNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                       circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                       active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                       )
+        self.ui.MultipleImaging_FluoNoise_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                  circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                  active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                  )
+        self.ui.MultipleImaging_FluoScale_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                  circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                  active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                  )
+        self.ui.MultipleImaging_FluoOffset_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                   circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                   active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                   )
+        self.ui.MultipleImaging_Saturation_toggleButton = PyToggle(bg_color='#%02x%02x%02x' % tuple(DarkSolarized[11]),
+                                                                   circle_color='#%02x%02x%02x' % tuple(DarkSolarized[15]),
+                                                                   active_color='#%02x%02x%02x' % tuple(DarkSolarized[4])
+                                                                   )
+
+        self.ui.MultipleImaging_FrameRate_Toggle_layout.addWidget(self.ui.MultipleImaging_FrameRate_toggleButton)
+        self.ui.MultipleImaging_FrameRate_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_PMT_Toggle_layout.addWidget(self.ui.MultipleImaging_PMT_toggleButton)
+        self.ui.MultipleImaging_PMT_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_Laser_Toggle_layout.addWidget(self.ui.MultipleImaging_Laser_toggleButton)
+        self.ui.MultipleImaging_Laser_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+        self.ui.MultipleImaging_CalciumDecay_Toggle_layout.addWidget(self.ui.MultipleImaging_CalciumDecay_toggleButton)
+        self.ui.MultipleImaging_CalciumDecay_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_CalciumJump_Toggle_layout.addWidget(self.ui.MultipleImaging_CalciumJump_toggleButton)
+        self.ui.MultipleImaging_CalciumJump_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_CalciumNoise_Toggle_layout.addWidget(self.ui.MultipleImaging_CalciumNoise_toggleButton)
+        self.ui.MultipleImaging_CalciumNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_CalciumBaseline_Toggle_layout.addWidget(self.ui.MultipleImaging_CalciumBaseline_toggleButton)
+        self.ui.MultipleImaging_CalciumBaseline_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+        self.ui.MultipleImaging_kd_Toggle_layout.addWidget(self.ui.MultipleImaging_kd_toggleButton)
+        self.ui.MultipleImaging_kd_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_Hill_Toggle_layout.addWidget(self.ui.MultipleImaging_Hill_toggleButton)
+        self.ui.MultipleImaging_Hill_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_PhotoShotNoise_Toggle_layout.addWidget(self.ui.MultipleImaging_PhotoShotNoise_toggleButton)
+        self.ui.MultipleImaging_PhotoShotNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_FluoNoise_Toggle_layout.addWidget(self.ui.MultipleImaging_FluoNoise_toggleButton)
+        self.ui.MultipleImaging_FluoNoise_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_FluoScale_Toggle_layout.addWidget(self.ui.MultipleImaging_FluoScale_toggleButton)
+        self.ui.MultipleImaging_FluoScale_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_FluoOffset_Toggle_layout.addWidget(self.ui.MultipleImaging_FluoOffset_toggleButton)
+        self.ui.MultipleImaging_FluoOffset_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.ui.MultipleImaging_Saturation_Toggle_layout.addWidget(self.ui.MultipleImaging_Saturation_toggleButton)
+        self.ui.MultipleImaging_Saturation_Toggle_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
         # Custom Navigation bar movement
         self.ui.header_widget.mouseMoveEvent = moveWindow
 
@@ -360,6 +451,18 @@ class MainWindow(QMainWindow):
         self.ui.Imaging_CalciumParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_FluoParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_parameter_exit_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+
+
+        # Imaging 202 parameters navigation button
+        self.ui.MultipleImaging_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
+        self.ui.MultipleImaging_rightMenuContainer.setMinimumSize(QSize(spikerightMenu_max, 16777215))
+        self.ui.MultipleImaging_rightMenuSubContainer_pushButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, self.ui.MultipleImaging_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
+                                                                                                          self.ui.MultipleImaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+        self.ui.MultipleImaging_ImagingParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.MultipleImaging_CalciumParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.MultipleImaging_FluoParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.MultipleImaging_parameter_exit_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+
 
     ########################################################################
     # Home Page - page000
@@ -543,19 +646,62 @@ class MainWindow(QMainWindow):
         self.ui.Imaging_Saturation_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFluoSat(self))
 
 
-        ########################################################################
-    # Imaging Tutorial - page202
-        # Display page201 when imaging button is clicked
-        self.ui.ImagingTutorial_pushButton.clicked.connect(lambda: Page202.Imaging202.ShowPage(self))
-
-
     ########################################################################
+    # Imaging Tutorial - page202
+        # Display page202 when imaging button is clicked
+        self.ui.MultipleImagingStimulation_pushButton.clicked.connect(lambda: Page202.Imaging202.ShowPage(self))
+
+        # Imaging Parameters
+        self.ui.MultipleImaging_ImagingParameter_pushButton.clicked.connect(lambda: self.ui.MultipleImaging_parameter_stackedWidget.setCurrentWidget(self.ui.MultipleImaging_ImagingParameter_page))
+        self.ui.MultipleImaging_FrameRate_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFrameRate(self))
+        self.ui.MultipleImaging_FrameRate_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleFrameRate(self))
+        self.ui.MultipleImaging_PMT_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultiplePMT(self))
+        self.ui.MultipleImaging_PMT_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultiplePMT(self))
+        self.ui.MultipleImaging_Laser_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleLaser(self))
+        self.ui.MultipleImaging_Laser_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleLaser(self))
+
+        # Calcium parameters
+        self.ui.MultipleImaging_CalciumParameter_pushButton.clicked.connect(lambda: self.ui.MultipleImaging_parameter_stackedWidget.setCurrentWidget(self.ui.MultipleImaging_CalciumParameter_page))
+        self.ui.MultipleImaging_CalciumDecay_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleCalciumDecay(self))
+        self.ui.MultipleImaging_CalciumDecay_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleCalciumDecay(self))
+        self.ui.MultipleImaging_CalciumJump_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleCalciumJump(self))
+        self.ui.MultipleImaging_CalciumJump_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleCalciumJump(self))
+        self.ui.MultipleImaging_CalciumNoise_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleCalciumNoise(self))
+        self.ui.MultipleImaging_CalciumNoise_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleCalciumNoise(self))
+        self.ui.MultipleImaging_CalciumBaseline_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleCalciumBaseline(self))
+        self.ui.MultipleImaging_CalciumBaseline_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleCalciumBaseline(self))
+
+        # Fluorescence Parameters
+        self.ui.MultipleImaging_FluoParameter_pushButton.clicked.connect(lambda: self.ui.MultipleImaging_parameter_stackedWidget.setCurrentWidget(self.ui.MultipleImaging_FluoParameter_page))
+        self.ui.MultipleImaging_kd_toggleButton.setEnabled(False)
+        self.ui.MultipleImaging_kd_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultiplekd(self))
+        self.ui.MultipleImaging_kd_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultiplekd(self))
+        self.ui.MultipleImaging_Hill_toggleButton.setEnabled(False)
+        self.ui.MultipleImaging_Hill_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleHill(self))
+        self.ui.MultipleImaging_Hill_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleHill(self))
+        self.ui.MultipleImaging_PhotoShotNoise_toggleButton.setEnabled(False)
+        self.ui.MultipleImaging_PhotoShotNoise_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultiplePhotoShotNoise(self))
+        self.ui.MultipleImaging_PhotoShotNoise_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultiplePhotoShotNoise(self))
+        self.ui.MultipleImaging_FluoNoise_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFluoNoise(self))
+        self.ui.MultipleImaging_FluoNoise_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleFluoNoise(self))
+        self.ui.MultipleImaging_FluoScale_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFluoScale(self))
+        self.ui.MultipleImaging_FluoScale_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleFluoScale(self))
+        self.ui.MultipleImaging_FluoOffset_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFluoOffset(self))
+        self.ui.MultipleImaging_FluoOffset_Slider.valueChanged.connect(lambda: Page202.Imaging202.GetMultipleFluoOffset(self))
+        self.ui.MultipleImaging_Saturation_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFluoSat(self))
+
+
+        ########################################################################
     # Imaging Data Analysis- page203
         # Display page201 when imaging button is clicked
-        self.ui.ImagingDataAnalysis_pushButton.clicked.connect(lambda: Page203.Imaging203.ShowPage(self))
-
+        self.ui.ImagingTutorial_pushButton.clicked.connect(lambda: Page203.Imaging203.ShowPage(self))
 
     ########################################################################
+    # Imaging Data Analysis- page204
+        # Display page201 when imaging button is clicked
+        self.ui.ImagingDataAnalysis_pushButton.clicked.connect(lambda: Page204.Imaging204.ShowPage(self))
+
+        ########################################################################
     # Neuron Generator Page - page301
         # Display page301 when neuron button is clicked
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: Page301.ShowPage(self))
@@ -583,6 +729,8 @@ class MainWindow(QMainWindow):
     # Exercise-101 - page501
         # Display page501
         self.ui.Exercice101_pushButton.clicked.connect(lambda: Page501.ShowPage(self))
+        self.ui.Exercise101_PreviousButton_pushButton.clicked.connect(lambda: Page501.Previous(self))
+        self.ui.Exercise101_AfterButton_pushButton.clicked.connect(lambda: Page501.After(self))
 
 
     ########################################################################

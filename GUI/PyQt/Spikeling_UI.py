@@ -25,6 +25,8 @@ from pyqtgraph import PlotWidget
 import resources_rc
 import resources_rc
 import resources_rc
+import resources_rc
+import resources_rc
 
 class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
@@ -156,9 +158,11 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "\n"
 "\n"
+"\n"
+"\n"
 "#Imaging_rightMenuSubContainer{\n"
-"	backgrou"
-                        "nd-color: rgb(0, 30, 38);\n"
+""
+                        "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Imaging_parameter_stackedWidget{\n"
 "	background-color: rgb(0, 43, 54);\n"
@@ -185,6 +189,60 @@ class Ui_MainWindow(QWidget):
 "#Imaging_parameter_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
+"#Imaging_pushButton_frame QPushButton{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"    border: 1px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"}\n"
+"#Imaging_GECI_comboBox_frame QComboBox{\n"
+"	background-color: r"
+                        "gb(7, 54, 66);\n"
+"	padding: 2px 2px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"#MultipleImaging_rightMenuSubContainer{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#MultipleImaging_parameter_stackedWidget{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#MultipleImaging_rightMenuSubContainer QPushButton{\n"
+"	text-align: left;\n"
+"	padding: 20px 0px;\n"
+"	border-top-right-radius:20px;\n"
+"	border-bottom-right-radius: 20px;\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#MultipleImaging_rightMenuSubContainer QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#MultipleImaging_rightMenuSubContainer_frame QPushButton{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#MultipleImaging_rightMenuSubContainer_frame QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#MultipleImaging_CenterMenuContainer{\n"
+"	background-color: rgb(7, 54, 66)\n"
+"}\n"
+"#MultipleImaging_parameter_exit_frame{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#MultipleImaging_pushButton_frame QPushButton{\n"
+"	ba"
+                        "ckground-color: rgb(7, 54, 66);\n"
+"    border: 1px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"}\n"
+"#MultipleImaging_GECI_comboBox_frame QComboBox{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"	padding: 2px 2px;\n"
+"}\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "#NeuronGenerator_subframe1_middle_frame QLineEdit{\n"
@@ -193,8 +251,7 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "#NeuronGenerator_subframe2 QLineEdit{\n"
 "	background-color: rgb(7, 54, 66);\n"
-""
-                        "	border: 2px solid rgb(147,161,161);\n"
+"	border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#NeuronGenerator_subframe2 QPushButton{\n"
 "	background-color: rgb(7, 54, 66);\n"
@@ -211,8 +268,10 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "#NeuronGenerator_subframe1_Izhik_frame QTextBrowser{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	border: 2px solid rgb(147,161,161)"
+                        ";\n"
 "}\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -232,8 +291,7 @@ class Ui_MainWindow(QWidget):
 "    border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#DataAnalysis_groupBox Line{\n"
-"    border: 1px solid rgb(147,"
-                        "161,161);\n"
+"    border: 1px solid rgb(147,161,161);\n"
 "}\n"
 "\n"
 "#DataAnalysis_Display_frame QPushButton{\n"
@@ -245,15 +303,6 @@ class Ui_MainWindow(QWidget):
 "\n"
 "\n"
 "\n"
-"#Imaging_pushButton_frame QPushButton{\n"
-"	background-color: rgb(7, 54, 66);\n"
-"    border: 1px solid rgb(147,161,161);\n"
-"	border-radius: 10px;\n"
-"}\n"
-"#Imaging_GECI_comboBox_frame QComboBox{\n"
-"	background-color: rgb(7, 54, 66);\n"
-"	padding: 2px 2px;\n"
-"}\n"
 "\n"
 "\n"
 "\n"
@@ -267,12 +316,23 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
-"	padding: 5px 5px;\n"
+"	padding: 5"
+                        "px 5px;\n"
 "	margin: 5px\n"
 "}\n"
 "#StimulusGenerator_Container QLineEdit{\n"
 "	background-color: rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"#Exercise101_Button_frame QPushButton{\n"
+"	background-color: rgb(7,54,66);\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"	padding: 2px;\n"
 "}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
@@ -710,6 +770,18 @@ class Ui_MainWindow(QWidget):
         self.ImagingStimulation_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_59.addWidget(self.ImagingStimulation_pushButton)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_59.addItem(self.verticalSpacer_3)
+
+        self.MultipleImagingStimulation_pushButton = QPushButton(self.Imaging_SubMenu_button_frame)
+        self.MultipleImagingStimulation_pushButton.setObjectName(u"MultipleImagingStimulation_pushButton")
+        self.MultipleImagingStimulation_pushButton.setFont(font1)
+        self.MultipleImagingStimulation_pushButton.setIcon(icon6)
+        self.MultipleImagingStimulation_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_59.addWidget(self.MultipleImagingStimulation_pushButton)
 
         self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -4562,7 +4634,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_119 = QHBoxLayout(self.Imaging_header_frame)
         self.horizontalLayout_119.setSpacing(0)
         self.horizontalLayout_119.setObjectName(u"horizontalLayout_119")
-        self.horizontalLayout_119.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_119.setContentsMargins(0, 0, 0, 5)
         self.Imaging_pushButton_frame = QFrame(self.Imaging_header_frame)
         self.Imaging_pushButton_frame.setObjectName(u"Imaging_pushButton_frame")
         self.Imaging_pushButton_frame.setFrameShape(QFrame.StyledPanel)
@@ -4589,7 +4661,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_158.addWidget(self.frame_6)
 
 
-        self.horizontalLayout_119.addWidget(self.Imaging_pushButton_frame)
+        self.horizontalLayout_119.addWidget(self.Imaging_pushButton_frame, 0, Qt.AlignVCenter)
 
 
         self.verticalLayout_109.addWidget(self.Imaging_header_frame)
@@ -4609,7 +4681,9 @@ class Ui_MainWindow(QWidget):
         self.Imaging_Oscilloscope_widget.setAutoFillBackground(False)
         self.Imaging_Oscilloscope_widget.setStyleSheet(u"")
         self.horizontalLayout_178 = QHBoxLayout(self.Imaging_Oscilloscope_widget)
+        self.horizontalLayout_178.setSpacing(0)
         self.horizontalLayout_178.setObjectName(u"horizontalLayout_178")
+        self.horizontalLayout_178.setContentsMargins(0, 0, 0, 0)
         self.Imaging_Oscilloscope_Traces_frame = QFrame(self.Imaging_Oscilloscope_widget)
         self.Imaging_Oscilloscope_Traces_frame.setObjectName(u"Imaging_Oscilloscope_Traces_frame")
         self.Imaging_Oscilloscope_Traces_frame.setFrameShape(QFrame.StyledPanel)
@@ -6664,11 +6738,2202 @@ class Ui_MainWindow(QWidget):
         self.mainbody_stackedWidget.addWidget(self.page_201)
         self.page_202 = QWidget()
         self.page_202.setObjectName(u"page_202")
-        self.horizontalLayout_72 = QHBoxLayout(self.page_202)
+        self.horizontalLayout_380 = QHBoxLayout(self.page_202)
+        self.horizontalLayout_380.setSpacing(0)
+        self.horizontalLayout_380.setObjectName(u"horizontalLayout_380")
+        self.horizontalLayout_380.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_widget = QFrame(self.page_202)
+        self.MultipleImaging_widget.setObjectName(u"MultipleImaging_widget")
+        self.MultipleImaging_widget.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_widget.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_84 = QVBoxLayout(self.MultipleImaging_widget)
+        self.verticalLayout_84.setSpacing(0)
+        self.verticalLayout_84.setObjectName(u"verticalLayout_84")
+        self.verticalLayout_84.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_header_frame = QFrame(self.MultipleImaging_widget)
+        self.MultipleImaging_header_frame.setObjectName(u"MultipleImaging_header_frame")
+        self.MultipleImaging_header_frame.setMinimumSize(QSize(0, 30))
+        self.MultipleImaging_header_frame.setMaximumSize(QSize(16777215, 25))
+        self.MultipleImaging_header_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_header_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_152 = QHBoxLayout(self.MultipleImaging_header_frame)
+        self.horizontalLayout_152.setSpacing(0)
+        self.horizontalLayout_152.setObjectName(u"horizontalLayout_152")
+        self.horizontalLayout_152.setContentsMargins(0, 0, 0, 5)
+        self.MultipleImaging_pushButton_frame = QFrame(self.MultipleImaging_header_frame)
+        self.MultipleImaging_pushButton_frame.setObjectName(u"MultipleImaging_pushButton_frame")
+        self.MultipleImaging_pushButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_pushButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_301 = QHBoxLayout(self.MultipleImaging_pushButton_frame)
+        self.horizontalLayout_301.setSpacing(0)
+        self.horizontalLayout_301.setObjectName(u"horizontalLayout_301")
+        self.horizontalLayout_301.setContentsMargins(25, 0, 0, 0)
+        self.MultipleImaging_pushButton = QPushButton(self.MultipleImaging_pushButton_frame)
+        self.MultipleImaging_pushButton.setObjectName(u"MultipleImaging_pushButton")
+        self.MultipleImaging_pushButton.setMaximumSize(QSize(400, 16777215))
+        self.MultipleImaging_pushButton.setFont(font1)
+        self.MultipleImaging_pushButton.setCheckable(True)
+
+        self.horizontalLayout_301.addWidget(self.MultipleImaging_pushButton)
+
+        self.frame_8 = QFrame(self.MultipleImaging_pushButton_frame)
+        self.frame_8.setObjectName(u"frame_8")
+        self.frame_8.setFrameShape(QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_153 = QHBoxLayout(self.frame_8)
+        self.horizontalLayout_153.setObjectName(u"horizontalLayout_153")
+
+        self.horizontalLayout_301.addWidget(self.frame_8)
+
+
+        self.horizontalLayout_152.addWidget(self.MultipleImaging_pushButton_frame, 0, Qt.AlignVCenter)
+
+
+        self.verticalLayout_84.addWidget(self.MultipleImaging_header_frame)
+
+        self.MultipleImaging_Oscilloscope_frame = QFrame(self.MultipleImaging_widget)
+        self.MultipleImaging_Oscilloscope_frame.setObjectName(u"MultipleImaging_Oscilloscope_frame")
+        self.MultipleImaging_Oscilloscope_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_303 = QHBoxLayout(self.MultipleImaging_Oscilloscope_frame)
+        self.horizontalLayout_303.setSpacing(0)
+        self.horizontalLayout_303.setObjectName(u"horizontalLayout_303")
+        self.horizontalLayout_303.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Oscilloscope_widget = PlotWidget(self.MultipleImaging_Oscilloscope_frame)
+        self.MultipleImaging_Oscilloscope_widget.setObjectName(u"MultipleImaging_Oscilloscope_widget")
+        sizePolicy5.setHeightForWidth(self.MultipleImaging_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.MultipleImaging_Oscilloscope_widget.setSizePolicy(sizePolicy5)
+        self.MultipleImaging_Oscilloscope_widget.setAutoFillBackground(False)
+        self.MultipleImaging_Oscilloscope_widget.setStyleSheet(u"")
+        self.horizontalLayout_305 = QHBoxLayout(self.MultipleImaging_Oscilloscope_widget)
+        self.horizontalLayout_305.setSpacing(0)
+        self.horizontalLayout_305.setObjectName(u"horizontalLayout_305")
+        self.horizontalLayout_305.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Oscilloscope_Traces_frame = QFrame(self.MultipleImaging_Oscilloscope_widget)
+        self.MultipleImaging_Oscilloscope_Traces_frame.setObjectName(u"MultipleImaging_Oscilloscope_Traces_frame")
+        self.MultipleImaging_Oscilloscope_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_146 = QVBoxLayout(self.MultipleImaging_Oscilloscope_Traces_frame)
+        self.verticalLayout_146.setSpacing(0)
+        self.verticalLayout_146.setObjectName(u"verticalLayout_146")
+        self.verticalLayout_146.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Oscilloscope_Traces_frame_2 = QFrame(self.MultipleImaging_Oscilloscope_Traces_frame)
+        self.MultipleImaging_Oscilloscope_Traces_frame_2.setObjectName(u"MultipleImaging_Oscilloscope_Traces_frame_2")
+        self.MultipleImaging_Oscilloscope_Traces_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Traces_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_154 = QHBoxLayout(self.MultipleImaging_Oscilloscope_Traces_frame_2)
+        self.horizontalLayout_154.setSpacing(0)
+        self.horizontalLayout_154.setObjectName(u"horizontalLayout_154")
+        self.horizontalLayout_154.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame = QFrame(self.MultipleImaging_Oscilloscope_Traces_frame_2)
+        self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame.setObjectName(u"MultipleImaging_Oscilloscope_Fluorescence_Traces_frame")
+        self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_90 = QVBoxLayout(self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame)
+        self.verticalLayout_90.setSpacing(0)
+        self.verticalLayout_90.setObjectName(u"verticalLayout_90")
+        self.verticalLayout_90.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Fluorescence1_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame)
+        self.MultipleImaging_Fluorescence1_Checkbox.setObjectName(u"MultipleImaging_Fluorescence1_Checkbox")
+        self.MultipleImaging_Fluorescence1_Checkbox.setEnabled(True)
+        self.MultipleImaging_Fluorescence1_Checkbox.setAutoFillBackground(False)
+        self.MultipleImaging_Fluorescence1_Checkbox.setStyleSheet(u"color: rgb(133, 153, 0);")
+        self.MultipleImaging_Fluorescence1_Checkbox.setChecked(True)
+
+        self.verticalLayout_90.addWidget(self.MultipleImaging_Fluorescence1_Checkbox)
+
+        self.MultipleImaging_Fluorescence2_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame)
+        self.MultipleImaging_Fluorescence2_Checkbox.setObjectName(u"MultipleImaging_Fluorescence2_Checkbox")
+        self.MultipleImaging_Fluorescence2_Checkbox.setStyleSheet(u"color: rgb(0, 255, 133);")
+
+        self.verticalLayout_90.addWidget(self.MultipleImaging_Fluorescence2_Checkbox)
+
+        self.MultipleImaging_Fluorescence3_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame)
+        self.MultipleImaging_Fluorescence3_Checkbox.setObjectName(u"MultipleImaging_Fluorescence3_Checkbox")
+        self.MultipleImaging_Fluorescence3_Checkbox.setStyleSheet(u"color: rgb(133, 255, 0);")
+
+        self.verticalLayout_90.addWidget(self.MultipleImaging_Fluorescence3_Checkbox)
+
+
+        self.horizontalLayout_154.addWidget(self.MultipleImaging_Oscilloscope_Fluorescence_Traces_frame)
+
+        self.MultipleImaging_Oscilloscope_Calcium_Traces_frame = QFrame(self.MultipleImaging_Oscilloscope_Traces_frame_2)
+        self.MultipleImaging_Oscilloscope_Calcium_Traces_frame.setObjectName(u"MultipleImaging_Oscilloscope_Calcium_Traces_frame")
+        self.MultipleImaging_Oscilloscope_Calcium_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Calcium_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_91 = QVBoxLayout(self.MultipleImaging_Oscilloscope_Calcium_Traces_frame)
+        self.verticalLayout_91.setSpacing(0)
+        self.verticalLayout_91.setObjectName(u"verticalLayout_91")
+        self.verticalLayout_91.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Calcium1_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Calcium_Traces_frame)
+        self.MultipleImaging_Calcium1_Checkbox.setObjectName(u"MultipleImaging_Calcium1_Checkbox")
+        self.MultipleImaging_Calcium1_Checkbox.setEnabled(True)
+        self.MultipleImaging_Calcium1_Checkbox.setAutoFillBackground(False)
+        self.MultipleImaging_Calcium1_Checkbox.setStyleSheet(u"color: rgb(211, 54, 130);")
+        self.MultipleImaging_Calcium1_Checkbox.setChecked(False)
+
+        self.verticalLayout_91.addWidget(self.MultipleImaging_Calcium1_Checkbox)
+
+        self.MultipleImaging_Calcium2_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Calcium_Traces_frame)
+        self.MultipleImaging_Calcium2_Checkbox.setObjectName(u"MultipleImaging_Calcium2_Checkbox")
+        self.MultipleImaging_Calcium2_Checkbox.setStyleSheet(u"color: rgb(108, 113, 196);")
+
+        self.verticalLayout_91.addWidget(self.MultipleImaging_Calcium2_Checkbox)
+
+        self.MultipleImaging_Calcium3_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Calcium_Traces_frame)
+        self.MultipleImaging_Calcium3_Checkbox.setObjectName(u"MultipleImaging_Calcium3_Checkbox")
+        self.MultipleImaging_Calcium3_Checkbox.setStyleSheet(u"color: rgb(42, 161, 152);")
+
+        self.verticalLayout_91.addWidget(self.MultipleImaging_Calcium3_Checkbox)
+
+
+        self.horizontalLayout_154.addWidget(self.MultipleImaging_Oscilloscope_Calcium_Traces_frame)
+
+        self.MultipleImaging_Oscilloscope_Vm_Traces_frame = QFrame(self.MultipleImaging_Oscilloscope_Traces_frame_2)
+        self.MultipleImaging_Oscilloscope_Vm_Traces_frame.setObjectName(u"MultipleImaging_Oscilloscope_Vm_Traces_frame")
+        self.MultipleImaging_Oscilloscope_Vm_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Vm_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_92 = QVBoxLayout(self.MultipleImaging_Oscilloscope_Vm_Traces_frame)
+        self.verticalLayout_92.setSpacing(0)
+        self.verticalLayout_92.setObjectName(u"verticalLayout_92")
+        self.verticalLayout_92.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Vm1_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Vm_Traces_frame)
+        self.MultipleImaging_Vm1_Checkbox.setObjectName(u"MultipleImaging_Vm1_Checkbox")
+        self.MultipleImaging_Vm1_Checkbox.setStyleSheet(u"color: rgb(220, 50, 47);")
+
+        self.verticalLayout_92.addWidget(self.MultipleImaging_Vm1_Checkbox)
+
+        self.MultipleImaging_Vm3_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Vm_Traces_frame)
+        self.MultipleImaging_Vm3_Checkbox.setObjectName(u"MultipleImaging_Vm3_Checkbox")
+        self.MultipleImaging_Vm3_Checkbox.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.verticalLayout_92.addWidget(self.MultipleImaging_Vm3_Checkbox)
+
+        self.MultipleImaging_Vm2_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Vm_Traces_frame)
+        self.MultipleImaging_Vm2_Checkbox.setObjectName(u"MultipleImaging_Vm2_Checkbox")
+        self.MultipleImaging_Vm2_Checkbox.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.verticalLayout_92.addWidget(self.MultipleImaging_Vm2_Checkbox)
+
+
+        self.horizontalLayout_154.addWidget(self.MultipleImaging_Oscilloscope_Vm_Traces_frame)
+
+        self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame = QFrame(self.MultipleImaging_Oscilloscope_Traces_frame_2)
+        self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame.setObjectName(u"MultipleImaging_Oscilloscope_Stimulus_Traces_frame")
+        self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_93 = QVBoxLayout(self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame)
+        self.verticalLayout_93.setObjectName(u"verticalLayout_93")
+        self.MultipleImaging_Stimulus_Checkbox = QCheckBox(self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame)
+        self.MultipleImaging_Stimulus_Checkbox.setObjectName(u"MultipleImaging_Stimulus_Checkbox")
+        self.MultipleImaging_Stimulus_Checkbox.setEnabled(True)
+        self.MultipleImaging_Stimulus_Checkbox.setAutoFillBackground(False)
+        self.MultipleImaging_Stimulus_Checkbox.setStyleSheet(u"color: rgb(38, 139, 210);")
+        self.MultipleImaging_Stimulus_Checkbox.setChecked(True)
+
+        self.verticalLayout_93.addWidget(self.MultipleImaging_Stimulus_Checkbox)
+
+
+        self.horizontalLayout_154.addWidget(self.MultipleImaging_Oscilloscope_Stimulus_Traces_frame)
+
+
+        self.verticalLayout_146.addWidget(self.MultipleImaging_Oscilloscope_Traces_frame_2, 0, Qt.AlignTop)
+
+
+        self.horizontalLayout_305.addWidget(self.MultipleImaging_Oscilloscope_Traces_frame)
+
+
+        self.horizontalLayout_303.addWidget(self.MultipleImaging_Oscilloscope_widget)
+
+
+        self.verticalLayout_84.addWidget(self.MultipleImaging_Oscilloscope_frame)
+
+
+        self.horizontalLayout_380.addWidget(self.MultipleImaging_widget)
+
+        self.MultipleImaging_CenterMenuContainer = QFrame(self.page_202)
+        self.MultipleImaging_CenterMenuContainer.setObjectName(u"MultipleImaging_CenterMenuContainer")
+        self.MultipleImaging_CenterMenuContainer.setMaximumSize(QSize(200, 16777215))
+        self.MultipleImaging_CenterMenuContainer.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CenterMenuContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_86 = QVBoxLayout(self.MultipleImaging_CenterMenuContainer)
+        self.verticalLayout_86.setSpacing(0)
+        self.verticalLayout_86.setObjectName(u"verticalLayout_86")
+        self.verticalLayout_86.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_parameter_exit_frame = QFrame(self.MultipleImaging_CenterMenuContainer)
+        self.MultipleImaging_parameter_exit_frame.setObjectName(u"MultipleImaging_parameter_exit_frame")
+        self.MultipleImaging_parameter_exit_frame.setMinimumSize(QSize(200, 0))
+        self.MultipleImaging_parameter_exit_frame.setMaximumSize(QSize(200, 16777215))
+        self.MultipleImaging_parameter_exit_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_parameter_exit_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_156 = QHBoxLayout(self.MultipleImaging_parameter_exit_frame)
+        self.horizontalLayout_156.setSpacing(0)
+        self.horizontalLayout_156.setObjectName(u"horizontalLayout_156")
+        self.horizontalLayout_156.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_parameter_exit_pushButton = QPushButton(self.MultipleImaging_parameter_exit_frame)
+        self.MultipleImaging_parameter_exit_pushButton.setObjectName(u"MultipleImaging_parameter_exit_pushButton")
+        self.MultipleImaging_parameter_exit_pushButton.setIcon(icon18)
+        self.MultipleImaging_parameter_exit_pushButton.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_156.addWidget(self.MultipleImaging_parameter_exit_pushButton, 0, Qt.AlignLeft)
+
+
+        self.verticalLayout_86.addWidget(self.MultipleImaging_parameter_exit_frame)
+
+        self.MultipleImaging_parameter_stackedWidget = QStackedWidget(self.MultipleImaging_CenterMenuContainer)
+        self.MultipleImaging_parameter_stackedWidget.setObjectName(u"MultipleImaging_parameter_stackedWidget")
+        self.MultipleImaging_parameter_stackedWidget.setMaximumSize(QSize(200, 16777215))
+        self.MultipleImaging_ImagingParameter_page = QWidget()
+        self.MultipleImaging_ImagingParameter_page.setObjectName(u"MultipleImaging_ImagingParameter_page")
+        self.verticalLayout_147 = QVBoxLayout(self.MultipleImaging_ImagingParameter_page)
+        self.verticalLayout_147.setSpacing(0)
+        self.verticalLayout_147.setObjectName(u"verticalLayout_147")
+        self.verticalLayout_147.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_frame = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.MultipleImaging_GECI_frame.setObjectName(u"MultipleImaging_GECI_frame")
+        self.MultipleImaging_GECI_frame.setMaximumSize(QSize(16777215, 16777215))
+        self.MultipleImaging_GECI_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_87 = QVBoxLayout(self.MultipleImaging_GECI_frame)
+        self.verticalLayout_87.setSpacing(10)
+        self.verticalLayout_87.setObjectName(u"verticalLayout_87")
+        self.verticalLayout_87.setContentsMargins(5, 10, 5, 10)
+        self.MultipleImaging_GECI_Label_frame = QFrame(self.MultipleImaging_GECI_frame)
+        self.MultipleImaging_GECI_Label_frame.setObjectName(u"MultipleImaging_GECI_Label_frame")
+        self.MultipleImaging_GECI_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_306 = QHBoxLayout(self.MultipleImaging_GECI_Label_frame)
+        self.horizontalLayout_306.setSpacing(0)
+        self.horizontalLayout_306.setObjectName(u"horizontalLayout_306")
+        self.horizontalLayout_306.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_Label = QLabel(self.MultipleImaging_GECI_Label_frame)
+        self.MultipleImaging_GECI_Label.setObjectName(u"MultipleImaging_GECI_Label")
+        self.MultipleImaging_GECI_Label.setFont(font1)
+        self.MultipleImaging_GECI_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_306.addWidget(self.MultipleImaging_GECI_Label)
+
+
+        self.verticalLayout_87.addWidget(self.MultipleImaging_GECI_Label_frame)
+
+        self.MultipleImaging_GECI_comboBox_frame = QFrame(self.MultipleImaging_GECI_frame)
+        self.MultipleImaging_GECI_comboBox_frame.setObjectName(u"MultipleImaging_GECI_comboBox_frame")
+        self.MultipleImaging_GECI_comboBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_comboBox_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_309 = QHBoxLayout(self.MultipleImaging_GECI_comboBox_frame)
+        self.horizontalLayout_309.setSpacing(0)
+        self.horizontalLayout_309.setObjectName(u"horizontalLayout_309")
+        self.horizontalLayout_309.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_comboBox = QComboBox(self.MultipleImaging_GECI_comboBox_frame)
+        self.MultipleImaging_GECI_comboBox.addItem("")
+        self.MultipleImaging_GECI_comboBox.addItem("")
+        self.MultipleImaging_GECI_comboBox.addItem("")
+        self.MultipleImaging_GECI_comboBox.addItem("")
+        self.MultipleImaging_GECI_comboBox.setObjectName(u"MultipleImaging_GECI_comboBox")
+
+        self.horizontalLayout_309.addWidget(self.MultipleImaging_GECI_comboBox)
+
+
+        self.verticalLayout_87.addWidget(self.MultipleImaging_GECI_comboBox_frame)
+
+        self.MultipleImaging_GECI_Readings_frame = QFrame(self.MultipleImaging_GECI_frame)
+        self.MultipleImaging_GECI_Readings_frame.setObjectName(u"MultipleImaging_GECI_Readings_frame")
+        self.MultipleImaging_GECI_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_88 = QVBoxLayout(self.MultipleImaging_GECI_Readings_frame)
+        self.verticalLayout_88.setSpacing(0)
+        self.verticalLayout_88.setObjectName(u"verticalLayout_88")
+        self.verticalLayout_88.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_ReadingsAffinity_frame = QFrame(self.MultipleImaging_GECI_Readings_frame)
+        self.MultipleImaging_GECI_ReadingsAffinity_frame.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_frame")
+        self.MultipleImaging_GECI_ReadingsAffinity_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_ReadingsAffinity_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_310 = QHBoxLayout(self.MultipleImaging_GECI_ReadingsAffinity_frame)
+        self.horizontalLayout_310.setSpacing(0)
+        self.horizontalLayout_310.setObjectName(u"horizontalLayout_310")
+        self.horizontalLayout_310.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_ReadingsAffinity_Label = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
+        self.MultipleImaging_GECI_ReadingsAffinity_Label.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Label")
+        self.MultipleImaging_GECI_ReadingsAffinity_Label.setFont(font7)
+
+        self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Label)
+
+        self.MultipleImaging_GECI_ReadingsAffinity_Value = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Value")
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Value)
+
+
+        self.verticalLayout_88.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_frame)
+
+        self.MultipleImaging_GECI_ReadingsKd_frame = QFrame(self.MultipleImaging_GECI_Readings_frame)
+        self.MultipleImaging_GECI_ReadingsKd_frame.setObjectName(u"MultipleImaging_GECI_ReadingsKd_frame")
+        self.MultipleImaging_GECI_ReadingsKd_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_ReadingsKd_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_312 = QHBoxLayout(self.MultipleImaging_GECI_ReadingsKd_frame)
+        self.horizontalLayout_312.setSpacing(0)
+        self.horizontalLayout_312.setObjectName(u"horizontalLayout_312")
+        self.horizontalLayout_312.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_ReadingsKd_Label = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
+        self.MultipleImaging_GECI_ReadingsKd_Label.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Label")
+        self.MultipleImaging_GECI_ReadingsKd_Label.setFont(font7)
+
+        self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Label)
+
+        self.MultipleImaging_GECI_ReadingsKd_Value = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
+        self.MultipleImaging_GECI_ReadingsKd_Value.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Value")
+        self.MultipleImaging_GECI_ReadingsKd_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsKd_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Value)
+
+
+        self.verticalLayout_88.addWidget(self.MultipleImaging_GECI_ReadingsKd_frame)
+
+        self.MultipleImaging_GECI_ReadingsBrightness_frame = QFrame(self.MultipleImaging_GECI_Readings_frame)
+        self.MultipleImaging_GECI_ReadingsBrightness_frame.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_frame")
+        self.MultipleImaging_GECI_ReadingsBrightness_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_GECI_ReadingsBrightness_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_313 = QHBoxLayout(self.MultipleImaging_GECI_ReadingsBrightness_frame)
+        self.horizontalLayout_313.setSpacing(0)
+        self.horizontalLayout_313.setObjectName(u"horizontalLayout_313")
+        self.horizontalLayout_313.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_GECI_ReadingsBrightness_Label = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
+        self.MultipleImaging_GECI_ReadingsBrightness_Label.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Label")
+        self.MultipleImaging_GECI_ReadingsBrightness_Label.setFont(font7)
+
+        self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Label)
+
+        self.MultipleImaging_GECI_ReadingsBrightness_Value = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Value")
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Value)
+
+
+        self.verticalLayout_88.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_frame)
+
+
+        self.verticalLayout_87.addWidget(self.MultipleImaging_GECI_Readings_frame)
+
+
+        self.verticalLayout_147.addWidget(self.MultipleImaging_GECI_frame)
+
+        self.line_55 = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.line_55.setObjectName(u"line_55")
+        self.line_55.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_55.setFrameShape(QFrame.HLine)
+        self.line_55.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_147.addWidget(self.line_55)
+
+        self.MultipleImaging_FrameRate_frame = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.MultipleImaging_FrameRate_frame.setObjectName(u"MultipleImaging_FrameRate_frame")
+        self.MultipleImaging_FrameRate_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_148 = QVBoxLayout(self.MultipleImaging_FrameRate_frame)
+        self.verticalLayout_148.setSpacing(0)
+        self.verticalLayout_148.setObjectName(u"verticalLayout_148")
+        self.verticalLayout_148.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_FrameRate_Title_frame = QFrame(self.MultipleImaging_FrameRate_frame)
+        self.MultipleImaging_FrameRate_Title_frame.setObjectName(u"MultipleImaging_FrameRate_Title_frame")
+        self.MultipleImaging_FrameRate_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_314 = QHBoxLayout(self.MultipleImaging_FrameRate_Title_frame)
+        self.horizontalLayout_314.setSpacing(0)
+        self.horizontalLayout_314.setObjectName(u"horizontalLayout_314")
+        self.horizontalLayout_314.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FrameRate_Toggle_frame = QFrame(self.MultipleImaging_FrameRate_Title_frame)
+        self.MultipleImaging_FrameRate_Toggle_frame.setObjectName(u"MultipleImaging_FrameRate_Toggle_frame")
+        self.MultipleImaging_FrameRate_Toggle_frame.setMinimumSize(QSize(50, 0))
+        self.MultipleImaging_FrameRate_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_FrameRate_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_FrameRate_Toggle_layout = QHBoxLayout(self.MultipleImaging_FrameRate_Toggle_frame)
+        self.MultipleImaging_FrameRate_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_FrameRate_Toggle_layout.setObjectName(u"MultipleImaging_FrameRate_Toggle_layout")
+        self.MultipleImaging_FrameRate_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_314.addWidget(self.MultipleImaging_FrameRate_Toggle_frame)
+
+        self.MultipleImaging_FrameRate_Label_frame = QFrame(self.MultipleImaging_FrameRate_Title_frame)
+        self.MultipleImaging_FrameRate_Label_frame.setObjectName(u"MultipleImaging_FrameRate_Label_frame")
+        self.MultipleImaging_FrameRate_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_315 = QHBoxLayout(self.MultipleImaging_FrameRate_Label_frame)
+        self.horizontalLayout_315.setSpacing(0)
+        self.horizontalLayout_315.setObjectName(u"horizontalLayout_315")
+        self.horizontalLayout_315.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FrameRate_Label = QLabel(self.MultipleImaging_FrameRate_Label_frame)
+        self.MultipleImaging_FrameRate_Label.setObjectName(u"MultipleImaging_FrameRate_Label")
+        self.MultipleImaging_FrameRate_Label.setWordWrap(True)
+
+        self.horizontalLayout_315.addWidget(self.MultipleImaging_FrameRate_Label)
+
+
+        self.horizontalLayout_314.addWidget(self.MultipleImaging_FrameRate_Label_frame)
+
+
+        self.verticalLayout_148.addWidget(self.MultipleImaging_FrameRate_Title_frame)
+
+        self.MultipleImaging_FrameRate_Readings_frame = QFrame(self.MultipleImaging_FrameRate_frame)
+        self.MultipleImaging_FrameRate_Readings_frame.setObjectName(u"MultipleImaging_FrameRate_Readings_frame")
+        self.MultipleImaging_FrameRate_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_316 = QHBoxLayout(self.MultipleImaging_FrameRate_Readings_frame)
+        self.horizontalLayout_316.setSpacing(0)
+        self.horizontalLayout_316.setObjectName(u"horizontalLayout_316")
+        self.horizontalLayout_316.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FrameRate_Readings = QLabel(self.MultipleImaging_FrameRate_Readings_frame)
+        self.MultipleImaging_FrameRate_Readings.setObjectName(u"MultipleImaging_FrameRate_Readings")
+        self.MultipleImaging_FrameRate_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_316.addWidget(self.MultipleImaging_FrameRate_Readings)
+
+
+        self.verticalLayout_148.addWidget(self.MultipleImaging_FrameRate_Readings_frame)
+
+        self.MultipleImaging_FrameRate_Slider_frame = QFrame(self.MultipleImaging_FrameRate_frame)
+        self.MultipleImaging_FrameRate_Slider_frame.setObjectName(u"MultipleImaging_FrameRate_Slider_frame")
+        self.MultipleImaging_FrameRate_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.Imaging_FrameRate_toggle_layout_2 = QHBoxLayout(self.MultipleImaging_FrameRate_Slider_frame)
+        self.Imaging_FrameRate_toggle_layout_2.setSpacing(0)
+        self.Imaging_FrameRate_toggle_layout_2.setObjectName(u"Imaging_FrameRate_toggle_layout_2")
+        self.Imaging_FrameRate_toggle_layout_2.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FrameRate_Slider = QSlider(self.MultipleImaging_FrameRate_Slider_frame)
+        self.MultipleImaging_FrameRate_Slider.setObjectName(u"MultipleImaging_FrameRate_Slider")
+        self.MultipleImaging_FrameRate_Slider.setEnabled(False)
+        self.MultipleImaging_FrameRate_Slider.setMinimum(1)
+        self.MultipleImaging_FrameRate_Slider.setMaximum(1000)
+        self.MultipleImaging_FrameRate_Slider.setSingleStep(10)
+        self.MultipleImaging_FrameRate_Slider.setValue(250)
+        self.MultipleImaging_FrameRate_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_FrameRate_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_FrameRate_Slider.setTickInterval(100)
+
+        self.Imaging_FrameRate_toggle_layout_2.addWidget(self.MultipleImaging_FrameRate_Slider)
+
+
+        self.verticalLayout_148.addWidget(self.MultipleImaging_FrameRate_Slider_frame)
+
+        self.MultipleImaging_FrameRate_Values_frame = QFrame(self.MultipleImaging_FrameRate_frame)
+        self.MultipleImaging_FrameRate_Values_frame.setObjectName(u"MultipleImaging_FrameRate_Values_frame")
+        self.MultipleImaging_FrameRate_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FrameRate_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_317 = QHBoxLayout(self.MultipleImaging_FrameRate_Values_frame)
+        self.horizontalLayout_317.setSpacing(0)
+        self.horizontalLayout_317.setObjectName(u"horizontalLayout_317")
+        self.horizontalLayout_317.setContentsMargins(0, 0, 0, 0)
+        self.label_58 = QLabel(self.MultipleImaging_FrameRate_Values_frame)
+        self.label_58.setObjectName(u"label_58")
+
+        self.horizontalLayout_317.addWidget(self.label_58)
+
+        self.label_59 = QLabel(self.MultipleImaging_FrameRate_Values_frame)
+        self.label_59.setObjectName(u"label_59")
+        self.label_59.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_317.addWidget(self.label_59)
+
+        self.label_60 = QLabel(self.MultipleImaging_FrameRate_Values_frame)
+        self.label_60.setObjectName(u"label_60")
+        self.label_60.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_317.addWidget(self.label_60)
+
+
+        self.verticalLayout_148.addWidget(self.MultipleImaging_FrameRate_Values_frame)
+
+
+        self.verticalLayout_147.addWidget(self.MultipleImaging_FrameRate_frame)
+
+        self.line_56 = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.line_56.setObjectName(u"line_56")
+        self.line_56.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_56.setFrameShape(QFrame.HLine)
+        self.line_56.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_147.addWidget(self.line_56)
+
+        self.MultipleImaging_PMT_frame = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.MultipleImaging_PMT_frame.setObjectName(u"MultipleImaging_PMT_frame")
+        self.MultipleImaging_PMT_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_149 = QVBoxLayout(self.MultipleImaging_PMT_frame)
+        self.verticalLayout_149.setSpacing(0)
+        self.verticalLayout_149.setObjectName(u"verticalLayout_149")
+        self.verticalLayout_149.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_PMT_Title_frame = QFrame(self.MultipleImaging_PMT_frame)
+        self.MultipleImaging_PMT_Title_frame.setObjectName(u"MultipleImaging_PMT_Title_frame")
+        self.MultipleImaging_PMT_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_318 = QHBoxLayout(self.MultipleImaging_PMT_Title_frame)
+        self.horizontalLayout_318.setSpacing(0)
+        self.horizontalLayout_318.setObjectName(u"horizontalLayout_318")
+        self.horizontalLayout_318.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PMT_Toggle_frame = QFrame(self.MultipleImaging_PMT_Title_frame)
+        self.MultipleImaging_PMT_Toggle_frame.setObjectName(u"MultipleImaging_PMT_Toggle_frame")
+        self.MultipleImaging_PMT_Toggle_frame.setMinimumSize(QSize(50, 0))
+        self.MultipleImaging_PMT_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_PMT_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_PMT_Toggle_layout = QHBoxLayout(self.MultipleImaging_PMT_Toggle_frame)
+        self.MultipleImaging_PMT_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_PMT_Toggle_layout.setObjectName(u"MultipleImaging_PMT_Toggle_layout")
+        self.MultipleImaging_PMT_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_318.addWidget(self.MultipleImaging_PMT_Toggle_frame)
+
+        self.MultipleImaging_PMT_Label_frame = QFrame(self.MultipleImaging_PMT_Title_frame)
+        self.MultipleImaging_PMT_Label_frame.setObjectName(u"MultipleImaging_PMT_Label_frame")
+        self.MultipleImaging_PMT_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_319 = QHBoxLayout(self.MultipleImaging_PMT_Label_frame)
+        self.horizontalLayout_319.setSpacing(0)
+        self.horizontalLayout_319.setObjectName(u"horizontalLayout_319")
+        self.horizontalLayout_319.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PMT_Label = QLabel(self.MultipleImaging_PMT_Label_frame)
+        self.MultipleImaging_PMT_Label.setObjectName(u"MultipleImaging_PMT_Label")
+        self.MultipleImaging_PMT_Label.setWordWrap(True)
+
+        self.horizontalLayout_319.addWidget(self.MultipleImaging_PMT_Label)
+
+
+        self.horizontalLayout_318.addWidget(self.MultipleImaging_PMT_Label_frame)
+
+
+        self.verticalLayout_149.addWidget(self.MultipleImaging_PMT_Title_frame)
+
+        self.MultipleImaging_PMT_Readings_frame = QFrame(self.MultipleImaging_PMT_frame)
+        self.MultipleImaging_PMT_Readings_frame.setObjectName(u"MultipleImaging_PMT_Readings_frame")
+        self.MultipleImaging_PMT_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_320 = QHBoxLayout(self.MultipleImaging_PMT_Readings_frame)
+        self.horizontalLayout_320.setSpacing(0)
+        self.horizontalLayout_320.setObjectName(u"horizontalLayout_320")
+        self.horizontalLayout_320.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PMT_Readings = QLabel(self.MultipleImaging_PMT_Readings_frame)
+        self.MultipleImaging_PMT_Readings.setObjectName(u"MultipleImaging_PMT_Readings")
+        self.MultipleImaging_PMT_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_320.addWidget(self.MultipleImaging_PMT_Readings)
+
+
+        self.verticalLayout_149.addWidget(self.MultipleImaging_PMT_Readings_frame)
+
+        self.MultipleImaging_PMT_Slider_frame = QFrame(self.MultipleImaging_PMT_frame)
+        self.MultipleImaging_PMT_Slider_frame.setObjectName(u"MultipleImaging_PMT_Slider_frame")
+        self.MultipleImaging_PMT_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_321 = QHBoxLayout(self.MultipleImaging_PMT_Slider_frame)
+        self.horizontalLayout_321.setSpacing(0)
+        self.horizontalLayout_321.setObjectName(u"horizontalLayout_321")
+        self.horizontalLayout_321.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PMT_Slider = QSlider(self.MultipleImaging_PMT_Slider_frame)
+        self.MultipleImaging_PMT_Slider.setObjectName(u"MultipleImaging_PMT_Slider")
+        self.MultipleImaging_PMT_Slider.setEnabled(False)
+        self.MultipleImaging_PMT_Slider.setMaximum(200)
+        self.MultipleImaging_PMT_Slider.setValue(100)
+        self.MultipleImaging_PMT_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_PMT_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_PMT_Slider.setTickInterval(20)
+
+        self.horizontalLayout_321.addWidget(self.MultipleImaging_PMT_Slider)
+
+
+        self.verticalLayout_149.addWidget(self.MultipleImaging_PMT_Slider_frame)
+
+        self.MultipleImaging_PMT_Values_frame = QFrame(self.MultipleImaging_PMT_frame)
+        self.MultipleImaging_PMT_Values_frame.setObjectName(u"MultipleImaging_PMT_Values_frame")
+        self.MultipleImaging_PMT_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PMT_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_322 = QHBoxLayout(self.MultipleImaging_PMT_Values_frame)
+        self.horizontalLayout_322.setSpacing(0)
+        self.horizontalLayout_322.setObjectName(u"horizontalLayout_322")
+        self.horizontalLayout_322.setContentsMargins(0, 0, 0, 0)
+        self.label_61 = QLabel(self.MultipleImaging_PMT_Values_frame)
+        self.label_61.setObjectName(u"label_61")
+
+        self.horizontalLayout_322.addWidget(self.label_61)
+
+        self.label_62 = QLabel(self.MultipleImaging_PMT_Values_frame)
+        self.label_62.setObjectName(u"label_62")
+        self.label_62.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_322.addWidget(self.label_62)
+
+        self.label_63 = QLabel(self.MultipleImaging_PMT_Values_frame)
+        self.label_63.setObjectName(u"label_63")
+        self.label_63.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_322.addWidget(self.label_63)
+
+
+        self.verticalLayout_149.addWidget(self.MultipleImaging_PMT_Values_frame)
+
+
+        self.verticalLayout_147.addWidget(self.MultipleImaging_PMT_frame)
+
+        self.line_57 = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.line_57.setObjectName(u"line_57")
+        self.line_57.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_57.setFrameShape(QFrame.HLine)
+        self.line_57.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_147.addWidget(self.line_57)
+
+        self.MultipleImaging_Laser_frame = QFrame(self.MultipleImaging_ImagingParameter_page)
+        self.MultipleImaging_Laser_frame.setObjectName(u"MultipleImaging_Laser_frame")
+        self.MultipleImaging_Laser_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_150 = QVBoxLayout(self.MultipleImaging_Laser_frame)
+        self.verticalLayout_150.setSpacing(0)
+        self.verticalLayout_150.setObjectName(u"verticalLayout_150")
+        self.verticalLayout_150.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_Laser_Title_frame = QFrame(self.MultipleImaging_Laser_frame)
+        self.MultipleImaging_Laser_Title_frame.setObjectName(u"MultipleImaging_Laser_Title_frame")
+        self.MultipleImaging_Laser_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_323 = QHBoxLayout(self.MultipleImaging_Laser_Title_frame)
+        self.horizontalLayout_323.setSpacing(0)
+        self.horizontalLayout_323.setObjectName(u"horizontalLayout_323")
+        self.horizontalLayout_323.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Laser_Toggle_frame = QFrame(self.MultipleImaging_Laser_Title_frame)
+        self.MultipleImaging_Laser_Toggle_frame.setObjectName(u"MultipleImaging_Laser_Toggle_frame")
+        self.MultipleImaging_Laser_Toggle_frame.setMinimumSize(QSize(50, 0))
+        self.MultipleImaging_Laser_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_Laser_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_Laser_Toggle_layout = QHBoxLayout(self.MultipleImaging_Laser_Toggle_frame)
+        self.MultipleImaging_Laser_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_Laser_Toggle_layout.setObjectName(u"MultipleImaging_Laser_Toggle_layout")
+        self.MultipleImaging_Laser_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_323.addWidget(self.MultipleImaging_Laser_Toggle_frame)
+
+        self.MultipleImaging_Laser_Label_frame = QFrame(self.MultipleImaging_Laser_Title_frame)
+        self.MultipleImaging_Laser_Label_frame.setObjectName(u"MultipleImaging_Laser_Label_frame")
+        self.MultipleImaging_Laser_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_324 = QHBoxLayout(self.MultipleImaging_Laser_Label_frame)
+        self.horizontalLayout_324.setSpacing(0)
+        self.horizontalLayout_324.setObjectName(u"horizontalLayout_324")
+        self.horizontalLayout_324.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Laser_Label = QLabel(self.MultipleImaging_Laser_Label_frame)
+        self.MultipleImaging_Laser_Label.setObjectName(u"MultipleImaging_Laser_Label")
+        self.MultipleImaging_Laser_Label.setWordWrap(True)
+
+        self.horizontalLayout_324.addWidget(self.MultipleImaging_Laser_Label)
+
+
+        self.horizontalLayout_323.addWidget(self.MultipleImaging_Laser_Label_frame)
+
+
+        self.verticalLayout_150.addWidget(self.MultipleImaging_Laser_Title_frame)
+
+        self.MultipleImaging_Laser_Readings_frame = QFrame(self.MultipleImaging_Laser_frame)
+        self.MultipleImaging_Laser_Readings_frame.setObjectName(u"MultipleImaging_Laser_Readings_frame")
+        self.MultipleImaging_Laser_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_325 = QHBoxLayout(self.MultipleImaging_Laser_Readings_frame)
+        self.horizontalLayout_325.setSpacing(0)
+        self.horizontalLayout_325.setObjectName(u"horizontalLayout_325")
+        self.horizontalLayout_325.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Laser_Readings = QLabel(self.MultipleImaging_Laser_Readings_frame)
+        self.MultipleImaging_Laser_Readings.setObjectName(u"MultipleImaging_Laser_Readings")
+        self.MultipleImaging_Laser_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_325.addWidget(self.MultipleImaging_Laser_Readings)
+
+
+        self.verticalLayout_150.addWidget(self.MultipleImaging_Laser_Readings_frame)
+
+        self.MultipleImaging_Laser_Slider_frame = QFrame(self.MultipleImaging_Laser_frame)
+        self.MultipleImaging_Laser_Slider_frame.setObjectName(u"MultipleImaging_Laser_Slider_frame")
+        self.MultipleImaging_Laser_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Laser_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_326 = QHBoxLayout(self.MultipleImaging_Laser_Slider_frame)
+        self.horizontalLayout_326.setSpacing(0)
+        self.horizontalLayout_326.setObjectName(u"horizontalLayout_326")
+        self.horizontalLayout_326.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Laser_Slider = QSlider(self.MultipleImaging_Laser_Slider_frame)
+        self.MultipleImaging_Laser_Slider.setObjectName(u"MultipleImaging_Laser_Slider")
+        self.MultipleImaging_Laser_Slider.setEnabled(False)
+        self.MultipleImaging_Laser_Slider.setMaximum(200)
+        self.MultipleImaging_Laser_Slider.setValue(100)
+        self.MultipleImaging_Laser_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_Laser_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_Laser_Slider.setTickInterval(20)
+
+        self.horizontalLayout_326.addWidget(self.MultipleImaging_Laser_Slider)
+
+
+        self.verticalLayout_150.addWidget(self.MultipleImaging_Laser_Slider_frame)
+
+        self.frame_18 = QFrame(self.MultipleImaging_Laser_frame)
+        self.frame_18.setObjectName(u"frame_18")
+        self.frame_18.setFrameShape(QFrame.StyledPanel)
+        self.frame_18.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_327 = QHBoxLayout(self.frame_18)
+        self.horizontalLayout_327.setSpacing(0)
+        self.horizontalLayout_327.setObjectName(u"horizontalLayout_327")
+        self.horizontalLayout_327.setContentsMargins(0, 0, 0, 0)
+        self.label_64 = QLabel(self.frame_18)
+        self.label_64.setObjectName(u"label_64")
+
+        self.horizontalLayout_327.addWidget(self.label_64)
+
+        self.label_65 = QLabel(self.frame_18)
+        self.label_65.setObjectName(u"label_65")
+        self.label_65.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_327.addWidget(self.label_65)
+
+        self.label_66 = QLabel(self.frame_18)
+        self.label_66.setObjectName(u"label_66")
+        self.label_66.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_327.addWidget(self.label_66)
+
+
+        self.verticalLayout_150.addWidget(self.frame_18)
+
+
+        self.verticalLayout_147.addWidget(self.MultipleImaging_Laser_frame)
+
+        self.MultipleImaging_parameter_stackedWidget.addWidget(self.MultipleImaging_ImagingParameter_page)
+        self.MultipleImaging_CalciumParameter_page = QWidget()
+        self.MultipleImaging_CalciumParameter_page.setObjectName(u"MultipleImaging_CalciumParameter_page")
+        self.verticalLayout_151 = QVBoxLayout(self.MultipleImaging_CalciumParameter_page)
+        self.verticalLayout_151.setSpacing(5)
+        self.verticalLayout_151.setObjectName(u"verticalLayout_151")
+        self.verticalLayout_151.setContentsMargins(0, 5, 0, 5)
+        self.MultipleImaging_CalciumDecay_frame = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.MultipleImaging_CalciumDecay_frame.setObjectName(u"MultipleImaging_CalciumDecay_frame")
+        self.MultipleImaging_CalciumDecay_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_152 = QVBoxLayout(self.MultipleImaging_CalciumDecay_frame)
+        self.verticalLayout_152.setSpacing(0)
+        self.verticalLayout_152.setObjectName(u"verticalLayout_152")
+        self.verticalLayout_152.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_CalciumDecay_Title_frame = QFrame(self.MultipleImaging_CalciumDecay_frame)
+        self.MultipleImaging_CalciumDecay_Title_frame.setObjectName(u"MultipleImaging_CalciumDecay_Title_frame")
+        self.MultipleImaging_CalciumDecay_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_328 = QHBoxLayout(self.MultipleImaging_CalciumDecay_Title_frame)
+        self.horizontalLayout_328.setSpacing(0)
+        self.horizontalLayout_328.setObjectName(u"horizontalLayout_328")
+        self.horizontalLayout_328.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumDecay_Toggle_frame = QFrame(self.MultipleImaging_CalciumDecay_Title_frame)
+        self.MultipleImaging_CalciumDecay_Toggle_frame.setObjectName(u"MultipleImaging_CalciumDecay_Toggle_frame")
+        self.MultipleImaging_CalciumDecay_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_CalciumDecay_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_CalciumDecay_Toggle_layout = QHBoxLayout(self.MultipleImaging_CalciumDecay_Toggle_frame)
+        self.MultipleImaging_CalciumDecay_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_CalciumDecay_Toggle_layout.setObjectName(u"MultipleImaging_CalciumDecay_Toggle_layout")
+        self.MultipleImaging_CalciumDecay_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_328.addWidget(self.MultipleImaging_CalciumDecay_Toggle_frame)
+
+        self.MultipleImaging_CalciumDecay_Label_frame = QFrame(self.MultipleImaging_CalciumDecay_Title_frame)
+        self.MultipleImaging_CalciumDecay_Label_frame.setObjectName(u"MultipleImaging_CalciumDecay_Label_frame")
+        self.MultipleImaging_CalciumDecay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_329 = QHBoxLayout(self.MultipleImaging_CalciumDecay_Label_frame)
+        self.horizontalLayout_329.setSpacing(0)
+        self.horizontalLayout_329.setObjectName(u"horizontalLayout_329")
+        self.horizontalLayout_329.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumDecay_Label = QLabel(self.MultipleImaging_CalciumDecay_Label_frame)
+        self.MultipleImaging_CalciumDecay_Label.setObjectName(u"MultipleImaging_CalciumDecay_Label")
+        self.MultipleImaging_CalciumDecay_Label.setWordWrap(True)
+
+        self.horizontalLayout_329.addWidget(self.MultipleImaging_CalciumDecay_Label)
+
+
+        self.horizontalLayout_328.addWidget(self.MultipleImaging_CalciumDecay_Label_frame)
+
+
+        self.verticalLayout_152.addWidget(self.MultipleImaging_CalciumDecay_Title_frame)
+
+        self.MultipleImaging_CalciumDecay_Readings_frame = QFrame(self.MultipleImaging_CalciumDecay_frame)
+        self.MultipleImaging_CalciumDecay_Readings_frame.setObjectName(u"MultipleImaging_CalciumDecay_Readings_frame")
+        self.MultipleImaging_CalciumDecay_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_330 = QHBoxLayout(self.MultipleImaging_CalciumDecay_Readings_frame)
+        self.horizontalLayout_330.setSpacing(0)
+        self.horizontalLayout_330.setObjectName(u"horizontalLayout_330")
+        self.horizontalLayout_330.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumDecay_Readings = QLabel(self.MultipleImaging_CalciumDecay_Readings_frame)
+        self.MultipleImaging_CalciumDecay_Readings.setObjectName(u"MultipleImaging_CalciumDecay_Readings")
+        self.MultipleImaging_CalciumDecay_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_330.addWidget(self.MultipleImaging_CalciumDecay_Readings)
+
+
+        self.verticalLayout_152.addWidget(self.MultipleImaging_CalciumDecay_Readings_frame)
+
+        self.MultipleImaging_CalciumDecay_Slider_frame = QFrame(self.MultipleImaging_CalciumDecay_frame)
+        self.MultipleImaging_CalciumDecay_Slider_frame.setObjectName(u"MultipleImaging_CalciumDecay_Slider_frame")
+        self.MultipleImaging_CalciumDecay_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumDecay_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_331 = QHBoxLayout(self.MultipleImaging_CalciumDecay_Slider_frame)
+        self.horizontalLayout_331.setSpacing(0)
+        self.horizontalLayout_331.setObjectName(u"horizontalLayout_331")
+        self.horizontalLayout_331.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumDecay_Slider = QSlider(self.MultipleImaging_CalciumDecay_Slider_frame)
+        self.MultipleImaging_CalciumDecay_Slider.setObjectName(u"MultipleImaging_CalciumDecay_Slider")
+        self.MultipleImaging_CalciumDecay_Slider.setEnabled(False)
+        self.MultipleImaging_CalciumDecay_Slider.setMinimum(1)
+        self.MultipleImaging_CalciumDecay_Slider.setMaximum(200)
+        self.MultipleImaging_CalciumDecay_Slider.setValue(50)
+        self.MultipleImaging_CalciumDecay_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_CalciumDecay_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_CalciumDecay_Slider.setTickInterval(20)
+
+        self.horizontalLayout_331.addWidget(self.MultipleImaging_CalciumDecay_Slider)
+
+
+        self.verticalLayout_152.addWidget(self.MultipleImaging_CalciumDecay_Slider_frame)
+
+        self.frame_19 = QFrame(self.MultipleImaging_CalciumDecay_frame)
+        self.frame_19.setObjectName(u"frame_19")
+        self.frame_19.setFrameShape(QFrame.StyledPanel)
+        self.frame_19.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_332 = QHBoxLayout(self.frame_19)
+        self.horizontalLayout_332.setObjectName(u"horizontalLayout_332")
+        self.label_67 = QLabel(self.frame_19)
+        self.label_67.setObjectName(u"label_67")
+
+        self.horizontalLayout_332.addWidget(self.label_67)
+
+        self.label_68 = QLabel(self.frame_19)
+        self.label_68.setObjectName(u"label_68")
+        self.label_68.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_332.addWidget(self.label_68)
+
+        self.label_69 = QLabel(self.frame_19)
+        self.label_69.setObjectName(u"label_69")
+        self.label_69.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_332.addWidget(self.label_69)
+
+
+        self.verticalLayout_152.addWidget(self.frame_19)
+
+
+        self.verticalLayout_151.addWidget(self.MultipleImaging_CalciumDecay_frame)
+
+        self.line_58 = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.line_58.setObjectName(u"line_58")
+        self.line_58.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_58.setFrameShape(QFrame.HLine)
+        self.line_58.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_151.addWidget(self.line_58)
+
+        self.MultipleImaging_CalciumJump_frame = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.MultipleImaging_CalciumJump_frame.setObjectName(u"MultipleImaging_CalciumJump_frame")
+        self.MultipleImaging_CalciumJump_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_153 = QVBoxLayout(self.MultipleImaging_CalciumJump_frame)
+        self.verticalLayout_153.setSpacing(0)
+        self.verticalLayout_153.setObjectName(u"verticalLayout_153")
+        self.verticalLayout_153.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_CalciumJump_Title_frame = QFrame(self.MultipleImaging_CalciumJump_frame)
+        self.MultipleImaging_CalciumJump_Title_frame.setObjectName(u"MultipleImaging_CalciumJump_Title_frame")
+        self.MultipleImaging_CalciumJump_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_333 = QHBoxLayout(self.MultipleImaging_CalciumJump_Title_frame)
+        self.horizontalLayout_333.setSpacing(0)
+        self.horizontalLayout_333.setObjectName(u"horizontalLayout_333")
+        self.horizontalLayout_333.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumJump_Toggle_frame = QFrame(self.MultipleImaging_CalciumJump_Title_frame)
+        self.MultipleImaging_CalciumJump_Toggle_frame.setObjectName(u"MultipleImaging_CalciumJump_Toggle_frame")
+        self.MultipleImaging_CalciumJump_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_CalciumJump_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_CalciumJump_Toggle_layout = QHBoxLayout(self.MultipleImaging_CalciumJump_Toggle_frame)
+        self.MultipleImaging_CalciumJump_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_CalciumJump_Toggle_layout.setObjectName(u"MultipleImaging_CalciumJump_Toggle_layout")
+        self.MultipleImaging_CalciumJump_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_333.addWidget(self.MultipleImaging_CalciumJump_Toggle_frame)
+
+        self.MultipleImaging_CalciumJump_Label_frame = QFrame(self.MultipleImaging_CalciumJump_Title_frame)
+        self.MultipleImaging_CalciumJump_Label_frame.setObjectName(u"MultipleImaging_CalciumJump_Label_frame")
+        self.MultipleImaging_CalciumJump_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_334 = QHBoxLayout(self.MultipleImaging_CalciumJump_Label_frame)
+        self.horizontalLayout_334.setSpacing(0)
+        self.horizontalLayout_334.setObjectName(u"horizontalLayout_334")
+        self.horizontalLayout_334.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumJump_Label = QLabel(self.MultipleImaging_CalciumJump_Label_frame)
+        self.MultipleImaging_CalciumJump_Label.setObjectName(u"MultipleImaging_CalciumJump_Label")
+        self.MultipleImaging_CalciumJump_Label.setWordWrap(True)
+
+        self.horizontalLayout_334.addWidget(self.MultipleImaging_CalciumJump_Label)
+
+
+        self.horizontalLayout_333.addWidget(self.MultipleImaging_CalciumJump_Label_frame)
+
+
+        self.verticalLayout_153.addWidget(self.MultipleImaging_CalciumJump_Title_frame)
+
+        self.MultipleImaging_CalciumJump_Readings_frame = QFrame(self.MultipleImaging_CalciumJump_frame)
+        self.MultipleImaging_CalciumJump_Readings_frame.setObjectName(u"MultipleImaging_CalciumJump_Readings_frame")
+        self.MultipleImaging_CalciumJump_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_335 = QHBoxLayout(self.MultipleImaging_CalciumJump_Readings_frame)
+        self.horizontalLayout_335.setSpacing(0)
+        self.horizontalLayout_335.setObjectName(u"horizontalLayout_335")
+        self.horizontalLayout_335.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumJump_Readings = QLabel(self.MultipleImaging_CalciumJump_Readings_frame)
+        self.MultipleImaging_CalciumJump_Readings.setObjectName(u"MultipleImaging_CalciumJump_Readings")
+        self.MultipleImaging_CalciumJump_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_335.addWidget(self.MultipleImaging_CalciumJump_Readings)
+
+
+        self.verticalLayout_153.addWidget(self.MultipleImaging_CalciumJump_Readings_frame)
+
+        self.MultipleImaging_CalciumJump_Slider_frame = QFrame(self.MultipleImaging_CalciumJump_frame)
+        self.MultipleImaging_CalciumJump_Slider_frame.setObjectName(u"MultipleImaging_CalciumJump_Slider_frame")
+        self.MultipleImaging_CalciumJump_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_336 = QHBoxLayout(self.MultipleImaging_CalciumJump_Slider_frame)
+        self.horizontalLayout_336.setSpacing(0)
+        self.horizontalLayout_336.setObjectName(u"horizontalLayout_336")
+        self.horizontalLayout_336.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumJump_Slider = QSlider(self.MultipleImaging_CalciumJump_Slider_frame)
+        self.MultipleImaging_CalciumJump_Slider.setObjectName(u"MultipleImaging_CalciumJump_Slider")
+        self.MultipleImaging_CalciumJump_Slider.setEnabled(False)
+        self.MultipleImaging_CalciumJump_Slider.setMinimum(1)
+        self.MultipleImaging_CalciumJump_Slider.setMaximum(50)
+        self.MultipleImaging_CalciumJump_Slider.setValue(5)
+        self.MultipleImaging_CalciumJump_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_CalciumJump_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_CalciumJump_Slider.setTickInterval(5)
+
+        self.horizontalLayout_336.addWidget(self.MultipleImaging_CalciumJump_Slider)
+
+
+        self.verticalLayout_153.addWidget(self.MultipleImaging_CalciumJump_Slider_frame)
+
+        self.MultipleImaging_CalciumJump_Values_frame = QFrame(self.MultipleImaging_CalciumJump_frame)
+        self.MultipleImaging_CalciumJump_Values_frame.setObjectName(u"MultipleImaging_CalciumJump_Values_frame")
+        self.MultipleImaging_CalciumJump_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumJump_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_337 = QHBoxLayout(self.MultipleImaging_CalciumJump_Values_frame)
+        self.horizontalLayout_337.setSpacing(0)
+        self.horizontalLayout_337.setObjectName(u"horizontalLayout_337")
+        self.horizontalLayout_337.setContentsMargins(0, 0, 0, 0)
+        self.label_70 = QLabel(self.MultipleImaging_CalciumJump_Values_frame)
+        self.label_70.setObjectName(u"label_70")
+
+        self.horizontalLayout_337.addWidget(self.label_70)
+
+        self.label_71 = QLabel(self.MultipleImaging_CalciumJump_Values_frame)
+        self.label_71.setObjectName(u"label_71")
+        self.label_71.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_337.addWidget(self.label_71)
+
+        self.label_72 = QLabel(self.MultipleImaging_CalciumJump_Values_frame)
+        self.label_72.setObjectName(u"label_72")
+        self.label_72.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_337.addWidget(self.label_72)
+
+
+        self.verticalLayout_153.addWidget(self.MultipleImaging_CalciumJump_Values_frame)
+
+
+        self.verticalLayout_151.addWidget(self.MultipleImaging_CalciumJump_frame)
+
+        self.line_59 = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.line_59.setObjectName(u"line_59")
+        self.line_59.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_59.setFrameShape(QFrame.HLine)
+        self.line_59.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_151.addWidget(self.line_59)
+
+        self.MultipleImaging_CalciumNoise_frame = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.MultipleImaging_CalciumNoise_frame.setObjectName(u"MultipleImaging_CalciumNoise_frame")
+        self.MultipleImaging_CalciumNoise_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_154 = QVBoxLayout(self.MultipleImaging_CalciumNoise_frame)
+        self.verticalLayout_154.setSpacing(0)
+        self.verticalLayout_154.setObjectName(u"verticalLayout_154")
+        self.verticalLayout_154.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_CalciumNoise_Title_frame = QFrame(self.MultipleImaging_CalciumNoise_frame)
+        self.MultipleImaging_CalciumNoise_Title_frame.setObjectName(u"MultipleImaging_CalciumNoise_Title_frame")
+        self.MultipleImaging_CalciumNoise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_338 = QHBoxLayout(self.MultipleImaging_CalciumNoise_Title_frame)
+        self.horizontalLayout_338.setSpacing(0)
+        self.horizontalLayout_338.setObjectName(u"horizontalLayout_338")
+        self.horizontalLayout_338.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumNoise_Toggle_frame = QFrame(self.MultipleImaging_CalciumNoise_Title_frame)
+        self.MultipleImaging_CalciumNoise_Toggle_frame.setObjectName(u"MultipleImaging_CalciumNoise_Toggle_frame")
+        self.MultipleImaging_CalciumNoise_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_CalciumNoise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_CalciumNoise_Toggle_layout = QHBoxLayout(self.MultipleImaging_CalciumNoise_Toggle_frame)
+        self.MultipleImaging_CalciumNoise_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_CalciumNoise_Toggle_layout.setObjectName(u"MultipleImaging_CalciumNoise_Toggle_layout")
+        self.MultipleImaging_CalciumNoise_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_338.addWidget(self.MultipleImaging_CalciumNoise_Toggle_frame)
+
+        self.MultipleImaging_CalciumNoise_Label_frame = QFrame(self.MultipleImaging_CalciumNoise_Title_frame)
+        self.MultipleImaging_CalciumNoise_Label_frame.setObjectName(u"MultipleImaging_CalciumNoise_Label_frame")
+        self.MultipleImaging_CalciumNoise_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_339 = QHBoxLayout(self.MultipleImaging_CalciumNoise_Label_frame)
+        self.horizontalLayout_339.setSpacing(0)
+        self.horizontalLayout_339.setObjectName(u"horizontalLayout_339")
+        self.horizontalLayout_339.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumNoise_Label = QLabel(self.MultipleImaging_CalciumNoise_Label_frame)
+        self.MultipleImaging_CalciumNoise_Label.setObjectName(u"MultipleImaging_CalciumNoise_Label")
+
+        self.horizontalLayout_339.addWidget(self.MultipleImaging_CalciumNoise_Label)
+
+
+        self.horizontalLayout_338.addWidget(self.MultipleImaging_CalciumNoise_Label_frame)
+
+
+        self.verticalLayout_154.addWidget(self.MultipleImaging_CalciumNoise_Title_frame)
+
+        self.MultipleImaging_CalciumNoise_Readings_frame = QFrame(self.MultipleImaging_CalciumNoise_frame)
+        self.MultipleImaging_CalciumNoise_Readings_frame.setObjectName(u"MultipleImaging_CalciumNoise_Readings_frame")
+        self.MultipleImaging_CalciumNoise_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_340 = QHBoxLayout(self.MultipleImaging_CalciumNoise_Readings_frame)
+        self.horizontalLayout_340.setSpacing(0)
+        self.horizontalLayout_340.setObjectName(u"horizontalLayout_340")
+        self.horizontalLayout_340.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumNoise_Readings = QLabel(self.MultipleImaging_CalciumNoise_Readings_frame)
+        self.MultipleImaging_CalciumNoise_Readings.setObjectName(u"MultipleImaging_CalciumNoise_Readings")
+        self.MultipleImaging_CalciumNoise_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_340.addWidget(self.MultipleImaging_CalciumNoise_Readings)
+
+
+        self.verticalLayout_154.addWidget(self.MultipleImaging_CalciumNoise_Readings_frame)
+
+        self.MultipleImaging_CalciumNoise_Slider_frame = QFrame(self.MultipleImaging_CalciumNoise_frame)
+        self.MultipleImaging_CalciumNoise_Slider_frame.setObjectName(u"MultipleImaging_CalciumNoise_Slider_frame")
+        self.MultipleImaging_CalciumNoise_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_341 = QHBoxLayout(self.MultipleImaging_CalciumNoise_Slider_frame)
+        self.horizontalLayout_341.setSpacing(0)
+        self.horizontalLayout_341.setObjectName(u"horizontalLayout_341")
+        self.horizontalLayout_341.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumNoise_Slider = QSlider(self.MultipleImaging_CalciumNoise_Slider_frame)
+        self.MultipleImaging_CalciumNoise_Slider.setObjectName(u"MultipleImaging_CalciumNoise_Slider")
+        self.MultipleImaging_CalciumNoise_Slider.setEnabled(False)
+        self.MultipleImaging_CalciumNoise_Slider.setMaximum(100)
+        self.MultipleImaging_CalciumNoise_Slider.setPageStep(10)
+        self.MultipleImaging_CalciumNoise_Slider.setValue(10)
+        self.MultipleImaging_CalciumNoise_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_CalciumNoise_Slider.setTickPosition(QSlider.TicksBelow)
+
+        self.horizontalLayout_341.addWidget(self.MultipleImaging_CalciumNoise_Slider)
+
+
+        self.verticalLayout_154.addWidget(self.MultipleImaging_CalciumNoise_Slider_frame)
+
+        self.MultipleImaging_CalciumNoise_Values_frame = QFrame(self.MultipleImaging_CalciumNoise_frame)
+        self.MultipleImaging_CalciumNoise_Values_frame.setObjectName(u"MultipleImaging_CalciumNoise_Values_frame")
+        self.MultipleImaging_CalciumNoise_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumNoise_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_342 = QHBoxLayout(self.MultipleImaging_CalciumNoise_Values_frame)
+        self.horizontalLayout_342.setSpacing(0)
+        self.horizontalLayout_342.setObjectName(u"horizontalLayout_342")
+        self.horizontalLayout_342.setContentsMargins(0, 0, 0, 0)
+        self.label_73 = QLabel(self.MultipleImaging_CalciumNoise_Values_frame)
+        self.label_73.setObjectName(u"label_73")
+
+        self.horizontalLayout_342.addWidget(self.label_73)
+
+        self.label_74 = QLabel(self.MultipleImaging_CalciumNoise_Values_frame)
+        self.label_74.setObjectName(u"label_74")
+        self.label_74.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_342.addWidget(self.label_74)
+
+        self.label_75 = QLabel(self.MultipleImaging_CalciumNoise_Values_frame)
+        self.label_75.setObjectName(u"label_75")
+        self.label_75.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_342.addWidget(self.label_75)
+
+
+        self.verticalLayout_154.addWidget(self.MultipleImaging_CalciumNoise_Values_frame)
+
+
+        self.verticalLayout_151.addWidget(self.MultipleImaging_CalciumNoise_frame)
+
+        self.line_60 = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.line_60.setObjectName(u"line_60")
+        self.line_60.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_60.setFrameShape(QFrame.HLine)
+        self.line_60.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_151.addWidget(self.line_60)
+
+        self.MultipleImaging_CalciumBaseline_frame = QFrame(self.MultipleImaging_CalciumParameter_page)
+        self.MultipleImaging_CalciumBaseline_frame.setObjectName(u"MultipleImaging_CalciumBaseline_frame")
+        self.MultipleImaging_CalciumBaseline_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_155 = QVBoxLayout(self.MultipleImaging_CalciumBaseline_frame)
+        self.verticalLayout_155.setSpacing(0)
+        self.verticalLayout_155.setObjectName(u"verticalLayout_155")
+        self.verticalLayout_155.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_CalciumBaseline_Title_frame = QFrame(self.MultipleImaging_CalciumBaseline_frame)
+        self.MultipleImaging_CalciumBaseline_Title_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Title_frame")
+        self.MultipleImaging_CalciumBaseline_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_343 = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Title_frame)
+        self.horizontalLayout_343.setSpacing(0)
+        self.horizontalLayout_343.setObjectName(u"horizontalLayout_343")
+        self.horizontalLayout_343.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumBaseline_Toggle_frame = QFrame(self.MultipleImaging_CalciumBaseline_Title_frame)
+        self.MultipleImaging_CalciumBaseline_Toggle_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Toggle_frame")
+        self.MultipleImaging_CalciumBaseline_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_CalciumBaseline_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_CalciumBaseline_Toggle_layout = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Toggle_frame)
+        self.MultipleImaging_CalciumBaseline_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_CalciumBaseline_Toggle_layout.setObjectName(u"MultipleImaging_CalciumBaseline_Toggle_layout")
+        self.MultipleImaging_CalciumBaseline_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_343.addWidget(self.MultipleImaging_CalciumBaseline_Toggle_frame)
+
+        self.MultipleImaging_CalciumBaseline_Label_frame = QFrame(self.MultipleImaging_CalciumBaseline_Title_frame)
+        self.MultipleImaging_CalciumBaseline_Label_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Label_frame")
+        self.MultipleImaging_CalciumBaseline_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_344 = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Label_frame)
+        self.horizontalLayout_344.setSpacing(0)
+        self.horizontalLayout_344.setObjectName(u"horizontalLayout_344")
+        self.horizontalLayout_344.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumBaseline_Label = QLabel(self.MultipleImaging_CalciumBaseline_Label_frame)
+        self.MultipleImaging_CalciumBaseline_Label.setObjectName(u"MultipleImaging_CalciumBaseline_Label")
+        self.MultipleImaging_CalciumBaseline_Label.setWordWrap(True)
+
+        self.horizontalLayout_344.addWidget(self.MultipleImaging_CalciumBaseline_Label)
+
+
+        self.horizontalLayout_343.addWidget(self.MultipleImaging_CalciumBaseline_Label_frame)
+
+
+        self.verticalLayout_155.addWidget(self.MultipleImaging_CalciumBaseline_Title_frame)
+
+        self.MultipleImaging_CalciumBaseline_Readings_frame = QFrame(self.MultipleImaging_CalciumBaseline_frame)
+        self.MultipleImaging_CalciumBaseline_Readings_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Readings_frame")
+        self.MultipleImaging_CalciumBaseline_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_345 = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Readings_frame)
+        self.horizontalLayout_345.setSpacing(0)
+        self.horizontalLayout_345.setObjectName(u"horizontalLayout_345")
+        self.horizontalLayout_345.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumBaseline_Readings = QLabel(self.MultipleImaging_CalciumBaseline_Readings_frame)
+        self.MultipleImaging_CalciumBaseline_Readings.setObjectName(u"MultipleImaging_CalciumBaseline_Readings")
+        self.MultipleImaging_CalciumBaseline_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_345.addWidget(self.MultipleImaging_CalciumBaseline_Readings)
+
+
+        self.verticalLayout_155.addWidget(self.MultipleImaging_CalciumBaseline_Readings_frame)
+
+        self.MultipleImaging_CalciumBaseline_Slider_frame = QFrame(self.MultipleImaging_CalciumBaseline_frame)
+        self.MultipleImaging_CalciumBaseline_Slider_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Slider_frame")
+        self.MultipleImaging_CalciumBaseline_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_346 = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Slider_frame)
+        self.horizontalLayout_346.setSpacing(0)
+        self.horizontalLayout_346.setObjectName(u"horizontalLayout_346")
+        self.horizontalLayout_346.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_CalciumBaseline_Slider = QSlider(self.MultipleImaging_CalciumBaseline_Slider_frame)
+        self.MultipleImaging_CalciumBaseline_Slider.setObjectName(u"MultipleImaging_CalciumBaseline_Slider")
+        self.MultipleImaging_CalciumBaseline_Slider.setEnabled(False)
+        self.MultipleImaging_CalciumBaseline_Slider.setMinimum(1)
+        self.MultipleImaging_CalciumBaseline_Slider.setMaximum(50)
+        self.MultipleImaging_CalciumBaseline_Slider.setValue(10)
+        self.MultipleImaging_CalciumBaseline_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_CalciumBaseline_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_CalciumBaseline_Slider.setTickInterval(10)
+
+        self.horizontalLayout_346.addWidget(self.MultipleImaging_CalciumBaseline_Slider)
+
+
+        self.verticalLayout_155.addWidget(self.MultipleImaging_CalciumBaseline_Slider_frame)
+
+        self.MultipleImaging_CalciumBaseline_Values_frame = QFrame(self.MultipleImaging_CalciumBaseline_frame)
+        self.MultipleImaging_CalciumBaseline_Values_frame.setObjectName(u"MultipleImaging_CalciumBaseline_Values_frame")
+        self.MultipleImaging_CalciumBaseline_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_CalciumBaseline_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_347 = QHBoxLayout(self.MultipleImaging_CalciumBaseline_Values_frame)
+        self.horizontalLayout_347.setSpacing(0)
+        self.horizontalLayout_347.setObjectName(u"horizontalLayout_347")
+        self.horizontalLayout_347.setContentsMargins(0, 0, 0, 0)
+        self.label_76 = QLabel(self.MultipleImaging_CalciumBaseline_Values_frame)
+        self.label_76.setObjectName(u"label_76")
+
+        self.horizontalLayout_347.addWidget(self.label_76)
+
+        self.label_77 = QLabel(self.MultipleImaging_CalciumBaseline_Values_frame)
+        self.label_77.setObjectName(u"label_77")
+        self.label_77.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_347.addWidget(self.label_77)
+
+        self.label_78 = QLabel(self.MultipleImaging_CalciumBaseline_Values_frame)
+        self.label_78.setObjectName(u"label_78")
+        self.label_78.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_347.addWidget(self.label_78)
+
+
+        self.verticalLayout_155.addWidget(self.MultipleImaging_CalciumBaseline_Values_frame)
+
+
+        self.verticalLayout_151.addWidget(self.MultipleImaging_CalciumBaseline_frame)
+
+        self.MultipleImaging_parameter_stackedWidget.addWidget(self.MultipleImaging_CalciumParameter_page)
+        self.MultipleImaging_FluoParameter_page = QWidget()
+        self.MultipleImaging_FluoParameter_page.setObjectName(u"MultipleImaging_FluoParameter_page")
+        self.verticalLayout_156 = QVBoxLayout(self.MultipleImaging_FluoParameter_page)
+        self.verticalLayout_156.setSpacing(0)
+        self.verticalLayout_156.setObjectName(u"verticalLayout_156")
+        self.verticalLayout_156.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoScale_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_FluoScale_frame.setObjectName(u"MultipleImaging_FluoScale_frame")
+        self.MultipleImaging_FluoScale_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_157 = QVBoxLayout(self.MultipleImaging_FluoScale_frame)
+        self.verticalLayout_157.setSpacing(0)
+        self.verticalLayout_157.setObjectName(u"verticalLayout_157")
+        self.verticalLayout_157.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_FluoScale_Title_frame = QFrame(self.MultipleImaging_FluoScale_frame)
+        self.MultipleImaging_FluoScale_Title_frame.setObjectName(u"MultipleImaging_FluoScale_Title_frame")
+        self.MultipleImaging_FluoScale_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_348 = QHBoxLayout(self.MultipleImaging_FluoScale_Title_frame)
+        self.horizontalLayout_348.setSpacing(0)
+        self.horizontalLayout_348.setObjectName(u"horizontalLayout_348")
+        self.horizontalLayout_348.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoScale_Toggle_frame = QFrame(self.MultipleImaging_FluoScale_Title_frame)
+        self.MultipleImaging_FluoScale_Toggle_frame.setObjectName(u"MultipleImaging_FluoScale_Toggle_frame")
+        self.MultipleImaging_FluoScale_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_FluoScale_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_FluoScale_Toggle_layout = QHBoxLayout(self.MultipleImaging_FluoScale_Toggle_frame)
+        self.MultipleImaging_FluoScale_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_FluoScale_Toggle_layout.setObjectName(u"MultipleImaging_FluoScale_Toggle_layout")
+        self.MultipleImaging_FluoScale_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_348.addWidget(self.MultipleImaging_FluoScale_Toggle_frame)
+
+        self.MultipleImaging_FluoScale_Label_frame = QFrame(self.MultipleImaging_FluoScale_Title_frame)
+        self.MultipleImaging_FluoScale_Label_frame.setObjectName(u"MultipleImaging_FluoScale_Label_frame")
+        self.MultipleImaging_FluoScale_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_349 = QHBoxLayout(self.MultipleImaging_FluoScale_Label_frame)
+        self.horizontalLayout_349.setSpacing(0)
+        self.horizontalLayout_349.setObjectName(u"horizontalLayout_349")
+        self.horizontalLayout_349.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoScale_Label = QLabel(self.MultipleImaging_FluoScale_Label_frame)
+        self.MultipleImaging_FluoScale_Label.setObjectName(u"MultipleImaging_FluoScale_Label")
+        self.MultipleImaging_FluoScale_Label.setWordWrap(True)
+
+        self.horizontalLayout_349.addWidget(self.MultipleImaging_FluoScale_Label)
+
+
+        self.horizontalLayout_348.addWidget(self.MultipleImaging_FluoScale_Label_frame)
+
+
+        self.verticalLayout_157.addWidget(self.MultipleImaging_FluoScale_Title_frame)
+
+        self.MultipleImaging_FluoScale_Readings_frame = QFrame(self.MultipleImaging_FluoScale_frame)
+        self.MultipleImaging_FluoScale_Readings_frame.setObjectName(u"MultipleImaging_FluoScale_Readings_frame")
+        self.MultipleImaging_FluoScale_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_350 = QHBoxLayout(self.MultipleImaging_FluoScale_Readings_frame)
+        self.horizontalLayout_350.setSpacing(0)
+        self.horizontalLayout_350.setObjectName(u"horizontalLayout_350")
+        self.horizontalLayout_350.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoScale_Readings = QLabel(self.MultipleImaging_FluoScale_Readings_frame)
+        self.MultipleImaging_FluoScale_Readings.setObjectName(u"MultipleImaging_FluoScale_Readings")
+        self.MultipleImaging_FluoScale_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_350.addWidget(self.MultipleImaging_FluoScale_Readings)
+
+
+        self.verticalLayout_157.addWidget(self.MultipleImaging_FluoScale_Readings_frame)
+
+        self.MultipleImaging_FluoScale_Slider_frame = QFrame(self.MultipleImaging_FluoScale_frame)
+        self.MultipleImaging_FluoScale_Slider_frame.setObjectName(u"MultipleImaging_FluoScale_Slider_frame")
+        self.MultipleImaging_FluoScale_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_351 = QHBoxLayout(self.MultipleImaging_FluoScale_Slider_frame)
+        self.horizontalLayout_351.setSpacing(0)
+        self.horizontalLayout_351.setObjectName(u"horizontalLayout_351")
+        self.horizontalLayout_351.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoScale_Slider = QSlider(self.MultipleImaging_FluoScale_Slider_frame)
+        self.MultipleImaging_FluoScale_Slider.setObjectName(u"MultipleImaging_FluoScale_Slider")
+        self.MultipleImaging_FluoScale_Slider.setEnabled(False)
+        self.MultipleImaging_FluoScale_Slider.setMinimum(0)
+        self.MultipleImaging_FluoScale_Slider.setMaximum(100)
+        self.MultipleImaging_FluoScale_Slider.setValue(10)
+        self.MultipleImaging_FluoScale_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_FluoScale_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_FluoScale_Slider.setTickInterval(10)
+
+        self.horizontalLayout_351.addWidget(self.MultipleImaging_FluoScale_Slider)
+
+
+        self.verticalLayout_157.addWidget(self.MultipleImaging_FluoScale_Slider_frame)
+
+        self.MultipleImaging_FluoScale_Values_frame = QFrame(self.MultipleImaging_FluoScale_frame)
+        self.MultipleImaging_FluoScale_Values_frame.setObjectName(u"MultipleImaging_FluoScale_Values_frame")
+        self.MultipleImaging_FluoScale_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoScale_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_352 = QHBoxLayout(self.MultipleImaging_FluoScale_Values_frame)
+        self.horizontalLayout_352.setSpacing(0)
+        self.horizontalLayout_352.setObjectName(u"horizontalLayout_352")
+        self.horizontalLayout_352.setContentsMargins(0, 0, 0, 0)
+        self.label_79 = QLabel(self.MultipleImaging_FluoScale_Values_frame)
+        self.label_79.setObjectName(u"label_79")
+
+        self.horizontalLayout_352.addWidget(self.label_79)
+
+        self.label_80 = QLabel(self.MultipleImaging_FluoScale_Values_frame)
+        self.label_80.setObjectName(u"label_80")
+        self.label_80.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_352.addWidget(self.label_80)
+
+        self.label_81 = QLabel(self.MultipleImaging_FluoScale_Values_frame)
+        self.label_81.setObjectName(u"label_81")
+        self.label_81.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_352.addWidget(self.label_81)
+
+
+        self.verticalLayout_157.addWidget(self.MultipleImaging_FluoScale_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_FluoScale_frame)
+
+        self.line_61 = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.line_61.setObjectName(u"line_61")
+        self.line_61.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_61.setFrameShape(QFrame.HLine)
+        self.line_61.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.line_61)
+
+        self.MultipleImaging_FluoOffset_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_FluoOffset_frame.setObjectName(u"MultipleImaging_FluoOffset_frame")
+        self.MultipleImaging_FluoOffset_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_158 = QVBoxLayout(self.MultipleImaging_FluoOffset_frame)
+        self.verticalLayout_158.setSpacing(0)
+        self.verticalLayout_158.setObjectName(u"verticalLayout_158")
+        self.verticalLayout_158.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_FluoOffset_Title_frame = QFrame(self.MultipleImaging_FluoOffset_frame)
+        self.MultipleImaging_FluoOffset_Title_frame.setObjectName(u"MultipleImaging_FluoOffset_Title_frame")
+        self.MultipleImaging_FluoOffset_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_353 = QHBoxLayout(self.MultipleImaging_FluoOffset_Title_frame)
+        self.horizontalLayout_353.setSpacing(0)
+        self.horizontalLayout_353.setObjectName(u"horizontalLayout_353")
+        self.horizontalLayout_353.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoOffset_Toggle_frame = QFrame(self.MultipleImaging_FluoOffset_Title_frame)
+        self.MultipleImaging_FluoOffset_Toggle_frame.setObjectName(u"MultipleImaging_FluoOffset_Toggle_frame")
+        self.MultipleImaging_FluoOffset_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_FluoOffset_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_FluoOffset_Toggle_layout = QHBoxLayout(self.MultipleImaging_FluoOffset_Toggle_frame)
+        self.MultipleImaging_FluoOffset_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_FluoOffset_Toggle_layout.setObjectName(u"MultipleImaging_FluoOffset_Toggle_layout")
+        self.MultipleImaging_FluoOffset_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_353.addWidget(self.MultipleImaging_FluoOffset_Toggle_frame)
+
+        self.MultipleImaging_FluoOffset_Label_frame = QFrame(self.MultipleImaging_FluoOffset_Title_frame)
+        self.MultipleImaging_FluoOffset_Label_frame.setObjectName(u"MultipleImaging_FluoOffset_Label_frame")
+        self.MultipleImaging_FluoOffset_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_354 = QHBoxLayout(self.MultipleImaging_FluoOffset_Label_frame)
+        self.horizontalLayout_354.setSpacing(0)
+        self.horizontalLayout_354.setObjectName(u"horizontalLayout_354")
+        self.horizontalLayout_354.setContentsMargins(0, 0, 0, 0)
+        self.Imaging_FluoOffset_Label_2 = QLabel(self.MultipleImaging_FluoOffset_Label_frame)
+        self.Imaging_FluoOffset_Label_2.setObjectName(u"Imaging_FluoOffset_Label_2")
+        self.Imaging_FluoOffset_Label_2.setWordWrap(True)
+
+        self.horizontalLayout_354.addWidget(self.Imaging_FluoOffset_Label_2)
+
+
+        self.horizontalLayout_353.addWidget(self.MultipleImaging_FluoOffset_Label_frame)
+
+
+        self.verticalLayout_158.addWidget(self.MultipleImaging_FluoOffset_Title_frame)
+
+        self.MultipleImaging_FluoOffset_Readings_frame = QFrame(self.MultipleImaging_FluoOffset_frame)
+        self.MultipleImaging_FluoOffset_Readings_frame.setObjectName(u"MultipleImaging_FluoOffset_Readings_frame")
+        self.MultipleImaging_FluoOffset_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_355 = QHBoxLayout(self.MultipleImaging_FluoOffset_Readings_frame)
+        self.horizontalLayout_355.setSpacing(0)
+        self.horizontalLayout_355.setObjectName(u"horizontalLayout_355")
+        self.horizontalLayout_355.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoOffset_Readings = QLabel(self.MultipleImaging_FluoOffset_Readings_frame)
+        self.MultipleImaging_FluoOffset_Readings.setObjectName(u"MultipleImaging_FluoOffset_Readings")
+        self.MultipleImaging_FluoOffset_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_355.addWidget(self.MultipleImaging_FluoOffset_Readings)
+
+
+        self.verticalLayout_158.addWidget(self.MultipleImaging_FluoOffset_Readings_frame)
+
+        self.MultipleImaging_FluoOffset_Slider_frame = QFrame(self.MultipleImaging_FluoOffset_frame)
+        self.MultipleImaging_FluoOffset_Slider_frame.setObjectName(u"MultipleImaging_FluoOffset_Slider_frame")
+        self.MultipleImaging_FluoOffset_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_356 = QHBoxLayout(self.MultipleImaging_FluoOffset_Slider_frame)
+        self.horizontalLayout_356.setSpacing(0)
+        self.horizontalLayout_356.setObjectName(u"horizontalLayout_356")
+        self.horizontalLayout_356.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoOffset_Slider = QSlider(self.MultipleImaging_FluoOffset_Slider_frame)
+        self.MultipleImaging_FluoOffset_Slider.setObjectName(u"MultipleImaging_FluoOffset_Slider")
+        self.MultipleImaging_FluoOffset_Slider.setEnabled(False)
+        self.MultipleImaging_FluoOffset_Slider.setMaximum(20)
+        self.MultipleImaging_FluoOffset_Slider.setValue(5)
+        self.MultipleImaging_FluoOffset_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_FluoOffset_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_FluoOffset_Slider.setTickInterval(2)
+
+        self.horizontalLayout_356.addWidget(self.MultipleImaging_FluoOffset_Slider)
+
+
+        self.verticalLayout_158.addWidget(self.MultipleImaging_FluoOffset_Slider_frame)
+
+        self.MultipleImaging_FluoOffset_Values_frame = QFrame(self.MultipleImaging_FluoOffset_frame)
+        self.MultipleImaging_FluoOffset_Values_frame.setObjectName(u"MultipleImaging_FluoOffset_Values_frame")
+        self.MultipleImaging_FluoOffset_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoOffset_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_357 = QHBoxLayout(self.MultipleImaging_FluoOffset_Values_frame)
+        self.horizontalLayout_357.setSpacing(0)
+        self.horizontalLayout_357.setObjectName(u"horizontalLayout_357")
+        self.horizontalLayout_357.setContentsMargins(0, 0, 0, 0)
+        self.label_82 = QLabel(self.MultipleImaging_FluoOffset_Values_frame)
+        self.label_82.setObjectName(u"label_82")
+
+        self.horizontalLayout_357.addWidget(self.label_82)
+
+        self.label_83 = QLabel(self.MultipleImaging_FluoOffset_Values_frame)
+        self.label_83.setObjectName(u"label_83")
+        self.label_83.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_357.addWidget(self.label_83)
+
+        self.label_84 = QLabel(self.MultipleImaging_FluoOffset_Values_frame)
+        self.label_84.setObjectName(u"label_84")
+        self.label_84.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_357.addWidget(self.label_84)
+
+
+        self.verticalLayout_158.addWidget(self.MultipleImaging_FluoOffset_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_FluoOffset_frame)
+
+        self.line_62 = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.line_62.setObjectName(u"line_62")
+        self.line_62.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_62.setFrameShape(QFrame.HLine)
+        self.line_62.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.line_62)
+
+        self.MultipleImaging_FluoNoise_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_FluoNoise_frame.setObjectName(u"MultipleImaging_FluoNoise_frame")
+        self.MultipleImaging_FluoNoise_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_159 = QVBoxLayout(self.MultipleImaging_FluoNoise_frame)
+        self.verticalLayout_159.setSpacing(0)
+        self.verticalLayout_159.setObjectName(u"verticalLayout_159")
+        self.verticalLayout_159.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_FluoNoise_Title_frame = QFrame(self.MultipleImaging_FluoNoise_frame)
+        self.MultipleImaging_FluoNoise_Title_frame.setObjectName(u"MultipleImaging_FluoNoise_Title_frame")
+        self.MultipleImaging_FluoNoise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_358 = QHBoxLayout(self.MultipleImaging_FluoNoise_Title_frame)
+        self.horizontalLayout_358.setSpacing(0)
+        self.horizontalLayout_358.setObjectName(u"horizontalLayout_358")
+        self.horizontalLayout_358.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoNoise_Toggle_frame = QFrame(self.MultipleImaging_FluoNoise_Title_frame)
+        self.MultipleImaging_FluoNoise_Toggle_frame.setObjectName(u"MultipleImaging_FluoNoise_Toggle_frame")
+        self.MultipleImaging_FluoNoise_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_FluoNoise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_FluoNoise_Toggle_layout = QHBoxLayout(self.MultipleImaging_FluoNoise_Toggle_frame)
+        self.MultipleImaging_FluoNoise_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_FluoNoise_Toggle_layout.setObjectName(u"MultipleImaging_FluoNoise_Toggle_layout")
+        self.MultipleImaging_FluoNoise_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_358.addWidget(self.MultipleImaging_FluoNoise_Toggle_frame)
+
+        self.MultipleImaging_FluoNoise_Label_frame = QFrame(self.MultipleImaging_FluoNoise_Title_frame)
+        self.MultipleImaging_FluoNoise_Label_frame.setObjectName(u"MultipleImaging_FluoNoise_Label_frame")
+        self.MultipleImaging_FluoNoise_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_359 = QHBoxLayout(self.MultipleImaging_FluoNoise_Label_frame)
+        self.horizontalLayout_359.setSpacing(0)
+        self.horizontalLayout_359.setObjectName(u"horizontalLayout_359")
+        self.horizontalLayout_359.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoNoise_Label = QLabel(self.MultipleImaging_FluoNoise_Label_frame)
+        self.MultipleImaging_FluoNoise_Label.setObjectName(u"MultipleImaging_FluoNoise_Label")
+
+        self.horizontalLayout_359.addWidget(self.MultipleImaging_FluoNoise_Label)
+
+
+        self.horizontalLayout_358.addWidget(self.MultipleImaging_FluoNoise_Label_frame)
+
+
+        self.verticalLayout_159.addWidget(self.MultipleImaging_FluoNoise_Title_frame)
+
+        self.MultipleImaging_FluoNoise_Readings_frame = QFrame(self.MultipleImaging_FluoNoise_frame)
+        self.MultipleImaging_FluoNoise_Readings_frame.setObjectName(u"MultipleImaging_FluoNoise_Readings_frame")
+        self.MultipleImaging_FluoNoise_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_360 = QHBoxLayout(self.MultipleImaging_FluoNoise_Readings_frame)
+        self.horizontalLayout_360.setSpacing(0)
+        self.horizontalLayout_360.setObjectName(u"horizontalLayout_360")
+        self.horizontalLayout_360.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoNoise_Readings = QLabel(self.MultipleImaging_FluoNoise_Readings_frame)
+        self.MultipleImaging_FluoNoise_Readings.setObjectName(u"MultipleImaging_FluoNoise_Readings")
+        self.MultipleImaging_FluoNoise_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_360.addWidget(self.MultipleImaging_FluoNoise_Readings)
+
+
+        self.verticalLayout_159.addWidget(self.MultipleImaging_FluoNoise_Readings_frame)
+
+        self.MultipleImaging_FluoNoise_Slider_frame = QFrame(self.MultipleImaging_FluoNoise_frame)
+        self.MultipleImaging_FluoNoise_Slider_frame.setObjectName(u"MultipleImaging_FluoNoise_Slider_frame")
+        self.MultipleImaging_FluoNoise_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_361 = QHBoxLayout(self.MultipleImaging_FluoNoise_Slider_frame)
+        self.horizontalLayout_361.setSpacing(0)
+        self.horizontalLayout_361.setObjectName(u"horizontalLayout_361")
+        self.horizontalLayout_361.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoNoise_Slider = QSlider(self.MultipleImaging_FluoNoise_Slider_frame)
+        self.MultipleImaging_FluoNoise_Slider.setObjectName(u"MultipleImaging_FluoNoise_Slider")
+        self.MultipleImaging_FluoNoise_Slider.setEnabled(False)
+        self.MultipleImaging_FluoNoise_Slider.setMinimum(0)
+        self.MultipleImaging_FluoNoise_Slider.setMaximum(100)
+        self.MultipleImaging_FluoNoise_Slider.setValue(10)
+        self.MultipleImaging_FluoNoise_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_FluoNoise_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_FluoNoise_Slider.setTickInterval(10)
+
+        self.horizontalLayout_361.addWidget(self.MultipleImaging_FluoNoise_Slider)
+
+
+        self.verticalLayout_159.addWidget(self.MultipleImaging_FluoNoise_Slider_frame)
+
+        self.MultipleImaging_FluoNoise_Values_frame = QFrame(self.MultipleImaging_FluoNoise_frame)
+        self.MultipleImaging_FluoNoise_Values_frame.setObjectName(u"MultipleImaging_FluoNoise_Values_frame")
+        self.MultipleImaging_FluoNoise_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoNoise_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_362 = QHBoxLayout(self.MultipleImaging_FluoNoise_Values_frame)
+        self.horizontalLayout_362.setSpacing(0)
+        self.horizontalLayout_362.setObjectName(u"horizontalLayout_362")
+        self.horizontalLayout_362.setContentsMargins(0, 0, 0, 0)
+        self.label_85 = QLabel(self.MultipleImaging_FluoNoise_Values_frame)
+        self.label_85.setObjectName(u"label_85")
+
+        self.horizontalLayout_362.addWidget(self.label_85)
+
+        self.label_86 = QLabel(self.MultipleImaging_FluoNoise_Values_frame)
+        self.label_86.setObjectName(u"label_86")
+        self.label_86.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_362.addWidget(self.label_86)
+
+        self.label_87 = QLabel(self.MultipleImaging_FluoNoise_Values_frame)
+        self.label_87.setObjectName(u"label_87")
+        self.label_87.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_362.addWidget(self.label_87)
+
+
+        self.verticalLayout_159.addWidget(self.MultipleImaging_FluoNoise_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_FluoNoise_frame)
+
+        self.line_63 = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.line_63.setObjectName(u"line_63")
+        self.line_63.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_63.setFrameShape(QFrame.HLine)
+        self.line_63.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.line_63)
+
+        self.MultipleImaging_FluoSat_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_FluoSat_frame.setObjectName(u"MultipleImaging_FluoSat_frame")
+        self.MultipleImaging_FluoSat_frame.setMaximumSize(QSize(16777215, 25))
+        self.MultipleImaging_FluoSat_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoSat_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_160 = QVBoxLayout(self.MultipleImaging_FluoSat_frame)
+        self.verticalLayout_160.setSpacing(0)
+        self.verticalLayout_160.setObjectName(u"verticalLayout_160")
+        self.verticalLayout_160.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_FluoSat_Title_frame = QFrame(self.MultipleImaging_FluoSat_frame)
+        self.MultipleImaging_FluoSat_Title_frame.setObjectName(u"MultipleImaging_FluoSat_Title_frame")
+        self.MultipleImaging_FluoSat_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoSat_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_363 = QHBoxLayout(self.MultipleImaging_FluoSat_Title_frame)
+        self.horizontalLayout_363.setSpacing(0)
+        self.horizontalLayout_363.setObjectName(u"horizontalLayout_363")
+        self.horizontalLayout_363.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoSat_Toggle_frame = QFrame(self.MultipleImaging_FluoSat_Title_frame)
+        self.MultipleImaging_FluoSat_Toggle_frame.setObjectName(u"MultipleImaging_FluoSat_Toggle_frame")
+        self.MultipleImaging_FluoSat_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_FluoSat_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoSat_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_Saturation_Toggle_layout = QHBoxLayout(self.MultipleImaging_FluoSat_Toggle_frame)
+        self.MultipleImaging_Saturation_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_Saturation_Toggle_layout.setObjectName(u"MultipleImaging_Saturation_Toggle_layout")
+        self.MultipleImaging_Saturation_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_363.addWidget(self.MultipleImaging_FluoSat_Toggle_frame)
+
+        self.MultipleImaging_FluoSat_Label_frame = QFrame(self.MultipleImaging_FluoSat_Title_frame)
+        self.MultipleImaging_FluoSat_Label_frame.setObjectName(u"MultipleImaging_FluoSat_Label_frame")
+        self.MultipleImaging_FluoSat_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_FluoSat_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_364 = QHBoxLayout(self.MultipleImaging_FluoSat_Label_frame)
+        self.horizontalLayout_364.setSpacing(0)
+        self.horizontalLayout_364.setObjectName(u"horizontalLayout_364")
+        self.horizontalLayout_364.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_FluoSat_Label = QLabel(self.MultipleImaging_FluoSat_Label_frame)
+        self.MultipleImaging_FluoSat_Label.setObjectName(u"MultipleImaging_FluoSat_Label")
+        self.MultipleImaging_FluoSat_Label.setFont(font4)
+        self.MultipleImaging_FluoSat_Label.setWordWrap(True)
+
+        self.horizontalLayout_364.addWidget(self.MultipleImaging_FluoSat_Label)
+
+
+        self.horizontalLayout_363.addWidget(self.MultipleImaging_FluoSat_Label_frame)
+
+
+        self.verticalLayout_160.addWidget(self.MultipleImaging_FluoSat_Title_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_FluoSat_frame)
+
+        self.line_64 = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.line_64.setObjectName(u"line_64")
+        self.line_64.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_64.setFrameShape(QFrame.HLine)
+        self.line_64.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.line_64)
+
+        self.MultipleImaging_kd_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_kd_frame.setObjectName(u"MultipleImaging_kd_frame")
+        self.MultipleImaging_kd_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.MultipleImaging_kd_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_161 = QVBoxLayout(self.MultipleImaging_kd_frame)
+        self.verticalLayout_161.setSpacing(0)
+        self.verticalLayout_161.setObjectName(u"verticalLayout_161")
+        self.verticalLayout_161.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_kd_Title_frame = QFrame(self.MultipleImaging_kd_frame)
+        self.MultipleImaging_kd_Title_frame.setObjectName(u"MultipleImaging_kd_Title_frame")
+        self.MultipleImaging_kd_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_365 = QHBoxLayout(self.MultipleImaging_kd_Title_frame)
+        self.horizontalLayout_365.setSpacing(0)
+        self.horizontalLayout_365.setObjectName(u"horizontalLayout_365")
+        self.horizontalLayout_365.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_kd_Toggle_frame = QFrame(self.MultipleImaging_kd_Title_frame)
+        self.MultipleImaging_kd_Toggle_frame.setObjectName(u"MultipleImaging_kd_Toggle_frame")
+        self.MultipleImaging_kd_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_kd_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_kd_Toggle_layout = QHBoxLayout(self.MultipleImaging_kd_Toggle_frame)
+        self.MultipleImaging_kd_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_kd_Toggle_layout.setObjectName(u"MultipleImaging_kd_Toggle_layout")
+        self.MultipleImaging_kd_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_365.addWidget(self.MultipleImaging_kd_Toggle_frame)
+
+        self.MultipleImaging_kd_Label_frame = QFrame(self.MultipleImaging_kd_Title_frame)
+        self.MultipleImaging_kd_Label_frame.setObjectName(u"MultipleImaging_kd_Label_frame")
+        self.MultipleImaging_kd_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_366 = QHBoxLayout(self.MultipleImaging_kd_Label_frame)
+        self.horizontalLayout_366.setSpacing(0)
+        self.horizontalLayout_366.setObjectName(u"horizontalLayout_366")
+        self.horizontalLayout_366.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_kd_Label = QLabel(self.MultipleImaging_kd_Label_frame)
+        self.MultipleImaging_kd_Label.setObjectName(u"MultipleImaging_kd_Label")
+        self.MultipleImaging_kd_Label.setWordWrap(True)
+
+        self.horizontalLayout_366.addWidget(self.MultipleImaging_kd_Label)
+
+
+        self.horizontalLayout_365.addWidget(self.MultipleImaging_kd_Label_frame)
+
+
+        self.verticalLayout_161.addWidget(self.MultipleImaging_kd_Title_frame)
+
+        self.MultipleImaging_kd_Readings_frame = QFrame(self.MultipleImaging_kd_frame)
+        self.MultipleImaging_kd_Readings_frame.setObjectName(u"MultipleImaging_kd_Readings_frame")
+        self.MultipleImaging_kd_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_367 = QHBoxLayout(self.MultipleImaging_kd_Readings_frame)
+        self.horizontalLayout_367.setSpacing(0)
+        self.horizontalLayout_367.setObjectName(u"horizontalLayout_367")
+        self.horizontalLayout_367.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_kd_Readings = QLabel(self.MultipleImaging_kd_Readings_frame)
+        self.MultipleImaging_kd_Readings.setObjectName(u"MultipleImaging_kd_Readings")
+        self.MultipleImaging_kd_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_367.addWidget(self.MultipleImaging_kd_Readings)
+
+
+        self.verticalLayout_161.addWidget(self.MultipleImaging_kd_Readings_frame)
+
+        self.MultipleImaging_kd_Slider_frame = QFrame(self.MultipleImaging_kd_frame)
+        self.MultipleImaging_kd_Slider_frame.setObjectName(u"MultipleImaging_kd_Slider_frame")
+        self.MultipleImaging_kd_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_368 = QHBoxLayout(self.MultipleImaging_kd_Slider_frame)
+        self.horizontalLayout_368.setSpacing(0)
+        self.horizontalLayout_368.setObjectName(u"horizontalLayout_368")
+        self.horizontalLayout_368.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_kd_Slider = QSlider(self.MultipleImaging_kd_Slider_frame)
+        self.MultipleImaging_kd_Slider.setObjectName(u"MultipleImaging_kd_Slider")
+        self.MultipleImaging_kd_Slider.setEnabled(False)
+        self.MultipleImaging_kd_Slider.setMinimum(1)
+        self.MultipleImaging_kd_Slider.setMaximum(100)
+        self.MultipleImaging_kd_Slider.setValue(25)
+        self.MultipleImaging_kd_Slider.setSliderPosition(25)
+        self.MultipleImaging_kd_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_kd_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_kd_Slider.setTickInterval(10)
+
+        self.horizontalLayout_368.addWidget(self.MultipleImaging_kd_Slider)
+
+
+        self.verticalLayout_161.addWidget(self.MultipleImaging_kd_Slider_frame)
+
+        self.MultipleImaging_kd_Values_frame = QFrame(self.MultipleImaging_kd_frame)
+        self.MultipleImaging_kd_Values_frame.setObjectName(u"MultipleImaging_kd_Values_frame")
+        self.MultipleImaging_kd_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_kd_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_369 = QHBoxLayout(self.MultipleImaging_kd_Values_frame)
+        self.horizontalLayout_369.setSpacing(0)
+        self.horizontalLayout_369.setObjectName(u"horizontalLayout_369")
+        self.horizontalLayout_369.setContentsMargins(0, 0, 0, 0)
+        self.label_88 = QLabel(self.MultipleImaging_kd_Values_frame)
+        self.label_88.setObjectName(u"label_88")
+
+        self.horizontalLayout_369.addWidget(self.label_88)
+
+        self.label_89 = QLabel(self.MultipleImaging_kd_Values_frame)
+        self.label_89.setObjectName(u"label_89")
+        self.label_89.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_369.addWidget(self.label_89)
+
+        self.label_90 = QLabel(self.MultipleImaging_kd_Values_frame)
+        self.label_90.setObjectName(u"label_90")
+        self.label_90.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_369.addWidget(self.label_90)
+
+
+        self.verticalLayout_161.addWidget(self.MultipleImaging_kd_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_kd_frame)
+
+        self.MultipleImaging_Saturation_Line = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_Saturation_Line.setObjectName(u"MultipleImaging_Saturation_Line")
+        self.MultipleImaging_Saturation_Line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.MultipleImaging_Saturation_Line.setFrameShape(QFrame.HLine)
+        self.MultipleImaging_Saturation_Line.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_Saturation_Line)
+
+        self.MultipleImaging_Hill_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_Hill_frame.setObjectName(u"MultipleImaging_Hill_frame")
+        self.MultipleImaging_Hill_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.MultipleImaging_Hill_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_162 = QVBoxLayout(self.MultipleImaging_Hill_frame)
+        self.verticalLayout_162.setSpacing(0)
+        self.verticalLayout_162.setObjectName(u"verticalLayout_162")
+        self.verticalLayout_162.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_Hill_Title_frame = QFrame(self.MultipleImaging_Hill_frame)
+        self.MultipleImaging_Hill_Title_frame.setObjectName(u"MultipleImaging_Hill_Title_frame")
+        self.MultipleImaging_Hill_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_370 = QHBoxLayout(self.MultipleImaging_Hill_Title_frame)
+        self.horizontalLayout_370.setSpacing(0)
+        self.horizontalLayout_370.setObjectName(u"horizontalLayout_370")
+        self.horizontalLayout_370.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Hill_Toggle_frame = QFrame(self.MultipleImaging_Hill_Title_frame)
+        self.MultipleImaging_Hill_Toggle_frame.setObjectName(u"MultipleImaging_Hill_Toggle_frame")
+        self.MultipleImaging_Hill_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.MultipleImaging_Hill_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_Hill_Toggle_layout = QHBoxLayout(self.MultipleImaging_Hill_Toggle_frame)
+        self.MultipleImaging_Hill_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_Hill_Toggle_layout.setObjectName(u"MultipleImaging_Hill_Toggle_layout")
+        self.MultipleImaging_Hill_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_370.addWidget(self.MultipleImaging_Hill_Toggle_frame)
+
+        self.MultipleImaging_Hill_Label_frame = QFrame(self.MultipleImaging_Hill_Title_frame)
+        self.MultipleImaging_Hill_Label_frame.setObjectName(u"MultipleImaging_Hill_Label_frame")
+        self.MultipleImaging_Hill_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_371 = QHBoxLayout(self.MultipleImaging_Hill_Label_frame)
+        self.horizontalLayout_371.setSpacing(0)
+        self.horizontalLayout_371.setObjectName(u"horizontalLayout_371")
+        self.horizontalLayout_371.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Hill_Label = QLabel(self.MultipleImaging_Hill_Label_frame)
+        self.MultipleImaging_Hill_Label.setObjectName(u"MultipleImaging_Hill_Label")
+
+        self.horizontalLayout_371.addWidget(self.MultipleImaging_Hill_Label)
+
+
+        self.horizontalLayout_370.addWidget(self.MultipleImaging_Hill_Label_frame)
+
+
+        self.verticalLayout_162.addWidget(self.MultipleImaging_Hill_Title_frame)
+
+        self.MultipleImaging_Hill_Readings_frame = QFrame(self.MultipleImaging_Hill_frame)
+        self.MultipleImaging_Hill_Readings_frame.setObjectName(u"MultipleImaging_Hill_Readings_frame")
+        self.MultipleImaging_Hill_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_372 = QHBoxLayout(self.MultipleImaging_Hill_Readings_frame)
+        self.horizontalLayout_372.setSpacing(0)
+        self.horizontalLayout_372.setObjectName(u"horizontalLayout_372")
+        self.horizontalLayout_372.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Hill_Readings = QLabel(self.MultipleImaging_Hill_Readings_frame)
+        self.MultipleImaging_Hill_Readings.setObjectName(u"MultipleImaging_Hill_Readings")
+        self.MultipleImaging_Hill_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_372.addWidget(self.MultipleImaging_Hill_Readings)
+
+
+        self.verticalLayout_162.addWidget(self.MultipleImaging_Hill_Readings_frame)
+
+        self.MultipleImaging_Hill_Slider_frame = QFrame(self.MultipleImaging_Hill_frame)
+        self.MultipleImaging_Hill_Slider_frame.setObjectName(u"MultipleImaging_Hill_Slider_frame")
+        self.MultipleImaging_Hill_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_373 = QHBoxLayout(self.MultipleImaging_Hill_Slider_frame)
+        self.horizontalLayout_373.setSpacing(0)
+        self.horizontalLayout_373.setObjectName(u"horizontalLayout_373")
+        self.horizontalLayout_373.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_Hill_Slider = QSlider(self.MultipleImaging_Hill_Slider_frame)
+        self.MultipleImaging_Hill_Slider.setObjectName(u"MultipleImaging_Hill_Slider")
+        self.MultipleImaging_Hill_Slider.setEnabled(False)
+        self.MultipleImaging_Hill_Slider.setMinimum(50)
+        self.MultipleImaging_Hill_Slider.setMaximum(100)
+        self.MultipleImaging_Hill_Slider.setValue(100)
+        self.MultipleImaging_Hill_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_Hill_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_Hill_Slider.setTickInterval(5)
+
+        self.horizontalLayout_373.addWidget(self.MultipleImaging_Hill_Slider)
+
+
+        self.verticalLayout_162.addWidget(self.MultipleImaging_Hill_Slider_frame)
+
+        self.MultipleImaging_Hill_Values_frame = QFrame(self.MultipleImaging_Hill_frame)
+        self.MultipleImaging_Hill_Values_frame.setObjectName(u"MultipleImaging_Hill_Values_frame")
+        self.MultipleImaging_Hill_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_Hill_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_374 = QHBoxLayout(self.MultipleImaging_Hill_Values_frame)
+        self.horizontalLayout_374.setSpacing(0)
+        self.horizontalLayout_374.setObjectName(u"horizontalLayout_374")
+        self.horizontalLayout_374.setContentsMargins(0, 0, 0, 0)
+        self.label_91 = QLabel(self.MultipleImaging_Hill_Values_frame)
+        self.label_91.setObjectName(u"label_91")
+
+        self.horizontalLayout_374.addWidget(self.label_91)
+
+        self.label_92 = QLabel(self.MultipleImaging_Hill_Values_frame)
+        self.label_92.setObjectName(u"label_92")
+        self.label_92.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_374.addWidget(self.label_92)
+
+        self.label_93 = QLabel(self.MultipleImaging_Hill_Values_frame)
+        self.label_93.setObjectName(u"label_93")
+        self.label_93.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_374.addWidget(self.label_93)
+
+
+        self.verticalLayout_162.addWidget(self.MultipleImaging_Hill_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_Hill_frame)
+
+        self.MultipleImaging_Saturation_Line2 = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_Saturation_Line2.setObjectName(u"MultipleImaging_Saturation_Line2")
+        self.MultipleImaging_Saturation_Line2.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.MultipleImaging_Saturation_Line2.setFrameShape(QFrame.HLine)
+        self.MultipleImaging_Saturation_Line2.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_Saturation_Line2)
+
+        self.MultipleImaging_PhotoShotNoise_frame = QFrame(self.MultipleImaging_FluoParameter_page)
+        self.MultipleImaging_PhotoShotNoise_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_frame")
+        self.MultipleImaging_PhotoShotNoise_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.MultipleImaging_PhotoShotNoise_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_89 = QVBoxLayout(self.MultipleImaging_PhotoShotNoise_frame)
+        self.verticalLayout_89.setSpacing(0)
+        self.verticalLayout_89.setObjectName(u"verticalLayout_89")
+        self.verticalLayout_89.setContentsMargins(5, 0, 5, 0)
+        self.MultipleImaging_PhotoShotNoise_Title_frame = QFrame(self.MultipleImaging_PhotoShotNoise_frame)
+        self.MultipleImaging_PhotoShotNoise_Title_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Title_frame")
+        self.MultipleImaging_PhotoShotNoise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_375 = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Title_frame)
+        self.horizontalLayout_375.setSpacing(0)
+        self.horizontalLayout_375.setObjectName(u"horizontalLayout_375")
+        self.horizontalLayout_375.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PhotoShotNoise_Toggle_frame = QFrame(self.MultipleImaging_PhotoShotNoise_Title_frame)
+        self.MultipleImaging_PhotoShotNoise_Toggle_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Toggle_frame")
+        self.MultipleImaging_PhotoShotNoise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.MultipleImaging_PhotoShotNoise_Toggle_layout = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Toggle_frame)
+        self.MultipleImaging_PhotoShotNoise_Toggle_layout.setSpacing(0)
+        self.MultipleImaging_PhotoShotNoise_Toggle_layout.setObjectName(u"MultipleImaging_PhotoShotNoise_Toggle_layout")
+        self.MultipleImaging_PhotoShotNoise_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_375.addWidget(self.MultipleImaging_PhotoShotNoise_Toggle_frame)
+
+        self.MultipleImaging_PhotoShotNoise_Label_frame = QFrame(self.MultipleImaging_PhotoShotNoise_Title_frame)
+        self.MultipleImaging_PhotoShotNoise_Label_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Label_frame")
+        self.MultipleImaging_PhotoShotNoise_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_376 = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Label_frame)
+        self.horizontalLayout_376.setSpacing(0)
+        self.horizontalLayout_376.setObjectName(u"horizontalLayout_376")
+        self.horizontalLayout_376.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PhotoShotNoise_Label = QLabel(self.MultipleImaging_PhotoShotNoise_Label_frame)
+        self.MultipleImaging_PhotoShotNoise_Label.setObjectName(u"MultipleImaging_PhotoShotNoise_Label")
+        self.MultipleImaging_PhotoShotNoise_Label.setWordWrap(True)
+
+        self.horizontalLayout_376.addWidget(self.MultipleImaging_PhotoShotNoise_Label)
+
+
+        self.horizontalLayout_375.addWidget(self.MultipleImaging_PhotoShotNoise_Label_frame)
+
+
+        self.verticalLayout_89.addWidget(self.MultipleImaging_PhotoShotNoise_Title_frame)
+
+        self.MultipleImaging_PhotoShotNoise_Readings_frame = QFrame(self.MultipleImaging_PhotoShotNoise_frame)
+        self.MultipleImaging_PhotoShotNoise_Readings_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Readings_frame")
+        self.MultipleImaging_PhotoShotNoise_Readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_377 = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Readings_frame)
+        self.horizontalLayout_377.setSpacing(0)
+        self.horizontalLayout_377.setObjectName(u"horizontalLayout_377")
+        self.horizontalLayout_377.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PhotoShotNoise_Readings = QLabel(self.MultipleImaging_PhotoShotNoise_Readings_frame)
+        self.MultipleImaging_PhotoShotNoise_Readings.setObjectName(u"MultipleImaging_PhotoShotNoise_Readings")
+        self.MultipleImaging_PhotoShotNoise_Readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_377.addWidget(self.MultipleImaging_PhotoShotNoise_Readings)
+
+
+        self.verticalLayout_89.addWidget(self.MultipleImaging_PhotoShotNoise_Readings_frame)
+
+        self.MultipleImaging_PhotoShotNoise_Slider_frame = QFrame(self.MultipleImaging_PhotoShotNoise_frame)
+        self.MultipleImaging_PhotoShotNoise_Slider_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Slider_frame")
+        self.MultipleImaging_PhotoShotNoise_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_378 = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Slider_frame)
+        self.horizontalLayout_378.setSpacing(0)
+        self.horizontalLayout_378.setObjectName(u"horizontalLayout_378")
+        self.horizontalLayout_378.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_PhotoShotNoise_Slider = QSlider(self.MultipleImaging_PhotoShotNoise_Slider_frame)
+        self.MultipleImaging_PhotoShotNoise_Slider.setObjectName(u"MultipleImaging_PhotoShotNoise_Slider")
+        self.MultipleImaging_PhotoShotNoise_Slider.setEnabled(False)
+        self.MultipleImaging_PhotoShotNoise_Slider.setMinimum(1)
+        self.MultipleImaging_PhotoShotNoise_Slider.setMaximum(1000)
+        self.MultipleImaging_PhotoShotNoise_Slider.setPageStep(10)
+        self.MultipleImaging_PhotoShotNoise_Slider.setValue(400)
+        self.MultipleImaging_PhotoShotNoise_Slider.setOrientation(Qt.Horizontal)
+        self.MultipleImaging_PhotoShotNoise_Slider.setTickPosition(QSlider.TicksBelow)
+        self.MultipleImaging_PhotoShotNoise_Slider.setTickInterval(100)
+
+        self.horizontalLayout_378.addWidget(self.MultipleImaging_PhotoShotNoise_Slider)
+
+
+        self.verticalLayout_89.addWidget(self.MultipleImaging_PhotoShotNoise_Slider_frame)
+
+        self.MultipleImaging_PhotoShotNoise_Values_frame = QFrame(self.MultipleImaging_PhotoShotNoise_frame)
+        self.MultipleImaging_PhotoShotNoise_Values_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Values_frame")
+        self.MultipleImaging_PhotoShotNoise_Values_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_PhotoShotNoise_Values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_379 = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Values_frame)
+        self.horizontalLayout_379.setSpacing(0)
+        self.horizontalLayout_379.setObjectName(u"horizontalLayout_379")
+        self.horizontalLayout_379.setContentsMargins(0, 0, 0, 0)
+        self.label_94 = QLabel(self.MultipleImaging_PhotoShotNoise_Values_frame)
+        self.label_94.setObjectName(u"label_94")
+
+        self.horizontalLayout_379.addWidget(self.label_94)
+
+        self.label_95 = QLabel(self.MultipleImaging_PhotoShotNoise_Values_frame)
+        self.label_95.setObjectName(u"label_95")
+        self.label_95.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_379.addWidget(self.label_95)
+
+        self.label_96 = QLabel(self.MultipleImaging_PhotoShotNoise_Values_frame)
+        self.label_96.setObjectName(u"label_96")
+        self.label_96.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_379.addWidget(self.label_96)
+
+
+        self.verticalLayout_89.addWidget(self.MultipleImaging_PhotoShotNoise_Values_frame)
+
+
+        self.verticalLayout_156.addWidget(self.MultipleImaging_PhotoShotNoise_frame)
+
+        self.MultipleImaging_parameter_stackedWidget.addWidget(self.MultipleImaging_FluoParameter_page)
+
+        self.verticalLayout_86.addWidget(self.MultipleImaging_parameter_stackedWidget)
+
+
+        self.horizontalLayout_380.addWidget(self.MultipleImaging_CenterMenuContainer)
+
+        self.MultipleImaging_rightMenuContainer = QFrame(self.page_202)
+        self.MultipleImaging_rightMenuContainer.setObjectName(u"MultipleImaging_rightMenuContainer")
+        self.MultipleImaging_rightMenuContainer.setMaximumSize(QSize(40, 16777215))
+        self.MultipleImaging_rightMenuContainer.setLayoutDirection(Qt.LeftToRight)
+        self.MultipleImaging_rightMenuContainer.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_rightMenuContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_85 = QVBoxLayout(self.MultipleImaging_rightMenuContainer)
+        self.verticalLayout_85.setSpacing(0)
+        self.verticalLayout_85.setObjectName(u"verticalLayout_85")
+        self.verticalLayout_85.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_rightMenuSubContainer = QFrame(self.MultipleImaging_rightMenuContainer)
+        self.MultipleImaging_rightMenuSubContainer.setObjectName(u"MultipleImaging_rightMenuSubContainer")
+        self.MultipleImaging_rightMenuSubContainer.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_rightMenuSubContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_96 = QVBoxLayout(self.MultipleImaging_rightMenuSubContainer)
+        self.verticalLayout_96.setSpacing(50)
+        self.verticalLayout_96.setObjectName(u"verticalLayout_96")
+        self.verticalLayout_96.setContentsMargins(0, 0, 5, 0)
+        self.MultipleImaging_rightMenuSubContainer_frame = QFrame(self.MultipleImaging_rightMenuSubContainer)
+        self.MultipleImaging_rightMenuSubContainer_frame.setObjectName(u"MultipleImaging_rightMenuSubContainer_frame")
+        self.MultipleImaging_rightMenuSubContainer_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_rightMenuSubContainer_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_155 = QHBoxLayout(self.MultipleImaging_rightMenuSubContainer_frame)
+        self.horizontalLayout_155.setSpacing(0)
+        self.horizontalLayout_155.setObjectName(u"horizontalLayout_155")
+        self.horizontalLayout_155.setContentsMargins(0, 20, 0, 0)
+        self.MultipleImaging_rightMenuSubContainer_pushButton = QPushButton(self.MultipleImaging_rightMenuSubContainer_frame)
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setObjectName(u"MultipleImaging_rightMenuSubContainer_pushButton")
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setMinimumSize(QSize(0, 0))
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setFont(font1)
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setStyleSheet(u"")
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setIcon(icon19)
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_155.addWidget(self.MultipleImaging_rightMenuSubContainer_pushButton)
+
+
+        self.verticalLayout_96.addWidget(self.MultipleImaging_rightMenuSubContainer_frame, 0, Qt.AlignTop)
+
+        self.MultipleImaging_rightMenuParameterContainer_frame = QFrame(self.MultipleImaging_rightMenuSubContainer)
+        self.MultipleImaging_rightMenuParameterContainer_frame.setObjectName(u"MultipleImaging_rightMenuParameterContainer_frame")
+        self.MultipleImaging_rightMenuParameterContainer_frame.setLayoutDirection(Qt.LeftToRight)
+        self.MultipleImaging_rightMenuParameterContainer_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_rightMenuParameterContainer_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_97 = QVBoxLayout(self.MultipleImaging_rightMenuParameterContainer_frame)
+        self.verticalLayout_97.setSpacing(50)
+        self.verticalLayout_97.setObjectName(u"verticalLayout_97")
+        self.verticalLayout_97.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_ImagingParameter_pushButton = QPushButton(self.MultipleImaging_rightMenuParameterContainer_frame)
+        self.MultipleImaging_ImagingParameter_pushButton.setObjectName(u"MultipleImaging_ImagingParameter_pushButton")
+        self.MultipleImaging_ImagingParameter_pushButton.setFont(font1)
+        self.MultipleImaging_ImagingParameter_pushButton.setIcon(icon6)
+        self.MultipleImaging_ImagingParameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_97.addWidget(self.MultipleImaging_ImagingParameter_pushButton)
+
+        self.MultipleImaging_CalciumParameter_pushButton = QPushButton(self.MultipleImaging_rightMenuParameterContainer_frame)
+        self.MultipleImaging_CalciumParameter_pushButton.setObjectName(u"MultipleImaging_CalciumParameter_pushButton")
+        self.MultipleImaging_CalciumParameter_pushButton.setFont(font1)
+        self.MultipleImaging_CalciumParameter_pushButton.setIcon(icon20)
+        self.MultipleImaging_CalciumParameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_97.addWidget(self.MultipleImaging_CalciumParameter_pushButton)
+
+        self.MultipleImaging_FluoParameter_pushButton = QPushButton(self.MultipleImaging_rightMenuParameterContainer_frame)
+        self.MultipleImaging_FluoParameter_pushButton.setObjectName(u"MultipleImaging_FluoParameter_pushButton")
+        self.MultipleImaging_FluoParameter_pushButton.setFont(font1)
+        self.MultipleImaging_FluoParameter_pushButton.setIcon(icon16)
+        self.MultipleImaging_FluoParameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_97.addWidget(self.MultipleImaging_FluoParameter_pushButton)
+
+
+        self.verticalLayout_96.addWidget(self.MultipleImaging_rightMenuParameterContainer_frame)
+
+        self.frame_9 = QFrame(self.MultipleImaging_rightMenuSubContainer)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setFrameShape(QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_96.addWidget(self.frame_9)
+
+
+        self.verticalLayout_85.addWidget(self.MultipleImaging_rightMenuSubContainer)
+
+
+        self.horizontalLayout_380.addWidget(self.MultipleImaging_rightMenuContainer)
+
+        self.mainbody_stackedWidget.addWidget(self.page_202)
+        self.page_203 = QWidget()
+        self.page_203.setObjectName(u"page_203")
+        self.horizontalLayout_72 = QHBoxLayout(self.page_203)
         self.horizontalLayout_72.setSpacing(0)
         self.horizontalLayout_72.setObjectName(u"horizontalLayout_72")
         self.horizontalLayout_72.setContentsMargins(0, 0, 0, 0)
-        self.frame_45 = QFrame(self.page_202)
+        self.frame_45 = QFrame(self.page_203)
         self.frame_45.setObjectName(u"frame_45")
         self.frame_45.setFrameShape(QFrame.StyledPanel)
         self.frame_45.setFrameShadow(QFrame.Raised)
@@ -6686,14 +8951,14 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_72.addWidget(self.frame_45)
 
-        self.mainbody_stackedWidget.addWidget(self.page_202)
-        self.page_203 = QWidget()
-        self.page_203.setObjectName(u"page_203")
-        self.horizontalLayout_75 = QHBoxLayout(self.page_203)
+        self.mainbody_stackedWidget.addWidget(self.page_203)
+        self.page_204 = QWidget()
+        self.page_204.setObjectName(u"page_204")
+        self.horizontalLayout_75 = QHBoxLayout(self.page_204)
         self.horizontalLayout_75.setSpacing(0)
         self.horizontalLayout_75.setObjectName(u"horizontalLayout_75")
         self.horizontalLayout_75.setContentsMargins(0, 0, 0, 0)
-        self.frame_46 = QFrame(self.page_203)
+        self.frame_46 = QFrame(self.page_204)
         self.frame_46.setObjectName(u"frame_46")
         self.frame_46.setFrameShape(QFrame.StyledPanel)
         self.frame_46.setFrameShadow(QFrame.Raised)
@@ -6711,7 +8976,7 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_75.addWidget(self.frame_46)
 
-        self.mainbody_stackedWidget.addWidget(self.page_203)
+        self.mainbody_stackedWidget.addWidget(self.page_204)
         self.page_301 = QWidget()
         self.page_301.setObjectName(u"page_301")
         self.page_301.setStyleSheet(u"")
@@ -8591,22 +10856,22 @@ class Ui_MainWindow(QWidget):
         self.page_501.setObjectName(u"page_501")
         self.horizontalLayout_192 = QHBoxLayout(self.page_501)
         self.horizontalLayout_192.setObjectName(u"horizontalLayout_192")
-        self.Exercises_Main_frame = QFrame(self.page_501)
-        self.Exercises_Main_frame.setObjectName(u"Exercises_Main_frame")
-        self.Exercises_Main_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercises_Main_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_116 = QVBoxLayout(self.Exercises_Main_frame)
+        self.Exercise101_Main_frame = QFrame(self.page_501)
+        self.Exercise101_Main_frame.setObjectName(u"Exercise101_Main_frame")
+        self.Exercise101_Main_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercise101_Main_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_116 = QVBoxLayout(self.Exercise101_Main_frame)
         self.verticalLayout_116.setObjectName(u"verticalLayout_116")
-        self.Exercises_StackedWideget_frame = QFrame(self.Exercises_Main_frame)
-        self.Exercises_StackedWideget_frame.setObjectName(u"Exercises_StackedWideget_frame")
-        self.Exercises_StackedWideget_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercises_StackedWideget_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_159 = QHBoxLayout(self.Exercises_StackedWideget_frame)
+        self.Exercise101_StackedWideget_frame = QFrame(self.Exercise101_Main_frame)
+        self.Exercise101_StackedWideget_frame.setObjectName(u"Exercise101_StackedWideget_frame")
+        self.Exercise101_StackedWideget_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercise101_StackedWideget_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_159 = QHBoxLayout(self.Exercise101_StackedWideget_frame)
         self.horizontalLayout_159.setSpacing(0)
         self.horizontalLayout_159.setObjectName(u"horizontalLayout_159")
         self.horizontalLayout_159.setContentsMargins(0, 0, 0, 0)
-        self.Exercises_stackedWidget = QStackedWidget(self.Exercises_StackedWideget_frame)
-        self.Exercises_stackedWidget.setObjectName(u"Exercises_stackedWidget")
+        self.Exercise101_stackedWidget = QStackedWidget(self.Exercise101_StackedWideget_frame)
+        self.Exercise101_stackedWidget.setObjectName(u"Exercise101_stackedWidget")
         self.page501_01_01 = QWidget()
         self.page501_01_01.setObjectName(u"page501_01_01")
         self.verticalLayout_119 = QVBoxLayout(self.page501_01_01)
@@ -8663,7 +10928,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_119.addWidget(self.Vm_Intro_frame)
 
-        self.Exercises_stackedWidget.addWidget(self.page501_01_01)
+        self.Exercise101_stackedWidget.addWidget(self.page501_01_01)
         self.page501_01_02 = QWidget()
         self.page501_01_02.setObjectName(u"page501_01_02")
         self.verticalLayout_118 = QVBoxLayout(self.page501_01_02)
@@ -8724,7 +10989,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_118.addWidget(self.Vm_Task01_frame)
 
-        self.Exercises_stackedWidget.addWidget(self.page501_01_02)
+        self.Exercise101_stackedWidget.addWidget(self.page501_01_02)
         self.page501_01_03 = QWidget()
         self.page501_01_03.setObjectName(u"page501_01_03")
         self.verticalLayout_122 = QVBoxLayout(self.page501_01_03)
@@ -8778,7 +11043,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_122.addWidget(self.Vm_Task02_frame)
 
-        self.Exercises_stackedWidget.addWidget(self.page501_01_03)
+        self.Exercise101_stackedWidget.addWidget(self.page501_01_03)
         self.page501_01_04 = QWidget()
         self.page501_01_04.setObjectName(u"page501_01_04")
         self.verticalLayout_124 = QVBoxLayout(self.page501_01_04)
@@ -8833,61 +11098,60 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_124.addWidget(self.Vm_Task03_frame)
 
-        self.Exercises_stackedWidget.addWidget(self.page501_01_04)
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.Exercises_stackedWidget.addWidget(self.page)
+        self.Exercise101_stackedWidget.addWidget(self.page501_01_04)
 
-        self.horizontalLayout_159.addWidget(self.Exercises_stackedWidget)
+        self.horizontalLayout_159.addWidget(self.Exercise101_stackedWidget)
 
 
-        self.verticalLayout_116.addWidget(self.Exercises_StackedWideget_frame)
+        self.verticalLayout_116.addWidget(self.Exercise101_StackedWideget_frame)
 
-        self.Exercises_Button_frame = QFrame(self.Exercises_Main_frame)
-        self.Exercises_Button_frame.setObjectName(u"Exercises_Button_frame")
-        self.Exercises_Button_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercises_Button_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_191 = QHBoxLayout(self.Exercises_Button_frame)
+        self.Exercise101_Button_frame = QFrame(self.Exercise101_Main_frame)
+        self.Exercise101_Button_frame.setObjectName(u"Exercise101_Button_frame")
+        self.Exercise101_Button_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercise101_Button_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_191 = QHBoxLayout(self.Exercise101_Button_frame)
         self.horizontalLayout_191.setSpacing(0)
         self.horizontalLayout_191.setObjectName(u"horizontalLayout_191")
         self.horizontalLayout_191.setContentsMargins(0, 0, 0, 0)
-        self.Exercises_PreviousButton_frame = QFrame(self.Exercises_Button_frame)
-        self.Exercises_PreviousButton_frame.setObjectName(u"Exercises_PreviousButton_frame")
-        self.Exercises_PreviousButton_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercises_PreviousButton_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_190 = QHBoxLayout(self.Exercises_PreviousButton_frame)
+        self.Exercise101_PreviousButton_frame = QFrame(self.Exercise101_Button_frame)
+        self.Exercise101_PreviousButton_frame.setObjectName(u"Exercise101_PreviousButton_frame")
+        self.Exercise101_PreviousButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercise101_PreviousButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_190 = QHBoxLayout(self.Exercise101_PreviousButton_frame)
         self.horizontalLayout_190.setSpacing(0)
         self.horizontalLayout_190.setObjectName(u"horizontalLayout_190")
         self.horizontalLayout_190.setContentsMargins(0, 0, 0, 0)
-        self.Exercises_PreviousButton_pushButton = QPushButton(self.Exercises_PreviousButton_frame)
-        self.Exercises_PreviousButton_pushButton.setObjectName(u"Exercises_PreviousButton_pushButton")
+        self.Exercise101_PreviousButton_pushButton = QPushButton(self.Exercise101_PreviousButton_frame)
+        self.Exercise101_PreviousButton_pushButton.setObjectName(u"Exercise101_PreviousButton_pushButton")
+        self.Exercise101_PreviousButton_pushButton.setMaximumSize(QSize(200, 16777215))
 
-        self.horizontalLayout_190.addWidget(self.Exercises_PreviousButton_pushButton)
+        self.horizontalLayout_190.addWidget(self.Exercise101_PreviousButton_pushButton)
 
 
-        self.horizontalLayout_191.addWidget(self.Exercises_PreviousButton_frame)
+        self.horizontalLayout_191.addWidget(self.Exercise101_PreviousButton_frame)
 
-        self.Exercises_AfterButton_frame = QFrame(self.Exercises_Button_frame)
-        self.Exercises_AfterButton_frame.setObjectName(u"Exercises_AfterButton_frame")
-        self.Exercises_AfterButton_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercises_AfterButton_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_189 = QHBoxLayout(self.Exercises_AfterButton_frame)
+        self.Exercise101_AfterButton_frame = QFrame(self.Exercise101_Button_frame)
+        self.Exercise101_AfterButton_frame.setObjectName(u"Exercise101_AfterButton_frame")
+        self.Exercise101_AfterButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Exercise101_AfterButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_189 = QHBoxLayout(self.Exercise101_AfterButton_frame)
         self.horizontalLayout_189.setSpacing(0)
         self.horizontalLayout_189.setObjectName(u"horizontalLayout_189")
         self.horizontalLayout_189.setContentsMargins(0, 0, 0, 0)
-        self.Exercises_AfterButton_pushButton = QPushButton(self.Exercises_AfterButton_frame)
-        self.Exercises_AfterButton_pushButton.setObjectName(u"Exercises_AfterButton_pushButton")
+        self.Exercise101_AfterButton_pushButton = QPushButton(self.Exercise101_AfterButton_frame)
+        self.Exercise101_AfterButton_pushButton.setObjectName(u"Exercise101_AfterButton_pushButton")
+        self.Exercise101_AfterButton_pushButton.setMaximumSize(QSize(200, 16777215))
 
-        self.horizontalLayout_189.addWidget(self.Exercises_AfterButton_pushButton)
-
-
-        self.horizontalLayout_191.addWidget(self.Exercises_AfterButton_frame)
+        self.horizontalLayout_189.addWidget(self.Exercise101_AfterButton_pushButton)
 
 
-        self.verticalLayout_116.addWidget(self.Exercises_Button_frame)
+        self.horizontalLayout_191.addWidget(self.Exercise101_AfterButton_frame)
 
 
-        self.horizontalLayout_192.addWidget(self.Exercises_Main_frame)
+        self.verticalLayout_116.addWidget(self.Exercise101_Button_frame)
+
+
+        self.horizontalLayout_192.addWidget(self.Exercise101_Main_frame)
 
         self.mainbody_stackedWidget.addWidget(self.page_501)
         self.page_502 = QWidget()
@@ -9117,13 +11381,14 @@ class Ui_MainWindow(QWidget):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(5)
-        self.mainbody_stackedWidget.setCurrentIndex(4)
+        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
+        self.mainbody_stackedWidget.setCurrentIndex(10)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
-        self.Imaging_parameter_stackedWidget.setCurrentIndex(2)
+        self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
+        self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(2)
-        self.Exercises_stackedWidget.setCurrentIndex(3)
+        self.Exercise101_stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -9152,6 +11417,7 @@ class Ui_MainWindow(QWidget):
         self.NeuronDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
         self.Imaging_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Spikeling Imaging Stimulation", None))
         self.ImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Stimulation", None))
+        self.MultipleImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Multiple Imaging", None))
         self.ImagingTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.ImagingDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Stimulus Generator", None))
@@ -9429,6 +11695,112 @@ class Ui_MainWindow(QWidget):
         self.Imaging_ImagingParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Parameters", None))
         self.Imaging_CalciumParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Calcium Parameters", None))
         self.Imaging_FluoParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Parameters", None))
+        self.MultipleImaging_pushButton.setText(QCoreApplication.translate("MainWindow", u"Connect Multiple Imaging screen to Spikeling screen", None))
+        self.MultipleImaging_Fluorescence1_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Spikeling", None))
+        self.MultipleImaging_Fluorescence2_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Synapse1", None))
+        self.MultipleImaging_Fluorescence3_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Synapse2", None))
+#if QT_CONFIG(whatsthis)
+        self.MultipleImaging_Calcium1_Checkbox.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.MultipleImaging_Calcium1_Checkbox.setText(QCoreApplication.translate("MainWindow", u"[Ca\u00b2\u207a] Spikeling", None))
+        self.MultipleImaging_Calcium2_Checkbox.setText(QCoreApplication.translate("MainWindow", u"[Ca\u00b2\u207a] Synapse1", None))
+        self.MultipleImaging_Calcium3_Checkbox.setText(QCoreApplication.translate("MainWindow", u"[Ca\u00b2\u207a] Synapse2", None))
+        self.MultipleImaging_Vm1_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm Spikeling", None))
+        self.MultipleImaging_Vm3_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm Synapse1", None))
+        self.MultipleImaging_Vm2_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm Synapse2", None))
+        self.MultipleImaging_Stimulus_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.MultipleImaging_parameter_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Hide Parameters", None))
+        self.MultipleImaging_GECI_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium Indicator:", None))
+        self.MultipleImaging_GECI_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a GECI", None))
+        self.MultipleImaging_GECI_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"GCaMP2", None))
+        self.MultipleImaging_GECI_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"GCaMP6", None))
+        self.MultipleImaging_GECI_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"jRGECO", None))
+
+        self.MultipleImaging_GECI_ReadingsAffinity_Label.setText(QCoreApplication.translate("MainWindow", u"Affinity n:", None))
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setText("")
+        self.MultipleImaging_GECI_ReadingsKd_Label.setText(QCoreApplication.translate("MainWindow", u"Dissociation constant kd:", None))
+        self.MultipleImaging_GECI_ReadingsKd_Value.setText("")
+        self.MultipleImaging_GECI_ReadingsBrightness_Label.setText(QCoreApplication.translate("MainWindow", u"Brightness A:", None))
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setText("")
+        self.MultipleImaging_FrameRate_Label.setText(QCoreApplication.translate("MainWindow", u"Imaging frame rate (Hz)", None))
+        self.MultipleImaging_FrameRate_Readings.setText("")
+        self.label_58.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.label_59.setText(QCoreApplication.translate("MainWindow", u"500", None))
+        self.label_60.setText(QCoreApplication.translate("MainWindow", u"1000", None))
+        self.MultipleImaging_PMT_Label.setText(QCoreApplication.translate("MainWindow", u"Photo-detection gain (%)", None))
+        self.MultipleImaging_PMT_Readings.setText("")
+        self.label_61.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_62.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.label_63.setText(QCoreApplication.translate("MainWindow", u"200", None))
+        self.MultipleImaging_Laser_Label.setText(QCoreApplication.translate("MainWindow", u"Laser power (%)", None))
+        self.MultipleImaging_Laser_Readings.setText("")
+        self.label_64.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_65.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.label_66.setText(QCoreApplication.translate("MainWindow", u"200", None))
+        self.MultipleImaging_CalciumDecay_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium decay: \u03bb (ms\u05bf \u00b9) ", None))
+        self.MultipleImaging_CalciumDecay_Readings.setText("")
+#if QT_CONFIG(whatsthis)
+        self.label_67.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>10<span style=\" vertical-align:super;\">-4</span></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.label_67.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>10<span style=\" vertical-align:super;\">-4</span></p></body></html>", None))
+        self.label_68.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>10<span style=\" vertical-align:super;\">-3</span></p></body></html>", None))
+        self.label_69.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>2*10<span style=\" vertical-align:super;\">-4</span></p></body></html>", None))
+        self.MultipleImaging_CalciumJump_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium jump per spike (\u03bcM)", None))
+        self.MultipleImaging_CalciumJump_Readings.setText("")
+        self.label_70.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_71.setText(QCoreApplication.translate("MainWindow", u"25", None))
+        self.label_72.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.MultipleImaging_CalciumNoise_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium noise scale", None))
+        self.MultipleImaging_CalciumNoise_Readings.setText("")
+        self.label_73.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_74.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.label_75.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.MultipleImaging_CalciumBaseline_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium Baseline (\u03bcM)", None))
+        self.MultipleImaging_CalciumBaseline_Readings.setText("")
+        self.label_76.setText(QCoreApplication.translate("MainWindow", u"0.01", None))
+        self.label_77.setText(QCoreApplication.translate("MainWindow", u"0.25", None))
+        self.label_78.setText(QCoreApplication.translate("MainWindow", u"0.5", None))
+        self.MultipleImaging_FluoScale_Label.setText(QCoreApplication.translate("MainWindow", u"Fluorescence scale", None))
+        self.MultipleImaging_FluoScale_Readings.setText("")
+        self.label_79.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_80.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.label_81.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.Imaging_FluoOffset_Label_2.setText(QCoreApplication.translate("MainWindow", u"Fluorescence offset", None))
+        self.MultipleImaging_FluoOffset_Readings.setText("")
+        self.label_82.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_83.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.label_84.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.MultipleImaging_FluoNoise_Label.setText(QCoreApplication.translate("MainWindow", u"Noise scale", None))
+        self.MultipleImaging_FluoNoise_Readings.setText("")
+        self.label_85.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.label_86.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.label_87.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.MultipleImaging_FluoSat_Label.setText(QCoreApplication.translate("MainWindow", u"Non-linear Saturation", None))
+        self.MultipleImaging_kd_Label.setText(QCoreApplication.translate("MainWindow", u"Dissociation constant (\u03bcM)", None))
+        self.MultipleImaging_kd_Readings.setText("")
+        self.label_88.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.label_89.setText(QCoreApplication.translate("MainWindow", u"500", None))
+        self.label_90.setText(QCoreApplication.translate("MainWindow", u"1000", None))
+        self.MultipleImaging_Hill_Label.setText(QCoreApplication.translate("MainWindow", u"Affinity", None))
+        self.MultipleImaging_Hill_Readings.setText("")
+        self.label_91.setText(QCoreApplication.translate("MainWindow", u"0.5", None))
+        self.label_92.setText(QCoreApplication.translate("MainWindow", u"0.75", None))
+        self.label_93.setText(QCoreApplication.translate("MainWindow", u"1.0", None))
+#if QT_CONFIG(whatsthis)
+        self.MultipleImaging_PhotoShotNoise_Label.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Photon shot noise (A.photon<span style=\" vertical-align:super;\">-1</span>)</p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.MultipleImaging_PhotoShotNoise_Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Photon shot noise (A.photon<span style=\" vertical-align:super;\">-1</span>)</p></body></html>", None))
+        self.MultipleImaging_PhotoShotNoise_Readings.setText("")
+        self.label_94.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>10<span style=\" vertical-align:super;\">-6</span></p></body></html>", None))
+#if QT_CONFIG(whatsthis)
+        self.label_95.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>5*10<span style=\" vertical-align:super;\">-4</span></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.label_95.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>5*10<span style=\" vertical-align:super;\">-4</span></p></body></html>", None))
+        self.label_96.setText(QCoreApplication.translate("MainWindow", u"10\u00af\u00b3", None))
+        self.MultipleImaging_rightMenuSubContainer_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Parameters", None))
+        self.MultipleImaging_ImagingParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Parameters", None))
+        self.MultipleImaging_CalciumParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Calcium Parameters", None))
+        self.MultipleImaging_FluoParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Parameters", None))
         self.label_5.setText("")
         self.label_7.setText("")
         self.NeuronGenerator_subframe1_title_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:700;\">Spikeling is built on the Izhikevich model</span></p></body></html>", None))
@@ -9543,8 +11915,8 @@ class Ui_MainWindow(QWidget):
         self.Vm_Task03_Title.setText(QCoreApplication.translate("MainWindow", u"Does a rapid and a slow current increase generate the same voltage response?", None))
         self.Vm_Task03_Text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">As you increase input current slowly or rapidly, you should observe that you can reach different peak spike rates. </span></p><p><br/></p><p><span style=\" font-size:12pt;\">A rapid increase in input current is a much more effective way to trigger multiple spikes in close succession. This is again because of </span><span style=\" font-size:12pt; font-weight:700;\">adaptation</span><span style=\" font-size:12pt;\">. </span><br/></p><p><span style=\" font-size:12pt;\">If you change input current fast enough, the neuron does not have time to adapt and therefore fires vigorously at first.</span></p><p><span style=\" font-size:12pt;\">If you change input current slowly enough, you should be able to drive it quite high without eliciting many extra spikes as it adapts while you slowly ramp up the current. This means that not only the absolute level of a stimulus can be encoded by a neuron, by also the rate of change. </span></p><p><br/><span style=\" font-size:12"
                         "pt;\">Note that this creates ambiguity in the code, which is one important reason for the need of </span><span style=\" font-size:12pt; font-weight:700;\">parallelisation</span><span style=\" font-size:12pt;\">. This means that if you want to read both absolute levels of a stimulus and its rate of change, you may need two neurons with different properties. </span></p><p><br/></p><p><span style=\" font-family:'Arial','sans-serif'; font-size:12pt; font-style:italic;\">NB: The fact that the speed of change in the input is encoded in a neuron\u2019s firing also means that that spike thresholds are not fixed. Depending how quickly you stimulate a neuron, it can start firing at different Vm values!</span></p></body></html>", None))
-        self.Exercises_PreviousButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Previous", None))
-        self.Exercises_AfterButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Next", None))
+        self.Exercise101_PreviousButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Previous", None))
+        self.Exercise101_AfterButton_pushButton.setText(QCoreApplication.translate("MainWindow", u"Next", None))
         self.label_19.setText("")
         self.label_20.setText("")
         self.mainbody_footer_text_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:8pt;\">Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">Originally developped in the Baden Lab at the University of Sussex, Spikeling is an </span><span style=\" font-size:8pt; font-style:italic;\">in-silico</span><span style=\" font-size:8pt;\"> neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach. The current version is the result of a collective work from on-field teaching experience, both in the UK and on the African continent and from users and students feedback.</span></p><p align=\"justify\"><span style=\" font-size:8pt;\">The GUI presented here proposed a full and didactic interaction with the neuronal model. It also contains various exercices wh"
