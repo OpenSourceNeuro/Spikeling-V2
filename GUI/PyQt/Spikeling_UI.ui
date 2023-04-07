@@ -2049,7 +2049,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>9</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -2292,9 +2292,6 @@ p, li { white-space: pre-wrap; }
                          </property>
                          <property name="text">
                           <string/>
-                         </property>
-                         <property name="pixmap">
-                          <pixmap>:/resources2/resources/spike.gif</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -27834,11 +27831,6 @@ border : none;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="resources.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources.qrc"/>
-  <include location="resources.qrc"/>
   <include location="resources.qrc"/>
  </resources>
  <connections/>
