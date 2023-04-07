@@ -46,6 +46,8 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 
 <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="300">
 
+<h6 align="center">Left: Rendering of spikeling electronic components. Right: Acrylic cover detailing spikeling functionalities.</h6>
+
 </div>
 
 </br>
@@ -67,7 +69,6 @@ Overall, Spikeling is a versatile device, allowing any teaching staff to conceiv
 <p style='text-align: justify;'>
 Enthusiasts and potential collaborators can source the electronic bits for this project from <a href="https://kitspace.org/boards/github.com/maxzimmer/spikeling-v2/">KitSpace</a></p>
 
-<h6 align="center">Left: Rendering of spikeling electronic components. Right: Acrylic cover detailing spikeling functionalities.</h6>
 
 </div>
 
