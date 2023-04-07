@@ -116,6 +116,8 @@ This simple analysis could be used for home assignments in the early stages of s
 <p style='text-align: justify;'>
 For advanced data analysis and basic statistics, python notebooks are provided to serve as template for the teaching staff. It is our hope to create a Spikeling community where users could share courses, exercises and data analysis scripts to be widely used in neuroscience and coding courses.
 
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/103_dataanalysis.jpg" width="400" height="250">
+
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/103_data%20analysis.jpg" width="400" height="250">
 
 <h6 align="center">GUI displaying the “Neuron Generator” page where users can appreciate the model underlying Spikeling activity and from which they can generate unique neuron to further run on Spikeling.</h6>
