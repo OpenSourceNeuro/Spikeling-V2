@@ -116,6 +116,12 @@ This simple analysis could be used for home assignments in the early stages of s
 <p style='text-align: justify;'>
 For advanced data analysis and basic statistics, python notebooks are provided to serve as template for the teaching staff. It is our hope to create a Spikeling community where users could share courses, exercises and data analysis scripts to be widely used in neuroscience and coding courses.
 
+</div>
+
+<br>
+
+<div>
+
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/103_dataanalysis.jpg" width="400" height="250">
 
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/103_data%20analysis.jpg" width="400" height="250">
@@ -136,9 +142,15 @@ Spikeling comes by default with a repeated square wave pattern stimulus, on whic
 <p style='text-align: justify;'>
 Here users are encouraged to develop their own stimulus (successive waves, sinusoidal loops, chirp, binary noise, etc.). Some basic stimuli are already available. The main point of this feature is to encourage the students to conceive their own experiments leading them to think about the protocol that needs to be implemented in order to answer the experimental questions they are being faced with.
 
-<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg" width="400" height="250">
+</div>
 
-<img align="right" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg" width="400" height="250">
+<br>
+
+<div>
+
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg" width="400" height="250">
+
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg" width="400" height="250">
 
 <h6 align="center">GUI displaying the “Simulus Generator” page where users can generate their own unique stimuli. The left screen shows repetitive increments of current, as seen in classic electrophysiology experiments (10 steps with 10 a.u. current increment lasting 25 ms with a resting period of 5ms at 0 a.u. current). The right screen shows a sine wave stimulus (50 a.u. amplitude, 20 Hz frequency over a period of 250 ms and a resting period of 100 ms at 0 a.u. current)</h6>
 
