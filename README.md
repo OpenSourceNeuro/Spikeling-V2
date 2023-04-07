@@ -189,11 +189,21 @@ Students could then be engaged into dynamic calcium fluorescence imaging (i.e tw
 <p style='text-align: justify;'>
 For an even more realistic simulation, students could choose to move from a linear model to a non-linear saturation model of the fluorescence signal.
 
+</div>
+
+<br>
+
+<div>
+
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graph.png" width="450" height="250">
 
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graphsat.png" width="450" height="250">
 
 <h6 align="center">GUI displaying linear(left) and (non-linear) models of simulated fluorescence (green) based on simulated calcium concentration (pink)</h6>
+
+</div>
+
+<div>
 
 <p style='text-align: justify;'>
 Here, the aim is to familiarise students with the type of data they could encounter in their future academic work, incorporating noise and limitations to the data that are inherent to every experiments.
