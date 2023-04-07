@@ -47,12 +47,16 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400">
 </p></div>
 
+<br>
+
 <h6 align="center">Left: Rendering of spikeling electronic components. Right: Acrylic cover detailing spikeling functionalities.</h6>
 
 
 
 <br>
+
 ***
+
 </br>
 
 
