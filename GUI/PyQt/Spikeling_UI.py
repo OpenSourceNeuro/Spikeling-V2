@@ -23,11 +23,6 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 
 from pyqtgraph import PlotWidget
 import resources_rc
-import resources_rc
-import resources_rc
-import resources_rc
-import resources_rc
-import resources_rc
 
 class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
@@ -1154,7 +1149,6 @@ class Ui_MainWindow(QWidget):
         self.mainbody_content_SpikelingGif.setMaximumSize(QSize(480, 540))
         self.mainbody_content_SpikelingGif.setAutoFillBackground(False)
         self.mainbody_content_SpikelingGif.setStyleSheet(u"")
-        self.mainbody_content_SpikelingGif.setPixmap(QPixmap(u":/resources2/resources/spike.gif"))
         self.mainbody_content_SpikelingGif.setScaledContents(True)
 
         self.horizontalLayout_114.addWidget(self.mainbody_content_SpikelingGif)
@@ -12111,7 +12105,7 @@ class Ui_MainWindow(QWidget):
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
         self.toolBox.setCurrentIndex(7)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(9)
+        self.mainbody_stackedWidget.setCurrentIndex(0)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
