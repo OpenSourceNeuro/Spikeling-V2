@@ -51,7 +51,9 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 
 </div>
 
+<br>
 </br>
+
 
 <div>
 
