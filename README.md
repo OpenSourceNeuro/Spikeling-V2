@@ -1,35 +1,84 @@
-# Spikeling V 2.0
+<p align="left"><img width="270" height="170" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/SikyLogo.png">
 
+<h1 align="center"> Spikeling V 2.2</h1></p>
+<h3 align="center">  A hardware implementation of spiking neurons for neuroscience teaching and outreach</h3></p>
+<p align="center"><h6 align="right">developed by M.J.Y. Zimmermann, A.M. Chagas & T. Baden</h6></p>
 
-Spikeling V2.0 is an educational tool for neuroscience students and enthusiasts!
+<br>
+
+This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
+The hardware is licensed under the [CERN OHL v1.2](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/PCB%20-%202.2c/LICENSE)
+<p align="center"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" />
+
+<div>
+<p style='text-align: justify;'>
+Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on living neurons are scarce in science education.
+
+<p style='text-align: justify;'>
+Due to budgetary constraints and logistical hurdles, few students can be afforded the opportunity to experience electrophysiological recordings on living neurons in action. Yet, a fundamental aspect of neuroscience courses is to understand electrical signalling within neurons and the transmission of signals across synapses, as well as the experimental techniques necessary to observe these properties.
+
+<p style='text-align: justify;'>
+To support university-level neuroscience teaching, we designed ‘Spikeling’, an open-source teaching support device that mimics the electrical properties of spiking neurons by running the computationally efficient yet versatile Izhikevich model.
 
 <p style='text-align: justify;'>
 It is an artificial neuron that can receive different inputs, integrate them and send and outputs its computation, just like a spiking neuron would!
 
+<p style='text-align: justify;'>
 Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.
-</p>
-
-This project is licensed under the [GNU General Public License v3.0](https://github.com/BadenLab/Openspritzer/blob/master/LICENSE)<br>
-The hardware is licensed under the [CERN OHL v1.2](https://github.com/BadenLab/LED-Zappelin/blob/master/PCB/LICENSE)
+</div>
 
 <br>
 
 <div>
-<img align="left" width="405" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/Spikeling_hardware.png">
+<img align="left" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/PCB.png">
 
-<img align="left" width="405" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/GUI/Pictures%20%26%20Logos/Spikeling_GUI.gif">
+<img align="right"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/GUI/Pictures%20%26%20Logos/Spikeling_cover.png">
 </div>
 
 <br>
 
 <div>
 <p style='text-align: justify;'>
-If this all sounds familiar to you, it is because this project is a derivative (and update) of the Spikeling project started at the <a href="https://badenlab.org">BadenLab</a>.
-With feedback from users and students, we are developing this version, which has added capabilities, and also revisits how lessons can be taught, and what kind of experiments can be done with it!
+The spikeling project emerged from local needs to teach neuroscience class modules for direct interaction with neuron physiology, data analysis, fluorescence imaging, protocol design, etc. The aim is to provide hands-on experience on how neurons encode information and how diverse variables modulates their activities, while engaging students with crucial aspects of data collection, experimental limitations, methodology and statistical analysis.
 
-While this is not a stable version just yet, enthusiasts and potential collaborators can source the electronic bits for this project from <a href="https://kitspace.org/boards/github.com/maxzimmer/spikeling-v2/">KitSpace</a></p>
+<p style='text-align: justify;'>
+In order to give users a full interactive experience with the Spikeling neuron, a drawing engraved on the cover details in a neuro-morphic fashion all device functionalities. Futhermore, a spike-triggered LED and buzzer have been added to the device.
+
+<p style='text-align: justify;'>
+A dedicated GUI (Graphical User Interface) allows users to fully interact with Spikeling, plot all data generated and record them for further analysis.
+
+<p style='text-align: justify;'>
+Overall, Spikeling is a versatile device, allowing any teaching staff to conceive dry-lab tutorials or home assignments related to their own teaching course materials.
+
+<p style='text-align: justify;'>
+Enthusiasts and potential collaborators can source the electronic bits for this project from <a href="https://kitspace.org/boards/github.com/maxzimmer/spikeling-v2/">KitSpace</a></p>
 </div>
 
+***
+
+<div>
+<h3 align="left"> Neurophysiology:</h3></p>
+
+<p style='text-align: justify;'>
+Spikeling is conceived on the Izhikevich model, which “reproduces spiking and bursting behaviour of known type of cortical neurons. The model combines the biologically plausibility of Hodgkin-Huxley-type dynamics and the computational efficiency of integrate-and-fire neurons” (E.M. Izhikevich, IEEE Transactions on Neural Networks, 2003, doi: 10.1109/TNN.2003.820440).
+
+<p style='text-align: justify;'>
+Students can appreciate playing with many variables that can be encountered in textbook or related to class material. A simulated patch-clamp experiment (represented by a pipette drawing on the top cover) allows students to “inject current” into the Spikeling neuron. They can furthermore modulate the amount of current injected, the speed and duration at which it is injected and observe the adaptation effect on a spiking neuron.
+
+<p style='text-align: justify;'>
+Spikeling also possesses a photodiode (modelized on the top cover as a photoreceptor) making Spikeling photo-sensitive. The photodiode mimics current inputs a photoreceptor would have on a spiking neuron. Students can appreciate the impact of a flash light onto the photoreceptor and investigate the different effects it may have. Ultimately, a supplied LED can be connected to the stimulus port and can then be controlled in frequency and intensity for controlled experiments. Advanced variable such as photoreceptor decay and recovery rate could also be investigated.
+
+<p style='text-align: justify;'>
+Each Spikeling unit possesses one “axonal” output and two “dendritic” inputs. Each dendritic input possesses a knob that can modulate the synaptic gain positively or negatively (mimicking excitatory and inhibitory synapses). In advanced stages, students could be encouraged to form neuronal networks. Auxiliary neurons can furthermore be stimulated synchronously from the “main neuron” experiment box to set a controlled environment.
+</div>
+
+<div>
+<img align="left"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/Spikeling_hardware.png">
+
+<img align="right" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/101_graph.jpg">
+
+
+</div>
 
 ***
 
@@ -132,8 +181,8 @@ Stimulus generator and data analysis tabs needs to be finished (cf. development 
 
 ### GUI:
  - pyQt6
- 
- 
+
+
 
 # Development log
 
