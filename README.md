@@ -71,25 +71,25 @@ Enthusiasts and potential collaborators can source the electronic bits for this 
 
 <h3 align="left">Detailed Spikeling functions</h3></p>
 
-- [Spikeling: A spiking neuron interface](#Spikeling: A spiking neuron interface)
-- [Spikeling: GUI - neuron parameters](#Spikeling: GUI - neuron parameters)
-- [Spikeling: GUI - stimuli parameters](#Spikeling: GUI - stimuli parameters)
-- [Spikeling: Data Analysis](#Spikeling: Data Analysis)
-- [Spikeling: Neuron generator](#Spikeling: Neuron generator)
-- [Spikeling: Stimulus Generator](#Spikeling: Stimulus Generator)
-- [Spikeling: Multiple recording](#Spikeling: Multiple recording)
+- [Spikeling: A spiking neuron interface](#Spikeling:-A-spiking-neuron-interface)
+- [Spikeling: GUI - neuron parameters](#Spikeling:-GUI-neuron-parameters)
+- [Spikeling: GUI - stimuli parameters](#Spikeling:GUI-stimuli-parameters)
+- [Spikeling: Data Analysis](#Spikeling:-Data-Analysis)
+- [Spikeling: Neuron generator](#Spikeling:-Neuron-generator)
+- [Spikeling: Stimulus Generator](#Spikeling:-Stimulus-Generator)
+- [Spikeling: Multiple recording](#Spikeling:-Multiple-recording)
 
-- [Fluorescence imaging simulation](#Fluorescence: Imaging simulation)
-- [Fluorescence: Imaging parameters](#Fluorescence: Imaging parameters)
-- [Fluorescence: Calcium parameters](#Fluorescence: Calcium parameters)
-- [Fluorescence: Fluorescence parameters](#Fluorescence: Imaging parameters)
-- [Fluorescence: Data Analysis](#Fluorescence: Data Analysis)
-- [Fluorescence: Multiple fluorescence](#Fluorescence: Multiple fluorescence)
+- [Fluorescence imaging simulation](#Fluorescence:-Imaging-simulation)
+- [Fluorescence: Imaging parameters](#Fluorescence:-Imaging-parameters)
+- [Fluorescence: Calcium parameters](#Fluorescence:-Calcium-parameters)
+- [Fluorescence: Fluorescence parameters](#Fluorescence:-Imaging-parameters)
+- [Fluorescence: Data Analysis](#Fluorescence:-Data-Analysis)
+- [Fluorescence: Multiple fluorescence](#Fluorescence:-Multiple-fluorescence)
 
-- [Exercices: GUI](#Exercices: GUI)
-- [Exercices: Python](#Exercices: Python)
+- [Exercices: GUI](#Exercices:-GUI)
+- [Exercices: Python](#Exercices:-Python)
 
-- [GitHub: Contributions](#GitHub: Contributions)
+- [GitHub: Contributions](#GitHub:-Contributions)
 
 
 ***
@@ -242,7 +242,7 @@ We would always encourage teachers to develop their own exercises based on the c
 ***
 ***
 
-# Spikeling: A spiking neuron interface
+## Spikeling: A spiking neuron interface
 
 <div>
 
@@ -297,7 +297,7 @@ Below the stimulus frequency and strength sliders can be found a custom stimulus
 
 ***
 
-# Spikeling: GUI - neuron parameters
+## Spikeling: GUI neuron parameters
 
 <div>
 
@@ -313,7 +313,7 @@ The main window computes the Izhikevich model with a modifiable current input. U
 
 ***
 
-# Spikeling: Stimulus Generator
+## Spikeling: Stimulus Generator
 
 <div>
 
