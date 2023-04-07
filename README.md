@@ -242,7 +242,7 @@ We would always encourage teachers to develop their own exercises based on the c
 ***
 ***
 
-#Spikeling: A spiking neuron interface
+# Spikeling: A spiking neuron interface
 
 <div>
 
@@ -297,7 +297,7 @@ Below the stimulus frequency and strength sliders can be found a custom stimulus
 
 ***
 
-#Spikeling: GUI - neuron parameters
+# Spikeling: GUI - neuron parameters
 
 <div>
 
@@ -313,11 +313,24 @@ The main window computes the Izhikevich model with a modifiable current input. U
 
 ***
 
-#Spikeling: Stimulus Generator
+# Spikeling: Stimulus Generator
 
 <div>
 
 Stimulus generator and data analysis tabs needs to be finished (cf. development log) but they will include ... a stimulus generator, allowing the user to come up with custom made stimulation loop, and ... a data analysis routine for early computation course where student could upload their recorded traces and extract information from it, generating raster plot, computing data and generate basic statistics. For advanced courses an integrated python exercise manual (no IGOR !!!) will guide students through creating a data analysis pipeline using .csv files saved from the main window.
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_triangle.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_linchirp.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_expchirp.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_ampchirp.jpg">
+
 
 
 </div>
