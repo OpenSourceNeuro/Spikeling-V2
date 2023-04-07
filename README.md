@@ -41,14 +41,14 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 
 <br>
 
-<div><p>
+<div>
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png" width="400" height="250" >
 
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400" height="250">
 
 <h6 align="center">Left: Rendering of spikeling electronic components. Right: Acrylic cover detailing spikeling functionalities.</h6>
 
-</p></div>
+</div>
 
 <div>
 
@@ -88,6 +88,12 @@ Spikeling also possesses a photodiode (modelized on the top cover as a photorece
 <p style='text-align: justify;'>
 Each Spikeling unit possesses one “axonal” output and two “dendritic” inputs. Each dendritic input possesses a knob that can modulate the synaptic gain positively or negatively (mimicking excitatory and inhibitory synapses). In advanced stages, students could be encouraged to form neuronal networks. Auxiliary neurons can furthermore be stimulated synchronously from the “main neuron” experiment box to set a controlled environment.
 
+</div>
+
+<br>
+
+<div>
+
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_hardware.png" width="400" height="250">
 
 <img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_graph.png" width="400" height="250">
@@ -114,7 +120,7 @@ This simple analysis could be used for home assignments in the early stages of s
 <p style='text-align: justify;'>
 For advanced data analysis and basic statistics, python notebooks are provided to serve as template for the teaching staff. It is our hope to create a Spikeling community where users could share courses, exercises and data analysis scripts to be widely used in neuroscience and coding courses.
 
-<img align="center" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/103_data%20analysis.jpg">
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/103_data%20analysis.jpg" width="400" height="250">
 
 <h6 align="center">GUI displaying the “Neuron Generator” page where users can appreciate the model underlying Spikeling activity and from which they can generate unique neuron to further run on Spikeling.</h6>
 
@@ -132,9 +138,9 @@ Spikeling comes by default with a repeated square wave pattern stimulus, on whic
 <p style='text-align: justify;'>
 Here users are encouraged to develop their own stimulus (successive waves, sinusoidal loops, chirp, binary noise, etc.). Some basic stimuli are already available. The main point of this feature is to encourage the students to conceive their own experiments leading them to think about the protocol that needs to be implemented in order to answer the experimental questions they are being faced with.
 
-<img align="left"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/401_steps.jpg">
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg" width="400" height="250">
 
-<img align="right" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/401_sine.jpg">
+<img align="right" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg" width="400" height="250">
 
 <h6 align="center">GUI displaying the “Simulus Generator” page where users can generate their own unique stimuli. The left screen shows repetitive increments of current, as seen in classic electrophysiology experiments (10 steps with 10 a.u. current increment lasting 25 ms with a resting period of 5ms at 0 a.u. current). The right screen shows a sine wave stimulus (50 a.u. amplitude, 20 Hz frequency over a period of 250 ms and a resting period of 100 ms at 0 a.u. current)</h6>
 
@@ -173,9 +179,9 @@ Students could then be engaged into dynamic calcium fluorescence imaging (i.e tw
 <p style='text-align: justify;'>
 For an even more realistic simulation, students could choose to move from a linear model to a non-linear saturation model of the fluorescence signal.
 
-<img align="left"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/201_graph.png">
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graph.png" width="450" height="250">
 
-<img align="right" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/201_graphsat.png">
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graphsat.png" width="450" height="250">
 
 <h6 align="center">GUI displaying linear(left) and (non-linear) models of simulated fluorescence (green) based on simulated calcium concentration (pink)</h6>
 
@@ -188,28 +194,7 @@ Ultimately, students could be encouraged to analyse imaging data, even implement
 
 </div>
 
-<div>
-<p style='text-align: justify;'>
-<img align="left" width="450" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/PCB.png">
 
-<p style='text-align: justify;'>
-The main upgrade on the PCB concerns the use of an ESP32 module and 2 ADC 8bit expander chips that together allow spikeling to compute more input output with specific input/output ports and dedicated potentiometer. The previous version had limited ports and potentiometers and different functions had to be encoded on the arduino code hence impacting the versatility of the model.
-
-Stereo (3-ways) audio jacks 3.5mm replace the previous BNC cable. Both ports and cables are therefore cheaper, also ports are less bulky and cables more flexible. Moreover, now one single port can carry two distinct information. In this case digital and analog input/output.
-
-Since the user cannot access the microcontroler board anymore (acrylic sheet on top of the board), a reset button has been added to the back of the board.
-
-Previously, "modes" were encoded manually on the microcontroler, and the user could check the set mode number by the amount of flashes the microcontroller built-in LED was providing at the begining of the routine.
-Now, the microcontroller is pre-set with 12 distinct "neuron modes" that the user can switch through, 12 proxy LED indicate continuously which mode is currently being set.
-
-The buzzer is now smaller and is powered by the ESP32 3.3V (instead of the 5v from the arduino), making its clicking noise quieter, which is more pleasant for the user ear, especially after a couple of minutes using the device.
-
-A couple of functions have been added to the board and can now be controlled through potentiometers (synaptic polarity(inhibitory/excitatory), photoreceptor gain and polarity, stimulus strength and polarity(only for current input not LED stimulation)).
-
-Another major upgrade concerns the use of the two DAC GPIO from the ESP32. These two are conencted to the synapse out analog, which can be read either by another Spikeling synaptic in analog input port, or either by an external oscilloscope. The other DAC port is connected to the stimulus analog out, whcich drives the Current-in port (from the patch clamp module), therefore improving the direct stimulation from the board.
-
-</p>
-</div>
 
 ***
 
@@ -278,64 +263,3 @@ Stimulus generator and data analysis tabs needs to be finished (cf. development 
 
 <br>
 <div>
-
-
-## Dependencies:
-
-### Arduino:
- - https://github.com/erropix/ESP32_AnalogWrite (can be installed via the Arduino library manager. Look for ESP32 analogwrite library by erropix)
-
-### GUI:
- - pyQt6
-
-
-
-# Development log
-
-### Working Issues
-
-##### Arduino
-
-The negative photogain does not decay towards zero, an absolute value has to be implemented
-
-
-##### GUI
-
-- Serial reading is slow and pyQtgraph does not update fast enough the serial values.
-
->FIXED: The entire code was reimplement using a lower BaudRate (9600 instead of 115200) and the pyQtgraph routine was improved.
-Currently the GUI functions are being reimplemented with the PySerial readWrite functions. Updates to come.
-
-##### PCB
-
-- The audio jack footprint is not correct. the back pin and holes are mm ahead of their correct position.
-
->FIXED: the new PCB in the 2.2c version now posses the correct footprint. Previous version will need to cut the plastic pieces in front of the audio jack female and force the component into position
-
-- The LEDs on the board might be to Bright
-
-> The resistance of the 4 CharliePlex and the SpikeLed resistors must be adjusted to the acrylic material chosen for the front cover. The current 100 Ohm is sufficient for opaque PMMA, but clear transparent ones should have 1 kOhm soldered below so that the LEDs do not affect the user vision.
-
-- The CharliePlex footprint orientation (+/-) is not labeled
-
-- Stimulus generation tab to be reimplemented
-
-- Data Analysis tab to be reimplemented
-
-- About tab to be created
-
-##### Acrylic sheet
-
-The custom 1, 2, 3 text has to be changed to the last three neuron mode implemented on the arduino code
-
-> FIXED
-
-</div>
-
-
-
-***
-
-
-Cost estimation spreadsheet for production
-https://docs.google.com/spreadsheets/d/1JO1rpfb5DoqT5x59RL3RnkQFxRdzm5al6X8uEcsVFo8/edit#gid=0
