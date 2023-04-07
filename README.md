@@ -102,7 +102,7 @@ Each Spikeling unit possesses one “axonal” output and two “dendritic” in
 
 <div>
 
-<h3 align="left"> Data Analysis</h3></p>
+<h3 align="left"> Data analysis</h3></p>
 
 <p style='text-align: justify;'>
 Handling large dataset is an important part of daily academic work. However, few universities offer coding and programming modules for their neuroscience courses. A proper data analysis of any kind starts with the understanding of a program language and the understanding of every steps of the analysis pipeline. Only then, students can appreciate the results of their experiments and engage in their critical interpretation.
@@ -160,24 +160,6 @@ Here users are encouraged to develop their own stimulus (successive waves, sinus
 
 <div>
 
-<h3 align="left">Exercises:</h3>
-
-<p style='text-align: justify;'>
-Spikeling comes with a set of suggested exercises that could be used in class as a guideline for the teaching staff to explore Spikeling functionalities. They are conceived to allow students to make a concrete connection between neurophysiology concepts seen in lectures with a responsive in silico model.
-
-<p style='text-align: justify;'>
-Exercises are also a mean to introduce some epistemology into the teaching material: Understanding how a neurobiology concept became a knowledge and how it can be tested, confirmed or refuted.
-In advance courses, giving students the opportunity to design their own experiment as assignment also allows to introduce good methodology and protocol design practices. Which, unfortunately has shown to be too often mistaken with methods.
-
-<p style='text-align: justify;'>
-We would always encourage teachers to develop their own exercises based on the content they cover in class. It is our hope that such exercises could also be used as homework grading system.
-
-</div>
-
-***
-
-<div>
-
 <h3 align="left">Fluorescence imaging simulation:</h3>
 
 <p style='text-align: justify;'>
@@ -195,9 +177,9 @@ For an even more realistic simulation, students could choose to move from a line
 
 <div>
 
-<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graph.png" width="450" height="250">
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graph.png" width="400" height="250">
 
-<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graphsat.png" width="450" height="250">
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graphsat.png" width="400" height="250">
 
 <h6 align="center">GUI displaying linear(left) and (non-linear) models of simulated fluorescence (green) based on simulated calcium concentration (pink)</h6>
 
@@ -211,10 +193,25 @@ Here, the aim is to familiarise students with the type of data they could encoun
 <p style='text-align: justify;'>
 Ultimately, students could be encouraged to analyse imaging data, even implement spike inference algorithms and compare their results to the “ground truth data” that generated the fluorescence trace.
 
-
 </div>
 
+***
 
+<div>
+
+<h3 align="left">Exercises:</h3>
+
+<p style='text-align: justify;'>
+Spikeling comes with a set of suggested exercises that could be used in class as a guideline for the teaching staff to explore Spikeling functionalities. They are conceived to allow students to make a concrete connection between neurophysiology concepts seen in lectures with a responsive in silico model.
+
+<p style='text-align: justify;'>
+Exercises are also a mean to introduce some epistemology into the teaching material: Understanding how a neurobiology concept became a knowledge and how it can be tested, confirmed or refuted.
+In advance courses, giving students the opportunity to design their own experiment as assignment also allows to introduce good methodology and protocol design practices. Which, unfortunately has shown to be too often mistaken with methods.
+
+<p style='text-align: justify;'>
+We would always encourage teachers to develop their own exercises based on the content they cover in class. It is our hope that such exercises could also be used as homework grading system.
+
+</div>
 
 ***
 
