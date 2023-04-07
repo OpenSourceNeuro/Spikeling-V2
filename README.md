@@ -10,7 +10,7 @@
 
 
 
-![](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
+<align="right">![](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
 
 
 This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
@@ -50,13 +50,6 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 
 </p></div>
 
-<br>
-
-***
-
-</br>
-
-
 <div>
 
 <p style='text-align: justify;'>
@@ -95,9 +88,9 @@ Spikeling also possesses a photodiode (modelized on the top cover as a photorece
 <p style='text-align: justify;'>
 Each Spikeling unit possesses one “axonal” output and two “dendritic” inputs. Each dendritic input possesses a knob that can modulate the synaptic gain positively or negatively (mimicking excitatory and inhibitory synapses). In advanced stages, students could be encouraged to form neuronal networks. Auxiliary neurons can furthermore be stimulated synchronously from the “main neuron” experiment box to set a controlled environment.
 
-<img align="left"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/Spikeling_hardware.png">
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_hardware.png" width="400" height="250">
 
-<img align="right" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/101_graph.jpg">
+<img align="center" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_graph.png" width="400" height="250">
 
 <h6 align="center">Left: A Spikeling unit being stimulated by a direct current injection (blue cable) while receiving synaptic inputs from a second unit (pink cable). Right: Spikeling GUI displaying the unit membrane voltage (red trace) while being light-stimulated by a controlled LED (blue trace) which generates input current (green trace).</h6>
 
