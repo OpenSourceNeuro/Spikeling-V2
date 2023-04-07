@@ -17,7 +17,48 @@ def ChangeStimulusParameter(self):
     self.StimulusIndex = self.ui.StimulusGenerator_Selection_comboBox.currentIndex()
     self.ui.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(self.StimulusIndex)
 
+def ChangeChirpParameter(self):
+    self.ChirpIndex = self.ui.Chirp_comboBox.currentIndex()
 
+    if self.ChirpIndex == 0:
+        self.ui.Chirp_Frequency_Value.setEnabled(False)
+        self.ui.Chirp_Frequency_Value.setStyleSheet("background-color: rgb(80, 110, 117)" + ";\n"
+                                                    "border : none;"
+                                                    )
+        self.ui.Chirp_StartFrequency_Value.setEnabled(True)
+        self.ui.Chirp_StartFrequency_Value.setStyleSheet("background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                         "border: 2px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                         )
+        self.ui.Chirp_EndFrequency_Value.setEnabled(True)
+        self.ui.Chirp_EndFrequency_Value.setStyleSheet("background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                       "border: 2px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                       )
+    if self.ChirpIndex == 1:
+        self.ui.Chirp_Frequency_Value.setEnabled(False)
+        self.ui.Chirp_Frequency_Value.setStyleSheet("background-color: rgb(80, 110, 117)" + ";\n"
+                                                    "border : none;"
+                                                    )
+        self.ui.Chirp_StartFrequency_Value.setEnabled(True)
+        self.ui.Chirp_StartFrequency_Value.setStyleSheet("background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                         "border: 2px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                         )
+        self.ui.Chirp_EndFrequency_Value.setEnabled(True)
+        self.ui.Chirp_EndFrequency_Value.setStyleSheet("background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                       "border: 2px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                       )
+    if self.ChirpIndex == 2:
+        self.ui.Chirp_Frequency_Value.setEnabled(True)
+        self.ui.Chirp_Frequency_Value.setStyleSheet("background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                    "border: 2px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                    )
+        self.ui.Chirp_StartFrequency_Value.setEnabled(False)
+        self.ui.Chirp_StartFrequency_Value.setStyleSheet("background-color: rgb(80, 110, 117)" + ";\n"
+                                                         "border : none;"
+                                                         )
+        self.ui.Chirp_EndFrequency_Value.setEnabled(False)
+        self.ui.Chirp_EndFrequency_Value.setStyleSheet("background-color: rgb(80, 110, 117)" + ";\n"
+                                                       "border : none;"
+                                                       )
 
 class StimulusGenerator():
 
@@ -36,6 +77,8 @@ class StimulusGenerator():
             StimulusGenerator.SineWave(self)
         if self.StimulusIndex == 2:
             StimulusGenerator.TriangularWave(self)
+        if self.StimulusIndex == 3:
+            StimulusGenerator.ChirpWave(self)
 
 
     def SaveStimulus(self):
@@ -46,6 +89,8 @@ class StimulusGenerator():
             StimulusGenerator.SineWaveSave(self)
         if self.StimulusIndex == 2:
             StimulusGenerator.TriangularWaveSave(self)
+        if self.StimulusIndex == 3:
+            StimulusGenerator.ChirpWaveSave(self)
 
 
     def IntensitySteps(self):
@@ -223,5 +268,102 @@ class StimulusGenerator():
         self.df_TriangleStim = pd.DataFrame(self.dict_TriangleStim)
 
         self.df_TriangleStim.to_csv(FileName[0], index=False)
+
+
+
+    def ChirpWave(self):
+        self.ChirpAmplitude = int(self.ui.Chirp_Amplitude_Value.text())
+        self.OnAmplitude = int(self.ui.Chirp_PreChirpOn_Amplitude_Value.text())
+        self.OnDuration = int(self.ui.Chirp_PreChirpOn_Duration_Value.text())
+        self.OffAmplitude = int(self.ui.Chirp_PreChirpOff_Amplitude_Value.text())
+        self.OffDuration = int(self.ui.Chirp_PreChirpOff_Duration_Value.text())
+        self.MidAmplitude = int(self.ui.Chirp_PreChirpMid_Amplitude.text())
+        self.MidDuration = int(self.ui.Chirp_PreChirpMid_Duration.text())
+        self.ChirpFrequency = int(self.ui.Chirp_Frequency_Value.text())/1000
+        self.StartFrequency = int(self.ui.Chirp_StartFrequency_Value.text())/1000
+        self.EndFrequency = int(self.ui.Chirp_EndFrequency_Value.text())/1000
+        self.ChirpDuration = int(self.ui.Chirp_Duration_Value.text())
+
+        self.StimDur = self.OnDuration + self.OffDuration + self.MidDuration + self.ChirpDuration
+
+        self.ChirpTime = np.linspace(0, self.ChirpDuration, self.ChirpDuration)
+
+
+        self.ChirpIndex = self.ui.Chirp_comboBox.currentIndex()
+
+        if self.ChirpIndex == 0:
+            self.ChirpModulation = np.linspace(self.StartFrequency, self.EndFrequency, self.ChirpDuration)
+            self.ChirpSinusoid = np.sin(self.ChirpTime * self.ChirpModulation) * self.ChirpAmplitude/2 + self.MidAmplitude
+            self.Chirp = np.around(self.ChirpSinusoid).astype(int)
+            self.Modulation = np.zeros(self.StimDur)
+            for i in range(self.ChirpDuration):
+                self.Modulation[self.OnDuration + self.OffDuration + self.MidDuration + i] = self.ChirpModulation[i]/self.EndFrequency*100
+
+        if self.ChirpIndex == 1:
+            self.ChirpModulation = np.exp(np.linspace(self.StartFrequency*1000, np.log(self.EndFrequency*1000), self.ChirpDuration))/1000
+            self.ChirpSinusoid = np.sin(self.ChirpTime * self.ChirpModulation) * self.ChirpAmplitude/2 + self.MidAmplitude
+            self.Chirp = np.around(self.ChirpSinusoid).astype(int)
+            self.Modulation = np.zeros(self.StimDur)
+            for i in range(self.ChirpDuration):
+                self.Modulation[self.OnDuration + self.OffDuration + self.MidDuration + i] = self.ChirpModulation[i] / self.EndFrequency * 100
+
+        if self.ChirpIndex == 2:
+            self.ChirpModulation = np.linspace(0, self.ChirpAmplitude/2, self.ChirpDuration)
+            self.ChirpSinusoid = np.sin(self.ChirpTime * self.ChirpFrequency) * self.ChirpModulation + self.MidAmplitude
+            self.Chirp = np.around(self.ChirpSinusoid).astype(int)
+            self.Modulation = np.zeros(self.StimDur)
+            for i in range(self.ChirpDuration):
+                self.Modulation[self.OnDuration + self.OffDuration + self.MidDuration + i] = self.ChirpModulation[i] * 2
+
+
+        self.XStim = np.arange(self.StimDur)
+        self.nStim = np.zeros(self.StimDur)
+        self.nChirp = np.zeros(self.StimDur)
+        self.nStim[:self.OnDuration] = self.OnAmplitude
+        self.nStim[self.OnDuration:self.OnDuration+self.OffDuration] = self.OffAmplitude
+        self.nStim[self.OnDuration+self.OffDuration:self.OnDuration+self.OffDuration+self.MidDuration] = self.MidAmplitude
+
+        for i in range (self.ChirpDuration):
+            self.nStim[self.OnDuration+self.OffDuration+self.MidDuration+i] = self.Chirp[i]
+            self.nChirp[self.OnDuration + self.OffDuration + self.MidDuration + i] = self.ChirpModulation[i]
+
+        self.ui.StimulusGenerator_Oscilloscope_widget.clear()
+        self.SineCurve = self.ui.StimulusGenerator_Oscilloscope_widget.plot(self.XStim, self.nStim,pen=(Settings.DarkSolarized[5]))
+        self.ChirpCurve = self.ui.StimulusGenerator_Oscilloscope_widget.plot(self.XStim, self.Modulation,pen=(Settings.DarkSolarized[7]))
+
+
+    def ChirpWaveSave(self):
+        self.ChirpAmplitude = int(self.ui.Chirp_Amplitude_Value.text())
+        self.OnAmplitude = int(self.ui.Chirp_PreChirpOn_Amplitude_Value.text())
+        self.OnDuration = int(self.ui.Chirp_PreChirpOn_Duration_Value.text())
+        self.OffAmplitude = int(self.ui.Chirp_PreChirpOff_Amplitude_Value.text())
+        self.OffDuration = int(self.ui.Chirp_PreChirpOff_Duration_Value.text())
+        #self.ui.Chirp_PreChirpMid_Amplitude.setText(str(int(self.ChirpAmplitude/2)))
+        self.MidAmplitude = int(self.ui.Chirp_PreChirpMid_Amplitude.text())
+        self.MidDuration = int(self.ui.Chirp_PreChirpMid_Duration.text())
+        self.ChirpFrequency = int(self.ui.Chirp_Frequency_Value.text())/1000
+        self.StartFrequency = int(self.ui.Chirp_StartFrequency_Value.text())/1000
+        self.EndFrequency = int(self.ui.Chirp_EndFrequency_Value.text())/1000
+        self.ChirpDuration = int(self.ui.Chirp_Duration_Value.text())
+
+        self.StimDur = self.OnDuration*10 + self.OffDuration*10 + self.MidDuration*10 + self.ChirpDuration*10
+
+        self.LinTime = np.linspace(0, self.ChirpDuration, self.ChirpDuration*10)
+        self.LinModulation = np.linspace(self.StartFrequency, self.EndFrequency, self.ChirpDuration*10)
+        self.LinSinusoid = np.sin(self.LinTime * self.LinModulation) * self.ChirpAmplitude/2 + self.MidAmplitude
+        self.Linear_Chirp = np.around(self.LinSinusoid).astype(int)
+
+        self.XStim = np.arange(self.StimDur)
+        self.nStim = np.zeros(self.StimDur)
+        self.nStim[:self.OnDuration*10] = self.OnAmplitude
+        self.nStim[self.OnDuration*10:self.OnDuration*10+self.OffDuration*10] = self.OffAmplitude
+        self.nStim[self.OnDuration*10+self.OffDuration*10:self.OnDuration*10+self.OffDuration*10+self.MidDuration*10] = self.MidAmplitude
+        for i in range (self.ChirpDuration*10):
+            self.nStim[self.OnDuration*10+self.OffDuration*10+self.MidDuration*10+i] = self.Linear_Chirp[i]
+
+        self.ui.StimulusGenerator_Oscilloscope_widget.clear()
+        self.SineCurve = self.ui.StimulusGenerator_Oscilloscope_widget.plot(self.XStim, self.nStim,pen=(Settings.DarkSolarized[5]))
+
+
 
 

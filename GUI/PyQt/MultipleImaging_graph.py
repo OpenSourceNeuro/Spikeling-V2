@@ -14,65 +14,67 @@ import Page201
 
 
 
-def ImagingPlot(self):
+def MultipleImagingPlot(self):
     #Imaging parameters
-    self.Imaging_sampleinterval = 0.1
-    self.Imaging_timewindow = 250
-    self.Imaging_penwidth = 1
-    self.FrameRate = self.ui.Imaging_FrameRate_Slider.value()
-    self.ImagingDelta = 1 / self.FrameRate * 10000  # imaging resolution in ms
-    self.PMT = self.ui.Imaging_PMT_Slider.value()/100
-    self.Laser = self.ui.Imaging_Laser_Slider.value()/100
+    self.MultipleImaging_sampleinterval = 0.1
+    self.MultipleImaging_timewindow = 250
+    self.MultipleImaging_penwidth = 1
+    self.MultipleFrameRate = self.ui.MultipleImaging_FrameRate_Slider.value()
+    self.MultipleImagingDelta = 1 / self.MultipleFrameRate * 10000  # imaging resolution in ms
+    self.MultiplePMT = self.ui.MultipleImaging_PMT_Slider.value()/100
+    self.MultipleLaser = self.ui.MultipleImaging_Laser_Slider.value()/100
 
     # Calcium parameters
-    self.CalciumDecay = self.ui.Imaging_CalciumDecay_Slider.value()/10000#Indicator decay constant in ms
-    self.SpikeOccurence = 0 #number of spike at t
-    self.SpikeConcentrationRise = self.ui.Imaging_CalciumJump_Slider.value()#calcicum concentration rise for each spike in micromolar
-    self.CalciumBaseline = self.ui.Imaging_CalciumBaseline_Slider.value()/100 #in micromolar
-    self.NoiseScale = self.ui.Imaging_CalciumNoise_Slider.value()/10# sigmac
-    self.SpikeThreshold = -30.0
-    self.imaging_downsampling = 5
+    self.MultipleCalciumDecay = self.ui.MultipleImaging_CalciumDecay_Slider.value()/10000#Indicator decay constant in ms
+    self.MultipleSpikeOccurence = 0 #number of spike at t
+    self.MultipleSpikeConcentrationRise = self.ui.MultipleImaging_CalciumJump_Slider.value()#calcicum concentration rise for each spike in micromolar
+    self.MultipleCalciumBaseline = self.ui.MultipleImaging_CalciumBaseline_Slider.value()/100 #in micromolar
+    self.MultipleNoiseScale = self.ui.MultipleImaging_CalciumNoise_Slider.value()/10# sigmac
+    self.MultipleSpikeThreshold = -30.0
+    self.Multipleimaging_downsampling = 5
 
     # Fluorescence parameters
-    self.FluoScale = self.ui.Imaging_FluoScale_Slider.value()/10
-    self.FluoOffset = self.ui.Imaging_FluoOffset_Slider.value()
-    self.FluoNoiseScale = self.ui.Imaging_FluoNoise_Slider.value()/10
-    self.HillCoef = self.ui.Imaging_Hill_Slider.value()/100
-    self.PhotoShotNoise = self.ui.Imaging_PhotoShotNoise_Slider.value() / 10000 / 100
-    self.DissociationConstant = self.ui.Imaging_kd_Slider.value()*10 #micromolar
+    self.MultipleFluoScale = self.ui.MultipleImaging_FluoScale_Slider.value()/10
+    self.MultipleFluoOffset = self.ui.MultipleImaging_FluoOffset_Slider.value()
+    self.MultipleFluoNoiseScale = self.ui.MultipleImaging_FluoNoise_Slider.value()/10
+    self.MultipleHillCoef = self.ui.MultipleImaging_Hill_Slider.value()/100
+    self.MultiplePhotoShotNoise = self.ui.MultipleImaging_PhotoShotNoise_Slider.value() / 10000 / 100
+    self.MultipleDissociationConstant = self.ui.MultipleImaging_kd_Slider.value()*10 #micromolar
 
-    SetImagingInitParameters(self)
-    SetImagingPlotCurve(self)
-    SetImagingPlot(self)
+    SetMultipleImagingInitParameters(self)
+    SetMultipleImagingPlotCurve(self)
+    SetMultipleImagingPlot(self)
 
-    self.CalciumData = self.CalciumBaseline
+    self.MultipleCalciumData1 = self.MultipleCalciumBaseline
+    self.MultipleCalciumData2 = self.MultipleCalciumBaseline
+    self.MultipleCalciumData3 = self.MultipleCalciumBaseline
 
-    if self.ui.Imaging_pushButton.isChecked():
-        self.imagingtimer = QtCore.QTimer()
-        self.imagingtimer.timeout.connect(lambda: UpdateImagingPlot(self))
-        self.imagingtimer.start()
+    if self.ui.MultipleImaging_pushButton.isChecked():
+        self.Multipleimagingtimer = QtCore.QTimer()
+        self.Multipleimagingtimer.timeout.connect(lambda: UpdateMultipleImagingPlot(self))
+        self.Multipleimagingtimer.start()
     else:
-        self.imagingtimer.stop()
-        self.CurrentImagingPlots.clear()
-        self.CurrentImagingPlots.removeItem(self.Stimcurve)
-        self.ui.Imaging_Oscilloscope_widget.clear()
+        self.Multipleimagingtimer.stop()
+        self.MultipleCurrentImagingPlots.clear()
+        self.MultipleCurrentImagingPlots.removeItem(self.Stimcurve)
+        self.ui.MultipleImaging_Oscilloscope_widget.clear()
 
 
 
-    def UpdateImagingPlot(self):
-        self.ui.Imaging_Oscilloscope_widget.getViewBox().sigResized.connect(UpdateImagingViews(self))
-        self.ImagingData = GetData(self)
-        BuffImagingData(self)                              # Append latest data into buffer deque
-        #SaveImagingPlotData(self)                          # Create data array to be exported in .csv
-        if self.i_imaging_downsampling == 0:               # Plot Data once every "downsampling" time
-            PlotImagingCurve(self)
-        self.i_imaging_downsampling += 1
-        if self.i_imaging_downsampling == self.imaging_downsampling - 1:
-            self.i_imaging_downsampling = 0
+    def UpdateMultipleImagingPlot(self):
+        self.ui.MultipleImaging_Oscilloscope_widget.getViewBox().sigResized.connect(UpdateMultipleImagingViews(self))
+        self.MultipleImagingData = GetMultipleData(self)
+        BuffMultipleImagingData(self)                              # Append latest data into buffer deque
+        #SaveMultipleImagingPlotData(self)                          # Create data array to be exported in .csv
+        if self.i_Multipleimaging_downsampling == 0:               # Plot Data once every "downsampling" time
+            PlotMultipleImagingCurve(self)
+        self.i_Multipleimaging_downsampling += 1
+        if self.i_Multipleimaging_downsampling == self.Multipleimaging_downsampling - 1:
+            self.i_Multipleimaging_downsampling = 0
 
 
     # Read Serial and return data
-    def GetData(self):
+    def GetMultipleData(self):
         self.rx = self.serial_port.readline()
         self.rx_serial = str(self.rx, 'utf8').strip()
         self.data = self.rx_serial.split(',')
@@ -80,57 +82,138 @@ def ImagingPlot(self):
 
 
     # Append latest serial data point into buffer deque
-    def BuffImagingData(self):
-        self.VmData = self.ImagingData[0]
-        self.StimData = self.ImagingData[1]
-        if float(self.Vmdatabuffer[-1]) >= self.SpikeThreshold and float(self.Vmdatabuffer[-2]) <= self.SpikeThreshold:
-             self.SpikeOccurence = 1
+    def BuffMultipleImagingData(self):
+        self.MultipleVmData1 = self.MultipleImagingData[0]
+        self.MultipleVmData2 = self.MultipleImagingData[3]
+        self.MultipleVmData3 = self.MultipleImagingData[5]
+        self.MultipleStimData = self.MultipleImagingData[1]
+
+        if float(self.MultipleVmdatabuffer1[-1]) >= self.MultipleSpikeThreshold and float(self.MultipleVmdatabuffer1[-2]) <= self.MultipleSpikeThreshold:
+             self.MultipleSpikeOccurence1 = 1
         else:
-             self.SpikeOccurence = 0
+             self.MultipleSpikeOccurence1 = 0
 
-        self.CalciumGaussianNoise = np.random.normal(0,1)
-        self.CalciumData = self.CalciumData - self.CalciumDecay*self.CalciumData + self.CalciumBaseline + self.SpikeConcentrationRise*self.SpikeOccurence + self.NoiseScale*np.sqrt(self.ImagingDelta/10000)*self.CalciumGaussianNoise
+        if float(self.MultipleVmdatabuffer2[-1]) >= self.MultipleSpikeThreshold and float(self.MultipleVmdatabuffer2[-2]) <= self.MultipleSpikeThreshold:
+             self.MultipleSpikeOccurence2 = 1
+        else:
+             self.MultipleSpikeOccurence2 = 0
 
-        if self.SaturationFlag == False:
-            self.FluoGaussianNoise = np.random.normal(0, 1)
-            self.FluoData = self.Laser*self.PMT*self.FluoScale*self.CalciumData + self.FluoOffset + self.FluoNoiseScale*self.FluoGaussianNoise
+        if float(self.MultipleVmdatabuffer3[-1]) >= self.MultipleSpikeThreshold and float(self.MultipleVmdatabuffer3[-2]) <= self.MultipleSpikeThreshold:
+             self.MultipleSpikeOccurence3 = 1
+        else:
+             self.MultipleSpikeOccurence3 = 0
 
-        if self.SaturationFlag == True:
-            self.FluoGaussianNoise = np.random.normal(0, 1)
-            self.FluoNoiseScale = self.FluoNoiseScale/10000
-            self.SatNoise = np.sqrt(self.PhotoShotNoise * self.CalciumData**self.HillCoef / (self.CalciumData**self.HillCoef + self.DissociationConstant) + self.FluoNoiseScale)*self.FluoGaussianNoise
-            self.FluoData = self.DissociationConstant * (self.Laser*self.PMT*self.FluoScale*(self.CalciumData**self.HillCoef/(self.CalciumData**self.HillCoef+self.DissociationConstant))  + self.SatNoise) + self.FluoOffset
+        self.MultipleCalciumGaussianNoise1 = np.random.normal(0,1)
+        self.MultipleCalciumData1 = self.MultipleCalciumData1 - self.MultipleCalciumDecay*self.MultipleCalciumData1 + self.MultipleCalciumBaseline + self.MultipleSpikeConcentrationRise*self.MultipleSpikeOccurence1 + self.MultipleNoiseScale*np.sqrt(self.MultipleImagingDelta/10000)*self.MultipleCalciumGaussianNoise1
 
-        self.Calciumdatabuffer.append(self.CalciumData)
-        self.Fluodatabuffer.append(self.FluoData)
-        self.Stimdatabuffer.append(self.StimData)
-        self.Vmdatabuffer.append(self.VmData)
+        self.MultipleCalciumGaussianNoise2 = np.random.normal(0,1)
+        self.MultipleCalciumData2 = self.MultipleCalciumData2 - self.MultipleCalciumDecay*self.MultipleCalciumData2 + self.MultipleCalciumBaseline + self.MultipleSpikeConcentrationRise*self.MultipleSpikeOccurence2 + self.MultipleNoiseScale*np.sqrt(self.MultipleImagingDelta/10000)*self.MultipleCalciumGaussianNoise2
+
+        self.MultipleCalciumGaussianNoise3 = np.random.normal(0,1)
+        self.MultipleCalciumData3 = self.MultipleCalciumData3 - self.MultipleCalciumDecay*self.MultipleCalciumData3 + self.MultipleCalciumBaseline + self.MultipleSpikeConcentrationRise*self.MultipleSpikeOccurence3 + self.MultipleNoiseScale*np.sqrt(self.MultipleImagingDelta/10000)*self.MultipleCalciumGaussianNoise3
+
+
+        if self.MultipleSaturationFlag == False:
+            self.MultipleFluoGaussianNoise1 = np.random.normal(0, 1)
+            self.MultipleFluoData1 = self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*self.MultipleCalciumData1 + self.MultipleFluoOffset + self.MultipleFluoNoiseScale*self.MultipleFluoGaussianNoise1
+
+            self.MultipleFluoGaussianNoise2 = np.random.normal(0, 1)
+            self.MultipleFluoData2 = self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*self.MultipleCalciumData2 + self.MultipleFluoOffset + self.MultipleFluoNoiseScale*self.MultipleFluoGaussianNoise2
+
+            self.MultipleFluoGaussianNoise3 = np.random.normal(0, 1)
+            self.MultipleFluoData3 = self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*self.MultipleCalciumData3 + self.MultipleFluoOffset + self.MultipleFluoNoiseScale*self.MultipleFluoGaussianNoise3
+
+
+        if self.MultipleSaturationFlag == True:
+            self.MultipleFluoNoiseScale = self.MultipleFluoNoiseScale/10000
+
+            self.MultipleFluoGaussianNoise1 = np.random.normal(0, 1)
+            self.MultipleSatNoise1 = np.sqrt(self.MultiplePhotoShotNoise * self.MultipleCalciumData1**self.MultipleHillCoef / (self.MultipleCalciumData1**self.MultipleHillCoef + self.MultipleDissociationConstant) + self.MultipleFluoNoiseScale)*self.MultipleFluoGaussianNoise1
+            self.MultipleFluoData1 = self.MultipleDissociationConstant * (self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*(self.MultipleCalciumData1**self.MultipleHillCoef/(self.MultipleCalciumData1**self.MultipleHillCoef+self.MultipleDissociationConstant)) + self.MultipleSatNoise1) + self.MultipleFluoOffset
+
+            self.MultipleFluoGaussianNoise2 = np.random.normal(0, 1)
+            self.MultipleSatNoise2 = np.sqrt(self.MultiplePhotoShotNoise * self.MultipleCalciumData2**self.MultipleHillCoef / (self.MultipleCalciumData2**self.MultipleHillCoef + self.MultipleDissociationConstant) + self.MultipleFluoNoiseScale)*self.MultipleFluoGaussianNoise2
+            self.MultipleFluoData2 = self.MultipleDissociationConstant * (self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*(self.MultipleCalciumData2**self.MultipleHillCoef/(self.MultipleCalciumData2**self.MultipleHillCoef+self.MultipleDissociationConstant)) + self.MultipleSatNoise2) + self.MultipleFluoOffset
+
+            self.MultipleFluoGaussianNoise3 = np.random.normal(0, 1)
+            self.MultipleSatNoise3 = np.sqrt(self.MultiplePhotoShotNoise * self.MultipleCalciumData3**self.MultipleHillCoef / (self.MultipleCalciumData3**self.MultipleHillCoef + self.MultipleDissociationConstant) + self.MultipleFluoNoiseScale)*self.MultipleFluoGaussianNoise3
+            self.MultipleFluoData3 = self.MultipleDissociationConstant * (self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*(self.MultipleCalciumData3**self.MultipleHillCoef/(self.MultipleCalciumData3**self.MultipleHillCoef+self.MultipleDissociationConstant)) + self.MultipleSatNoise3) + self.MultipleFluoOffset
+
+        self.MultipleCalciumdatabuffer1.append(self.MultipleCalciumData1)
+        self.MultipleCalciumdatabuffer2.append(self.MultipleCalciumData2)
+        self.MultipleCalciumdatabuffer3.append(self.MultipleCalciumData3)
+        self.MultipleFluodatabuffer1.append(self.MultipleFluoData1)
+        self.MultipleFluodatabuffer2.append(self.MultipleFluoData2)
+        self.MultipleFluodatabuffer3.append(self.MultipleFluoData3)
+        self.MultipleStimdatabuffer.append(self.MultipleStimData)
+        self.MultipleVmdatabuffer1.append(self.MultipleVmData1)
+        self.MultipleVmdatabuffer2.append(self.MultipleVmData2)
+        self.MultipleVmdatabuffer3.append(self.MultipleVmData3)
 
     # If checked, plot latest buffer data points
-    def PlotImagingCurve(self):
-        if self.ui.Imaging_Calcium_Checkbox.isChecked():
-            self.yCalcium[:] = self.Calciumdatabuffer
-            self.Calciumcurve.setData(self.Imagingx, self.yCalcium)
+    def PlotMultipleImagingCurve(self):
+        if self.ui.MultipleImaging_Calcium1_Checkbox.isChecked():
+            self.yMultipleCalcium1[:] = self.MultipleCalciumdatabuffer1
+            self.MultipleCalciumcurve1.setData(self.MultipleImagingx, self.yMultipleCalcium1)
         else:
-            self.Calciumcurve.clear()
+            self.MultipleCalciumcurve1.clear()
 
-        if self.ui.Imaging_Fluorescence_Checkbox.isChecked():
-            self.yFluo[:] = self.Fluodatabuffer
-            self.Fluocurve.setData(self.Imagingx, self.yFluo)
+        if self.ui.MultipleImaging_Calcium2_Checkbox.isChecked():
+            self.yMultipleCalcium2[:] = self.MultipleCalciumdatabuffer2
+            self.MultipleCalciumcurve2.setData(self.MultipleImagingx, self.yMultipleCalcium2)
         else:
-            self.Fluocurve.clear()
+            self.MultipleCalciumcurve2.clear()
 
-        if self.ui.Imaging_Stimulus_Checkbox.isChecked():
-            self.yStim[:] = self.Stimdatabuffer
-            self.Stimcurve.setData(self.Imagingx, self.yStim)
+        if self.ui.MultipleImaging_Calcium3_Checkbox.isChecked():
+            self.yMultipleCalcium3[:] = self.MultipleCalciumdatabuffer3
+            self.MultipleCalciumcurve3.setData(self.MultipleImagingx, self.yMultipleCalcium3)
         else:
-            self.Stimcurve.clear()
+            self.MultipleCalciumcurve3.clear()
 
-        if self.ui.Imaging_Vm_Checkbox.isChecked():
-            self.yVm[:] = self.Vmdatabuffer
-            self.Vmcurve.setData(self.Imagingx, self.yVm)
+
+        if self.ui.MultipleImaging_Fluorescence1_Checkbox.isChecked():
+            self.yMultipleFluo1[:] = self.MultipleFluodatabuffer1
+            self.MultipleFluocurve1.setData(self.MultipleImagingx, self.yMultipleFluo1)
         else:
-            self.Vmcurve.clear()
+            self.MultipleFluocurve1.clear()
+
+        if self.ui.MultipleImaging_Fluorescence2_Checkbox.isChecked():
+            self.yMultipleFluo2[:] = self.MultipleFluodatabuffer2
+            self.MultipleFluocurve2.setData(self.MultipleImagingx, self.yMultipleFluo2)
+        else:
+            self.MultipleFluocurve2.clear()
+
+        if self.ui.MultipleImaging_Fluorescence3_Checkbox.isChecked():
+            self.yMultipleFluo3[:] = self.MultipleFluodatabuffer3
+            self.MultipleFluocurve3.setData(self.MultipleImagingx, self.yMultipleFluo3)
+        else:
+            self.MultipleFluocurve3.clear()
+
+
+        if self.ui.MultipleImaging_Stimulus_Checkbox.isChecked():
+            self.yMultipleStim[:] = self.MultipleStimdatabuffer
+            self.MultipleStimcurve.setData(self.MultipleImagingx, self.yMultipleStim)
+        else:
+            self.MultipleStimcurve.clear()
+
+
+        if self.ui.MultipleImaging_Vm1_Checkbox.isChecked():
+            self.yMultipleVm1[:] = self.MultipleVmdatabuffer1
+            self.MultipleVmcurve1.setData(self.MultipleImagingx, self.yMultipleVm1)
+        else:
+            self.MultipleVmcurve1.clear()
+
+        if self.ui.MultipleImaging_Vm2_Checkbox.isChecked():
+            self.yMultipleVm2[:] = self.MultipleVmdatabuffer2
+            self.MultipleVmcurve2.setData(self.MultipleImagingx, self.yMultipleVm2)
+        else:
+            self.MultipleVmcurve2.clear()
+
+        if self.ui.MultipleImaging_Vm3_Checkbox.isChecked():
+            self.yMultipleVm3[:] = self.MultipleVmdatabuffer3
+            self.MultipleVmcurve3.setData(self.MultipleImagingx, self.yMultipleVm3)
+        else:
+            self.MultipleVmcurve3.clear()
 
 
 
@@ -166,75 +249,107 @@ def ImagingPlot(self):
 #         self.Dataset6.append(self.databuffer6[-1])
 
 
-def SetImagingInitParameters(self):
-    self.i_imaging_downsampling = 0
-    self.recordflag = False
-    self.SaturationFlag = False
-    self.ui.Imaging_Oscilloscope_widget.clear()
-    if self.ui.Imaging_pushButton.isChecked():
-        self.ui.Imaging_pushButton.setText("Connected")
-        self.ui.Imaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[3])) + ";\n"
-                                                "background-color: rgb" + str(tuple(Settings.DarkSolarized[11])) + ";\n"
-                                                "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "border-radius: 10px;"
-                                                )
+def SetMultipleImagingInitParameters(self):
+    self.i_Multipleimaging_downsampling = 0
+    self.Multiplerecordflag = False
+    self.MultipleSaturationFlag = False
+    self.ui.MultipleImaging_Oscilloscope_widget.clear()
+    if self.ui.MultipleImaging_pushButton.isChecked():
+        self.ui.MultipleImaging_pushButton.setText("Connected")
+        self.ui.MultipleImaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[3])) + ";\n"
+                                                         "background-color: rgb" + str(tuple(Settings.DarkSolarized[11])) + ";\n"
+                                                         "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                         "border-radius: 10px;"
+                                                         )
     else:
-        self.ui.Imaging_pushButton.setText("Connect Imaging screen to Spikeling screen")
-        self.ui.Imaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
-                                                "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "border-radius: 10px;"
-                                                )
+        self.ui.MultipleImaging_pushButton.setText("Connect MultipleImaging screen to Spikeling screen")
+        self.ui.MultipleImaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                         "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                         "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                         "border-radius: 10px;"
+                                                        )
 
-def SetImagingPlotCurve(self):
-    self._Imaging_bufsize = int(self.Imaging_timewindow / self.Imaging_sampleinterval)
+def SetMultipleImagingPlotCurve(self):
+    self._MultipleImaging_bufsize = int(self.MultipleImaging_timewindow / self.MultipleImaging_sampleinterval)
 
-    self.Calciumdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Fluodatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Stimdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Vmdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
+    self.MultipleCalciumdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleCalciumdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleCalciumdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleStimdatabuffer = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
 
-    self.Imagingx = np.linspace(-self.Imaging_timewindow, 0.0, self._Imaging_bufsize)            # Create arrays of self._Imaging_bufsize length
-    self.yCalcium = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yFluo = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yStim = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yVm = np.zeros(self._Imaging_bufsize, dtype=float)
+    self.MultipleImagingx = np.linspace(-self.MultipleImaging_timewindow, 0.0, self._MultipleImaging_bufsize)            # Create arrays of self._Imaging_bufsize length
+    self.yMultipleCalcium1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleCalcium2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleCalcium3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleStim = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
 
-    self.CalciumDataset = Data_recording.DynamicArray()
-    self.FluoDataset = Data_recording.DynamicArray()
-    self.StimDataset = Data_recording.DynamicArray()
-    self.VmDataset = Data_recording.DynamicArray()
-
-
-def SetImagingPlot(self):
-    self.ui.Imaging_Oscilloscope_widget.showGrid(x=True, y=True)
-    self.ui.Imaging_Oscilloscope_widget.setRange(xRange=[-self.Imaging_timewindow, 0])
-    self.ui.Imaging_Oscilloscope_widget.setLabel('left', 'Fluorescence  /  [Ca2+]    ', 'a.u.  /  µM')
-    self.ui.Imaging_Oscilloscope_widget.setLabel('bottom', 'time', 'ms')
-    self.ui.Imaging_Oscilloscope_widget.setLabel('right', 'Stimulus Intensity / Vm', 'a.u. / mV')
-
-    self.CurrentImagingPlots = pg.ViewBox()
-    self.ui.Imaging_Oscilloscope_widget.scene().addItem(self.CurrentImagingPlots)
-    self.CurrentImagingPlots.setXLink(self.ui.Imaging_Oscilloscope_widget)
-    self.CurrentImagingPlots.setRange(yRange=[-100, 100])
-    self.ui.Imaging_Oscilloscope_widget.getAxis("right").linkToView(self.CurrentImagingPlots)
-
-    self.Calciumcurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yCalcium, pen=pg.mkPen(Settings.DarkSolarized[10], width=self.Imaging_penwidth))
-    self.Calciumcurve.clear()
-    self.Fluocurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yFluo, pen=pg.mkPen(Settings.DarkSolarized[4], width=self.Imaging_penwidth))
-    self.Fluocurve.clear()
-    self.Stimcurve = pg.PlotCurveItem(self.Imagingx, self.yStim, pen=pg.mkPen(Settings.DarkSolarized[5], width=self.Imaging_penwidth))
-    self.Stimcurve.clear()
-    self.Vmcurve = pg.PlotCurveItem(self.Imagingx, self.yVm, pen=pg.mkPen(Settings.DarkSolarized[3], width=self.Imaging_penwidth))
-    self.Vmcurve.clear()
-
-    self.CurrentImagingPlots.addItem(self.Stimcurve)
-    self.CurrentImagingPlots.addItem(self.Vmcurve)
+    self.MultipleCalciumDataset1 = Data_recording.DynamicArray()
+    self.MultipleCalciumDataset2 = Data_recording.DynamicArray()
+    self.MultipleCalciumDataset3 = Data_recording.DynamicArray()
+    self.MultipleFluoDataset1 = Data_recording.DynamicArray()
+    self.MultipleFluoDataset2 = Data_recording.DynamicArray()
+    self.MultipleFluoDataset3 = Data_recording.DynamicArray()
+    self.MultipleStimDataset = Data_recording.DynamicArray()
+    self.MultipleVmDataset1 = Data_recording.DynamicArray()
+    self.MultipleVmDataset2 = Data_recording.DynamicArray()
+    self.MultipleVmDataset3 = Data_recording.DynamicArray()
 
 
-def UpdateImagingViews(self):
-    self.CurrentImagingPlots.setGeometry(self.ui.Imaging_Oscilloscope_widget.getViewBox().sceneBoundingRect())
-    self.CurrentImagingPlots.linkedViewChanged(self.ui.Imaging_Oscilloscope_widget.getViewBox(), self.CurrentImagingPlots.XAxis)
+def SetMultipleImagingPlot(self):
+    self.ui.MultipleImaging_Oscilloscope_widget.showGrid(x=True, y=True)
+    self.ui.MultipleImaging_Oscilloscope_widget.setRange(xRange=[-self.MultipleImaging_timewindow, 0])
+    self.ui.MultipleImaging_Oscilloscope_widget.setLabel('left', 'Fluorescence  /  [Ca2+]    ', 'a.u.  /  µM')
+    self.ui.MultipleImaging_Oscilloscope_widget.setLabel('bottom', 'time', 'ms')
+    self.ui.MultipleImaging_Oscilloscope_widget.setLabel('right', 'Stimulus Intensity / Vm', 'a.u. / mV')
+
+    self.CurrentMultipleImagingPlots = pg.ViewBox()
+    self.ui.MultipleImaging_Oscilloscope_widget.scene().addItem(self.CurrentMultipleImagingPlots)
+    self.CurrentMultipleImagingPlots.setXLink(self.ui.MultipleImaging_Oscilloscope_widget)
+    self.CurrentMultipleImagingPlots.setRange(yRange=[-100, 100])
+    self.ui.MultipleImaging_Oscilloscope_widget.getAxis("right").linkToView(self.CurrentMultipleImagingPlots)
+
+    self.MultipleCalciumcurve1 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleCalcium1, pen=pg.mkPen(Settings.DarkSolarized[10], width=self.MultipleImaging_penwidth))
+    self.MultipleCalciumcurve1.clear()
+    self.MultipleCalciumcurve2 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleCalcium2, pen=pg.mkPen(Settings.DarkSolarized[9], width=self.MultipleImaging_penwidth))
+    self.MultipleCalciumcurve2.clear()
+    self.MultipleCalciumcurve3 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleCalcium3, pen=pg.mkPen(Settings.DarkSolarized[7], width=self.MultipleImaging_penwidth))
+    self.MultipleCalciumcurve1.clear()
+    self.MultipleFluocurve1 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleFluo1, pen=pg.mkPen(Settings.DarkSolarized[4], width=self.MultipleImaging_penwidth))
+    self.MultipleFluocurve1.clear()
+    self.MultipleFluocurve2 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleFluo2, pen=pg.mkPen([0,255,133], width=self.MultipleImaging_penwidth))
+    self.MultipleFluocurve2.clear()
+    self.MultipleFluocurve3 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleFluo3, pen=pg.mkPen([133,255,0],width=self.MultipleImaging_penwidth))
+    self.MultipleFluocurve3.clear()
+    self.MultipleStimcurve = pg.PlotCurveItem(self.MultipleImagingx, self.yMultipleStim, pen=pg.mkPen(Settings.DarkSolarized[5], width=self.MultipleImaging_penwidth))
+    self.MultipleStimcurve.clear()
+    self.MultipleVmcurve1 = pg.PlotCurveItem(self.MultipleImagingx, self.yMultipleVm1, pen=pg.mkPen(Settings.DarkSolarized[3], width=self.MultipleImaging_penwidth))
+    self.MultipleVmcurve1.clear()
+    self.MultipleVmcurve2 = pg.PlotCurveItem(self.MultipleImagingx, self.yMultipleVm2, pen=pg.mkPen(Settings.DarkSolarized[6], width=self.MultipleImaging_penwidth))
+    self.MultipleVmcurve2.clear()
+    self.MultipleVmcurve3 = pg.PlotCurveItem(self.MultipleImagingx, self.yMultipleVm3, pen=pg.mkPen(Settings.DarkSolarized[8], width=self.MultipleImaging_penwidth))
+    self.MultipleVmcurve3.clear()
+
+    self.CurrentMultipleImagingPlots.addItem(self.MultipleStimcurve)
+    self.CurrentMultipleImagingPlots.addItem(self.MultipleVmcurve1)
+    self.CurrentMultipleImagingPlots.addItem(self.MultipleVmcurve2)
+    self.CurrentMultipleImagingPlots.addItem(self.MultipleVmcurve3)
+
+
+def UpdateMultipleImagingViews(self):
+    self.CurrentMultipleImagingPlots.setGeometry(self.ui.MultipleImaging_Oscilloscope_widget.getViewBox().sceneBoundingRect())
+    self.CurrentMultipleImagingPlots.linkedViewChanged(self.ui.MultipleImaging_Oscilloscope_widget.getViewBox(), self.CurrentMultipleImagingPlots.XAxis)
 
 
 

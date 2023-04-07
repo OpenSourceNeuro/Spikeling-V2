@@ -17,11 +17,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
     QGroupBox, QHBoxLayout, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QRadioButton, QSizePolicy,
-    QSlider, QSpacerItem, QStackedWidget, QTextBrowser,
+    QMainWindow, QPushButton, QSizePolicy, QSlider,
+    QSpacerItem, QStackedWidget, QTextBrowser, QToolBox,
     QVBoxLayout, QWidget)
 
 from pyqtgraph import PlotWidget
+import resources_rc
 import resources_rc
 import resources_rc
 import resources_rc
@@ -32,7 +33,7 @@ class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1296, 759)
+        MainWindow.resize(1280, 759)
         MainWindow.setMinimumSize(QSize(1280, 720))
         MainWindow.setStyleSheet(u"*{\n"
 "	border:none;\n"
@@ -96,6 +97,13 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "\n"
+"#Connection_frame QPushButton{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"    border: 1px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"    padding: 0px 10px;\n"
+"}\n"
+"\n"
 "#Spikeling_rightMenuSubContainer{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
@@ -116,13 +124,13 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "\n"
 "\n"
-"#Spikeling_DataRecording_box{\n"
+"#Spikeling_DataRecord"
+                        "ing_box{\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#Spikeling_DataRecording_box QLineEdit{\n"
 "	border: 2px solid rgb(147,161,161);\n"
-"    background-color: rgb(7, 54, 66);"
-                        "\n"
+"    background-color: rgb(7, 54, 66);\n"
 "}\n"
 "#Spikeling_DataRecording_box QComboBox{\n"
 "	border: 2px solid rgb(147,161,161);\n"
@@ -151,7 +159,8 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Spikeling_CenterMenuContainer{\n"
-"	background-color: rgb(7, 54, 66)\n"
+""
+                        "	background-color: rgb(7, 54, 66)\n"
 "}\n"
 "#Spikeling_parameter_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
@@ -161,8 +170,7 @@ class Ui_MainWindow(QWidget):
 "\n"
 "\n"
 "#Imaging_rightMenuSubContainer{\n"
-""
-                        "	background-color: rgb(0, 30, 38);\n"
+"	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Imaging_parameter_stackedWidget{\n"
 "	background-color: rgb(0, 43, 54);\n"
@@ -190,13 +198,14 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Imaging_pushButton_frame QPushButton{\n"
-"	background-color: rgb(7, 54, 66);\n"
+""
+                        "	background-color: rgb(7, 54, 66);\n"
 "    border: 1px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
+"    padding: 0px 10px;\n"
 "}\n"
 "#Imaging_GECI_comboBox_frame QComboBox{\n"
-"	background-color: r"
-                        "gb(7, 54, 66);\n"
+"	background-color: rgb(7, 54, 66);\n"
 "	padding: 2px 2px;\n"
 "}\n"
 "\n"
@@ -225,17 +234,18 @@ class Ui_MainWindow(QWidget):
 "#MultipleImaging_rightMenuSubContainer_frame QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#MultipleImaging_CenterMenuContainer{\n"
+"#MultipleImaging_Cente"
+                        "rMenuContainer{\n"
 "	background-color: rgb(7, 54, 66)\n"
 "}\n"
 "#MultipleImaging_parameter_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#MultipleImaging_pushButton_frame QPushButton{\n"
-"	ba"
-                        "ckground-color: rgb(7, 54, 66);\n"
+"	background-color: rgb(7, 54, 66);\n"
 "    border: 1px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
+"    padding: 0px 10px;\n"
 "}\n"
 "#MultipleImaging_GECI_comboBox_frame QComboBox{\n"
 "	background-color: rgb(7, 54, 66);\n"
@@ -261,15 +271,15 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "#NeuronGenerator_subframe2 QComboBox{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	border: 2p"
+                        "x solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
 "	margin: 5px\n"
 "}\n"
 "#NeuronGenerator_subframe1_Izhik_frame QTextBrowser{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2px solid rgb(147,161,161)"
-                        ";\n"
+"	border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "\n"
 "\n"
@@ -308,7 +318,8 @@ class Ui_MainWindow(QWidget):
 "\n"
 "#page_401 QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	border: 2px solid r"
+                        "gb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
@@ -316,8 +327,7 @@ class Ui_MainWindow(QWidget):
 "	background-color: rgb(7, 54, 66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
-"	padding: 5"
-                        "px 5px;\n"
+"	padding: 5px 5px;\n"
 "	margin: 5px\n"
 "}\n"
 "#StimulusGenerator_Container QLineEdit{\n"
@@ -671,6 +681,7 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_18.setContentsMargins(0, 5, 0, 0)
         self.Spikeling_SubMenu_label = QLabel(self.Spikeling_SubMenu_label_frame)
         self.Spikeling_SubMenu_label.setObjectName(u"Spikeling_SubMenu_label")
+        self.Spikeling_SubMenu_label.setFont(font1)
 
         self.verticalLayout_18.addWidget(self.Spikeling_SubMenu_label)
 
@@ -747,6 +758,9 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
         self.Imaging_SubMenu_label = QLabel(self.Imaging_SubMenu_label_frame)
         self.Imaging_SubMenu_label.setObjectName(u"Imaging_SubMenu_label")
+        self.Imaging_SubMenu_label.setMaximumSize(QSize(300, 16777215))
+        self.Imaging_SubMenu_label.setFont(font1)
+        self.Imaging_SubMenu_label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_20.addWidget(self.Imaging_SubMenu_label)
 
@@ -828,11 +842,6 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_15.setSpacing(0)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.label_9 = QLabel(self.StimulusGenerator_SubMenu_page)
-        self.label_9.setObjectName(u"label_9")
-
-        self.verticalLayout_15.addWidget(self.label_9, 0, Qt.AlignHCenter|Qt.AlignTop)
-
         self.centerMenuSubContainer_menu_stackedwidget.addWidget(self.StimulusGenerator_SubMenu_page)
         self.Exercises_SubMenu_page = QWidget()
         self.Exercises_SubMenu_page.setObjectName(u"Exercises_SubMenu_page")
@@ -848,6 +857,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_60.setObjectName(u"verticalLayout_60")
         self.Exercices_SubMenu_label = QLabel(self.Exercices_SubMenu_label_frame)
         self.Exercices_SubMenu_label.setObjectName(u"Exercices_SubMenu_label")
+        self.Exercices_SubMenu_label.setFont(font1)
+        self.Exercices_SubMenu_label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_60.addWidget(self.Exercices_SubMenu_label)
 
@@ -864,23 +875,79 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_61.addItem(self.verticalSpacer_13)
 
-        self.Exercice101_pushButton = QPushButton(self.Exercices_SubMenu_button_frame)
+        self.toolBox = QToolBox(self.Exercices_SubMenu_button_frame)
+        self.toolBox.setObjectName(u"toolBox")
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.page_3.setGeometry(QRect(0, 0, 164, 118))
+        self.verticalLayout_98 = QVBoxLayout(self.page_3)
+        self.verticalLayout_98.setSpacing(5)
+        self.verticalLayout_98.setObjectName(u"verticalLayout_98")
+        self.verticalLayout_98.setContentsMargins(0, 0, 0, 0)
+        self.Exercice101_pushButton = QPushButton(self.page_3)
         self.Exercice101_pushButton.setObjectName(u"Exercice101_pushButton")
         font2 = QFont()
-        font2.setPointSize(10)
+        font2.setPointSize(9)
         self.Exercice101_pushButton.setFont(font2)
 
-        self.verticalLayout_61.addWidget(self.Exercice101_pushButton)
+        self.verticalLayout_98.addWidget(self.Exercice101_pushButton)
 
-        self.verticalSpacer_15 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_61.addItem(self.verticalSpacer_15)
-
-        self.Exercice102_pushButton = QPushButton(self.Exercices_SubMenu_button_frame)
+        self.Exercice102_pushButton = QPushButton(self.page_3)
         self.Exercice102_pushButton.setObjectName(u"Exercice102_pushButton")
         self.Exercice102_pushButton.setFont(font2)
 
-        self.verticalLayout_61.addWidget(self.Exercice102_pushButton)
+        self.verticalLayout_98.addWidget(self.Exercice102_pushButton)
+
+        self.pushButton = QPushButton(self.page_3)
+        self.pushButton.setObjectName(u"pushButton")
+
+        self.verticalLayout_98.addWidget(self.pushButton)
+
+        self.toolBox.addItem(self.page_3, u"1 - Introduction to Spikeling")
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.page_4.setGeometry(QRect(0, 0, 83, 77))
+        self.verticalLayout_99 = QVBoxLayout(self.page_4)
+        self.verticalLayout_99.setSpacing(5)
+        self.verticalLayout_99.setObjectName(u"verticalLayout_99")
+        self.verticalLayout_99.setContentsMargins(0, 0, 0, 0)
+        self.pushButton_3 = QPushButton(self.page_4)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+
+        self.verticalLayout_99.addWidget(self.pushButton_3)
+
+        self.pushButton_2 = QPushButton(self.page_4)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.verticalLayout_99.addWidget(self.pushButton_2)
+
+        self.toolBox.addItem(self.page_4, u"2 - Electrophysiology")
+        self.page_6 = QWidget()
+        self.page_6.setObjectName(u"page_6")
+        self.page_6.setGeometry(QRect(0, 0, 100, 30))
+        self.toolBox.addItem(self.page_6, u"3 - Photo-stimulation")
+        self.page_7 = QWidget()
+        self.page_7.setObjectName(u"page_7")
+        self.page_7.setGeometry(QRect(0, 0, 100, 30))
+        self.toolBox.addItem(self.page_7, u"4 - Synapses")
+        self.page_8 = QWidget()
+        self.page_8.setObjectName(u"page_8")
+        self.page_8.setGeometry(QRect(0, 0, 100, 30))
+        self.toolBox.addItem(self.page_8, u"5 - Neuronal network")
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.page_5.setGeometry(QRect(0, 0, 100, 30))
+        self.toolBox.addItem(self.page_5, u"6- Fluorescence Imaging")
+        self.page_9 = QWidget()
+        self.page_9.setObjectName(u"page_9")
+        self.page_9.setGeometry(QRect(0, 0, 100, 30))
+        self.toolBox.addItem(self.page_9, u"7 - Spike Inference")
+        self.page_10 = QWidget()
+        self.page_10.setObjectName(u"page_10")
+        self.page_10.setGeometry(QRect(0, 0, 65, 16))
+        self.toolBox.addItem(self.page_10, u"8 - Methodology")
+
+        self.verticalLayout_61.addWidget(self.toolBox)
 
         self.verticalSpacer_14 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -1161,10 +1228,11 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_117.addWidget(self.Spikeling_SelectPortComboBox)
 
-        self.Spikeling_ConnectButton = QRadioButton(self.Connection_frame)
+        self.Spikeling_ConnectButton = QPushButton(self.Connection_frame)
         self.Spikeling_ConnectButton.setObjectName(u"Spikeling_ConnectButton")
-        self.Spikeling_ConnectButton.setEnabled(False)
+        self.Spikeling_ConnectButton.setEnabled(True)
         self.Spikeling_ConnectButton.setFont(font1)
+        self.Spikeling_ConnectButton.setCheckable(True)
 
         self.horizontalLayout_117.addWidget(self.Spikeling_ConnectButton)
 
@@ -3509,7 +3577,9 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton10.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton10")
         self.DataAnalysis_Neuron0Vm_pushButton10.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton10.setFont(font2)
+        font6 = QFont()
+        font6.setPointSize(10)
+        self.DataAnalysis_Neuron0Vm_pushButton10.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton10.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron0Vm_pushButton10)
@@ -3518,7 +3588,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton10.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton10")
         self.DataAnalysis_Neuron1Vm_pushButton10.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton10.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton10.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton10.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron1Vm_pushButton10)
@@ -3532,7 +3602,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton10.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton10.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton10.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton10.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton10.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron2Vm_pushButton10)
@@ -3609,7 +3679,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton11.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton11")
         self.DataAnalysis_Neuron0Vm_pushButton11.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton11.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton11.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton11.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron0Vm_pushButton11)
@@ -3618,7 +3688,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton11.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton11")
         self.DataAnalysis_Neuron1Vm_pushButton11.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton11.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton11.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton11.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron1Vm_pushButton11)
@@ -3629,7 +3699,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton11.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton11.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton11.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton11.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton11.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron2Vm_pushButton11)
@@ -3682,9 +3752,9 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget1_2_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMinimumSize(QSize(0, 150))
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMaximumSize(QSize(16777215, 150))
-        font6 = QFont()
-        font6.setPointSize(11)
-        self.DataAnalysis_Oscilloscope_widget1_2_2.setFont(font6)
+        font7 = QFont()
+        font7.setPointSize(11)
+        self.DataAnalysis_Oscilloscope_widget1_2_2.setFont(font7)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_49.addWidget(self.DataAnalysis_Oscilloscope_widget1_2_2)
@@ -3711,7 +3781,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton12.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton12")
         self.DataAnalysis_Neuron0Vm_pushButton12.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton12.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton12.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton12.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron0Vm_pushButton12)
@@ -3720,7 +3790,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton12.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton12")
         self.DataAnalysis_Neuron1Vm_pushButton12.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton12.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton12.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton12.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron1Vm_pushButton12)
@@ -3731,7 +3801,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton12.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton12.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton12.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton12.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton12.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron2Vm_pushButton12)
@@ -3824,7 +3894,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton20.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton20")
         self.DataAnalysis_Neuron0Vm_pushButton20.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton20.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton20.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton20.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron0Vm_pushButton20)
@@ -3833,7 +3903,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton20.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton20")
         self.DataAnalysis_Neuron1Vm_pushButton20.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton20.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton20.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton20.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron1Vm_pushButton20)
@@ -3844,7 +3914,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton20.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton20.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton20.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton20.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton20.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron2Vm_pushButton20)
@@ -3937,7 +4007,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton21.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton21")
         self.DataAnalysis_Neuron0Vm_pushButton21.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton21.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton21.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton21.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron0Vm_pushButton21)
@@ -3946,7 +4016,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton21.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton21")
         self.DataAnalysis_Neuron1Vm_pushButton21.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton21.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton21.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton21.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron1Vm_pushButton21)
@@ -3957,7 +4027,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton21.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton21.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton21.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton21.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton21.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron2Vm_pushButton21)
@@ -4049,7 +4119,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton22.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton22")
         self.DataAnalysis_Neuron0Vm_pushButton22.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton22.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton22.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton22.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron0Vm_pushButton22)
@@ -4058,7 +4128,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton22.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton22")
         self.DataAnalysis_Neuron1Vm_pushButton22.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton22.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton22.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton22.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron1Vm_pushButton22)
@@ -4069,7 +4139,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton22.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton22.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton22.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton22.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton22.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron2Vm_pushButton22)
@@ -4159,7 +4229,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton30.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton30")
         self.DataAnalysis_Neuron0Vm_pushButton30.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton30.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton30.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton30.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron0Vm_pushButton30)
@@ -4168,7 +4238,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton30.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton30")
         self.DataAnalysis_Neuron1Vm_pushButton30.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton30.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton30.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton30.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron1Vm_pushButton30)
@@ -4179,7 +4249,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton30.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton30.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton30.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton30.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton30.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron2Vm_pushButton30)
@@ -4269,7 +4339,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton31.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton31")
         self.DataAnalysis_Neuron0Vm_pushButton31.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton31.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton31.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton31.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron0Vm_pushButton31)
@@ -4278,7 +4348,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton31.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton31")
         self.DataAnalysis_Neuron1Vm_pushButton31.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton31.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton31.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton31.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron1Vm_pushButton31)
@@ -4289,7 +4359,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton31.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton31.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton31.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton31.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton31.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron2Vm_pushButton31)
@@ -4379,7 +4449,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton32.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton32")
         self.DataAnalysis_Neuron0Vm_pushButton32.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton32.setFont(font2)
+        self.DataAnalysis_Neuron0Vm_pushButton32.setFont(font6)
         self.DataAnalysis_Neuron0Vm_pushButton32.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron0Vm_pushButton32)
@@ -4388,7 +4458,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron1Vm_pushButton32.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton32")
         self.DataAnalysis_Neuron1Vm_pushButton32.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton32.setFont(font2)
+        self.DataAnalysis_Neuron1Vm_pushButton32.setFont(font6)
         self.DataAnalysis_Neuron1Vm_pushButton32.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron1Vm_pushButton32)
@@ -4399,7 +4469,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron2Vm_pushButton32.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton32.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton32.setFont(font2)
+        self.DataAnalysis_Neuron2Vm_pushButton32.setFont(font6)
         self.DataAnalysis_Neuron2Vm_pushButton32.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron2Vm_pushButton32)
@@ -4645,7 +4715,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_158.setContentsMargins(25, 0, 0, 0)
         self.Imaging_pushButton = QPushButton(self.Imaging_pushButton_frame)
         self.Imaging_pushButton.setObjectName(u"Imaging_pushButton")
-        self.Imaging_pushButton.setMaximumSize(QSize(320, 16777215))
+        self.Imaging_pushButton.setMaximumSize(QSize(16777215, 16777215))
         self.Imaging_pushButton.setFont(font1)
         self.Imaging_pushButton.setCheckable(True)
 
@@ -4859,15 +4929,15 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_121.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsAffinity_Label = QLabel(self.Imaging_GECI_ReadingsAffinity_frame)
         self.Imaging_GECI_ReadingsAffinity_Label.setObjectName(u"Imaging_GECI_ReadingsAffinity_Label")
-        font7 = QFont()
-        font7.setPointSize(8)
-        self.Imaging_GECI_ReadingsAffinity_Label.setFont(font7)
+        font8 = QFont()
+        font8.setPointSize(8)
+        self.Imaging_GECI_ReadingsAffinity_Label.setFont(font8)
 
         self.horizontalLayout_121.addWidget(self.Imaging_GECI_ReadingsAffinity_Label)
 
         self.Imaging_GECI_ReadingsAffinity_Value = QLabel(self.Imaging_GECI_ReadingsAffinity_frame)
         self.Imaging_GECI_ReadingsAffinity_Value.setObjectName(u"Imaging_GECI_ReadingsAffinity_Value")
-        self.Imaging_GECI_ReadingsAffinity_Value.setFont(font7)
+        self.Imaging_GECI_ReadingsAffinity_Value.setFont(font8)
         self.Imaging_GECI_ReadingsAffinity_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_121.addWidget(self.Imaging_GECI_ReadingsAffinity_Value)
@@ -4885,13 +4955,13 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_144.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsKd_Label = QLabel(self.Imaging_GECI_ReadingsKd_frame)
         self.Imaging_GECI_ReadingsKd_Label.setObjectName(u"Imaging_GECI_ReadingsKd_Label")
-        self.Imaging_GECI_ReadingsKd_Label.setFont(font7)
+        self.Imaging_GECI_ReadingsKd_Label.setFont(font8)
 
         self.horizontalLayout_144.addWidget(self.Imaging_GECI_ReadingsKd_Label)
 
         self.Imaging_GECI_ReadingsKd_Value = QLabel(self.Imaging_GECI_ReadingsKd_frame)
         self.Imaging_GECI_ReadingsKd_Value.setObjectName(u"Imaging_GECI_ReadingsKd_Value")
-        self.Imaging_GECI_ReadingsKd_Value.setFont(font7)
+        self.Imaging_GECI_ReadingsKd_Value.setFont(font8)
         self.Imaging_GECI_ReadingsKd_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_144.addWidget(self.Imaging_GECI_ReadingsKd_Value)
@@ -4909,13 +4979,13 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_140.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsBrightness_Label = QLabel(self.Imaging_GECI_ReadingsBrightness_frame)
         self.Imaging_GECI_ReadingsBrightness_Label.setObjectName(u"Imaging_GECI_ReadingsBrightness_Label")
-        self.Imaging_GECI_ReadingsBrightness_Label.setFont(font7)
+        self.Imaging_GECI_ReadingsBrightness_Label.setFont(font8)
 
         self.horizontalLayout_140.addWidget(self.Imaging_GECI_ReadingsBrightness_Label)
 
         self.Imaging_GECI_ReadingsBrightness_Value = QLabel(self.Imaging_GECI_ReadingsBrightness_frame)
         self.Imaging_GECI_ReadingsBrightness_Value.setObjectName(u"Imaging_GECI_ReadingsBrightness_Value")
-        self.Imaging_GECI_ReadingsBrightness_Value.setFont(font7)
+        self.Imaging_GECI_ReadingsBrightness_Value.setFont(font8)
         self.Imaging_GECI_ReadingsBrightness_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_140.addWidget(self.Imaging_GECI_ReadingsBrightness_Value)
@@ -6770,7 +6840,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_301.setContentsMargins(25, 0, 0, 0)
         self.MultipleImaging_pushButton = QPushButton(self.MultipleImaging_pushButton_frame)
         self.MultipleImaging_pushButton.setObjectName(u"MultipleImaging_pushButton")
-        self.MultipleImaging_pushButton.setMaximumSize(QSize(400, 16777215))
+        self.MultipleImaging_pushButton.setMaximumSize(QSize(16777215, 16777215))
         self.MultipleImaging_pushButton.setFont(font1)
         self.MultipleImaging_pushButton.setCheckable(True)
 
@@ -7054,13 +7124,13 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_310.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsAffinity_Label = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
         self.MultipleImaging_GECI_ReadingsAffinity_Label.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Label")
-        self.MultipleImaging_GECI_ReadingsAffinity_Label.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsAffinity_Label.setFont(font8)
 
         self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Label)
 
         self.MultipleImaging_GECI_ReadingsAffinity_Value = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
         self.MultipleImaging_GECI_ReadingsAffinity_Value.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Value")
-        self.MultipleImaging_GECI_ReadingsAffinity_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setFont(font8)
         self.MultipleImaging_GECI_ReadingsAffinity_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Value)
@@ -7078,13 +7148,13 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_312.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsKd_Label = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
         self.MultipleImaging_GECI_ReadingsKd_Label.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Label")
-        self.MultipleImaging_GECI_ReadingsKd_Label.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsKd_Label.setFont(font8)
 
         self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Label)
 
         self.MultipleImaging_GECI_ReadingsKd_Value = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
         self.MultipleImaging_GECI_ReadingsKd_Value.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Value")
-        self.MultipleImaging_GECI_ReadingsKd_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsKd_Value.setFont(font8)
         self.MultipleImaging_GECI_ReadingsKd_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Value)
@@ -7102,13 +7172,13 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_313.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsBrightness_Label = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
         self.MultipleImaging_GECI_ReadingsBrightness_Label.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Label")
-        self.MultipleImaging_GECI_ReadingsBrightness_Label.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsBrightness_Label.setFont(font8)
 
         self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Label)
 
         self.MultipleImaging_GECI_ReadingsBrightness_Value = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
         self.MultipleImaging_GECI_ReadingsBrightness_Value.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Value")
-        self.MultipleImaging_GECI_ReadingsBrightness_Value.setFont(font7)
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setFont(font8)
         self.MultipleImaging_GECI_ReadingsBrightness_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Value)
@@ -9536,11 +9606,11 @@ class Ui_MainWindow(QWidget):
         self.SaveNeuronPushButton = QPushButton(self.SaveNeuron_frame)
         self.SaveNeuronPushButton.setObjectName(u"SaveNeuronPushButton")
         self.SaveNeuronPushButton.setEnabled(True)
-        font8 = QFont()
-        font8.setPointSize(10)
-        font8.setBold(True)
-        font8.setStrikeOut(False)
-        self.SaveNeuronPushButton.setFont(font8)
+        font9 = QFont()
+        font9.setPointSize(10)
+        font9.setBold(True)
+        font9.setStrikeOut(False)
+        self.SaveNeuronPushButton.setFont(font9)
         self.SaveNeuronPushButton.setStyleSheet(u"color: rgb(147, 161, 161);")
         self.SaveNeuronPushButton.setCheckable(False)
 
@@ -9551,10 +9621,10 @@ class Ui_MainWindow(QWidget):
 
         self.LoadNeuron_frame = QFrame(self.Izhik_button_frame)
         self.LoadNeuron_frame.setObjectName(u"LoadNeuron_frame")
-        font9 = QFont()
-        font9.setPointSize(9)
-        font9.setBold(True)
-        self.LoadNeuron_frame.setFont(font9)
+        font10 = QFont()
+        font10.setPointSize(9)
+        font10.setBold(True)
+        self.LoadNeuron_frame.setFont(font10)
         self.LoadNeuron_frame.setFrameShape(QFrame.StyledPanel)
         self.LoadNeuron_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_187 = QHBoxLayout(self.LoadNeuron_frame)
@@ -9618,18 +9688,18 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_201.setSpacing(0)
         self.horizontalLayout_201.setObjectName(u"horizontalLayout_201")
         self.horizontalLayout_201.setContentsMargins(0, 0, 0, 0)
-        self.StimuluGenerator_LeftContainer = QFrame(self.StimulusGenerator_TopContainer)
-        self.StimuluGenerator_LeftContainer.setObjectName(u"StimuluGenerator_LeftContainer")
-        self.StimuluGenerator_LeftContainer.setFrameShape(QFrame.StyledPanel)
-        self.StimuluGenerator_LeftContainer.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_127 = QVBoxLayout(self.StimuluGenerator_LeftContainer)
+        self.StimulusGenerator_LeftContainer = QFrame(self.StimulusGenerator_TopContainer)
+        self.StimulusGenerator_LeftContainer.setObjectName(u"StimulusGenerator_LeftContainer")
+        self.StimulusGenerator_LeftContainer.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_LeftContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_127 = QVBoxLayout(self.StimulusGenerator_LeftContainer)
         self.verticalLayout_127.setSpacing(0)
         self.verticalLayout_127.setObjectName(u"verticalLayout_127")
         self.verticalLayout_127.setContentsMargins(0, 0, 0, 0)
-        self.StimulusGenerator_Selection_frame = QFrame(self.StimuluGenerator_LeftContainer)
+        self.StimulusGenerator_Selection_frame = QFrame(self.StimulusGenerator_LeftContainer)
         self.StimulusGenerator_Selection_frame.setObjectName(u"StimulusGenerator_Selection_frame")
-        self.StimulusGenerator_Selection_frame.setMinimumSize(QSize(0, 100))
-        self.StimulusGenerator_Selection_frame.setMaximumSize(QSize(16777215, 100))
+        self.StimulusGenerator_Selection_frame.setMinimumSize(QSize(0, 50))
+        self.StimulusGenerator_Selection_frame.setMaximumSize(QSize(16777215, 50))
         self.StimulusGenerator_Selection_frame.setFrameShape(QFrame.StyledPanel)
         self.StimulusGenerator_Selection_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_200 = QHBoxLayout(self.StimulusGenerator_Selection_frame)
@@ -9683,7 +9753,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_127.addWidget(self.StimulusGenerator_Selection_frame)
 
-        self.StimulusGenerator_Oscilloscope_frame = QFrame(self.StimuluGenerator_LeftContainer)
+        self.StimulusGenerator_Oscilloscope_frame = QFrame(self.StimulusGenerator_LeftContainer)
         self.StimulusGenerator_Oscilloscope_frame.setObjectName(u"StimulusGenerator_Oscilloscope_frame")
         self.StimulusGenerator_Oscilloscope_frame.setFrameShape(QFrame.StyledPanel)
         self.StimulusGenerator_Oscilloscope_frame.setFrameShadow(QFrame.Raised)
@@ -9721,27 +9791,45 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_125.addWidget(self.StimulusGenerator_Oscilloscope_widget)
 
+        self.StimulusGenerator_SubContainer = QFrame(self.StimulusGenerator_Oscilloscope_frame)
+        self.StimulusGenerator_SubContainer.setObjectName(u"StimulusGenerator_SubContainer")
+        self.StimulusGenerator_SubContainer.setMinimumSize(QSize(0, 40))
+        self.StimulusGenerator_SubContainer.setMaximumSize(QSize(16777215, 40))
+        self.StimulusGenerator_SubContainer.setFrameShape(QFrame.StyledPanel)
+        self.StimulusGenerator_SubContainer.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_202 = QHBoxLayout(self.StimulusGenerator_SubContainer)
+        self.horizontalLayout_202.setSpacing(100)
+        self.horizontalLayout_202.setObjectName(u"horizontalLayout_202")
+        self.horizontalLayout_202.setContentsMargins(100, 0, 100, 0)
+        self.StimulusGenerator_Display_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
+        self.StimulusGenerator_Display_pushButton.setObjectName(u"StimulusGenerator_Display_pushButton")
+        self.StimulusGenerator_Display_pushButton.setMinimumSize(QSize(200, 0))
+        self.StimulusGenerator_Display_pushButton.setMaximumSize(QSize(200, 16777215))
+        self.StimulusGenerator_Display_pushButton.setFont(font1)
+
+        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Display_pushButton)
+
+        self.StimulusGenerator_Save_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
+        self.StimulusGenerator_Save_pushButton.setObjectName(u"StimulusGenerator_Save_pushButton")
+        self.StimulusGenerator_Save_pushButton.setMinimumSize(QSize(200, 0))
+        self.StimulusGenerator_Save_pushButton.setMaximumSize(QSize(200, 16777215))
+        self.StimulusGenerator_Save_pushButton.setFont(font1)
+
+        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Save_pushButton)
+
+
+        self.verticalLayout_125.addWidget(self.StimulusGenerator_SubContainer)
+
 
         self.verticalLayout_127.addWidget(self.StimulusGenerator_Oscilloscope_frame)
 
 
-        self.horizontalLayout_201.addWidget(self.StimuluGenerator_LeftContainer)
+        self.horizontalLayout_201.addWidget(self.StimulusGenerator_LeftContainer)
 
-        self.line_42 = QFrame(self.StimulusGenerator_TopContainer)
-        self.line_42.setObjectName(u"line_42")
-        self.line_42.setFrameShape(QFrame.VLine)
-        self.line_42.setFrameShadow(QFrame.Sunken)
 
-        self.horizontalLayout_201.addWidget(self.line_42)
+        self.horizontalLayout_203.addWidget(self.StimulusGenerator_TopContainer)
 
-        self.line_44 = QFrame(self.StimulusGenerator_TopContainer)
-        self.line_44.setObjectName(u"line_44")
-        self.line_44.setFrameShape(QFrame.VLine)
-        self.line_44.setFrameShadow(QFrame.Sunken)
-
-        self.horizontalLayout_201.addWidget(self.line_44)
-
-        self.StimulusGenerator_Parameter_frame = QFrame(self.StimulusGenerator_TopContainer)
+        self.StimulusGenerator_Parameter_frame = QFrame(self.StimulusGenerator_Container)
         self.StimulusGenerator_Parameter_frame.setObjectName(u"StimulusGenerator_Parameter_frame")
         self.StimulusGenerator_Parameter_frame.setMaximumSize(QSize(300, 16777215))
         self.StimulusGenerator_Parameter_frame.setFrameShape(QFrame.StyledPanel)
@@ -9750,12 +9838,22 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_205.setSpacing(0)
         self.horizontalLayout_205.setObjectName(u"horizontalLayout_205")
         self.horizontalLayout_205.setContentsMargins(0, 0, 0, 0)
+        self.line_42 = QFrame(self.StimulusGenerator_Parameter_frame)
+        self.line_42.setObjectName(u"line_42")
+        self.line_42.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_42.setFrameShape(QFrame.VLine)
+        self.line_42.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_205.addWidget(self.line_42)
+
         self.StimulusGenerator_Parameter_stackedWidget = QStackedWidget(self.StimulusGenerator_Parameter_frame)
         self.StimulusGenerator_Parameter_stackedWidget.setObjectName(u"StimulusGenerator_Parameter_stackedWidget")
         self.page_IntensitySteps = QWidget()
         self.page_IntensitySteps.setObjectName(u"page_IntensitySteps")
         self.verticalLayout_111 = QVBoxLayout(self.page_IntensitySteps)
+        self.verticalLayout_111.setSpacing(0)
         self.verticalLayout_111.setObjectName(u"verticalLayout_111")
+        self.verticalLayout_111.setContentsMargins(5, 0, 0, 0)
         self.Step_Number_frame = QFrame(self.page_IntensitySteps)
         self.Step_Number_frame.setObjectName(u"Step_Number_frame")
         self.Step_Number_frame.setFrameShape(QFrame.StyledPanel)
@@ -10067,6 +10165,14 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_111.addWidget(self.Step_OffInt_frame)
 
+        self.line_68 = QFrame(self.page_IntensitySteps)
+        self.line_68.setObjectName(u"line_68")
+        self.line_68.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_68.setFrameShape(QFrame.HLine)
+        self.line_68.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_111.addWidget(self.line_68)
+
         self.Step_Inter_frame = QFrame(self.page_IntensitySteps)
         self.Step_Inter_frame.setObjectName(u"Step_Inter_frame")
         self.Step_Inter_frame.setFrameShape(QFrame.StyledPanel)
@@ -10175,9 +10281,9 @@ class Ui_MainWindow(QWidget):
         self.page_SineWave = QWidget()
         self.page_SineWave.setObjectName(u"page_SineWave")
         self.verticalLayout_126 = QVBoxLayout(self.page_SineWave)
-        self.verticalLayout_126.setSpacing(20)
+        self.verticalLayout_126.setSpacing(0)
         self.verticalLayout_126.setObjectName(u"verticalLayout_126")
-        self.verticalLayout_126.setContentsMargins(0, 0, 0, 5)
+        self.verticalLayout_126.setContentsMargins(5, 0, 0, 0)
         self.SineWave_Amplitude_frame = QFrame(self.page_SineWave)
         self.SineWave_Amplitude_frame.setObjectName(u"SineWave_Amplitude_frame")
         self.SineWave_Amplitude_frame.setFrameShape(QFrame.StyledPanel)
@@ -10390,6 +10496,14 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_126.addWidget(self.SineWave_StimOn_frame)
 
+        self.line_67 = QFrame(self.page_SineWave)
+        self.line_67.setObjectName(u"line_67")
+        self.line_67.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_67.setFrameShape(QFrame.HLine)
+        self.line_67.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_126.addWidget(self.line_67)
+
         self.SineWave_IntOff_frame = QFrame(self.page_SineWave)
         self.SineWave_IntOff_frame.setObjectName(u"SineWave_IntOff_frame")
         self.SineWave_IntOff_frame.setFrameShape(QFrame.StyledPanel)
@@ -10499,16 +10613,16 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_112 = QVBoxLayout(self.page_TriangularWave)
         self.verticalLayout_112.setSpacing(0)
         self.verticalLayout_112.setObjectName(u"verticalLayout_112")
-        self.verticalLayout_112.setContentsMargins(0, 0, 0, 0)
-        self.frame_7 = QFrame(self.page_TriangularWave)
-        self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setFrameShape(QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_256 = QHBoxLayout(self.frame_7)
+        self.verticalLayout_112.setContentsMargins(5, 0, 0, 0)
+        self.TriangleWave_Amplitude = QFrame(self.page_TriangularWave)
+        self.TriangleWave_Amplitude.setObjectName(u"TriangleWave_Amplitude")
+        self.TriangleWave_Amplitude.setFrameShape(QFrame.StyledPanel)
+        self.TriangleWave_Amplitude.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_256 = QHBoxLayout(self.TriangleWave_Amplitude)
         self.horizontalLayout_256.setSpacing(0)
         self.horizontalLayout_256.setObjectName(u"horizontalLayout_256")
         self.horizontalLayout_256.setContentsMargins(0, 0, 0, 0)
-        self.TriangleWave_Amplitude_Label_frame = QFrame(self.frame_7)
+        self.TriangleWave_Amplitude_Label_frame = QFrame(self.TriangleWave_Amplitude)
         self.TriangleWave_Amplitude_Label_frame.setObjectName(u"TriangleWave_Amplitude_Label_frame")
         self.TriangleWave_Amplitude_Label_frame.setFrameShape(QFrame.StyledPanel)
         self.TriangleWave_Amplitude_Label_frame.setFrameShadow(QFrame.Raised)
@@ -10527,7 +10641,7 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_256.addWidget(self.TriangleWave_Amplitude_Label_frame)
 
-        self.TriangleWave_Amplitude_Value_frame = QFrame(self.frame_7)
+        self.TriangleWave_Amplitude_Value_frame = QFrame(self.TriangleWave_Amplitude)
         self.TriangleWave_Amplitude_Value_frame.setObjectName(u"TriangleWave_Amplitude_Value_frame")
         self.TriangleWave_Amplitude_Value_frame.setMinimumSize(QSize(150, 0))
         self.TriangleWave_Amplitude_Value_frame.setMaximumSize(QSize(150, 16777215))
@@ -10551,7 +10665,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_256.addWidget(self.TriangleWave_Amplitude_Value_frame)
 
 
-        self.verticalLayout_112.addWidget(self.frame_7)
+        self.verticalLayout_112.addWidget(self.TriangleWave_Amplitude)
 
         self.TriangleWave_Frequency_frame = QFrame(self.page_TriangularWave)
         self.TriangleWave_Frequency_frame.setObjectName(u"TriangleWave_Frequency_frame")
@@ -10704,6 +10818,14 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_112.addWidget(self.TriangleWave_StimOn_frame)
 
+        self.line_44 = QFrame(self.page_TriangularWave)
+        self.line_44.setObjectName(u"line_44")
+        self.line_44.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_44.setFrameShape(QFrame.HLine)
+        self.line_44.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_112.addWidget(self.line_44)
+
         self.TriangleWave_IntOff_frame = QFrame(self.page_TriangularWave)
         self.TriangleWave_IntOff_frame.setObjectName(u"TriangleWave_IntOff_frame")
         self.TriangleWave_IntOff_frame.setFrameShape(QFrame.StyledPanel)
@@ -10805,51 +10927,656 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_112.addWidget(self.TriangleWave_StimOff_frame)
 
         self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_TriangularWave)
+        self.page_Chirp = QWidget()
+        self.page_Chirp.setObjectName(u"page_Chirp")
+        self.verticalLayout_100 = QVBoxLayout(self.page_Chirp)
+        self.verticalLayout_100.setSpacing(0)
+        self.verticalLayout_100.setObjectName(u"verticalLayout_100")
+        self.verticalLayout_100.setContentsMargins(5, 0, 0, 0)
+        self.Chirp_comboBox_frame = QFrame(self.page_Chirp)
+        self.Chirp_comboBox_frame.setObjectName(u"Chirp_comboBox_frame")
+        self.Chirp_comboBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_comboBox_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_402 = QHBoxLayout(self.Chirp_comboBox_frame)
+        self.horizontalLayout_402.setSpacing(10)
+        self.horizontalLayout_402.setObjectName(u"horizontalLayout_402")
+        self.horizontalLayout_402.setContentsMargins(5, 0, 5, 0)
+        self.Chirp_comboBox = QComboBox(self.Chirp_comboBox_frame)
+        self.Chirp_comboBox.addItem("")
+        self.Chirp_comboBox.addItem("")
+        self.Chirp_comboBox.addItem("")
+        self.Chirp_comboBox.setObjectName(u"Chirp_comboBox")
+        self.Chirp_comboBox.setFont(font1)
+
+        self.horizontalLayout_402.addWidget(self.Chirp_comboBox)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_comboBox_frame)
+
+        self.Chirp_Amplitude = QFrame(self.page_Chirp)
+        self.Chirp_Amplitude.setObjectName(u"Chirp_Amplitude")
+        self.Chirp_Amplitude.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Amplitude.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_381 = QHBoxLayout(self.Chirp_Amplitude)
+        self.horizontalLayout_381.setSpacing(0)
+        self.horizontalLayout_381.setObjectName(u"horizontalLayout_381")
+        self.horizontalLayout_381.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Amplitude_Label_frame = QFrame(self.Chirp_Amplitude)
+        self.Chirp_Amplitude_Label_frame.setObjectName(u"Chirp_Amplitude_Label_frame")
+        self.Chirp_Amplitude_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_Amplitude_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Amplitude_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_382 = QHBoxLayout(self.Chirp_Amplitude_Label_frame)
+        self.horizontalLayout_382.setSpacing(0)
+        self.horizontalLayout_382.setObjectName(u"horizontalLayout_382")
+        self.horizontalLayout_382.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Amplitude_Label = QLabel(self.Chirp_Amplitude_Label_frame)
+        self.Chirp_Amplitude_Label.setObjectName(u"Chirp_Amplitude_Label")
+        self.Chirp_Amplitude_Label.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_Amplitude_Label.setFont(font1)
+        self.Chirp_Amplitude_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_Amplitude_Label.setWordWrap(True)
+
+        self.horizontalLayout_382.addWidget(self.Chirp_Amplitude_Label)
+
+
+        self.horizontalLayout_381.addWidget(self.Chirp_Amplitude_Label_frame)
+
+        self.Chirp_Amplitude_Value_frame = QFrame(self.Chirp_Amplitude)
+        self.Chirp_Amplitude_Value_frame.setObjectName(u"Chirp_Amplitude_Value_frame")
+        self.Chirp_Amplitude_Value_frame.setMinimumSize(QSize(150, 0))
+        self.Chirp_Amplitude_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_Amplitude_Value_frame.setFont(font5)
+        self.Chirp_Amplitude_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Amplitude_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_383 = QHBoxLayout(self.Chirp_Amplitude_Value_frame)
+        self.horizontalLayout_383.setSpacing(0)
+        self.horizontalLayout_383.setObjectName(u"horizontalLayout_383")
+        self.horizontalLayout_383.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Amplitude_Value = QLineEdit(self.Chirp_Amplitude_Value_frame)
+        self.Chirp_Amplitude_Value.setObjectName(u"Chirp_Amplitude_Value")
+        self.Chirp_Amplitude_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_Amplitude_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_Amplitude_Value.setFont(font5)
+        self.Chirp_Amplitude_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_383.addWidget(self.Chirp_Amplitude_Value)
+
+
+        self.horizontalLayout_381.addWidget(self.Chirp_Amplitude_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_Amplitude)
+
+        self.Chirp_Frequency_frame = QFrame(self.page_Chirp)
+        self.Chirp_Frequency_frame.setObjectName(u"Chirp_Frequency_frame")
+        self.Chirp_Frequency_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Frequency_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_393 = QHBoxLayout(self.Chirp_Frequency_frame)
+        self.horizontalLayout_393.setSpacing(0)
+        self.horizontalLayout_393.setObjectName(u"horizontalLayout_393")
+        self.horizontalLayout_393.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Frequency_Label_frame = QFrame(self.Chirp_Frequency_frame)
+        self.Chirp_Frequency_Label_frame.setObjectName(u"Chirp_Frequency_Label_frame")
+        self.Chirp_Frequency_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_Frequency_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Frequency_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_394 = QHBoxLayout(self.Chirp_Frequency_Label_frame)
+        self.horizontalLayout_394.setSpacing(0)
+        self.horizontalLayout_394.setObjectName(u"horizontalLayout_394")
+        self.horizontalLayout_394.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Frequency_Label = QLabel(self.Chirp_Frequency_Label_frame)
+        self.Chirp_Frequency_Label.setObjectName(u"Chirp_Frequency_Label")
+        self.Chirp_Frequency_Label.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_Frequency_Label.setFont(font1)
+        self.Chirp_Frequency_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_Frequency_Label.setWordWrap(True)
+
+        self.horizontalLayout_394.addWidget(self.Chirp_Frequency_Label)
+
+
+        self.horizontalLayout_393.addWidget(self.Chirp_Frequency_Label_frame)
+
+        self.Chirp_Frequency_Value_frame = QFrame(self.Chirp_Frequency_frame)
+        self.Chirp_Frequency_Value_frame.setObjectName(u"Chirp_Frequency_Value_frame")
+        self.Chirp_Frequency_Value_frame.setMinimumSize(QSize(150, 0))
+        self.Chirp_Frequency_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_Frequency_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Frequency_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_395 = QHBoxLayout(self.Chirp_Frequency_Value_frame)
+        self.horizontalLayout_395.setSpacing(0)
+        self.horizontalLayout_395.setObjectName(u"horizontalLayout_395")
+        self.horizontalLayout_395.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Frequency_Value = QLineEdit(self.Chirp_Frequency_Value_frame)
+        self.Chirp_Frequency_Value.setObjectName(u"Chirp_Frequency_Value")
+        self.Chirp_Frequency_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_Frequency_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_Frequency_Value.setFont(font5)
+        self.Chirp_Frequency_Value.setStyleSheet(u"background-color: rgb(80, 110, 117);\n"
+"border : none;")
+        self.Chirp_Frequency_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_395.addWidget(self.Chirp_Frequency_Value)
+
+
+        self.horizontalLayout_393.addWidget(self.Chirp_Frequency_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_Frequency_frame)
+
+        self.Chirp_StartFrequency_frame = QFrame(self.page_Chirp)
+        self.Chirp_StartFrequency_frame.setObjectName(u"Chirp_StartFrequency_frame")
+        self.Chirp_StartFrequency_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StartFrequency_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_396 = QHBoxLayout(self.Chirp_StartFrequency_frame)
+        self.horizontalLayout_396.setSpacing(0)
+        self.horizontalLayout_396.setObjectName(u"horizontalLayout_396")
+        self.horizontalLayout_396.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StartFrequency_Label_frame = QFrame(self.Chirp_StartFrequency_frame)
+        self.Chirp_StartFrequency_Label_frame.setObjectName(u"Chirp_StartFrequency_Label_frame")
+        self.Chirp_StartFrequency_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_StartFrequency_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StartFrequency_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_397 = QHBoxLayout(self.Chirp_StartFrequency_Label_frame)
+        self.horizontalLayout_397.setSpacing(0)
+        self.horizontalLayout_397.setObjectName(u"horizontalLayout_397")
+        self.horizontalLayout_397.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StartFrequency_Label = QLabel(self.Chirp_StartFrequency_Label_frame)
+        self.Chirp_StartFrequency_Label.setObjectName(u"Chirp_StartFrequency_Label")
+        self.Chirp_StartFrequency_Label.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_StartFrequency_Label.setFont(font1)
+        self.Chirp_StartFrequency_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_StartFrequency_Label.setWordWrap(True)
+
+        self.horizontalLayout_397.addWidget(self.Chirp_StartFrequency_Label)
+
+
+        self.horizontalLayout_396.addWidget(self.Chirp_StartFrequency_Label_frame)
+
+        self.Chirp_StartFrequency_Value_frame = QFrame(self.Chirp_StartFrequency_frame)
+        self.Chirp_StartFrequency_Value_frame.setObjectName(u"Chirp_StartFrequency_Value_frame")
+        self.Chirp_StartFrequency_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_StartFrequency_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StartFrequency_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_398 = QHBoxLayout(self.Chirp_StartFrequency_Value_frame)
+        self.horizontalLayout_398.setSpacing(0)
+        self.horizontalLayout_398.setObjectName(u"horizontalLayout_398")
+        self.horizontalLayout_398.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StartFrequency_Value = QLineEdit(self.Chirp_StartFrequency_Value_frame)
+        self.Chirp_StartFrequency_Value.setObjectName(u"Chirp_StartFrequency_Value")
+        self.Chirp_StartFrequency_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_StartFrequency_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_StartFrequency_Value.setFont(font5)
+        self.Chirp_StartFrequency_Value.setStyleSheet(u"")
+        self.Chirp_StartFrequency_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_398.addWidget(self.Chirp_StartFrequency_Value)
+
+
+        self.horizontalLayout_396.addWidget(self.Chirp_StartFrequency_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_StartFrequency_frame)
+
+        self.Chirp_EndFrequency_frame = QFrame(self.page_Chirp)
+        self.Chirp_EndFrequency_frame.setObjectName(u"Chirp_EndFrequency_frame")
+        self.Chirp_EndFrequency_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_EndFrequency_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_384 = QHBoxLayout(self.Chirp_EndFrequency_frame)
+        self.horizontalLayout_384.setSpacing(0)
+        self.horizontalLayout_384.setObjectName(u"horizontalLayout_384")
+        self.horizontalLayout_384.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_EndFrequency_Label_frame = QFrame(self.Chirp_EndFrequency_frame)
+        self.Chirp_EndFrequency_Label_frame.setObjectName(u"Chirp_EndFrequency_Label_frame")
+        self.Chirp_EndFrequency_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_EndFrequency_Label_frame.setFont(font1)
+        self.Chirp_EndFrequency_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_EndFrequency_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_385 = QHBoxLayout(self.Chirp_EndFrequency_Label_frame)
+        self.horizontalLayout_385.setSpacing(0)
+        self.horizontalLayout_385.setObjectName(u"horizontalLayout_385")
+        self.horizontalLayout_385.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_EndFrequency_Label = QLabel(self.Chirp_EndFrequency_Label_frame)
+        self.Chirp_EndFrequency_Label.setObjectName(u"Chirp_EndFrequency_Label")
+        self.Chirp_EndFrequency_Label.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_EndFrequency_Label.setFont(font1)
+        self.Chirp_EndFrequency_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_EndFrequency_Label.setWordWrap(True)
+
+        self.horizontalLayout_385.addWidget(self.Chirp_EndFrequency_Label)
+
+
+        self.horizontalLayout_384.addWidget(self.Chirp_EndFrequency_Label_frame)
+
+        self.Chirp_EndFrequency_Value_frame = QFrame(self.Chirp_EndFrequency_frame)
+        self.Chirp_EndFrequency_Value_frame.setObjectName(u"Chirp_EndFrequency_Value_frame")
+        self.Chirp_EndFrequency_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_EndFrequency_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_EndFrequency_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_386 = QHBoxLayout(self.Chirp_EndFrequency_Value_frame)
+        self.horizontalLayout_386.setSpacing(0)
+        self.horizontalLayout_386.setObjectName(u"horizontalLayout_386")
+        self.horizontalLayout_386.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_EndFrequency_Value = QLineEdit(self.Chirp_EndFrequency_Value_frame)
+        self.Chirp_EndFrequency_Value.setObjectName(u"Chirp_EndFrequency_Value")
+        self.Chirp_EndFrequency_Value.setEnabled(False)
+        self.Chirp_EndFrequency_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_EndFrequency_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_EndFrequency_Value.setFont(font5)
+        self.Chirp_EndFrequency_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_386.addWidget(self.Chirp_EndFrequency_Value)
+
+
+        self.horizontalLayout_384.addWidget(self.Chirp_EndFrequency_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_EndFrequency_frame)
+
+        self.Chirp_Duration_Frame = QFrame(self.page_Chirp)
+        self.Chirp_Duration_Frame.setObjectName(u"Chirp_Duration_Frame")
+        self.Chirp_Duration_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Duration_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_401 = QHBoxLayout(self.Chirp_Duration_Frame)
+        self.horizontalLayout_401.setSpacing(0)
+        self.horizontalLayout_401.setObjectName(u"horizontalLayout_401")
+        self.horizontalLayout_401.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Duration_Label_Frame = QFrame(self.Chirp_Duration_Frame)
+        self.Chirp_Duration_Label_Frame.setObjectName(u"Chirp_Duration_Label_Frame")
+        self.Chirp_Duration_Label_Frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_Duration_Label_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Duration_Label_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_400 = QHBoxLayout(self.Chirp_Duration_Label_Frame)
+        self.horizontalLayout_400.setSpacing(0)
+        self.horizontalLayout_400.setObjectName(u"horizontalLayout_400")
+        self.horizontalLayout_400.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Duration_Label = QLabel(self.Chirp_Duration_Label_Frame)
+        self.Chirp_Duration_Label.setObjectName(u"Chirp_Duration_Label")
+        self.Chirp_Duration_Label.setFont(font1)
+        self.Chirp_Duration_Label.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_400.addWidget(self.Chirp_Duration_Label)
+
+
+        self.horizontalLayout_401.addWidget(self.Chirp_Duration_Label_Frame)
+
+        self.Chirp_Duration_Value_Frame = QFrame(self.Chirp_Duration_Frame)
+        self.Chirp_Duration_Value_Frame.setObjectName(u"Chirp_Duration_Value_Frame")
+        self.Chirp_Duration_Value_Frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_Duration_Value_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_Duration_Value_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_399 = QHBoxLayout(self.Chirp_Duration_Value_Frame)
+        self.horizontalLayout_399.setSpacing(0)
+        self.horizontalLayout_399.setObjectName(u"horizontalLayout_399")
+        self.horizontalLayout_399.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_Duration_Value = QLineEdit(self.Chirp_Duration_Value_Frame)
+        self.Chirp_Duration_Value.setObjectName(u"Chirp_Duration_Value")
+        self.Chirp_Duration_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_Duration_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_Duration_Value.setFont(font5)
+        self.Chirp_Duration_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_399.addWidget(self.Chirp_Duration_Value)
+
+
+        self.horizontalLayout_401.addWidget(self.Chirp_Duration_Value_Frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_Duration_Frame)
+
+        self.line_65 = QFrame(self.page_Chirp)
+        self.line_65.setObjectName(u"line_65")
+        self.line_65.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_65.setFrameShape(QFrame.HLine)
+        self.line_65.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_100.addWidget(self.line_65)
+
+        self.Chirp_PreChirpOn_Frame = QFrame(self.page_Chirp)
+        self.Chirp_PreChirpOn_Frame.setObjectName(u"Chirp_PreChirpOn_Frame")
+        self.Chirp_PreChirpOn_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOn_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_405 = QHBoxLayout(self.Chirp_PreChirpOn_Frame)
+        self.horizontalLayout_405.setSpacing(5)
+        self.horizontalLayout_405.setObjectName(u"horizontalLayout_405")
+        self.horizontalLayout_405.setContentsMargins(0, 0, 5, 0)
+        self.Chirp_PreChirpOn_Duration_Label_Frame = QFrame(self.Chirp_PreChirpOn_Frame)
+        self.Chirp_PreChirpOn_Duration_Label_Frame.setObjectName(u"Chirp_PreChirpOn_Duration_Label_Frame")
+        self.Chirp_PreChirpOn_Duration_Label_Frame.setMinimumSize(QSize(165, 0))
+        self.Chirp_PreChirpOn_Duration_Label_Frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_PreChirpOn_Duration_Label_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOn_Duration_Label_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_404 = QHBoxLayout(self.Chirp_PreChirpOn_Duration_Label_Frame)
+        self.horizontalLayout_404.setSpacing(0)
+        self.horizontalLayout_404.setObjectName(u"horizontalLayout_404")
+        self.horizontalLayout_404.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOn_Duration_Label = QLabel(self.Chirp_PreChirpOn_Duration_Label_Frame)
+        self.Chirp_PreChirpOn_Duration_Label.setObjectName(u"Chirp_PreChirpOn_Duration_Label")
+        self.Chirp_PreChirpOn_Duration_Label.setMinimumSize(QSize(0, 0))
+        self.Chirp_PreChirpOn_Duration_Label.setMaximumSize(QSize(16777215, 16777215))
+        self.Chirp_PreChirpOn_Duration_Label.setFont(font1)
+        self.Chirp_PreChirpOn_Duration_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_PreChirpOn_Duration_Label.setWordWrap(True)
+
+        self.horizontalLayout_404.addWidget(self.Chirp_PreChirpOn_Duration_Label)
+
+
+        self.horizontalLayout_405.addWidget(self.Chirp_PreChirpOn_Duration_Label_Frame)
+
+        self.Chirp_PreChirpOn_Amplitude_Value_Frame = QFrame(self.Chirp_PreChirpOn_Frame)
+        self.Chirp_PreChirpOn_Amplitude_Value_Frame.setObjectName(u"Chirp_PreChirpOn_Amplitude_Value_Frame")
+        self.Chirp_PreChirpOn_Amplitude_Value_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpOn_Amplitude_Value_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOn_Amplitude_Value_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_403 = QHBoxLayout(self.Chirp_PreChirpOn_Amplitude_Value_Frame)
+        self.horizontalLayout_403.setSpacing(0)
+        self.horizontalLayout_403.setObjectName(u"horizontalLayout_403")
+        self.horizontalLayout_403.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOn_Amplitude_Value = QLineEdit(self.Chirp_PreChirpOn_Amplitude_Value_Frame)
+        self.Chirp_PreChirpOn_Amplitude_Value.setObjectName(u"Chirp_PreChirpOn_Amplitude_Value")
+        self.Chirp_PreChirpOn_Amplitude_Value.setMinimumSize(QSize(50, 0))
+        self.Chirp_PreChirpOn_Amplitude_Value.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpOn_Amplitude_Value.setFont(font5)
+        self.Chirp_PreChirpOn_Amplitude_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_403.addWidget(self.Chirp_PreChirpOn_Amplitude_Value)
+
+
+        self.horizontalLayout_405.addWidget(self.Chirp_PreChirpOn_Amplitude_Value_Frame)
+
+        self.Chirp_PreChirpOn_Duration_Value_Frame = QFrame(self.Chirp_PreChirpOn_Frame)
+        self.Chirp_PreChirpOn_Duration_Value_Frame.setObjectName(u"Chirp_PreChirpOn_Duration_Value_Frame")
+        self.Chirp_PreChirpOn_Duration_Value_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpOn_Duration_Value_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOn_Duration_Value_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_406 = QHBoxLayout(self.Chirp_PreChirpOn_Duration_Value_Frame)
+        self.horizontalLayout_406.setSpacing(0)
+        self.horizontalLayout_406.setObjectName(u"horizontalLayout_406")
+        self.horizontalLayout_406.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOn_Duration_Value = QLineEdit(self.Chirp_PreChirpOn_Duration_Value_Frame)
+        self.Chirp_PreChirpOn_Duration_Value.setObjectName(u"Chirp_PreChirpOn_Duration_Value")
+        self.Chirp_PreChirpOn_Duration_Value.setMinimumSize(QSize(50, 0))
+        self.Chirp_PreChirpOn_Duration_Value.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpOn_Duration_Value.setFont(font5)
+        self.Chirp_PreChirpOn_Duration_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_406.addWidget(self.Chirp_PreChirpOn_Duration_Value)
+
+
+        self.horizontalLayout_405.addWidget(self.Chirp_PreChirpOn_Duration_Value_Frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_PreChirpOn_Frame)
+
+        self.Chirp_PreChirpOff_Frame = QFrame(self.page_Chirp)
+        self.Chirp_PreChirpOff_Frame.setObjectName(u"Chirp_PreChirpOff_Frame")
+        self.Chirp_PreChirpOff_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOff_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_408 = QHBoxLayout(self.Chirp_PreChirpOff_Frame)
+        self.horizontalLayout_408.setSpacing(5)
+        self.horizontalLayout_408.setObjectName(u"horizontalLayout_408")
+        self.horizontalLayout_408.setContentsMargins(0, 0, 5, 0)
+        self.Chirp_PreChirpOff_Label_Frame = QFrame(self.Chirp_PreChirpOff_Frame)
+        self.Chirp_PreChirpOff_Label_Frame.setObjectName(u"Chirp_PreChirpOff_Label_Frame")
+        self.Chirp_PreChirpOff_Label_Frame.setMinimumSize(QSize(165, 0))
+        self.Chirp_PreChirpOff_Label_Frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_PreChirpOff_Label_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOff_Label_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_407 = QHBoxLayout(self.Chirp_PreChirpOff_Label_Frame)
+        self.horizontalLayout_407.setSpacing(0)
+        self.horizontalLayout_407.setObjectName(u"horizontalLayout_407")
+        self.horizontalLayout_407.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOff_Label = QLabel(self.Chirp_PreChirpOff_Label_Frame)
+        self.Chirp_PreChirpOff_Label.setObjectName(u"Chirp_PreChirpOff_Label")
+        self.Chirp_PreChirpOff_Label.setFont(font1)
+        self.Chirp_PreChirpOff_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_PreChirpOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_407.addWidget(self.Chirp_PreChirpOff_Label)
+
+
+        self.horizontalLayout_408.addWidget(self.Chirp_PreChirpOff_Label_Frame)
+
+        self.Chirp_PreChirpOff_Amplitude_Value_Frame = QFrame(self.Chirp_PreChirpOff_Frame)
+        self.Chirp_PreChirpOff_Amplitude_Value_Frame.setObjectName(u"Chirp_PreChirpOff_Amplitude_Value_Frame")
+        self.Chirp_PreChirpOff_Amplitude_Value_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpOff_Amplitude_Value_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOff_Amplitude_Value_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_410 = QHBoxLayout(self.Chirp_PreChirpOff_Amplitude_Value_Frame)
+        self.horizontalLayout_410.setSpacing(0)
+        self.horizontalLayout_410.setObjectName(u"horizontalLayout_410")
+        self.horizontalLayout_410.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOff_Amplitude_Value = QLineEdit(self.Chirp_PreChirpOff_Amplitude_Value_Frame)
+        self.Chirp_PreChirpOff_Amplitude_Value.setObjectName(u"Chirp_PreChirpOff_Amplitude_Value")
+        self.Chirp_PreChirpOff_Amplitude_Value.setMinimumSize(QSize(50, 0))
+        self.Chirp_PreChirpOff_Amplitude_Value.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpOff_Amplitude_Value.setFont(font5)
+        self.Chirp_PreChirpOff_Amplitude_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_410.addWidget(self.Chirp_PreChirpOff_Amplitude_Value)
+
+
+        self.horizontalLayout_408.addWidget(self.Chirp_PreChirpOff_Amplitude_Value_Frame)
+
+        self.Chirp_PreChirpOff_Duration_Value_Frame = QFrame(self.Chirp_PreChirpOff_Frame)
+        self.Chirp_PreChirpOff_Duration_Value_Frame.setObjectName(u"Chirp_PreChirpOff_Duration_Value_Frame")
+        self.Chirp_PreChirpOff_Duration_Value_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpOff_Duration_Value_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpOff_Duration_Value_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_409 = QHBoxLayout(self.Chirp_PreChirpOff_Duration_Value_Frame)
+        self.horizontalLayout_409.setSpacing(0)
+        self.horizontalLayout_409.setObjectName(u"horizontalLayout_409")
+        self.horizontalLayout_409.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpOff_Duration_Value = QLineEdit(self.Chirp_PreChirpOff_Duration_Value_Frame)
+        self.Chirp_PreChirpOff_Duration_Value.setObjectName(u"Chirp_PreChirpOff_Duration_Value")
+        self.Chirp_PreChirpOff_Duration_Value.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpOff_Duration_Value.setFont(font5)
+        self.Chirp_PreChirpOff_Duration_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_409.addWidget(self.Chirp_PreChirpOff_Duration_Value)
+
+
+        self.horizontalLayout_408.addWidget(self.Chirp_PreChirpOff_Duration_Value_Frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_PreChirpOff_Frame)
+
+        self.Chirp_PreChirpMid_Frame = QFrame(self.page_Chirp)
+        self.Chirp_PreChirpMid_Frame.setObjectName(u"Chirp_PreChirpMid_Frame")
+        self.Chirp_PreChirpMid_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpMid_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_414 = QHBoxLayout(self.Chirp_PreChirpMid_Frame)
+        self.horizontalLayout_414.setSpacing(5)
+        self.horizontalLayout_414.setObjectName(u"horizontalLayout_414")
+        self.horizontalLayout_414.setContentsMargins(0, 0, 5, 0)
+        self.Chirp_PreChirpMid_Label_Frame = QFrame(self.Chirp_PreChirpMid_Frame)
+        self.Chirp_PreChirpMid_Label_Frame.setObjectName(u"Chirp_PreChirpMid_Label_Frame")
+        self.Chirp_PreChirpMid_Label_Frame.setMinimumSize(QSize(165, 0))
+        self.Chirp_PreChirpMid_Label_Frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_PreChirpMid_Label_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpMid_Label_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_411 = QHBoxLayout(self.Chirp_PreChirpMid_Label_Frame)
+        self.horizontalLayout_411.setSpacing(0)
+        self.horizontalLayout_411.setObjectName(u"horizontalLayout_411")
+        self.horizontalLayout_411.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpMid_Label = QLabel(self.Chirp_PreChirpMid_Label_Frame)
+        self.Chirp_PreChirpMid_Label.setObjectName(u"Chirp_PreChirpMid_Label")
+        self.Chirp_PreChirpMid_Label.setFont(font1)
+        self.Chirp_PreChirpMid_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_PreChirpMid_Label.setWordWrap(True)
+
+        self.horizontalLayout_411.addWidget(self.Chirp_PreChirpMid_Label)
+
+
+        self.horizontalLayout_414.addWidget(self.Chirp_PreChirpMid_Label_Frame)
+
+        self.Chirp_PreChirpMid_Amplitude_Frame = QFrame(self.Chirp_PreChirpMid_Frame)
+        self.Chirp_PreChirpMid_Amplitude_Frame.setObjectName(u"Chirp_PreChirpMid_Amplitude_Frame")
+        self.Chirp_PreChirpMid_Amplitude_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpMid_Amplitude_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpMid_Amplitude_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_412 = QHBoxLayout(self.Chirp_PreChirpMid_Amplitude_Frame)
+        self.horizontalLayout_412.setSpacing(0)
+        self.horizontalLayout_412.setObjectName(u"horizontalLayout_412")
+        self.horizontalLayout_412.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpMid_Amplitude = QLineEdit(self.Chirp_PreChirpMid_Amplitude_Frame)
+        self.Chirp_PreChirpMid_Amplitude.setObjectName(u"Chirp_PreChirpMid_Amplitude")
+        self.Chirp_PreChirpMid_Amplitude.setEnabled(True)
+        self.Chirp_PreChirpMid_Amplitude.setMinimumSize(QSize(50, 0))
+        self.Chirp_PreChirpMid_Amplitude.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpMid_Amplitude.setFont(font5)
+        self.Chirp_PreChirpMid_Amplitude.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_412.addWidget(self.Chirp_PreChirpMid_Amplitude)
+
+
+        self.horizontalLayout_414.addWidget(self.Chirp_PreChirpMid_Amplitude_Frame)
+
+        self.Chirp_PreChirpMid_Duration_Frame = QFrame(self.Chirp_PreChirpMid_Frame)
+        self.Chirp_PreChirpMid_Duration_Frame.setObjectName(u"Chirp_PreChirpMid_Duration_Frame")
+        self.Chirp_PreChirpMid_Duration_Frame.setMaximumSize(QSize(75, 16777215))
+        self.Chirp_PreChirpMid_Duration_Frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_PreChirpMid_Duration_Frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_413 = QHBoxLayout(self.Chirp_PreChirpMid_Duration_Frame)
+        self.horizontalLayout_413.setSpacing(0)
+        self.horizontalLayout_413.setObjectName(u"horizontalLayout_413")
+        self.horizontalLayout_413.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_PreChirpMid_Duration = QLineEdit(self.Chirp_PreChirpMid_Duration_Frame)
+        self.Chirp_PreChirpMid_Duration.setObjectName(u"Chirp_PreChirpMid_Duration")
+        self.Chirp_PreChirpMid_Duration.setMinimumSize(QSize(50, 0))
+        self.Chirp_PreChirpMid_Duration.setMaximumSize(QSize(50, 16777215))
+        self.Chirp_PreChirpMid_Duration.setFont(font5)
+        self.Chirp_PreChirpMid_Duration.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_413.addWidget(self.Chirp_PreChirpMid_Duration)
+
+
+        self.horizontalLayout_414.addWidget(self.Chirp_PreChirpMid_Duration_Frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_PreChirpMid_Frame)
+
+        self.line_66 = QFrame(self.page_Chirp)
+        self.line_66.setObjectName(u"line_66")
+        self.line_66.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_66.setFrameShape(QFrame.HLine)
+        self.line_66.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_100.addWidget(self.line_66)
+
+        self.Chirp_IntOff_frame = QFrame(self.page_Chirp)
+        self.Chirp_IntOff_frame.setObjectName(u"Chirp_IntOff_frame")
+        self.Chirp_IntOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_IntOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_390 = QHBoxLayout(self.Chirp_IntOff_frame)
+        self.horizontalLayout_390.setSpacing(0)
+        self.horizontalLayout_390.setObjectName(u"horizontalLayout_390")
+        self.horizontalLayout_390.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_IntOff_Label_frame = QFrame(self.Chirp_IntOff_frame)
+        self.Chirp_IntOff_Label_frame.setObjectName(u"Chirp_IntOff_Label_frame")
+        self.Chirp_IntOff_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_IntOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_IntOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_391 = QHBoxLayout(self.Chirp_IntOff_Label_frame)
+        self.horizontalLayout_391.setSpacing(0)
+        self.horizontalLayout_391.setObjectName(u"horizontalLayout_391")
+        self.horizontalLayout_391.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_IntOff_Label = QLabel(self.Chirp_IntOff_Label_frame)
+        self.Chirp_IntOff_Label.setObjectName(u"Chirp_IntOff_Label")
+        self.Chirp_IntOff_Label.setFont(font1)
+        self.Chirp_IntOff_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_IntOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_391.addWidget(self.Chirp_IntOff_Label)
+
+
+        self.horizontalLayout_390.addWidget(self.Chirp_IntOff_Label_frame)
+
+        self.Chirp_IntOff_Value_frame = QFrame(self.Chirp_IntOff_frame)
+        self.Chirp_IntOff_Value_frame.setObjectName(u"Chirp_IntOff_Value_frame")
+        self.Chirp_IntOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_IntOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_IntOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_392 = QHBoxLayout(self.Chirp_IntOff_Value_frame)
+        self.horizontalLayout_392.setSpacing(0)
+        self.horizontalLayout_392.setObjectName(u"horizontalLayout_392")
+        self.horizontalLayout_392.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_IntOff_Value = QLineEdit(self.Chirp_IntOff_Value_frame)
+        self.Chirp_IntOff_Value.setObjectName(u"Chirp_IntOff_Value")
+        self.Chirp_IntOff_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_IntOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_IntOff_Value.setFont(font5)
+        self.Chirp_IntOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_392.addWidget(self.Chirp_IntOff_Value)
+
+
+        self.horizontalLayout_390.addWidget(self.Chirp_IntOff_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_IntOff_frame)
+
+        self.Chirp_StimOff_frame = QFrame(self.page_Chirp)
+        self.Chirp_StimOff_frame.setObjectName(u"Chirp_StimOff_frame")
+        self.Chirp_StimOff_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StimOff_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_387 = QHBoxLayout(self.Chirp_StimOff_frame)
+        self.horizontalLayout_387.setSpacing(0)
+        self.horizontalLayout_387.setObjectName(u"horizontalLayout_387")
+        self.horizontalLayout_387.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StimOff_Label_frame = QFrame(self.Chirp_StimOff_frame)
+        self.Chirp_StimOff_Label_frame.setObjectName(u"Chirp_StimOff_Label_frame")
+        self.Chirp_StimOff_Label_frame.setMaximumSize(QSize(175, 16777215))
+        self.Chirp_StimOff_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StimOff_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_388 = QHBoxLayout(self.Chirp_StimOff_Label_frame)
+        self.horizontalLayout_388.setSpacing(0)
+        self.horizontalLayout_388.setObjectName(u"horizontalLayout_388")
+        self.horizontalLayout_388.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StimOff_Label = QLabel(self.Chirp_StimOff_Label_frame)
+        self.Chirp_StimOff_Label.setObjectName(u"Chirp_StimOff_Label")
+        self.Chirp_StimOff_Label.setFont(font1)
+        self.Chirp_StimOff_Label.setAlignment(Qt.AlignCenter)
+        self.Chirp_StimOff_Label.setWordWrap(True)
+
+        self.horizontalLayout_388.addWidget(self.Chirp_StimOff_Label)
+
+
+        self.horizontalLayout_387.addWidget(self.Chirp_StimOff_Label_frame)
+
+        self.Chirp_StimOff_Value_frame = QFrame(self.Chirp_StimOff_frame)
+        self.Chirp_StimOff_Value_frame.setObjectName(u"Chirp_StimOff_Value_frame")
+        self.Chirp_StimOff_Value_frame.setMaximumSize(QSize(150, 16777215))
+        self.Chirp_StimOff_Value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Chirp_StimOff_Value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_389 = QHBoxLayout(self.Chirp_StimOff_Value_frame)
+        self.horizontalLayout_389.setSpacing(0)
+        self.horizontalLayout_389.setObjectName(u"horizontalLayout_389")
+        self.horizontalLayout_389.setContentsMargins(0, 0, 0, 0)
+        self.Chirp_StimOff_Value = QLineEdit(self.Chirp_StimOff_Value_frame)
+        self.Chirp_StimOff_Value.setObjectName(u"Chirp_StimOff_Value")
+        self.Chirp_StimOff_Value.setMinimumSize(QSize(100, 0))
+        self.Chirp_StimOff_Value.setMaximumSize(QSize(100, 16777215))
+        self.Chirp_StimOff_Value.setFont(font5)
+        self.Chirp_StimOff_Value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_389.addWidget(self.Chirp_StimOff_Value)
+
+
+        self.horizontalLayout_387.addWidget(self.Chirp_StimOff_Value_frame)
+
+
+        self.verticalLayout_100.addWidget(self.Chirp_StimOff_frame)
+
+        self.StimulusGenerator_Parameter_stackedWidget.addWidget(self.page_Chirp)
 
         self.horizontalLayout_205.addWidget(self.StimulusGenerator_Parameter_stackedWidget)
 
 
-        self.horizontalLayout_201.addWidget(self.StimulusGenerator_Parameter_frame)
-
-
-        self.horizontalLayout_203.addWidget(self.StimulusGenerator_TopContainer)
+        self.horizontalLayout_203.addWidget(self.StimulusGenerator_Parameter_frame)
 
 
         self.verticalLayout_110.addWidget(self.StimulusGenerator_Container)
-
-        self.StimulusGenerator_SubContainer = QFrame(self.page_401)
-        self.StimulusGenerator_SubContainer.setObjectName(u"StimulusGenerator_SubContainer")
-        self.StimulusGenerator_SubContainer.setFrameShape(QFrame.StyledPanel)
-        self.StimulusGenerator_SubContainer.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_202 = QHBoxLayout(self.StimulusGenerator_SubContainer)
-        self.horizontalLayout_202.setSpacing(100)
-        self.horizontalLayout_202.setObjectName(u"horizontalLayout_202")
-        self.horizontalLayout_202.setContentsMargins(75, 10, 75, 10)
-        self.StimulusGenerator_Display_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
-        self.StimulusGenerator_Display_pushButton.setObjectName(u"StimulusGenerator_Display_pushButton")
-        self.StimulusGenerator_Display_pushButton.setMinimumSize(QSize(200, 0))
-        self.StimulusGenerator_Display_pushButton.setMaximumSize(QSize(200, 16777215))
-        self.StimulusGenerator_Display_pushButton.setFont(font1)
-
-        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Display_pushButton)
-
-        self.StimulusGenerator_Save_pushButton = QPushButton(self.StimulusGenerator_SubContainer)
-        self.StimulusGenerator_Save_pushButton.setObjectName(u"StimulusGenerator_Save_pushButton")
-        self.StimulusGenerator_Save_pushButton.setMinimumSize(QSize(200, 0))
-        self.StimulusGenerator_Save_pushButton.setMaximumSize(QSize(200, 16777215))
-        self.StimulusGenerator_Save_pushButton.setFont(font1)
-
-        self.horizontalLayout_202.addWidget(self.StimulusGenerator_Save_pushButton)
-
-        self.frame_5 = QFrame(self.StimulusGenerator_SubContainer)
-        self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
-
-        self.horizontalLayout_202.addWidget(self.frame_5)
-
-
-        self.verticalLayout_110.addWidget(self.StimulusGenerator_SubContainer)
 
         self.mainbody_stackedWidget.addWidget(self.page_401)
         self.page_501 = QWidget()
@@ -10898,9 +11625,9 @@ class Ui_MainWindow(QWidget):
         self.Vm_IntroTitle = QLabel(self.Vm_IntroTitle_frame)
         self.Vm_IntroTitle.setObjectName(u"Vm_IntroTitle")
         self.Vm_IntroTitle.setMaximumSize(QSize(16777215, 50))
-        font10 = QFont()
-        font10.setPointSize(18)
-        self.Vm_IntroTitle.setFont(font10)
+        font11 = QFont()
+        font11.setPointSize(18)
+        self.Vm_IntroTitle.setFont(font11)
         self.Vm_IntroTitle.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_193.addWidget(self.Vm_IntroTitle)
@@ -10948,9 +11675,9 @@ class Ui_MainWindow(QWidget):
         sizePolicy3.setHeightForWidth(self.Vm_Task01_Title_frame.sizePolicy().hasHeightForWidth())
         self.Vm_Task01_Title_frame.setSizePolicy(sizePolicy3)
         self.Vm_Task01_Title_frame.setMaximumSize(QSize(16777215, 50))
-        font11 = QFont()
-        font11.setPointSize(14)
-        self.Vm_Task01_Title_frame.setFont(font11)
+        font12 = QFont()
+        font12.setPointSize(14)
+        self.Vm_Task01_Title_frame.setFont(font12)
         self.Vm_Task01_Title_frame.setFrameShape(QFrame.StyledPanel)
         self.Vm_Task01_Title_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_194 = QHBoxLayout(self.Vm_Task01_Title_frame)
@@ -10960,7 +11687,7 @@ class Ui_MainWindow(QWidget):
         self.Vm_Task01_Title = QLabel(self.Vm_Task01_Title_frame)
         self.Vm_Task01_Title.setObjectName(u"Vm_Task01_Title")
         self.Vm_Task01_Title.setMaximumSize(QSize(16777215, 50))
-        self.Vm_Task01_Title.setFont(font10)
+        self.Vm_Task01_Title.setFont(font11)
         self.Vm_Task01_Title.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_194.addWidget(self.Vm_Task01_Title)
@@ -11015,7 +11742,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_196.setContentsMargins(0, 0, 0, 0)
         self.Vm_Task02_Text = QLabel(self.Vm_Task02_Text_frame)
         self.Vm_Task02_Text.setObjectName(u"Vm_Task02_Text")
-        self.Vm_Task02_Text.setFont(font10)
+        self.Vm_Task02_Text.setFont(font11)
         self.Vm_Task02_Text.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_196.addWidget(self.Vm_Task02_Text)
@@ -11070,7 +11797,7 @@ class Ui_MainWindow(QWidget):
         self.Vm_Task03_Title = QLabel(self.Vm_Task03_Title_frame)
         self.Vm_Task03_Title.setObjectName(u"Vm_Task03_Title")
         self.Vm_Task03_Title.setMaximumSize(QSize(16777215, 50))
-        self.Vm_Task03_Title.setFont(font10)
+        self.Vm_Task03_Title.setFont(font11)
         self.Vm_Task03_Title.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_198.addWidget(self.Vm_Task03_Title)
@@ -11382,12 +12109,14 @@ class Ui_MainWindow(QWidget):
         self.retranslateUi(MainWindow)
 
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
-        self.mainbody_stackedWidget.setCurrentIndex(10)
+        self.toolBox.setCurrentIndex(7)
+        self.toolBox.layout().setSpacing(10)
+        self.mainbody_stackedWidget.setCurrentIndex(9)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
-        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(2)
+        self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
         self.Exercise101_stackedWidget.setCurrentIndex(0)
 
 
@@ -11415,15 +12144,25 @@ class Ui_MainWindow(QWidget):
         self.Neuron_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Interface", None))
         self.NeuronTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.NeuronDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
-        self.Imaging_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Spikeling Imaging Stimulation", None))
+        self.Imaging_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Imaging Simulation", None))
         self.ImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Stimulation", None))
         self.MultipleImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Multiple Imaging", None))
         self.ImagingTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.ImagingDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"Stimulus Generator", None))
         self.Exercices_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Suggested Exercices", None))
-        self.Exercice101_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.1 Introduction to Spikeling", None))
-        self.Exercice102_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.2 Spikes", None))
+        self.Exercice101_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.1 - Adaptation", None))
+        self.Exercice102_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.2 - External light stimulation", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"1.3 - Direct Current Stimulation", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), QCoreApplication.translate("MainWindow", u"1 - Introduction to Spikeling", None))
+        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"2.1", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"2.2", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_4), QCoreApplication.translate("MainWindow", u"2 - Electrophysiology", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_6), QCoreApplication.translate("MainWindow", u"3 - Photo-stimulation", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_7), QCoreApplication.translate("MainWindow", u"4 - Synapses", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_8), QCoreApplication.translate("MainWindow", u"5 - Neuronal network", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_5), QCoreApplication.translate("MainWindow", u"6- Fluorescence Imaging", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_9), QCoreApplication.translate("MainWindow", u"7 - Spike Inference", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_10), QCoreApplication.translate("MainWindow", u"8 - Methodology", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Color theme", None))
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"graph width", None))
@@ -11452,7 +12191,7 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_SelectPortLabel.setText(QCoreApplication.translate("MainWindow", u"Select Port :", None))
         self.Spikeling_SelectPortComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a COM port:", None))
 
-        self.Spikeling_ConnectButton.setText(QCoreApplication.translate("MainWindow", u"Connected", None))
+        self.Spikeling_ConnectButton.setText(QCoreApplication.translate("MainWindow", u"Connect Spikeling Screen", None))
         self.LED_pushButton.setText(QCoreApplication.translate("MainWindow", u"LED On   ", None))
         self.Sound_pushButton.setText(QCoreApplication.translate("MainWindow", u"Buzzer On   ", None))
         self.Spikeling_NeuronModeLabel.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:14pt; font-weight:700;\">Neuron Mode: </span></p></body></html>", None))
@@ -11858,6 +12597,8 @@ class Ui_MainWindow(QWidget):
         self.StimulusGenerator_Selection_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Binary noise", None))
 
         self.StimulusGenerator_Oscilloscope_widget_Stim_checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.StimulusGenerator_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Stimulus", None))
+        self.StimulusGenerator_Save_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Stimulus", None))
         self.Step_Number_Label.setText(QCoreApplication.translate("MainWindow", u"Number of steps", None))
         self.Step_Number_Value.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.Step_Increment_Label.setText(QCoreApplication.translate("MainWindow", u"Intensity increment (a.u.)", None))
@@ -11898,8 +12639,36 @@ class Ui_MainWindow(QWidget):
         self.TriangleWave_IntOff_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.TriangleWave_StimOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-stimulus time (ms)", None))
         self.TriangleWave_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
-        self.StimulusGenerator_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Stimulus", None))
-        self.StimulusGenerator_Save_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Stimulus", None))
+        self.Chirp_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Linear Frequency Chirp", None))
+        self.Chirp_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Exponential Frequency Chirp", None))
+        self.Chirp_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Linear Amplitude Chirp", None))
+
+        self.Chirp_Amplitude_Label.setText(QCoreApplication.translate("MainWindow", u"Chirp Amplitude (a.u.)", None))
+        self.Chirp_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Chirp_Frequency_Label.setText(QCoreApplication.translate("MainWindow", u"Chirp Frequency (Hz)", None))
+        self.Chirp_Frequency_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Chirp_StartFrequency_Label.setText(QCoreApplication.translate("MainWindow", u"Chirp Start Frequency (Hz)", None))
+        self.Chirp_StartFrequency_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Chirp_EndFrequency_Label.setText(QCoreApplication.translate("MainWindow", u"Chirp End Frequency (Hz)", None))
+        self.Chirp_EndFrequency_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Chirp_Duration_Label.setText(QCoreApplication.translate("MainWindow", u"Chirp Duration (ms)", None))
+        self.Chirp_Duration_Value.setText(QCoreApplication.translate("MainWindow", u"1000", None))
+#if QT_CONFIG(whatsthis)
+        self.Chirp_PreChirpOn_Duration_Label.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pre-Chirp On </p><p><span style=\" font-size:10pt;\">Amp. (a.u.) / Dur. (ms)</span></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
+        self.Chirp_PreChirpOn_Duration_Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pre-Chirp On<br> <span style=\" font-size:10pt;\">Amp. (a.u.) / Dur. (ms)</span></p></body></html>", None))
+        self.Chirp_PreChirpOn_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Chirp_PreChirpOn_Duration_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Chirp_PreChirpOff_Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pre-Chirp Off <br><span style=\" font-size:10pt;\">Amp. (a.u.) / Dur. (ms)</span></p></body></html>", None))
+        self.Chirp_PreChirpOff_Amplitude_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Chirp_PreChirpOff_Duration_Value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Chirp_PreChirpMid_Label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Pre-Chirp Mid <br><span style=\" font-size:10pt;\">Amp. (a.u.) / Dur. (ms)</span></p></body></html>", None))
+        self.Chirp_PreChirpMid_Amplitude.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Chirp_PreChirpMid_Duration.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Chirp_IntOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-stimulus intensity (a.u.)", None))
+        self.Chirp_IntOff_Value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Chirp_StimOff_Label.setText(QCoreApplication.translate("MainWindow", u"Inter-stimulus time (ms)", None))
+        self.Chirp_StimOff_Value.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.Vm_IntroTitle.setText(QCoreApplication.translate("MainWindow", u"Resting membrane potential", None))
         self.Vm_IntroText.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">In the absence of a stimulus, the Spikeling neuron rests at -70 mV and should only spike sporadically.</span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The resting membrane voltage (Vm) can be adjust indirectly by the virtual stimulating electrode located at the bottom left of the unit. The dial sitting on the electrode drawing sets a constant input current increasing or decreasing the polarised state of the neuron. </span></p><p align=\"justify\"><br/></p><p align=\"justify\"><span style=\" font-size:12pt;\">In this session we are only  interested in the membrane potential trace (the red one on the oscilloscope) and the input current trace (the green one). </span></p><p align=\"justify\"><span style=\" font-size:12pt;\">The red LED on the unit also tracks the Vm, and flashes with each spike which should also be accompanied by an audible \u201cclick\u201d. As human auditory frequency discrimination ( is higher than the visu"
                         "al flicker fusion frequency (50-90Hz), electrophysiologists often connect a speaker to their recording of membrane voltage to get a direct audio feedback of what the neuron might respond to.</span></p></body></html>", None))

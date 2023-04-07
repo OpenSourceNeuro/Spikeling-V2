@@ -22,7 +22,7 @@ from py_toggle import PyToggle
 # Import GUI page scripts
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
 import Spikeling_graph
-import Imaging_graph
+import Imaging_graph, MultipleImaging_graph
 
 
 # Setting UART parameters
@@ -489,7 +489,6 @@ class MainWindow(QMainWindow):
 
         # Start reading serial when connect button is clicked and plot the reading on the oscilloscope
         self.ui.Spikeling_ConnectButton.clicked.connect(lambda: Spikeling_graph.SpikelingPlot(self))
-        self.ui.Imaging_pushButton.clicked.connect(lambda: Imaging_graph.ImagingPlot(self))
 
         # Load previously conceived neurons
         self.ui.Spikeling_NeuronBrowsePushButton.clicked.connect(lambda: Page101.Spikeling101.BrowseNeuron(self))
@@ -606,6 +605,9 @@ class MainWindow(QMainWindow):
         # Display page201 when imaging button is clicked
         self.ui.ImagingStimulation_pushButton.clicked.connect(lambda: Page201.Imaging201.ShowPage(self))
 
+        # Connect the imaging Oscilloscope to the Spikeling Oscilloscope
+        self.ui.Imaging_pushButton.clicked.connect(lambda: Imaging_graph.ImagingPlot(self))
+
         # Imaging Parameters
         self.ui.Imaging_ImagingParameter_pushButton.clicked.connect(lambda: self.ui.Imaging_parameter_stackedWidget.setCurrentWidget(self.ui.Imaging_ImagingParameter_page))
         self.ui.Imaging_FrameRate_toggleButton.toggled.connect(lambda: Page201.Imaging201.ActivateFrameRate(self))
@@ -650,6 +652,9 @@ class MainWindow(QMainWindow):
     # Imaging Tutorial - page202
         # Display page202 when imaging button is clicked
         self.ui.MultipleImagingStimulation_pushButton.clicked.connect(lambda: Page202.Imaging202.ShowPage(self))
+
+        # Connect the Multiple imaging Oscilloscope to the Spikeling Oscilloscope
+        self.ui.MultipleImaging_pushButton.clicked.connect(lambda: MultipleImaging_graph.MultipleImagingPlot(self))
 
         # Imaging Parameters
         self.ui.MultipleImaging_ImagingParameter_pushButton.clicked.connect(lambda: self.ui.MultipleImaging_parameter_stackedWidget.setCurrentWidget(self.ui.MultipleImaging_ImagingParameter_page))
@@ -723,7 +728,8 @@ class MainWindow(QMainWindow):
         self.ui.StimulusGenerator_Display_pushButton.clicked.connect(lambda: Page401.StimulusGenerator.DrawStimulus(self))
         # Save current stimulus
         self.ui.StimulusGenerator_Save_pushButton.clicked.connect(lambda: Page401.StimulusGenerator.SaveStimulus(self))
-
+        # Adapt Chirp page parameters to current selection
+        self.ui.Chirp_comboBox.currentIndexChanged.connect(lambda: Page401.ChangeChirpParameter(self))
 
     ########################################################################
     # Exercise-101 - page501

@@ -17,8 +17,8 @@ penwidth = 1
 
 def SpikelingPlot(self):
 
-    SetInitParameters(self)
     SetSerial(self)
+    SetInitParameters(self)
     SetPlotCurve(self)
     SetPlot(self)
 
@@ -156,6 +156,21 @@ def SetInitParameters(self):
     self.i_downsampling = 0
     self.recordflag = False
     self.ui.Spikeling_Oscilloscope_widget.clear()
+    if self.ui.Spikeling_ConnectButton.isChecked() and self.serial_port.is_open:
+        self.ui.Spikeling_ConnectButton.setText("Connected")
+        self.ui.Spikeling_ConnectButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[3])) + ";\n"
+                                                      "background-color: rgb" + str(tuple(Settings.DarkSolarized[11])) + ";\n"
+                                                      "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                      "border-radius: 10px;"
+                                                      )
+    else:
+        self.ui.Spikeling_ConnectButton.setText("Connect Spikeling Screen")
+        self.ui.Spikeling_ConnectButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                      "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                      "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                      "border-radius: 10px;"
+                                                      )
+
 
 
 def SetSerial(self):

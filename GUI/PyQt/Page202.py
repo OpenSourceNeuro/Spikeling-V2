@@ -191,7 +191,7 @@ class Imaging202():
 
     def GetMultiplePhotoShotNoise(self):
         self.MultiplePSNValue = self.ui.MultipleImaging_PhotoShotNoise_Slider.value()
-        self.ui.MultipleImaging_PhotoShotNoise_Readings.setText(str(self.PSNValue / 10000 / 100))
+        self.ui.MultipleImaging_PhotoShotNoise_Readings.setText(str(self.MultiplePSNValue / 10000 / 100))
         self.ui.MultipleImaging_PhotoShotNoise_Readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
         self.MultiplePhotoShotNoise = self.MultiplePSNValue / 10000 / 100
 
