@@ -10,7 +10,7 @@
 
 
 
-![Alt Text](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
+<img align="right" src=https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif>
 
 
 This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
@@ -45,13 +45,14 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 <img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png" width=400">
 
 <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400">
-</p>
+</p></div>
 
 <h6 align="center">Left: Rendering of spikeling electronic components. Right: Acrylic cover detailing spikeling functionalities.</h6>
 
-</div>
+
 
 <br>
+***
 </br>
 
 
