@@ -53,7 +53,7 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 The spikeling project emerged from local needs to teach neuroscience class modules for direct interaction with neuron physiology, data analysis, fluorescence imaging, protocol design, etc. The aim is to provide hands-on experience on how neurons encode information and how diverse variables modulates their activities, while engaging students with crucial aspects of data collection, experimental limitations, methodology and statistical analysis.
 
 <p style='text-align: justify;'>
-In order to give users a full interactive experience with the Spikeling neuron, a drawing engraved on the cover details in a neuro-morphic fashion all device functionalities. Futhermore, a spike-triggered LED and buzzer have been added to the device.
+In order to give users a full interactive experience with the Spikeling neuron, a drawing engraved on the cover details in a neuro-morphic fashion all device functionalities. Furthermore, a spike-triggered LED and buzzer have been added to the device.
 
 <p style='text-align: justify;'>
 A dedicated GUI (Graphical User Interface) allows users to fully interact with Spikeling, plot all data generated and record them for further analysis.
@@ -240,69 +240,84 @@ We would always encourage teachers to develop their own exercises based on the c
 </div>
 
 ***
+***
+
+#Spikeling: A spiking neuron interface
 
 <div>
-<img align="left" width="450" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/Spikeling_front.png">
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400" height="250">
+
 <p style='text-align: justify;'>
+The entire layout of the Spikeling board has been reconceived and a laser-cut acrylic sheet repesenting a neuron now sits on top of the board. All ports and potentiometers are now strategically placed.
 
-The entire layout of the Spikeling board has been reconceived and a laser-cut acrylic sheet repesenting a neuron now sit on top of the board. All ports and potentiometers are now strategically placed.
+<p style='text-align: justify;'>
+The ESP32 is placed below the soma, the synaptic inputs from other Spikeling units are placed on the left, the synaptic output is placed on the right. Along the axon now sits a RGB LED, the red LED brightness follows as before the Vm status of the neuron, and the LED sparks in white when the neuron spike. The spike buzzer also sit along the axon, a small hole on the acrylic sheet sitting just above so the click can be heard coming from that direction. Both indicators can now be disabled by users at their pleasure.
 
-The ESP32 is placed below the soma, the synaptic inputs from other Spikeling units are placed on the left, the synaptic output is placed on the right. Along the axon now sits a RGB LED, the red LED brightness follows as before the Vm status of the neuron, and the LED sparks in white when the neuron spike. The spike buzzer also sit along the axon, a small hole on the acrylic sheet sitting just above so the click can be heard coming from that direction.
+<p style='text-align: justify;'>
+The Vm potentiometer and the Current-in port are now grouped together and sit on the acrylic sheet at the bottom of an electrode pipette. They can now be considered as patch clamp experiment variables.
 
-The Vm potentiometer and the Current-in port are now grouped together and sit on the acrylic sheet at the bottom of an electrode pipette. They can now be considered as a voltage clamp experiment variables.
+<p style='text-align: justify;'>
+A photoreceptor is now drawn on the acrylic sheet, below the opsin sits a photodiode, and a potentiometer on the photoreceptor body now controls the photoreceptor sensitivity and its polarity (users can thus decide if the photoreceptor has an excitatory or an inhibitory effect on the neuron)
 
-A photoreceptor is now drawn on the acrylic sheet, below the opsin sits a photodiode, and a potentiometer on the photoreceptor body now controls the photoreceptor sensitivity and its polarity (the user decides then if the PR has an excitatory or an inhibitory effect on the neuron)
+<p style='text-align: justify;'>
+The noise potentiometer now sits in a box by itself as it represents parasitic noise from the experiment environment(synaptic inputs, receptor noise, thermal noise, experimental setup, etc.) and is independent from the rest of the Spikeling functions. This potentiometer is different from the others: it is not center-detented as it generates noise from a zero to a maximum value.
 
-The noise potentiometer now sits in a box by itself as it represents parasitic noise from the experiment environment and is independent from the rest of the Spikeling functions. This potentiometer is different from the others as it is not center-detented as it generates noise from a zero to a maximum value.
+<p style='text-align: justify;'>
+Next is the Neuron mode box which contains the twelve available modes to the users and a push button that allows the user to switch between them.
 
-Next is the Neuron mode box which contains the 12 available modes to the users and a push button that allows the user to switch between them.
+<p style='text-align: justify;'>
+Finally, the last box contains all experimental tools allowing stimuli generation. As detailed on the acrylic top cover, the user can control the stimulus frequency and the stimulus intensity, along with its polarity. The stimulus output can either be directly connected to the current-in port to simulate a current applied to a patched neuron through the pipette; or be connected to a cable with a 5mm LED soldered at its tip which can be placed directly on top of the photoreceptor opsin (photodiode below). The photoreceptor potentiometer allows to modulate the gain and polarity of the light-induced input current. Furthermore, the photoreceptor possesses functions (on the GUI: decay/recovery) simulating how a variety of photoreceptors would integrate a light stimuli and how it will adapt to prolonged stimulation.  
 
-Finally, the last box contains all experimental tools allowing stimuli generation. As detailled on the acrylic sheet, the user can control the stimulus frequency and the stimulus strenght, along with its polarity. The stimulus output can either be directly connected to the current in port to simulate a current applied to a voltage held neuron through the pipette. Or be connected to a cable with a 5mm LED soldered at its tip which can be placed directly on top of the photoreceptor opsin (photodiode below). The photoreceptor possesses functions (decay/recovery) simulating how a real photoreceptor would integrate a light stimuli and how it will adapt to prolonged stimulation.  
-
-</p>
 </div>
-
 
 ***
 
-<div>
-<img align="left" width="450" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/GUI_main_screen.png">
 <p style='text-align: justify;'>
+Spikeling now possesses its own GUI, written in python and using the latest pyQt6 library. The script then uses pyInstaller so it can be translated into a windows/linux/mac app, ready to be easily distributed to users.
 
-Spikeling now possesses its own GUI, written in python and using the latest pyQt6 library. The script then uses pyInstall so it can be translated into a desktop app, ready to be easily distributed to users.
+<img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_graph.png">
 
-The GUI is divided (for the moment) into distinct tabs. The first one is the main GUI window where the user connects the board to the computer, can choose to either select the neuron mode on the board directly or through the GUI (note that custom modes will have to be selected from here, and in this instance the GUI takes priority over the board commands).
+<p style='text-align: justify;'>
+The GUI is divided into distinct pages. The first one is the main GUI window where users connect the board to the computer. From there they can choose to either select the neuronal mode on the board directly (neuron mode box) or through the GUI (note that custom modes will have to be selected from here, and in this instance the GUI takes priority over the board commands).
 
-The main window display the Spikeling activity (Neuron Vm, total current input from all sources & stimulus state). If connected to other spikeling, the GUI can display fore both synaptic input, their incoming neuron Vm and their spiking event, which will be translated into input current for the main neuron. Traces can be selected through checkbox and superimposed over the same graph with a common timeline.
+<p style='text-align: justify;'>
+The main window displays the Spikeling activity (Neuron Vm, total current input from all sources & stimulus ). If connected to other Spikelings, the GUI can display synaptic inputs: their incoming neuron Vm and their spiking events, which will be translated into input current for the main neuron. Traces can be selected through checkbox and superimposed over the same graph with a common timeline.
 
-Below the main window, Spikeling traces can be recorded either live or for only a fixed amount of stimulation loop.
+<p style='text-align: justify;'>
+Below the main window, sits the recording window.
 
-On the right hand side two control columns can be found. For all commands, when the checkbox is clicked, the GUI takes over the potentiometer and controls directly the Spikeling variable. This allow advanced user to finely design an experimental protocol for example.
+<p style='text-align: justify;'>
+On the right hand side two control columns can be found. For all commands, when the toggle button is enabled, the GUI takes over the potentiometer and controls directly the Spikeling variables. This allows users to design an experimental protocol in a controlled fashion.
 
+<p style='text-align: justify;'>
 Below the stimulus frequency and strength sliders can be found a custom stimulus display. Here the user can choose to use instead of the classical square wave, either a stimulus from a pre-design library (comprising sine wave, chirp, white noise, etc.), or either a custom made stimulus generated from the GUI "stimulus generator" tab.
 
-One the first Spikeling version, if the user wanted to change the set variable for the photoreceptor and synaptic set variable (gain, decay, recovery, polarity, etc.), one had to manually reupload the arduino code with these changes, and no proper experimental protocol could be establish. Here by clicking the checkbox, the user had the opportunity to change these value directly and therefore is able to play further with each Spikeling parameter, opening the way for teacher to come up with their own personal exercises.
-
-
-</p>
 </div>
 
 ***
+
+#Spikeling: GUI - neuron parameters
 
 <div>
-<img align="left" width="450" height="250" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/GUI_neuron_screen.png">
+
+<img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neurogen.jpg">
+
 <p style='text-align: justify;'>
+In this tab, the user can play directly with the Izhikevich model. A short text from Izhikevich's publication explain the role of each variable.
 
-In this tab, the user can play directly with the Izhikevich model. A short text from Izhikevich publications explain the role of each variable (later upgrade will include hyperlink to these publication along with pop up window detailing further what the code is actually doing).
+<p style='text-align: justify;'>
+The main window computes the Izhikevich model with a modifiable current input. Users can change the 4 variable of the code and display the resulting "neuron mode". This is also where users can come up with their own neuronal modes to experiment on. This is also where teachers can generate their own custo-made neuron, save them, and impose them as experimental model for, i.e. home assignements.
 
-The main window computes the code with a current input of +15 (as in Izhikevich publication). User can change the 4 variable of the code and display the resulting "neuron mode". This is also where user can come up with its own neuronal modes to experiment on if the 12 pre-set one are not enough. This is also where teachers can generate their own custom made neuron, save them, and impose them as experimental model for i.e. homework exercises.
-
-</p>
 </div>
 
 ***
+
+#Spikeling: Stimulus Generator
+
+<div>
 
 Stimulus generator and data analysis tabs needs to be finished (cf. development log) but they will include ... a stimulus generator, allowing the user to come up with custom made stimulation loop, and ... a data analysis routine for early computation course where student could upload their recorded traces and extract information from it, generating raster plot, computing data and generate basic statistics. For advanced courses an integrated python exercise manual (no IGOR !!!) will guide students through creating a data analysis pipeline using .csv files saved from the main window.
 
-<br>
-<div>
+
+</div>
