@@ -10,7 +10,7 @@
 
 
 
-![Alt Text](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/ressources/spike.gif)
+![Alt Text](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
 
 
 This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
