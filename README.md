@@ -44,7 +44,7 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 <div><p>
 <img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png" width=400">
 
-<img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400">
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="400">
 </p></div>
 
 <br>
