@@ -43,9 +43,9 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 <br>
 
 <div>
-<img align="left" src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/Images/PCB.png">
+<img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png">
 
-<img align="right"  src="https://github.com/MaxZimmer/Spikeling-V2/blob/main/GUI/Pictures%20%26%20Logos/Spikeling_cover.png">
+<img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png">
 
 </div>
 
