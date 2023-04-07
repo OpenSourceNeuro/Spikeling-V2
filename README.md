@@ -42,9 +42,9 @@ Technically, it consists on a microcontroller (an ESP32) running the computation
 <br>
 
 <div>
-<img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png">
+<img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB.png" width="500">
 
-<img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png">
+<img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_cover.png" width="500">
 
 </div>
 
