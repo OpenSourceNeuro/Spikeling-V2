@@ -8,6 +8,7 @@
 
 <div>
 
+<p style='text-align: right;'>
 ![](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
 
 This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
@@ -71,25 +72,36 @@ Enthusiasts and potential collaborators can source the electronic bits for this 
 
 <h3 align="left">Detailed Spikeling functions</h3></p>
 
-- [Spikeling A spiking neuron interface](#Spikeling-A-spiking-neuron-interface)
-- [Spikeling GUI - neuron parameters](#Spikeling-GUI-neuron-parameters)
-- [Spikeling GUI - stimuli parameters](#Spikeling-GUI-stimuli-parameters)
-- [Spikeling Data Analysis](#Spikeling-Data-Analysis)
-- [Spikeling Neuron generator](#Spikeling-Neuron-generator)
-- [Spikeling Stimulus Generator](#Spikeling-Stimulus-Generator)
-- [Spikeling Multiple recording](#Spikeling-Multiple-recording)
+- [Spikeling: A spiking neuron interface](#Spikeling-A-spiking-neuron-interface)
+- [Spikeling: GUI - neuron parameters](#Spikeling-GUI-neuron-parameters)
+- [Spikeling: GUI - stimuli parameters](#Spikeling-GUI-stimuli-parameters)
+- [Spikeling: Data Analysis](#Spikeling-Data-Analysis)
+- [Spikeling: Neuron generator](#Spikeling-Neuron-generator)
+- [Spikeling: Stimulus Generator](#Spikeling-Stimulus-Generator)
+- [Spikeling: Multiple recording](#Spikeling-Multiple-recording)
 
-- [Fluorescence imaging simulation](#Fluorescence-Imaging-simulation)
-- [Fluorescenc: Imaging parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence Calcium parameters](#Fluorescence-Calcium-parameters)
-- [Fluorescence Fluorescence parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence Data Analysis](#Fluorescence-Data-Analysis)
-- [Fluorescence Multiple fluorescence](#Fluorescence-Multiple-fluorescence)
+<br>
 
-- [Exercices GUI](#Exercices-GUI)
-- [Exercices Python](#Exercices-Python)
+- [Fluorescence: imaging simulation](#Fluorescence-Imaging-simulation)
+- [Fluorescence: Imaging parameters](#Fluorescence-Imaging-parameters)
+- [Fluorescence: Calcium parameters](#Fluorescence-Calcium-parameters)
+- [Fluorescence: Fluorescence parameters](#Fluorescence-Imaging-parameters)
+- [Fluorescence: Data Analysis](#Fluorescence-Data-Analysis)
+- [Fluorescence: Multiple fluorescence](#Fluorescence-Multiple-fluorescence)
+
+<br>
+
+- [Exercices: GUI](#Exercices-GUI)
+- [Exercices: Python](#Exercices-Python)
+
+<br>
 
 - [GitHub Contributions](#GitHub-Contributions)
+
+- [Arduino code and libraries](#)
+
+- [GUI PyQt6 / PySide6 script](#)
+
 
 
 ***
