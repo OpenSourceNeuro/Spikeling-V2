@@ -464,7 +464,7 @@ All stimuli can then be saved and further loaded from the Spikeling main window.
 
 <div>
 
-<img align="center" width="400" height="200" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg">
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg">
 
 <img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg">
 
