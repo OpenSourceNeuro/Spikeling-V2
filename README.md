@@ -362,11 +362,16 @@ u' = a * (bv - u)
 ```
 
 With the auxiliary after-spike resetting:
-if ```math
-v >= 30mV$```
- then ```math
- v = c```
- and ```math
+if
+```math
+v >= 30mV
+```
+ then
+ ```math
+ v = c
+ ```
+ and
+ ```math
  u = u + d
 ```
 
