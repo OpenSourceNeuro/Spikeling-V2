@@ -390,6 +390,7 @@ class Spikeling103():
             str(len(self.Stim_loops)) + " loops (" + str(self.loop_duration) + "ms each)")
 
 
+
     ##########
     # Average Traces Plotting
     ##########
@@ -421,21 +422,17 @@ class Spikeling103():
     # For all Loops:
         for i in range(0, len(self.Stim_loops) - 1):
         # Display all Spike rate loops
-            self.ui.DataAnalysis_Oscilloscope_widget3_0_0.plot(x=self.ui.StimLoop_x, y=self.Spikerate0_loops[i],
-                                                               pen=(Settings.DarkSolarized[11]))
+            self.ui.DataAnalysis_Oscilloscope_widget3_0_0.plot(x=self.ui.StimLoop_x, y=self.Spikerate0_loops[i], pen=(Settings.DarkSolarized[11]))
         # Display all Spikes within loops
             self.ui.ySpikeLoops0 = np.zeros(len(self.Spike0_loops[i]))
             for j in range(len(self.Spike0_loops[i])):
                 self.ui.ySpikeLoops0[j] = i
-            self.ui.DataAnalysis_Oscilloscope_widget3_0_1.plot(x=self.Spike0_loops[i], y=self.ui.ySpikeLoops0,
-                                                               pen=None, symbol='o', symbolBrush=tuple(Settings.DarkSolarized[3]), symbolSize=5)
+            self.ui.DataAnalysis_Oscilloscope_widget3_0_1.plot(x=self.Spike0_loops[i], y=self.ui.ySpikeLoops0, pen=None, symbol='o', symbolBrush=tuple(Settings.DarkSolarized[3]), symbolSize=5)
             self.ui.DataAnalysis_Oscilloscope_widget3_0_1.setXRange(0, self.loop_duration)
         # Display all Vm loops
-            self.ui.DataAnalysis_Oscilloscope_widget3_0_2.plot(x=self.ui.StimLoop_x, y=self.Vm0_loops[i],
-                                                               pen=(Settings.DarkSolarized[11]))
+            self.ui.DataAnalysis_Oscilloscope_widget3_0_2.plot(x=self.ui.StimLoop_x, y=self.Vm0_loops[i], pen=(Settings.DarkSolarized[11]))
         # Display all I_Total loops
-            self.ui.DataAnalysis_Oscilloscope_widget3_0_3.plot(x=self.ui.StimLoop_x, y=self.ITotal_loops[i],
-                                                               pen=(Settings.DarkSolarized[11]))
+            self.ui.DataAnalysis_Oscilloscope_widget3_0_3.plot(x=self.ui.StimLoop_x, y=self.ITotal_loops[i], pen=(Settings.DarkSolarized[11]))
 
     # Compute average traces
         self.SpikeRate_mean = np.mean(self.Spikerate0_loops, axis=0)
@@ -444,14 +441,11 @@ class Spikeling103():
         self.Stim_mean = np.mean(self.Stim_loops, axis=0)
 
     # Display Spike rate Average Trace
-        self.ui.DataAnalysis_Oscilloscope_widget3_0_0.plot(x=self.ui.StimLoop_x, y=self.SpikeRate_mean,
-                                                           pen={'color':tuple(Settings.DarkSolarized[15]), 'width':3})
+        self.ui.DataAnalysis_Oscilloscope_widget3_0_0.plot(x=self.ui.StimLoop_x, y=self.SpikeRate_mean, pen={'color':tuple(Settings.DarkSolarized[15]), 'width':3})
     # Display Vm Average Trace
-        self.ui.DataAnalysis_Oscilloscope_widget3_0_2.plot(x=self.ui.StimLoop_x, y=self.Vm0_mean,
-                                                           pen={'color':(Settings.DarkSolarized[3]), 'width':3})
+        self.ui.DataAnalysis_Oscilloscope_widget3_0_2.plot(x=self.ui.StimLoop_x, y=self.Vm0_mean, pen={'color':(Settings.DarkSolarized[3]), 'width':3})
     # Display Current Average Trace
-        self.ui.DataAnalysis_Oscilloscope_widget3_0_3.plot(x=self.ui.StimLoop_x, y=self.ITotal_mean,
-                                                           pen={'color':(Settings.DarkSolarized[4]), 'width':3})
+        self.ui.DataAnalysis_Oscilloscope_widget3_0_3.plot(x=self.ui.StimLoop_x, y=self.ITotal_mean, pen={'color':(Settings.DarkSolarized[4]), 'width':3})
 
     # Page 103_3_1:
     # Clear previous traces
@@ -476,8 +470,7 @@ class Spikeling103():
     # For all loops
         for i in range(0, len(self.Stim_loops) - 1):
         # Display all Spike rate loops
-            self.ui.DataAnalysis_Oscilloscope_widget3_1_0.plot(x=self.ui.StimLoop_x, y=self.Spikerate1_loops[i],
-                                                               pen=(Settings.DarkSolarized[11]))
+            self.ui.DataAnalysis_Oscilloscope_widget3_1_0.plot(x=self.ui.StimLoop_x, y=self.Spikerate1_loops[i], pen=(Settings.DarkSolarized[11]))
         # Display all Spikes within loops
             self.ui.ySpikeLoops1 = np.zeros(len(self.Spike1_loops[i]))
             for j in range(len(self.Spike1_loops[i])):

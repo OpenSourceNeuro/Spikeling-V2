@@ -76,7 +76,7 @@ class Spikeling101():
     def BrowseRecordFolder(self):
             FolderName = QFileDialog.getExistingDirectory(self,
                                                           caption = 'Hey! Select the folder where your experiment will be saved',
-                                                          directory = ".\Recordings")
+                                                          dir = ".\Recordings")
             if FolderName:
                     self.Spikeling_DataRecording_SelectRecordFolder_label.setText(FolderName)
                     self.Spikeling_FolderNameLabel.setText(FolderName)
