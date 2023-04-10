@@ -2049,7 +2049,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -7699,7 +7699,7 @@ background-color: rgb(220, 50, 47);</string>
                        <item>
                         <widget class="QStackedWidget" name="DataAnalysis_Display_StackedWidget">
                          <property name="currentIndex">
-                          <number>6</number>
+                          <number>8</number>
                          </property>
                          <widget class="QWidget" name="page_103_1_0">
                           <layout class="QVBoxLayout" name="verticalLayout_39">
@@ -9159,6 +9159,18 @@ background-color: rgb(220, 50, 47);</string>
                                <verstretch>0</verstretch>
                               </sizepolicy>
                              </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>75</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>75</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">background-color: rgb(0, 30, 38);</string>
                              </property>
@@ -9384,6 +9396,18 @@ background-color: rgb(220, 50, 47);</string>
                                <verstretch>0</verstretch>
                               </sizepolicy>
                              </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>75</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>75</height>
+                              </size>
+                             </property>
                              <property name="styleSheet">
                               <string notr="true">background-color: rgb(0, 30, 38);</string>
                              </property>
@@ -9608,6 +9632,18 @@ background-color: rgb(220, 50, 47);</string>
                                <horstretch>0</horstretch>
                                <verstretch>0</verstretch>
                               </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>75</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>75</height>
+                              </size>
                              </property>
                              <property name="styleSheet">
                               <string notr="true">background-color: rgb(0, 30, 38);</string>
