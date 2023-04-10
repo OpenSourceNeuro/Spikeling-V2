@@ -68,41 +68,10 @@ Enthusiasts and potential collaborators can source the electronic bits for this 
 
 ***
 
-<h3 align="left">Detailed Spikeling functions</h3></p>
 
-- [Spikeling: A spiking neuron interface](#Spikeling-A-spiking-neuron-interface)
-- [Spikeling: GUI - neuron parameters](#Spikeling-GUI-neuron-parameters)
-- [Spikeling: GUI - stimuli parameters](#Spikeling-GUI-stimuli-parameters)
-- [Spikeling: Data Analysis](#Spikeling-Data-Analysis)
-- [Spikeling: Neuron generator](#Spikeling-Neuron-generator)
-- [Spikeling: Stimulus Generator](#Spikeling-Stimulus-Generator)
-- [Spikeling: Multiple recording](#Spikeling-Multiple-recording)
+<h2 align="center"> A brief summary of Spikeling functions</h3>
 
 <br>
-
-- [Fluorescence: imaging simulation](#Fluorescence-Imaging-simulation)
-- [Fluorescence: Imaging parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence: Calcium parameters](#Fluorescence-Calcium-parameters)
-- [Fluorescence: Fluorescence parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence: Data Analysis](#Fluorescence-Data-Analysis)
-- [Fluorescence: Multiple fluorescence](#Fluorescence-Multiple-fluorescence)
-
-<br>
-
-- [Exercices: GUI](#Exercices-GUI)
-- [Exercices: Python](#Exercices-Python)
-
-<br>
-
-- [GitHub Contributions](#GitHub-Contributions)
-
-- [Arduino code and libraries](#)
-
-- [GUI PyQt6 / PySide6 script](#)
-
-
-
-***
 
 <div>
 
@@ -134,7 +103,11 @@ Each Spikeling unit possesses one “axonal” output and two “dendritic” in
 
 </div>
 
+<br>
+
 ***
+
+<br>
 
 <div>
 
@@ -166,7 +139,11 @@ For advanced data analysis and basic statistics, python notebooks are provided t
 
 </div>
 
+<br>
+
 ***
+
+<br>
 
 <div>
 
@@ -192,7 +169,11 @@ Here users are encouraged to develop their own stimulus (successive waves, sinus
 
 </div>
 
+<br>
+
 ***
+
+<br>
 
 <div>
 
@@ -231,7 +212,11 @@ Ultimately, students could be encouraged to analyse imaging data, even implement
 
 </div>
 
+<br>
+
 ***
+
+<br>
 
 <div>
 
@@ -249,10 +234,53 @@ We would always encourage teachers to develop their own exercises based on the c
 
 </div>
 
-***
+<br>
+
 ***
 
-## Spikeling A spiking neuron interface
+<br>
+
+<h2 align="center">Detailed Spikeling functions</h3></p>
+
+<br>
+
+- [Spikeling: A spiking neuron interface](#A-spiking-neuron-interface)
+- [Spikeling: GUI - neuron parameters](#Spikeling-GUI-neuron-parameters)
+- [Spikeling: GUI - stimuli parameters](#Spikeling-GUI-stimuli-parameters)
+- [Spikeling: Data Analysis](#Spikeling-Data-Analysis)
+- [Spikeling: Neuron generator](#Spikeling-Neuron-generator)
+- [Spikeling: Stimulus Generator](#Spikeling-Stimulus-Generator)
+- [Spikeling: Multiple recording](#Spikeling-Multiple-recording)
+
+<br>
+
+- [Fluorescence: imaging simulation](#Fluorescence-Imaging-simulation)
+- [Fluorescence: Imaging parameters](#Fluorescence-Imaging-parameters)
+- [Fluorescence: Calcium parameters](#Fluorescence-Calcium-parameters)
+- [Fluorescence: Fluorescence parameters](#Fluorescence-Imaging-parameters)
+- [Fluorescence: Data Analysis](#Fluorescence-Data-Analysis)
+- [Fluorescence: Multiple fluorescence](#Fluorescence-Multiple-fluorescence)
+
+<br>
+
+- [Exercices: GUI](#Exercices-GUI)
+- [Exercices: Python](#Exercices-Python)
+
+<br>
+
+- [GitHub Contributions](#GitHub-Contributions)
+
+- [Arduino code and libraries](#)
+
+- [GUI PyQt6 / PySide6 script](#)
+
+<br>
+
+***
+
+<br>
+
+## A spiking neuron interface
 
 <div>
 
@@ -271,7 +299,7 @@ The Vm potentiometer and the Current-in port are now grouped together and sit on
 A photoreceptor is now drawn on the acrylic sheet, below the opsin sits a photodiode, and a potentiometer on the photoreceptor body now controls the photoreceptor sensitivity and its polarity (users can thus decide if the photoreceptor has an excitatory or an inhibitory effect on the neuron)
 
 <p style='text-align: justify;'>
-The noise potentiometer now sits in a box by itself as it represents parasitic noise from the experiment environment(synaptic inputs, receptor noise, thermal noise, experimental setup, etc.) and is independent from the rest of the Spikeling functions. This potentiometer is different from the others: it is not center-detented as it generates noise from a zero to a maximum value.
+The noise potentiometer now sits in a box by itself as it represents parasitic noise from the experiment environment (synaptic inputs, receptor noise, thermal noise, experimental setup, etc.) and is independent from the rest of the Spikeling functions. This potentiometer is different from the others: it is not center-detented as it generates noise from a zero to a maximum value.
 
 <p style='text-align: justify;'>
 Next is the Neuron mode box which contains the twelve available modes to the users and a push button that allows the user to switch between them.
@@ -281,10 +309,14 @@ Finally, the last box contains all experimental tools allowing stimuli generatio
 
 </div>
 
+<br>
+
 ***
 
+<br>
+
 <p style='text-align: justify;'>
-Spikeling now possesses its own GUI, written in python and using the latest pyQt6 library. The script then uses pyInstaller so it can be translated into a windows/linux/mac app, ready to be easily distributed to users.
+Spikeling now possesses its own GUI, written in python and using the latest PyQt6/PySide6 library. The script then uses pyInstaller so it can be translated into a windows/linux/mac app, ready to be easily distributed to users.
 
 <img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_graph.png">
 
@@ -295,10 +327,37 @@ The GUI is divided into distinct pages. The first one is the main GUI window whe
 The main window displays the Spikeling activity (Neuron Vm, total current input from all sources & stimulus ). If connected to other Spikelings, the GUI can display synaptic inputs: their incoming neuron Vm and their spiking events, which will be translated into input current for the main neuron. Traces can be selected through checkbox and superimposed over the same graph with a common timeline.
 
 <p style='text-align: justify;'>
-Below the main window, sits the recording window.
+The "Neuron Mode" defines the current Izhikevich model being used [see Neuron Generator](#Spikeling-Neuron-generator). Twelve are encoded by default on the Spikeling unit and can be chosen either from the board itself or directly from the GUI: "Select Neuron Mode". Note that any command from the GUI will take priority over the board. Custom Neuron Modes can be selected from here and upload to the board.
+
+<p style='text-align: justify;'>
+The neuron interface page also possesses two buttons to enable/disable the spike buzzer sound and the spike LED, which in a class room full of spikeling, are regarded as huge relieves.
+
+<p style='text-align: justify;'>
+Below the main window, sits the recording window. All last generated data from traces that are checked on the main window will be saved in a .csv format.
 
 <p style='text-align: justify;'>
 On the right hand side two control columns can be found. For all commands, when the toggle button is enabled, the GUI takes over the potentiometer and controls directly the Spikeling variables. This allows users to design an experimental protocol in a controlled fashion.
+
+<br>
+
+***
+
+<br>
+
+<p style='text-align: justify;'>
+The Izhikevich model is rather simple and relies on four parameters [see Neuron Generator](#Spikeling-Neuron-generator).
+From [Izhikevich publication](www.ncbi.nlm.nih.gov/pubmed/18244602):
+<em>"Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:
+
+$`v' = 0.04v^2 + 5v + 140 - u + I`$
+
+```math
+v' = 0.04v^2 + 5v + 140 - u + I
+```
+"
+</em>
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/izhik.png" width="400" height="250">
 
 <p style='text-align: justify;'>
 Below the stimulus frequency and strength sliders can be found a custom stimulus display. Here the user can choose to use instead of the classical square wave, either a stimulus from a pre-design library (comprising sine wave, chirp, white noise, etc.), or either a custom made stimulus generated from the GUI "stimulus generator" tab.
