@@ -391,7 +391,7 @@ Furthermore, users can stimulate the auxiliary Spikeling units in synchrony via 
 Spikeling GUI comes with a "Neuron Generator" page where users can interact with the Izhikevich equation, understand the model generating Spikeling membrane voltage, and create their own "neuron mode" to be loaded on the main page.
 
 <p style='text-align: justify;'>
-The Izhikevich equation relies on only four parameters, all contextualised on the page and all modifiable by the users. They could also modulate the intensity of the current applied to their custom model to verify its pattern over prolonged stimulation.
+The main window computes the Izhikevich model with a modifiable current input. Users can change the 4 variable of the code and display the resulting "neuron mode". This is also where users can come up with their own neuronal modes to experiment on. This is also where teachers can generate their own custo-made neuron, save them, and impose them as experimental model for, i.e. home assignments.
 
 <p style='text-align: justify;'>
 From <a href="https://pubmed.ncbi.nlm.nih.gov/18244602">Izhikevich publication</a>:
@@ -429,11 +429,9 @@ v >= 30mV
  u = u + d
 ```
 
-
 <br>
 
 <img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/izhik.png" width="270" height="200">
-
 
 <p style='text-align: justify;'>
 Here, v and u are dimensionless variables, and a, b, c, and d are dimensionless parameters, and '= d/dt, where t is the time (0.1 µs).
@@ -445,28 +443,10 @@ The variable v represents the membrane potential of the neuron and u represents 
 After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset.
 Synaptic currents or injected DC-currents are delivered via the variable I.
 
-
-
 <p style='text-align: justify;'>
 Below the stimulus frequency and strength sliders can be found a custom stimulus display. Here the user can choose to use instead of the classical square wave, either a stimulus from a pre-design library (comprising sine wave, chirp, white noise, etc.), or either a custom made stimulus generated from the GUI "stimulus generator" tab.
 
-</div>
-
-***
-
-
-
-<div>
-
-
-
-<p style='text-align: justify;'>
-In this tab, the user can play directly with the Izhikevich model. A short text from Izhikevich's publication explain the role of each variable.
-
-<p style='text-align: justify;'>
-The main window computes the Izhikevich model with a modifiable current input. Users can change the 4 variable of the code and display the resulting "neuron mode". This is also where users can come up with their own neuronal modes to experiment on. This is also where teachers can generate their own custo-made neuron, save them, and impose them as experimental model for, i.e. home assignements.
-
-</div>
+<br>
 
 ***
 
@@ -476,21 +456,33 @@ The main window computes the Izhikevich model with a modifiable current input. U
 
 <br>
 
-Stimulus generator and data analysis tabs needs to be finished (cf. development log) but they will include ... a stimulus generator, allowing the user to come up with custom made stimulation loop, and ... a data analysis routine for early computation course where student could upload their recorded traces and extract information from it, generating raster plot, computing data and generate basic statistics. For advanced courses an integrated python exercise manual (no IGOR !!!) will guide students through creating a data analysis pipeline using .csv files saved from the main window.
+<p style='text-align: justify;'>
+Spikeling GUI also comes with a "Stimulus Generator" page where users can generate their own stimuli. In the current version seven distinct stimulus pattern are available with various parameters to interact with.
+All stimuli can then be saved and further loaded from the Spikeling main window.
 
-<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg">
+
+
+<img align="center" width="400" height="200" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_steps.jpg">
 
 <img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_sine.jpg">
 
+<h6 align="center">GUI displaying the “Simulus Generator” page where users can generate their own unique stimuli. The left screen shows repetitive increments of current, as seen in classic electrophysiology experiments (10 steps with 10 a.u. current increment lasting 25 ms with a resting period of 5ms at 0 a.u. current). The right screen shows a sine wave stimulus (50 a.u. amplitude, 20 Hz frequency over a period of 250 ms and a resting period of 100 ms at 0 a.u. current)</h6>
+
+<br>
+
 <img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_triangle.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_ampchirp.jpg">
+
+<h6 align="center">GUI displaying the “Simulus Generator” page where users can generate their own unique stimuli. The left screen shows a triangular wave stimulus (50 a.u. amplitude, 20 Hz frequency over a period of 250 ms and a resting period of 100 ms at 0 a.u. current). The right screen shows a chirp stimulus with an increased intensity from a 0 to a 100 a.u. amplitude at 100 Hz over 1000 ms </h6>
+
+<br>
 
 <img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_linchirp.jpg">
 
 <img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_expchirp.jpg">
 
-<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/401_ampchirp.jpg">
-
-
+<h6 align="center">GUI displaying the “Simulus Generator” page where users can generate their own unique stimuli. The left screen shows a linear chirp stimulus with an increased frequency from a 0 to a 50 Hz with an amplitude of 100 a.u. over 1000 ms. The right screen show the same stimulus with an exponential frequency increase </h6>
 
 <br>
 
