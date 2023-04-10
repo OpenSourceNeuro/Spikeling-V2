@@ -318,6 +318,8 @@ Finally, the last box contains all experimental tools allowing stimuli generatio
 <p style='text-align: justify;'>
 Spikeling now possesses its own GUI, written in python and using the latest PyQt6/PySide6 library. The script then uses pyInstaller so it can be translated into a windows/linux/mac app, ready to be easily distributed to users.
 
+<br>
+
 <img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_graph.png">
 
 <p style='text-align: justify;'>
@@ -355,8 +357,10 @@ From [Izhikevich publication](https://pubmed.ncbi.nlm.nih.gov/18244602/):
 ```math
 v' = 0.04v^2 + 5v + 140 - u + I
 u' = a * (bv - u)
+```
 
 With the auxiliary after-spike resetting:
+``` math
 if v >= 30mV, then v = c and u = u + d
 ```
 
