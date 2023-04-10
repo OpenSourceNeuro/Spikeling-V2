@@ -356,12 +356,14 @@ From [Izhikevich publication](https://pubmed.ncbi.nlm.nih.gov/18244602):
 
 ```math
 v' = 0.04v^2 + 5v + 140 - u + I
+```
+```math
 u' = a * (bv - u)
 ```
 
 With the auxiliary after-spike resetting:
-```
-if v >= 30mV, then v = c and u = u + d
+```math
+if $v >= 30mV$, then $v = c$ and $u = u + d$
 ```
 
 <p style='text-align: justify;'>
