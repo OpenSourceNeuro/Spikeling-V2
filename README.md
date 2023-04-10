@@ -6,8 +6,10 @@
 
 <br>
 
-<div>
+
 ![](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/PyQt/resources/spike.gif)
+
+<div>
 
 This project is licensed under the [GNU General Public License v3.0](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/LICENSE)<br>
 The hardware is licensed under the [CERN OHL v1.2](https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/PCB%20-%202.2c/LICENSE)
@@ -383,9 +385,16 @@ Furthermore, users can stimulate the auxiliary Spikeling units in synchrony via 
 
 <br>
 
-<p style='text-align: justify;'>
-From <a href="https://pubmed.ncbi.nlm.nih.gov/18244602">  Izhikevich publication </a>:
+<img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neurogen.jpg">
 
+<p style='text-align: justify;'>
+Spikeling GUI comes with a "Neuron Generator" page where users can interact with the Izhikevich equation, understand the model generating Spikeling membrane voltage, and create their own "neuron mode" to be loaded on the main page.
+
+<p style='text-align: justify;'>
+The Izhikevich equation relies on only four parameters, all contextualised on the page and all modifiable by the users. They could also modulate the intensity of the current applied to their custom model to verify its pattern over prolonged stimulation.
+
+<p style='text-align: justify;'>
+From <a href="https://pubmed.ncbi.nlm.nih.gov/18244602">Izhikevich publication</a>:
 <em> Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:</em>
 
 ```math
@@ -420,13 +429,6 @@ v >= 30mV
  u = u + d
 ```
 
-<br>
-
-***
-
-<br>
-
-## Spikeling GUI neuron parameters
 
 <br>
 
@@ -456,7 +458,7 @@ Below the stimulus frequency and strength sliders can be found a custom stimulus
 
 <div>
 
-<img align="left" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neurogen.jpg">
+
 
 <p style='text-align: justify;'>
 In this tab, the user can play directly with the Izhikevich model. A short text from Izhikevich's publication explain the role of each variable.
@@ -468,9 +470,11 @@ The main window computes the Izhikevich model with a modifiable current input. U
 
 ***
 
+<br>
+
 ## Spikeling Stimulus Generator
 
-<div>
+<br>
 
 Stimulus generator and data analysis tabs needs to be finished (cf. development log) but they will include ... a stimulus generator, allowing the user to come up with custom made stimulation loop, and ... a data analysis routine for early computation course where student could upload their recorded traces and extract information from it, generating raster plot, computing data and generate basic statistics. For advanced courses an integrated python exercise manual (no IGOR !!!) will guide students through creating a data analysis pipeline using .csv files saved from the main window.
 
@@ -488,4 +492,6 @@ Stimulus generator and data analysis tabs needs to be finished (cf. development 
 
 
 
-</div>
+<br>
+
+## Spikeling GUI neuron parameters
