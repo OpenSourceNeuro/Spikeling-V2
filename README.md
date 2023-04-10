@@ -362,15 +362,23 @@ u' = a * (bv - u)
 ```
 
 With the auxiliary after-spike resetting:
-if
+
+<p style='text-align: center;'>
+if:
+
 ```math
 v >= 30mV
 ```
- then
+<p style='text-align: center;'>
+ then:
+
  ```math
  v = c
  ```
- and
+
+ <p style='text-align: center;'>
+ and:
+ 
  ```math
  u = u + d
 ```
