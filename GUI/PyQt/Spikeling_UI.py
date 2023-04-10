@@ -4167,6 +4167,8 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_1")
         sizePolicy3.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_0_1.setSizePolicy(sizePolicy3)
+        self.DataAnalysis_Oscilloscope_widget3_0_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_0_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_45.addWidget(self.DataAnalysis_Oscilloscope_widget3_0_1)
@@ -4277,6 +4279,8 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_1_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_1")
         sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_1_1.setSizePolicy(sizePolicy2)
+        self.DataAnalysis_Oscilloscope_widget3_1_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_1_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_1_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_46.addWidget(self.DataAnalysis_Oscilloscope_widget3_1_1)
@@ -4387,6 +4391,8 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_2_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_1")
         sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_2_1.setSizePolicy(sizePolicy2)
+        self.DataAnalysis_Oscilloscope_widget3_2_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_2_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_2_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_47.addWidget(self.DataAnalysis_Oscilloscope_widget3_2_1)
@@ -12105,9 +12111,9 @@ class Ui_MainWindow(QWidget):
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
         self.toolBox.setCurrentIndex(7)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(0)
+        self.mainbody_stackedWidget.setCurrentIndex(3)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
-        self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
+        self.DataAnalysis_Display_StackedWidget.setCurrentIndex(8)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
