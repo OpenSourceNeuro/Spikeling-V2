@@ -574,7 +574,7 @@ Where:
 - $\tau$ is the Calcium decay constant
 - $[Ca^{2+}]_{b}$ the Calcium baseline concentration
 - A is the calcium concentration jump each spike triggers
-- $\n_{t}$ is the number of spikes at time t
+- $n_{t}$ is the number of spikes at time t
 - $\sigma_{Ca}$ scales the Calcium noise
 - $\Delta$ represents the imaging frame timeline
 - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
@@ -602,7 +602,8 @@ Fsat_{t} = \alpha.S.[Ca^{2+}]_{t} + \beta + \eta_{t}
 Where:
 - The gain $\alpha$ scales the fluorescence. It accounts for all factors contributing to signal amplification, including the number of fluorophores in the neuron, the brightness of each fluorophore, the gain of the image acquisition system, etc.
 - The offset $\beta$, accounts for any factor leading to a constant background signal, such as baseline fluorescence.
-- $S.[Ca^{2+}]_{t}$ is a nonlinear saturation function, often taken as the Hill equation: $S_{x} = \frac{x_{n}} {(x_{n} + kd)}$, where n is the Hill coeficient and kd the dissociation constant.
+- $S . [Ca^{2+}]_{t}$ is a nonlinear saturation function, often taken as the Hill equation:
+  - $S_{x} = \frac{x_{n}} {(x_{n} + kd)}$, where n is the Hill coefficient and kd the dissociation constant.
 - Assuming the primary noise source is photon shot noise, it would be appropriate to model noise as a Poisson process, which could be well approximated by a Gaussian distribution for large photon counts: $\eta_{t}$
 
 ```math
