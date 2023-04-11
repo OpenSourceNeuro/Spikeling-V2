@@ -584,6 +584,9 @@ Where:
 ```math
 F_{t} = \alpha[Ca^{2+}]_{t} + \beta + \sigma_{F}.\varepsilon_{F,t}
 ```
+<div>
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graph.png" width="400" height="250">
+</div>
 
 Where:
 - $\alpha$ scales the Fluorescence
@@ -609,6 +612,12 @@ Where:
 ```math
 \eta_{t} = \sqrt{\varepsilon.S . ([Ca^{2+}]_{t}) + \sigma_{F}} . \varepsilon_{F,t}
 ```
+
+<div>
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/201_graphsat.png" width="400" height="250">
+</div>
+
+<br>
 
 ***
 
