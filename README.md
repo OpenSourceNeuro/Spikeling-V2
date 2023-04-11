@@ -571,16 +571,15 @@ TBC
 ```
 
 Where:
-- ```math
-\tau
 ```
-is the Calcium decay constant
+- \tau is the Calcium decay constant
 - [Ca^{2+}]_{b} the Calcium baseline concentration
 - A is the calcium concentration jump each spike triggers
 - \n_{t} is the number of spikes at time t
 - \sigma_{Ca} scales the Calcium noise
 - \Delta represents the imaging frame timeline
 - \varepsilon_{Ca,t} is a standard normal Gaussian noise source
+```
 
 <br>
 
