@@ -572,6 +572,20 @@ TBC
 
 <br>
 
+```math
+F_{t} = \alpha[Ca^{2+}_{t}] + \beta + \sigma_{F}.\varepsilon_{F,t}
+```
+
+<br>
+
+```math
+F_{t} = \alpha.S.[Ca^{2+}_{t}] + \beta + \eta_{t}
+
+\eta_{t} = \sqrt{varepsilon.S . ([Ca^{2+}]_{t}) + \sigma_{F}} . \varepsilon_{F,t}
+```
+
+<br>
+
 ***
 
 <br>
