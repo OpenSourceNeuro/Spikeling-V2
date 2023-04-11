@@ -382,6 +382,9 @@ Furthermore, users can stimulate the auxiliary Spikeling units in synchrony via 
 <br>
 
 ## Spikeling GUI neuron parameters
+
+<br>
+
 TBC
 
 <br>
@@ -391,6 +394,9 @@ TBC
 <br>
 
 ## Spikeling GUI stimuli parameters
+
+<br>
+
 TBC
 
 <br>
@@ -523,6 +529,7 @@ All stimuli can then be saved and further loaded from the Spikeling main window.
 ## Spikeling Multiple recording
 
 <br>
+
 TBC
 
 <div>
@@ -554,6 +561,9 @@ TBC
 <br>
 
 ## Fluorescence Imaging simulation
+
+<br>
+
 TBC
 
 <br>
@@ -563,6 +573,9 @@ TBC
 <br>
 
 ## Fluorescence Imaging parameters
+
+<br>
+
 TBC
 
 <br>
@@ -572,6 +585,9 @@ TBC
 <br>
 
 ## Fluorescence Calcium parameters
+
+<br>
+
 TBC
 
 <br>
@@ -581,6 +597,9 @@ TBC
 <br>
 
 ## Fluorescence Imaging parameters
+
+<br>
+
 TBC
 
 <br>
@@ -590,6 +609,9 @@ TBC
 <br>
 
 ## Fluorescence Data Analysis
+
+<br>
+
 TBC
 
 <br>
@@ -599,6 +621,9 @@ TBC
 <br>
 
 ## Fluorescence Multiple fluorescence
+
+<br>
+
 TBC
 
 <br>
@@ -608,6 +633,9 @@ TBC
 <br>
 
 ## Exercices GUI
+
+<br>
+
 TBC
 
 <br>
@@ -617,6 +645,9 @@ TBC
 <br>
 
 ## Exercices Python
+
+<br>
+
 TBC
 
 <br>
@@ -626,6 +657,9 @@ TBC
 <br>
 
 ## GitHub Contributions
+
+<br>
+
 TBC
 
 <br>
