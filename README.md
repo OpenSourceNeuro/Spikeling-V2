@@ -381,7 +381,25 @@ Furthermore, users can stimulate the auxiliary Spikeling units in synchrony via 
 
 <br>
 
-## Spikeling-Neuron-generator
+## Spikeling GUI neuron parameters
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Spikeling GUI stimuli parameters
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Spikeling Neuron generator
 
 <br>
 
@@ -498,4 +516,116 @@ All stimuli can then be saved and further loaded from the Spikeling main window.
 
 <br>
 
-## Spikeling GUI neuron parameters
+***
+
+<br>
+
+## Spikeling Multiple recording
+
+<br>
+TBC
+
+<div>
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_1SynapseDC01.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_1SynapseDC02.jpg">
+
+<h6 align="center"> ... </h6>
+
+</div>
+
+<br>
+
+<div>
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_12SynapseDC01.jpg">
+
+<img align="center" width="400" height="250" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/101_12SynapseDC02.jpg">
+
+<h6 align="center"> ... </h6>
+
+</div>
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Imaging simulation
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Imaging parameters
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Calcium parameters
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Imaging parameters
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Data Analysis
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Fluorescence Multiple fluorescence
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Exercices GUI
+TBC
+
+<br>
+
+***
+
+<br>
+
+## Exercices Python
+TBC
+
+<br>
+
+***
+
+<br>
+
+## GitHub Contributions
+TBC
+
+<br>
