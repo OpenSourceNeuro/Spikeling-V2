@@ -567,7 +567,7 @@ TBC
 TBC
 
 ```math
-[Ca^2+] = 
+[Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
 ```
 
 <br>
