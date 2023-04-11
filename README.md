@@ -571,7 +571,7 @@ TBC
 ```
 
 Where:
-- \tau is the Calcium decay constant
+- ```math\tau``` is the Calcium decay constant
 - [Ca^{2+}]_{b} the Calcium baseline concentration
 - A is the calcium concentration jump each spike triggers
 - \n_{t} is the number of spikes at time t
