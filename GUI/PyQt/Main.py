@@ -23,7 +23,7 @@ from py_toggle import PyToggle
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
 import Spikeling_graph
 import Imaging_graph, MultipleImaging_graph
-
+import resources2_rc
 
 # Setting UART parameters
 #ports = Settings.COM()
@@ -468,7 +468,8 @@ class MainWindow(QMainWindow):
     # Home Page - page000
         # Display Home page on start up
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_000)
-        self.GifMovie = QtGui.QMovie("resources/spike.gif")
+        #self.GifMovie = QtGui.QMovie("Spikeling.gif")
+        self.GifMovie = QtGui.QMovie(u"Spikeling.gif")
         self.ui.mainbody_content_SpikelingGif.setMovie(self.GifMovie)
         self.GifMovie.start()
         self.ui.appTitle_pushButton.clicked.connect(lambda: self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_000))

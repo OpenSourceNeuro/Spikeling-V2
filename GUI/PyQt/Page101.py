@@ -16,7 +16,7 @@ ports = QSerialPortInfo().availablePorts()
 for port in ports:
         if platform == "linux" or platform == "linux2":
             portList.append(port.systemLocation())
-            print(port.systemLocation())
+            #print(port.systemLocation())
         else:
             portList.append(port.portName())
 serial_port = None
@@ -239,7 +239,6 @@ class Spikeling101():
             self.ui.Spikeling_PR_Decay_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
             if self.serial_port.is_open:
                     self.serial_port.write(str('PD1 ' + str(self.PhotoDecay/100000) + '\n').encode('utf-8'))
-            print(self.PhotoDecay/100000)
 
 
     # PhotoRecovery

@@ -23,6 +23,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
 
 from pyqtgraph import PlotWidget
 import resources_rc
+import resources_rc
 
 class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
@@ -939,7 +940,7 @@ class Ui_MainWindow(QWidget):
         self.toolBox.addItem(self.page_9, u"7 - Spike Inference")
         self.page_10 = QWidget()
         self.page_10.setObjectName(u"page_10")
-        self.page_10.setGeometry(QRect(0, 0, 65, 16))
+        self.page_10.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_10, u"8 - Methodology")
 
         self.verticalLayout_61.addWidget(self.toolBox)
@@ -4167,7 +4168,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_1")
         sizePolicy3.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_0_1.setSizePolicy(sizePolicy3)
-        self.DataAnalysis_Oscilloscope_widget3_0_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_0_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_0_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
@@ -4279,7 +4280,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_1_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_1")
         sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_1_1.setSizePolicy(sizePolicy2)
-        self.DataAnalysis_Oscilloscope_widget3_1_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_1_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_1_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_1_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
@@ -4391,7 +4392,7 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Oscilloscope_widget3_2_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_1")
         sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_1.sizePolicy().hasHeightForWidth())
         self.DataAnalysis_Oscilloscope_widget3_2_1.setSizePolicy(sizePolicy2)
-        self.DataAnalysis_Oscilloscope_widget3_2_1.setMinimumSize(QSize(0, 75))
+        self.DataAnalysis_Oscilloscope_widget3_2_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_2_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_2_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
@@ -6607,6 +6608,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_138.setContentsMargins(0, 0, 0, 0)
         self.Imaging_PhotoShotNoise_Toggle_frame = QFrame(self.Imaging_PhotoShotNoise_Title_frame)
         self.Imaging_PhotoShotNoise_Toggle_frame.setObjectName(u"Imaging_PhotoShotNoise_Toggle_frame")
+        self.Imaging_PhotoShotNoise_Toggle_frame.setMaximumSize(QSize(50, 16777215))
         self.Imaging_PhotoShotNoise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
         self.Imaging_PhotoShotNoise_Toggle_frame.setFrameShadow(QFrame.Raised)
         self.Imaging_PhotoShotNoise_Toggle_layout = QHBoxLayout(self.Imaging_PhotoShotNoise_Toggle_frame)
@@ -8800,6 +8802,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_375.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_PhotoShotNoise_Toggle_frame = QFrame(self.MultipleImaging_PhotoShotNoise_Title_frame)
         self.MultipleImaging_PhotoShotNoise_Toggle_frame.setObjectName(u"MultipleImaging_PhotoShotNoise_Toggle_frame")
+        self.MultipleImaging_PhotoShotNoise_Toggle_frame.setMaximumSize(QSize(50, 16777215))
         self.MultipleImaging_PhotoShotNoise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
         self.MultipleImaging_PhotoShotNoise_Toggle_frame.setFrameShadow(QFrame.Raised)
         self.MultipleImaging_PhotoShotNoise_Toggle_layout = QHBoxLayout(self.MultipleImaging_PhotoShotNoise_Toggle_frame)
@@ -12111,10 +12114,10 @@ class Ui_MainWindow(QWidget):
         self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
         self.toolBox.setCurrentIndex(7)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(3)
+        self.mainbody_stackedWidget.setCurrentIndex(4)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
-        self.DataAnalysis_Display_StackedWidget.setCurrentIndex(8)
-        self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
+        self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
+        self.Imaging_parameter_stackedWidget.setCurrentIndex(2)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
         self.Exercise101_stackedWidget.setCurrentIndex(0)
@@ -12274,8 +12277,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_Synapse1_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.Spikeling_Synapse1_Decay_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Decay: \u03bb (ms\u05bf \u00b9) ", None))
         self.Spikeling_Synapse1_Decay_readings.setText("")
-        self.Spikeling_Synapse1_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
-        self.Spikeling_Synapse1_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Spikeling_Synapse1_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Spikeling_Synapse1_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
         self.Spikeling_Synapse2_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Synapse 2</span></p></body></html>", None))
         self.Spikeling_Synapse2_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Gain (%)", None))
         self.Spikeling_Synapse2_readings.setText("")
@@ -12284,8 +12287,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_Synapse2_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
         self.Spikeling_Synapse2_Decay_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Decay: \u03bb (ms\u05bf \u00b9) ", None))
         self.Spikeling_Synapse2_Decay_readings.setText("")
-        self.Spikeling_Synapse2_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
-        self.Spikeling_Synapse2_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Spikeling_Synapse2_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Spikeling_Synapse2_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
         self.Spikeling_rightMenuSubContainer_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Parameters", None))
         self.Spikeling_StimulusParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Stimulus Parameters", None))
         self.Spikeling_NeuronParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Parameters", None))
