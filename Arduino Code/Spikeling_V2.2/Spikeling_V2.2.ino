@@ -323,6 +323,6 @@ void loop() {
   Serial.print(Syn1_Vm);      Serial.print(',');
   Serial.print(I_Synapse1);   Serial.print(',');
   Serial.print(Syn2_Vm);      Serial.print(',');
-  Serial.println(Synapse1_decay);  
+  Serial.println(I_Synapse2);  
   delay(6);
 }
