@@ -165,7 +165,7 @@ void Syn1Decay_on(){
   char *arg;
   arg = SCmd.next();
   if (arg != NULL){
-    Synapse1_decay = atoi(arg)/1000;
+    Synapse1_decay = atof(arg)/1000;
   }
 }
 void Syn1Decay_off(){
@@ -191,7 +191,7 @@ void Syn2Decay_on(){
   char *arg;
   arg = SCmd.next();
   if (arg != NULL){
-    Synapse2_decay = atoi(arg)/1000;
+    Synapse2_decay = atof(arg)/1000;
   }
 }
 void Syn2Decay_off(){
