@@ -36,7 +36,7 @@ On the home page, menus can be found on the left tab
 <br>
 
 <img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png" width="176" height="54">
-<h4 align="center"> Spikeling Menu</h4>
+<h4 align="left"> Spikeling Menu</h4>
 
 <p style='text-align: justify;'>
 
@@ -58,21 +58,21 @@ On the right hand side of the screen is the parameter tab:
 
   - Neuron Parameters:
 
-  Here users can manipulate most variables related to the neuron behaviour. These are a redundancy from the knobs on the spikeling device. When toggle buttons are enabled, the software take over the know and a digital value is displayed, allowing users an accurate and reliable settings of the spikeling neuron.
+    Here users can manipulate most variables related to the neuron behaviour. These are a redundancy from the knobs on the spikeling device. When toggle buttons are enabled, the software take over the know and a digital value is displayed, allowing users an accurate and reliable settings of the spikeling neuron.
 
-      - Injected Current:
+  - Injected Current:
 
-          This parameter correspond to the amount of current (0 by default) injected into the neuron. It stimulates how an electrophysiology rig would perform a patch clamp experiment by holding the neuron current. Across the spikeling project, current are technically arbitrary units but can be explained to students as corresponding to mA.
+      This parameter correspond to the amount of current (0 by default) injected into the neuron. It stimulates how an electrophysiology rig would perform a patch clamp experiment by holding the neuron current. Across the spikeling project, current are technically arbitrary units but can be explained to students as corresponding to mA.
 
-          On the board, this corresponds to the bottom left knob
+      On the board, this corresponds to the bottom left knob
 
-      - Noise
+  - Noise
 
-          No recording is noise free, unfortunately. This specific variable adds a random noise at different intensities in order to mimic noise from the environment, from the recording station, even the thermal noise from the neuronal tissue itself. This functions aims to educate students to appreciate how background noise affects recording and hides real spiking events. In advanced classes, this functions can be used to test the efficiency of a spike sorting algorithm.
+      No recording is noise free, unfortunately. This specific variable adds a random noise at different intensities in order to mimic noise from the environment, from the recording station, even the thermal noise from the neuronal tissue itself. This functions aims to educate students to appreciate how background noise affects recording and hides real spiking events. In advanced classes, this functions can be used to test the efficiency of a spike sorting algorithm.
 
-          On the board, this corresponds to the bottom right knob
+      On the board, this corresponds to the bottom right knob
 
-      - Synaptic Gain:
+  - Synaptic Gain:
 
 
 
