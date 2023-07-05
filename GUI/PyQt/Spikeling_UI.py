@@ -29,7 +29,7 @@ class Ui_MainWindow(QWidget):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 759)
+        MainWindow.resize(1281, 759)
         MainWindow.setMinimumSize(QSize(1280, 720))
         MainWindow.setStyleSheet(u"*{\n"
 "	border:none;\n"
@@ -283,20 +283,20 @@ class Ui_MainWindow(QWidget):
 "\n"
 "\n"
 "\n"
-"#DataAnalysis_groupBox{\n"
+"#DataAnalysis_stackedWidget{\n"
 "	background-color: rgb(7,54,66);\n"
 "    border: 2px solid rgb(147,161,161);\n"
 "}\n"
-"#DataAnalysis_groupBox QPushButton{\n"
+"#DataAnalysis_stackedWidget QPushButton{\n"
 "	background-color: rgb(0, 43, 54);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
-"#DataAnalysis_groupBox QLineEdit{\n"
+"#DataAnalysis_stackedWidget QLineEdit{\n"
 "    border: 2px solid rgb(147,161,161);\n"
 "}\n"
-"#DataAnalysis_groupBox Line{\n"
+"#DataAnalysis_stackedWidget Line{\n"
 "    border: 1px solid rgb(147,161,161);\n"
 "}\n"
 "\n"
@@ -307,6 +307,27 @@ class Ui_MainWindow(QWidget):
 "	padding: 2px;\n"
 "}\n"
 "\n"
+"#DataAnalysis_RightMenu_Container{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#Data"
+                        "Analysis_RightMenu_Container QPushButton{\n"
+"	text-align: left;\n"
+"	padding: 20px 0px;\n"
+"	border-top-right-radius:20px;\n"
+"	border-bottom-right-radius: 20px;\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#DataAnalysis_RightMenu_Container QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#DataAnalysis_RightMenu_Frame QPushButton{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#DataAnalysis_RightMenu_Frame QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -314,8 +335,7 @@ class Ui_MainWindow(QWidget):
 "\n"
 "#page_401 QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
-"	border: 2px solid r"
-                        "gb(147,161,161);\n"
+"	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
@@ -332,7 +352,8 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "\n"
 "\n"
-"\n"
+""
+                        "\n"
 "\n"
 "#Exercise101_Button_frame QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
@@ -660,30 +681,6 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_8.setSpacing(0)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.Spikeling_SubMenu_label_frame = QFrame(self.Spikeling_SubMenu_page)
-        self.Spikeling_SubMenu_label_frame.setObjectName(u"Spikeling_SubMenu_label_frame")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.Spikeling_SubMenu_label_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_SubMenu_label_frame.setSizePolicy(sizePolicy1)
-        self.Spikeling_SubMenu_label_frame.setMinimumSize(QSize(0, 25))
-        self.Spikeling_SubMenu_label_frame.setMaximumSize(QSize(16777215, 25))
-        self.Spikeling_SubMenu_label_frame.setFrameShape(QFrame.StyledPanel)
-        self.Spikeling_SubMenu_label_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_18 = QVBoxLayout(self.Spikeling_SubMenu_label_frame)
-        self.verticalLayout_18.setSpacing(0)
-        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.verticalLayout_18.setContentsMargins(0, 5, 0, 0)
-        self.Spikeling_SubMenu_label = QLabel(self.Spikeling_SubMenu_label_frame)
-        self.Spikeling_SubMenu_label.setObjectName(u"Spikeling_SubMenu_label")
-        self.Spikeling_SubMenu_label.setFont(font1)
-
-        self.verticalLayout_18.addWidget(self.Spikeling_SubMenu_label)
-
-
-        self.verticalLayout_8.addWidget(self.Spikeling_SubMenu_label_frame, 0, Qt.AlignHCenter|Qt.AlignTop)
-
         self.Spikeling_SubMenu_button_frame = QFrame(self.Spikeling_SubMenu_page)
         self.Spikeling_SubMenu_button_frame.setObjectName(u"Spikeling_SubMenu_button_frame")
         self.Spikeling_SubMenu_button_frame.setFrameShape(QFrame.StyledPanel)
@@ -703,6 +700,18 @@ class Ui_MainWindow(QWidget):
         self.Neuron_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_19.addWidget(self.Neuron_pushButton)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_19.addItem(self.verticalSpacer_8)
+
+        self.NeuronSimulation_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
+        self.NeuronSimulation_pushButton.setObjectName(u"NeuronSimulation_pushButton")
+        self.NeuronSimulation_pushButton.setFont(font1)
+        self.NeuronSimulation_pushButton.setIcon(icon5)
+        self.NeuronSimulation_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_19.addWidget(self.NeuronSimulation_pushButton)
 
         self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -744,25 +753,6 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_10.setSpacing(0)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.Imaging_SubMenu_label_frame = QFrame(self.Imaging_SubMenu_page)
-        self.Imaging_SubMenu_label_frame.setObjectName(u"Imaging_SubMenu_label_frame")
-        self.Imaging_SubMenu_label_frame.setFrameShape(QFrame.StyledPanel)
-        self.Imaging_SubMenu_label_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_20 = QVBoxLayout(self.Imaging_SubMenu_label_frame)
-        self.verticalLayout_20.setSpacing(0)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.Imaging_SubMenu_label = QLabel(self.Imaging_SubMenu_label_frame)
-        self.Imaging_SubMenu_label.setObjectName(u"Imaging_SubMenu_label")
-        self.Imaging_SubMenu_label.setMaximumSize(QSize(300, 16777215))
-        self.Imaging_SubMenu_label.setFont(font1)
-        self.Imaging_SubMenu_label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_20.addWidget(self.Imaging_SubMenu_label)
-
-
-        self.verticalLayout_10.addWidget(self.Imaging_SubMenu_label_frame, 0, Qt.AlignHCenter|Qt.AlignTop)
-
         self.Imaging_SubMenu_button_frame = QFrame(self.Imaging_SubMenu_page)
         self.Imaging_SubMenu_button_frame.setObjectName(u"Imaging_SubMenu_button_frame")
         self.Imaging_SubMenu_button_frame.setFrameShape(QFrame.StyledPanel)
@@ -845,22 +835,6 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_16.setSpacing(0)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.Exercices_SubMenu_label_frame = QFrame(self.Exercises_SubMenu_page)
-        self.Exercices_SubMenu_label_frame.setObjectName(u"Exercices_SubMenu_label_frame")
-        self.Exercices_SubMenu_label_frame.setFrameShape(QFrame.StyledPanel)
-        self.Exercices_SubMenu_label_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_60 = QVBoxLayout(self.Exercices_SubMenu_label_frame)
-        self.verticalLayout_60.setObjectName(u"verticalLayout_60")
-        self.Exercices_SubMenu_label = QLabel(self.Exercices_SubMenu_label_frame)
-        self.Exercices_SubMenu_label.setObjectName(u"Exercices_SubMenu_label")
-        self.Exercices_SubMenu_label.setFont(font1)
-        self.Exercices_SubMenu_label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_60.addWidget(self.Exercices_SubMenu_label)
-
-
-        self.verticalLayout_16.addWidget(self.Exercices_SubMenu_label_frame)
-
         self.Exercices_SubMenu_button_frame = QFrame(self.Exercises_SubMenu_page)
         self.Exercices_SubMenu_button_frame.setObjectName(u"Exercices_SubMenu_button_frame")
         self.Exercices_SubMenu_button_frame.setFrameShape(QFrame.StyledPanel)
@@ -875,7 +849,7 @@ class Ui_MainWindow(QWidget):
         self.toolBox.setObjectName(u"toolBox")
         self.page_3 = QWidget()
         self.page_3.setObjectName(u"page_3")
-        self.page_3.setGeometry(QRect(0, 0, 164, 118))
+        self.page_3.setGeometry(QRect(0, 0, 216, 118))
         self.verticalLayout_98 = QVBoxLayout(self.page_3)
         self.verticalLayout_98.setSpacing(5)
         self.verticalLayout_98.setObjectName(u"verticalLayout_98")
@@ -902,7 +876,7 @@ class Ui_MainWindow(QWidget):
         self.toolBox.addItem(self.page_3, u"1 - Introduction to Spikeling")
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
-        self.page_4.setGeometry(QRect(0, 0, 83, 77))
+        self.page_4.setGeometry(QRect(0, 0, 216, 77))
         self.verticalLayout_99 = QVBoxLayout(self.page_4)
         self.verticalLayout_99.setSpacing(5)
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
@@ -920,27 +894,27 @@ class Ui_MainWindow(QWidget):
         self.toolBox.addItem(self.page_4, u"2 - Electrophysiology")
         self.page_6 = QWidget()
         self.page_6.setObjectName(u"page_6")
-        self.page_6.setGeometry(QRect(0, 0, 100, 30))
+        self.page_6.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_6, u"3 - Photo-stimulation")
         self.page_7 = QWidget()
         self.page_7.setObjectName(u"page_7")
-        self.page_7.setGeometry(QRect(0, 0, 100, 30))
+        self.page_7.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_7, u"4 - Synapses")
         self.page_8 = QWidget()
         self.page_8.setObjectName(u"page_8")
-        self.page_8.setGeometry(QRect(0, 0, 100, 30))
+        self.page_8.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_8, u"5 - Neuronal network")
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
-        self.page_5.setGeometry(QRect(0, 0, 100, 30))
+        self.page_5.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_5, u"6- Fluorescence Imaging")
         self.page_9 = QWidget()
         self.page_9.setObjectName(u"page_9")
-        self.page_9.setGeometry(QRect(0, 0, 100, 30))
+        self.page_9.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_9, u"7 - Spike Inference")
         self.page_10 = QWidget()
         self.page_10.setObjectName(u"page_10")
-        self.page_10.setGeometry(QRect(0, 0, 100, 30))
+        self.page_10.setGeometry(QRect(0, 0, 216, 69))
         self.toolBox.addItem(self.page_10, u"8 - Methodology")
 
         self.verticalLayout_61.addWidget(self.toolBox)
@@ -1040,11 +1014,11 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.mainbodyContainer = QWidget(self.mainWindowContainer)
         self.mainbodyContainer.setObjectName(u"mainbodyContainer")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.mainbodyContainer.sizePolicy().hasHeightForWidth())
-        self.mainbodyContainer.setSizePolicy(sizePolicy2)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.mainbodyContainer.sizePolicy().hasHeightForWidth())
+        self.mainbodyContainer.setSizePolicy(sizePolicy1)
         self.mainbodyContainer.setStyleSheet(u"")
         self.horizontalLayout_7 = QHBoxLayout(self.mainbodyContainer)
         self.horizontalLayout_7.setSpacing(0)
@@ -1052,11 +1026,11 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.mainbody_stackedWidget = QStackedWidget(self.mainbodyContainer)
         self.mainbody_stackedWidget.setObjectName(u"mainbody_stackedWidget")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.mainbody_stackedWidget.sizePolicy().hasHeightForWidth())
-        self.mainbody_stackedWidget.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.mainbody_stackedWidget.sizePolicy().hasHeightForWidth())
+        self.mainbody_stackedWidget.setSizePolicy(sizePolicy2)
         self.mainbody_stackedWidget.setMinimumSize(QSize(600, 600))
         self.mainbody_stackedWidget.setStyleSheet(u"")
         self.page_000 = QWidget()
@@ -1084,11 +1058,11 @@ class Ui_MainWindow(QWidget):
 
         self.mainbody_header_text = QLabel(self.mainbody_header_frame)
         self.mainbody_header_text.setObjectName(u"mainbody_header_text")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.mainbody_header_text.sizePolicy().hasHeightForWidth())
-        self.mainbody_header_text.setSizePolicy(sizePolicy4)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.mainbody_header_text.sizePolicy().hasHeightForWidth())
+        self.mainbody_header_text.setSizePolicy(sizePolicy3)
         font3 = QFont()
         font3.setBold(False)
         self.mainbody_header_text.setFont(font3)
@@ -1101,11 +1075,11 @@ class Ui_MainWindow(QWidget):
 
         self.mainbody_content_frame = QFrame(self.page_000)
         self.mainbody_content_frame.setObjectName(u"mainbody_content_frame")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.mainbody_content_frame.sizePolicy().hasHeightForWidth())
-        self.mainbody_content_frame.setSizePolicy(sizePolicy5)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.mainbody_content_frame.sizePolicy().hasHeightForWidth())
+        self.mainbody_content_frame.setSizePolicy(sizePolicy4)
         self.mainbody_content_frame.setFrameShape(QFrame.StyledPanel)
         self.mainbody_content_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_76 = QHBoxLayout(self.mainbody_content_frame)
@@ -1122,8 +1096,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_251.setContentsMargins(0, 0, 0, 0)
         self.mainbody_content_text = QLabel(self.mainbody_content_text_frame)
         self.mainbody_content_text.setObjectName(u"mainbody_content_text")
-        sizePolicy5.setHeightForWidth(self.mainbody_content_text.sizePolicy().hasHeightForWidth())
-        self.mainbody_content_text.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.mainbody_content_text.sizePolicy().hasHeightForWidth())
+        self.mainbody_content_text.setSizePolicy(sizePolicy4)
         self.mainbody_content_text.setAlignment(Qt.AlignCenter)
         self.mainbody_content_text.setWordWrap(True)
 
@@ -1144,8 +1118,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_114.setContentsMargins(0, 0, 0, 0)
         self.mainbody_content_SpikelingGif = QLabel(self.mainbody_content_SpikelingGif_frame)
         self.mainbody_content_SpikelingGif.setObjectName(u"mainbody_content_SpikelingGif")
-        sizePolicy5.setHeightForWidth(self.mainbody_content_SpikelingGif.sizePolicy().hasHeightForWidth())
-        self.mainbody_content_SpikelingGif.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.mainbody_content_SpikelingGif.sizePolicy().hasHeightForWidth())
+        self.mainbody_content_SpikelingGif.setSizePolicy(sizePolicy4)
         self.mainbody_content_SpikelingGif.setMinimumSize(QSize(480, 540))
         self.mainbody_content_SpikelingGif.setMaximumSize(QSize(480, 540))
         self.mainbody_content_SpikelingGif.setAutoFillBackground(False)
@@ -1169,8 +1143,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_34.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_widget = QWidget(self.page_101)
         self.Spikeling_widget.setObjectName(u"Spikeling_widget")
-        sizePolicy4.setHeightForWidth(self.Spikeling_widget.sizePolicy().hasHeightForWidth())
-        self.Spikeling_widget.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.Spikeling_widget.sizePolicy().hasHeightForWidth())
+        self.Spikeling_widget.setSizePolicy(sizePolicy3)
         self.horizontalLayout_33 = QHBoxLayout(self.Spikeling_widget)
         self.horizontalLayout_33.setSpacing(0)
         self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
@@ -1185,8 +1159,11 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_top_subframe1 = QFrame(self.Spikeling_frame)
         self.Spikeling_top_subframe1.setObjectName(u"Spikeling_top_subframe1")
-        sizePolicy1.setHeightForWidth(self.Spikeling_top_subframe1.sizePolicy().hasHeightForWidth())
-        self.Spikeling_top_subframe1.setSizePolicy(sizePolicy1)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.Spikeling_top_subframe1.sizePolicy().hasHeightForWidth())
+        self.Spikeling_top_subframe1.setSizePolicy(sizePolicy5)
         self.Spikeling_top_subframe1.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_top_subframe1.setFrameShadow(QFrame.Raised)
         self.verticalLayout_29 = QVBoxLayout(self.Spikeling_top_subframe1)
@@ -1195,8 +1172,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_29.setContentsMargins(10, 0, 5, 0)
         self.Spikeling_connection_frame = QFrame(self.Spikeling_top_subframe1)
         self.Spikeling_connection_frame.setObjectName(u"Spikeling_connection_frame")
-        sizePolicy3.setHeightForWidth(self.Spikeling_connection_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_connection_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.Spikeling_connection_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_connection_frame.setSizePolicy(sizePolicy2)
         self.Spikeling_connection_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_connection_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_59 = QHBoxLayout(self.Spikeling_connection_frame)
@@ -1372,8 +1349,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_50.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_Oscilloscope_widget = PlotWidget(self.Spikeling_Oscilloscope_frame)
         self.Spikeling_Oscilloscope_widget.setObjectName(u"Spikeling_Oscilloscope_widget")
-        sizePolicy5.setHeightForWidth(self.Spikeling_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
-        self.Spikeling_Oscilloscope_widget.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.Spikeling_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.Spikeling_Oscilloscope_widget.setSizePolicy(sizePolicy4)
         self.Spikeling_Oscilloscope_widget.setAutoFillBackground(False)
         self.Spikeling_Oscilloscope_widget.setStyleSheet(u"")
         self.horizontalLayout_183 = QHBoxLayout(self.Spikeling_Oscilloscope_widget)
@@ -1506,8 +1483,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_51.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_DataRecording_box = QGroupBox(self.Spikeling_bottom_subframe)
         self.Spikeling_DataRecording_box.setObjectName(u"Spikeling_DataRecording_box")
-        sizePolicy1.setHeightForWidth(self.Spikeling_DataRecording_box.sizePolicy().hasHeightForWidth())
-        self.Spikeling_DataRecording_box.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.Spikeling_DataRecording_box.sizePolicy().hasHeightForWidth())
+        self.Spikeling_DataRecording_box.setSizePolicy(sizePolicy5)
         self.Spikeling_DataRecording_box.setMinimumSize(QSize(0, 100))
         self.Spikeling_DataRecording_box.setMaximumSize(QSize(16777215, 100))
         self.Spikeling_DataRecording_box.setStyleSheet(u"")
@@ -1587,8 +1564,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_57.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_SelectedFolderLabel = QLabel(self.Spikeling_DataRecording_record_frame)
         self.Spikeling_SelectedFolderLabel.setObjectName(u"Spikeling_SelectedFolderLabel")
-        sizePolicy4.setHeightForWidth(self.Spikeling_SelectedFolderLabel.sizePolicy().hasHeightForWidth())
-        self.Spikeling_SelectedFolderLabel.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.Spikeling_SelectedFolderLabel.sizePolicy().hasHeightForWidth())
+        self.Spikeling_SelectedFolderLabel.setSizePolicy(sizePolicy3)
         self.Spikeling_SelectedFolderLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_57.addWidget(self.Spikeling_SelectedFolderLabel)
@@ -1695,8 +1672,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_StimFre_frame = QFrame(self.StimulusParameter_page)
         self.Spikeling_StimFre_frame.setObjectName(u"Spikeling_StimFre_frame")
-        sizePolicy2.setHeightForWidth(self.Spikeling_StimFre_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_StimFre_frame.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.Spikeling_StimFre_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_StimFre_frame.setSizePolicy(sizePolicy1)
         self.Spikeling_StimFre_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_StimFre_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_22 = QVBoxLayout(self.Spikeling_StimFre_frame)
@@ -1713,8 +1690,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_36.setContentsMargins(0, 5, 0, 0)
         self.Spikeling_StimFre_toggle_frame = QFrame(self.Spikeling_StimFre_Title_frame)
         self.Spikeling_StimFre_toggle_frame.setObjectName(u"Spikeling_StimFre_toggle_frame")
-        sizePolicy3.setHeightForWidth(self.Spikeling_StimFre_toggle_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_StimFre_toggle_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.Spikeling_StimFre_toggle_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_StimFre_toggle_frame.setSizePolicy(sizePolicy2)
         self.Spikeling_StimFre_toggle_frame.setMaximumSize(QSize(45, 16777215))
         self.Spikeling_StimFre_toggle_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_StimFre_toggle_frame.setFrameShadow(QFrame.Raised)
@@ -1852,8 +1829,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_StimStr_frame = QFrame(self.StimulusParameter_page)
         self.Spikeling_StimStr_frame.setObjectName(u"Spikeling_StimStr_frame")
-        sizePolicy2.setHeightForWidth(self.Spikeling_StimStr_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_StimStr_frame.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.Spikeling_StimStr_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_StimStr_frame.setSizePolicy(sizePolicy1)
         self.Spikeling_StimStr_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_StimStr_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_23 = QVBoxLayout(self.Spikeling_StimStr_frame)
@@ -1976,8 +1953,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_41.setContentsMargins(0, 0, 0, 5)
         self.Spikeling_StimStr_image = QLabel(self.Spikeling_StimStr_image_frame)
         self.Spikeling_StimStr_image.setObjectName(u"Spikeling_StimStr_image")
-        sizePolicy1.setHeightForWidth(self.Spikeling_StimStr_image.sizePolicy().hasHeightForWidth())
-        self.Spikeling_StimStr_image.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.Spikeling_StimStr_image.sizePolicy().hasHeightForWidth())
+        self.Spikeling_StimStr_image.setSizePolicy(sizePolicy5)
         self.Spikeling_StimStr_image.setMinimumSize(QSize(40, 0))
         self.Spikeling_StimStr_image.setMaximumSize(QSize(16777215, 40))
         self.Spikeling_StimStr_image.setPixmap(QPixmap(u":/resources/resources/StimStrenght.png"))
@@ -2003,8 +1980,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_CustomStimulus_frame = QFrame(self.StimulusParameter_page)
         self.Spikeling_CustomStimulus_frame.setObjectName(u"Spikeling_CustomStimulus_frame")
-        sizePolicy2.setHeightForWidth(self.Spikeling_CustomStimulus_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_CustomStimulus_frame.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.Spikeling_CustomStimulus_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_CustomStimulus_frame.setSizePolicy(sizePolicy1)
         self.Spikeling_CustomStimulus_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_CustomStimulus_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_24 = QVBoxLayout(self.Spikeling_CustomStimulus_frame)
@@ -2077,8 +2054,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_CustomStimulus_Load_frame = QFrame(self.Spikeling_CustomStimulus_Selection_frame)
         self.Spikeling_CustomStimulus_Load_frame.setObjectName(u"Spikeling_CustomStimulus_Load_frame")
-        sizePolicy3.setHeightForWidth(self.Spikeling_CustomStimulus_Load_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_CustomStimulus_Load_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.Spikeling_CustomStimulus_Load_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_CustomStimulus_Load_frame.setSizePolicy(sizePolicy2)
         self.Spikeling_CustomStimulus_Load_frame.setMinimumSize(QSize(50, 0))
         self.Spikeling_CustomStimulus_Load_frame.setMaximumSize(QSize(50, 16777215))
         self.Spikeling_CustomStimulus_Load_frame.setFrameShape(QFrame.StyledPanel)
@@ -2111,8 +2088,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_CustomStimulus_display = PlotWidget(self.Spikeling_CustomStimulus_display_frame)
         self.Spikeling_CustomStimulus_display.setObjectName(u"Spikeling_CustomStimulus_display")
         self.Spikeling_CustomStimulus_display.setEnabled(False)
-        sizePolicy1.setHeightForWidth(self.Spikeling_CustomStimulus_display.sizePolicy().hasHeightForWidth())
-        self.Spikeling_CustomStimulus_display.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.Spikeling_CustomStimulus_display.sizePolicy().hasHeightForWidth())
+        self.Spikeling_CustomStimulus_display.setSizePolicy(sizePolicy5)
         self.Spikeling_CustomStimulus_display.setMinimumSize(QSize(0, 40))
         self.Spikeling_CustomStimulus_display.setMaximumSize(QSize(16777215, 50))
         self.Spikeling_CustomStimulus_display.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -2137,8 +2114,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_PR_frame = QFrame(self.StimulusParameter_page)
         self.Spikeling_PR_frame.setObjectName(u"Spikeling_PR_frame")
-        sizePolicy2.setHeightForWidth(self.Spikeling_PR_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_PR_frame.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.Spikeling_PR_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_PR_frame.setSizePolicy(sizePolicy1)
         self.Spikeling_PR_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_PR_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_31 = QVBoxLayout(self.Spikeling_PR_frame)
@@ -2501,8 +2478,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_57.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_NeuronParameter_frame = QFrame(self.NeuronParameter_page)
         self.Spikeling_NeuronParameter_frame.setObjectName(u"Spikeling_NeuronParameter_frame")
-        sizePolicy3.setHeightForWidth(self.Spikeling_NeuronParameter_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_NeuronParameter_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.Spikeling_NeuronParameter_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_NeuronParameter_frame.setSizePolicy(sizePolicy2)
         self.Spikeling_NeuronParameter_frame.setMinimumSize(QSize(200, 0))
         self.Spikeling_NeuronParameter_frame.setMaximumSize(QSize(175, 16777215))
         self.Spikeling_NeuronParameter_frame.setFrameShape(QFrame.StyledPanel)
@@ -3272,8 +3249,8 @@ class Ui_MainWindow(QWidget):
 
         self.Spikeling_Synapse2_Decay_frame = QFrame(self.Spikeling_Synapse2_frame)
         self.Spikeling_Synapse2_Decay_frame.setObjectName(u"Spikeling_Synapse2_Decay_frame")
-        sizePolicy4.setHeightForWidth(self.Spikeling_Synapse2_Decay_frame.sizePolicy().hasHeightForWidth())
-        self.Spikeling_Synapse2_Decay_frame.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.Spikeling_Synapse2_Decay_frame.sizePolicy().hasHeightForWidth())
+        self.Spikeling_Synapse2_Decay_frame.setSizePolicy(sizePolicy3)
         self.Spikeling_Synapse2_Decay_frame.setFrameShape(QFrame.StyledPanel)
         self.Spikeling_Synapse2_Decay_frame.setFrameShadow(QFrame.Raised)
         self.Spikeling_Synapse2_Decay_Layout = QHBoxLayout(self.Spikeling_Synapse2_Decay_frame)
@@ -3495,8 +3472,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget1_0_0 = PlotWidget(self.page_103_1_0)
         self.DataAnalysis_Oscilloscope_widget1_0_0.setObjectName(u"DataAnalysis_Oscilloscope_widget1_0_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_0_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_0_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_0_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_39.addWidget(self.DataAnalysis_Oscilloscope_widget1_0_0)
@@ -3510,8 +3487,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_0_1 = PlotWidget(self.page_103_1_0)
         self.DataAnalysis_Oscilloscope_widget1_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget1_0_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_0_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_0_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_39.addWidget(self.DataAnalysis_Oscilloscope_widget1_0_1)
@@ -3525,8 +3502,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_0_2 = PlotWidget(self.page_103_1_0)
         self.DataAnalysis_Oscilloscope_widget1_0_2.setObjectName(u"DataAnalysis_Oscilloscope_widget1_0_2")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_0_2.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_0_2.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget1_0_2.setMinimumSize(QSize(0, 100))
         self.DataAnalysis_Oscilloscope_widget1_0_2.setMaximumSize(QSize(16777215, 100))
         self.DataAnalysis_Oscilloscope_widget1_0_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -3542,8 +3519,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_0_3 = PlotWidget(self.page_103_1_0)
         self.DataAnalysis_Oscilloscope_widget1_0_3.setObjectName(u"DataAnalysis_Oscilloscope_widget1_0_3")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_0_3.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_0_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_0_3.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget1_0_3.setMinimumSize(QSize(0, 150))
         self.DataAnalysis_Oscilloscope_widget1_0_3.setMaximumSize(QSize(16777215, 150))
         self.DataAnalysis_Oscilloscope_widget1_0_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -3559,8 +3536,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton10_frame = QFrame(self.page_103_1_0)
         self.DataAnalysis_Neurons_pushButton10_frame.setObjectName(u"DataAnalysis_Neurons_pushButton10_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton10_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton10_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton10_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton10_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton10_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton10_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton10_frame.setFrameShadow(QFrame.Raised)
@@ -3614,8 +3591,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_48.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget1_1_0 = PlotWidget(self.page_103_1_1)
         self.DataAnalysis_Oscilloscope_widget1_1_0.setObjectName(u"DataAnalysis_Oscilloscope_widget1_1_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_1_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_1_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_1_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_48.addWidget(self.DataAnalysis_Oscilloscope_widget1_1_0)
@@ -3629,8 +3606,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_1_1 = PlotWidget(self.page_103_1_1)
         self.DataAnalysis_Oscilloscope_widget1_1_1.setObjectName(u"DataAnalysis_Oscilloscope_widget1_1_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_1_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_1_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_1_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_48.addWidget(self.DataAnalysis_Oscilloscope_widget1_1_1)
@@ -3644,8 +3621,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_1_2 = PlotWidget(self.page_103_1_1)
         self.DataAnalysis_Oscilloscope_widget1_1_2.setObjectName(u"DataAnalysis_Oscilloscope_widget1_1_2")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_1_2.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_1_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_1_2.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget1_1_2.setMinimumSize(QSize(0, 150))
         self.DataAnalysis_Oscilloscope_widget1_1_2.setMaximumSize(QSize(16777215, 150))
         self.DataAnalysis_Oscilloscope_widget1_1_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -3661,8 +3638,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton11_frame = QFrame(self.page_103_1_1)
         self.DataAnalysis_Neurons_pushButton11_frame.setObjectName(u"DataAnalysis_Neurons_pushButton11_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton11_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton11_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton11_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton11_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton11_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton11_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton11_frame.setFrameShadow(QFrame.Raised)
@@ -3711,8 +3688,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_49.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget1_2_0 = PlotWidget(self.page_103_1_2)
         self.DataAnalysis_Oscilloscope_widget1_2_0.setObjectName(u"DataAnalysis_Oscilloscope_widget1_2_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_2_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_2_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_2_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_49.addWidget(self.DataAnalysis_Oscilloscope_widget1_2_0)
@@ -3726,8 +3703,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_2_1 = PlotWidget(self.page_103_1_2)
         self.DataAnalysis_Oscilloscope_widget1_2_1.setObjectName(u"DataAnalysis_Oscilloscope_widget1_2_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_2_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_2_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget1_2_1.setMinimumSize(QSize(0, 0))
         self.DataAnalysis_Oscilloscope_widget1_2_1.setMaximumSize(QSize(16777215, 16777215))
         self.DataAnalysis_Oscilloscope_widget1_2_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -3743,8 +3720,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget1_2_2 = PlotWidget(self.page_103_1_2)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setObjectName(u"DataAnalysis_Oscilloscope_widget1_2_2")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget1_2_2.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget1_2_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget1_2_2.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMinimumSize(QSize(0, 150))
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMaximumSize(QSize(16777215, 150))
         font7 = QFont()
@@ -3763,8 +3740,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton12_frame = QFrame(self.page_103_1_2)
         self.DataAnalysis_Neurons_pushButton12_frame.setObjectName(u"DataAnalysis_Neurons_pushButton12_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton12_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton12_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton12_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton12_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton12_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton12_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton12_frame.setFrameShadow(QFrame.Raised)
@@ -3813,8 +3790,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_42.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget2_0_0 = PlotWidget(self.page_103_2_0)
         self.DataAnalysis_Oscilloscope_widget2_0_0.setObjectName(u"DataAnalysis_Oscilloscope_widget2_0_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_0_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_0_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_0_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_42.addWidget(self.DataAnalysis_Oscilloscope_widget2_0_0)
@@ -3828,8 +3805,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_0_1 = PlotWidget(self.page_103_2_0)
         self.DataAnalysis_Oscilloscope_widget2_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget2_0_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_0_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_0_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_42.addWidget(self.DataAnalysis_Oscilloscope_widget2_0_1)
@@ -3843,8 +3820,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_0_2 = PlotWidget(self.page_103_2_0)
         self.DataAnalysis_Oscilloscope_widget2_0_2.setObjectName(u"DataAnalysis_Oscilloscope_widget2_0_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_0_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_0_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_0_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_42.addWidget(self.DataAnalysis_Oscilloscope_widget2_0_2)
@@ -3858,8 +3835,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_0_3 = PlotWidget(self.page_103_2_0)
         self.DataAnalysis_Oscilloscope_widget2_0_3.setObjectName(u"DataAnalysis_Oscilloscope_widget2_0_3")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_0_3.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_0_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_0_3.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget2_0_3.setMinimumSize(QSize(0, 100))
         self.DataAnalysis_Oscilloscope_widget2_0_3.setMaximumSize(QSize(16777215, 100))
         self.DataAnalysis_Oscilloscope_widget2_0_3.setStyleSheet(u"background-color: rgb(0, 30, 38);\n"
@@ -3876,8 +3853,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton20_frame = QFrame(self.page_103_2_0)
         self.DataAnalysis_Neurons_pushButton20_frame.setObjectName(u"DataAnalysis_Neurons_pushButton20_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton20_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton20_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton20_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton20_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton20_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton20_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton20_frame.setFrameShadow(QFrame.Raised)
@@ -3926,8 +3903,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_43.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget2_1_0 = PlotWidget(self.page_103_2_1)
         self.DataAnalysis_Oscilloscope_widget2_1_0.setObjectName(u"DataAnalysis_Oscilloscope_widget2_1_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_1_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_1_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_1_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_43.addWidget(self.DataAnalysis_Oscilloscope_widget2_1_0)
@@ -3941,8 +3918,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_1_1 = PlotWidget(self.page_103_2_1)
         self.DataAnalysis_Oscilloscope_widget2_1_1.setObjectName(u"DataAnalysis_Oscilloscope_widget2_1_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_1_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_1_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_1_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_43.addWidget(self.DataAnalysis_Oscilloscope_widget2_1_1)
@@ -3956,8 +3933,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_1_2 = PlotWidget(self.page_103_2_1)
         self.DataAnalysis_Oscilloscope_widget2_1_2.setObjectName(u"DataAnalysis_Oscilloscope_widget2_1_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_1_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_1_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_1_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_43.addWidget(self.DataAnalysis_Oscilloscope_widget2_1_2)
@@ -3971,8 +3948,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_1_3 = PlotWidget(self.page_103_2_1)
         self.DataAnalysis_Oscilloscope_widget2_1_3.setObjectName(u"DataAnalysis_Oscilloscope_widget2_1_3")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_1_3.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_1_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_1_3.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget2_1_3.setMinimumSize(QSize(0, 100))
         self.DataAnalysis_Oscilloscope_widget2_1_3.setMaximumSize(QSize(16777215, 100))
         self.DataAnalysis_Oscilloscope_widget2_1_3.setStyleSheet(u"background-color: rgb(0, 30, 38);\n"
@@ -3989,8 +3966,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton21_frame = QFrame(self.page_103_2_1)
         self.DataAnalysis_Neurons_pushButton21_frame.setObjectName(u"DataAnalysis_Neurons_pushButton21_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton21_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton21_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton21_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton21_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton21_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton21_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton21_frame.setFrameShadow(QFrame.Raised)
@@ -4039,8 +4016,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_44.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget2_2_0 = PlotWidget(self.page_103_2_2)
         self.DataAnalysis_Oscilloscope_widget2_2_0.setObjectName(u"DataAnalysis_Oscilloscope_widget2_2_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_2_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_2_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_2_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_44.addWidget(self.DataAnalysis_Oscilloscope_widget2_2_0)
@@ -4054,8 +4031,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_2_1 = PlotWidget(self.page_103_2_2)
         self.DataAnalysis_Oscilloscope_widget2_2_1.setObjectName(u"DataAnalysis_Oscilloscope_widget2_2_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_2_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_2_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_2_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_44.addWidget(self.DataAnalysis_Oscilloscope_widget2_2_1)
@@ -4069,8 +4046,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_2_2 = PlotWidget(self.page_103_2_2)
         self.DataAnalysis_Oscilloscope_widget2_2_2.setObjectName(u"DataAnalysis_Oscilloscope_widget2_2_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_2_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_2_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget2_2_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_44.addWidget(self.DataAnalysis_Oscilloscope_widget2_2_2)
@@ -4084,8 +4061,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget2_2_3 = PlotWidget(self.page_103_2_2)
         self.DataAnalysis_Oscilloscope_widget2_2_3.setObjectName(u"DataAnalysis_Oscilloscope_widget2_2_3")
-        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget2_2_3.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget2_2_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget2_2_3.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget2_2_3.setMinimumSize(QSize(0, 100))
         self.DataAnalysis_Oscilloscope_widget2_2_3.setMaximumSize(QSize(16777215, 100))
         self.DataAnalysis_Oscilloscope_widget2_2_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -4101,8 +4078,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton22_frame = QFrame(self.page_103_2_2)
         self.DataAnalysis_Neurons_pushButton22_frame.setObjectName(u"DataAnalysis_Neurons_pushButton22_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton22_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton22_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton22_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton22_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton22_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton22_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton22_frame.setFrameShadow(QFrame.Raised)
@@ -4151,8 +4128,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_45.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget3_0_0 = PlotWidget(self.page_103_3_0)
         self.DataAnalysis_Oscilloscope_widget3_0_0.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_0_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_0_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_0_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_45.addWidget(self.DataAnalysis_Oscilloscope_widget3_0_0)
@@ -4166,8 +4143,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_0_1 = PlotWidget(self.page_103_3_0)
         self.DataAnalysis_Oscilloscope_widget3_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_1")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_0_1.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_0_1.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Oscilloscope_widget3_0_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_0_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -4183,8 +4160,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_0_2 = PlotWidget(self.page_103_3_0)
         self.DataAnalysis_Oscilloscope_widget3_0_2.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_0_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_0_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_0_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_45.addWidget(self.DataAnalysis_Oscilloscope_widget3_0_2)
@@ -4198,8 +4175,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_0_3 = PlotWidget(self.page_103_3_0)
         self.DataAnalysis_Oscilloscope_widget3_0_3.setObjectName(u"DataAnalysis_Oscilloscope_widget3_0_3")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_0_3.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_0_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_0_3.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_0_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_45.addWidget(self.DataAnalysis_Oscilloscope_widget3_0_3)
@@ -4213,8 +4190,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton30_frame = QFrame(self.page_103_3_0)
         self.DataAnalysis_Neurons_pushButton30_frame.setObjectName(u"DataAnalysis_Neurons_pushButton30_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton30_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton30_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton30_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton30_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton30_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton30_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton30_frame.setFrameShadow(QFrame.Raised)
@@ -4263,8 +4240,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_46.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget3_1_0 = PlotWidget(self.page_103_3_1)
         self.DataAnalysis_Oscilloscope_widget3_1_0.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_1_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_1_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_1_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_46.addWidget(self.DataAnalysis_Oscilloscope_widget3_1_0)
@@ -4278,8 +4255,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_1_1 = PlotWidget(self.page_103_3_1)
         self.DataAnalysis_Oscilloscope_widget3_1_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_1_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_1_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_1_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_1_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_1_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -4295,8 +4272,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_1_2 = PlotWidget(self.page_103_3_1)
         self.DataAnalysis_Oscilloscope_widget3_1_2.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_1_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_1_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_1_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_46.addWidget(self.DataAnalysis_Oscilloscope_widget3_1_2)
@@ -4310,8 +4287,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_1_3 = PlotWidget(self.page_103_3_1)
         self.DataAnalysis_Oscilloscope_widget3_1_3.setObjectName(u"DataAnalysis_Oscilloscope_widget3_1_3")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_1_3.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_1_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_1_3.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_1_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_46.addWidget(self.DataAnalysis_Oscilloscope_widget3_1_3)
@@ -4325,8 +4302,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton31_frame = QFrame(self.page_103_3_1)
         self.DataAnalysis_Neurons_pushButton31_frame.setObjectName(u"DataAnalysis_Neurons_pushButton31_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton31_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton31_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton31_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton31_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton31_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton31_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton31_frame.setFrameShadow(QFrame.Raised)
@@ -4375,8 +4352,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_47.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Oscilloscope_widget3_2_0 = PlotWidget(self.page_103_3_2)
         self.DataAnalysis_Oscilloscope_widget3_2_0.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_0")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_0.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_2_0.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_0.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_2_0.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_2_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_47.addWidget(self.DataAnalysis_Oscilloscope_widget3_2_0)
@@ -4390,8 +4367,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_2_1 = PlotWidget(self.page_103_3_2)
         self.DataAnalysis_Oscilloscope_widget3_2_1.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_1")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_1.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_2_1.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_1.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_2_1.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_2_1.setMinimumSize(QSize(0, 50))
         self.DataAnalysis_Oscilloscope_widget3_2_1.setMaximumSize(QSize(16777215, 75))
         self.DataAnalysis_Oscilloscope_widget3_2_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
@@ -4407,8 +4384,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_2_2 = PlotWidget(self.page_103_3_2)
         self.DataAnalysis_Oscilloscope_widget3_2_2.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_2")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_2.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_2_2.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_2.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_2_2.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_2_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_47.addWidget(self.DataAnalysis_Oscilloscope_widget3_2_2)
@@ -4422,8 +4399,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Oscilloscope_widget3_2_3 = PlotWidget(self.page_103_3_2)
         self.DataAnalysis_Oscilloscope_widget3_2_3.setObjectName(u"DataAnalysis_Oscilloscope_widget3_2_3")
-        sizePolicy2.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_3.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Oscilloscope_widget3_2_3.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.DataAnalysis_Oscilloscope_widget3_2_3.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Oscilloscope_widget3_2_3.setSizePolicy(sizePolicy1)
         self.DataAnalysis_Oscilloscope_widget3_2_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_47.addWidget(self.DataAnalysis_Oscilloscope_widget3_2_3)
@@ -4437,8 +4414,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neurons_pushButton32_frame = QFrame(self.page_103_3_2)
         self.DataAnalysis_Neurons_pushButton32_frame.setObjectName(u"DataAnalysis_Neurons_pushButton32_frame")
-        sizePolicy3.setHeightForWidth(self.DataAnalysis_Neurons_pushButton32_frame.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Neurons_pushButton32_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton32_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton32_frame.setSizePolicy(sizePolicy2)
         self.DataAnalysis_Neurons_pushButton32_frame.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neurons_pushButton32_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_Neurons_pushButton32_frame.setFrameShadow(QFrame.Raised)
@@ -4479,24 +4456,131 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_47.addWidget(self.DataAnalysis_Neurons_pushButton32_frame)
 
         self.DataAnalysis_Display_StackedWidget.addWidget(self.page_103_3_2)
+        self.page_103_11_0 = QWidget()
+        self.page_103_11_0.setObjectName(u"page_103_11_0")
+        self.verticalLayout_20 = QVBoxLayout(self.page_103_11_0)
+        self.verticalLayout_20.setSpacing(0)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_Oscilloscope_widget11_0_0 = PlotWidget(self.page_103_11_0)
+        self.DataAnalysis_Oscilloscope_widget11_0_0.setObjectName(u"DataAnalysis_Oscilloscope_widget11_0_0")
+        self.DataAnalysis_Oscilloscope_widget11_0_0.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+
+        self.verticalLayout_20.addWidget(self.DataAnalysis_Oscilloscope_widget11_0_0)
+
+        self.line_6 = QFrame(self.page_103_11_0)
+        self.line_6.setObjectName(u"line_6")
+        self.line_6.setFrameShape(QFrame.HLine)
+        self.line_6.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_20.addWidget(self.line_6)
+
+        self.DataAnalysis_Oscilloscope_widget11_0_1 = PlotWidget(self.page_103_11_0)
+        self.DataAnalysis_Oscilloscope_widget11_0_1.setObjectName(u"DataAnalysis_Oscilloscope_widget11_0_1")
+        self.DataAnalysis_Oscilloscope_widget11_0_1.setMinimumSize(QSize(0, 50))
+        self.DataAnalysis_Oscilloscope_widget11_0_1.setMaximumSize(QSize(16777215, 75))
+        self.DataAnalysis_Oscilloscope_widget11_0_1.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+
+        self.verticalLayout_20.addWidget(self.DataAnalysis_Oscilloscope_widget11_0_1)
+
+        self.line_69 = QFrame(self.page_103_11_0)
+        self.line_69.setObjectName(u"line_69")
+        self.line_69.setFrameShape(QFrame.HLine)
+        self.line_69.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_20.addWidget(self.line_69)
+
+        self.DataAnalysis_Oscilloscope_widget11_0_2 = PlotWidget(self.page_103_11_0)
+        self.DataAnalysis_Oscilloscope_widget11_0_2.setObjectName(u"DataAnalysis_Oscilloscope_widget11_0_2")
+        self.DataAnalysis_Oscilloscope_widget11_0_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+
+        self.verticalLayout_20.addWidget(self.DataAnalysis_Oscilloscope_widget11_0_2)
+
+        self.line_70 = QFrame(self.page_103_11_0)
+        self.line_70.setObjectName(u"line_70")
+        self.line_70.setFrameShape(QFrame.HLine)
+        self.line_70.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_20.addWidget(self.line_70)
+
+        self.DataAnalysis_Oscilloscope_widget11_0_3 = PlotWidget(self.page_103_11_0)
+        self.DataAnalysis_Oscilloscope_widget11_0_3.setObjectName(u"DataAnalysis_Oscilloscope_widget11_0_3")
+        self.DataAnalysis_Oscilloscope_widget11_0_3.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+
+        self.verticalLayout_20.addWidget(self.DataAnalysis_Oscilloscope_widget11_0_3)
+
+        self.line_71 = QFrame(self.page_103_11_0)
+        self.line_71.setObjectName(u"line_71")
+        self.line_71.setFrameShape(QFrame.HLine)
+        self.line_71.setFrameShadow(QFrame.Sunken)
+
+        self.verticalLayout_20.addWidget(self.line_71)
+
+        self.DataAnalysis_Neurons_pushButton110_frame = QFrame(self.page_103_11_0)
+        self.DataAnalysis_Neurons_pushButton110_frame.setObjectName(u"DataAnalysis_Neurons_pushButton110_frame")
+        sizePolicy2.setHeightForWidth(self.DataAnalysis_Neurons_pushButton110_frame.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neurons_pushButton110_frame.setSizePolicy(sizePolicy2)
+        self.DataAnalysis_Neurons_pushButton110_frame.setMinimumSize(QSize(0, 25))
+        self.DataAnalysis_Neurons_pushButton110_frame.setMaximumSize(QSize(16777215, 25))
+        self.DataAnalysis_Neurons_pushButton110_frame.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_Neurons_pushButton110_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_417 = QHBoxLayout(self.DataAnalysis_Neurons_pushButton110_frame)
+        self.horizontalLayout_417.setSpacing(5)
+        self.horizontalLayout_417.setObjectName(u"horizontalLayout_417")
+        self.horizontalLayout_417.setContentsMargins(5, 0, 5, 0)
+        self.DataAnalysis_Neuron0Vm_pushButton110 = QPushButton(self.DataAnalysis_Neurons_pushButton110_frame)
+        self.DataAnalysis_Neuron0Vm_pushButton110.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton110")
+        self.DataAnalysis_Neuron0Vm_pushButton110.setMinimumSize(QSize(25, 0))
+        self.DataAnalysis_Neuron0Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
+        self.DataAnalysis_Neuron0Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton110.setStyleSheet(u"color: rgb(220, 50, 47);")
+
+        self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron0Vm_pushButton110)
+
+        self.DataAnalysis_Neuron1Vm_pushButton110 = QPushButton(self.DataAnalysis_Neurons_pushButton110_frame)
+        self.DataAnalysis_Neuron1Vm_pushButton110.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton110")
+        self.DataAnalysis_Neuron1Vm_pushButton110.setMinimumSize(QSize(0, 25))
+        self.DataAnalysis_Neuron1Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
+        self.DataAnalysis_Neuron1Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton110.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron1Vm_pushButton110)
+
+        self.DataAnalysis_Neuron2Vm_pushButton110 = QPushButton(self.DataAnalysis_Neurons_pushButton110_frame)
+        self.DataAnalysis_Neuron2Vm_pushButton110.setObjectName(u"DataAnalysis_Neuron2Vm_pushButton110")
+        sizePolicy7.setHeightForWidth(self.DataAnalysis_Neuron2Vm_pushButton110.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Neuron2Vm_pushButton110.setSizePolicy(sizePolicy7)
+        self.DataAnalysis_Neuron2Vm_pushButton110.setMinimumSize(QSize(0, 25))
+        self.DataAnalysis_Neuron2Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
+        self.DataAnalysis_Neuron2Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton110.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron2Vm_pushButton110)
+
+
+        self.verticalLayout_20.addWidget(self.DataAnalysis_Neurons_pushButton110_frame)
+
+        self.DataAnalysis_Display_StackedWidget.addWidget(self.page_103_11_0)
 
         self.verticalLayout_35.addWidget(self.DataAnalysis_Display_StackedWidget)
 
 
         self.horizontalLayout_61.addWidget(self.DataAnalysis_Display_frame)
 
-        self.DataAnalysis_groupBox = QGroupBox(self.DataAnalysis_frame)
-        self.DataAnalysis_groupBox.setObjectName(u"DataAnalysis_groupBox")
-        sizePolicy.setHeightForWidth(self.DataAnalysis_groupBox.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_groupBox.setSizePolicy(sizePolicy)
-        self.DataAnalysis_groupBox.setMinimumSize(QSize(250, 0))
-        self.DataAnalysis_groupBox.setMaximumSize(QSize(250, 16777215))
-        self.DataAnalysis_groupBox.setStyleSheet(u"")
-        self.verticalLayout_34 = QVBoxLayout(self.DataAnalysis_groupBox)
+        self.DataAnalysis_stackedWidget = QStackedWidget(self.DataAnalysis_frame)
+        self.DataAnalysis_stackedWidget.setObjectName(u"DataAnalysis_stackedWidget")
+        sizePolicy.setHeightForWidth(self.DataAnalysis_stackedWidget.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_stackedWidget.setSizePolicy(sizePolicy)
+        self.DataAnalysis_stackedWidget.setMinimumSize(QSize(250, 0))
+        self.DataAnalysis_stackedWidget.setMaximumSize(QSize(250, 16777215))
+        self.DataAnalysis_stackedWidget.setStyleSheet(u"")
+        self.DataAnalysis_SquareStim = QWidget()
+        self.DataAnalysis_SquareStim.setObjectName(u"DataAnalysis_SquareStim")
+        self.verticalLayout_34 = QVBoxLayout(self.DataAnalysis_SquareStim)
         self.verticalLayout_34.setSpacing(5)
         self.verticalLayout_34.setObjectName(u"verticalLayout_34")
         self.verticalLayout_34.setContentsMargins(0, 0, 0, 1)
-        self.DataAnalysis_LoadData_frame = QFrame(self.DataAnalysis_groupBox)
+        self.DataAnalysis_LoadData_frame = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_LoadData_frame.setObjectName(u"DataAnalysis_LoadData_frame")
         self.DataAnalysis_LoadData_frame.setFrameShape(QFrame.StyledPanel)
         self.DataAnalysis_LoadData_frame.setFrameShadow(QFrame.Raised)
@@ -4513,8 +4597,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_62.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_LoadData_label = QLabel(self.DataAnalysis_LoadData_subframe)
         self.DataAnalysis_LoadData_label.setObjectName(u"DataAnalysis_LoadData_label")
-        sizePolicy4.setHeightForWidth(self.DataAnalysis_LoadData_label.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_LoadData_label.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.DataAnalysis_LoadData_label.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_LoadData_label.setSizePolicy(sizePolicy3)
         self.DataAnalysis_LoadData_label.setWordWrap(True)
 
         self.horizontalLayout_62.addWidget(self.DataAnalysis_LoadData_label)
@@ -4541,14 +4625,14 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_LoadData_frame)
 
-        self.DataAnalysis_LoadData_line = QFrame(self.DataAnalysis_groupBox)
+        self.DataAnalysis_LoadData_line = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_LoadData_line.setObjectName(u"DataAnalysis_LoadData_line")
         self.DataAnalysis_LoadData_line.setFrameShape(QFrame.HLine)
         self.DataAnalysis_LoadData_line.setFrameShadow(QFrame.Sunken)
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_LoadData_line)
 
-        self.DataAnalysis_Spike_frame = QFrame(self.DataAnalysis_groupBox)
+        self.DataAnalysis_Spike_frame = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_Spike_frame.setObjectName(u"DataAnalysis_Spike_frame")
         self.DataAnalysis_Spike_frame.setStyleSheet(u"")
         self.DataAnalysis_Spike_frame.setFrameShape(QFrame.StyledPanel)
@@ -4572,8 +4656,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_69.setContentsMargins(0, 0, 0, 0)
         self.DataAnalysis_Spike_threshold_label = QLabel(self.DataAnalysis_Spike_subframe)
         self.DataAnalysis_Spike_threshold_label.setObjectName(u"DataAnalysis_Spike_threshold_label")
-        sizePolicy4.setHeightForWidth(self.DataAnalysis_Spike_threshold_label.sizePolicy().hasHeightForWidth())
-        self.DataAnalysis_Spike_threshold_label.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.DataAnalysis_Spike_threshold_label.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_Spike_threshold_label.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_69.addWidget(self.DataAnalysis_Spike_threshold_label)
 
@@ -4623,14 +4707,14 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_Spike_frame)
 
-        self.DataAnalysis_Spike_line = QFrame(self.DataAnalysis_groupBox)
+        self.DataAnalysis_Spike_line = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_Spike_line.setObjectName(u"DataAnalysis_Spike_line")
         self.DataAnalysis_Spike_line.setFrameShape(QFrame.HLine)
         self.DataAnalysis_Spike_line.setFrameShadow(QFrame.Sunken)
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_Spike_line)
 
-        self.DataAnalysis_Average_frame = QFrame(self.DataAnalysis_groupBox)
+        self.DataAnalysis_Average_frame = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_Average_frame.setObjectName(u"DataAnalysis_Average_frame")
         self.DataAnalysis_Average_frame.setStyleSheet(u"")
         self.DataAnalysis_Average_frame.setFrameShape(QFrame.StyledPanel)
@@ -4675,8 +4759,171 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_Average_frame)
 
+        self.DataAnalysis_stackedWidget.addWidget(self.DataAnalysis_SquareStim)
+        self.DataAnalysis_StepStim = QWidget()
+        self.DataAnalysis_StepStim.setObjectName(u"DataAnalysis_StepStim")
+        self.verticalLayout_18 = QVBoxLayout(self.DataAnalysis_StepStim)
+        self.verticalLayout_18.setSpacing(0)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_StepStim_LoadData_frame = QFrame(self.DataAnalysis_StepStim)
+        self.DataAnalysis_StepStim_LoadData_frame.setObjectName(u"DataAnalysis_StepStim_LoadData_frame")
+        self.DataAnalysis_StepStim_LoadData_frame.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_StepStim_LoadData_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_60 = QVBoxLayout(self.DataAnalysis_StepStim_LoadData_frame)
+        self.verticalLayout_60.setObjectName(u"verticalLayout_60")
+        self.verticalLayout_60.setContentsMargins(15, -1, 15, -1)
+        self.DataAnalysis_StepStim_LoadData_subframe = QFrame(self.DataAnalysis_StepStim_LoadData_frame)
+        self.DataAnalysis_StepStim_LoadData_subframe.setObjectName(u"DataAnalysis_StepStim_LoadData_subframe")
+        self.DataAnalysis_StepStim_LoadData_subframe.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_StepStim_LoadData_subframe.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_416 = QHBoxLayout(self.DataAnalysis_StepStim_LoadData_subframe)
+        self.horizontalLayout_416.setSpacing(0)
+        self.horizontalLayout_416.setObjectName(u"horizontalLayout_416")
+        self.horizontalLayout_416.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_StepStim_LoadData_label = QLabel(self.DataAnalysis_StepStim_LoadData_subframe)
+        self.DataAnalysis_StepStim_LoadData_label.setObjectName(u"DataAnalysis_StepStim_LoadData_label")
+        sizePolicy3.setHeightForWidth(self.DataAnalysis_StepStim_LoadData_label.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_StepStim_LoadData_label.setSizePolicy(sizePolicy3)
+        self.DataAnalysis_StepStim_LoadData_label.setWordWrap(True)
 
-        self.horizontalLayout_61.addWidget(self.DataAnalysis_groupBox)
+        self.horizontalLayout_416.addWidget(self.DataAnalysis_StepStim_LoadData_label)
+
+        self.DataAnalysis_StepStim_LoadData_pushButton = QPushButton(self.DataAnalysis_StepStim_LoadData_subframe)
+        self.DataAnalysis_StepStim_LoadData_pushButton.setObjectName(u"DataAnalysis_StepStim_LoadData_pushButton")
+        self.DataAnalysis_StepStim_LoadData_pushButton.setIconSize(QSize(14, 16))
+
+        self.horizontalLayout_416.addWidget(self.DataAnalysis_StepStim_LoadData_pushButton)
+
+
+        self.verticalLayout_60.addWidget(self.DataAnalysis_StepStim_LoadData_subframe)
+
+        self.DataAnalysis_StepStim_LoadStim_subframe = QFrame(self.DataAnalysis_StepStim_LoadData_frame)
+        self.DataAnalysis_StepStim_LoadStim_subframe.setObjectName(u"DataAnalysis_StepStim_LoadStim_subframe")
+        self.DataAnalysis_StepStim_LoadStim_subframe.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_StepStim_LoadStim_subframe.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_418 = QHBoxLayout(self.DataAnalysis_StepStim_LoadStim_subframe)
+        self.horizontalLayout_418.setSpacing(0)
+        self.horizontalLayout_418.setObjectName(u"horizontalLayout_418")
+        self.horizontalLayout_418.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_StepStim_LoadStim_label = QLabel(self.DataAnalysis_StepStim_LoadStim_subframe)
+        self.DataAnalysis_StepStim_LoadStim_label.setObjectName(u"DataAnalysis_StepStim_LoadStim_label")
+        sizePolicy3.setHeightForWidth(self.DataAnalysis_StepStim_LoadStim_label.sizePolicy().hasHeightForWidth())
+        self.DataAnalysis_StepStim_LoadStim_label.setSizePolicy(sizePolicy3)
+        self.DataAnalysis_StepStim_LoadStim_label.setWordWrap(True)
+
+        self.horizontalLayout_418.addWidget(self.DataAnalysis_StepStim_LoadStim_label)
+
+        self.DataAnalysis_LoadStim_pushButton = QPushButton(self.DataAnalysis_StepStim_LoadStim_subframe)
+        self.DataAnalysis_LoadStim_pushButton.setObjectName(u"DataAnalysis_LoadStim_pushButton")
+        self.DataAnalysis_LoadStim_pushButton.setIconSize(QSize(14, 16))
+
+        self.horizontalLayout_418.addWidget(self.DataAnalysis_LoadStim_pushButton)
+
+
+        self.verticalLayout_60.addWidget(self.DataAnalysis_StepStim_LoadStim_subframe)
+
+        self.DataAnalysis_StepStim_LoadData_Display_pushButton = QPushButton(self.DataAnalysis_StepStim_LoadData_frame)
+        self.DataAnalysis_StepStim_LoadData_Display_pushButton.setObjectName(u"DataAnalysis_StepStim_LoadData_Display_pushButton")
+
+        self.verticalLayout_60.addWidget(self.DataAnalysis_StepStim_LoadData_Display_pushButton)
+
+        self.DataAnalysis_StepStim_SaveImage_pushButton = QPushButton(self.DataAnalysis_StepStim_LoadData_frame)
+        self.DataAnalysis_StepStim_SaveImage_pushButton.setObjectName(u"DataAnalysis_StepStim_SaveImage_pushButton")
+
+        self.verticalLayout_60.addWidget(self.DataAnalysis_StepStim_SaveImage_pushButton)
+
+
+        self.verticalLayout_18.addWidget(self.DataAnalysis_StepStim_LoadData_frame)
+
+        self.frame_7 = QFrame(self.DataAnalysis_StepStim)
+        self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setFrameShape(QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_18.addWidget(self.frame_7)
+
+        self.DataAnalysis_stackedWidget.addWidget(self.DataAnalysis_StepStim)
+
+        self.horizontalLayout_61.addWidget(self.DataAnalysis_stackedWidget)
+
+        self.DataAnalysis_RightMenu_Container = QFrame(self.DataAnalysis_frame)
+        self.DataAnalysis_RightMenu_Container.setObjectName(u"DataAnalysis_RightMenu_Container")
+        self.DataAnalysis_RightMenu_Container.setMinimumSize(QSize(40, 0))
+        self.DataAnalysis_RightMenu_Container.setMaximumSize(QSize(40, 16777215))
+        self.DataAnalysis_RightMenu_Container.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_RightMenu_Container.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_415 = QHBoxLayout(self.DataAnalysis_RightMenu_Container)
+        self.horizontalLayout_415.setSpacing(0)
+        self.horizontalLayout_415.setObjectName(u"horizontalLayout_415")
+        self.horizontalLayout_415.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_RightMenu_Frame = QFrame(self.DataAnalysis_RightMenu_Container)
+        self.DataAnalysis_RightMenu_Frame.setObjectName(u"DataAnalysis_RightMenu_Frame")
+        self.DataAnalysis_RightMenu_Frame.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_RightMenu_Frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_101 = QVBoxLayout(self.DataAnalysis_RightMenu_Frame)
+        self.verticalLayout_101.setSpacing(0)
+        self.verticalLayout_101.setObjectName(u"verticalLayout_101")
+        self.verticalLayout_101.setContentsMargins(0, 0, 5, 0)
+        self.DataAnalysis_Menu_Frame = QFrame(self.DataAnalysis_RightMenu_Frame)
+        self.DataAnalysis_Menu_Frame.setObjectName(u"DataAnalysis_Menu_Frame")
+        self.DataAnalysis_Menu_Frame.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_Menu_Frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_103 = QVBoxLayout(self.DataAnalysis_Menu_Frame)
+        self.verticalLayout_103.setObjectName(u"verticalLayout_103")
+        self.verticalLayout_103.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_Menu_pushButton = QPushButton(self.DataAnalysis_Menu_Frame)
+        self.DataAnalysis_Menu_pushButton.setObjectName(u"DataAnalysis_Menu_pushButton")
+        self.DataAnalysis_Menu_pushButton.setIcon(icon19)
+        self.DataAnalysis_Menu_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_103.addWidget(self.DataAnalysis_Menu_pushButton)
+
+
+        self.verticalLayout_101.addWidget(self.DataAnalysis_Menu_Frame, 0, Qt.AlignTop)
+
+        self.DataAnalysis_StimuliMenu_Frame = QFrame(self.DataAnalysis_RightMenu_Frame)
+        self.DataAnalysis_StimuliMenu_Frame.setObjectName(u"DataAnalysis_StimuliMenu_Frame")
+        self.DataAnalysis_StimuliMenu_Frame.setFrameShape(QFrame.StyledPanel)
+        self.DataAnalysis_StimuliMenu_Frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_102 = QVBoxLayout(self.DataAnalysis_StimuliMenu_Frame)
+        self.verticalLayout_102.setSpacing(0)
+        self.verticalLayout_102.setObjectName(u"verticalLayout_102")
+        self.verticalLayout_102.setContentsMargins(0, 0, 0, 0)
+        self.DataAnalysis_SquareStim_pushButton = QPushButton(self.DataAnalysis_StimuliMenu_Frame)
+        self.DataAnalysis_SquareStim_pushButton.setObjectName(u"DataAnalysis_SquareStim_pushButton")
+        self.DataAnalysis_SquareStim_pushButton.setFont(font1)
+        icon20 = QIcon()
+        icon20.addFile(u":/resources/resources/SqaureStim.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.DataAnalysis_SquareStim_pushButton.setIcon(icon20)
+        self.DataAnalysis_SquareStim_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_102.addWidget(self.DataAnalysis_SquareStim_pushButton)
+
+        self.DataAnalysis_StepStim_pushButton = QPushButton(self.DataAnalysis_StimuliMenu_Frame)
+        self.DataAnalysis_StepStim_pushButton.setObjectName(u"DataAnalysis_StepStim_pushButton")
+        self.DataAnalysis_StepStim_pushButton.setFont(font1)
+        self.DataAnalysis_StepStim_pushButton.setLayoutDirection(Qt.LeftToRight)
+        self.DataAnalysis_StepStim_pushButton.setIcon(icon8)
+        self.DataAnalysis_StepStim_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_102.addWidget(self.DataAnalysis_StepStim_pushButton)
+
+
+        self.verticalLayout_101.addWidget(self.DataAnalysis_StimuliMenu_Frame)
+
+        self.frame_5 = QFrame(self.DataAnalysis_RightMenu_Frame)
+        self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setFrameShape(QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_101.addWidget(self.frame_5)
+
+
+        self.horizontalLayout_415.addWidget(self.DataAnalysis_RightMenu_Frame)
+
+
+        self.horizontalLayout_61.addWidget(self.DataAnalysis_RightMenu_Container)
 
 
         self.horizontalLayout_68.addWidget(self.DataAnalysis_frame)
@@ -4747,8 +4994,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_157.setContentsMargins(0, 0, 0, 0)
         self.Imaging_Oscilloscope_widget = PlotWidget(self.Imaging_Oscilloscope_frame)
         self.Imaging_Oscilloscope_widget.setObjectName(u"Imaging_Oscilloscope_widget")
-        sizePolicy5.setHeightForWidth(self.Imaging_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
-        self.Imaging_Oscilloscope_widget.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.Imaging_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.Imaging_Oscilloscope_widget.setSizePolicy(sizePolicy4)
         self.Imaging_Oscilloscope_widget.setAutoFillBackground(False)
         self.Imaging_Oscilloscope_widget.setStyleSheet(u"")
         self.horizontalLayout_178 = QHBoxLayout(self.Imaging_Oscilloscope_widget)
@@ -6776,9 +7023,9 @@ class Ui_MainWindow(QWidget):
         self.Imaging_CalciumParameter_pushButton = QPushButton(self.Imaging_rightMenuParameterContainer_frame)
         self.Imaging_CalciumParameter_pushButton.setObjectName(u"Imaging_CalciumParameter_pushButton")
         self.Imaging_CalciumParameter_pushButton.setFont(font1)
-        icon20 = QIcon()
-        icon20.addFile(u":/resources/resources/Calcium.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Imaging_CalciumParameter_pushButton.setIcon(icon20)
+        icon21 = QIcon()
+        icon21.addFile(u":/resources/resources/Calcium.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Imaging_CalciumParameter_pushButton.setIcon(icon21)
         self.Imaging_CalciumParameter_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_94.addWidget(self.Imaging_CalciumParameter_pushButton)
@@ -6873,8 +7120,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_303.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_Oscilloscope_widget = PlotWidget(self.MultipleImaging_Oscilloscope_frame)
         self.MultipleImaging_Oscilloscope_widget.setObjectName(u"MultipleImaging_Oscilloscope_widget")
-        sizePolicy5.setHeightForWidth(self.MultipleImaging_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
-        self.MultipleImaging_Oscilloscope_widget.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.MultipleImaging_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.MultipleImaging_Oscilloscope_widget.setSizePolicy(sizePolicy4)
         self.MultipleImaging_Oscilloscope_widget.setAutoFillBackground(False)
         self.MultipleImaging_Oscilloscope_widget.setStyleSheet(u"")
         self.horizontalLayout_305 = QHBoxLayout(self.MultipleImaging_Oscilloscope_widget)
@@ -8970,7 +9217,7 @@ class Ui_MainWindow(QWidget):
         self.MultipleImaging_CalciumParameter_pushButton = QPushButton(self.MultipleImaging_rightMenuParameterContainer_frame)
         self.MultipleImaging_CalciumParameter_pushButton.setObjectName(u"MultipleImaging_CalciumParameter_pushButton")
         self.MultipleImaging_CalciumParameter_pushButton.setFont(font1)
-        self.MultipleImaging_CalciumParameter_pushButton.setIcon(icon20)
+        self.MultipleImaging_CalciumParameter_pushButton.setIcon(icon21)
         self.MultipleImaging_CalciumParameter_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_97.addWidget(self.MultipleImaging_CalciumParameter_pushButton)
@@ -9088,8 +9335,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_14.setContentsMargins(-1, 0, 0, 0)
         self.NeuronGenerator_subframe1_title_label = QLabel(self.NeuronGenerator_subframe1_title_frame)
         self.NeuronGenerator_subframe1_title_label.setObjectName(u"NeuronGenerator_subframe1_title_label")
-        sizePolicy1.setHeightForWidth(self.NeuronGenerator_subframe1_title_label.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_subframe1_title_label.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.NeuronGenerator_subframe1_title_label.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_subframe1_title_label.setSizePolicy(sizePolicy5)
         self.NeuronGenerator_subframe1_title_label.setMaximumSize(QSize(16777215, 30))
         self.NeuronGenerator_subframe1_title_label.setStyleSheet(u"")
 
@@ -9100,8 +9347,8 @@ class Ui_MainWindow(QWidget):
 
         self.NeuronGenerator_subframe1_Izhik_frame = QFrame(self.NeuronGenerator_subframe1_top_frame)
         self.NeuronGenerator_subframe1_Izhik_frame.setObjectName(u"NeuronGenerator_subframe1_Izhik_frame")
-        sizePolicy1.setHeightForWidth(self.NeuronGenerator_subframe1_Izhik_frame.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_subframe1_Izhik_frame.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.NeuronGenerator_subframe1_Izhik_frame.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_subframe1_Izhik_frame.setSizePolicy(sizePolicy5)
         self.NeuronGenerator_subframe1_Izhik_frame.setMaximumSize(QSize(16777215, 240))
         self.NeuronGenerator_subframe1_Izhik_frame.setFrameShape(QFrame.StyledPanel)
         self.NeuronGenerator_subframe1_Izhik_frame.setFrameShadow(QFrame.Raised)
@@ -9160,8 +9407,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.NeuronGenerator_Oscilloscope_widget = PlotWidget(self.NeuronGenerator_subframe1_middle_frame)
         self.NeuronGenerator_Oscilloscope_widget.setObjectName(u"NeuronGenerator_Oscilloscope_widget")
-        sizePolicy5.setHeightForWidth(self.NeuronGenerator_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_Oscilloscope_widget.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.NeuronGenerator_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_Oscilloscope_widget.setSizePolicy(sizePolicy4)
         self.NeuronGenerator_Oscilloscope_widget.setStyleSheet(u"")
         self.verticalLayout_115 = QVBoxLayout(self.NeuronGenerator_Oscilloscope_widget)
         self.verticalLayout_115.setSpacing(0)
@@ -9242,8 +9489,8 @@ class Ui_MainWindow(QWidget):
 
         self.NeuronGenerator_subframe1_bottom_frame = QFrame(self.NeuronGenerator_subwidget1)
         self.NeuronGenerator_subframe1_bottom_frame.setObjectName(u"NeuronGenerator_subframe1_bottom_frame")
-        sizePolicy1.setHeightForWidth(self.NeuronGenerator_subframe1_bottom_frame.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_subframe1_bottom_frame.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.NeuronGenerator_subframe1_bottom_frame.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_subframe1_bottom_frame.setSizePolicy(sizePolicy5)
         self.NeuronGenerator_subframe1_bottom_frame.setMinimumSize(QSize(0, 35))
         self.NeuronGenerator_subframe1_bottom_frame.setMaximumSize(QSize(16777215, 35))
         self.NeuronGenerator_subframe1_bottom_frame.setFrameShape(QFrame.StyledPanel)
@@ -9254,8 +9501,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.NeuronGenerator_subframe1_bottom_label = QLabel(self.NeuronGenerator_subframe1_bottom_frame)
         self.NeuronGenerator_subframe1_bottom_label.setObjectName(u"NeuronGenerator_subframe1_bottom_label")
-        sizePolicy4.setHeightForWidth(self.NeuronGenerator_subframe1_bottom_label.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_subframe1_bottom_label.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.NeuronGenerator_subframe1_bottom_label.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_subframe1_bottom_label.setSizePolicy(sizePolicy3)
         self.NeuronGenerator_subframe1_bottom_label.setWordWrap(True)
 
         self.horizontalLayout_11.addWidget(self.NeuronGenerator_subframe1_bottom_label, 0, Qt.AlignTop)
@@ -9289,8 +9536,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.izhik_image = QFrame(self.NeuronGenerator_subframe2)
         self.izhik_image.setObjectName(u"izhik_image")
-        sizePolicy1.setHeightForWidth(self.izhik_image.sizePolicy().hasHeightForWidth())
-        self.izhik_image.setSizePolicy(sizePolicy1)
+        sizePolicy5.setHeightForWidth(self.izhik_image.sizePolicy().hasHeightForWidth())
+        self.izhik_image.setSizePolicy(sizePolicy5)
         self.izhik_image.setMinimumSize(QSize(0, 150))
         self.izhik_image.setMaximumSize(QSize(16777215, 200))
         self.izhik_image.setFrameShape(QFrame.StyledPanel)
@@ -9301,8 +9548,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
         self.NeuronGenerator_subframe1_Izhik_image = QLabel(self.izhik_image)
         self.NeuronGenerator_subframe1_Izhik_image.setObjectName(u"NeuronGenerator_subframe1_Izhik_image")
-        sizePolicy4.setHeightForWidth(self.NeuronGenerator_subframe1_Izhik_image.sizePolicy().hasHeightForWidth())
-        self.NeuronGenerator_subframe1_Izhik_image.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.NeuronGenerator_subframe1_Izhik_image.sizePolicy().hasHeightForWidth())
+        self.NeuronGenerator_subframe1_Izhik_image.setSizePolicy(sizePolicy3)
         self.NeuronGenerator_subframe1_Izhik_image.setMinimumSize(QSize(225, 150))
         self.NeuronGenerator_subframe1_Izhik_image.setMaximumSize(QSize(225, 140))
         self.NeuronGenerator_subframe1_Izhik_image.setPixmap(QPixmap(u":/resources/resources/izhik.png"))
@@ -9362,8 +9609,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
         self.a_text = QLabel(self.a_text_frame)
         self.a_text.setObjectName(u"a_text")
-        sizePolicy4.setHeightForWidth(self.a_text.sizePolicy().hasHeightForWidth())
-        self.a_text.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.a_text.sizePolicy().hasHeightForWidth())
+        self.a_text.setSizePolicy(sizePolicy3)
         self.a_text.setScaledContents(False)
         self.a_text.setAlignment(Qt.AlignBottom|Qt.AlignJustify)
         self.a_text.setWordWrap(True)
@@ -9416,8 +9663,8 @@ class Ui_MainWindow(QWidget):
 
         self.b_text_frame = QFrame(self.b_Izhik_frame)
         self.b_text_frame.setObjectName(u"b_text_frame")
-        sizePolicy4.setHeightForWidth(self.b_text_frame.sizePolicy().hasHeightForWidth())
-        self.b_text_frame.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.b_text_frame.sizePolicy().hasHeightForWidth())
+        self.b_text_frame.setSizePolicy(sizePolicy3)
         self.b_text_frame.setFrameShape(QFrame.StyledPanel)
         self.b_text_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_22 = QHBoxLayout(self.b_text_frame)
@@ -9477,8 +9724,8 @@ class Ui_MainWindow(QWidget):
 
         self.c_text_frame = QFrame(self.c_Izhik_frame)
         self.c_text_frame.setObjectName(u"c_text_frame")
-        sizePolicy4.setHeightForWidth(self.c_text_frame.sizePolicy().hasHeightForWidth())
-        self.c_text_frame.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.c_text_frame.sizePolicy().hasHeightForWidth())
+        self.c_text_frame.setSizePolicy(sizePolicy3)
         self.c_text_frame.setFrameShape(QFrame.StyledPanel)
         self.c_text_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_26 = QHBoxLayout(self.c_text_frame)
@@ -9546,8 +9793,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_29.setContentsMargins(0, 0, 0, 0)
         self.d_text = QLabel(self.d_text_frame)
         self.d_text.setObjectName(u"d_text")
-        sizePolicy4.setHeightForWidth(self.d_text.sizePolicy().hasHeightForWidth())
-        self.d_text.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.d_text.sizePolicy().hasHeightForWidth())
+        self.d_text.setSizePolicy(sizePolicy3)
         self.d_text.setAlignment(Qt.AlignBottom|Qt.AlignJustify)
         self.d_text.setWordWrap(True)
 
@@ -11675,8 +11922,8 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_120.setContentsMargins(0, 0, 0, 0)
         self.Vm_Task01_Title_frame = QFrame(self.Vm_Task01_frame)
         self.Vm_Task01_Title_frame.setObjectName(u"Vm_Task01_Title_frame")
-        sizePolicy3.setHeightForWidth(self.Vm_Task01_Title_frame.sizePolicy().hasHeightForWidth())
-        self.Vm_Task01_Title_frame.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.Vm_Task01_Title_frame.sizePolicy().hasHeightForWidth())
+        self.Vm_Task01_Title_frame.setSizePolicy(sizePolicy2)
         self.Vm_Task01_Title_frame.setMaximumSize(QSize(16777215, 50))
         font12 = QFont()
         font12.setPointSize(14)
@@ -11935,8 +12182,8 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_250.setContentsMargins(10, 0, 10, 5)
         self.mainbody_footer_text_2 = QLabel(self.mainbody_footer_frame_2)
         self.mainbody_footer_text_2.setObjectName(u"mainbody_footer_text_2")
-        sizePolicy3.setHeightForWidth(self.mainbody_footer_text_2.sizePolicy().hasHeightForWidth())
-        self.mainbody_footer_text_2.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.mainbody_footer_text_2.sizePolicy().hasHeightForWidth())
+        self.mainbody_footer_text_2.setSizePolicy(sizePolicy2)
         self.mainbody_footer_text_2.setMinimumSize(QSize(0, 100))
         self.mainbody_footer_text_2.setScaledContents(False)
         self.mainbody_footer_text_2.setWordWrap(True)
@@ -12016,15 +12263,6 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.line_6 = QFrame(self.license_frame)
-        self.line_6.setObjectName(u"line_6")
-        sizePolicy8.setHeightForWidth(self.line_6.sizePolicy().hasHeightForWidth())
-        self.line_6.setSizePolicy(sizePolicy8)
-        self.line_6.setFrameShape(QFrame.HLine)
-        self.line_6.setFrameShadow(QFrame.Sunken)
-
-        self.verticalLayout_3.addWidget(self.line_6)
-
         self.license_label = QLabel(self.license_frame)
         self.license_label.setObjectName(u"license_label")
 
@@ -12035,16 +12273,16 @@ class Ui_MainWindow(QWidget):
 
         self.logo_frame = QFrame(self.footer_widget)
         self.logo_frame.setObjectName(u"logo_frame")
-        self.logo_frame.setMaximumSize(QSize(16777215, 20))
+        self.logo_frame.setMaximumSize(QSize(16777215, 16777215))
         self.horizontalLayout_8 = QHBoxLayout(self.logo_frame)
-        self.horizontalLayout_8.setSpacing(5)
+        self.horizontalLayout_8.setSpacing(10)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.badenlab_logo = QLabel(self.logo_frame)
         self.badenlab_logo.setObjectName(u"badenlab_logo")
-        self.badenlab_logo.setMinimumSize(QSize(0, 0))
-        self.badenlab_logo.setMaximumSize(QSize(100, 20))
-        self.badenlab_logo.setPixmap(QPixmap(u":/resources/resources/Baden-Logo.png"))
+        self.badenlab_logo.setMinimumSize(QSize(80, 30))
+        self.badenlab_logo.setMaximumSize(QSize(80, 30))
+        self.badenlab_logo.setPixmap(QPixmap(u":/resources/resources/Baden-Logo2.png"))
         self.badenlab_logo.setScaledContents(True)
         self.badenlab_logo.setWordWrap(False)
 
@@ -12052,8 +12290,9 @@ class Ui_MainWindow(QWidget):
 
         self.ON_logo = QLabel(self.logo_frame)
         self.ON_logo.setObjectName(u"ON_logo")
-        sizePolicy3.setHeightForWidth(self.ON_logo.sizePolicy().hasHeightForWidth())
-        self.ON_logo.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.ON_logo.sizePolicy().hasHeightForWidth())
+        self.ON_logo.setSizePolicy(sizePolicy2)
+        self.ON_logo.setMinimumSize(QSize(135, 15))
         self.ON_logo.setMaximumSize(QSize(135, 15))
         self.ON_logo.setPixmap(QPixmap(u":/resources/resources/ON-Logo.png"))
         self.ON_logo.setScaledContents(True)
@@ -12062,7 +12301,8 @@ class Ui_MainWindow(QWidget):
 
         self.sussex_logo = QLabel(self.logo_frame)
         self.sussex_logo.setObjectName(u"sussex_logo")
-        self.sussex_logo.setMaximumSize(QSize(65, 20))
+        self.sussex_logo.setMinimumSize(QSize(95, 30))
+        self.sussex_logo.setMaximumSize(QSize(95, 30))
         self.sussex_logo.setPixmap(QPixmap(u":/resources/resources/SN-Logo.png"))
         self.sussex_logo.setScaledContents(True)
 
@@ -12070,9 +12310,10 @@ class Ui_MainWindow(QWidget):
 
         self.trend_logo = QLabel(self.logo_frame)
         self.trend_logo.setObjectName(u"trend_logo")
-        sizePolicy3.setHeightForWidth(self.trend_logo.sizePolicy().hasHeightForWidth())
-        self.trend_logo.setSizePolicy(sizePolicy3)
-        self.trend_logo.setMaximumSize(QSize(30, 20))
+        sizePolicy2.setHeightForWidth(self.trend_logo.sizePolicy().hasHeightForWidth())
+        self.trend_logo.setSizePolicy(sizePolicy2)
+        self.trend_logo.setMinimumSize(QSize(40, 30))
+        self.trend_logo.setMaximumSize(QSize(40, 30))
         self.trend_logo.setPixmap(QPixmap(u":/resources/resources/TReND-Logo.png"))
         self.trend_logo.setScaledContents(True)
 
@@ -12111,12 +12352,13 @@ class Ui_MainWindow(QWidget):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
+        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
         self.toolBox.setCurrentIndex(7)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(4)
-        self.Spikeling_parameter_stackedwidget.setCurrentIndex(1)
+        self.mainbody_stackedWidget.setCurrentIndex(3)
+        self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
+        self.DataAnalysis_stackedWidget.setCurrentIndex(1)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(2)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
@@ -12143,16 +12385,14 @@ class Ui_MainWindow(QWidget):
         self.HelpMenu_pushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.GitHubMenu_pushButton.setText(QCoreApplication.translate("MainWindow", u"GitHub", None))
         self.centerMenuSubContainer_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Sub-Menus   ", None))
-        self.Spikeling_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Spikeling Neuron Interface", None))
         self.Neuron_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Interface", None))
+        self.NeuronSimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Simulator", None))
         self.NeuronTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.NeuronDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
-        self.Imaging_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Fluorescence Imaging Simulation", None))
         self.ImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Stimulation", None))
         self.MultipleImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Multiple Imaging", None))
         self.ImagingTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.ImagingDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
-        self.Exercices_SubMenu_label.setText(QCoreApplication.translate("MainWindow", u"Suggested Exercices", None))
         self.Exercice101_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.1 - Adaptation", None))
         self.Exercice102_pushButton.setText(QCoreApplication.translate("MainWindow", u"1.2 - External light stimulation", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"1.3 - Direct Current Stimulation", None))
@@ -12320,6 +12560,9 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Neuron0Vm_pushButton32.setText(QCoreApplication.translate("MainWindow", u"Spikeling Neuron", None))
         self.DataAnalysis_Neuron1Vm_pushButton32.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 1", None))
         self.DataAnalysis_Neuron2Vm_pushButton32.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 2", None))
+        self.DataAnalysis_Neuron0Vm_pushButton110.setText(QCoreApplication.translate("MainWindow", u"Spikeling Neuron", None))
+        self.DataAnalysis_Neuron1Vm_pushButton110.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 1", None))
+        self.DataAnalysis_Neuron2Vm_pushButton110.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 2", None))
         self.DataAnalysis_LoadData_label.setText("")
         self.DataAnalysis_LoadData_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Load Data   ", None))
         self.DataAnalysis_LoadData_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Raw Data", None))
@@ -12337,6 +12580,15 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_Average_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Average traces", None))
         self.DataAnalysis_Average_SaveImage_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Image", None))
         self.DataAnalysis_Average_Save_pushButton.setText(QCoreApplication.translate("MainWindow", u"Export .csv", None))
+        self.DataAnalysis_StepStim_LoadData_label.setText("")
+        self.DataAnalysis_StepStim_LoadData_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Load Data   ", None))
+        self.DataAnalysis_StepStim_LoadStim_label.setText("")
+        self.DataAnalysis_LoadStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Load Stimulus   ", None))
+        self.DataAnalysis_StepStim_LoadData_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Raw Data", None))
+        self.DataAnalysis_StepStim_SaveImage_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Image", None))
+        self.DataAnalysis_Menu_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Stimuli Menu", None))
+        self.DataAnalysis_SquareStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"Square Stimulus", None))
+        self.DataAnalysis_StepStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"Custom Stimulus", None))
         self.Imaging_pushButton.setText(QCoreApplication.translate("MainWindow", u"Connect Imaging screen to Spikeling screen", None))
         self.Imaging_Fluorescence_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Fluorescence", None))
 #if QT_CONFIG(whatsthis)

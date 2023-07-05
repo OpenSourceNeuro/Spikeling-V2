@@ -9,7 +9,7 @@ import Data_recording
 import Settings
 import time
 
-downsampling = 5
+downsampling = 6
 sampleinterval = 0.1
 timewindow = 250
 timewindowdisplay = 125
@@ -40,6 +40,7 @@ def SpikelingPlot(self):
 
         if self.ui.StimCus_toggleButton.isChecked():
             self.StimCusValue = self.df_yStim[self.StimCounter]
+            self.Trigger = self.df_yTrigger[self.StimCounter]
             if self.serial_port.is_open:
                 self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))
                 self.StimCounter += 1
@@ -48,6 +49,7 @@ def SpikelingPlot(self):
         else:
             if self.serial_port.is_open:
                 self.serial_port.write(str('SC0' + '\n').encode('utf-8'))
+            self.Trigger = 0
 
 
     # Read Serial and return data array (7)
@@ -67,6 +69,7 @@ def SpikelingPlot(self):
         self.databuffer4.append(self.Data[4])
         self.databuffer5.append(self.Data[5])
         self.databuffer6.append(self.Data[6])
+        self.databuffer7.append(self.Trigger)
 
 
     # If checked, plot latest buffer data points
@@ -118,7 +121,7 @@ def SpikelingPlot(self):
 
 def SavePlotData(self):                              # Save latest buffer data and export them as csv
     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False and self.recordflag == True:
-        self.Dataset = np.empty([7, len(self.Dataset0)], dtype=float)
+        self.Dataset = np.empty([8, len(self.Dataset0)], dtype=float)
         for i in range(len(self.Dataset0)):
             self.Dataset[0][i] = self.Dataset0[i]
             self.Dataset[1][i] = self.Dataset1[i]
@@ -127,10 +130,12 @@ def SavePlotData(self):                              # Save latest buffer data a
             self.Dataset[4][i] = self.Dataset4[i]
             self.Dataset[5][i] = self.Dataset5[i]
             self.Dataset[6][i] = self.Dataset6[i]
+            self.Dataset[7][i] = self.Dataset7[i]
 
         dict = {'Spikeling Vm': self.Dataset[0], 'Stimulus': self.Dataset[1], 'Total Current Input': self.Dataset[2],
                 'Synapse 1 Vm': self.Dataset[3], 'Synapse 1 Input': self.Dataset[4],
-                'Synapse 2 Vm': self.Dataset[5], 'Synapse 2 Input': self.Dataset[6]}
+                'Synapse 2 Vm': self.Dataset[5], 'Synapse 2 Input': self.Dataset[6],
+                'Trigger': self.Dataset[7]}
         df = pd.DataFrame(dict)
         self.RecordingFileName = str(self.ui.Spikeling_SelectedFolderLabel.text())
         df.to_csv(self.RecordingFileName + '.csv', index=False)
@@ -146,6 +151,8 @@ def SavePlotData(self):                              # Save latest buffer data a
         self.Dataset4.append(self.databuffer4[-1])
         self.Dataset5.append(self.databuffer5[-1])
         self.Dataset6.append(self.databuffer6[-1])
+        self.Dataset7.append(self.databuffer7[-1])
+        print(self.databuffer7[-1])
 
 
 
@@ -155,6 +162,7 @@ def SavePlotData(self):                              # Save latest buffer data a
 def SetInitParameters(self):
     self.i_downsampling = 0
     self.recordflag = False
+    self.Trigger = 0
     self.ui.Spikeling_Oscilloscope_widget.clear()
     if self.ui.Spikeling_ConnectButton.isChecked() and self.serial_port.is_open:
         self.ui.Spikeling_ConnectButton.setText("Connected")
@@ -190,6 +198,7 @@ def SetPlotCurve(self):
     self.databuffer4 = collections.deque([0.0] * self._bufsize, self._bufsize)
     self.databuffer5 = collections.deque([0.0] * self._bufsize, self._bufsize)
     self.databuffer6 = collections.deque([0.0] * self._bufsize, self._bufsize)
+    self.databuffer7 = collections.deque([0.0] * self._bufsize, self._bufsize)
 
 
     self.x = np.linspace(-timewindow, 0.0, self._bufsize)            # Create arrays of self._bufsize length
@@ -208,6 +217,7 @@ def SetPlotCurve(self):
     self.Dataset4 = Data_recording.DynamicArray()
     self.Dataset5 = Data_recording.DynamicArray()
     self.Dataset6 = Data_recording.DynamicArray()
+    self.Dataset7 = Data_recording.DynamicArray()
 
 
 def SetPlot(self):

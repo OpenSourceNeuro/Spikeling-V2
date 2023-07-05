@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
+    <width>1281</width>
     <height>759</height>
    </rect>
   </property>
@@ -266,20 +266,20 @@ centerMenuSubContainer_menu_stackedwidget{
 
 
 
-#DataAnalysis_groupBox{
+#DataAnalysis_stackedWidget{
 	background-color: rgb(7,54,66);
     border: 2px solid rgb(147,161,161);
 }
-#DataAnalysis_groupBox QPushButton{
+#DataAnalysis_stackedWidget QPushButton{
 	background-color: rgb(0, 43, 54);
 	border: 2px solid rgb(147,161,161);
 	border-radius: 10px;
 	padding: 2px;
 }
-#DataAnalysis_groupBox QLineEdit{
+#DataAnalysis_stackedWidget QLineEdit{
     border: 2px solid rgb(147,161,161);
 }
-#DataAnalysis_groupBox Line{
+#DataAnalysis_stackedWidget Line{
     border: 1px solid rgb(147,161,161);
 }
 
@@ -288,6 +288,26 @@ centerMenuSubContainer_menu_stackedwidget{
 	border: 2px solid rgb(147,161,161);
 	border-radius: 10px;
 	padding: 2px;
+}
+
+#DataAnalysis_RightMenu_Container{
+	background-color: rgb(0, 30, 38);
+}
+#DataAnalysis_RightMenu_Container QPushButton{
+	text-align: left;
+	padding: 20px 0px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius: 20px;
+	background-color: rgb(0, 43, 54);
+}
+#DataAnalysis_RightMenu_Container QPushButton:hover{
+	background-color: rgb(0, 30, 38);
+}
+#DataAnalysis_RightMenu_Frame QPushButton{
+	background-color: rgb(0, 43, 54);
+}
+#DataAnalysis_RightMenu_Frame QPushButton:hover{
+	background-color: rgb(0, 30, 38);
 }
 
 
@@ -474,7 +494,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                  <normaloff>:/resources/resources/Artboard 1.png</normaloff>:/resources/resources/Artboard 1.png</iconset>
                </property>
                <property name="iconSize">
@@ -491,7 +511,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                  <normaloff>:/resources/resources/Expand.png</normaloff>:/resources/resources/Expand.png</iconset>
                </property>
                <property name="iconSize">
@@ -508,7 +528,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="resources.qrc">
+                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                  <normaloff>:/resources/resources/Exit.png</normaloff>:/resources/resources/Exit.png</iconset>
                </property>
                <property name="iconSize">
@@ -662,7 +682,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Hide Menus</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/MenuLeft.png</normaloff>:/resources/resources/MenuLeft.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -727,7 +747,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Spikeling</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -749,7 +769,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Imaging</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -771,7 +791,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Neuron Generator</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/resources/resources/StimGen.png</normaloff>:/resources/resources/StimGen.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -793,7 +813,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Stimulus Generator</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -815,7 +835,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Exercises</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/resources/resources/Exercices.png</normaloff>:/resources/resources/Exercices.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -880,7 +900,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Settings</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset>
                     <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -902,7 +922,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>About</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/About.png</normaloff>:/resources/resources/About.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -924,7 +944,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Help</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/Help.png</normaloff>:/resources/resources/Help.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -946,7 +966,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>GitHub</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/GitHub.png</normaloff>:/resources/resources/GitHub.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1044,7 +1064,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Hide Sub-Menus   </string>
                   </property>
                   <property name="icon">
-                   <iconset resource="resources.qrc">
+                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                     <normaloff>:/resources/resources/DropMenuLeft.png</normaloff>:/resources/resources/DropMenuLeft.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1070,7 +1090,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="Spikeling_SubMenu_page">
                 <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1089,63 +1109,6 @@ centerMenuSubContainer_menu_stackedwidget{
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                  <widget class="QFrame" name="Spikeling_SubMenu_label_frame">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_18">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>5</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="Spikeling_SubMenu_label">
-                      <property name="font">
-                       <font>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Spikeling Neuron Interface</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="QFrame" name="Spikeling_SubMenu_button_frame">
                    <property name="frameShape">
@@ -1194,7 +1157,42 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Neuron Interface</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
+                        <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_8">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="NeuronSimulation_pushButton">
+                      <property name="font">
+                       <font>
+                        <pointsize>12</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Neuron Simulator</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
                         <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1229,7 +1227,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Tutorial</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1264,7 +1262,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Data Analysis</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/DataAnalysis.png</normaloff>:/resources/resources/DataAnalysis.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1310,54 +1308,6 @@ centerMenuSubContainer_menu_stackedwidget{
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-                  <widget class="QFrame" name="Imaging_SubMenu_label_frame">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_20">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="Imaging_SubMenu_label">
-                      <property name="maximumSize">
-                       <size>
-                        <width>300</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Fluorescence Imaging Simulation</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="QFrame" name="Imaging_SubMenu_button_frame">
                    <property name="frameShape">
@@ -1391,7 +1341,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Imaging Stimulation</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1426,7 +1376,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Multiple Imaging</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1461,7 +1411,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Tutorial</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1496,7 +1446,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Data Analysis</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="resources.qrc">
+                       <iconset>
                         <normaloff>:/resources/resources/DataAnalysis.png</normaloff>:/resources/resources/DataAnalysis.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1581,33 +1531,6 @@ centerMenuSubContainer_menu_stackedwidget{
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="Exercices_SubMenu_label_frame">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_60">
-                    <item>
-                     <widget class="QLabel" name="Exercices_SubMenu_label">
-                      <property name="font">
-                       <font>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Suggested Exercices</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QFrame" name="Exercices_SubMenu_button_frame">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1642,7 +1565,7 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>164</width>
+                         <width>216</width>
                          <height>118</height>
                         </rect>
                        </property>
@@ -1703,7 +1626,7 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>83</width>
+                         <width>216</width>
                          <height>77</height>
                         </rect>
                        </property>
@@ -1747,8 +1670,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1760,8 +1683,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1773,8 +1696,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1786,8 +1709,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1799,8 +1722,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1812,8 +1735,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>100</width>
-                         <height>30</height>
+                         <width>216</width>
+                         <height>69</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -2049,7 +1972,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>9</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -2110,7 +2033,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="resources.qrc">:/resources/resources/SpikyLogo.png</pixmap>
+                       <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/SpikyLogo.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2571,7 +2494,7 @@ border-radius:10px;</string>
                                       <string>LED On   </string>
                                      </property>
                                      <property name="icon">
-                                      <iconset resource="resources.qrc">
+                                      <iconset>
                                        <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                                      </property>
                                      <property name="iconSize">
@@ -2638,7 +2561,7 @@ border-radius:10px;</string>
                                       <string>Buzzer On   </string>
                                      </property>
                                      <property name="icon">
-                                      <iconset resource="resources.qrc">
+                                      <iconset>
                                        <normaloff>:/resources/resources/SoundON.png</normaloff>:/resources/resources/SoundON.png</iconset>
                                      </property>
                                      <property name="iconSize">
@@ -3495,7 +3418,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources.qrc">
+                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -3524,7 +3447,7 @@ background-color: rgb(220, 50, 47);</string>
                        </size>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="StimulusParameter_page">
                        <property name="minimumSize">
@@ -3925,7 +3848,7 @@ background-color: rgb(220, 50, 47);</string>
                                  <string/>
                                 </property>
                                 <property name="pixmap">
-                                 <pixmap resource="resources.qrc">:/resources/resources/StimFrequency.png</pixmap>
+                                 <pixmap>:/resources/resources/StimFrequency.png</pixmap>
                                 </property>
                                 <property name="scaledContents">
                                  <bool>true</bool>
@@ -4263,7 +4186,7 @@ background-color: rgb(220, 50, 47);</string>
                                  <string/>
                                 </property>
                                 <property name="pixmap">
-                                 <pixmap resource="resources.qrc">:/resources/resources/StimStrenght.png</pixmap>
+                                 <pixmap>:/resources/resources/StimStrenght.png</pixmap>
                                 </property>
                                 <property name="scaledContents">
                                  <bool>true</bool>
@@ -7469,7 +7392,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7518,7 +7441,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Stimulus Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                               <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7540,7 +7463,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Neuron Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7619,7 +7542,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -9825,13 +9748,232 @@ background-color: rgb(220, 50, 47);</string>
                            </item>
                           </layout>
                          </widget>
+                         <widget class="QWidget" name="page_103_11_0">
+                          <layout class="QVBoxLayout" name="verticalLayout_20">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="PlotWidget" name="DataAnalysis_Oscilloscope_widget11_0_0" native="true">
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(0, 30, 38);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="line_6">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="PlotWidget" name="DataAnalysis_Oscilloscope_widget11_0_1" native="true">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>75</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(0, 30, 38);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="line_69">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="PlotWidget" name="DataAnalysis_Oscilloscope_widget11_0_2" native="true">
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(0, 30, 38);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="line_70">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="PlotWidget" name="DataAnalysis_Oscilloscope_widget11_0_3" native="true">
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(0, 30, 38);</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="Line" name="line_71">
+                             <property name="orientation">
+                              <enum>Qt::Horizontal</enum>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="DataAnalysis_Neurons_pushButton110_frame">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>25</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_417">
+                              <property name="spacing">
+                               <number>5</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>5</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>5</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_Neuron0Vm_pushButton110">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>25</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>25</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">color: rgb(220, 50, 47);</string>
+                                </property>
+                                <property name="text">
+                                 <string>Spikeling Neuron</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_Neuron1Vm_pushButton110">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>25</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>25</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">color: rgb(203, 75, 22);</string>
+                                </property>
+                                <property name="text">
+                                 <string>Aux Neuron 1</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_Neuron2Vm_pushButton110">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>25</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>25</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>16777215</width>
+                                  <height>25</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <pointsize>10</pointsize>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">color: rgb(181, 137, 0);</string>
+                                </property>
+                                <property name="text">
+                                 <string>Aux Neuron 2</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
                         </widget>
                        </item>
                       </layout>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QGroupBox" name="DataAnalysis_groupBox">
+                     <widget class="QStackedWidget" name="DataAnalysis_stackedWidget">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -9853,9 +9995,578 @@ background-color: rgb(220, 50, 47);</string>
                       <property name="styleSheet">
                        <string notr="true"/>
                       </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_34">
+                      <property name="currentIndex">
+                       <number>1</number>
+                      </property>
+                      <widget class="QWidget" name="DataAnalysis_SquareStim">
+                       <layout class="QVBoxLayout" name="verticalLayout_34">
+                        <property name="spacing">
+                         <number>5</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>1</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="DataAnalysis_LoadData_frame">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_36">
+                           <property name="leftMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>15</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="DataAnalysis_LoadData_subframe">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_62">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="DataAnalysis_LoadData_label">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string/>
+                                </property>
+                                <property name="wordWrap">
+                                 <bool>true</bool>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_LoadData_pushButton">
+                                <property name="text">
+                                 <string>   Load Data   </string>
+                                </property>
+                                <property name="iconSize">
+                                 <size>
+                                  <width>14</width>
+                                  <height>16</height>
+                                 </size>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_LoadData_Display_pushButton">
+                             <property name="text">
+                              <string>Display Raw Data</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_SaveImage_pushButton">
+                             <property name="text">
+                              <string>Save Image</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="DataAnalysis_LoadData_line">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="DataAnalysis_Spike_frame">
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_41">
+                           <property name="leftMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>15</number>
+                           </property>
+                           <item alignment="Qt::AlignHCenter">
+                            <widget class="QLabel" name="DataAnalysis_Spike_label">
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Find Spikes along the Vm trace(s)</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="DataAnalysis_Spike_subframe">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_69">
+                              <property name="spacing">
+                               <number>5</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="DataAnalysis_Spike_threshold_label">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string>Spike Threshold: </string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignRight">
+                               <widget class="QLineEdit" name="DataAnalysis_Spike_lineEdit">
+                                <property name="enabled">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>50</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>50</width>
+                                  <height>16777215</height>
+                                 </size>
+                                </property>
+                                <property name="text">
+                                 <string>-20</string>
+                                </property>
+                                <property name="alignment">
+                                 <set>Qt::AlignCenter</set>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignRight">
+                               <widget class="QLabel" name="DataAnalysis_Spike_mV_label">
+                                <property name="text">
+                                 <string>mV</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="DataAnalysis_Spike_result_label">
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true"/>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Spike_Display_pushButton">
+                             <property name="enabled">
+                              <bool>false</bool>
+                             </property>
+                             <property name="text">
+                              <string>Display Spike events</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Spike_SaveImage_pushButton">
+                             <property name="text">
+                              <string>Save Image</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Spike_Export_pushButton">
+                             <property name="text">
+                              <string>Export .csv</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="Line" name="DataAnalysis_Spike_line">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="DataAnalysis_Average_frame">
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_40">
+                           <property name="spacing">
+                            <number>6</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>9</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>5</number>
+                           </property>
+                           <item alignment="Qt::AlignHCenter">
+                            <widget class="QLabel" name="DataAnalysis_Average_result_label">
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Average traces based on stimulus cycles</string>
+                             </property>
+                             <property name="scaledContents">
+                              <bool>false</bool>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="DataAnalysis_Average_label">
+                             <property name="font">
+                              <font>
+                               <pointsize>10</pointsize>
+                               <bold>true</bold>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true"/>
+                             </property>
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Average_Display_pushButton">
+                             <property name="enabled">
+                              <bool>false</bool>
+                             </property>
+                             <property name="text">
+                              <string>Display Average traces</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Average_SaveImage_pushButton">
+                             <property name="text">
+                              <string>Save Image</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_Average_Save_pushButton">
+                             <property name="enabled">
+                              <bool>false</bool>
+                             </property>
+                             <property name="text">
+                              <string>Export .csv</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="DataAnalysis_StepStim">
+                       <layout class="QVBoxLayout" name="verticalLayout_18">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QFrame" name="DataAnalysis_StepStim_LoadData_frame">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_60">
+                           <property name="leftMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>15</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="DataAnalysis_StepStim_LoadData_subframe">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_416">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="DataAnalysis_StepStim_LoadData_label">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string/>
+                                </property>
+                                <property name="wordWrap">
+                                 <bool>true</bool>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_StepStim_LoadData_pushButton">
+                                <property name="text">
+                                 <string>   Load Data   </string>
+                                </property>
+                                <property name="iconSize">
+                                 <size>
+                                  <width>14</width>
+                                  <height>16</height>
+                                 </size>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="DataAnalysis_StepStim_LoadStim_subframe">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_418">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="DataAnalysis_StepStim_LoadStim_label">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string/>
+                                </property>
+                                <property name="wordWrap">
+                                 <bool>true</bool>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="DataAnalysis_LoadStim_pushButton">
+                                <property name="text">
+                                 <string>   Load Stimulus   </string>
+                                </property>
+                                <property name="iconSize">
+                                 <size>
+                                  <width>14</width>
+                                  <height>16</height>
+                                 </size>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_StepStim_LoadData_Display_pushButton">
+                             <property name="text">
+                              <string>Display Raw Data</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QPushButton" name="DataAnalysis_StepStim_SaveImage_pushButton">
+                             <property name="text">
+                              <string>Save Image</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_7">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="DataAnalysis_RightMenu_Container">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>40</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_415">
                        <property name="spacing">
-                        <number>5</number>
+                        <number>0</number>
                        </property>
                        <property name="leftMargin">
                         <number>0</number>
@@ -9867,35 +10578,41 @@ background-color: rgb(220, 50, 47);</string>
                         <number>0</number>
                        </property>
                        <property name="bottomMargin">
-                        <number>1</number>
+                        <number>0</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="DataAnalysis_LoadData_frame">
+                        <widget class="QFrame" name="DataAnalysis_RightMenu_Frame">
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
                          </property>
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_36">
+                         <layout class="QVBoxLayout" name="verticalLayout_101">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
                           <property name="leftMargin">
-                           <number>15</number>
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
                           <property name="rightMargin">
-                           <number>15</number>
+                           <number>5</number>
                           </property>
-                          <item>
-                           <widget class="QFrame" name="DataAnalysis_LoadData_subframe">
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item alignment="Qt::AlignTop">
+                           <widget class="QFrame" name="DataAnalysis_Menu_Frame">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
                             </property>
                             <property name="frameShadow">
                              <enum>QFrame::Raised</enum>
                             </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_62">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_103">
                              <property name="leftMargin">
                               <number>0</number>
                              </property>
@@ -9909,30 +10626,18 @@ background-color: rgb(220, 50, 47);</string>
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLabel" name="DataAnalysis_LoadData_label">
-                               <property name="sizePolicy">
-                                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                 <horstretch>0</horstretch>
-                                 <verstretch>0</verstretch>
-                                </sizepolicy>
-                               </property>
+                              <widget class="QPushButton" name="DataAnalysis_Menu_pushButton">
                                <property name="text">
-                                <string/>
+                                <string>Hide Stimuli Menu</string>
                                </property>
-                               <property name="wordWrap">
-                                <bool>true</bool>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QPushButton" name="DataAnalysis_LoadData_pushButton">
-                               <property name="text">
-                                <string>   Load Data   </string>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                                </property>
                                <property name="iconSize">
                                 <size>
-                                 <width>14</width>
-                                 <height>16</height>
+                                 <width>30</width>
+                                 <height>30</height>
                                 </size>
                                </property>
                               </widget>
@@ -9941,71 +10646,16 @@ background-color: rgb(220, 50, 47);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QPushButton" name="DataAnalysis_LoadData_Display_pushButton">
-                            <property name="text">
-                             <string>Display Raw Data</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_SaveImage_pushButton">
-                            <property name="text">
-                             <string>Save Image</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="Line" name="DataAnalysis_LoadData_line">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="DataAnalysis_Spike_frame">
-                         <property name="styleSheet">
-                          <string notr="true"/>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_41">
-                          <property name="leftMargin">
-                           <number>15</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>15</number>
-                          </property>
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="DataAnalysis_Spike_label">
-                            <property name="font">
-                             <font>
-                              <pointsize>10</pointsize>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Find Spikes along the Vm trace(s)</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="DataAnalysis_Spike_subframe">
+                           <widget class="QFrame" name="DataAnalysis_StimuliMenu_Frame">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
                             </property>
                             <property name="frameShadow">
                              <enum>QFrame::Raised</enum>
                             </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_69">
+                            <layout class="QVBoxLayout" name="verticalLayout_102">
                              <property name="spacing">
-                              <number>5</number>
+                              <number>0</number>
                              </property>
                              <property name="leftMargin">
                               <number>0</number>
@@ -10020,53 +10670,49 @@ background-color: rgb(220, 50, 47);</string>
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLabel" name="DataAnalysis_Spike_threshold_label">
-                               <property name="sizePolicy">
-                                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                 <horstretch>0</horstretch>
-                                 <verstretch>0</verstretch>
-                                </sizepolicy>
+                              <widget class="QPushButton" name="DataAnalysis_SquareStim_pushButton">
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                </font>
                                </property>
                                <property name="text">
-                                <string>Spike Threshold: </string>
+                                <string>Square Stimulus</string>
+                               </property>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>:/resources/resources/SqaureStim.png</normaloff>:/resources/resources/SqaureStim.png</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>30</width>
+                                 <height>30</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
-                             <item alignment="Qt::AlignRight">
-                              <widget class="QLineEdit" name="DataAnalysis_Spike_lineEdit">
-                               <property name="enabled">
-                                <bool>false</bool>
+                             <item>
+                              <widget class="QPushButton" name="DataAnalysis_StepStim_pushButton">
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                </font>
                                </property>
-                               <property name="sizePolicy">
-                                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                                 <horstretch>0</horstretch>
-                                 <verstretch>0</verstretch>
-                                </sizepolicy>
-                               </property>
-                               <property name="minimumSize">
-                                <size>
-                                 <width>50</width>
-                                 <height>0</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>50</width>
-                                 <height>16777215</height>
-                                </size>
+                               <property name="layoutDirection">
+                                <enum>Qt::LeftToRight</enum>
                                </property>
                                <property name="text">
-                                <string>-20</string>
+                                <string>Custom Stimulus</string>
                                </property>
-                               <property name="alignment">
-                                <set>Qt::AlignCenter</set>
+                               <property name="icon">
+                                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                                 <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
                                </property>
-                              </widget>
-                             </item>
-                             <item alignment="Qt::AlignRight">
-                              <widget class="QLabel" name="DataAnalysis_Spike_mV_label">
-                               <property name="text">
-                                <string>mV</string>
+                               <property name="iconSize">
+                                <size>
+                                 <width>30</width>
+                                 <height>30</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -10074,147 +10720,12 @@ background-color: rgb(220, 50, 47);</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="DataAnalysis_Spike_result_label">
-                            <property name="font">
-                             <font>
-                              <pointsize>10</pointsize>
-                              <bold>true</bold>
-                             </font>
+                           <widget class="QFrame" name="frame_5">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
                             </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string/>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Spike_Display_pushButton">
-                            <property name="enabled">
-                             <bool>false</bool>
-                            </property>
-                            <property name="text">
-                             <string>Display Spike events</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Spike_SaveImage_pushButton">
-                            <property name="text">
-                             <string>Save Image</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Spike_Export_pushButton">
-                            <property name="text">
-                             <string>Export .csv</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="Line" name="DataAnalysis_Spike_line">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="DataAnalysis_Average_frame">
-                         <property name="styleSheet">
-                          <string notr="true"/>
-                         </property>
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_40">
-                          <property name="spacing">
-                           <number>6</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>15</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>9</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>15</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>5</number>
-                          </property>
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="DataAnalysis_Average_result_label">
-                            <property name="font">
-                             <font>
-                              <pointsize>10</pointsize>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Average traces based on stimulus cycles</string>
-                            </property>
-                            <property name="scaledContents">
-                             <bool>false</bool>
-                            </property>
-                            <property name="wordWrap">
-                             <bool>true</bool>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="DataAnalysis_Average_label">
-                            <property name="font">
-                             <font>
-                              <pointsize>10</pointsize>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string/>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Average_Display_pushButton">
-                            <property name="enabled">
-                             <bool>false</bool>
-                            </property>
-                            <property name="text">
-                             <string>Display Average traces</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Average_SaveImage_pushButton">
-                            <property name="text">
-                             <string>Save Image</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="DataAnalysis_Average_Save_pushButton">
-                            <property name="enabled">
-                             <bool>false</bool>
-                            </property>
-                            <property name="text">
-                             <string>Export .csv</string>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
                             </property>
                            </widget>
                           </item>
@@ -10637,7 +11148,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources.qrc">
+                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -14876,7 +15387,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -14928,7 +15439,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Imaging Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -14950,7 +15461,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Calcium Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/Calcium.png</normaloff>:/resources/resources/Calcium.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -14972,7 +15483,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Fluorescence Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -15555,7 +16066,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="resources.qrc">
+                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -19794,7 +20305,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -19846,7 +20357,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Imaging Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -19868,7 +20379,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Calcium Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/Calcium.png</normaloff>:/resources/resources/Calcium.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -19890,7 +20401,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Fluorescence Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="resources.qrc">
+                             <iconset>
                               <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -19969,7 +20480,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -20028,7 +20539,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -20723,7 +21234,7 @@ p, li { white-space: pre-wrap; }
                                 <string/>
                                </property>
                                <property name="pixmap">
-                                <pixmap resource="resources.qrc">:/resources/resources/izhik.png</pixmap>
+                                <pixmap>:/resources/resources/izhik.png</pixmap>
                                </property>
                                <property name="scaledContents">
                                 <bool>true</bool>
@@ -27401,7 +27912,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -27431,7 +27942,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -27533,7 +28044,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -27563,7 +28074,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -27663,19 +28174,6 @@ border : none;</string>
               <number>0</number>
              </property>
              <item>
-              <widget class="Line" name="line_6">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="license_label">
                <property name="text">
                 <string>This project is licensed under the GNU General Public License v3.0</string>
@@ -27690,12 +28188,12 @@ border : none;</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>20</height>
+              <height>16777215</height>
              </size>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <property name="spacing">
-              <number>5</number>
+              <number>10</number>
              </property>
              <property name="leftMargin">
               <number>0</number>
@@ -27713,21 +28211,21 @@ border : none;</string>
               <widget class="QLabel" name="badenlab_logo">
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
-                 <height>0</height>
+                 <width>80</width>
+                 <height>30</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>20</height>
+                 <width>80</width>
+                 <height>30</height>
                 </size>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/Baden-Logo.png</pixmap>
+                <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/Baden-Logo2.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -27745,6 +28243,12 @@ border : none;</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>135</width>
+                 <height>15</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>135</width>
@@ -27755,7 +28259,7 @@ border : none;</string>
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/ON-Logo.png</pixmap>
+                <pixmap>:/resources/resources/ON-Logo.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -27764,17 +28268,23 @@ border : none;</string>
              </item>
              <item>
               <widget class="QLabel" name="sussex_logo">
+               <property name="minimumSize">
+                <size>
+                 <width>95</width>
+                 <height>30</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
-                 <width>65</width>
-                 <height>20</height>
+                 <width>95</width>
+                 <height>30</height>
                 </size>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/SN-Logo.png</pixmap>
+                <pixmap>:/resources/resources/SN-Logo.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -27789,17 +28299,23 @@ border : none;</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>30</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
-                 <width>30</width>
-                 <height>20</height>
+                 <width>40</width>
+                 <height>30</height>
                 </size>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/TReND-Logo.png</pixmap>
+                <pixmap>:/resources/resources/TReND-Logo.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -27851,7 +28367,7 @@ border : none;</string>
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/SizeGrip.png</pixmap>
+                <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/SizeGrip.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -27880,7 +28396,10 @@ border : none;</string>
  </customwidgets>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../../../../.designer/backup/resources.qrc"/>
+  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
+  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
+  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
+  <include location="../../../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
