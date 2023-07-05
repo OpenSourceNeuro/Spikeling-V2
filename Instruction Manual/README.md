@@ -42,7 +42,8 @@ On the home page, menus can be found on the left tab
 In the Spikeling tab, users need to select <strong> Neuron Interface </strong> in order to display the main oscilloscope screen on which all traces will be displayed
 
 <br></br>
-<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="540" height="296">
+
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="1080" height="593">
 
 <p style='text-align: justify;'>
 To connect the Spikeling device with the GUI, <strong>select a COM port</strong>. If several are available, the correct COM port should make the device's LEDs light up in sequence. Then click <strong> Connected</strong>
