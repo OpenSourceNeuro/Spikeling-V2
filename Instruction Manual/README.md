@@ -65,7 +65,7 @@ On the right hand side of the screen is the parameter tab:
 
     - <ins>Injected Current:</ins>
 
-    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neuron_Parameters.png" width="204" height="676">
+      <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neuron_Parameters.png" width="204" height="676">
 
       <p style='text-align: justify;'>
       This parameter correspond to the amount of current (0 by default) injected into the neuron. It stimulates how an electrophysiology rig would perform a patch clamp experiment by holding the neuron current. Across the spikeling project, current are technically arbitrary units but can be explained to students as corresponding to mA.
