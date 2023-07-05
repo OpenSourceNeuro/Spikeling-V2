@@ -109,6 +109,8 @@ On the right hand side of the screen is the parameter tab:
 
   - <ins>Stimulus Frequency:</ins>
 
+    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Stimulus_Parameters.png" width="205" height="677">
+
    <p style='text-align: justify;'>
    As above, once a parameter is enabled, it takes over the value encoded by the know on the board.
    Here, this variable modulates the square wave stimulus frequency, from 10 to 1000Hz (related to the "Spikeling time", obviously slowed down here on the oscilloscope)
