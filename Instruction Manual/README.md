@@ -34,6 +34,6 @@ On the home page, menus can be found on the left tab
 </p>
 
 <h4 align="left">Spikeling Menu</h4></p>
-<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png">
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png" width="176" height="54">
 
 </p>
