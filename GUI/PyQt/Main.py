@@ -429,11 +429,13 @@ class MainWindow(QMainWindow):
         self.ui.GitHubMenu_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
 
 
-        # Spikeling 101 parameters navigation button
+        # Navigation buttons
         self.icon_SpikelingDropMenuRight = QIcon()
-        self.icon_SpikelingDropMenuRight.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.icon_SpikelingDropMenuRight.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Normal,QIcon.Off)
         self.icon_SpikelingMenuRight = QIcon()
         self.icon_SpikelingMenuRight.addFile(u":/resources/resources/MenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
+
+        # Spikeling 101 parameters navigation button
         self.ui.Spikeling_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
         self.ui.Spikeling_rightMenuContainer.setMinimumSize(QSize(spikerightMenu_max, 16777215))
         self.ui.Spikeling_rightMenuSubContainer_pushButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, self.ui.Spikeling_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
@@ -441,6 +443,16 @@ class MainWindow(QMainWindow):
         self.ui.Spikeling_StimulusParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Spikeling_NeuronParameter_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Spikeling_parameter_exit_pushButton.clicked.connect(lambda: UIFunctions.collapseMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+
+
+        # Spikeling 103 Data Analysis navigation buttons
+        self.ui.DataAnalysis_stackedWidget.setMaximumSize(QSize(0, 16777215))
+        self.ui.DataAnalysis_RightMenu_Container.setMinimumSize(QSize(40, 16777215))
+        self.ui.DataAnalysis_Menu_pushButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, self.ui.DataAnalysis_RightMenu_Container, spikerightMenu_min,spikerightMenu_max, animation_speed,
+                                                                                            self.ui.DataAnalysis_Menu_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+        self.ui.DataAnalysis_SquareStim_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.DataAnalysis_stackedWidget, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.DataAnalysis_StepStim_pushButton.clicked.connect(lambda: UIFunctions.expandMenu(self, self.ui.DataAnalysis_stackedWidget, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+
 
         # Imaging 201 parameters navigation button
         self.ui.Imaging_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
@@ -557,6 +569,9 @@ class MainWindow(QMainWindow):
     # Spikeling Data Analysis - page 103
         # Display page103 when data analysis button is clicked
         self.ui.NeuronDataAnalysis_pushButton.clicked.connect(lambda: Page103.Spikeling103.ShowPage(self))
+
+        # Square Stim Analysis
+        self.ui.DataAnalysis_SquareStim_pushButton.clicked.connect(lambda: self.ui.DataAnalysis_stackedWidget.setCurrentWidget(self.ui.DataAnalysis_SquareStim))
         # Raw Data Analysis part
         self.ui.DataAnalysis_LoadData_pushButton.clicked.connect(lambda: Page103.Spikeling103.LoadData(self.ui))
         self.ui.DataAnalysis_LoadData_Display_pushButton.clicked.connect(lambda: Page103.Spikeling103.DisplayRawData(self))
@@ -600,6 +615,12 @@ class MainWindow(QMainWindow):
         self.ui.DataAnalysis_Neuron2Vm_pushButton31.clicked.connect(lambda: self.ui.DataAnalysis_Display_StackedWidget.setCurrentWidget(self.ui.page_103_3_2))
         self.ui.DataAnalysis_Neuron2Vm_pushButton32.clicked.connect(lambda: self.ui.DataAnalysis_Display_StackedWidget.setCurrentWidget(self.ui.page_103_3_2))
 
+        # Step Stim Analysis
+        self.ui.DataAnalysis_StepStim_pushButton.clicked.connect(lambda: self.ui.DataAnalysis_stackedWidget.setCurrentWidget(self.ui.DataAnalysis_StepStim))
+        # Raw Data Analysis part
+        self.ui.DataAnalysis_StepStim_LoadData_pushButton.clicked.connect(lambda: Page103.Spikeling103.LoadData(self.ui))
+        self.ui.DataAnalysis_StepStim_LoadData_Display_pushButton.clicked.connect(lambda: Page103.Spikeling103.DisplayRawData(self))
+        self.ui.DataAnalysis_StepStim_SaveImage_pushButton.clicked.connect(lambda: Page103.Spikeling103.SaveRawDataImage(self))
 
     ########################################################################
     # Imaging Page - page201

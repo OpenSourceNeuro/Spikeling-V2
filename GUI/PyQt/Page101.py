@@ -155,7 +155,7 @@ class Spikeling101():
     def ActivateCustomStimulus(self):
             if self.ui.StimCus_toggleButton.isChecked():
                 self.StimCounter = 0
-                self.StimCusValue = self.df_yStim [self.StimCounter]
+                self.StimCusValue = self.df_yStim[self.StimCounter]
 
                 if self.serial_port.is_open:
                     self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))

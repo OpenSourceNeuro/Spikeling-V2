@@ -728,3 +728,42 @@ class Spikeling103():
             exporter321.export(FolderName + '/AuxNeuron2 spike rasterplot.png')
             exporter322.export(FolderName + '/AuxNeuron2 Vm Average.png')
             exporter323.export(FolderName + '/AuxNeuron2 Synapse Current Average.png')
+
+
+class Spikeling103_StepStim():
+
+    def LoadData(self):
+        FileName = QFileDialog.getOpenFileName(self,
+                                               caption='Select recording file to load',
+                                               dir=".\Recordings",
+                                               filter='csv files (*.csv)'
+                                               )
+        self.DataAnalysis_StepStim_LoadData_label.setText(FileName[0])
+        Df = pd.read_csv(FileName[0])
+        self.df_DataAnalysis_Vm = Df["Spikeling Vm"]
+        self.df_DataAnalysis_ITotal = Df["Total Current Input"]
+        self.df_DataAnalysis_Stimulus = Df["Stimulus"]
+        self.df_DataAnalysis_Synapse1Vm = Df["Synapse 1 Vm"]
+        self.df_DataAnalysis_Synapse1Input = Df["Synapse 1 Input"]
+        self.df_DataAnalysis_Synapse2Vm = Df["Synapse 2 Vm"]
+        self.df_DataAnalysis_Synapse2Input = Df["Synapse 2 Input"]
+
+    def LoadStimulus(self):
+        StimulusName = QFileDialog.getOpenFileName(self,
+                                               caption='Select recording file to load',
+                                               dir=".\Stimuli",
+                                               filter='csv files (*.csv)'
+                                               )
+        self.DataAnalysis_StepStim_LoadStim_label.setText(StimulusName[0])
+        Df = pd.read_csv(FileName[0])
+        self.df_Stim= Df["Stim"]
+        self.df_Trigger = Df["Trigger"]
+        self.df_nStep = Df["Number of Steps"]
+        self.df_Increment = Df["Intensity Increment"]
+        self.df_FirstStep = Df["First Step Intensity"]
+        self.df_StepOn = Df["Step Length"]
+        self.df_StepOff = Df["Inter-step Length"]
+        self.df_iStepOff = Df["Inter-step Intensity"]
+        self.df_tInter = Df["Inter-Stimulus Length"]
+        self.df_iInter = Df["Inter-Stimulus Intensity"]
+

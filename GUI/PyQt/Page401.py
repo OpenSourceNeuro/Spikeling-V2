@@ -146,7 +146,17 @@ class StimulusGenerator():
                                                dir="./Stimuli",
                                                filter='csv files (*.csv)')
 
-        self.dict_SineStim = {'Stim': self.nStim, 'Trigger': self.nTrigger}
+        self.dict_SineStim = {'Stim': self.nStim,
+                              'Trigger': self.nTrigger,
+                              'Number of Steps': self.nStep,
+                              'Intensity Increment': self.Increment,
+                              'First Step Intensity': self.FirstStep,
+                              'Step Length': self.StepOn,
+                              'Inter-step Length': self.StepOff,
+                              'Inter-step Intensity': self.iStepOff,
+                              'Inter-Stimulus Length': self.tInter,
+                              'Inter-Stimulus Intensity': self.iInter
+                              }
         self.df_SineStim = pd.DataFrame(self.dict_SineStim)
 
         self.df_SineStim.to_csv(FileName[0], index=False)
