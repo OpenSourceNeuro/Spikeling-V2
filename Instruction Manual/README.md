@@ -328,3 +328,9 @@ The fluorescence trace will then be quite more realistic and new variable are no
   ```math
   \eta_{t} = \sqrt{\varepsilon.S . ([Ca^{2+}]_{t}) + \sigma_{F}} . \varepsilon_{F,t}
   ```
+
+<br></br>
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Difference.png" width="1833" height="667">
+
+<h6 align="center">Fluorescence imaging simulation differences between the linear model and the non-linear saturating model </h6>
