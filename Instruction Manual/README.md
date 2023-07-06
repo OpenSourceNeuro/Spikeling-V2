@@ -252,28 +252,33 @@ On these sections, three parameter tabs can be explore, each considering a speci
   - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
 
 <brt></br>
+
   - <ins>Calcium decay:</ins>
 
     <p style='text-align: justify;'>
     This corresponds to the rate at which a calcium event returns exponentially to its baseline concentration value with a time constant $\tau$ . This can be interpreted at the myriad of calcium extrusion and endogenous buffering mechanism and we sum it up into this single average time constant
+
     $[Ca^{2+}]_{t-1}$ - $\tau$ . $[Ca^{2+}]_{t-1}$
 
   - <ins>Calcium jump per spike:</ins>
 
     <p style='text-align: justify;'>
     This corresponds to the calcium concentration rise that follows each spike event. We assume here that each jump is of the same size. In this specific model we neglect the calcium concentration saturation effects due to channel inactivation and buffering (next model will consider them).
+
     $A . n_{t}$
 
   - <ins>Calcium noise scale:</ins>
 
     <p style='text-align: justify;'>
     Calcium concentration dynamics themselves have some Gaussian noise source, scaled by $\sigma_{Ca}$
+
     $\sigma_{Ca}$ . $\sqrt{\Delta}$ . $\varepsilon_{Ca,t}$
 
   - <ins> Calcium baseline:</ins>
 
     <p style='text-align: justify;'>
     This corresponds to the intrinsic intracellular concentration of calcium within the neuron at rest.
+
     $[Ca^{2+}]_{b}$
 
 <br></br>
