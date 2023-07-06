@@ -39,13 +39,13 @@ On the home page, menus can be found on the left tab
 <p style='text-align: justify;'>
 In the Spikeling tab, users need to select <strong> Neuron Interface </strong> in order to display the main oscilloscope screen on which all traces will be displayed
 
-<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="1080" height="593">
-
 <p style='text-align: justify;'>
 To connect the Spikeling device with the GUI, <strong>select a COM port</strong>. If several are available, the correct COM port should make the device's LEDs light up in sequence. Then click <strong> Connected</strong>
 
 <p style='text-align: justify;'>
 From now on, the oscilloscope should display three traces. by default, the Spikeling Vm, the total input current it is receiving, and the stimulus output. Traces can be selected or unselected from the oscilloscope, to only the ones of interest.
+
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="1080" height="593">
 
 <p style='text-align: justify;'>
 The first three traces concern the Spikeling device to which the computer is connected. the next two concern a second Spikeling unit connected to the main one through the <strong> Synapse in 1</strong> plug. The last two concern a third unit connected to the <strong> Synapse in 2</strong> plug.
