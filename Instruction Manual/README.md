@@ -236,9 +236,9 @@ On these sections, three parameter tabs can be explore, each considering a speci
   In this section users can manipulate calcium intrinsic properties of the neuron itself.
   In this Calcium model, we assume a single-compartmental, equipotential model of the imaged neuron, over which the fluorescence signal may be spatially averaged, yielding a one-dimensional time varying fluorescence signal for each image from (<a href="https://www.cell.com/fulltext/S0006-3495%2809%2900311-7">Vogelstein et al. 2009</a>)
 
-  ```math
-  [Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
-  ```
+```math
+[Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
+```
 
   <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
 
@@ -251,7 +251,7 @@ On these sections, three parameter tabs can be explore, each considering a speci
   - $\Delta$ represents the imaging frame timeline
   - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
 
-<brt></br>
+<br></br>
 
   - <ins>Calcium decay:</ins>
 
