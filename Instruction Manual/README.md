@@ -15,7 +15,7 @@ The hardware itself is controlled by a <a href="https://www.espressif.com/en/pro
 
 The software itself consists on a Graphical User Interface (GUI) built on python using the pyqt6/pyside6 library packages:
   - Users can run the <a href="https://github.com/OpenSourceNeuro/Spikeling-V2/tree/main/GUI/PyQt">python code</a> directly by executing the <strong>Main.py</strong> file.
-  - A Windows executable file is also available and can be found <a href="https://github.com/OpenSourceNeuro/Spikeling-V2/tree/main/GUI/Windows">here</a>
+  - A Windows executable file is also available and can be found <a href="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/GUI/Windows/Spikeling.exe">here</a>
   - A Linux version is available <a href="">here</a>
   - And a Mac version <a href="">here</a>
 
@@ -233,28 +233,48 @@ On these sections, three parameter tabs can be explore, each considering a speci
 
 - <strong><ins>Calcium Parameters:</ins></strong>
 
-  In this section users can manipulate calcium intrinsic properties of the neuron itself
+  In this section users can manipulate calcium intrinsic properties of the neuron itself.
+  In this Calcium model, we assume a single-compartmental, equipotential model of the imaged neuron, over which the fluorescence signal may be spatially averaged, yielding a one-dimensional time varying fluorescence signal for each image from (<a href="https://www.cell.com/fulltext/S0006-3495%2809%2900311-7">Vogelstein et al. 2009</a>)
 
+  ```math
+  [Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
+  ```
+
+  <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
+
+    Where:
+    - $\tau$ is the Calcium decay constant
+  - $[Ca^{2+}]_{b}$ the Calcium baseline concentration
+  - A is the calcium concentration jump each spike triggers
+  - $n_{t}$ is the number of spikes at time t
+  - $\sigma_{Ca}$ scales the Calcium noise
+  - $\Delta$ represents the imaging frame timeline
+  - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
+
+<brt></br>
   - <ins>Calcium decay:</ins>
 
-    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
-
     <p style='text-align: justify;'>
-    This corresponds to the rate at which a calcium event returns to its baseline value. This can be interpreted at the intra cellular calcium reuptake rather
+    This corresponds to the rate at which a calcium event returns exponentially to its baseline concentration value with a time constant $\tau$ . This can be interpreted at the myriad of calcium extrusion and endogenous buffering mechanism and we sum it up into this single average time constant
+    $[Ca^{2+}]_{t-1}$ - $\tau$ . $[Ca^{2+}]_{t-1}$
 
   - <ins>Calcium jump per spike:</ins>
 
     <p style='text-align: justify;'>
-    This corresponds to the calcium concentration rise that follows each spike event.
+    This corresponds to the calcium concentration rise that follows each spike event. We assume here that each jump is of the same size. In this specific model we neglect the calcium concentration saturation effects due to channel inactivation and buffering (next model will consider them).
+    $A . n_{t}$
 
   - <ins>Calcium noise scale:</ins>
 
-    Self explanatory
+    <p style='text-align: justify;'>
+    Calcium concentration dynamics themselves have some Gaussian noise source, scaled by $\sigma_{Ca}$
+    $\sigma_{Ca}$ . $\sqrt{\Delta}$ . $\varepsilon_{Ca,t}$
 
   - <ins> Calcium baseline:</ins>
 
     <p style='text-align: justify;'>
     This corresponds to the intrinsic intracellular concentration of calcium within the neuron at rest.
+    $[Ca^{2+}]_{b}$
 
 <br></br>
 
