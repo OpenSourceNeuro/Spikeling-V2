@@ -180,7 +180,7 @@ First <strong>Load Data</strong> then follow the procedure. Only one variable is
 
 At each step, users can displayed traces from other neurons if any were connected.
 
-<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Data.png" width="865" height="335">
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Data.png" width="865" height="335">
 
 <br></br>
 
