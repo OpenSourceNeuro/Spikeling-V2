@@ -240,8 +240,6 @@ On these sections, three parameter tabs can be explore, each considering a speci
 [Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
 ```
 
-  <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
-
   Where:
   - $\tau$ is the Calcium decay constant
   - $[Ca^{2+}]_{b}$ the Calcium baseline concentration
@@ -252,6 +250,8 @@ On these sections, three parameter tabs can be explore, each considering a speci
   - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
 
 <br></br>
+
+  <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
 
   - <ins>Calcium decay:</ins>
 
