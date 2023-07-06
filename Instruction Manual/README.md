@@ -38,10 +38,10 @@ On the home page, menus can be found on the left tab
 <img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png" width="176" height="54">
 <h4 align="left"> Spikeling Menu</h4>
 
+<br></br>
+
 <p style='text-align: justify;'>
 In the Spikeling tab, users need to select <strong> Neuron Interface </strong> in order to display the main oscilloscope screen on which all traces will be displayed
-
-<br></br>
 
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="1080" height="593">
 
