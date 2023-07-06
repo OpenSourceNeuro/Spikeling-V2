@@ -234,7 +234,6 @@ On these sections, three parameter tabs can be explore, each considering a speci
 - <strong><ins>Calcium Parameters:</ins></strong>
 
   In this section users can manipulate calcium intrinsic properties of the neuron itself.
-  In this Calcium model, we assume a single-compartmental, equipotential model of the imaged neuron, over which the fluorescence signal may be spatially averaged, yielding a one-dimensional time varying fluorescence signal for each image from (<a href="https://www.cell.com/fulltext/S0006-3495%2809%2900311-7">Vogelstein et al. 2009</a>)
 
 ```math
 [Ca^{2+}]_{t} = [Ca^{2+}]_{t-1} - \tau . [Ca^{2+}]_{t-1} + [Ca^{2+}]_{b} + A . n_{t} + \sigma_{Ca} . \sqrt{\Delta} . \varepsilon_{Ca,t}
@@ -249,7 +248,6 @@ On these sections, three parameter tabs can be explore, each considering a speci
   - $\Delta$ represents the imaging frame timeline
   - $\varepsilon_{Ca,t}$ is a standard normal Gaussian noise source
 
-<br></br>
 
   <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
 
@@ -282,11 +280,21 @@ On these sections, three parameter tabs can be explore, each considering a speci
     $[Ca^{2+}]_{b}$
 
 <br></br>
+<br></br>
 
- - <strong><ins>Fluorescence Parameters</ins></strong>
+- <strong><ins>Fluorescence Parameters</ins></strong>
 
- Finally this section deals with variables associated with the fluorescence itself.
+Finally this section deals with variables associated with the fluorescence itself.
 
-  - <ins>Fluorescence scale</ins>
+```math
+_{t} = \alpha[Ca^{2+}]_{t} + \beta + \sigma_{F}.\varepsilon_{F,t}
+ ```
 
-  <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Fluorescence_Parameters.png" width="202" height="674">
+<img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Fluorescence_Parameters.png" width="202" height="674">
+
+<p style='text-align: justify;'>
+For this fluorescence model, we assume a single-compartmental, equipotential model of the imaged neuron, over which the fluorescence signal may be spatially averaged, yielding a one-dimensional time varying fluorescence signal for each image frame, $Ft$ (<a href="https://www.cell.com/fulltext/S0006-3495%2809%2900311-7">Vogelstein et al. 2009</a>).
+
+Next, we assume that the fluorescence at any time is a noisy linear function of the calcium concentration at that time
+
+ - The three first parameters, <strong>Fluorescence scale</strong>, <strong>Fluorescence offset</strong> and <strong>Noise scale</strong> respectively modulate the $\alpha$, $\beta$ and $\sigma$ terms of the above equation.
