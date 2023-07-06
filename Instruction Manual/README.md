@@ -29,7 +29,6 @@ Once the CP210x has been installed, users can launch the Spikeling software.
 
 On the home page, menus can be found on the left tab
 
-
 <br></br>
 
 <img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png" width="176" height="54">
