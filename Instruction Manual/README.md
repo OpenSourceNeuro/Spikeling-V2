@@ -33,7 +33,7 @@ On the home page, menus can be found on the left tab
 
 </p>
 
-<br>
+<br></br>
 
 <img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Spikeling_Menu.png" width="176" height="54">
 <h4 align="left"> Spikeling Menu</h4>
@@ -173,12 +173,95 @@ On the right hand side of the screen is the parameter tab:
 
 <br></br>
 
-Recorded data can be analysed on the go within the Spikeling tab menu, by selecting <strong>Data Analysis</strong>
+<p style='text-align: justify;'>
+Recorded data can be analysed on the go within the Spikeling tab menu, by selecting <strong>Data Analysis</strong>.
+At the moment, only square wave data can be analysed here. Future updates will integrate more advanced data analysis. However jupyter-notebooks are available to analyse the data or users can just use the .csv file generated and analysed it on their programming language of choice. Currently a R version is being developed to be coupled with on going data analysis courses
+
+<p style='text-align: justify;'>
+First <strong>Load Data</strong> then follow the procedure. Only one variable is left here to the students, the threshold at which one can estimate a spike occurs. Different values might end up in quite different average traces.
+
+At each step, users can displayed traces from other neurons if any were connected.
 
 
+<br></br>
 
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Menu.png" width="175" height="53">
+<h4 align="left"> Imaging Menu</h4>
 
+<p style='text-align: justify;'>
+Spikeling receives many inputs but generates only one data, the neuron voltage membrane potential (Vm). Following diverse interactions, this Vm might cross a pre-defined threshold (-30mV) and elicit a spike. Since such spikes are identified and used by the device for various operations, they can also be used to feed a calcium model that would mimic the transient rise of calcium concentration within a neuron following a spike.
+From then a second model could use such calcium transient trace to model a fluorescence trace as it could be observed under a two-photon microscope for example.
 
+<p style='text-align: justify;'>
+So let's now consider spikeling neuron as being a one pixel fluorescent object. By clicking on the <strong>Imaging Stimulation</strong> button, an oscilloscope displaying this one pixel fluorescence trace will pop up (Up tp three one pixel neuron fluorescence traces if users select the <strong> Multiple Imaging</strong> button).
 
+<p style='text-align: justify;'>
+By default, only the fluorescence trace is enabled, which is the data on which students should work on as it represents the data they will be faced with during a dynamic fluorescence recording experiment. But users can also display the Calcium trace that is used to generate the fluorescence one, as well as the Vm that we can consider here as the ground truth data.
 
-</p>
+On these sections, three parameter tabs can be explore, each considering a specific variable group:
+
+- <strong><ins>Imaging Parameters</ins></strong>
+
+  In this section, users can manipulate variable dependent of the experimental recording system itself.
+
+  - <ins> Calcium Indicator:</ins>
+
+    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Parameters.png" width="203" height="674">
+
+    <p style='text-align: justify;'>
+    This section is a work in progress, but ultimately users could choose distinct calcium indicator models with different dynamics and kinetics properties. These are summed up in three variables (described on the calcium model equations): the indicator affinity to calcium, its dissociation constant and its brightness. These values are displayed on the parameter tab.
+
+  - <ins> Imaging frame rate:</ins>
+
+    <p style='text-align: justify;'>
+    This variables correspond to the sampling rate for the fluorescence trace. The aim here is to let student appreciate, despite the fact that they are scanning a one pixel object, that they is an important trade off between the imaging rate and the necessity for a better scanning resolution. Point is that lower frame rate will miss some fluorescence event underlying spiking events.
+
+  - <ins> Photo-detection gain:</strong>
+
+    <p style='text-align: justify;'>
+    This variable increases the fluorescence traces signal but incorporate some random noise as it goes into higher intensity. It can be interpreted as the PMT gain from a recording system.
+
+  - <ins> Laser power:</ins>
+
+    <p style='text-align: justify;'>
+    This variable is similar to the previous one as it enhances the fluorescence signal, but integrates a decay counter that diminishes this effect overtime in a non reversible way, in order to simulate a photo-bleaching effect.
+
+  <p style='text-align: justify;'>
+  The two variables above must be manipulated together in order for students to appreciate the fine tuning of a recording setup in order to get a proper signal to noise ration while avoiding noise artefacts.
+
+<br></br>
+
+- <strong><ins>Calcium Parameters:</ins></strong>
+
+  In this section users can manipulate calcium intrinsic properties of the neuron itself
+
+  - <ins>Calcium decay:</ins>
+
+    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
+
+    <p style='text-align: justify;'>
+    This corresponds to the rate at which a calcium event returns to its baseline value. This can be interpreted at the intra cellular calcium reuptake rather
+
+  - <ins>Calcium jump per spike:</ins>
+
+    <p style='text-align: justify;'>
+    This corresponds to the calcium concentration rise that follows each spike event.
+
+  - <ins>Calcium noise scale:</ins>
+
+    Self explanatory
+
+  - <ins> Calcium baseline:</ins>
+
+    <p style='text-align: justify;'>
+    This corresponds to the intrinsic intracellular concentration of calcium within the neuron at rest.
+
+<br></br>
+
+ - <strong><ins>Fluorescence Parameters</ins></strong>
+
+ Finally this section deals with variables associated with the fluorescence itself.
+
+  - <ins>Fluorescence scale</ins>
+
+  <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Fluorescence_Parameters.png" width="202" height="674">
