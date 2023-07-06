@@ -287,7 +287,7 @@ On these sections, three parameter tabs can be explore, each considering a speci
 Finally this section deals with variables associated with the fluorescence itself.
 
 ```math
-_{t} = \alpha[Ca^{2+}]_{t} + \beta + \sigma_{F}.\varepsilon_{F,t}
+F_{t} = \alpha[Ca^{2+}]_{t} + \beta + \sigma_{F}.\varepsilon_{F,t}
  ```
 
 <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Fluorescence_Parameters.png" width="202" height="674">
@@ -298,3 +298,33 @@ For this fluorescence model, we assume a single-compartmental, equipotential mod
 Next, we assume that the fluorescence at any time is a noisy linear function of the calcium concentration at that time
 
  - The three first parameters, <strong>Fluorescence scale</strong>, <strong>Fluorescence offset</strong> and <strong>Noise scale</strong> respectively modulate the $\alpha$, $\beta$ and $\sigma$ terms of the above equation.
+
+<br></br>
+
+The relationship between the fluorescence signal and $[Ca2+]_{t}$ is often characterized by a nonlinear saturating function
+
+```math
+Fsat_{t} = \alpha.S.[Ca^{2+}]_{t} + \beta + \eta_{t}
+```
+
+This model can be activated by toggling the <strong>Non-linear Saturation</strong> button.
+
+The fluorescence trace will then be quite more realistic and new variable are now available to modulate the fluorescence features.
+
+  - <ins>Dissociation constant:</ins>
+
+  <p style='text-align: justify;'>
+  It represents $kd$ in the Hill equation: $S_{x} = x_{n} / (x_{n} + kd)$
+
+  - <ins>Affinity:</ins>
+
+  Represented by the Hill coefficient $n$ in the Hill equation above
+
+  - <ins>Photon shot noise:</strong>
+
+  <p style='text-align: justify;'>  
+  The noise term, $\eta_{t}$ may be generalized similarly. Assuming the primary noise source is photon shot noise, it would be appropriate to model noise as a Poisson process, which could be well approximated by a Gaussian distribution for large photon counts:
+  
+  ```math
+  \eta_{t} = \sqrt{\varepsilon.S . ([Ca^{2+}]_{t}) + \sigma_{F}} . \varepsilon_{F,t}
+  ```
