@@ -67,41 +67,41 @@ On the right hand side of the screen is the parameter tab:
 
 - <strong><ins>Neuron Parameters:</ins></strong>
 
+  <p style='text-align: justify;'>
+  Here users can manipulate most variables related to the neuron behaviour. These are a redundancy from the knobs on the spikeling device. When toggle buttons are enabled, the software take over the know and a digital value is displayed, allowing users an accurate and reliable settings of the spikeling neuron.
+
+  - <ins>Injected Current:</ins>
+
+    <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neuron_Parameters.png" width="204" height="676">
+
     <p style='text-align: justify;'>
-    Here users can manipulate most variables related to the neuron behaviour. These are a redundancy from the knobs on the spikeling device. When toggle buttons are enabled, the software take over the know and a digital value is displayed, allowing users an accurate and reliable settings of the spikeling neuron.
+    This parameter correspond to the amount of current (0 by default) injected into the neuron. It stimulates how an electrophysiology rig would perform a patch clamp experiment by holding the neuron current. Across the spikeling project, current are technically arbitrary units but can be explained to students as corresponding to mA.
 
-    - <ins>Injected Current:</ins>
+    On the board, this corresponds to the bottom left knob
 
-      <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Neuron_Parameters.png" width="204" height="676">
+  - <ins>Noise:</ins>
 
-      <p style='text-align: justify;'>
-      This parameter correspond to the amount of current (0 by default) injected into the neuron. It stimulates how an electrophysiology rig would perform a patch clamp experiment by holding the neuron current. Across the spikeling project, current are technically arbitrary units but can be explained to students as corresponding to mA.
+    <p style='text-align: justify;'>
+    No recording is noise free, unfortunately. This specific variable adds a random noise at different intensities in order to mimic noise from the environment, from the recording station, even the thermal noise from the neuronal tissue itself. This functions aims to educate students to appreciate how background noise affects recording and hides real spiking events. In advanced classes, this functions can be used to test the efficiency of a spike sorting algorithm.
 
-      On the board, this corresponds to the bottom left knob
+    On the board, this corresponds to the bottom right knob
 
-    - <ins>Noise:</ins>
+  - <ins>Synaptic Gain:</ins>
 
-      <p style='text-align: justify;'>
-      No recording is noise free, unfortunately. This specific variable adds a random noise at different intensities in order to mimic noise from the environment, from the recording station, even the thermal noise from the neuronal tissue itself. This functions aims to educate students to appreciate how background noise affects recording and hides real spiking events. In advanced classes, this functions can be used to test the efficiency of a spike sorting algorithm.
+    <p style='text-align: justify;'>
+    The synaptic gain corresponds to the polarity and strength of the synapse. Elicited spikes on the auxiliary spikeling devices trigger synaptic events on the main one. Such events can be enhanced, either positively (excitatory synapse) or negatively (inhibitory synapse). The resulting event is then integrated as an input current by the main spikeling device.
 
-      On the board, this corresponds to the bottom right knob
+    <p style='text-align: justify;'>
+    The strength of these synapses can be interpreted to students as the amount of vesicles released or even, the number of neurotransmitter receptors on the post synaptic membrane. The polarity of the synapse can be interpreted as the type of neurotransmitter released (i.e. Glutamate/GABA)
 
-    - <ins>Synaptic Gain:</ins>
+    On the board, these correspond to the knobs on the left
 
-      <p style='text-align: justify;'>
-      The synaptic gain corresponds to the polarity and strength of the synapse. Elicited spikes on the auxiliary spikeling devices trigger synaptic events on the main one. Such events can be enhanced, either positively (excitatory synapse) or negatively (inhibitory synapse). The resulting event is then integrated as an input current by the main spikeling device.
+  - <ins> Synaptic Decay: </ins>
 
-      <p style='text-align: justify;'>
-      The strength of these synapses can be interpreted to students as the amount of vesicles released or even, the number of neurotransmitter receptors on the post synaptic membrane. The polarity of the synapse can be interpreted as the type of neurotransmitter released (i.e. Glutamate/GABA)
+    <p style='text-align: justify;'>
+    This variable is not present on the device and can only be manipulated on the GUI. It corresponds to the synapse dynamics, more explicitly, the rate at which a synaptic current will dissipate. It could be interpreted to students for example as the rate at which the neurotransmitter reuptake from the synaptic cleft occurs.
 
-      On the board, these correspond to the knobs on the left
-
-    - <ins> Synaptic Decay: </ins>
-
-      <p style='text-align: justify;'>
-      This variable is not present on the device and can only be manipulated on the GUI. It corresponds to the synapse dynamics, more explicitly, the rate at which a synaptic current will dissipate. It could be interpreted to students for example as the rate at which the neurotransmitter reuptake from the synaptic cleft occurs.
-
-      <br>  </br>
+<br> </br>
 
 - <strong><ins>Stimulus Parameters:</strong></ins>
 
