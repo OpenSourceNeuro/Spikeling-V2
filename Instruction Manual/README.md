@@ -331,6 +331,6 @@ The fluorescence trace will then be quite more realistic and new variable are no
 
 <br></br>
 
-<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Difference.png" width="900" height="330">
+<img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Difference.png" width="900" height="330">
 
 <h6 align="center">Fluorescence imaging simulation differences between the linear model and the non-linear saturating model </h6>
