@@ -45,6 +45,8 @@ To connect the Spikeling device with the GUI, <strong>select a COM port</strong>
 <p style='text-align: justify;'>
 From now on, the oscilloscope should display three traces. by default, the Spikeling Vm, the total input current it is receiving, and the stimulus output. Traces can be selected or unselected from the oscilloscope, to only the ones of interest.
 
+<br></br>
+
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Oscilloscope.png" width="1080" height="593">
 
 <p style='text-align: justify;'>
