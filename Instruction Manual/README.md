@@ -334,3 +334,18 @@ The fluorescence trace will then be quite more realistic and new variable are no
 <img align="center"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Imaging_Difference.png" width="900" height="330">
 
 <h6 align="center">Fluorescence imaging simulation differences between the linear model and the non-linear saturating model </h6>
+
+<br></br>
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/NeuronGenerator_Menu.png" width="175" height="53">
+<h4 align="left"> Neuron Generator Menu</h4>
+
+<br></br>
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/StimulusGenerator_Menu.png" width="175" height="53">
+<h4 align="left"> Stimulus Generator Menu</h4>
+
+<br></br>
+
+<img align="left"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Exercises_Menu.png" width="175" height="53">
+<h4 align="left"> Exercises Menu</h4>
