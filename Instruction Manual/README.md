@@ -242,8 +242,8 @@ On these sections, three parameter tabs can be explore, each considering a speci
 
   <img align="right"  src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/Calcium_Parameters.png" width="202" height="676">
 
-    Where:
-    - $\tau$ is the Calcium decay constant
+  Where:
+  - $\tau$ is the Calcium decay constant
   - $[Ca^{2+}]_{b}$ the Calcium baseline concentration
   - A is the calcium concentration jump each spike triggers
   - $n_{t}$ is the number of spikes at time t
