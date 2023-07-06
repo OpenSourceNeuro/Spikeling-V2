@@ -602,7 +602,7 @@ Where:
 - $\varepsilon_{F,t}$ is a standard normal Gaussian noise source
 
 
-<br>
+<br></br>
 
 ```math
 Fsat_{t} = \alpha.S.[Ca^{2+}]_{t} + \beta + \eta_{t}
