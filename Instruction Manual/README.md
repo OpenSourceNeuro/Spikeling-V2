@@ -258,8 +258,10 @@ On these sections, three parameter tabs can be explore, each considering a speci
     <p style='text-align: justify;'>
     This corresponds to the rate at which a calcium event returns exponentially to its baseline concentration value with a time constant $\tau$ . This can be interpreted at the myriad of calcium extrusion and endogenous buffering mechanism and we sum it up into this single average time constant.
 
-    $[Ca]{2+}]_{t-1}$ -
-    $/tau$ . 
+    $[Ca^{2+}]_{t-1}$ -
+
+    $/tau$ .
+    
     $[Ca^{2+}]_{t-1}$
 
   - <ins>Calcium jump per spike:</ins>
