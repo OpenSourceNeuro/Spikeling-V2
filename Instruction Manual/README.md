@@ -25,13 +25,10 @@ The software itself consists on a Graphical User Interface (GUI) built on python
 
 <h2 align="left">Spikeling GUI</h2></p>
 
-<p style='text-align: justify;'>
-
 Once the CP210x has been installed, users can launch the Spikeling software.
 
 On the home page, menus can be found on the left tab
 
-</p>
 
 <br></br>
 
