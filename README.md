@@ -18,8 +18,6 @@ The hardware is licensed under the [CERN OHL v1.2](https://github.com/OpenSource
 
 ***
 
-<div>
-
 <p style='text-align: justify;'>
 Understanding how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on living neurons are scarce in science education.
 
@@ -35,7 +33,6 @@ It is an artificial neuron that can receive different inputs, integrate them and
 <p style='text-align: justify;'>
 Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.
 
-</div>
 
 <br>
 
