@@ -30,7 +30,7 @@ Due to budgetary constraints and logistical hurdles, few students can be afforde
 To support university-level neuroscience teaching, we designed ‘Spikeling’, an open-source teaching support device that mimics the electrical properties of spiking neurons by running the computationally efficient yet versatile Izhikevich model.
 
 <p style='text-align: justify;'>
-It is an artificial neuron that can receive different inputs, integrate them and send and outputs its computation, just like a spiking neuron would!
+It is an artificial neuron that can receive different inputs, integrate them and outputs its computation, just like a spiking neuron would!
 
 <p style='text-align: justify;'>
 Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.
