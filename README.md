@@ -244,26 +244,26 @@ We would always encourage teachers to develop their own exercises based on the c
 <br>
 
 - [Spikeling: A spiking neuron interface](#a-spiking-neuron-interface)
-- [Spikeling: GUI - neuron parameters](#spikeling-GUI-neuron-parameters)
-- [Spikeling: GUI - stimuli parameters](#spikeling-GUI-stimuli-parameters)
-- [Spikeling: Data Analysis](#spikeling-Data-Analysis)
-- [Spikeling: Neuron generator](#spikeling-Neuron-generator)
-- [Spikeling: Stimulus Generator](#spikeling-Stimulus-Generator)
-- [Spikeling: Multiple recording](#spikeling-Multiple-recording)
+- [Spikeling: GUI - neuron parameters](#spikeling-gui-neuron-parameters)
+- [Spikeling: GUI - stimuli parameters](#spikeling-gui-stimuli-parameters)
+- [Spikeling: Data Analysis](#spikeling-data-analysis)
+- [Spikeling: Neuron generator](#spikeling-neuron-generator)
+- [Spikeling: Stimulus Generator](#spikeling-stimulus-generator)
+- [Spikeling: Multiple recording](#spikeling-multiple-recording)
 
 <br>
 
-- [Fluorescence: imaging simulation](#fluorescence-Imaging-simulation)
-- [Fluorescence: Imaging parameters](#fluorescence-Imaging-parameters)
-- [Fluorescence: Calcium parameters](#fluorescence-Calcium-parameters)
-- [Fluorescence: Fluorescence parameters](#fluorescence-Imaging-parameters)
-- [Fluorescence: Data Analysis](#fluorescence-Data-Analysis)
-- [Fluorescence: Multiple fluorescence](#fluorescence-Multiple-fluorescence)
+- [Fluorescence: imaging simulation](#fluorescence-imaging-simulation)
+- [Fluorescence: Imaging parameters](#fluorescence-imaging-parameters)
+- [Fluorescence: Calcium parameters](#fluorescence-calcium-parameters)
+- [Fluorescence: Fluorescence parameters](#fluorescence-imaging-parameters)
+- [Fluorescence: Data Analysis](#fluorescence-data-analysis)
+- [Fluorescence: Multiple fluorescence](#fluorescence-multiple-fluorescence)
 
 <br>
 
-- [Exercices: GUI](#exercises-GUI)
-- [Exercices: Python](#exercises-Python)
+- [Exercices: GUI](#exercises-gui)
+- [Exercices: Python](#exercises-python)
 
 <br>
 
