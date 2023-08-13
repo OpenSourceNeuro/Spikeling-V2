@@ -243,31 +243,31 @@ We would always encourage teachers to develop their own exercises based on the c
 
 <br>
 
-- [Spikeling: A spiking neuron interface](#A-spiking-neuron-interface)
-- [Spikeling: GUI - neuron parameters](#Spikeling-GUI-neuron-parameters)
-- [Spikeling: GUI - stimuli parameters](#Spikeling-GUI-stimuli-parameters)
-- [Spikeling: Data Analysis](#Spikeling-Data-Analysis)
-- [Spikeling: Neuron generator](#Spikeling-Neuron-generator)
-- [Spikeling: Stimulus Generator](#Spikeling-Stimulus-Generator)
-- [Spikeling: Multiple recording](#Spikeling-Multiple-recording)
+- [Spikeling: A spiking neuron interface](#a-spiking-neuron-interface)
+- [Spikeling: GUI - neuron parameters](#spikeling-GUI-neuron-parameters)
+- [Spikeling: GUI - stimuli parameters](#spikeling-GUI-stimuli-parameters)
+- [Spikeling: Data Analysis](#spikeling-Data-Analysis)
+- [Spikeling: Neuron generator](#spikeling-Neuron-generator)
+- [Spikeling: Stimulus Generator](#spikeling-Stimulus-Generator)
+- [Spikeling: Multiple recording](#spikeling-Multiple-recording)
 
 <br>
 
-- [Fluorescence: imaging simulation](#Fluorescence-Imaging-simulation)
-- [Fluorescence: Imaging parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence: Calcium parameters](#Fluorescence-Calcium-parameters)
-- [Fluorescence: Fluorescence parameters](#Fluorescence-Imaging-parameters)
-- [Fluorescence: Data Analysis](#Fluorescence-Data-Analysis)
-- [Fluorescence: Multiple fluorescence](#Fluorescence-Multiple-fluorescence)
+- [Fluorescence: imaging simulation](#fluorescence-Imaging-simulation)
+- [Fluorescence: Imaging parameters](#fluorescence-Imaging-parameters)
+- [Fluorescence: Calcium parameters](#fluorescence-Calcium-parameters)
+- [Fluorescence: Fluorescence parameters](#fluorescence-Imaging-parameters)
+- [Fluorescence: Data Analysis](#fluorescence-Data-Analysis)
+- [Fluorescence: Multiple fluorescence](#fluorescence-Multiple-fluorescence)
 
 <br>
 
-- [Exercices: GUI](#Exercices-GUI)
-- [Exercices: Python](#Exercices-Python)
+- [Exercices: GUI](#exercices-GUI)
+- [Exercices: Python](#exercices-Python)
 
 <br>
 
-- [GitHub Contributions](#GitHub-Contributions)
+- [GitHub Contributions](#gitHub-Contributions)
 
 - [Arduino code and libraries](#)
 
