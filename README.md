@@ -262,8 +262,8 @@ We would always encourage teachers to develop their own exercises based on the c
 
 <br>
 
-- [Exercices: GUI](#exercices-GUI)
-- [Exercices: Python](#exercices-Python)
+- [Exercices: GUI](#exercises-GUI)
+- [Exercices: Python](#exercises-Python)
 
 <br>
 
@@ -693,7 +693,7 @@ TBC
 
 <br>
 
-## Exercices GUI
+## Exercises GUI
 
 <br>
 
@@ -705,7 +705,7 @@ TBC
 
 <br>
 
-## Exercices Python
+## Exercises Python
 
 <br>
 
