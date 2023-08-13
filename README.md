@@ -246,9 +246,9 @@ We would always encourage teachers to develop their own exercises based on the c
 - [Spikeling: A spiking neuron interface](#a-spiking-neuron-interface)
 - [Spikeling: GUI - neuron parameters](#spikeling-gui-neuron-parameters)
 - [Spikeling: GUI - stimuli parameters](#spikeling-gui-stimuli-parameters)
-- [Spikeling: Data Analysis](#spikeling-data-analysis)
+- [Spikeling: Data Analysis](#-data-analysis)
 - [Spikeling: Neuron generator](#spikeling-neuron-generator)
-- [Spikeling: Stimulus Generator](#spikeling-stimulus-generator)
+- [Spikeling: Stimulus Generator](#stimulus-generator)
 - [Spikeling: Multiple recording](#spikeling-multiple-recording)
 
 <br>
