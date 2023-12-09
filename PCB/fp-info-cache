@@ -1,4 +1,4 @@
-20177552845932040
+20232237706066177
 Audio_Module
 Audio Jack 3.5mm
 Single 2.4 GHz Wi-Fi and Bluetooth combo chip with U.FL connector, https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf
@@ -57644,6 +57644,251 @@ Yellow 5381 Series LED
 0
 2
 2
+Maxime
+Adafruit FeatherWing
+Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino Nano
+0
+28
+28
+Maxime
+Adafruit Huzzah 32
+Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino Nano
+0
+28
+28
+Maxime
+Adafruit TFT 2.4
+Generic Buzzer, D15mm height 7.5mm with RM7.6mm
+buzzer
+0
+0
+0
+Maxime
+Arduino_Nano_WithMountingHoles
+Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
+Arduino Nano
+0
+30
+30
+Maxime
+BNC connector
+https://www.amphenolrf.com/downloads/dl/file/id/1141/product/2978/132134_16_customer_drawing.pdf
+SMA THT Female Jack Vertical ExtendedLegs
+0
+5
+2
+Maxime
+BNC_Molex
+https://www.amphenolrf.com/downloads/dl/file/id/3222/product/2918/132291_customer_drawing.pdf
+SMA THT Female Jack Vertical Bulkhead
+0
+5
+2
+Maxime
+BNC_Socket_TYCO-AMP_LargePads
+BNC Socket TYCO AMP
+BNC Socket TYCO AMP
+0
+4
+2
+Maxime
+BarrelJack_Horizontal_maxime
+DC Barrel Jack
+Power Jack
+0
+4
+4
+Maxime
+JST_XH_B02B-XH-A_02x2.50mm_Straight
+JST XH series connector, B02B-XH-A, top entry type, through hole
+connector jst xh tht top vertical 2.50mm
+0
+2
+2
+Maxime
+JST_XH_B03B-XH-A_03x2.50mm_Straight
+JST XH series connector, B03B-XH-A, top entry type, through hole
+connector jst xh tht top vertical 2.50mm
+0
+3
+3
+Maxime
+KWL-R1230XDUGB
+14-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads
+THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads
+0
+14
+14
+Maxime
+MODULE_ESP32-DEVKITC-32D
+
+
+0
+38
+38
+Maxime
+Maxi_TLC5947
+HTSSOP32: plastic thin shrink small outline package; 32 leads; body width 6.1 mm; lead pitch 0.65 mm (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot487-1_po.pdf)
+SSOP 0.65 PowerPAD
+0
+60
+31
+Maxime
+Maxi_TLC59711
+HTSSOP32: plastic thin shrink small outline package; 32 leads; body width 6.1 mm; lead pitch 0.65 mm (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot487-1_po.pdf)
+SSOP 0.65 PowerPAD
+0
+34
+17
+Maxime
+OldSowjetaera_Transistor_Type-I_BigPads
+
+
+0
+3
+3
+Maxime
+Potentiometer
+Potentiometer, horizontally mounted, Omeg PC16PU, Omeg PC16PU, Omeg PC16PU, Vishay/Spectrol 248GJ/249GJ Single, Vishay/Spectrol 248GJ/249GJ Single, Vishay/Spectrol 248GJ/249GJ Single, Vishay/Spectrol 248GH/249GH Single, Vishay/Spectrol 148/149 Single, Vishay/Spectrol 148/149 Single, Vishay/Spectrol 148/149 Single, Vishay/Spectrol 148A/149A Single with mounting plates, Vishay/Spectrol 148/149 Double, Vishay/Spectrol 148A/149A Double with mounting plates, Piher PC-16 Single, Piher PC-16 Single, Piher PC-16 Single, Piher PC-16SV Single, Piher PC-16 Double, Piher PC-16 Triple, Piher T16H Single, Piher T16L Single, Piher T16H Double, Alps RK163 Single, Alps RK163 Double, Alps RK097 Single, Alps RK097 Double, Bourns PTV09A-2 Single with mounting sleve Single, Bourns PTV09A-1 with mounting sleve Single, Bourns PRS11S Single, Alps RK09K Single with mounting sleve Single, Alps RK09K with mounting sleve Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09D1130C1B.html
+Potentiometer horizontal  Omeg PC16PU  Omeg PC16PU  Omeg PC16PU  Vishay/Spectrol 248GJ/249GJ Single  Vishay/Spectrol 248GJ/249GJ Single  Vishay/Spectrol 248GJ/249GJ Single  Vishay/Spectrol 248GH/249GH Single  Vishay/Spectrol 148/149 Single  Vishay/Spectrol 148/149 Single  Vishay/Spectrol 148/149 Single  Vishay/Spectrol 148A/149A Single with mounting plates  Vishay/Spectrol 148/149 Double  Vishay/Spectrol 148A/149A Double with mounting plates  Piher PC-16 Single  Piher PC-16 Single  Piher PC-16 Single  Piher PC-16SV Single  Piher PC-16 Double  Piher PC-16 Triple  Piher T16H Single  Piher T16L Single  Piher T16H Double  Alps RK163 Single  Alps RK163 Double  Alps RK097 Single  Alps RK097 Double  Bourns PTV09A-2 Single with mounting sleve Single  Bourns PTV09A-1 with mounting sleve Single  Bourns PRS11S Single  Alps RK09K Single with mounting sleve Single  Alps RK09K with mounting sleve Single
+0
+3
+3
+Maxime
+R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal
+Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=15.24mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0309 series Axial Horizontal pin pitch 15.24mm 0.5W = 1/2W length 9mm diameter 3.2mm
+0
+2
+2
+Maxime
+Spike 15
+
+
+0
+0
+0
+Maxime
+Spiky 10
+
+
+0
+0
+0
+Maxime
+Spiky 20
+
+
+0
+0
+0
+Maxime
+feather
+
+
+0
+0
+0
+Maxime
+logo 200
+
+
+0
+0
+0
+Maxime
+logo 250
+
+
+0
+0
+0
+Maxime
+logo 350
+
+
+0
+0
+0
+Maxime
+logo 400
+
+
+0
+0
+0
+Maxime
+logo 750
+
+
+0
+0
+0
+Maxime
+logo 1000
+
+
+0
+0
+0
+Maxime
+logo 1250
+
+
+0
+0
+0
+Maxime
+maxi_DPDT_Angled
+CuK sub miniature slide switch, JS series, DPDT, right angle, http://www.ckswitches.com/media/1422/js.pdf
+switch DPDT
+0
+8
+8
+Maxime
+maxi_PINHEAD1-2
+
+
+0
+2
+2
+Maxime
+new_logo 500
+
+
+0
+0
+0
+Maxime
+new_logo 1000
+
+
+0
+0
+0
+Maxime
+new_logo 2000
+
+
+0
+0
+0
+Maxime
+new_logo 2500
+
+
+0
+0
+0
+Maxime
+new_logo 3000
+
+
+0
+0
+0
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
