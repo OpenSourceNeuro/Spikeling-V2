@@ -11,7 +11,7 @@ from PySide6.QtCore import QSize, QPropertyAnimation
 from PySide6.QtWidgets import QSizeGrip
 
 
-BaudRate = 115200
+BaudRate = 250000
 
 
 DarkSolarized = [[0, 30, 38], [0, 43, 54], [7, 54, 66],                                            # 0:DarkBase01, 1:DarkBase02, 2:DarkBase03
@@ -129,5 +129,6 @@ class UIFunctions(MainWindow):
                             self.animation.setEndValue(standard)
                             self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
                             self.animation.start()
+
 
 
