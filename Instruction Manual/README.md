@@ -89,11 +89,11 @@ The software itself consists on a Graphical User Interface (GUI) built on python
 
   <br></br>
 
-  Before compiling the LED Zappelin code, a few librairies need to be installed:
+  Before compiling the Spikeling code, a few libraries need to be installed:
     - Arduino-SerialCommand
     - MCP3208 by Rodolfo Pietro
 
-  Most of them can be downloaded from the Arduino IDE: Go to <strong>Sketch > Include Librairy > Manage Libraries</strong>, enter the library name, then install it following the same process as for the board library.
+  Most of them can be downloaded from the Arduino IDE: Go to <strong>Sketch > Include Library > Manage Libraries</strong>, enter the library name, then install it following the same process as for the board library.
 
   We however recommend for the Arduino-SerialCommand library to manually place the library folder which can be found <a href="https://github.com/OpenSourceNeuro/Spikeling-V2/tree/main/Arduino%20Code/Librairies">here</a> into the library folder. For Windows Users: <strong>C:/Users/x/Documents/Arduino/libraries</strong>
 
