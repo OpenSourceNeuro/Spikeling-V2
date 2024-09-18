@@ -47,7 +47,7 @@ void loop() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /*                                     Define Spikeling Mode                                             */
-  ModeState = digitalRead(pinModeButton);         // Read the mode button state
+  ModeState = DIO.read(pinModeButton);         // Read the mode button state
   if (ModeState == HIGH){                         // If the mode button is pushed:
     Mode += 1;                                      // Increment the Mode by 1
     lightOn(Mode);                                  // Turn next Mode_LED
@@ -194,6 +194,7 @@ void loop() {
     StimStrD = map(StimStr_Value -bits/2, -bits/2, bits/2, -100 , 100);     // Map this value from 0 to 100 that will correspond to the stimulus strength %
     StimStrA = map(StimStr_Value, 0, bits, -100, 100);
   }
+  Serial.println(StimStrA);
 
   if (StimCus_Flag == true){
     Stim_val_D = abs((StimStrD * StimLED_scaling + StimLED_offset));             // The stimulus digital output value is proportional to the potentiometer reading and scaled from parameters
@@ -207,12 +208,12 @@ void loop() {
 
   if (StimCus_Flag == true){
     if ( Stim_counter < Stim_steps/2 ){                // If the number of void loops has not reached half the stimulus duty cycle:
-      analogWrite(pinStim_D, Stim_val_D);                 // Applies the stimulus digital output value to the stimulating LED
+      DIO.write(pinStim_D, Stim_val_D);                 // Applies the stimulus digital output value to the stimulating LED
       dacWrite(pinStim_A, Stim_val_A);                    // Applies the stimulus analog output value to the Current in
       Stim_State = StimStrA;                              // Register stimulus ON
     }
     if ( Stim_counter > Stim_steps/2 ){                 // If number of void loops has exceeded half the stimulus duty cycle period:
-      analogWrite(pinStim_D, 0);                          // Nothing is sent throught the digital output
+      DIO.write(pinStim_D, 0);                          // Nothing is sent throught the digital output
       dacWrite(pinStim_A, 0);                             // Nothing is sent throught the analog output
       Stim_State = 0;                                     // Register stimulus OFF
     }
@@ -235,7 +236,7 @@ void loop() {
     StimStrA = StimCus_val;
     Stim_val_A = abs(StimStrA) * Stim_CurrentScaling;   
     
-    analogWrite(pinStim_D, Stim_val_D);
+    DIO.write(pinStim_D, Stim_val_D);
     dacWrite(pinStim_A, Stim_val_A); 
     
     Stim_State = StimCus_val;
@@ -307,23 +308,23 @@ void loop() {
   }    
 
  if (spike == true){                                           // If spike is registered
-    digitalWrite(pinAxon_D, HIGH);                                 // Send digital output thourgh the Axon digital pin
+    DIO.write(pinAxon_D, HIGH);                                 // Send digital output thourgh the Axon digital pin
   }
   else {                                                         // Otherwise,
-    digitalWrite(pinAxon_D, LOW);                                  // Keep the digital pin in a LOW state
+    DIO.write(pinAxon_D, LOW);                                  // Keep the digital pin in a LOW state
   }   
 
   Axon_AnalogOutput = map(v,Vm_min, Vm_peak, 0,bits8);
   dacWrite(pinAxon_A,Axon_AnalogOutput);
 
 
-  // Serial.print(v);            Serial.print(',');
-  // Serial.print(Stim_State);   Serial.print(',');
-  // Serial.print(I_Total);      Serial.print(',');
-  // Serial.print(Syn1_Vm);      Serial.print(',');
-  // Serial.print(I_Synapse1);   Serial.print(',');
-  // Serial.print(Syn2_Vm);      Serial.print(',');
-  // Serial.println(I_Synapse2); 
-  Serial.println(StimStrA); 
+  Serial.print(v);            Serial.print(',');
+  Serial.print(Stim_State);   Serial.print(',');
+  Serial.print(I_Total);      Serial.print(',');
+  Serial.print(Syn1_Vm);      Serial.print(',');
+  Serial.print(I_Synapse1);   Serial.print(',');
+  Serial.print(Syn2_Vm);      Serial.print(',');
+  Serial.println(I_Synapse2); 
+  //Serial.println(PD_Value_Average); 
   delay(6);
 }

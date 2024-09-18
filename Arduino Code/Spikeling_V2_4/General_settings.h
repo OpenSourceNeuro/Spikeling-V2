@@ -2,8 +2,8 @@
 */
 
 #include <MCP3208.h>
-MCP3208 ADC1;
-MCP3208 ADC2;
+#include <KMP_MCP23S08.h>
+
 
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                       Hardware parameters                         */
@@ -20,32 +20,37 @@ int ModeState = 0;
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                          Pin Definition                           */
 
-int pinADC_Sck     =  18;
-int pinADC_MOSI    =  32;
-int pinADC_MISO    =  33;
-int pinADC_CS1     =  0;
-int pinADC_CS2     =  4;
+int pin_CLK     =  18;
+int pin_MOSI    =  23;
+int pin_MISO    =  19;
+int pin_CS1     =  0;
+int pin_CS2     =  4;
+int pin_CS3     =  5;
+MCP3208 ADC1;
+MCP3208 ADC2;
+KMP_MCP23S08 DIO(pin_CS3);
 
 int pinICPot       =   0;        // ADC 1.0: Inject Current potentiometer pin
-int pinSpike       =   13;       // Buzzer pin
+int pinSpike       =   33;       // Buzzer pin
 
-int pinSyn1_D      =  35;        // Input Digital pin for Synapse 1
+int pinSyn1_D      =   2;        // Input Digital pin for Synapse 1
 int pinSyn1_A      =   0;        // ADC 2.0: Input Analog pin for Synapse 1
 int pinSyn1Pot     =   1;        // ADC 1.1: Synapse 1 Gain potentiometer pin
 
-int pinSyn2_D      =  34;        // Input Digital pin for Synapse 2
+int pinSyn2_D      =  15;        // Input Digital pin for Synapse 2
 int pinSyn2_A      =   1;        // ADC 2.1:Input Analog pin for Synapse 2
 int pinSyn2Pot     =   2;        // ADC 1.2: Synapse 2 Gain potentiometer pin
  
-int pinAxon_D      =  15;        // Output Digital pin for the axon
-int pinAxon_A      =  25;        // OutputAnalog pin for the axon
+int pinAxon_D      =  3;        // Output Digital pin for the axon
+int pinAxon_A      =  26;        // OutputAnalog pin for the axon
 
 int pinPD          =   2;        // ADC 2.2:Photodiode reading pin
 int pinPDPot       =   3;        // ADC 1.3: Photodiode Gain potentiometer pin
 
-int pinModeButton  =  39;        // Mode Button pin
-int pinStim_D      =  22;        // Output Digital pin for the stimulating LED
-int pinStim_A      =  26;        // Output Analog pin for the stimulating Current Input pin
+int pinModeButton  =   1;        // Mode Button pin
+int pinBuzzer      =   0;        // Mute Buzzer pin
+int pinStim_D      =   2;        // Output Digital pin for the stimulating LED
+int pinStim_A      =  25;        // Output Analog pin for the stimulating Current Input pin
 int pinStimStrPot  =   4;        // ADC 1.4: Stimulus amplitude potentiometer pin
 int pinStimFrePot  =   5;        // ADC 1.5: Stimulus frequency potentiometer pin
 int pinCurrentIn   =   3;        // ADC 2.3: Input Analog pin for CurrentIn stimuli
@@ -183,37 +188,35 @@ String   OutputStr;
 void HardwareSettings(){
   Serial.begin(BaudRate);
 
+  ADC1.begin(pin_CLK, pin_MOSI, pin_MISO, pin_CS1);
+  ADC2.begin(pin_CLK, pin_MOSI, pin_MISO, pin_CS2);
+  DIO.begin();
 
-  pinMode(pinLEDVm,OUTPUT);
   pinMode(pinSpike,OUTPUT);
-  
-  pinMode(pinSyn1_D,INPUT);
-
-  pinMode(pinSyn2_D,INPUT);
-
-  pinMode(pinAxon_D,OUTPUT);
-  pinMode(pinAxon_A,OUTPUT);
-  
-  pinMode(pinModeButton,INPUT);
-  
-  pinMode(pinStim_D,OUTPUT);
-  pinMode(pinStim_A,OUTPUT);
-
   pinMode(pinLEDVm, OUTPUT);
   pinMode(pinLEDSpike1, OUTPUT);
   pinMode(pinLEDSpike2, OUTPUT);
+
+  pinMode(pinSyn1_D,INPUT);
+  pinMode(pinSyn2_D,INPUT);
+
+  DIO.pinMode(pinAxon_D,OUTPUT);
+  pinMode(pinAxon_A,OUTPUT);
   
+  DIO.pinMode(pinModeButton,INPUT);
+  DIO.pinMode(pinBuzzer,INPUT);
+  
+  DIO.pinMode(pinStim_D,OUTPUT);
+  pinMode(pinStim_A,OUTPUT);
+
   digitalWrite(pinSpike,LOW);
-  digitalWrite(pinAxon_D,LOW);
+  DIO.write(pinAxon_D,LOW);
   digitalWrite(pinAxon_A,LOW);
-  digitalWrite(pinStim_D,LOW);
+  DIO.write(pinStim_D,LOW);
   digitalWrite(pinStim_A,LOW);
   digitalWrite(pinLEDVm,LOW);
   digitalWrite(pinLEDSpike1,LOW);
-  digitalWrite(pinLEDSpike2,LOW);
-
-  ADC1.begin(pinADC_Sck, pinADC_MOSI, pinADC_MISO, pinADC_CS1);
-  ADC2.begin(pinADC_Sck, pinADC_MOSI, pinADC_MISO, pinADC_CS2);
+  digitalWrite(pinLEDSpike2,LOW); 
 }
 
 float mapfloat(long x, long in_min, long in_max, long out_min, long out_max)
