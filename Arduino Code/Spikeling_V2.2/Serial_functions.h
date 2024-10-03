@@ -219,3 +219,36 @@ void LED_off(){
   digitalWrite(pinLEDSpike2,HIGH);
   analogWrite(pinLEDVm,0);
 }
+
+
+void SerialFunctions(){
+  SCmd.addCommand("NEUR",NeuronMode);
+  SCmd.addCommand("FR1",StimFre_on);
+  SCmd.addCommand("FR0",StimFre_off);
+  SCmd.addCommand("ST1",StimStr_on);
+  SCmd.addCommand("ST0",StimStr_off);
+  SCmd.addCommand("SC1",StimCus_on);
+  SCmd.addCommand("SC0",StimCus_off);
+  SCmd.addCommand("PG1",PDGain_on);
+  SCmd.addCommand("PG0",PDGain_off);
+  SCmd.addCommand("PD1",PDDecay_on);
+  SCmd.addCommand("PD0",PDDecay_off);
+  SCmd.addCommand("PR1",PDRecovery_on);
+  SCmd.addCommand("PR0",PDRecovery_off);
+  SCmd.addCommand("IC1",IC_on);
+  SCmd.addCommand("IC0",IC_off);
+  SCmd.addCommand("NO1",Noise_on);
+  SCmd.addCommand("NO0",Noise_off);
+  SCmd.addCommand("SG11",Syn1Gain_on);
+  SCmd.addCommand("SG10",Syn1Gain_off);
+  SCmd.addCommand("SD11",Syn1Decay_on);
+  SCmd.addCommand("SD10",Syn1Decay_off);
+  SCmd.addCommand("SG12",Syn2Gain_on);
+  SCmd.addCommand("SG20",Syn2Gain_off);
+  SCmd.addCommand("SD21",Syn2Decay_on);
+  SCmd.addCommand("SD20",Syn2Decay_off);
+  SCmd.addCommand("BZ1",Buzzer_on);
+  SCmd.addCommand("BZ0",Buzzer_off);
+  SCmd.addCommand("LED1",LED_on);
+  SCmd.addCommand("LED0",LED_off);
+}

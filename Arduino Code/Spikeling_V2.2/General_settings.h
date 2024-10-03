@@ -128,8 +128,7 @@ int PD_Polarity = 1;
 int StimStr_Value;               // Stimulus Strength potentiometer value
 int StimStrD;                     // Scaled stimulus strength
 int StimStrA;
-int StimStrA_mini = 10;
-int Stim_minStr         = 2;     // Minimum stength value percentage below which the digital output is equal to 0
+int StimStrA_mini = 5;
 int Stim_val_D          = 0;     // Stimulus Digital output for stimulating LED
 int Stim_val_A          = 0;     // Stimulus Analog output ofr Current in pin
 int StimCus_val         = 0;
@@ -139,7 +138,7 @@ float Stim_state;                  // Status of the stimulus (ON or OFF / 1 or 0
 float StimLED_scaling     = 5.12;    // Scaling applied to the digital out value
 int StimLED_offset = 10;
 float Stim_CurrentScaling = 1.5;  // Scaling applied to the analog out value
-float I_Stim_mini = 0.1;
+float I_Stim_mini = 0;
 
 int StimFre_Value;               // Stimulus Frequency potentiometer value
 int StimFre;                     // Scaled stimulus frequency
