@@ -337,8 +337,8 @@ void loop() {
   Serial.print(I_Total);      Serial.print(',');
   Serial.print(Syn1_Vm);      Serial.print(',');
   Serial.print(I_Synapse1);   Serial.print(',');
-  Serial.print(CurrentIn_Value);      Serial.print(',');
-  Serial.println(I_Stim); 
+  Serial.print(Syn2_Vm);      Serial.print(',');
+  Serial.println(I_Synapse2); 
 
   delay(5);
 }
