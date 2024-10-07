@@ -137,7 +137,7 @@ int StimCus_A           = 0;
 float Stim_state;                  // Status of the stimulus (ON or OFF / 1 or 0);
 float StimLED_scaling     = 5.12;    // Scaling applied to the digital out value
 int StimLED_offset = 10;
-float Stim_CurrentScaling = 1.5;  // Scaling applied to the analog out value
+float Stim_CurrentScaling = 0.9;  // Scaling applied to the analog out value
 float I_Stim_mini = 0;
 
 int StimFre_Value;               // Stimulus Frequency potentiometer value
