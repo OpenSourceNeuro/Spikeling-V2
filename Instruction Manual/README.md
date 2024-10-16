@@ -89,9 +89,14 @@ The software itself consists on a Graphical User Interface (GUI) built on python
 
   <br></br>
 
+ ##### Installing Libraries
+
+  <br>
+
   Before compiling the Spikeling code, a few libraries need to be installed:
     - Arduino-SerialCommand
     - MCP3208 by Rodolfo Pietro
+    - Gaussian by Ivan Seidel
 
   Most of them can be downloaded from the Arduino IDE: Go to <strong>Sketch > Include Library > Manage Libraries</strong>, enter the library name, then install it following the same process as for the board library.
 
