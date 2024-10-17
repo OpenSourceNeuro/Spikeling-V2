@@ -2,6 +2,7 @@
 */
 
 #include <MCP3208.h>
+#include <Gaussian.h>
 MCP3208 ADC1;
 MCP3208 ADC2;
 
@@ -58,6 +59,7 @@ int pinLEDSpike2   =  12;
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                         Neuron parameters                         */
 int      Vm_min    = -90;        // Minimum voltage value the v variable from Izhikevich can take
+int      Vm_max    =  100;        // Maximum voltage value 
 int      Vm_spike  = -30;        // Voltage value above which the neuron will spike
 int      Vm_peak   =  30;        // Voltage peak value from which the v variable will start its recovery
 boolean  spike     = false;      // Boolean used for registrating spike events
@@ -67,6 +69,7 @@ float    I_Total;                // Sum of all applied current to the neuron (I_
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                     Voltage Clamp parameters                      */
 int   IC_value;                  // Inject Current potentiometer value
+int   IC_PotOffset  = 200;
 int   IC_PotScaling =  bits/100;  // Inject Current value scaling - The lower, the stronger the impact of the IC potentiometer
 float I_IC;                      // "Current" value generated from the two previous variables in order to modify the holding voltage value
 
@@ -77,6 +80,9 @@ int SpikeIn1State;               // Synapse 1 digital input
 int Syn1_Gain;                   // Synapse 1 gain potentiometer value
 float Syn1PotScaling =  bits/50;        // Synapse 1 gain sacaling - The lower, the stronger the impact of the Syn1_Potentiometer.  Default = 2
 float Syn1_Amp;                    // Synapse 1 applied gain
+int Syn1_PotOffset = 200;
+int Syn_AnalogOffsetLow = -10;
+int Syn_AnalogOffsetHigh = -400;
 int Syn1_offset = 100;
 float I_Synapse1 = 0.0;                  // Synapse 1 input current
 float Synapse1_decay = 0.995;      // Synpase 1 decay rate. The difference to 1 matters - the smaller the difference, the slower the decay. Default  = 0.995
@@ -88,6 +94,7 @@ int SpikeIn2State;               // Synapse 2 digital input
 int Syn2_Gain;                   // Synapse 2 gain potentiometer value
 float Syn2PotScaling =  bits/50;        // Synapse 2 gain sacaling - The lower, the stronger the impact of the Syn2_Potentiometer.  Default = 2
 float Syn2_Amp;                    // Synapse 2 applied gain
+int Syn2_PotOffset = 200;
 int Syn2_offset = 100;
 float I_Synapse2 = 0.0;                  // Synapse 2 input current
 float Synapse2_decay = 0.990;      // Synpase 2 decay rate. The difference to 1 matters - the smaller the difference, the slower the decay. Default  = 0.990
@@ -158,6 +165,7 @@ int I_Stim = 0;                  // Patch Current-In current
 int   Noise_Gain;                // Noise potentiometer value
 int   NoiseScaling = 25;         // Noise gain scaling - The lower, the stronger the impact of the Noise_Potentiometer.  Default = 1000
 int   Noise_Amp;                 // Noise applied gain
+int   Noise_PotOffset = 150;
 float I_Noise;                   // Noise current
 
 // // // // // // // // // // // // // // // // // // // // // // // //
