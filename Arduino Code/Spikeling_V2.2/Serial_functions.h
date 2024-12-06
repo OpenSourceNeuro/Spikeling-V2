@@ -139,7 +139,7 @@ void Noise_on(){
   char *arg;
   arg = SCmd.next();
   if (arg != NULL){
-    Noise_Amp = atoi(arg);
+    I_Noise_Gen = atoi(arg);
   }
 }
 void Noise_off(){

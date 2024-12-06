@@ -1,17 +1,15 @@
-//#include <analogWrite.h>
 #include "Izhikevich_parameters.h"
 #include "Serial_functions.h"
 
 
-float v; // voltage in Izhikevich model
-float u; // recovery variable in Izhikevich model
-
 void setup() {
   HardwareSettings();
-  Mode_opening(); 
   Izhikevich_opening();
   SerialFunctions();
+  SerialBlank();
+  Mode_opening(); 
 }
+
 
 void loop() {
   
@@ -43,10 +41,6 @@ void loop() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /*                               Setting Voltage membrane clamp value                                    */
-  // if (IC_Flag == true){
-  //   IC_value = ADC1.readADC(pinICPot) - bits/2;       // Reads IC potentiometer value and scales it to -2048 to 2048
-  //   I_IC = IC_value / IC_PotScaling;                 // Generates "current" value from the reading and scales it from parameters
-  // }
 
   if (IC_Flag == true){
     IC_value = ADC1.readADC(pinICPot) - bits/2;       // Reads IC potentiometer value and scales it to -2048 to 2048
@@ -64,16 +58,12 @@ void loop() {
   }
   
 
+
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /*                                          Noise Generator                                              */
-  // if (Noise_Flag == true){
-  //   Noise_Gain = ADC1.readADC(pinNoisePot);           // Reads Noise potentiometer value from 0 to 4095
-  //   Noise_Amp = Noise_Gain / NoiseScaling;          // Generates current value from the reading and scales it from parameters
-  // }
-  // I_Noise = random( -Noise_Amp/2, Noise_Amp/2 );  // Generates random current value from the reading and scales it from parameters
 
-    if (Noise_Flag == true){
-    Noise_Gain = ADC1.readADC(pinNoisePot);           // Reads Noise potentiometer value from 0 to 4095
+  Noise_Gain = ADC1.readADC(pinNoisePot);           // Reads Noise potentiometer value from 0 to 4095
+  if (Noise_Flag == true){
     if (Noise_Gain <= Noise_PotOffset){
       I_Noise = 0;
     }
@@ -83,6 +73,11 @@ void loop() {
       I_Noise = Noisy.random();
     }
   }
+
+  if (Noise_Flag == false){
+    I_Noise = I_Noise_Gen;
+  }
+
 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
@@ -104,7 +99,7 @@ void loop() {
 
   if (PDGain_Flag == true){
     PD_PotValue = ADC1.readADC(pinPDPot) - bits/2; // Reads Photodiode Gain potentiometer value and scales it to -2048 to 2048
-    PD_Amp = map(PD_PotValue, -bits/2, bits/2, -PD_PotRange, PD_PotRange)+1;
+    PD_Amp = map(PD_PotValue, -bits/2, bits/2, -PD_PotRange, PD_PotRange)+0.5;
   }
 
   if (PD_Amp >= 0){
@@ -140,26 +135,6 @@ void loop() {
      
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /*                                             Synapse 1                                                 */
-  // SpikeIn1State = digitalRead(pinSyn1_D);         // Reads Synapse 1 digital input
-
-  // if (Syn1Gain_Flag == true){
-  //   Syn1_Gain = ADC1.readADC(pinSyn1Pot) - bits/2 + Syn1_offset;    // Reads Synaptic Gain 1 potentiometer value and scales it to -2048 to 2048
-  //   Syn1_Amp = Syn1_Gain / Syn1PotScaling;          // Generates current value from the reading and scales it from parameters
-  // }
-  
-  // if (SpikeIn1State == HIGH){                     // If Spike is detected
-  //   I_Synapse1 += Syn1_Amp;                         // Apply the synaptic current from Syn1 related to the synaptic gain 1
-  // }
-  
-  // if (Syn1Decay_Flag == true){
-  //   Synapse1_decay = 0.995;
-  // }
-  
-  // I_Synapse1 *= Synapse1_decay;                   // Decay synaptic current towards zero
-
-  // Axon_AnalogInput1 = ADC2.readADC(pinSyn1_A);
-  // Syn1_Vm = mapfloat(Axon_AnalogInput1,0, bits11, Vm_min, Vm_peak) + Axon_AnalogOffset;
-
 
   SpikeIn1State = digitalRead(pinSyn1_D);         // Reads Synapse 1 digital input
 
@@ -194,26 +169,6 @@ void loop() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
 /*                                             Synapse 2                                                 */
-  // SpikeIn2State = digitalRead(pinSyn2_D);         // Reads Synapse 2 digital input
-
-  // if (Syn2Gain_Flag == true){
-  //   Syn2_Gain = ADC1.readADC(pinSyn2Pot) - bits/2 + Syn2_offset;    // Reads Synaptic Gain 2 potentiometer value and scales it to -2048 to 2048
-  //   Syn2_Amp = Syn2_Gain / Syn2PotScaling ;          // Generates current value from the reading and scales it from parameters
-  // }
-
-  // if (SpikeIn2State == HIGH){                     // If Spike is detected
-  //   I_Synapse2 += Syn2_Amp;                         // Apply the synaptic current from Syn2 related to the synaptic gain 2
-  // }
-
-  // if (Syn2Decay_Flag == true){
-  //   Synapse2_decay = 0.990;
-  // }
-  
-  // I_Synapse2 *= Synapse2_decay;                   // Decay synaptic current towards zero
-
-  // Axon_AnalogInput2 = ADC2.readADC(pinSyn2_A);
-  // Syn2_Vm = mapfloat(Axon_AnalogInput2,0, bits11, Vm_min, Vm_peak) + Axon_AnalogOffset;
-  
 
     SpikeIn2State = digitalRead(pinSyn2_D);         // Reads Synapse 1 digital input
 
@@ -382,6 +337,11 @@ void loop() {
     v = Vm_min;                                                             // Keep the voltage at Vm_min : Prevent pinVm going into overdrive - but also means that it will flatline at Vm_min. 
   } 
 
+  if (v >= 0){
+    v = Vm_peak;
+  }
+
+
 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
@@ -417,7 +377,7 @@ void loop() {
     digitalWrite(pinAxon_D, LOW);                                           // Keep the digital pin in a LOW state
   }   
 
-  Axon_AnalogOutput = map(v,Vm_min, Vm_peak, 0,bits8);                    //
+  Axon_AnalogOutput = map(v,Vm_min, Vm_max, 0,bits8);                    //
   dacWrite(pinAxon_A,Axon_AnalogOutput);                                  //
 
 
@@ -426,7 +386,7 @@ void loop() {
   Serial.print(I_Total);      Serial.print(',');
   Serial.print(Syn1_Vm);      Serial.print(',');
   Serial.print(I_Synapse1);   Serial.print(',');
-  Serial.print(Syn2_Vm);      Serial.print(',');
+  Serial.print(Syn2_Vm);    Serial.print(',');
   Serial.println(I_Synapse2); 
 
   delay(5);

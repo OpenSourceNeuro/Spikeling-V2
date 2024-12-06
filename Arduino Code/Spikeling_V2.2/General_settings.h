@@ -58,7 +58,7 @@ int pinLEDSpike2   =  12;
 
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                         Neuron parameters                         */
-int      Vm_min    = -90;        // Minimum voltage value the v variable from Izhikevich can take
+int      Vm_min    = -110;        // Minimum voltage value the v variable from Izhikevich can take
 int      Vm_max    =  100;        // Maximum voltage value 
 int      Vm_spike  = -30;        // Voltage value above which the neuron will spike
 int      Vm_peak   =  30;        // Voltage peak value from which the v variable will start its recovery
@@ -167,6 +167,7 @@ int   NoiseScaling = 25;         // Noise gain scaling - The lower, the stronger
 int   Noise_Amp;                 // Noise applied gain
 int   Noise_PotOffset = 150;
 float I_Noise;                   // Noise current
+float I_Noise_Gen;
 
 // // // // // // // // // // // // // // // // // // // // // // // //
 /*                         Rx Tx parameters                          */
@@ -184,6 +185,7 @@ boolean Syn2Gain_Flag = true;
 boolean Syn2Decay_Flag = true;
 boolean Buzzer_Flag = true;
 boolean LED_Flag = true;
+boolean SerialFlag = true;
 
 String   OutputStr;
 
@@ -221,6 +223,18 @@ void HardwareSettings(){
 
   ADC1.begin(pinADC_Sck, pinADC_MOSI, pinADC_MISO, pinADC_CS1);
   ADC2.begin(pinADC_Sck, pinADC_MOSI, pinADC_MISO, pinADC_CS2);
+}
+
+void SerialBlank(){
+  Serial.print(0);         Serial.print(',');
+  Serial.print(0);         Serial.print(',');
+  Serial.print(I_Total);   Serial.print(',');
+  Serial.print(0);         Serial.print(',');
+  Serial.print(0);         Serial.print(',');
+  Serial.print(0);         Serial.print(',');
+  Serial.println(0);  
+
+  SerialFlag = true;
 }
 
 float mapfloat(long x, long in_min, long in_max, long out_min, long out_max)

@@ -36,6 +36,8 @@ prior to the spike, the threshold potential can be as low as -55 mV or as high a
   
 */
 
+float v; // voltage in Izhikevich model
+float u; // recovery variable in Izhikevich model
 
 float timestep_ms     = 0.1;  // default 0.1. This is the "intended" refresh rate of the model.
 float a_Izhikevich;   // time scale of recovery variable u. Smaller a gives slower recovery
