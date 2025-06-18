@@ -240,6 +240,7 @@ QProgressBar::chunk{
             <property name="font">
              <font>
               <pointsize>12</pointsize>
+              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -319,6 +320,12 @@ QProgressBar::chunk{
           </property>
           <item alignment="Qt::AlignBottom">
            <widget class="QFrame" name="License_Frame">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
               <width>500</width>
@@ -347,18 +354,24 @@ QProgressBar::chunk{
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignBottom">
               <widget class="QLabel" name="label_2">
                <property name="text">
-                <string>This project is licensed under the GNU General Public License v3.0</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;This project is licensed under the GNU General Public License v3.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
             </layout>
            </widget>
           </item>
-          <item alignment="Qt::AlignRight|Qt::AlignBottom">
+          <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
            <widget class="QFrame" name="Logo_Frame">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -367,7 +380,7 @@ QProgressBar::chunk{
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <property name="spacing">
-              <number>10</number>
+              <number>20</number>
              </property>
              <property name="leftMargin">
               <number>0</number>
@@ -381,50 +394,18 @@ QProgressBar::chunk{
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item alignment="Qt::AlignBottom">
-              <widget class="QLabel" name="Baden_Logo">
-               <property name="maximumSize">
-                <size>
-                 <width>122</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/Baden-Logo.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="ON_Logo">
-               <property name="maximumSize">
-                <size>
-                 <width>180</width>
-                 <height>20</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/ON-Logo.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
+             <item alignment="Qt::AlignVCenter">
               <widget class="QLabel" name="Sussex_Logo">
+               <property name="minimumSize">
+                <size>
+                 <width>236</width>
+                 <height>75</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
-                 <width>95</width>
-                 <height>30</height>
+                 <width>236</width>
+                 <height>75</height>
                 </size>
                </property>
                <property name="text">
@@ -440,17 +421,23 @@ QProgressBar::chunk{
              </item>
              <item>
               <widget class="QLabel" name="TReND_Logo">
+               <property name="minimumSize">
+                <size>
+                 <width>113</width>
+                 <height>100</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
-                 <width>40</width>
-                 <height>30</height>
+                 <width>113</width>
+                 <height>100</height>
                 </size>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="resources.qrc">:/resources/resources/TReND-Logo.png</pixmap>
+                <pixmap resource="resources.qrc">:/resources/resources/CaMinA.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -462,10 +449,16 @@ QProgressBar::chunk{
           </item>
           <item>
            <widget class="QFrame" name="Credits_Frame">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>350</width>
-              <height>50</height>
+              <width>500</width>
+              <height>100</height>
              </size>
             </property>
             <property name="frameShape">
@@ -474,7 +467,7 @@ QProgressBar::chunk{
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+            <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -491,19 +484,9 @@ QProgressBar::chunk{
               <number>0</number>
              </property>
              <item>
-              <widget class="QLabel" name="Credits_Label1">
+              <widget class="QLabel" name="Credits_Label">
                <property name="text">
-                <string>&lt;strong&gt;Developped by &lt;/strong&gt;M.J.Y. Zimmermann &amp; A.M. Chagas</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="Credits_Label2">
-               <property name="text">
-                <string> &lt;strong&gt;Based on&lt;/strong&gt; an original idea by T.Baden</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Developped by &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;M.J.Y. Zimmermann&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Based on&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; an original idea by T. Baden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

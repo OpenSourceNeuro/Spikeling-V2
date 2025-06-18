@@ -1,3 +1,8 @@
+
+########################################################################
+#                          Libraries import                            #
+
+from PySide6.QtWidgets import QFileDialog
 import Settings
 
 
@@ -8,6 +13,65 @@ class Imaging202():
         self.ui.MultipleImaging_Oscilloscope_widget.setBackground(Settings.DarkSolarized[0])
 
 
+    # Data Recording Functions
+    def BrowseRecordFolder(self):
+        FolderName = QFileDialog.getExistingDirectory(
+            caption='Hey! Select the folder where your experiment will be saved',
+            dir=".\Recordings")
+        if FolderName:
+            self.MultipleImaging_DataRecording_SelectRecordFolder_label.setText(FolderName)
+            self.MultipleImaging_DataRecording_RecordFolder_value.setEnabled(True)
+            self.MultipleImaging_DataRecording_RecordFolder_value.setPlaceholderText("Enter a file name")
+            self.MultipleImagingFolderFlag = True
+
+
+    def RecordFolderText(self):
+        FolderName = self.ui.MultipleImaging_DataRecording_SelectRecordFolder_label.text()
+        FileName = self.ui.MultipleImaging_DataRecording_RecordFolder_value.text()
+        self.ui.MultipleImaging_SelectedFolderLabel.setText(FolderName + '/' + FileName + '   ')
+
+
+    def RecordButton(self):
+        ConnectionFlag = False
+        FolderFlag = False
+        FileFlag = False
+
+        if self.MultipleImagingConnectionFlag == False:
+            self.ui.MultipleImaging_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title="Error: Spikeling not connected",
+                                Text="Spikeling data stream first needs to be connected. Check that a spikeling is running on either the neuron interface or the neuron emulator tab")
+        else:
+            ConnectionFlag = True
+
+        if self.ui.MultipleImagingFolderFlag == True:
+            FolderFlag = True
+
+        else:
+            self.ui.MultipleImaging_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title="Error: no folder selected",
+                                Text="Select a folder where to record your data by clicking on the - browse directory - button")
+
+        if self.ui.MultipleImaging_DataRecording_RecordFolder_value.text():
+            FileFlag = True
+        else:
+            self.ui.MultipleImaging_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title="Error: no file selected",
+                                Text="Select a file where to record your data by clicking on the - browse directory - button")
+
+        if ConnectionFlag == True and FolderFlag == True and FileFlag == True:
+            if self.ui.MultipleImaging_DataRecording_Record_pushButton.isChecked():
+                self.ui.MultipleImaging_DataRecording_Record_pushButton.setText("Stop Recording")
+                self.ui.MultipleImaging_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
+                                                                                      "background-color: rgb(50, 220, 47);")
+
+            else:
+                self.ui.MultipleImaging_DataRecording_Record_pushButton.setChecked(False)
+                self.ui.MultipleImaging_DataRecording_Record_pushButton.setText("Record")
+                self.ui.MultipleImaging_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
+                                                                                      "background-color: rgb(220, 50, 47);")
 
     # FrameRate
     def ActivateMultipleFrameRate(self):

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Spikeling_UI.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -25,7 +25,7 @@ from pyqtgraph import PlotWidget
 import resources_rc
 import resources_rc
 
-class Ui_MainWindow(QWidget):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -331,6 +331,43 @@ class Ui_MainWindow(QWidget):
 "\n"
 "\n"
 "\n"
+"#Imaging_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#Imaging_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#Imaging_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#Imaging_DataRecording_box QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"#MultipleIm"
+                        "aging_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
 "\n"
 "\n"
 "#page_401 QPushButton{\n"
@@ -352,10 +389,10 @@ class Ui_MainWindow(QWidget):
 "}\n"
 "\n"
 "\n"
-""
-                        "\n"
 "\n"
-"#Exercise101_Button_frame QPushButton{\n"
+"\n"
+"#Exercise101"
+                        "_Button_frame QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
@@ -398,7 +435,7 @@ class Ui_MainWindow(QWidget):
         font.setKerning(True)
         self.appTitle_pushButton.setFont(font)
         icon = QIcon()
-        icon.addFile(u":/resources/resources/Spiky_Logo.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/resources/resources/Spiky_Logo.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.appTitle_pushButton.setIcon(icon)
         self.appTitle_pushButton.setIconSize(QSize(60, 32))
         self.appTitle_pushButton.setCheckable(False)
@@ -419,7 +456,7 @@ class Ui_MainWindow(QWidget):
         self.reduce_pushButton = QPushButton(self.app_frame)
         self.reduce_pushButton.setObjectName(u"reduce_pushButton")
         icon1 = QIcon()
-        icon1.addFile(u":/resources/resources/Artboard 1.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/resources/resources/Artboard 1.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.reduce_pushButton.setIcon(icon1)
         self.reduce_pushButton.setIconSize(QSize(24, 24))
 
@@ -428,7 +465,7 @@ class Ui_MainWindow(QWidget):
         self.expand_pushButton = QPushButton(self.app_frame)
         self.expand_pushButton.setObjectName(u"expand_pushButton")
         icon2 = QIcon()
-        icon2.addFile(u":/resources/resources/Expand.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/resources/resources/Expand.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.expand_pushButton.setIcon(icon2)
         self.expand_pushButton.setIconSize(QSize(24, 24))
 
@@ -437,7 +474,7 @@ class Ui_MainWindow(QWidget):
         self.exit_pushButton = QPushButton(self.app_frame)
         self.exit_pushButton.setObjectName(u"exit_pushButton")
         icon3 = QIcon()
-        icon3.addFile(u":/resources/resources/Exit.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/resources/resources/Exit.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.exit_pushButton.setIcon(icon3)
         self.exit_pushButton.setIconSize(QSize(24, 24))
 
@@ -463,7 +500,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_112.setContentsMargins(0, 0, 0, 0)
         self.leftMenuContainer = QWidget(self.CenterMainFrame)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
-        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.leftMenuContainer.sizePolicy().hasHeightForWidth())
@@ -499,7 +536,7 @@ class Ui_MainWindow(QWidget):
         font1.setPointSize(12)
         self.menu_pushButton.setFont(font1)
         icon4 = QIcon()
-        icon4.addFile(u":/resources/resources/MenuLeft.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/resources/resources/MenuLeft.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.menu_pushButton.setIcon(icon4)
         self.menu_pushButton.setIconSize(QSize(30, 30))
 
@@ -508,7 +545,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_4.addWidget(self.menu_frame)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer_2)
 
@@ -525,7 +562,7 @@ class Ui_MainWindow(QWidget):
         self.SpikelingMenu_pushButton.setObjectName(u"SpikelingMenu_pushButton")
         self.SpikelingMenu_pushButton.setFont(font1)
         icon5 = QIcon()
-        icon5.addFile(u":/resources/resources/Neuron.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u":/resources/resources/Neuron.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.SpikelingMenu_pushButton.setIcon(icon5)
         self.SpikelingMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -535,7 +572,7 @@ class Ui_MainWindow(QWidget):
         self.ImagingMenu_pushButton.setObjectName(u"ImagingMenu_pushButton")
         self.ImagingMenu_pushButton.setFont(font1)
         icon6 = QIcon()
-        icon6.addFile(u":/resources/resources/Imaging.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u":/resources/resources/Imaging.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.ImagingMenu_pushButton.setIcon(icon6)
         self.ImagingMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -545,7 +582,7 @@ class Ui_MainWindow(QWidget):
         self.NeuronGeneratorMenu_pushButton.setObjectName(u"NeuronGeneratorMenu_pushButton")
         self.NeuronGeneratorMenu_pushButton.setFont(font1)
         icon7 = QIcon()
-        icon7.addFile(u":/resources/resources/StimGen.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u":/resources/resources/StimGen.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.NeuronGeneratorMenu_pushButton.setIcon(icon7)
         self.NeuronGeneratorMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -555,7 +592,7 @@ class Ui_MainWindow(QWidget):
         self.StimuluGeneratorMenu_pushButton.setObjectName(u"StimuluGeneratorMenu_pushButton")
         self.StimuluGeneratorMenu_pushButton.setFont(font1)
         icon8 = QIcon()
-        icon8.addFile(u":/resources/resources/Stimulus.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u":/resources/resources/Stimulus.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.StimuluGeneratorMenu_pushButton.setIcon(icon8)
         self.StimuluGeneratorMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -565,7 +602,7 @@ class Ui_MainWindow(QWidget):
         self.ExercisesMenu_pushButton.setObjectName(u"ExercisesMenu_pushButton")
         self.ExercisesMenu_pushButton.setFont(font1)
         icon9 = QIcon()
-        icon9.addFile(u":/resources/resources/Exercices.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon9.addFile(u":/resources/resources/Exercices.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.ExercisesMenu_pushButton.setIcon(icon9)
         self.ExercisesMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -583,7 +620,7 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_5.setSpacing(10)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_5.addItem(self.verticalSpacer)
 
@@ -591,7 +628,7 @@ class Ui_MainWindow(QWidget):
         self.SettingsMenu_pushButton.setObjectName(u"SettingsMenu_pushButton")
         self.SettingsMenu_pushButton.setFont(font1)
         icon10 = QIcon()
-        icon10.addFile(u":/resources/resources/Tutorial.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon10.addFile(u":/resources/resources/Tutorial.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.SettingsMenu_pushButton.setIcon(icon10)
         self.SettingsMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -601,7 +638,7 @@ class Ui_MainWindow(QWidget):
         self.AboutMenu_pushButton.setObjectName(u"AboutMenu_pushButton")
         self.AboutMenu_pushButton.setFont(font1)
         icon11 = QIcon()
-        icon11.addFile(u":/resources/resources/About.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon11.addFile(u":/resources/resources/About.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.AboutMenu_pushButton.setIcon(icon11)
         self.AboutMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -611,7 +648,7 @@ class Ui_MainWindow(QWidget):
         self.HelpMenu_pushButton.setObjectName(u"HelpMenu_pushButton")
         self.HelpMenu_pushButton.setFont(font1)
         icon12 = QIcon()
-        icon12.addFile(u":/resources/resources/Help.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon12.addFile(u":/resources/resources/Help.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.HelpMenu_pushButton.setIcon(icon12)
         self.HelpMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -621,7 +658,7 @@ class Ui_MainWindow(QWidget):
         self.GitHubMenu_pushButton.setObjectName(u"GitHubMenu_pushButton")
         self.GitHubMenu_pushButton.setFont(font1)
         icon13 = QIcon()
-        icon13.addFile(u":/resources/resources/GitHub.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon13.addFile(u":/resources/resources/GitHub.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.GitHubMenu_pushButton.setIcon(icon13)
         self.GitHubMenu_pushButton.setIconSize(QSize(24, 24))
 
@@ -662,7 +699,7 @@ class Ui_MainWindow(QWidget):
         self.centerMenuSubContainer_exit_pushButton.setObjectName(u"centerMenuSubContainer_exit_pushButton")
         self.centerMenuSubContainer_exit_pushButton.setLayoutDirection(Qt.RightToLeft)
         icon14 = QIcon()
-        icon14.addFile(u":/resources/resources/DropMenuLeft.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon14.addFile(u":/resources/resources/DropMenuLeft.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.centerMenuSubContainer_exit_pushButton.setIcon(icon14)
         self.centerMenuSubContainer_exit_pushButton.setIconSize(QSize(20, 20))
 
@@ -689,7 +726,7 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_19.setSpacing(6)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.verticalLayout_19.setContentsMargins(9, 9, 9, 9)
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_19.addItem(self.verticalSpacer_5)
 
@@ -701,7 +738,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_19.addWidget(self.Neuron_pushButton)
 
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_19.addItem(self.verticalSpacer_8)
 
@@ -713,9 +750,23 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_19.addWidget(self.NeuronSimulation_pushButton)
 
-        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_19.addItem(self.verticalSpacer_6)
+
+        self.NeuronDataAnalysis_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
+        self.NeuronDataAnalysis_pushButton.setObjectName(u"NeuronDataAnalysis_pushButton")
+        self.NeuronDataAnalysis_pushButton.setFont(font1)
+        icon15 = QIcon()
+        icon15.addFile(u":/resources/resources/DataAnalysis.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.NeuronDataAnalysis_pushButton.setIcon(icon15)
+        self.NeuronDataAnalysis_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_19.addWidget(self.NeuronDataAnalysis_pushButton)
+
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_19.addItem(self.verticalSpacer_7)
 
         self.NeuronTutorial_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
         self.NeuronTutorial_pushButton.setObjectName(u"NeuronTutorial_pushButton")
@@ -725,21 +776,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_19.addWidget(self.NeuronTutorial_pushButton)
 
-        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_19.addItem(self.verticalSpacer_7)
-
-        self.NeuronDataAnalysis_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
-        self.NeuronDataAnalysis_pushButton.setObjectName(u"NeuronDataAnalysis_pushButton")
-        self.NeuronDataAnalysis_pushButton.setFont(font1)
-        icon15 = QIcon()
-        icon15.addFile(u":/resources/resources/DataAnalysis.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.NeuronDataAnalysis_pushButton.setIcon(icon15)
-        self.NeuronDataAnalysis_pushButton.setIconSize(QSize(30, 30))
-
-        self.verticalLayout_19.addWidget(self.NeuronDataAnalysis_pushButton)
-
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_19.addItem(self.verticalSpacer_4)
 
@@ -759,7 +796,7 @@ class Ui_MainWindow(QWidget):
         self.Imaging_SubMenu_button_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_59 = QVBoxLayout(self.Imaging_SubMenu_button_frame)
         self.verticalLayout_59.setObjectName(u"verticalLayout_59")
-        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_59.addItem(self.verticalSpacer_9)
 
@@ -771,7 +808,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_59.addWidget(self.ImagingStimulation_pushButton)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_59.addItem(self.verticalSpacer_3)
 
@@ -783,7 +820,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_59.addWidget(self.MultipleImagingStimulation_pushButton)
 
-        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_59.addItem(self.verticalSpacer_10)
 
@@ -795,7 +832,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_59.addWidget(self.ImagingTutorial_pushButton)
 
-        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_59.addItem(self.verticalSpacer_11)
 
@@ -807,7 +844,7 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_59.addWidget(self.ImagingDataAnalysis_pushButton)
 
-        self.verticalSpacer_12 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_12 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_59.addItem(self.verticalSpacer_12)
 
@@ -841,7 +878,7 @@ class Ui_MainWindow(QWidget):
         self.Exercices_SubMenu_button_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_61 = QVBoxLayout(self.Exercices_SubMenu_button_frame)
         self.verticalLayout_61.setObjectName(u"verticalLayout_61")
-        self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_13 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_61.addItem(self.verticalSpacer_13)
 
@@ -849,7 +886,7 @@ class Ui_MainWindow(QWidget):
         self.toolBox.setObjectName(u"toolBox")
         self.page_3 = QWidget()
         self.page_3.setObjectName(u"page_3")
-        self.page_3.setGeometry(QRect(0, 0, 216, 118))
+        self.page_3.setGeometry(QRect(0, 0, 163, 111))
         self.verticalLayout_98 = QVBoxLayout(self.page_3)
         self.verticalLayout_98.setSpacing(5)
         self.verticalLayout_98.setObjectName(u"verticalLayout_98")
@@ -876,7 +913,7 @@ class Ui_MainWindow(QWidget):
         self.toolBox.addItem(self.page_3, u"1 - Introduction to Spikeling")
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
-        self.page_4.setGeometry(QRect(0, 0, 216, 77))
+        self.page_4.setGeometry(QRect(0, 0, 83, 71))
         self.verticalLayout_99 = QVBoxLayout(self.page_4)
         self.verticalLayout_99.setSpacing(5)
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
@@ -894,32 +931,32 @@ class Ui_MainWindow(QWidget):
         self.toolBox.addItem(self.page_4, u"2 - Electrophysiology")
         self.page_6 = QWidget()
         self.page_6.setObjectName(u"page_6")
-        self.page_6.setGeometry(QRect(0, 0, 216, 69))
+        self.page_6.setGeometry(QRect(0, 0, 65, 16))
         self.toolBox.addItem(self.page_6, u"3 - Photo-stimulation")
         self.page_7 = QWidget()
         self.page_7.setObjectName(u"page_7")
-        self.page_7.setGeometry(QRect(0, 0, 216, 69))
+        self.page_7.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_7, u"4 - Synapses")
         self.page_8 = QWidget()
         self.page_8.setObjectName(u"page_8")
-        self.page_8.setGeometry(QRect(0, 0, 216, 69))
+        self.page_8.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_8, u"5 - Neuronal network")
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
-        self.page_5.setGeometry(QRect(0, 0, 216, 69))
+        self.page_5.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_5, u"6- Fluorescence Imaging")
         self.page_9 = QWidget()
         self.page_9.setObjectName(u"page_9")
-        self.page_9.setGeometry(QRect(0, 0, 216, 69))
+        self.page_9.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_9, u"7 - Spike Inference")
         self.page_10 = QWidget()
         self.page_10.setObjectName(u"page_10")
-        self.page_10.setGeometry(QRect(0, 0, 216, 69))
+        self.page_10.setGeometry(QRect(0, 0, 100, 30))
         self.toolBox.addItem(self.page_10, u"8 - Methodology")
 
         self.verticalLayout_61.addWidget(self.toolBox)
 
-        self.verticalSpacer_14 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_14 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_61.addItem(self.verticalSpacer_14)
 
@@ -1014,7 +1051,7 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.mainbodyContainer = QWidget(self.mainWindowContainer)
         self.mainbodyContainer.setObjectName(u"mainbodyContainer")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.mainbodyContainer.sizePolicy().hasHeightForWidth())
@@ -1026,7 +1063,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.mainbody_stackedWidget = QStackedWidget(self.mainbodyContainer)
         self.mainbody_stackedWidget.setObjectName(u"mainbody_stackedWidget")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.mainbody_stackedWidget.sizePolicy().hasHeightForWidth())
@@ -1058,7 +1095,7 @@ class Ui_MainWindow(QWidget):
 
         self.mainbody_header_text = QLabel(self.mainbody_header_frame)
         self.mainbody_header_text.setObjectName(u"mainbody_header_text")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.mainbody_header_text.sizePolicy().hasHeightForWidth())
@@ -1075,7 +1112,7 @@ class Ui_MainWindow(QWidget):
 
         self.mainbody_content_frame = QFrame(self.page_000)
         self.mainbody_content_frame.setObjectName(u"mainbody_content_frame")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.mainbody_content_frame.sizePolicy().hasHeightForWidth())
@@ -1083,9 +1120,9 @@ class Ui_MainWindow(QWidget):
         self.mainbody_content_frame.setFrameShape(QFrame.StyledPanel)
         self.mainbody_content_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_76 = QHBoxLayout(self.mainbody_content_frame)
-        self.horizontalLayout_76.setSpacing(10)
+        self.horizontalLayout_76.setSpacing(5)
         self.horizontalLayout_76.setObjectName(u"horizontalLayout_76")
-        self.horizontalLayout_76.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_76.setContentsMargins(0, 0, 0, 10)
         self.mainbody_content_text_frame = QFrame(self.mainbody_content_frame)
         self.mainbody_content_text_frame.setObjectName(u"mainbody_content_text_frame")
         self.mainbody_content_text_frame.setFrameShape(QFrame.StyledPanel)
@@ -1093,7 +1130,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_251 = QHBoxLayout(self.mainbody_content_text_frame)
         self.horizontalLayout_251.setSpacing(0)
         self.horizontalLayout_251.setObjectName(u"horizontalLayout_251")
-        self.horizontalLayout_251.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_251.setContentsMargins(0, 10, 0, 0)
         self.mainbody_content_text = QLabel(self.mainbody_content_text_frame)
         self.mainbody_content_text.setObjectName(u"mainbody_content_text")
         sizePolicy4.setHeightForWidth(self.mainbody_content_text.sizePolicy().hasHeightForWidth())
@@ -1106,33 +1143,73 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_76.addWidget(self.mainbody_content_text_frame)
 
-        self.mainbody_content_SpikelingGif_frame = QFrame(self.mainbody_content_frame)
-        self.mainbody_content_SpikelingGif_frame.setObjectName(u"mainbody_content_SpikelingGif_frame")
-        self.mainbody_content_SpikelingGif_frame.setMinimumSize(QSize(480, 540))
-        self.mainbody_content_SpikelingGif_frame.setMaximumSize(QSize(480, 540))
-        self.mainbody_content_SpikelingGif_frame.setFrameShape(QFrame.StyledPanel)
-        self.mainbody_content_SpikelingGif_frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_114 = QHBoxLayout(self.mainbody_content_SpikelingGif_frame)
-        self.horizontalLayout_114.setSpacing(0)
-        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
-        self.horizontalLayout_114.setContentsMargins(0, 0, 0, 0)
-        self.mainbody_content_SpikelingGif = QLabel(self.mainbody_content_SpikelingGif_frame)
-        self.mainbody_content_SpikelingGif.setObjectName(u"mainbody_content_SpikelingGif")
-        sizePolicy4.setHeightForWidth(self.mainbody_content_SpikelingGif.sizePolicy().hasHeightForWidth())
-        self.mainbody_content_SpikelingGif.setSizePolicy(sizePolicy4)
-        self.mainbody_content_SpikelingGif.setMinimumSize(QSize(480, 540))
-        self.mainbody_content_SpikelingGif.setMaximumSize(QSize(480, 540))
-        self.mainbody_content_SpikelingGif.setAutoFillBackground(False)
-        self.mainbody_content_SpikelingGif.setStyleSheet(u"")
-        self.mainbody_content_SpikelingGif.setScaledContents(True)
 
-        self.horizontalLayout_114.addWidget(self.mainbody_content_SpikelingGif)
+        self.verticalLayout_30.addWidget(self.mainbody_content_frame)
 
+        self.frame_22 = QFrame(self.page_000)
+        self.frame_22.setObjectName(u"frame_22")
+        self.frame_22.setMinimumSize(QSize(0, 0))
+        self.frame_22.setFrameShape(QFrame.StyledPanel)
+        self.frame_22.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_104 = QVBoxLayout(self.frame_22)
+        self.verticalLayout_104.setSpacing(0)
+        self.verticalLayout_104.setObjectName(u"verticalLayout_104")
+        self.verticalLayout_104.setContentsMargins(0, 0, 0, 0)
+        self.label_98 = QLabel(self.frame_22)
+        self.label_98.setObjectName(u"label_98")
+        self.label_98.setMaximumSize(QSize(442, 300))
+        self.label_98.setPixmap(QPixmap(u":/resources/resources/SpikelingLayout.png"))
+        self.label_98.setScaledContents(True)
+        self.label_98.setAlignment(Qt.AlignCenter)
+        self.label_98.setWordWrap(True)
 
-        self.horizontalLayout_76.addWidget(self.mainbody_content_SpikelingGif_frame)
+        self.verticalLayout_104.addWidget(self.label_98, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout_30.addWidget(self.mainbody_content_frame, 0, Qt.AlignVCenter)
+        self.verticalLayout_30.addWidget(self.frame_22)
+
+        self.mainbody_footer_frame = QFrame(self.page_000)
+        self.mainbody_footer_frame.setObjectName(u"mainbody_footer_frame")
+        self.mainbody_footer_frame.setFrameShape(QFrame.StyledPanel)
+        self.mainbody_footer_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_419 = QHBoxLayout(self.mainbody_footer_frame)
+        self.horizontalLayout_419.setSpacing(0)
+        self.horizontalLayout_419.setObjectName(u"horizontalLayout_419")
+        self.horizontalLayout_419.setContentsMargins(5, 10, 5, 10)
+        self.frame_21 = QFrame(self.mainbody_footer_frame)
+        self.frame_21.setObjectName(u"frame_21")
+        self.frame_21.setFrameShape(QFrame.StyledPanel)
+        self.frame_21.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_420 = QHBoxLayout(self.frame_21)
+        self.horizontalLayout_420.setSpacing(0)
+        self.horizontalLayout_420.setObjectName(u"horizontalLayout_420")
+        self.horizontalLayout_420.setContentsMargins(0, 0, 0, 0)
+        self.label_97 = QLabel(self.frame_21)
+        self.label_97.setObjectName(u"label_97")
+
+        self.horizontalLayout_420.addWidget(self.label_97, 0, Qt.AlignBottom)
+
+
+        self.horizontalLayout_419.addWidget(self.frame_21)
+
+        self.frame_20 = QFrame(self.mainbody_footer_frame)
+        self.frame_20.setObjectName(u"frame_20")
+        self.frame_20.setFrameShape(QFrame.StyledPanel)
+        self.frame_20.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_421 = QHBoxLayout(self.frame_20)
+        self.horizontalLayout_421.setSpacing(0)
+        self.horizontalLayout_421.setObjectName(u"horizontalLayout_421")
+        self.horizontalLayout_421.setContentsMargins(0, 0, 0, 0)
+        self.label_9 = QLabel(self.frame_20)
+        self.label_9.setObjectName(u"label_9")
+
+        self.horizontalLayout_421.addWidget(self.label_9)
+
+
+        self.horizontalLayout_419.addWidget(self.frame_20, 0, Qt.AlignBottom)
+
+
+        self.verticalLayout_30.addWidget(self.mainbody_footer_frame)
 
         self.mainbody_stackedWidget.addWidget(self.page_000)
         self.page_101 = QWidget()
@@ -1159,7 +1236,7 @@ class Ui_MainWindow(QWidget):
         self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
         self.Spikeling_top_subframe1 = QFrame(self.Spikeling_frame)
         self.Spikeling_top_subframe1.setObjectName(u"Spikeling_top_subframe1")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy5.setHorizontalStretch(0)
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.Spikeling_top_subframe1.sizePolicy().hasHeightForWidth())
@@ -1229,7 +1306,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_172.setContentsMargins(0, 0, 0, 0)
         self.LED_pushButton = QPushButton(self.LED_frame)
         self.LED_pushButton.setObjectName(u"LED_pushButton")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy6.setHorizontalStretch(0)
         sizePolicy6.setVerticalStretch(0)
         sizePolicy6.setHeightForWidth(self.LED_pushButton.sizePolicy().hasHeightForWidth())
@@ -1240,7 +1317,7 @@ class Ui_MainWindow(QWidget):
 "padding: 2px 5px;\n"
 "border-radius:10px;")
         icon16 = QIcon()
-        icon16.addFile(u":/resources/resources/LEDON.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon16.addFile(u":/resources/resources/LEDON.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.LED_pushButton.setIcon(icon16)
         self.LED_pushButton.setIconSize(QSize(20, 20))
         self.LED_pushButton.setCheckable(True)
@@ -1268,7 +1345,7 @@ class Ui_MainWindow(QWidget):
 "padding: 2px 5px;\n"
 "border-radius:10px;")
         icon17 = QIcon()
-        icon17.addFile(u":/resources/resources/SoundON.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon17.addFile(u":/resources/resources/SoundON.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.Sound_pushButton.setIcon(icon17)
         self.Sound_pushButton.setIconSize(QSize(20, 20))
         self.Sound_pushButton.setCheckable(True)
@@ -1606,8 +1683,8 @@ class Ui_MainWindow(QWidget):
         self.line_41.setObjectName(u"line_41")
         self.line_41.setAutoFillBackground(False)
         self.line_41.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_41.setFrameShape(QFrame.VLine)
-        self.line_41.setFrameShadow(QFrame.Sunken)
+        self.line_41.setFrameShape(QFrame.Shape.VLine)
+        self.line_41.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.horizontalLayout_34.addWidget(self.line_41)
 
@@ -1632,7 +1709,7 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_parameter_exit_pushButton = QPushButton(self.Spikeling_parameter_exit_frame)
         self.Spikeling_parameter_exit_pushButton.setObjectName(u"Spikeling_parameter_exit_pushButton")
         icon18 = QIcon()
-        icon18.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon18.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.Spikeling_parameter_exit_pushButton.setIcon(icon18)
         self.Spikeling_parameter_exit_pushButton.setIconSize(QSize(20, 20))
 
@@ -1822,8 +1899,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_parameter_top_line.setObjectName(u"Spikeling_parameter_top_line")
         self.Spikeling_parameter_top_line.setAutoFillBackground(False)
         self.Spikeling_parameter_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.Spikeling_parameter_top_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_parameter_top_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_parameter_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_parameter_top_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_58.addWidget(self.Spikeling_parameter_top_line)
 
@@ -1973,8 +2050,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_parameter_middle_line.setAutoFillBackground(False)
         self.Spikeling_parameter_middle_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
         self.Spikeling_parameter_middle_line.setLineWidth(4)
-        self.Spikeling_parameter_middle_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_parameter_middle_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_parameter_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_parameter_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_58.addWidget(self.Spikeling_parameter_middle_line)
 
@@ -2107,8 +2184,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_parameter_bottom_line.setAutoFillBackground(False)
         self.Spikeling_parameter_bottom_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
         self.Spikeling_parameter_bottom_line.setLineWidth(10)
-        self.Spikeling_parameter_bottom_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_parameter_bottom_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_parameter_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_parameter_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_58.addWidget(self.Spikeling_parameter_bottom_line)
 
@@ -2637,8 +2714,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_neuronparameters_top_line.setObjectName(u"Spikeling_neuronparameters_top_line")
         self.Spikeling_neuronparameters_top_line.setAutoFillBackground(False)
         self.Spikeling_neuronparameters_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.Spikeling_neuronparameters_top_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_neuronparameters_top_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_neuronparameters_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_neuronparameters_top_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_17.addWidget(self.Spikeling_neuronparameters_top_line)
 
@@ -2785,8 +2862,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_neuronparameters_middle_line.setObjectName(u"Spikeling_neuronparameters_middle_line")
         self.Spikeling_neuronparameters_middle_line.setAutoFillBackground(False)
         self.Spikeling_neuronparameters_middle_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.Spikeling_neuronparameters_middle_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_neuronparameters_middle_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_neuronparameters_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_neuronparameters_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_17.addWidget(self.Spikeling_neuronparameters_middle_line)
 
@@ -3061,8 +3138,8 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_neuronparameters_bottom_line.setObjectName(u"Spikeling_neuronparameters_bottom_line")
         self.Spikeling_neuronparameters_bottom_line.setAutoFillBackground(False)
         self.Spikeling_neuronparameters_bottom_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.Spikeling_neuronparameters_bottom_line.setFrameShape(QFrame.HLine)
-        self.Spikeling_neuronparameters_bottom_line.setFrameShadow(QFrame.Sunken)
+        self.Spikeling_neuronparameters_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Spikeling_neuronparameters_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_17.addWidget(self.Spikeling_neuronparameters_bottom_line)
 
@@ -3365,7 +3442,7 @@ class Ui_MainWindow(QWidget):
         self.Spikeling_rightMenuSubContainer_pushButton.setFont(font1)
         self.Spikeling_rightMenuSubContainer_pushButton.setStyleSheet(u"")
         icon19 = QIcon()
-        icon19.addFile(u":/resources/resources/MenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon19.addFile(u":/resources/resources/MenuRight.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.Spikeling_rightMenuSubContainer_pushButton.setIcon(icon19)
         self.Spikeling_rightMenuSubContainer_pushButton.setIconSize(QSize(30, 30))
 
@@ -3480,8 +3557,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_7 = QFrame(self.page_103_1_0)
         self.line_7.setObjectName(u"line_7")
-        self.line_7.setFrameShape(QFrame.HLine)
-        self.line_7.setFrameShadow(QFrame.Sunken)
+        self.line_7.setFrameShape(QFrame.Shape.HLine)
+        self.line_7.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_39.addWidget(self.line_7)
 
@@ -3495,8 +3572,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_31 = QFrame(self.page_103_1_0)
         self.line_31.setObjectName(u"line_31")
-        self.line_31.setFrameShape(QFrame.HLine)
-        self.line_31.setFrameShadow(QFrame.Sunken)
+        self.line_31.setFrameShape(QFrame.Shape.HLine)
+        self.line_31.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_39.addWidget(self.line_31)
 
@@ -3512,8 +3589,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_8 = QFrame(self.page_103_1_0)
         self.line_8.setObjectName(u"line_8")
-        self.line_8.setFrameShape(QFrame.HLine)
-        self.line_8.setFrameShadow(QFrame.Sunken)
+        self.line_8.setFrameShape(QFrame.Shape.HLine)
+        self.line_8.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_39.addWidget(self.line_8)
 
@@ -3529,8 +3606,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_32 = QFrame(self.page_103_1_0)
         self.line_32.setObjectName(u"line_32")
-        self.line_32.setFrameShape(QFrame.HLine)
-        self.line_32.setFrameShadow(QFrame.Sunken)
+        self.line_32.setFrameShape(QFrame.Shape.HLine)
+        self.line_32.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_39.addWidget(self.line_32)
 
@@ -3567,7 +3644,7 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Neuron2Vm_pushButton10 = QPushButton(self.DataAnalysis_Neurons_pushButton10_frame)
         self.DataAnalysis_Neuron2Vm_pushButton10.setObjectName(u"DataAnalysis_Neuron2Vm_pushButton10")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy7.setHorizontalStretch(0)
         sizePolicy7.setVerticalStretch(25)
         sizePolicy7.setHeightForWidth(self.DataAnalysis_Neuron2Vm_pushButton10.sizePolicy().hasHeightForWidth())
@@ -3599,8 +3676,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_10 = QFrame(self.page_103_1_1)
         self.line_10.setObjectName(u"line_10")
-        self.line_10.setFrameShape(QFrame.HLine)
-        self.line_10.setFrameShadow(QFrame.Sunken)
+        self.line_10.setFrameShape(QFrame.Shape.HLine)
+        self.line_10.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_48.addWidget(self.line_10)
 
@@ -3614,8 +3691,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_9 = QFrame(self.page_103_1_1)
         self.line_9.setObjectName(u"line_9")
-        self.line_9.setFrameShape(QFrame.HLine)
-        self.line_9.setFrameShadow(QFrame.Sunken)
+        self.line_9.setFrameShape(QFrame.Shape.HLine)
+        self.line_9.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_48.addWidget(self.line_9)
 
@@ -3631,8 +3708,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_33 = QFrame(self.page_103_1_1)
         self.line_33.setObjectName(u"line_33")
-        self.line_33.setFrameShape(QFrame.HLine)
-        self.line_33.setFrameShadow(QFrame.Sunken)
+        self.line_33.setFrameShape(QFrame.Shape.HLine)
+        self.line_33.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_48.addWidget(self.line_33)
 
@@ -3696,8 +3773,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_30 = QFrame(self.page_103_1_2)
         self.line_30.setObjectName(u"line_30")
-        self.line_30.setFrameShape(QFrame.HLine)
-        self.line_30.setFrameShadow(QFrame.Sunken)
+        self.line_30.setFrameShape(QFrame.Shape.HLine)
+        self.line_30.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_49.addWidget(self.line_30)
 
@@ -3713,8 +3790,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_29 = QFrame(self.page_103_1_2)
         self.line_29.setObjectName(u"line_29")
-        self.line_29.setFrameShape(QFrame.HLine)
-        self.line_29.setFrameShadow(QFrame.Sunken)
+        self.line_29.setFrameShape(QFrame.Shape.HLine)
+        self.line_29.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_49.addWidget(self.line_29)
 
@@ -3733,8 +3810,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_34 = QFrame(self.page_103_1_2)
         self.line_34.setObjectName(u"line_34")
-        self.line_34.setFrameShape(QFrame.HLine)
-        self.line_34.setFrameShadow(QFrame.Sunken)
+        self.line_34.setFrameShape(QFrame.Shape.HLine)
+        self.line_34.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_49.addWidget(self.line_34)
 
@@ -3798,8 +3875,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_14 = QFrame(self.page_103_2_0)
         self.line_14.setObjectName(u"line_14")
-        self.line_14.setFrameShape(QFrame.HLine)
-        self.line_14.setFrameShadow(QFrame.Sunken)
+        self.line_14.setFrameShape(QFrame.Shape.HLine)
+        self.line_14.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_42.addWidget(self.line_14)
 
@@ -3813,8 +3890,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_13 = QFrame(self.page_103_2_0)
         self.line_13.setObjectName(u"line_13")
-        self.line_13.setFrameShape(QFrame.HLine)
-        self.line_13.setFrameShadow(QFrame.Sunken)
+        self.line_13.setFrameShape(QFrame.Shape.HLine)
+        self.line_13.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_42.addWidget(self.line_13)
 
@@ -3828,8 +3905,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_11 = QFrame(self.page_103_2_0)
         self.line_11.setObjectName(u"line_11")
-        self.line_11.setFrameShape(QFrame.HLine)
-        self.line_11.setFrameShadow(QFrame.Sunken)
+        self.line_11.setFrameShape(QFrame.Shape.HLine)
+        self.line_11.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_42.addWidget(self.line_11)
 
@@ -3846,8 +3923,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_35 = QFrame(self.page_103_2_0)
         self.line_35.setObjectName(u"line_35")
-        self.line_35.setFrameShape(QFrame.HLine)
-        self.line_35.setFrameShadow(QFrame.Sunken)
+        self.line_35.setFrameShape(QFrame.Shape.HLine)
+        self.line_35.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_42.addWidget(self.line_35)
 
@@ -3911,8 +3988,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_16 = QFrame(self.page_103_2_1)
         self.line_16.setObjectName(u"line_16")
-        self.line_16.setFrameShape(QFrame.HLine)
-        self.line_16.setFrameShadow(QFrame.Sunken)
+        self.line_16.setFrameShape(QFrame.Shape.HLine)
+        self.line_16.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_43.addWidget(self.line_16)
 
@@ -3926,8 +4003,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_15 = QFrame(self.page_103_2_1)
         self.line_15.setObjectName(u"line_15")
-        self.line_15.setFrameShape(QFrame.HLine)
-        self.line_15.setFrameShadow(QFrame.Sunken)
+        self.line_15.setFrameShape(QFrame.Shape.HLine)
+        self.line_15.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_43.addWidget(self.line_15)
 
@@ -3941,8 +4018,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_12 = QFrame(self.page_103_2_1)
         self.line_12.setObjectName(u"line_12")
-        self.line_12.setFrameShape(QFrame.HLine)
-        self.line_12.setFrameShadow(QFrame.Sunken)
+        self.line_12.setFrameShape(QFrame.Shape.HLine)
+        self.line_12.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_43.addWidget(self.line_12)
 
@@ -3959,8 +4036,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_36 = QFrame(self.page_103_2_1)
         self.line_36.setObjectName(u"line_36")
-        self.line_36.setFrameShape(QFrame.HLine)
-        self.line_36.setFrameShadow(QFrame.Sunken)
+        self.line_36.setFrameShape(QFrame.Shape.HLine)
+        self.line_36.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_43.addWidget(self.line_36)
 
@@ -4024,8 +4101,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_18 = QFrame(self.page_103_2_2)
         self.line_18.setObjectName(u"line_18")
-        self.line_18.setFrameShape(QFrame.HLine)
-        self.line_18.setFrameShadow(QFrame.Sunken)
+        self.line_18.setFrameShape(QFrame.Shape.HLine)
+        self.line_18.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_44.addWidget(self.line_18)
 
@@ -4039,8 +4116,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_17 = QFrame(self.page_103_2_2)
         self.line_17.setObjectName(u"line_17")
-        self.line_17.setFrameShape(QFrame.HLine)
-        self.line_17.setFrameShadow(QFrame.Sunken)
+        self.line_17.setFrameShape(QFrame.Shape.HLine)
+        self.line_17.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_44.addWidget(self.line_17)
 
@@ -4054,8 +4131,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_19 = QFrame(self.page_103_2_2)
         self.line_19.setObjectName(u"line_19")
-        self.line_19.setFrameShape(QFrame.HLine)
-        self.line_19.setFrameShadow(QFrame.Sunken)
+        self.line_19.setFrameShape(QFrame.Shape.HLine)
+        self.line_19.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_44.addWidget(self.line_19)
 
@@ -4071,8 +4148,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_37 = QFrame(self.page_103_2_2)
         self.line_37.setObjectName(u"line_37")
-        self.line_37.setFrameShape(QFrame.HLine)
-        self.line_37.setFrameShadow(QFrame.Sunken)
+        self.line_37.setFrameShape(QFrame.Shape.HLine)
+        self.line_37.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_44.addWidget(self.line_37)
 
@@ -4136,8 +4213,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_20 = QFrame(self.page_103_3_0)
         self.line_20.setObjectName(u"line_20")
-        self.line_20.setFrameShape(QFrame.HLine)
-        self.line_20.setFrameShadow(QFrame.Sunken)
+        self.line_20.setFrameShape(QFrame.Shape.HLine)
+        self.line_20.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_45.addWidget(self.line_20)
 
@@ -4153,8 +4230,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_22 = QFrame(self.page_103_3_0)
         self.line_22.setObjectName(u"line_22")
-        self.line_22.setFrameShape(QFrame.HLine)
-        self.line_22.setFrameShadow(QFrame.Sunken)
+        self.line_22.setFrameShape(QFrame.Shape.HLine)
+        self.line_22.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_45.addWidget(self.line_22)
 
@@ -4168,8 +4245,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_21 = QFrame(self.page_103_3_0)
         self.line_21.setObjectName(u"line_21")
-        self.line_21.setFrameShape(QFrame.HLine)
-        self.line_21.setFrameShadow(QFrame.Sunken)
+        self.line_21.setFrameShape(QFrame.Shape.HLine)
+        self.line_21.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_45.addWidget(self.line_21)
 
@@ -4183,8 +4260,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_38 = QFrame(self.page_103_3_0)
         self.line_38.setObjectName(u"line_38")
-        self.line_38.setFrameShape(QFrame.HLine)
-        self.line_38.setFrameShadow(QFrame.Sunken)
+        self.line_38.setFrameShape(QFrame.Shape.HLine)
+        self.line_38.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_45.addWidget(self.line_38)
 
@@ -4248,8 +4325,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_23 = QFrame(self.page_103_3_1)
         self.line_23.setObjectName(u"line_23")
-        self.line_23.setFrameShape(QFrame.HLine)
-        self.line_23.setFrameShadow(QFrame.Sunken)
+        self.line_23.setFrameShape(QFrame.Shape.HLine)
+        self.line_23.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_46.addWidget(self.line_23)
 
@@ -4265,8 +4342,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_25 = QFrame(self.page_103_3_1)
         self.line_25.setObjectName(u"line_25")
-        self.line_25.setFrameShape(QFrame.HLine)
-        self.line_25.setFrameShadow(QFrame.Sunken)
+        self.line_25.setFrameShape(QFrame.Shape.HLine)
+        self.line_25.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_46.addWidget(self.line_25)
 
@@ -4280,8 +4357,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_24 = QFrame(self.page_103_3_1)
         self.line_24.setObjectName(u"line_24")
-        self.line_24.setFrameShape(QFrame.HLine)
-        self.line_24.setFrameShadow(QFrame.Sunken)
+        self.line_24.setFrameShape(QFrame.Shape.HLine)
+        self.line_24.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_46.addWidget(self.line_24)
 
@@ -4295,8 +4372,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_39 = QFrame(self.page_103_3_1)
         self.line_39.setObjectName(u"line_39")
-        self.line_39.setFrameShape(QFrame.HLine)
-        self.line_39.setFrameShadow(QFrame.Sunken)
+        self.line_39.setFrameShape(QFrame.Shape.HLine)
+        self.line_39.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_46.addWidget(self.line_39)
 
@@ -4360,8 +4437,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_26 = QFrame(self.page_103_3_2)
         self.line_26.setObjectName(u"line_26")
-        self.line_26.setFrameShape(QFrame.HLine)
-        self.line_26.setFrameShadow(QFrame.Sunken)
+        self.line_26.setFrameShape(QFrame.Shape.HLine)
+        self.line_26.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_47.addWidget(self.line_26)
 
@@ -4377,8 +4454,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_28 = QFrame(self.page_103_3_2)
         self.line_28.setObjectName(u"line_28")
-        self.line_28.setFrameShape(QFrame.HLine)
-        self.line_28.setFrameShadow(QFrame.Sunken)
+        self.line_28.setFrameShape(QFrame.Shape.HLine)
+        self.line_28.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_47.addWidget(self.line_28)
 
@@ -4392,8 +4469,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_27 = QFrame(self.page_103_3_2)
         self.line_27.setObjectName(u"line_27")
-        self.line_27.setFrameShape(QFrame.HLine)
-        self.line_27.setFrameShadow(QFrame.Sunken)
+        self.line_27.setFrameShape(QFrame.Shape.HLine)
+        self.line_27.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_47.addWidget(self.line_27)
 
@@ -4407,8 +4484,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_40 = QFrame(self.page_103_3_2)
         self.line_40.setObjectName(u"line_40")
-        self.line_40.setFrameShape(QFrame.HLine)
-        self.line_40.setFrameShadow(QFrame.Sunken)
+        self.line_40.setFrameShape(QFrame.Shape.HLine)
+        self.line_40.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_47.addWidget(self.line_40)
 
@@ -4470,8 +4547,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_6 = QFrame(self.page_103_11_0)
         self.line_6.setObjectName(u"line_6")
-        self.line_6.setFrameShape(QFrame.HLine)
-        self.line_6.setFrameShadow(QFrame.Sunken)
+        self.line_6.setFrameShape(QFrame.Shape.HLine)
+        self.line_6.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_20.addWidget(self.line_6)
 
@@ -4485,8 +4562,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_69 = QFrame(self.page_103_11_0)
         self.line_69.setObjectName(u"line_69")
-        self.line_69.setFrameShape(QFrame.HLine)
-        self.line_69.setFrameShadow(QFrame.Sunken)
+        self.line_69.setFrameShape(QFrame.Shape.HLine)
+        self.line_69.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_20.addWidget(self.line_69)
 
@@ -4498,8 +4575,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_70 = QFrame(self.page_103_11_0)
         self.line_70.setObjectName(u"line_70")
-        self.line_70.setFrameShape(QFrame.HLine)
-        self.line_70.setFrameShadow(QFrame.Sunken)
+        self.line_70.setFrameShape(QFrame.Shape.HLine)
+        self.line_70.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_20.addWidget(self.line_70)
 
@@ -4511,8 +4588,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_71 = QFrame(self.page_103_11_0)
         self.line_71.setObjectName(u"line_71")
-        self.line_71.setFrameShape(QFrame.HLine)
-        self.line_71.setFrameShadow(QFrame.Sunken)
+        self.line_71.setFrameShape(QFrame.Shape.HLine)
+        self.line_71.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_20.addWidget(self.line_71)
 
@@ -4627,8 +4704,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_LoadData_line = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_LoadData_line.setObjectName(u"DataAnalysis_LoadData_line")
-        self.DataAnalysis_LoadData_line.setFrameShape(QFrame.HLine)
-        self.DataAnalysis_LoadData_line.setFrameShadow(QFrame.Sunken)
+        self.DataAnalysis_LoadData_line.setFrameShape(QFrame.Shape.HLine)
+        self.DataAnalysis_LoadData_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_LoadData_line)
 
@@ -4709,8 +4786,8 @@ class Ui_MainWindow(QWidget):
 
         self.DataAnalysis_Spike_line = QFrame(self.DataAnalysis_SquareStim)
         self.DataAnalysis_Spike_line.setObjectName(u"DataAnalysis_Spike_line")
-        self.DataAnalysis_Spike_line.setFrameShape(QFrame.HLine)
-        self.DataAnalysis_Spike_line.setFrameShadow(QFrame.Sunken)
+        self.DataAnalysis_Spike_line.setFrameShape(QFrame.Shape.HLine)
+        self.DataAnalysis_Spike_line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_34.addWidget(self.DataAnalysis_Spike_line)
 
@@ -4847,84 +4924,6 @@ class Ui_MainWindow(QWidget):
 
         self.horizontalLayout_61.addWidget(self.DataAnalysis_stackedWidget)
 
-        self.DataAnalysis_RightMenu_Container = QFrame(self.DataAnalysis_frame)
-        self.DataAnalysis_RightMenu_Container.setObjectName(u"DataAnalysis_RightMenu_Container")
-        self.DataAnalysis_RightMenu_Container.setMinimumSize(QSize(40, 0))
-        self.DataAnalysis_RightMenu_Container.setMaximumSize(QSize(40, 16777215))
-        self.DataAnalysis_RightMenu_Container.setFrameShape(QFrame.StyledPanel)
-        self.DataAnalysis_RightMenu_Container.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_415 = QHBoxLayout(self.DataAnalysis_RightMenu_Container)
-        self.horizontalLayout_415.setSpacing(0)
-        self.horizontalLayout_415.setObjectName(u"horizontalLayout_415")
-        self.horizontalLayout_415.setContentsMargins(0, 0, 0, 0)
-        self.DataAnalysis_RightMenu_Frame = QFrame(self.DataAnalysis_RightMenu_Container)
-        self.DataAnalysis_RightMenu_Frame.setObjectName(u"DataAnalysis_RightMenu_Frame")
-        self.DataAnalysis_RightMenu_Frame.setFrameShape(QFrame.StyledPanel)
-        self.DataAnalysis_RightMenu_Frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_101 = QVBoxLayout(self.DataAnalysis_RightMenu_Frame)
-        self.verticalLayout_101.setSpacing(0)
-        self.verticalLayout_101.setObjectName(u"verticalLayout_101")
-        self.verticalLayout_101.setContentsMargins(0, 0, 5, 0)
-        self.DataAnalysis_Menu_Frame = QFrame(self.DataAnalysis_RightMenu_Frame)
-        self.DataAnalysis_Menu_Frame.setObjectName(u"DataAnalysis_Menu_Frame")
-        self.DataAnalysis_Menu_Frame.setFrameShape(QFrame.StyledPanel)
-        self.DataAnalysis_Menu_Frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_103 = QVBoxLayout(self.DataAnalysis_Menu_Frame)
-        self.verticalLayout_103.setObjectName(u"verticalLayout_103")
-        self.verticalLayout_103.setContentsMargins(0, 0, 0, 0)
-        self.DataAnalysis_Menu_pushButton = QPushButton(self.DataAnalysis_Menu_Frame)
-        self.DataAnalysis_Menu_pushButton.setObjectName(u"DataAnalysis_Menu_pushButton")
-        self.DataAnalysis_Menu_pushButton.setIcon(icon19)
-        self.DataAnalysis_Menu_pushButton.setIconSize(QSize(30, 30))
-
-        self.verticalLayout_103.addWidget(self.DataAnalysis_Menu_pushButton)
-
-
-        self.verticalLayout_101.addWidget(self.DataAnalysis_Menu_Frame, 0, Qt.AlignTop)
-
-        self.DataAnalysis_StimuliMenu_Frame = QFrame(self.DataAnalysis_RightMenu_Frame)
-        self.DataAnalysis_StimuliMenu_Frame.setObjectName(u"DataAnalysis_StimuliMenu_Frame")
-        self.DataAnalysis_StimuliMenu_Frame.setFrameShape(QFrame.StyledPanel)
-        self.DataAnalysis_StimuliMenu_Frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_102 = QVBoxLayout(self.DataAnalysis_StimuliMenu_Frame)
-        self.verticalLayout_102.setSpacing(0)
-        self.verticalLayout_102.setObjectName(u"verticalLayout_102")
-        self.verticalLayout_102.setContentsMargins(0, 0, 0, 0)
-        self.DataAnalysis_SquareStim_pushButton = QPushButton(self.DataAnalysis_StimuliMenu_Frame)
-        self.DataAnalysis_SquareStim_pushButton.setObjectName(u"DataAnalysis_SquareStim_pushButton")
-        self.DataAnalysis_SquareStim_pushButton.setFont(font1)
-        icon20 = QIcon()
-        icon20.addFile(u":/resources/resources/SqaureStim.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.DataAnalysis_SquareStim_pushButton.setIcon(icon20)
-        self.DataAnalysis_SquareStim_pushButton.setIconSize(QSize(30, 30))
-
-        self.verticalLayout_102.addWidget(self.DataAnalysis_SquareStim_pushButton)
-
-        self.DataAnalysis_StepStim_pushButton = QPushButton(self.DataAnalysis_StimuliMenu_Frame)
-        self.DataAnalysis_StepStim_pushButton.setObjectName(u"DataAnalysis_StepStim_pushButton")
-        self.DataAnalysis_StepStim_pushButton.setFont(font1)
-        self.DataAnalysis_StepStim_pushButton.setLayoutDirection(Qt.LeftToRight)
-        self.DataAnalysis_StepStim_pushButton.setIcon(icon8)
-        self.DataAnalysis_StepStim_pushButton.setIconSize(QSize(30, 30))
-
-        self.verticalLayout_102.addWidget(self.DataAnalysis_StepStim_pushButton)
-
-
-        self.verticalLayout_101.addWidget(self.DataAnalysis_StimuliMenu_Frame)
-
-        self.frame_5 = QFrame(self.DataAnalysis_RightMenu_Frame)
-        self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
-
-        self.verticalLayout_101.addWidget(self.frame_5)
-
-
-        self.horizontalLayout_415.addWidget(self.DataAnalysis_RightMenu_Frame)
-
-
-        self.horizontalLayout_61.addWidget(self.DataAnalysis_RightMenu_Container)
-
 
         self.horizontalLayout_68.addWidget(self.DataAnalysis_frame)
 
@@ -4986,6 +4985,7 @@ class Ui_MainWindow(QWidget):
 
         self.Imaging_Oscilloscope_frame = QFrame(self.Imaging_widget)
         self.Imaging_Oscilloscope_frame.setObjectName(u"Imaging_Oscilloscope_frame")
+        self.Imaging_Oscilloscope_frame.setMaximumSize(QSize(16777215, 16777200))
         self.Imaging_Oscilloscope_frame.setFrameShape(QFrame.StyledPanel)
         self.Imaging_Oscilloscope_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_157 = QHBoxLayout(self.Imaging_Oscilloscope_frame)
@@ -5063,14 +5063,120 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_109.addWidget(self.Imaging_Oscilloscope_frame)
 
+        self.Imaging_DataRecording_box = QGroupBox(self.Imaging_widget)
+        self.Imaging_DataRecording_box.setObjectName(u"Imaging_DataRecording_box")
+        sizePolicy5.setHeightForWidth(self.Imaging_DataRecording_box.sizePolicy().hasHeightForWidth())
+        self.Imaging_DataRecording_box.setSizePolicy(sizePolicy5)
+        self.Imaging_DataRecording_box.setMinimumSize(QSize(0, 100))
+        self.Imaging_DataRecording_box.setMaximumSize(QSize(16777215, 100))
+        self.Imaging_DataRecording_box.setStyleSheet(u"")
+        self.horizontalLayout_114 = QHBoxLayout(self.Imaging_DataRecording_box)
+        self.horizontalLayout_114.setSpacing(0)
+        self.horizontalLayout_114.setObjectName(u"horizontalLayout_114")
+        self.horizontalLayout_114.setContentsMargins(5, 5, 5, 5)
+        self.Imaging_DataRecording_left_frame = QFrame(self.Imaging_DataRecording_box)
+        self.Imaging_DataRecording_left_frame.setObjectName(u"Imaging_DataRecording_left_frame")
+        self.Imaging_DataRecording_left_frame.setFrameShape(QFrame.StyledPanel)
+        self.Imaging_DataRecording_left_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_105 = QVBoxLayout(self.Imaging_DataRecording_left_frame)
+        self.verticalLayout_105.setSpacing(0)
+        self.verticalLayout_105.setObjectName(u"verticalLayout_105")
+        self.verticalLayout_105.setContentsMargins(0, 0, 0, 0)
+        self.Imaging_DataRecording_recordingMode_frame = QFrame(self.Imaging_DataRecording_left_frame)
+        self.Imaging_DataRecording_recordingMode_frame.setObjectName(u"Imaging_DataRecording_recordingMode_frame")
+        self.Imaging_DataRecording_recordingMode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Imaging_DataRecording_recordingMode_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_422 = QHBoxLayout(self.Imaging_DataRecording_recordingMode_frame)
+        self.horizontalLayout_422.setSpacing(0)
+        self.horizontalLayout_422.setObjectName(u"horizontalLayout_422")
+        self.horizontalLayout_422.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_105.addWidget(self.Imaging_DataRecording_recordingMode_frame)
+
+
+        self.horizontalLayout_114.addWidget(self.Imaging_DataRecording_left_frame)
+
+        self.Imaging_DataRecording_right_frame = QFrame(self.Imaging_DataRecording_box)
+        self.Imaging_DataRecording_right_frame.setObjectName(u"Imaging_DataRecording_right_frame")
+        self.Imaging_DataRecording_right_frame.setFrameShape(QFrame.StyledPanel)
+        self.Imaging_DataRecording_right_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_106 = QVBoxLayout(self.Imaging_DataRecording_right_frame)
+        self.verticalLayout_106.setSpacing(0)
+        self.verticalLayout_106.setObjectName(u"verticalLayout_106")
+        self.verticalLayout_106.setContentsMargins(0, 0, 0, 0)
+        self.Imaging_DataRecording_directory_frame = QFrame(self.Imaging_DataRecording_right_frame)
+        self.Imaging_DataRecording_directory_frame.setObjectName(u"Imaging_DataRecording_directory_frame")
+        self.Imaging_DataRecording_directory_frame.setFrameShape(QFrame.StyledPanel)
+        self.Imaging_DataRecording_directory_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_423 = QHBoxLayout(self.Imaging_DataRecording_directory_frame)
+        self.horizontalLayout_423.setSpacing(10)
+        self.horizontalLayout_423.setObjectName(u"horizontalLayout_423")
+        self.horizontalLayout_423.setContentsMargins(0, 0, 0, 0)
+        self.Imaging_DataRecording_SelectRecordFolder_label_ = QLabel(self.Imaging_DataRecording_directory_frame)
+        self.Imaging_DataRecording_SelectRecordFolder_label_.setObjectName(u"Imaging_DataRecording_SelectRecordFolder_label_")
+
+        self.horizontalLayout_423.addWidget(self.Imaging_DataRecording_SelectRecordFolder_label_)
+
+        self.Imaging_DataRecording_RecordFolder_value = QLineEdit(self.Imaging_DataRecording_directory_frame)
+        self.Imaging_DataRecording_RecordFolder_value.setObjectName(u"Imaging_DataRecording_RecordFolder_value")
+        self.Imaging_DataRecording_RecordFolder_value.setEnabled(False)
+
+        self.horizontalLayout_423.addWidget(self.Imaging_DataRecording_RecordFolder_value)
+
+        self.Imaging_DataRecording_RecordFolderDir_pushButton = QPushButton(self.Imaging_DataRecording_directory_frame)
+        self.Imaging_DataRecording_RecordFolderDir_pushButton.setObjectName(u"Imaging_DataRecording_RecordFolderDir_pushButton")
+        self.Imaging_DataRecording_RecordFolderDir_pushButton.setMinimumSize(QSize(150, 0))
+        self.Imaging_DataRecording_RecordFolderDir_pushButton.setFont(font4)
+
+        self.horizontalLayout_423.addWidget(self.Imaging_DataRecording_RecordFolderDir_pushButton)
+
+
+        self.verticalLayout_106.addWidget(self.Imaging_DataRecording_directory_frame)
+
+        self.Imaging_DataRecording_record_frame = QFrame(self.Imaging_DataRecording_right_frame)
+        self.Imaging_DataRecording_record_frame.setObjectName(u"Imaging_DataRecording_record_frame")
+        self.Imaging_DataRecording_record_frame.setFrameShape(QFrame.StyledPanel)
+        self.Imaging_DataRecording_record_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_424 = QHBoxLayout(self.Imaging_DataRecording_record_frame)
+        self.horizontalLayout_424.setSpacing(0)
+        self.horizontalLayout_424.setObjectName(u"horizontalLayout_424")
+        self.horizontalLayout_424.setContentsMargins(0, 0, 0, 0)
+        self.Imaging_SelectedFolderLabel = QLabel(self.Imaging_DataRecording_record_frame)
+        self.Imaging_SelectedFolderLabel.setObjectName(u"Imaging_SelectedFolderLabel")
+        sizePolicy3.setHeightForWidth(self.Imaging_SelectedFolderLabel.sizePolicy().hasHeightForWidth())
+        self.Imaging_SelectedFolderLabel.setSizePolicy(sizePolicy3)
+        self.Imaging_SelectedFolderLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_424.addWidget(self.Imaging_SelectedFolderLabel)
+
+        self.Imaging_DataRecording_Record_pushButton = QPushButton(self.Imaging_DataRecording_record_frame)
+        self.Imaging_DataRecording_Record_pushButton.setObjectName(u"Imaging_DataRecording_Record_pushButton")
+        sizePolicy6.setHeightForWidth(self.Imaging_DataRecording_Record_pushButton.sizePolicy().hasHeightForWidth())
+        self.Imaging_DataRecording_Record_pushButton.setSizePolicy(sizePolicy6)
+        self.Imaging_DataRecording_Record_pushButton.setMinimumSize(QSize(150, 0))
+        self.Imaging_DataRecording_Record_pushButton.setFont(font5)
+        self.Imaging_DataRecording_Record_pushButton.setStyleSheet(u"color: rgb(250, 250, 250);\n"
+"background-color: rgb(220, 50, 47);")
+
+        self.horizontalLayout_424.addWidget(self.Imaging_DataRecording_Record_pushButton)
+
+
+        self.verticalLayout_106.addWidget(self.Imaging_DataRecording_record_frame)
+
+
+        self.horizontalLayout_114.addWidget(self.Imaging_DataRecording_right_frame)
+
+
+        self.verticalLayout_109.addWidget(self.Imaging_DataRecording_box)
+
 
         self.horizontalLayout_70.addWidget(self.Imaging_widget)
 
         self.line_43 = QFrame(self.page_201)
         self.line_43.setObjectName(u"line_43")
         self.line_43.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_43.setFrameShape(QFrame.VLine)
-        self.line_43.setFrameShadow(QFrame.Sunken)
+        self.line_43.setFrameShape(QFrame.Shape.VLine)
+        self.line_43.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.horizontalLayout_70.addWidget(self.line_43)
 
@@ -5250,8 +5356,8 @@ class Ui_MainWindow(QWidget):
         self.line_49 = QFrame(self.Imaging_ImagingParameter_page)
         self.line_49.setObjectName(u"line_49")
         self.line_49.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_49.setFrameShape(QFrame.HLine)
-        self.line_49.setFrameShadow(QFrame.Sunken)
+        self.line_49.setFrameShape(QFrame.Shape.HLine)
+        self.line_49.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_131.addWidget(self.line_49)
 
@@ -5379,8 +5485,8 @@ class Ui_MainWindow(QWidget):
         self.line_50 = QFrame(self.Imaging_ImagingParameter_page)
         self.line_50.setObjectName(u"line_50")
         self.line_50.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_50.setFrameShape(QFrame.HLine)
-        self.line_50.setFrameShadow(QFrame.Sunken)
+        self.line_50.setFrameShape(QFrame.Shape.HLine)
+        self.line_50.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_131.addWidget(self.line_50)
 
@@ -5506,8 +5612,8 @@ class Ui_MainWindow(QWidget):
         self.line_51 = QFrame(self.Imaging_ImagingParameter_page)
         self.line_51.setObjectName(u"line_51")
         self.line_51.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_51.setFrameShape(QFrame.HLine)
-        self.line_51.setFrameShadow(QFrame.Sunken)
+        self.line_51.setFrameShape(QFrame.Shape.HLine)
+        self.line_51.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_131.addWidget(self.line_51)
 
@@ -5757,8 +5863,8 @@ class Ui_MainWindow(QWidget):
         self.line_52 = QFrame(self.Imaging_CalciumParameter_page)
         self.line_52.setObjectName(u"line_52")
         self.line_52.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_52.setFrameShape(QFrame.HLine)
-        self.line_52.setFrameShadow(QFrame.Sunken)
+        self.line_52.setFrameShape(QFrame.Shape.HLine)
+        self.line_52.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_137.addWidget(self.line_52)
 
@@ -5884,8 +5990,8 @@ class Ui_MainWindow(QWidget):
         self.line_53 = QFrame(self.Imaging_CalciumParameter_page)
         self.line_53.setObjectName(u"line_53")
         self.line_53.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_53.setFrameShape(QFrame.HLine)
-        self.line_53.setFrameShadow(QFrame.Sunken)
+        self.line_53.setFrameShape(QFrame.Shape.HLine)
+        self.line_53.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_137.addWidget(self.line_53)
 
@@ -6009,8 +6115,8 @@ class Ui_MainWindow(QWidget):
         self.line_54 = QFrame(self.Imaging_CalciumParameter_page)
         self.line_54.setObjectName(u"line_54")
         self.line_54.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_54.setFrameShape(QFrame.HLine)
-        self.line_54.setFrameShadow(QFrame.Sunken)
+        self.line_54.setFrameShape(QFrame.Shape.HLine)
+        self.line_54.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_137.addWidget(self.line_54)
 
@@ -6262,8 +6368,8 @@ class Ui_MainWindow(QWidget):
         self.line_45 = QFrame(self.Imaging_FluoParameter_page)
         self.line_45.setObjectName(u"line_45")
         self.line_45.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_45.setFrameShape(QFrame.HLine)
-        self.line_45.setFrameShadow(QFrame.Sunken)
+        self.line_45.setFrameShape(QFrame.Shape.HLine)
+        self.line_45.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.line_45)
 
@@ -6388,8 +6494,8 @@ class Ui_MainWindow(QWidget):
         self.line_46 = QFrame(self.Imaging_FluoParameter_page)
         self.line_46.setObjectName(u"line_46")
         self.line_46.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_46.setFrameShape(QFrame.HLine)
-        self.line_46.setFrameShadow(QFrame.Sunken)
+        self.line_46.setFrameShape(QFrame.Shape.HLine)
+        self.line_46.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.line_46)
 
@@ -6514,8 +6620,8 @@ class Ui_MainWindow(QWidget):
         self.line_47 = QFrame(self.Imaging_FluoParameter_page)
         self.line_47.setObjectName(u"line_47")
         self.line_47.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_47.setFrameShape(QFrame.HLine)
-        self.line_47.setFrameShadow(QFrame.Sunken)
+        self.line_47.setFrameShape(QFrame.Shape.HLine)
+        self.line_47.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.line_47)
 
@@ -6575,8 +6681,8 @@ class Ui_MainWindow(QWidget):
         self.line_48 = QFrame(self.Imaging_FluoParameter_page)
         self.line_48.setObjectName(u"line_48")
         self.line_48.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_48.setFrameShape(QFrame.HLine)
-        self.line_48.setFrameShadow(QFrame.Sunken)
+        self.line_48.setFrameShape(QFrame.Shape.HLine)
+        self.line_48.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.line_48)
 
@@ -6704,8 +6810,8 @@ class Ui_MainWindow(QWidget):
         self.Imaging_Saturation_Line = QFrame(self.Imaging_FluoParameter_page)
         self.Imaging_Saturation_Line.setObjectName(u"Imaging_Saturation_Line")
         self.Imaging_Saturation_Line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
-        self.Imaging_Saturation_Line.setFrameShape(QFrame.HLine)
-        self.Imaging_Saturation_Line.setFrameShadow(QFrame.Sunken)
+        self.Imaging_Saturation_Line.setFrameShape(QFrame.Shape.HLine)
+        self.Imaging_Saturation_Line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.Imaging_Saturation_Line)
 
@@ -6831,8 +6937,8 @@ class Ui_MainWindow(QWidget):
         self.Imaging_Saturation_Line2 = QFrame(self.Imaging_FluoParameter_page)
         self.Imaging_Saturation_Line2.setObjectName(u"Imaging_Saturation_Line2")
         self.Imaging_Saturation_Line2.setStyleSheet(u"background-color: rgb(80, 110, 117);")
-        self.Imaging_Saturation_Line2.setFrameShape(QFrame.HLine)
-        self.Imaging_Saturation_Line2.setFrameShadow(QFrame.Sunken)
+        self.Imaging_Saturation_Line2.setFrameShape(QFrame.Shape.HLine)
+        self.Imaging_Saturation_Line2.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_145.addWidget(self.Imaging_Saturation_Line2)
 
@@ -7023,9 +7129,9 @@ class Ui_MainWindow(QWidget):
         self.Imaging_CalciumParameter_pushButton = QPushButton(self.Imaging_rightMenuParameterContainer_frame)
         self.Imaging_CalciumParameter_pushButton.setObjectName(u"Imaging_CalciumParameter_pushButton")
         self.Imaging_CalciumParameter_pushButton.setFont(font1)
-        icon21 = QIcon()
-        icon21.addFile(u":/resources/resources/Calcium.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Imaging_CalciumParameter_pushButton.setIcon(icon21)
+        icon20 = QIcon()
+        icon20.addFile(u":/resources/resources/Calcium.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.Imaging_CalciumParameter_pushButton.setIcon(icon20)
         self.Imaging_CalciumParameter_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_94.addWidget(self.Imaging_CalciumParameter_pushButton)
@@ -7267,6 +7373,112 @@ class Ui_MainWindow(QWidget):
 
         self.verticalLayout_84.addWidget(self.MultipleImaging_Oscilloscope_frame)
 
+        self.MultipleImaging_DataRecording_box = QGroupBox(self.MultipleImaging_widget)
+        self.MultipleImaging_DataRecording_box.setObjectName(u"MultipleImaging_DataRecording_box")
+        sizePolicy5.setHeightForWidth(self.MultipleImaging_DataRecording_box.sizePolicy().hasHeightForWidth())
+        self.MultipleImaging_DataRecording_box.setSizePolicy(sizePolicy5)
+        self.MultipleImaging_DataRecording_box.setMinimumSize(QSize(0, 100))
+        self.MultipleImaging_DataRecording_box.setMaximumSize(QSize(16777215, 100))
+        self.MultipleImaging_DataRecording_box.setStyleSheet(u"")
+        self.horizontalLayout_415 = QHBoxLayout(self.MultipleImaging_DataRecording_box)
+        self.horizontalLayout_415.setSpacing(0)
+        self.horizontalLayout_415.setObjectName(u"horizontalLayout_415")
+        self.horizontalLayout_415.setContentsMargins(5, 5, 5, 5)
+        self.MultipleImaging_DataRecording_left_frame = QFrame(self.MultipleImaging_DataRecording_box)
+        self.MultipleImaging_DataRecording_left_frame.setObjectName(u"MultipleImaging_DataRecording_left_frame")
+        self.MultipleImaging_DataRecording_left_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_DataRecording_left_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_107 = QVBoxLayout(self.MultipleImaging_DataRecording_left_frame)
+        self.verticalLayout_107.setSpacing(0)
+        self.verticalLayout_107.setObjectName(u"verticalLayout_107")
+        self.verticalLayout_107.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_DataRecording_recordingMode_frame = QFrame(self.MultipleImaging_DataRecording_left_frame)
+        self.MultipleImaging_DataRecording_recordingMode_frame.setObjectName(u"MultipleImaging_DataRecording_recordingMode_frame")
+        self.MultipleImaging_DataRecording_recordingMode_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_DataRecording_recordingMode_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_425 = QHBoxLayout(self.MultipleImaging_DataRecording_recordingMode_frame)
+        self.horizontalLayout_425.setSpacing(0)
+        self.horizontalLayout_425.setObjectName(u"horizontalLayout_425")
+        self.horizontalLayout_425.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_107.addWidget(self.MultipleImaging_DataRecording_recordingMode_frame)
+
+
+        self.horizontalLayout_415.addWidget(self.MultipleImaging_DataRecording_left_frame)
+
+        self.MultipleImaging_DataRecording_right_frame = QFrame(self.MultipleImaging_DataRecording_box)
+        self.MultipleImaging_DataRecording_right_frame.setObjectName(u"MultipleImaging_DataRecording_right_frame")
+        self.MultipleImaging_DataRecording_right_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_DataRecording_right_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_108 = QVBoxLayout(self.MultipleImaging_DataRecording_right_frame)
+        self.verticalLayout_108.setSpacing(0)
+        self.verticalLayout_108.setObjectName(u"verticalLayout_108")
+        self.verticalLayout_108.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_DataRecording_directory_frame = QFrame(self.MultipleImaging_DataRecording_right_frame)
+        self.MultipleImaging_DataRecording_directory_frame.setObjectName(u"MultipleImaging_DataRecording_directory_frame")
+        self.MultipleImaging_DataRecording_directory_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_DataRecording_directory_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_426 = QHBoxLayout(self.MultipleImaging_DataRecording_directory_frame)
+        self.horizontalLayout_426.setSpacing(10)
+        self.horizontalLayout_426.setObjectName(u"horizontalLayout_426")
+        self.horizontalLayout_426.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_DataRecording_SelectRecordFolder_label = QLabel(self.MultipleImaging_DataRecording_directory_frame)
+        self.MultipleImaging_DataRecording_SelectRecordFolder_label.setObjectName(u"MultipleImaging_DataRecording_SelectRecordFolder_label")
+
+        self.horizontalLayout_426.addWidget(self.MultipleImaging_DataRecording_SelectRecordFolder_label)
+
+        self.MultipleImaging_DataRecording_RecordFolder_value = QLineEdit(self.MultipleImaging_DataRecording_directory_frame)
+        self.MultipleImaging_DataRecording_RecordFolder_value.setObjectName(u"MultipleImaging_DataRecording_RecordFolder_value")
+        self.MultipleImaging_DataRecording_RecordFolder_value.setEnabled(False)
+
+        self.horizontalLayout_426.addWidget(self.MultipleImaging_DataRecording_RecordFolder_value)
+
+        self.MultipleImaging_DataRecording_RecordFolderDir_pushButton = QPushButton(self.MultipleImaging_DataRecording_directory_frame)
+        self.MultipleImaging_DataRecording_RecordFolderDir_pushButton.setObjectName(u"MultipleImaging_DataRecording_RecordFolderDir_pushButton")
+        self.MultipleImaging_DataRecording_RecordFolderDir_pushButton.setMinimumSize(QSize(150, 0))
+        self.MultipleImaging_DataRecording_RecordFolderDir_pushButton.setFont(font4)
+
+        self.horizontalLayout_426.addWidget(self.MultipleImaging_DataRecording_RecordFolderDir_pushButton)
+
+
+        self.verticalLayout_108.addWidget(self.MultipleImaging_DataRecording_directory_frame)
+
+        self.MultipleImaging_DataRecording_record_frame = QFrame(self.MultipleImaging_DataRecording_right_frame)
+        self.MultipleImaging_DataRecording_record_frame.setObjectName(u"MultipleImaging_DataRecording_record_frame")
+        self.MultipleImaging_DataRecording_record_frame.setFrameShape(QFrame.StyledPanel)
+        self.MultipleImaging_DataRecording_record_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_427 = QHBoxLayout(self.MultipleImaging_DataRecording_record_frame)
+        self.horizontalLayout_427.setSpacing(0)
+        self.horizontalLayout_427.setObjectName(u"horizontalLayout_427")
+        self.horizontalLayout_427.setContentsMargins(0, 0, 0, 0)
+        self.MultipleImaging_SelectedFolderLabel = QLabel(self.MultipleImaging_DataRecording_record_frame)
+        self.MultipleImaging_SelectedFolderLabel.setObjectName(u"MultipleImaging_SelectedFolderLabel")
+        sizePolicy3.setHeightForWidth(self.MultipleImaging_SelectedFolderLabel.sizePolicy().hasHeightForWidth())
+        self.MultipleImaging_SelectedFolderLabel.setSizePolicy(sizePolicy3)
+        self.MultipleImaging_SelectedFolderLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_427.addWidget(self.MultipleImaging_SelectedFolderLabel)
+
+        self.MultipleImaging_DataRecording_Record_pushButton = QPushButton(self.MultipleImaging_DataRecording_record_frame)
+        self.MultipleImaging_DataRecording_Record_pushButton.setObjectName(u"MultipleImaging_DataRecording_Record_pushButton")
+        sizePolicy6.setHeightForWidth(self.MultipleImaging_DataRecording_Record_pushButton.sizePolicy().hasHeightForWidth())
+        self.MultipleImaging_DataRecording_Record_pushButton.setSizePolicy(sizePolicy6)
+        self.MultipleImaging_DataRecording_Record_pushButton.setMinimumSize(QSize(150, 0))
+        self.MultipleImaging_DataRecording_Record_pushButton.setFont(font5)
+        self.MultipleImaging_DataRecording_Record_pushButton.setStyleSheet(u"color: rgb(250, 250, 250);\n"
+"background-color: rgb(220, 50, 47);")
+
+        self.horizontalLayout_427.addWidget(self.MultipleImaging_DataRecording_Record_pushButton)
+
+
+        self.verticalLayout_108.addWidget(self.MultipleImaging_DataRecording_record_frame)
+
+
+        self.horizontalLayout_415.addWidget(self.MultipleImaging_DataRecording_right_frame)
+
+
+        self.verticalLayout_84.addWidget(self.MultipleImaging_DataRecording_box)
+
 
         self.horizontalLayout_380.addWidget(self.MultipleImaging_widget)
 
@@ -7444,8 +7656,8 @@ class Ui_MainWindow(QWidget):
         self.line_55 = QFrame(self.MultipleImaging_ImagingParameter_page)
         self.line_55.setObjectName(u"line_55")
         self.line_55.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_55.setFrameShape(QFrame.HLine)
-        self.line_55.setFrameShadow(QFrame.Sunken)
+        self.line_55.setFrameShape(QFrame.Shape.HLine)
+        self.line_55.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_147.addWidget(self.line_55)
 
@@ -7573,8 +7785,8 @@ class Ui_MainWindow(QWidget):
         self.line_56 = QFrame(self.MultipleImaging_ImagingParameter_page)
         self.line_56.setObjectName(u"line_56")
         self.line_56.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_56.setFrameShape(QFrame.HLine)
-        self.line_56.setFrameShadow(QFrame.Sunken)
+        self.line_56.setFrameShape(QFrame.Shape.HLine)
+        self.line_56.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_147.addWidget(self.line_56)
 
@@ -7700,8 +7912,8 @@ class Ui_MainWindow(QWidget):
         self.line_57 = QFrame(self.MultipleImaging_ImagingParameter_page)
         self.line_57.setObjectName(u"line_57")
         self.line_57.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_57.setFrameShape(QFrame.HLine)
-        self.line_57.setFrameShadow(QFrame.Sunken)
+        self.line_57.setFrameShape(QFrame.Shape.HLine)
+        self.line_57.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_147.addWidget(self.line_57)
 
@@ -7951,8 +8163,8 @@ class Ui_MainWindow(QWidget):
         self.line_58 = QFrame(self.MultipleImaging_CalciumParameter_page)
         self.line_58.setObjectName(u"line_58")
         self.line_58.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_58.setFrameShape(QFrame.HLine)
-        self.line_58.setFrameShadow(QFrame.Sunken)
+        self.line_58.setFrameShape(QFrame.Shape.HLine)
+        self.line_58.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_151.addWidget(self.line_58)
 
@@ -8078,8 +8290,8 @@ class Ui_MainWindow(QWidget):
         self.line_59 = QFrame(self.MultipleImaging_CalciumParameter_page)
         self.line_59.setObjectName(u"line_59")
         self.line_59.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_59.setFrameShape(QFrame.HLine)
-        self.line_59.setFrameShadow(QFrame.Sunken)
+        self.line_59.setFrameShape(QFrame.Shape.HLine)
+        self.line_59.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_151.addWidget(self.line_59)
 
@@ -8203,8 +8415,8 @@ class Ui_MainWindow(QWidget):
         self.line_60 = QFrame(self.MultipleImaging_CalciumParameter_page)
         self.line_60.setObjectName(u"line_60")
         self.line_60.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_60.setFrameShape(QFrame.HLine)
-        self.line_60.setFrameShadow(QFrame.Sunken)
+        self.line_60.setFrameShape(QFrame.Shape.HLine)
+        self.line_60.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_151.addWidget(self.line_60)
 
@@ -8456,8 +8668,8 @@ class Ui_MainWindow(QWidget):
         self.line_61 = QFrame(self.MultipleImaging_FluoParameter_page)
         self.line_61.setObjectName(u"line_61")
         self.line_61.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_61.setFrameShape(QFrame.HLine)
-        self.line_61.setFrameShadow(QFrame.Sunken)
+        self.line_61.setFrameShape(QFrame.Shape.HLine)
+        self.line_61.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.line_61)
 
@@ -8582,8 +8794,8 @@ class Ui_MainWindow(QWidget):
         self.line_62 = QFrame(self.MultipleImaging_FluoParameter_page)
         self.line_62.setObjectName(u"line_62")
         self.line_62.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_62.setFrameShape(QFrame.HLine)
-        self.line_62.setFrameShadow(QFrame.Sunken)
+        self.line_62.setFrameShape(QFrame.Shape.HLine)
+        self.line_62.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.line_62)
 
@@ -8708,8 +8920,8 @@ class Ui_MainWindow(QWidget):
         self.line_63 = QFrame(self.MultipleImaging_FluoParameter_page)
         self.line_63.setObjectName(u"line_63")
         self.line_63.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_63.setFrameShape(QFrame.HLine)
-        self.line_63.setFrameShadow(QFrame.Sunken)
+        self.line_63.setFrameShape(QFrame.Shape.HLine)
+        self.line_63.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.line_63)
 
@@ -8769,8 +8981,8 @@ class Ui_MainWindow(QWidget):
         self.line_64 = QFrame(self.MultipleImaging_FluoParameter_page)
         self.line_64.setObjectName(u"line_64")
         self.line_64.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_64.setFrameShape(QFrame.HLine)
-        self.line_64.setFrameShadow(QFrame.Sunken)
+        self.line_64.setFrameShape(QFrame.Shape.HLine)
+        self.line_64.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.line_64)
 
@@ -8898,8 +9110,8 @@ class Ui_MainWindow(QWidget):
         self.MultipleImaging_Saturation_Line = QFrame(self.MultipleImaging_FluoParameter_page)
         self.MultipleImaging_Saturation_Line.setObjectName(u"MultipleImaging_Saturation_Line")
         self.MultipleImaging_Saturation_Line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
-        self.MultipleImaging_Saturation_Line.setFrameShape(QFrame.HLine)
-        self.MultipleImaging_Saturation_Line.setFrameShadow(QFrame.Sunken)
+        self.MultipleImaging_Saturation_Line.setFrameShape(QFrame.Shape.HLine)
+        self.MultipleImaging_Saturation_Line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.MultipleImaging_Saturation_Line)
 
@@ -9025,8 +9237,8 @@ class Ui_MainWindow(QWidget):
         self.MultipleImaging_Saturation_Line2 = QFrame(self.MultipleImaging_FluoParameter_page)
         self.MultipleImaging_Saturation_Line2.setObjectName(u"MultipleImaging_Saturation_Line2")
         self.MultipleImaging_Saturation_Line2.setStyleSheet(u"background-color: rgb(80, 110, 117);")
-        self.MultipleImaging_Saturation_Line2.setFrameShape(QFrame.HLine)
-        self.MultipleImaging_Saturation_Line2.setFrameShadow(QFrame.Sunken)
+        self.MultipleImaging_Saturation_Line2.setFrameShape(QFrame.Shape.HLine)
+        self.MultipleImaging_Saturation_Line2.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_156.addWidget(self.MultipleImaging_Saturation_Line2)
 
@@ -9217,7 +9429,7 @@ class Ui_MainWindow(QWidget):
         self.MultipleImaging_CalciumParameter_pushButton = QPushButton(self.MultipleImaging_rightMenuParameterContainer_frame)
         self.MultipleImaging_CalciumParameter_pushButton.setObjectName(u"MultipleImaging_CalciumParameter_pushButton")
         self.MultipleImaging_CalciumParameter_pushButton.setFont(font1)
-        self.MultipleImaging_CalciumParameter_pushButton.setIcon(icon21)
+        self.MultipleImaging_CalciumParameter_pushButton.setIcon(icon20)
         self.MultipleImaging_CalciumParameter_pushButton.setIconSize(QSize(30, 30))
 
         self.verticalLayout_97.addWidget(self.MultipleImaging_CalciumParameter_pushButton)
@@ -9366,7 +9578,7 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
         self.NeuronGenerator_subframe1_Izhik_textbrowser = QTextBrowser(self.NeuronGenerator_subframe1_Izhik_subframe1)
         self.NeuronGenerator_subframe1_Izhik_textbrowser.setObjectName(u"NeuronGenerator_subframe1_Izhik_textbrowser")
-        sizePolicy8 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy8 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         sizePolicy8.setHorizontalStretch(0)
         sizePolicy8.setVerticalStretch(0)
         sizePolicy8.setHeightForWidth(self.NeuronGenerator_subframe1_Izhik_textbrowser.sizePolicy().hasHeightForWidth())
@@ -9562,8 +9774,8 @@ class Ui_MainWindow(QWidget):
 
         self.line = QFrame(self.NeuronGenerator_subframe2)
         self.line.setObjectName(u"line")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
+        self.line.setFrameShape(QFrame.Shape.HLine)
+        self.line.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_14.addWidget(self.line)
 
@@ -9625,8 +9837,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_2 = QFrame(self.NeuronGenerator_subframe2)
         self.line_2.setObjectName(u"line_2")
-        self.line_2.setFrameShape(QFrame.HLine)
-        self.line_2.setFrameShadow(QFrame.Sunken)
+        self.line_2.setFrameShape(QFrame.Shape.HLine)
+        self.line_2.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_14.addWidget(self.line_2)
 
@@ -9686,8 +9898,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_3 = QFrame(self.NeuronGenerator_subframe2)
         self.line_3.setObjectName(u"line_3")
-        self.line_3.setFrameShape(QFrame.HLine)
-        self.line_3.setFrameShadow(QFrame.Sunken)
+        self.line_3.setFrameShape(QFrame.Shape.HLine)
+        self.line_3.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_14.addWidget(self.line_3)
 
@@ -9747,8 +9959,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_4 = QFrame(self.NeuronGenerator_subframe2)
         self.line_4.setObjectName(u"line_4")
-        self.line_4.setFrameShape(QFrame.HLine)
-        self.line_4.setFrameShadow(QFrame.Sunken)
+        self.line_4.setFrameShape(QFrame.Shape.HLine)
+        self.line_4.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_14.addWidget(self.line_4)
 
@@ -9808,8 +10020,8 @@ class Ui_MainWindow(QWidget):
 
         self.line_5 = QFrame(self.NeuronGenerator_subframe2)
         self.line_5.setObjectName(u"line_5")
-        self.line_5.setFrameShape(QFrame.HLine)
-        self.line_5.setFrameShadow(QFrame.Sunken)
+        self.line_5.setFrameShape(QFrame.Shape.HLine)
+        self.line_5.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_14.addWidget(self.line_5)
 
@@ -10091,8 +10303,8 @@ class Ui_MainWindow(QWidget):
         self.line_42 = QFrame(self.StimulusGenerator_Parameter_frame)
         self.line_42.setObjectName(u"line_42")
         self.line_42.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_42.setFrameShape(QFrame.VLine)
-        self.line_42.setFrameShadow(QFrame.Sunken)
+        self.line_42.setFrameShape(QFrame.Shape.VLine)
+        self.line_42.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.horizontalLayout_205.addWidget(self.line_42)
 
@@ -10418,8 +10630,8 @@ class Ui_MainWindow(QWidget):
         self.line_68 = QFrame(self.page_IntensitySteps)
         self.line_68.setObjectName(u"line_68")
         self.line_68.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_68.setFrameShape(QFrame.HLine)
-        self.line_68.setFrameShadow(QFrame.Sunken)
+        self.line_68.setFrameShape(QFrame.Shape.HLine)
+        self.line_68.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_111.addWidget(self.line_68)
 
@@ -10749,8 +10961,8 @@ class Ui_MainWindow(QWidget):
         self.line_67 = QFrame(self.page_SineWave)
         self.line_67.setObjectName(u"line_67")
         self.line_67.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_67.setFrameShape(QFrame.HLine)
-        self.line_67.setFrameShadow(QFrame.Sunken)
+        self.line_67.setFrameShape(QFrame.Shape.HLine)
+        self.line_67.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_126.addWidget(self.line_67)
 
@@ -11071,8 +11283,8 @@ class Ui_MainWindow(QWidget):
         self.line_44 = QFrame(self.page_TriangularWave)
         self.line_44.setObjectName(u"line_44")
         self.line_44.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_44.setFrameShape(QFrame.HLine)
-        self.line_44.setFrameShadow(QFrame.Sunken)
+        self.line_44.setFrameShape(QFrame.Shape.HLine)
+        self.line_44.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_112.addWidget(self.line_44)
 
@@ -11477,8 +11689,8 @@ class Ui_MainWindow(QWidget):
         self.line_65 = QFrame(self.page_Chirp)
         self.line_65.setObjectName(u"line_65")
         self.line_65.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_65.setFrameShape(QFrame.HLine)
-        self.line_65.setFrameShadow(QFrame.Sunken)
+        self.line_65.setFrameShape(QFrame.Shape.HLine)
+        self.line_65.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_100.addWidget(self.line_65)
 
@@ -11709,8 +11921,8 @@ class Ui_MainWindow(QWidget):
         self.line_66 = QFrame(self.page_Chirp)
         self.line_66.setObjectName(u"line_66")
         self.line_66.setStyleSheet(u"background-color: rgb(0, 30, 38);")
-        self.line_66.setFrameShape(QFrame.HLine)
-        self.line_66.setFrameShadow(QFrame.Sunken)
+        self.line_66.setFrameShape(QFrame.Shape.HLine)
+        self.line_66.setFrameShadow(QFrame.Shadow.Sunken)
 
         self.verticalLayout_100.addWidget(self.line_66)
 
@@ -12278,31 +12490,10 @@ class Ui_MainWindow(QWidget):
         self.horizontalLayout_8.setSpacing(10)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.badenlab_logo = QLabel(self.logo_frame)
-        self.badenlab_logo.setObjectName(u"badenlab_logo")
-        self.badenlab_logo.setMinimumSize(QSize(80, 30))
-        self.badenlab_logo.setMaximumSize(QSize(80, 30))
-        self.badenlab_logo.setPixmap(QPixmap(u":/resources/resources/Baden-Logo2.png"))
-        self.badenlab_logo.setScaledContents(True)
-        self.badenlab_logo.setWordWrap(False)
-
-        self.horizontalLayout_8.addWidget(self.badenlab_logo)
-
-        self.ON_logo = QLabel(self.logo_frame)
-        self.ON_logo.setObjectName(u"ON_logo")
-        sizePolicy2.setHeightForWidth(self.ON_logo.sizePolicy().hasHeightForWidth())
-        self.ON_logo.setSizePolicy(sizePolicy2)
-        self.ON_logo.setMinimumSize(QSize(135, 15))
-        self.ON_logo.setMaximumSize(QSize(135, 15))
-        self.ON_logo.setPixmap(QPixmap(u":/resources/resources/ON-Logo.png"))
-        self.ON_logo.setScaledContents(True)
-
-        self.horizontalLayout_8.addWidget(self.ON_logo)
-
         self.sussex_logo = QLabel(self.logo_frame)
         self.sussex_logo.setObjectName(u"sussex_logo")
-        self.sussex_logo.setMinimumSize(QSize(95, 30))
-        self.sussex_logo.setMaximumSize(QSize(95, 30))
+        self.sussex_logo.setMinimumSize(QSize(85, 25))
+        self.sussex_logo.setMaximumSize(QSize(85, 25))
         self.sussex_logo.setPixmap(QPixmap(u":/resources/resources/SN-Logo.png"))
         self.sussex_logo.setScaledContents(True)
 
@@ -12312,12 +12503,25 @@ class Ui_MainWindow(QWidget):
         self.trend_logo.setObjectName(u"trend_logo")
         sizePolicy2.setHeightForWidth(self.trend_logo.sizePolicy().hasHeightForWidth())
         self.trend_logo.setSizePolicy(sizePolicy2)
-        self.trend_logo.setMinimumSize(QSize(40, 30))
-        self.trend_logo.setMaximumSize(QSize(40, 30))
-        self.trend_logo.setPixmap(QPixmap(u":/resources/resources/TReND-Logo.png"))
+        self.trend_logo.setMinimumSize(QSize(34, 30))
+        self.trend_logo.setMaximumSize(QSize(34, 30))
+        self.trend_logo.setToolTipDuration(-1)
+        self.trend_logo.setPixmap(QPixmap(u":/resources/resources/CaMinA.png"))
         self.trend_logo.setScaledContents(True)
 
         self.horizontalLayout_8.addWidget(self.trend_logo)
+
+        self.OSN_logo = QLabel(self.logo_frame)
+        self.OSN_logo.setObjectName(u"OSN_logo")
+        sizePolicy2.setHeightForWidth(self.OSN_logo.sizePolicy().hasHeightForWidth())
+        self.OSN_logo.setSizePolicy(sizePolicy2)
+        self.OSN_logo.setMinimumSize(QSize(48, 30))
+        self.OSN_logo.setMaximumSize(QSize(48, 30))
+        self.OSN_logo.setPixmap(QPixmap(u":/resources/resources/SpikyLogo.png"))
+        self.OSN_logo.setScaledContents(True)
+        self.OSN_logo.setWordWrap(False)
+
+        self.horizontalLayout_8.addWidget(self.OSN_logo)
 
 
         self.horizontalLayout_3.addWidget(self.logo_frame, 0, Qt.AlignRight)
@@ -12352,13 +12556,13 @@ class Ui_MainWindow(QWidget):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(4)
-        self.toolBox.setCurrentIndex(7)
+        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(2)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(3)
+        self.mainbody_stackedWidget.setCurrentIndex(5)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
-        self.DataAnalysis_stackedWidget.setCurrentIndex(1)
+        self.DataAnalysis_stackedWidget.setCurrentIndex(0)
         self.Imaging_parameter_stackedWidget.setCurrentIndex(2)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
@@ -12386,9 +12590,9 @@ class Ui_MainWindow(QWidget):
         self.GitHubMenu_pushButton.setText(QCoreApplication.translate("MainWindow", u"GitHub", None))
         self.centerMenuSubContainer_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Sub-Menus   ", None))
         self.Neuron_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Interface", None))
-        self.NeuronSimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Simulator", None))
-        self.NeuronTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
+        self.NeuronSimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Emulator", None))
         self.NeuronDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
+        self.NeuronTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.ImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Stimulation", None))
         self.MultipleImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Multiple Imaging", None))
         self.ImagingTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
@@ -12415,22 +12619,18 @@ class Ui_MainWindow(QWidget):
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"GitHub", None))
         self.label_8.setText("")
-        self.mainbody_header_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:16pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:16pt;\">A hardware implementation of spiking neurons for neursocience teaching and outreach</span></p><p align=\"right\"><span style=\" font-size:8pt; font-weight:700;\">Conceived and developed by M.J.Y. Zimmermann, A.M. Chagas, T. Baden</span></p></body></html>", None))
+        self.mainbody_header_text.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:16pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:16pt;\">A hardware implementation of spiking neurons for neursocience teaching and outreach</span></p><p align=\"right\"><span style=\" font-weight:696;\">Conceived and developed by M.J.Y. Zimmermann</span></p><p align=\"right\"><span style=\" font-weight:696;\">Based on an original idea from T. Baden</span></p></body></html>", None))
         self.mainbody_content_text.setText(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:700;\">Spikeling</span><span style=\" font-size:12pt;\"> is an educational tool for neuroscience students and enthusiasts!</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">It is an artificial neuron that can receive different inputs, integrate them and outputs its computation, just like a spiking neuron would!</span></p>\n"
-"<p align=\"ju"
-                        "stify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\"><br /></span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color:#268bd2;\">This project is licensed under the </span><span style=\" font-size:12pt; font-weight:700; color:#268bd2;\">GNU General Public License v3.0</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color"
-                        ":#268bd2;\">The hardware is licensed under the </span><span style=\" font-size:12pt; font-weight:700; color:#268bd2;\">CERN OHL v1.2</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:700; color:#268bd2;\"><br /></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; color:#268bd2;\">https://github.com/OpenSourceNeuro/Spikeling-V2</span></p></body></html>", None))
-        self.mainbody_content_SpikelingGif.setText("")
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:696;\">Spikeling</span><span style=\" font-family:'Segoe UI'; font-size:12pt;\"> is an educational tool for neuroscience students and enthusiasts!</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:12pt;\">It is an artificial neuron that can receive different inputs, integrate them and outputs its computation, just like "
+                        "a spiking neuron would!</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:12pt;\">It consists of a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.</span></p></body></html>", None))
+        self.label_98.setText("")
+        self.label_97.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-family:'Segoe UI'; font-size:12pt; color:#268bd2;\">This project is licensed under the </span><span style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:696; color:#268bd2;\">GNU General Public License v3.0</span></p><p align=\"justify\"><span style=\" font-family:'Segoe UI'; font-size:12pt; color:#268bd2;\">The hardware is licensed under the </span><span style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:696; color:#268bd2;\">CERN OHL v1.2</span></p></body></html>", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"right\"><span style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:600; color:#268bd2;\">https://github.com/OpenSourceNeuro/Spikeling-V2</span></p></body></html>", None))
         self.Spikeling_SelectPortLabel.setText(QCoreApplication.translate("MainWindow", u"Select Port :", None))
         self.Spikeling_SelectPortComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a COM port:", None))
 
@@ -12586,9 +12786,6 @@ class Ui_MainWindow(QWidget):
         self.DataAnalysis_LoadStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Load Stimulus   ", None))
         self.DataAnalysis_StepStim_LoadData_Display_pushButton.setText(QCoreApplication.translate("MainWindow", u"Display Raw Data", None))
         self.DataAnalysis_StepStim_SaveImage_pushButton.setText(QCoreApplication.translate("MainWindow", u"Save Image", None))
-        self.DataAnalysis_Menu_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Stimuli Menu", None))
-        self.DataAnalysis_SquareStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"Square Stimulus", None))
-        self.DataAnalysis_StepStim_pushButton.setText(QCoreApplication.translate("MainWindow", u"Custom Stimulus", None))
         self.Imaging_pushButton.setText(QCoreApplication.translate("MainWindow", u"Connect Imaging screen to Spikeling screen", None))
         self.Imaging_Fluorescence_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Fluorescence", None))
 #if QT_CONFIG(whatsthis)
@@ -12597,6 +12794,12 @@ class Ui_MainWindow(QWidget):
         self.Imaging_Calcium_Checkbox.setText(QCoreApplication.translate("MainWindow", u"[Ca\u00b2\u207a]", None))
         self.Imaging_Vm_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm", None))
         self.Imaging_Stimulus_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.Imaging_DataRecording_box.setTitle(QCoreApplication.translate("MainWindow", u"Data Recording", None))
+        self.Imaging_DataRecording_SelectRecordFolder_label_.setText(QCoreApplication.translate("MainWindow", u"Data Logging: Filename", None))
+        self.Imaging_DataRecording_RecordFolder_value.setText("")
+        self.Imaging_DataRecording_RecordFolderDir_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse directory", None))
+        self.Imaging_SelectedFolderLabel.setText("")
+        self.Imaging_DataRecording_Record_pushButton.setText(QCoreApplication.translate("MainWindow", u"Record", None))
         self.Imaging_parameter_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Hide Parameters", None))
         self.Imaging_GECI_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium Indicator:", None))
         self.Imaging_GECI_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a GECI", None))
@@ -12703,6 +12906,12 @@ class Ui_MainWindow(QWidget):
         self.MultipleImaging_Vm3_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm Synapse1", None))
         self.MultipleImaging_Vm2_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm Synapse2", None))
         self.MultipleImaging_Stimulus_Checkbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.MultipleImaging_DataRecording_box.setTitle(QCoreApplication.translate("MainWindow", u"Data Recording", None))
+        self.MultipleImaging_DataRecording_SelectRecordFolder_label.setText(QCoreApplication.translate("MainWindow", u"Data Logging: Filename", None))
+        self.MultipleImaging_DataRecording_RecordFolder_value.setText("")
+        self.MultipleImaging_DataRecording_RecordFolderDir_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse directory", None))
+        self.MultipleImaging_SelectedFolderLabel.setText("")
+        self.MultipleImaging_DataRecording_Record_pushButton.setText(QCoreApplication.translate("MainWindow", u"Record", None))
         self.MultipleImaging_parameter_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Hide Parameters", None))
         self.MultipleImaging_GECI_Label.setText(QCoreApplication.translate("MainWindow", u"Calcium Indicator:", None))
         self.MultipleImaging_GECI_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select a GECI", None))
@@ -12799,21 +13008,22 @@ class Ui_MainWindow(QWidget):
         self.label_7.setText("")
         self.NeuronGenerator_subframe1_title_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:700;\">Spikeling is built on the Izhikevich model</span></p></body></html>", None))
         self.NeuronGenerator_subframe1_Izhik_textbrowser.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin\u2013Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:11pt; font-weight:696;\">v' = 0.04v</span><span style=\" font-size:11pt; font-weight:696; vertical-align:super;\">"
-                        "2</span><span style=\" font-size:11pt; font-weight:696;\"> + 5v + 140 - u + I                    </span><span style=\" font-size:11pt;\">&amp;</span><span style=\" font-size:11pt; font-weight:696;\">                    u' = a(bv - u)</span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">with the auxiliary after-spike resetting:   if </span><span style=\" font-size:11pt; font-weight:696;\">v &gt;= 30 mV</span><span style=\" font-size:10pt;\">, then </span><span style=\" font-size:11pt; font-weight:696;\">v = c</span><span style=\" font-size:10pt;\"> and</span><span style=\" font-size:11pt;\"> </span><span style=\" font-size:11pt; font-weight:696;\">u = u + d</span></p>\n"
-"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:696;\"><br /></p>"
-                        "\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Here, </span><span style=\" font-size:11pt; font-weight:696;\">v</span><span style=\" font-size:10pt;\"> and </span><span style=\" font-size:11pt; font-weight:696;\">u</span><span style=\" font-size:10pt;\"> are dimensionless variables, and </span><span style=\" font-size:11pt; font-weight:696;\">a</span><span style=\" font-size:10pt;\">, </span><span style=\" font-size:11pt; font-weight:696;\">b</span><span style=\" font-size:10pt;\">, </span><span style=\" font-size:11pt; font-weight:696;\">c</span><span style=\" font-size:10pt;\">, and </span><span style=\" font-size:11pt; font-weight:696;\">d</span><span style=\" font-size:10pt;\"> are dimensionless parameters, and </span><span style=\" font-size:11pt; font-weight:696;\">'= d/dt</span><span style=\" font-size:10pt;\">, where </span><span style=\" font-size:11pt; font-weight:696;\""
-                        ">t</span><span style=\" font-size:10pt;\"> is the time. </span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">The variable v represents the membrane potential of the neuron and </span><span style=\" font-size:11pt; font-weight:696;\">u</span><span style=\" font-size:10pt;\"> represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to </span><span style=\" font-size:11pt; font-weight:696;\">v</span><span style=\" font-size:10pt;\">. </span></p>\n"
-"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. </span></p>\n"
-"<p align=\"justify\" style=\" mar"
-                        "gin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Synaptic currents or injected DC-currents are delivered via the variable</span><span style=\" font-size:10pt; font-weight:696;\"> </span><span style=\" font-size:11pt; font-weight:696;\">I</span><span style=\" font-size:10pt;\">.</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt;\">Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin\u2013Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">v' = 0.04v</span><span style=\" font-family:'Segoe UI'; fo"
+                        "nt-size:11pt; font-weight:696; vertical-align:super;\">2</span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\"> + 5v + 140 - u + I                    </span><span style=\" font-family:'Segoe UI'; font-size:11pt;\">&amp;</span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">                    u' = a(bv - u)</span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt;\">with the auxiliary after-spike resetting:   if </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">v &gt;= 30 mV</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">, then </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">v = c</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> and</span><span style=\" font-family:'Segoe UI'; font-size:11pt;\"> </span><span style=\""
+                        " font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">u = u + d</span></p>\n"
+"<p align=\"justify\" style=\"-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:11pt; font-weight:696;\"><br /></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt;\">Here, </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">v</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> and </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">u</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> are dimensionless variables, and </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">a</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">, </span><span style="
+                        "\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">b</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">, </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">c</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">, and </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">d</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> are dimensionless parameters, and </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">'= d/dt</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">, where </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">t</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> is the time. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt;\">The variable v represents the"
+                        " membrane potential of the neuron and </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">u</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\"> represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">v</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:10pt;\">After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. </span></p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-siz"
+                        "e:10pt;\">Synaptic currents or injected DC-currents are delivered via the variable</span><span style=\" font-family:'Segoe UI'; font-size:10pt; font-weight:696;\"> </span><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:696;\">I</span><span style=\" font-family:'Segoe UI'; font-size:10pt;\">.</span></p></body></html>", None))
         self.NeuronGenerator_subframe1_Oscilloscope_widget_Vm_checkbox.setText(QCoreApplication.translate("MainWindow", u"Vm", None))
         self.NeuronGenerator_subframe1_Oscilloscope_widget_stimulus_checkbox.setText(QCoreApplication.translate("MainWindow", u"Current Input", None))
         self.StimInt_label.setText(QCoreApplication.translate("MainWindow", u"Stimulus intensity (a.u.): ", None))
@@ -12948,10 +13158,9 @@ class Ui_MainWindow(QWidget):
         self.label_22.setText("")
         self.label_23.setText("")
         self.license_label.setText(QCoreApplication.translate("MainWindow", u"This project is licensed under the GNU General Public License v3.0", None))
-        self.badenlab_logo.setText("")
-        self.ON_logo.setText("")
         self.sussex_logo.setText("")
         self.trend_logo.setText("")
+        self.OSN_logo.setText("")
         self.label.setText("")
     # retranslateUi
 

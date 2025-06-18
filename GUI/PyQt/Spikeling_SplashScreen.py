@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Spikeling_SplashScreen.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.2
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -159,6 +159,7 @@ class Ui_SplashScreen(object):
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.License_Frame = QFrame(self.Footer_Frame)
         self.License_Frame.setObjectName(u"License_Frame")
+        self.License_Frame.setMinimumSize(QSize(0, 100))
         self.License_Frame.setMaximumSize(QSize(500, 16777215))
         self.License_Frame.setFrameShape(QFrame.StyledPanel)
         self.License_Frame.setFrameShadow(QFrame.Raised)
@@ -169,74 +170,56 @@ class Ui_SplashScreen(object):
         self.label_2 = QLabel(self.License_Frame)
         self.label_2.setObjectName(u"label_2")
 
-        self.horizontalLayout_4.addWidget(self.label_2)
+        self.horizontalLayout_4.addWidget(self.label_2, 0, Qt.AlignBottom)
 
 
         self.horizontalLayout_3.addWidget(self.License_Frame, 0, Qt.AlignBottom)
 
         self.Logo_Frame = QFrame(self.Footer_Frame)
         self.Logo_Frame.setObjectName(u"Logo_Frame")
+        self.Logo_Frame.setMinimumSize(QSize(0, 100))
         self.Logo_Frame.setFrameShape(QFrame.StyledPanel)
         self.Logo_Frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.Logo_Frame)
-        self.horizontalLayout_5.setSpacing(10)
+        self.horizontalLayout_5.setSpacing(20)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.Baden_Logo = QLabel(self.Logo_Frame)
-        self.Baden_Logo.setObjectName(u"Baden_Logo")
-        self.Baden_Logo.setMaximumSize(QSize(122, 25))
-        self.Baden_Logo.setPixmap(QPixmap(u":/resources/resources/Baden-Logo.png"))
-        self.Baden_Logo.setScaledContents(True)
-
-        self.horizontalLayout_5.addWidget(self.Baden_Logo, 0, Qt.AlignBottom)
-
-        self.ON_Logo = QLabel(self.Logo_Frame)
-        self.ON_Logo.setObjectName(u"ON_Logo")
-        self.ON_Logo.setMaximumSize(QSize(180, 20))
-        self.ON_Logo.setPixmap(QPixmap(u":/resources/resources/ON-Logo.png"))
-        self.ON_Logo.setScaledContents(True)
-
-        self.horizontalLayout_5.addWidget(self.ON_Logo)
-
         self.Sussex_Logo = QLabel(self.Logo_Frame)
         self.Sussex_Logo.setObjectName(u"Sussex_Logo")
-        self.Sussex_Logo.setMaximumSize(QSize(95, 30))
+        self.Sussex_Logo.setMinimumSize(QSize(236, 75))
+        self.Sussex_Logo.setMaximumSize(QSize(236, 75))
         self.Sussex_Logo.setPixmap(QPixmap(u":/resources/resources/SN-Logo.png"))
         self.Sussex_Logo.setScaledContents(True)
 
-        self.horizontalLayout_5.addWidget(self.Sussex_Logo)
+        self.horizontalLayout_5.addWidget(self.Sussex_Logo, 0, Qt.AlignVCenter)
 
         self.TReND_Logo = QLabel(self.Logo_Frame)
         self.TReND_Logo.setObjectName(u"TReND_Logo")
-        self.TReND_Logo.setMaximumSize(QSize(40, 30))
-        self.TReND_Logo.setPixmap(QPixmap(u":/resources/resources/TReND-Logo.png"))
+        self.TReND_Logo.setMinimumSize(QSize(113, 100))
+        self.TReND_Logo.setMaximumSize(QSize(113, 100))
+        self.TReND_Logo.setPixmap(QPixmap(u":/resources/resources/CaMinA.png"))
         self.TReND_Logo.setScaledContents(True)
 
         self.horizontalLayout_5.addWidget(self.TReND_Logo)
 
 
-        self.horizontalLayout_3.addWidget(self.Logo_Frame, 0, Qt.AlignRight|Qt.AlignBottom)
+        self.horizontalLayout_3.addWidget(self.Logo_Frame, 0, Qt.AlignHCenter|Qt.AlignBottom)
 
         self.Credits_Frame = QFrame(self.Footer_Frame)
         self.Credits_Frame.setObjectName(u"Credits_Frame")
-        self.Credits_Frame.setMaximumSize(QSize(350, 50))
+        self.Credits_Frame.setMinimumSize(QSize(0, 100))
+        self.Credits_Frame.setMaximumSize(QSize(500, 100))
         self.Credits_Frame.setFrameShape(QFrame.StyledPanel)
         self.Credits_Frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.Credits_Frame)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.Credits_Label1 = QLabel(self.Credits_Frame)
-        self.Credits_Label1.setObjectName(u"Credits_Label1")
-        self.Credits_Label1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.Credits_Label = QLabel(self.Credits_Frame)
+        self.Credits_Label.setObjectName(u"Credits_Label")
+        self.Credits_Label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_3.addWidget(self.Credits_Label1)
-
-        self.Credits_Label2 = QLabel(self.Credits_Frame)
-        self.Credits_Label2.setObjectName(u"Credits_Label2")
-        self.Credits_Label2.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.verticalLayout_3.addWidget(self.Credits_Label2)
+        self.verticalLayout_3.addWidget(self.Credits_Label)
 
 
         self.horizontalLayout_3.addWidget(self.Credits_Frame)
@@ -262,12 +245,9 @@ class Ui_SplashScreen(object):
 #endif // QT_CONFIG(whatsthis)
         self.label_3.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#93a1a1;\">Spikeling </span><span style=\" font-size:16pt; color:#93a1a1;\">v2.2</span></p><p align=\"center\"><span style=\" font-size:18pt; color:#93a1a1;\">A hardware implementation of spiking neurons for neuroscience teaching and outreach</span></p></body></html>", None))
         self.Status_Label.setText(QCoreApplication.translate("SplashScreen", u"Welcome to Spikeling GUI", None))
-        self.label_2.setText(QCoreApplication.translate("SplashScreen", u"This project is licensed under the GNU General Public License v3.0", None))
-        self.Baden_Logo.setText("")
-        self.ON_Logo.setText("")
+        self.label_2.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p><span style=\" font-size:10pt;\">This project is licensed under the GNU General Public License v3.0</span></p></body></html>", None))
         self.Sussex_Logo.setText("")
         self.TReND_Logo.setText("")
-        self.Credits_Label1.setText(QCoreApplication.translate("SplashScreen", u"<strong>Developped by </strong>M.J.Y. Zimmermann & A.M. Chagas", None))
-        self.Credits_Label2.setText(QCoreApplication.translate("SplashScreen", u" <strong>Based on</strong> an original idea by T.Baden", None))
+        self.Credits_Label.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p><span style=\" font-size:10pt; font-weight:600;\">Developped by </span><span style=\" font-size:10pt;\">M.J.Y. Zimmermann</span></p><p><span style=\" font-size:10pt; font-weight:600;\">Based on</span><span style=\" font-size:10pt;\"> an original idea by T. Baden</span></p></body></html>", None))
     # retranslateUi
 

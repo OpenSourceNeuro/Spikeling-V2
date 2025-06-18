@@ -1,16 +1,16 @@
-from PySide6 import QtCore, QtGui, QtWidgets, QtSerialPort
+
+########################################################################
+#                          Libraries import                            #
+
+from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import QIODevice, QTimer
 import pyqtgraph as pg
-import collections
-import serial
+
 import numpy as np
 import pandas as pd
-import Data_recording
+import collections
+
 import Settings
-import time
-
-import Page201
-
 
 
 
@@ -49,7 +49,9 @@ def MultipleImagingPlot(self):
     self.MultipleCalciumData2 = self.MultipleCalciumBaseline
     self.MultipleCalciumData3 = self.MultipleCalciumBaseline
 
+
     if self.ui.MultipleImaging_pushButton.isChecked():
+        self.MultipleImagingConnectionFlag = True
         self.Multipleimagingtimer = QtCore.QTimer()
         self.Multipleimagingtimer.timeout.connect(lambda: UpdateMultipleImagingPlot(self))
         self.Multipleimagingtimer.start()
@@ -65,7 +67,7 @@ def MultipleImagingPlot(self):
         self.ui.MultipleImaging_Oscilloscope_widget.getViewBox().sigResized.connect(UpdateMultipleImagingViews(self))
         self.MultipleImagingData = GetMultipleData(self)
         BuffMultipleImagingData(self)                              # Append latest data into buffer deque
-        #SaveMultipleImagingPlotData(self)                          # Create data array to be exported in .csv
+        SaveMultipleImagingPlotData(self)                          # Create data array to be exported in .csv
         if self.i_Multipleimaging_downsampling == 0:               # Plot Data once every "downsampling" time
             PlotMultipleImagingCurve(self)
         self.i_Multipleimaging_downsampling += 1
@@ -217,41 +219,61 @@ def MultipleImagingPlot(self):
 
 
 
-# def SaveImaginPlotData(self):                              # Save latest buffer data and export them as csv
-#     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False and self.recordflag == True:
-#         self.Dataset = np.empty([7, len(self.Dataset0)], dtype=float)
-#         for i in range(len(self.Dataset0)):
-#             self.Dataset[0][i] = self.Dataset0[i]
-#             self.Dataset[1][i] = self.Dataset1[i]
-#             self.Dataset[2][i] = self.Dataset2[i]
-#             self.Dataset[3][i] = self.Dataset3[i]
-#             self.Dataset[4][i] = self.Dataset4[i]
-#             self.Dataset[5][i] = self.Dataset5[i]
-#             self.Dataset[6][i] = self.Dataset6[i]
-#
-#         dict = {'Spikeling Vm': self.Dataset[0], 'Stimulus': self.Dataset[1], 'Total Current Input': self.Dataset[2],
-#                 'Synapse 1 Vm': self.Dataset[3], 'Synapse 1 Input': self.Dataset[4],
-#                 'Synapse 2 Vm': self.Dataset[5], 'Synapse 2 Input': self.Dataset[6]}
-#         df = pd.DataFrame(dict)
-#         self.RecordingFileName = str(self.ui.Spikeling_SelectedFolderLabel.text())
-#         df.to_csv(self.RecordingFileName + '.csv', index=False)
-#         self.recordflag = False
-#
-#     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == True:
-#         self.recordflag = True
-#
-#         self.Dataset0.append(self.databuffer0[-1])
-#         self.Dataset1.append(self.databuffer1[-1])
-#         self.Dataset2.append(self.databuffer2[-1])
-#         self.Dataset3.append(self.databuffer3[-1])
-#         self.Dataset4.append(self.databuffer4[-1])
-#         self.Dataset5.append(self.databuffer5[-1])
-#         self.Dataset6.append(self.databuffer6[-1])
+def SaveMultipleImagingPlotData(self):                              # Save latest buffer data and export them as csv
+    if self.ui.MultipleImaging_DataRecording_Record_pushButton.isChecked() == False and self.MultipleImagingrecordflag == True:
+        self.Dataset = np.empty([11, len(self.DataSet[1])], dtype=float)
+        for i in range(len(self.DataSet[1])):
+            self.Dataset[0][i] = i * 0.1
+            self.Dataset[1][i] = self.DataSet[1][i]
+            self.Dataset[2][i] = self.DataSet[2][i]
+            self.Dataset[3][i] = self.DataSet[3][i]
+            self.Dataset[4][i] = self.DataSet[4][i]
+            self.Dataset[5][i] = self.DataSet[5][i]
+            self.Dataset[6][i] = self.DataSet[6][i]
+            self.Dataset[7][i] = self.DataSet[7][i]
+            self.Dataset[8][i] = self.DataSet[8][i]
+            self.Dataset[9][i] = self.DataSet[9][i]
+            self.Dataset[10][i] = self.DataSet[10][i]
+
+        dict = {'Time (ms)': self.Dataset[0], 'Spikeling Fluorescence': self.Dataset[1], 'Spikeling Calcium': self.Dataset[2], 'Spikeling Vm (mV)': self.Dataset[3],
+                'Neuron Aux1 Fluorescence': self.Dataset[4], 'Neuron Aux1 Calcium': self.Dataset[5], 'Neuron Aux1 Vm (mV)': self.Dataset[6],
+                'Neuron Aux2 Fluorescence': self.Dataset[7], 'Neuron Aux2 Calcium': self.Dataset[8], 'Neuron Aux2 Vm (mV)': self.Dataset[9],
+                'Trigger': self.Dataset[10]}
+        df = pd.DataFrame(dict)
+        self.RecordingFileName = str(self.ui.MultipleImaging_SelectedFolderLabel.text())
+        df.to_csv(self.RecordingFileName + '.csv', index=False)
+        self.MultipleImagingrecordflag = False
+        self.DataSet[0].clear()
+        self.DataSet[1].clear()
+        self.DataSet[2].clear()
+        self.DataSet[3].clear()
+        self.DataSet[4].clear()
+        self.DataSet[5].clear()
+        self.DataSet[6].clear()
+        self.DataSet[7].clear()
+        self.DataSet[8].clear()
+        self.DataSet[9].clear()
+        self.DataSet[10].clear()
+
+
+    if self.ui.MultipleImaging_DataRecording_Record_pushButton.isChecked() == True:
+        self.MultipleImagingrecordflag = True
+
+        self.DataSet[1].append(self.MultipleFluodatabuffer1[-1])
+        self.DataSet[2].append(self.MultipleCalciumdatabuffer1[-1])
+        self.DataSet[3].append(self.MultipleVmdatabuffer1[-1])
+        self.DataSet[4].append(self.MultipleFluodatabuffer2[-1])
+        self.DataSet[5].append(self.MultipleCalciumdatabuffer2[-1])
+        self.DataSet[6].append(self.MultipleVmdatabuffer2[-1])
+        self.DataSet[7].append(self.MultipleFluodatabuffer3[-1])
+        self.DataSet[8].append(self.MultipleCalciumdatabuffer3[-1])
+        self.DataSet[9].append(self.MultipleVmdatabuffer3[-1])
+        self.DataSet[10].append(self.MultipleTriggerbuffer[-1])
 
 
 def SetMultipleImagingInitParameters(self):
     self.i_Multipleimaging_downsampling = 0
-    self.Multiplerecordflag = False
+    self.MultipleImagingrecordflag = False
     self.MultipleSaturationFlag = False
     self.ui.MultipleImaging_Oscilloscope_widget.clear()
     if self.ui.MultipleImaging_pushButton.isChecked():
@@ -275,13 +297,14 @@ def SetMultipleImagingPlotCurve(self):
     self.MultipleCalciumdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
     self.MultipleCalciumdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
     self.MultipleCalciumdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleStimdatabuffer = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer1    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer2    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleFluodatabuffer3    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleStimdatabuffer     = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer1      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer2      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer3      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleTriggerbuffer      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
 
     self.MultipleImagingx = np.linspace(-self.MultipleImaging_timewindow, 0.0, self._MultipleImaging_bufsize)            # Create arrays of self._Imaging_bufsize length
     self.yMultipleCalcium1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
@@ -295,17 +318,9 @@ def SetMultipleImagingPlotCurve(self):
     self.yMultipleVm2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
     self.yMultipleVm3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
 
-    self.MultipleCalciumDataset1 = Data_recording.DynamicArray()
-    self.MultipleCalciumDataset2 = Data_recording.DynamicArray()
-    self.MultipleCalciumDataset3 = Data_recording.DynamicArray()
-    self.MultipleFluoDataset1 = Data_recording.DynamicArray()
-    self.MultipleFluoDataset2 = Data_recording.DynamicArray()
-    self.MultipleFluoDataset3 = Data_recording.DynamicArray()
-    self.MultipleStimDataset = Data_recording.DynamicArray()
-    self.MultipleVmDataset1 = Data_recording.DynamicArray()
-    self.MultipleVmDataset2 = Data_recording.DynamicArray()
-    self.MultipleVmDataset3 = Data_recording.DynamicArray()
-
+    self.DataSet = []
+    for _ in range(11):
+        self.DataSet.append([])
 
 def SetMultipleImagingPlot(self):
     self.ui.MultipleImaging_Oscilloscope_widget.showGrid(x=True, y=True)

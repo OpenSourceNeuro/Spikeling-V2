@@ -26,25 +26,27 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget1_2_2.setBackground(Settings.DarkSolarized[1])
 
     def LoadData(self):
-        FileName = QFileDialog.getOpenFileName(self,
-                                               caption='Select recording file to load',
+        FileName = QFileDialog.getOpenFileName(caption='Select recording file to load',
                                                dir=".\Recordings",
                                                filter='csv files (*.csv)'
                                                )
         self.DataAnalysis_LoadData_label.setText(FileName[0])
+
         Df = pd.read_csv(FileName[0])
-        self.df_DataAnalysis_Vm = Df["Spikeling Vm"]
-        self.df_DataAnalysis_ITotal = Df["Total Current Input"]
-        self.df_DataAnalysis_Stimulus = Df["Stimulus"]
-        self.df_DataAnalysis_Synapse1Vm = Df["Synapse 1 Vm"]
-        self.df_DataAnalysis_Synapse1Input = Df["Synapse 1 Input"]
-        self.df_DataAnalysis_Synapse2Vm = Df["Synapse 2 Vm"]
-        self.df_DataAnalysis_Synapse2Input = Df["Synapse 2 Input"]
+        self.df_DataAnalysis_Timing = Df["Time (ms)"]
+        self.df_DataAnalysis_Vm = Df["Spikeling Vm (mV)"]
+        self.df_DataAnalysis_ITotal = Df["Total Current Input (a.u.)"]
+        self.df_DataAnalysis_Stimulus = Df["Stimulus (%)"]
+        self.df_DataAnalysis_Synapse1Vm = Df["Synapse 1 Vm (mV)"]
+        self.df_DataAnalysis_Synapse1Input = Df["Synapse 1 Input (a.u.)"]
+        self.df_DataAnalysis_Synapse2Vm = Df["Synapse 2 Vm (mV)"]
+        self.df_DataAnalysis_Synapse2Input = Df["Synapse 2 Input (a.u.)"]
+        self.df_DataAnalysis_Trigger = Df["Trigger"]
 
     def DisplayRawData(self):
         self.ui.DataAnalysis_Display_StackedWidget.setCurrentWidget(self.ui.page_103_1_0)
 
-        self.ui.df_DataAnalysis_x = np.linspace(0, len(self.ui.df_DataAnalysis_Vm) - 1, len(self.ui.df_DataAnalysis_Vm))
+        self.ui.df_DataAnalysis_x = self.ui.df_DataAnalysis_Timing
 
         self.ui.df_DataAnalysis_y0 = np.zeros(len(self.ui.df_DataAnalysis_Vm))
         self.ui.df_DataAnalysis_y0 = self.ui.df_DataAnalysis_Vm
@@ -171,16 +173,17 @@ class Spikeling103():
         self.ui.spike_rate2 = np.zeros(len(self.ui.df_DataAnalysis_Synapse2Vm))
 
         for x in range(0, self.n_spikes0 - 1):
-            self.current_rate0 = 1 / (self.spike_points0[x + 1] - self.spike_points0[x]) * 1000
+            self.current_rate0 = 1 / (self.spike_points0[x + 1] - self.spike_points0[x]) * 10000
             self.ui.spike_rate0[self.spike_points0[x]:self.spike_points0[x + 1]] = self.current_rate0
 
         for x in range(0, self.n_spikes1 - 1):
-            self.current_rate1 = 1 / (self.spike_points1[x + 1] - self.spike_points1[x]) * 1000
+            self.current_rate1 = 1 / (self.spike_points1[x + 1] - self.spike_points1[x]) * 10000
             self.ui.spike_rate1[self.spike_points1[x]:self.spike_points1[x + 1]] = self.current_rate1
 
         for x in range(0, self.n_spikes2 - 1):
-            self.current_rate2 = 1 / (self.spike_points2[x + 1] - self.spike_points2[x]) * 1000
+            self.current_rate2 = 1 / (self.spike_points2[x + 1] - self.spike_points2[x]) * 10000
             self.ui.spike_rate2[self.spike_points2[x]:self.spike_points2[x + 1]] = self.current_rate2
+
 
         self.ui.DataAnalysis_Oscilloscope_widget2_0_0.setBackground(Settings.DarkSolarized[1])
         self.ui.DataAnalysis_Oscilloscope_widget2_0_1.setBackground(Settings.DarkSolarized[1])
@@ -195,9 +198,21 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget2_2_2.setBackground(Settings.DarkSolarized[1])
         self.ui.DataAnalysis_Oscilloscope_widget2_2_3.setBackground(Settings.DarkSolarized[1])
 
+        self.spike_points0Plot = np.zeros(self.n_spikes0)
+        self.spike_points1Plot = np.zeros(self.n_spikes0)
+        self.spike_points2Plot = np.zeros(self.n_spikes0)
 
+        for i in range (self.n_spikes0):
+            self.spike_points0Plot[i] = self.spike_points0[i] /10
 
+        for i in range (self.n_spikes1):
+            self.spike_points1Plot[i] = self.spike_points1[i] /10
+
+        for i in range (self.n_spikes2):
+            self.spike_points2Plot[i] = self.spike_points2[i] /10
         self.ui.ySpike0 = np.zeros(len(self.spike_points0))
+
+
         for i in range(len(self.spike_points0)):
             self.ui.ySpike0[i] = 45
 
@@ -209,7 +224,6 @@ class Spikeling103():
         for i in range(len(self.spike_points2)):
             self.ui.ySpike2[i] = 45
 
-
         self.ui.DataAnalysis_Oscilloscope_widget2_0_0.clear()
         self.ui.DataAnalysis_Oscilloscope_widget2_0_0.showGrid(x=True, y=True)
         self.ui.DataAnalysis_Oscilloscope_widget2_0_0.getAxis('bottom').setStyle(showValues=False)
@@ -218,7 +232,7 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget2_0_1.clear()
         self.ui.DataAnalysis_Oscilloscope_widget2_0_1.showGrid(x=True, y=True)
         self.ui.DataAnalysis_Oscilloscope_widget2_0_1.getAxis('bottom').setStyle(showValues=False)
-        self.ui.DataAnalysis_Oscilloscope_widget2_0_1.plot(x=self.spike_points0, y=self.ui.ySpike0, pen=None,
+        self.ui.DataAnalysis_Oscilloscope_widget2_0_1.plot(x=self.spike_points0Plot, y=self.ui.ySpike0, pen=None,
                                                            symbol='o', symbolBrush=tuple(Settings.DarkSolarized[3]), symbolSize=3)
         self.ui.DataAnalysis_Oscilloscope_widget2_0_1.plot(x=self.ui.df_DataAnalysis_x, y=self.ui.df_DataAnalysis_y0,
                                                            pen=(Settings.DarkSolarized[3]))
@@ -241,7 +255,7 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget2_1_1.clear()
         self.ui.DataAnalysis_Oscilloscope_widget2_1_1.showGrid(x=True, y=True)
         self.ui.DataAnalysis_Oscilloscope_widget2_1_1.getAxis('bottom').setStyle(showValues=False)
-        self.ui.DataAnalysis_Oscilloscope_widget2_1_1.plot(x=self.spike_points1, y=self.ui.ySpike1, pen=None,
+        self.ui.DataAnalysis_Oscilloscope_widget2_1_1.plot(x=self.spike_points1Plot, y=self.ui.ySpike1, pen=None,
                                                            symbol='o', symbolBrush=tuple(Settings.DarkSolarized[6]),symbolSize=3)
         self.ui.DataAnalysis_Oscilloscope_widget2_1_1.plot(x=self.ui.df_DataAnalysis_x, y=self.ui.df_DataAnalysis_y3,
                                                            pen=(Settings.DarkSolarized[6]))
@@ -264,7 +278,7 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget2_2_1.clear()
         self.ui.DataAnalysis_Oscilloscope_widget2_2_1.showGrid(x=True, y=True)
         self.ui.DataAnalysis_Oscilloscope_widget2_2_1.getAxis('bottom').setStyle(showValues=False)
-        self.ui.DataAnalysis_Oscilloscope_widget2_2_1.plot(x=self.spike_points2, y=self.ui.ySpike2, pen=None,
+        self.ui.DataAnalysis_Oscilloscope_widget2_2_1.plot(x=self.spike_points2Plot, y=self.ui.ySpike2, pen=None,
                                                            symbol='o', symbolBrush=tuple(Settings.DarkSolarized[8]),symbolSize=3)
         self.ui.DataAnalysis_Oscilloscope_widget2_2_1.plot(x=self.ui.df_DataAnalysis_x, y=self.ui.df_DataAnalysis_y3,
                                                            pen=(Settings.DarkSolarized[8]))
@@ -321,8 +335,8 @@ class Spikeling103():
 
     # Determine single stimulus length
         self.stimulus_times = []
-        for x in range(0, len(self.ui.df_DataAnalysis_y0) - 1):                           # Goes through each timepoint
-            if (self.ui.df_DataAnalysis_y2[x] < self.ui.df_DataAnalysis_y2[x + 1]):       # Checks if the stimulus went from 0 to 1
+        for x in range(0, len(self.ui.df_DataAnalysis_x) - 1):                           # Goes through each timepoint
+            if (self.ui.df_DataAnalysis_Trigger[x] == 1):
                 self.stimulus_times.append(x)                                             # Make a list of times  when stimulus increased
         self.loop_duration = self.stimulus_times[1] - self.stimulus_times[0]              # Compute arraylength for single stimulus
 
@@ -341,54 +355,52 @@ class Spikeling103():
         self.ISynpase2_loops = []
         self.Stim_loops = []
 
-    # Make a list of times when stimulus increased (again)
-        self.stimulus_times = np.where(self.ui.df_DataAnalysis_y2[:] > np.roll(self.ui.df_DataAnalysis_y2[:], axis=0, shift=1))
 
     # Looping spike rate traces
         self.Spikerate0_loops = np.vstack(
-            [self.ui.spike_rate0[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.spike_rate0[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.Spikerate1_loops = np.vstack(
-            [self.ui.spike_rate1[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.spike_rate1[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.Spikerate2_loops = np.vstack(
-            [self.ui.spike_rate2[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.spike_rate2[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
 
     # Looping Vm traces
         self.Vm0_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y0[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y0[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.Vm1_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y3[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y3[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.Vm2_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y5[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y5[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
 
     # Looping Current traces (total and synaptic)
         self.ITotal_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y1[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y1[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.ISynapse1_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y4[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y4[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
         self.ISynapse2_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y6[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y6[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
 
     # Calculate the number of loops
         self.Stim_loops = np.vstack(
-            [self.ui.df_DataAnalysis_y2[x:x + self.loop_duration] for x in self.stimulus_times[0][:-1]])
+            [self.ui.df_DataAnalysis_y2[x:x + self.loop_duration] for x in self.stimulus_times[:-1]])
 
     # Compute main neuron spike
-        for i, x in enumerate(self.stimulus_times[0][:-1]):
+        for i, x in enumerate(self.stimulus_times[:-1]):
             self.Spike0_loops.append(
                 [self.ui.df_DataAnalysis_x[sp] - self.ui.df_DataAnalysis_x[x] for sp in self.spike_points0 if sp > x and sp < x + self.loop_duration])
     # Compute auxiliary neuron 1 spike
-        for i, x in enumerate(self.stimulus_times[0][:-1]):
+        for i, x in enumerate(self.stimulus_times[:-1]):
             self.Spike1_loops.append(
                 [self.ui.df_DataAnalysis_x[sp] - self.ui.df_DataAnalysis_x[x] for sp in self.spike_points1 if sp > x and sp < x + self.loop_duration])
     # Compute auxiliary neuron 2 spike
-        for i, x in enumerate(self.stimulus_times[0][:-1]):
+        for i, x in enumerate(self.stimulus_times[:-1]):
             self.Spike2_loops.append(
                 [self.ui.df_DataAnalysis_x[sp] - self.ui.df_DataAnalysis_x[x] for sp in self.spike_points2 if sp > x and sp < x + self.loop_duration])
 
+
     # Print the number of loops on app
         self.ui.DataAnalysis_Average_label.setText(
-            str(len(self.Stim_loops)) + " loops (" + str(self.loop_duration) + "ms each)")
-
+            str(len(self.Stim_loops)) + " loops (" + str(self.loop_duration/10) + "ms each)")
 
 
     ##########
@@ -396,7 +408,7 @@ class Spikeling103():
     ##########
 
     # Generate looped x array
-        self.ui.StimLoop_x = np.linspace(0, self.loop_duration - 1, self.loop_duration)
+        self.ui.StimLoop_x = np.linspace(0, self.loop_duration/10 - 1, self.loop_duration)
 
 
     # Page 103_3_0:
@@ -420,7 +432,7 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget3_0_3.setLabel('bottom', 'Time (ms)')
 
     # For all Loops:
-        for i in range(0, len(self.Stim_loops) - 1):
+        for i in range(0, len(self.Stim_loops)):
         # Display all Spike rate loops
             self.ui.DataAnalysis_Oscilloscope_widget3_0_0.plot(x=self.ui.StimLoop_x, y=self.Spikerate0_loops[i], pen=(Settings.DarkSolarized[11]))
         # Display all Spikes within loops
@@ -428,7 +440,7 @@ class Spikeling103():
             for j in range(len(self.Spike0_loops[i])):
                 self.ui.ySpikeLoops0[j] = i
             self.ui.DataAnalysis_Oscilloscope_widget3_0_1.plot(x=self.Spike0_loops[i], y=self.ui.ySpikeLoops0, pen=None, symbol='o', symbolBrush=tuple(Settings.DarkSolarized[3]), symbolSize=5)
-            self.ui.DataAnalysis_Oscilloscope_widget3_0_1.setXRange(0, self.loop_duration)
+            self.ui.DataAnalysis_Oscilloscope_widget3_0_1.setXRange(0, self.loop_duration/10)
         # Display all Vm loops
             self.ui.DataAnalysis_Oscilloscope_widget3_0_2.plot(x=self.ui.StimLoop_x, y=self.Vm0_loops[i], pen=(Settings.DarkSolarized[11]))
         # Display all I_Total loops
@@ -558,9 +570,8 @@ class Spikeling103():
 
 
     def SaveRawDataImage(self):
-        FolderName = QFileDialog.getExistingDirectory(self.ui,
-                                               caption='Select folder to save graphs on screen',
-                                               dir="./Recordings/Graphs")
+        FolderName = QFileDialog.getExistingDirectory(caption='Select folder to save graphs on screen',
+                                                      dir="./Recordings/Graphs")
         currentStackedWidget = self.ui.DataAnalysis_Display_StackedWidget.currentWidget()
 
         if currentStackedWidget == self.ui.page_103_1_0:
@@ -591,8 +602,7 @@ class Spikeling103():
 
 
     def SaveSpikeTraces(self):
-        FolderName = QFileDialog.getExistingDirectory(self.ui,
-                                                      caption='Save Spike data traces on screen',
+        FolderName = QFileDialog.getExistingDirectory(caption='Save Spike data traces on screen',
                                                       dir="./Recordings/Data")
         currentStackedWidget = self.ui.DataAnalysis_Display_StackedWidget.currentWidget()
 
@@ -622,8 +632,7 @@ class Spikeling103():
 
 
     def SaveSpikeImage(self):
-        FolderName = QFileDialog.getExistingDirectory(self.ui,
-                                                      caption='Select folder to save graphs on screen',
+        FolderName = QFileDialog.getExistingDirectory(caption='Select folder to save graphs on screen',
                                                       dir="./Recordings/Graphs")
         currentStackedWidget = self.ui.DataAnalysis_Display_StackedWidget.currentWidget()
 
@@ -658,8 +667,7 @@ class Spikeling103():
             exporter223.export(FolderName + '/Stimulus.png')
 
     def SaveAverageTraces(self):
-        FolderName = QFileDialog.getExistingDirectory(self.ui,
-                                                      caption='Save Spike data traces on screen',
+        FolderName = QFileDialog.getExistingDirectory(caption='Save Spike data traces on screen',
                                                       dir="./Recordings/Data")
         currentStackedWidget = self.ui.DataAnalysis_Display_StackedWidget.currentWidget()
 
@@ -694,9 +702,8 @@ class Spikeling103():
         self.df_rasterplot.to_csv(FolderName + '/AuxNeuron2_rasterplot' + '.csv', index=False)
 
     def SaveAverageImage(self):
-        FolderName = QFileDialog.getExistingDirectory(self.ui,
-                                               caption='Select folder to save graphs on screen',
-                                               dir="./Recordings/Graphs")
+        FolderName = QFileDialog.getExistingDirectory(caption='Select folder to save graphs on screen',
+                                                      dir="./Recordings/Graphs")
         currentStackedWidget = self.ui.DataAnalysis_Display_StackedWidget.currentWidget()
 
         if currentStackedWidget == self.ui.page_103_3_0:
@@ -730,40 +737,4 @@ class Spikeling103():
             exporter323.export(FolderName + '/AuxNeuron2 Synapse Current Average.png')
 
 
-class Spikeling103_StepStim():
-
-    def LoadData(self):
-        FileName = QFileDialog.getOpenFileName(self,
-                                               caption='Select recording file to load',
-                                               dir=".\Recordings",
-                                               filter='csv files (*.csv)'
-                                               )
-        self.DataAnalysis_StepStim_LoadData_label.setText(FileName[0])
-        Df = pd.read_csv(FileName[0])
-        self.df_DataAnalysis_Vm = Df["Spikeling Vm"]
-        self.df_DataAnalysis_ITotal = Df["Total Current Input"]
-        self.df_DataAnalysis_Stimulus = Df["Stimulus"]
-        self.df_DataAnalysis_Synapse1Vm = Df["Synapse 1 Vm"]
-        self.df_DataAnalysis_Synapse1Input = Df["Synapse 1 Input"]
-        self.df_DataAnalysis_Synapse2Vm = Df["Synapse 2 Vm"]
-        self.df_DataAnalysis_Synapse2Input = Df["Synapse 2 Input"]
-
-    def LoadStimulus(self):
-        StimulusName = QFileDialog.getOpenFileName(self,
-                                               caption='Select recording file to load',
-                                               dir=".\Stimuli",
-                                               filter='csv files (*.csv)'
-                                               )
-        self.DataAnalysis_StepStim_LoadStim_label.setText(StimulusName[0])
-        Df = pd.read_csv(FileName[0])
-        self.df_Stim= Df["Stim"]
-        self.df_Trigger = Df["Trigger"]
-        self.df_nStep = Df["Number of Steps"]
-        self.df_Increment = Df["Intensity Increment"]
-        self.df_FirstStep = Df["First Step Intensity"]
-        self.df_StepOn = Df["Step Length"]
-        self.df_StepOff = Df["Inter-step Length"]
-        self.df_iStepOff = Df["Inter-step Intensity"]
-        self.df_tInter = Df["Inter-Stimulus Length"]
-        self.df_iInter = Df["Inter-Stimulus Intensity"]
 

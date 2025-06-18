@@ -1,8 +1,9 @@
 <RCC>
   <qresource prefix="resources">
+    <file>resources/SpikelingLayout.png</file>
     <file>resources/SqaureStim.png</file>
-    <file>resources/Baden-Logo2.png</file>
     <file>resources/Calcium.png</file>
+    <file>resources/CaMinA.png</file>
     <file>resources/LEDOFF.png</file>
     <file>resources/LEDON.png</file>
     <file>resources/SN-Logo.png</file>
@@ -35,8 +36,6 @@
     <file>resources/StimFrequency.png</file>
     <file>resources/StimStrenght.png</file>
     <file>resources/under_construction.svg</file>
-    <file>resources/Baden-Logo.png</file>
-    <file>resources/ON-Logo.png</file>
     <file>resources/TReND-Logo.png</file>
   </qresource>
 </RCC>

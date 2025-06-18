@@ -1,3 +1,9 @@
+
+########################################################################
+#                          Libraries import                            #
+
+
+from PySide6.QtWidgets import QFileDialog
 import Settings
 
 

@@ -1,25 +1,26 @@
-from PySide6.QtSerialPort import QSerialPort, QSerialPortInfo
-from PySide6.QtWidgets import QFileDialog, QWidget
+
+########################################################################
+#                          Libraries import                            #
+
+from PySide6.QtSerialPort import  QSerialPortInfo
+from PySide6.QtWidgets import QFileDialog
 from PySide6.QtGui import QIcon
-from PySide6.QtCore import QSize, QCoreApplication, QFileInfo
-import Settings
-from Izhikevich_parameters import IzhikevichNeurons
+from PySide6.QtCore import QSize, QFileInfo
+
 import serial
 import os
 import numpy as np
 import pandas as pd
-from sys import platform
+
+import Settings
+from Izhikevich_parameters import IzhikevichNeurons
+
+import Settings
 
 
-portList = []
-ports = QSerialPortInfo().availablePorts()
-for port in ports:
-        if platform == "linux" or platform == "linux2":
-            portList.append(port.systemLocation())
-            #print(port.systemLocation())
-        else:
-            portList.append(port.portName())
 serial_port = None
+
+
 
 class Spikeling101():
 
@@ -27,6 +28,7 @@ class Spikeling101():
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_101)
         self.ui.Spikeling_Oscilloscope_widget.setBackground(Settings.DarkSolarized[0])
         self.ui.Spikeling_CustomStimulus_display.setBackground(Settings.DarkSolarized[0])
+
 
     # Serial Port Functions
     def ChangePort(self):
@@ -74,30 +76,65 @@ class Spikeling101():
 
     # Data Recording Functions
     def BrowseRecordFolder(self):
-            FolderName = QFileDialog.getExistingDirectory(self,
-                                                          caption = 'Hey! Select the folder where your experiment will be saved',
-                                                          dir = ".\Recordings")
-            if FolderName:
-                    self.Spikeling_DataRecording_SelectRecordFolder_label.setText(FolderName)
-                    self.Spikeling_FolderNameLabel.setText(FolderName)
-                    self.Spikeling_DataRecording_RecordFolder_value.setEnabled(True)
-                    self.Spikeling_DataRecording_RecordFolder_value.setPlaceholderText("Enter a file name")
+        FolderName = QFileDialog.getExistingDirectory(caption = 'Hey! Select the folder where your experiment will be saved',
+                                      dir = ".\Recordings")
+        if FolderName:
+            self.Spikeling_DataRecording_SelectRecordFolder_label.setText(FolderName)
+            self.Spikeling_DataRecording_RecordFolder_value.setEnabled(True)
+            self.Spikeling_DataRecording_RecordFolder_value.setPlaceholderText("Enter a file name")
+            self.NeuronRecordFolderFlag = True
+
 
     def RecordFolderText(self):
-            FolderName = self.ui.Spikeling_FolderNameLabel.text()
-            FileName = self.ui.Spikeling_DataRecording_RecordFolder_value.text()
-            self.ui.Spikeling_SelectedFolderLabel.setText(FolderName + '/' + FileName)
+        FolderName = self.ui.Spikeling_DataRecording_SelectRecordFolder_label.text()
+        FileName = self.ui.Spikeling_DataRecording_RecordFolder_value.text()
+        self.ui.Spikeling_SelectedFolderLabel.setText(FolderName + '/' + FileName + '   ')
+
 
     def RecordButton(self):
-        if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked():
-            self.ui.Spikeling_DataRecording_Record_pushButton.setText("Stop Recording")
-            self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
-                                                "background-color: rgb(50, 220, 47);")
+        SerialPortFlag = False
+        FolderFlag = False
+        FileFlag = False
+
+        if self.SerialFlag == False:
+            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title = "Error: Spikeling not connected",
+                                Text = "Spikeling first needs to be connected, then a COM port has to be selected and finally press the - Connect Spikeling Screen - button" )
+        else:
+            SerialPortFlag = True
+
+
+        if self.ui.NeuronRecordFolderFlag == True:
+            FolderFlag = True
+        else:
+            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title = "Error: no folder selected",
+                                Text = "Select a folder where to record your data by clicking on the - browse directory - button")
+
+
+        if self.ui.Spikeling_DataRecording_RecordFolder_value.text():
+            FileFlag = True
+        else:
+            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+            Settings.show_popup(self,
+                                Title="Error: no file selected",
+                                Text="Select a file where to record your data by clicking on the - browse directory - button")
+
+
+        if SerialPortFlag == True and FolderFlag == True and FileFlag == True:
+            if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked():
+                self.ui.Spikeling_DataRecording_Record_pushButton.setText("Stop Recording")
+                self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
+                                                                                "background-color: rgb(50, 220, 47);")
 
         else:
+            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
             self.ui.Spikeling_DataRecording_Record_pushButton.setText("Record")
             self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
-                                                "background-color: rgb(220, 50, 47);")
+                                                                            "background-color: rgb(220, 50, 47);")
+
 
     # Stimulus Frequency
     def ActivateStimFre(self):
@@ -159,6 +196,7 @@ class Spikeling101():
 
                 if self.serial_port.is_open:
                     self.serial_port.write(str('SC1 ' + str(self.StimCusValue) + '\n').encode('utf-8'))
+                    self.serial_port.write(str('TR' + '\n').encode('utf-8'))
 
             else:
                 if self.serial_port.is_open:
@@ -177,15 +215,11 @@ class Spikeling101():
 
         Df = pd.read_csv(FileName)
         self.df_Stim = Df["Stim"]
-        self.df_Trigger = Df["Trigger"]
 
         self.df_xStim = np.linspace(0, len(self.df_Stim)/10 - 1, len(self.df_Stim))
 
         self.df_yStim = np.zeros(len(self.df_Stim))
         self.df_yStim = self.df_Stim
-
-        self.df_yTrigger = np.zeros(len(self.df_Trigger))
-        self.df_yTrigger = self.df_Trigger
 
         self.ui.Spikeling_CustomStimulus_display.clear()
         self.ui.Spikeling_Oscilloscope_widget.showGrid(x=False, y=False)
@@ -412,45 +446,95 @@ class Spikeling101():
     def SelectNeuronMode(self):
             self.neuron_mode_index = self.ui.Spikeling_NeuronModeComboBox.currentIndex()
             if self.neuron_mode_index == 1 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[0][0]) +  ' ' + str(IzhikevichNeurons[0][1]) + ' ' +  str(IzhikevichNeurons[0][2]) + ' ' + str(IzhikevichNeurons[0][3]) + ' ' + str(IzhikevichNeurons[0][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[0][0]) +  ' ' + str(IzhikevichNeurons[0][1]) + ' ' +  str(IzhikevichNeurons[0][2]) + ' ' + str(IzhikevichNeurons[0][3]) + ' ' + str(IzhikevichNeurons[0][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 2 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[1][0]) +  ' ' + str(IzhikevichNeurons[1][1]) + ' ' +  str(IzhikevichNeurons[1][2]) + ' ' + str(IzhikevichNeurons[1][3]) + ' ' + str(IzhikevichNeurons[1][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[1][0]) +  ' ' + str(IzhikevichNeurons[1][1]) + ' ' +  str(IzhikevichNeurons[1][2]) + ' ' + str(IzhikevichNeurons[1][3]) + ' ' + str(IzhikevichNeurons[1][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 3 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[2][0]) +  ' ' + str(IzhikevichNeurons[2][1]) + ' ' +  str(IzhikevichNeurons[2][2]) + ' ' + str(IzhikevichNeurons[2][3]) + ' ' + str(IzhikevichNeurons[2][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[2][0]) +  ' ' + str(IzhikevichNeurons[2][1]) + ' ' +  str(IzhikevichNeurons[2][2]) + ' ' + str(IzhikevichNeurons[2][3]) + ' ' + str(IzhikevichNeurons[2][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 4 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[3][0]) +  ' ' + str(IzhikevichNeurons[3][1]) + ' ' +  str(IzhikevichNeurons[3][2]) + ' ' + str(IzhikevichNeurons[3][3]) + ' ' + str(IzhikevichNeurons[3][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[3][0]) +  ' ' + str(IzhikevichNeurons[3][1]) + ' ' +  str(IzhikevichNeurons[3][2]) + ' ' + str(IzhikevichNeurons[3][3]) + ' ' + str(IzhikevichNeurons[3][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 5 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[4][0]) +  ' ' + str(IzhikevichNeurons[4][1]) + ' ' +  str(IzhikevichNeurons[4][2]) + ' ' + str(IzhikevichNeurons[4][3]) + ' ' + str(IzhikevichNeurons[4][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[4][0]) +  ' ' + str(IzhikevichNeurons[4][1]) + ' ' +  str(IzhikevichNeurons[4][2]) + ' ' + str(IzhikevichNeurons[4][3]) + ' ' + str(IzhikevichNeurons[4][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 6 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[5][0]) +  ' ' + str(IzhikevichNeurons[5][1]) + ' ' +  str(IzhikevichNeurons[5][2]) + ' ' + str(IzhikevichNeurons[5][3]) + ' ' + str(IzhikevichNeurons[5][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[5][0]) +  ' ' + str(IzhikevichNeurons[5][1]) + ' ' +  str(IzhikevichNeurons[5][2]) + ' ' + str(IzhikevichNeurons[5][3]) + ' ' + str(IzhikevichNeurons[5][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 7 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[6][0]) +  ' ' + str(IzhikevichNeurons[6][1]) + ' ' +  str(IzhikevichNeurons[6][2]) + ' ' + str(IzhikevichNeurons[6][3]) + ' ' + str(IzhikevichNeurons[6][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[6][0]) +  ' ' + str(IzhikevichNeurons[6][1]) + ' ' +  str(IzhikevichNeurons[6][2]) + ' ' + str(IzhikevichNeurons[6][3]) + ' ' + str(IzhikevichNeurons[6][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 8 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[7][0]) +  ' ' + str(IzhikevichNeurons[7][1]) + ' ' +  str(IzhikevichNeurons[7][2]) + ' ' + str(IzhikevichNeurons[7][3]) + ' ' + str(IzhikevichNeurons[7][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[7][0]) +  ' ' + str(IzhikevichNeurons[7][1]) + ' ' +  str(IzhikevichNeurons[7][2]) + ' ' + str(IzhikevichNeurons[7][3]) + ' ' + str(IzhikevichNeurons[7][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 9 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[8][0]) +  ' ' + str(IzhikevichNeurons[8][1]) + ' ' +  str(IzhikevichNeurons[8][2]) + ' ' + str(IzhikevichNeurons[8][3]) + ' ' + str(IzhikevichNeurons[8][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[8][0]) +  ' ' + str(IzhikevichNeurons[8][1]) + ' ' +  str(IzhikevichNeurons[8][2]) + ' ' + str(IzhikevichNeurons[8][3]) + ' ' + str(IzhikevichNeurons[8][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 10 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[9][0]) +  ' ' + str(IzhikevichNeurons[9][1]) + ' ' +  str(IzhikevichNeurons[9][2]) + ' ' + str(IzhikevichNeurons[9][3]) + ' ' + str(IzhikevichNeurons[9][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[9][0]) +  ' ' + str(IzhikevichNeurons[9][1]) + ' ' +  str(IzhikevichNeurons[9][2]) + ' ' + str(IzhikevichNeurons[9][3]) + ' ' + str(IzhikevichNeurons[9][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 11 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[10][0]) +  ' ' + str(IzhikevichNeurons[10][1]) + ' ' +  str(IzhikevichNeurons[10][2]) + ' ' + str(IzhikevichNeurons[10][3]) + ' ' + str(IzhikevichNeurons[10][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[10][0]) +  ' ' + str(IzhikevichNeurons[10][1]) + ' ' +  str(IzhikevichNeurons[10][2]) + ' ' + str(IzhikevichNeurons[10][3]) + ' ' + str(IzhikevichNeurons[10][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index == 12 and self.serial_port.is_open:
-                self.serial_port.write(str('NEUR ' + str(IzhikevichNeurons[11][0]) +  ' ' + str(IzhikevichNeurons[11][1]) + ' ' +  str(IzhikevichNeurons[11][2]) + ' ' + str(IzhikevichNeurons[11][3]) + ' ' + str(IzhikevichNeurons[11][4]) + '\n').encode('utf-8'))
+                self.serial_port.write(str('NEU ' + str(IzhikevichNeurons[11][0]) +  ' ' + str(IzhikevichNeurons[11][1]) + ' ' +  str(IzhikevichNeurons[11][2]) + ' ' + str(IzhikevichNeurons[11][3]) + ' ' + str(IzhikevichNeurons[11][4]) + '\n').encode('utf-8'))
             if self.neuron_mode_index > 12 and self.serial_port.is_open:
-                self.a_Izhi = 0
-                self.b_Izhi = 0
-                self.c_Izhi = 0
-                self.d_Izhi = 0
-                self.serial_port.write(str('NEUR ' + str(self.a_Izhi) + ' ' + str(self.b_Izhi) + ' ' + str(self.c_Izhi) + ' ' + str(self.d_Izhi) + ' ' + '99' + '\n').encode('utf-8'))
+                self.a_Izhi = self.ui.ImportNeuron[self.neuron_mode_index-13][0]
+                self.b_Izhi = self.ui.ImportNeuron[self.neuron_mode_index-13][1]
+                self.c_Izhi = self.ui.ImportNeuron[self.neuron_mode_index-13][2]
+                self.d_Izhi = self.ui.ImportNeuron[self.neuron_mode_index-13][3]
+                self.serial_port.write(str('NEU ' + str(self.a_Izhi) + ' ' + str(self.b_Izhi) + ' ' + str(self.c_Izhi) + ' ' + str(self.d_Izhi) + ' ' + '99' + '\n').encode('utf-8'))
+
+                self.PGain = self.ui.ImportNeuron[self.neuron_mode_index - 13][4]
+                self.serial_port.write(str('PG1 ' + str(self.PGain) + '\n').encode('utf-8'))
+                self.PDecay = self.ui.ImportNeuron[self.neuron_mode_index - 13][5]
+                self.serial_port.write(str('PD1 ' + str(self.PDecay) + '\n').encode('utf-8'))
+                self.PRecovery = self.ui.ImportNeuron[self.neuron_mode_index - 13][6]
+                self.serial_port.write(str('PR1 ' + str(self.PRecovery) + '\n').encode('utf-8'))
+
+                self.Syn1Gain = self.ui.ImportNeuron[self.neuron_mode_index - 13][7]
+                self.serial_port.write(str('SG11 ' + str(self.Syn1Gain) + '\n').encode('utf-8'))
+                self.Syn1Decay = self.ui.ImportNeuron[self.neuron_mode_index - 13][8]
+                self.serial_port.write(str('SD11 ' + str(self.Syn1Decay) + '\n').encode('utf-8'))
+
+                self.Syn2Gain = self.ui.ImportNeuron[self.neuron_mode_index - 13][9]
+                self.serial_port.write(str('SG12 ' + str(self.Syn2Gain) + '\n').encode('utf-8'))
+                self.Syn2Decay = self.ui.ImportNeuron[self.neuron_mode_index - 13][10]
+                self.serial_port.write(str('SD12 ' + str(self.Syn2Decay) + '\n').encode('utf-8'))
+
+
+
 
     def BrowseNeuron(self):
-        FileName, _= QFileDialog.getOpenFileName(self,
-                                               caption='Select Neuron',
-                                               dir="./Neurons",
-                                               filter='csv files (*.csv)'
-                                               )
+        FileName, _= QFileDialog.getOpenFileName(caption='Select Neuron',
+                                                 dir="./Neurons",
+                                                 filter='csv files (*.csv)')
+
+        Df = pd.read_csv(FileName)
+        self.df_Neuron_a = Df["a"]
+        self.df_Neuron_b = Df["b"]
+        self.df_Neuron_c = Df["c"]
+        self.df_Neuron_d = Df["d"]
+
+        self.df_Neuron_PGain = Df["PhotoGain (%)"]
+        self.df_Neuron_PDecay = Df["PhotoDecay (1/ms)"]
+        self.df_Neuron_PRecovery = Df["PhotoRecovery (1/ms)"]
+
+        self.df_Neuron_Syn1Gain = Df["Syn1 Gain (%)"]
+        self.df_Neuron_Syn1Decay = Df["Syn1 Decay (1/ms)"]
+
+        self.df_Neuron_Syn2Gain = Df["Syn2 Gain (%)"]
+        self.df_Neuron_Syn2Decay = Df["Syn2 Decay (1/ms)"]
+
+        self.ParametersNeuron = [self.df_Neuron_a[0],
+                                 self.df_Neuron_b[0],
+                                 self.df_Neuron_c[0],
+                                 self.df_Neuron_d[0],
+                                 self.df_Neuron_PGain[0],
+                                 self.df_Neuron_PDecay[0],
+                                 self.df_Neuron_PRecovery[0],
+                                 self.df_Neuron_Syn1Gain[0],
+                                 self.df_Neuron_Syn1Decay[0],
+                                 self.df_Neuron_Syn2Gain[0],
+                                 self.df_Neuron_Syn2Decay[0]
+                                 ]
+        self.ui.ImportNeuron.append(self.ParametersNeuron)
+
 
         self.ui.Spikeling_NeuronModeComboBox.addItem('')
         self.neuron_count = self.ui.Spikeling_NeuronModeComboBox.count()
         self.filename = os.path.splitext(os.path.basename(QFileInfo(FileName).fileName()))[0]
         self.ui.Spikeling_NeuronModeComboBox.setItemText(self.neuron_count-1, self.filename)
         self.ui.Spikeling_NeuronModeComboBox.setCurrentIndex(self.neuron_count-1)
+

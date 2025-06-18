@@ -1,15 +1,17 @@
-from PySide6 import QtCore, QtGui, QtWidgets, QtSerialPort
-from PySide6.QtCore import QIODevice, QTimer
+
+########################################################################
+#                          Libraries import                            #
+
+from PySide6 import QtCore
+from PySide6.QtCore import  QTimer
 import pyqtgraph as pg
-import collections
-import serial
+
 import numpy as np
 import pandas as pd
-import Data_recording
 import Settings
 import time
 
-import Page201
+
 
 
 
@@ -48,6 +50,7 @@ def ImagingPlot(self):
     self.CalciumData = self.CalciumBaseline
 
     if self.ui.Imaging_pushButton.isChecked():
+        self.ImagingConnectionFlag = True
         self.imagingtimer = QtCore.QTimer()
         self.imagingtimer.timeout.connect(lambda: UpdateImagingPlot(self))
         self.imagingtimer.start()

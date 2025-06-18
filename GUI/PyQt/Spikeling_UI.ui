@@ -313,6 +313,42 @@ centerMenuSubContainer_menu_stackedwidget{
 
 
 
+#Imaging_DataRecording_box{
+	border: 2px solid rgb(147,161,161);
+}
+#Imaging_DataRecording_box QLineEdit{
+	border: 2px solid rgb(147,161,161);
+    background-color: rgb(7, 54, 66);
+}
+#Imaging_DataRecording_box QComboBox{
+	border: 2px solid rgb(147,161,161);
+	background-color: rgb(7, 54, 66);
+}
+#Imaging_DataRecording_box QPushButton{
+	padding: 5px 5px;
+	border-radius:10px;
+	background-color: rgb(7, 54, 66);
+}
+
+
+
+#MultipleImaging_DataRecording_box{
+	border: 2px solid rgb(147,161,161);
+}
+#MultipleImaging_DataRecording_box QLineEdit{
+	border: 2px solid rgb(147,161,161);
+    background-color: rgb(7, 54, 66);
+}
+#MultipleImaging_DataRecording_box QComboBox{
+	border: 2px solid rgb(147,161,161);
+	background-color: rgb(7, 54, 66);
+}
+#MultipleImaging_DataRecording_box QPushButton{
+	padding: 5px 5px;
+	border-radius:10px;
+	background-color: rgb(7, 54, 66);
+}
+
 
 
 #page_401 QPushButton{
@@ -494,7 +530,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                <iconset resource="resources.qrc">
                  <normaloff>:/resources/resources/Artboard 1.png</normaloff>:/resources/resources/Artboard 1.png</iconset>
                </property>
                <property name="iconSize">
@@ -511,7 +547,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                <iconset resource="resources.qrc">
                  <normaloff>:/resources/resources/Expand.png</normaloff>:/resources/resources/Expand.png</iconset>
                </property>
                <property name="iconSize">
@@ -528,7 +564,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                <iconset resource="resources.qrc">
                  <normaloff>:/resources/resources/Exit.png</normaloff>:/resources/resources/Exit.png</iconset>
                </property>
                <property name="iconSize">
@@ -682,7 +718,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Hide Menus</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/MenuLeft.png</normaloff>:/resources/resources/MenuLeft.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -747,7 +783,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Spikeling</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -769,7 +805,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Imaging</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -791,7 +827,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Neuron Generator</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/StimGen.png</normaloff>:/resources/resources/StimGen.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -813,7 +849,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Stimulus Generator</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -835,7 +871,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Exercises</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Exercices.png</normaloff>:/resources/resources/Exercices.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -900,7 +936,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Settings</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -922,7 +958,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>About</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/About.png</normaloff>:/resources/resources/About.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -944,7 +980,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Help</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/Help.png</normaloff>:/resources/resources/Help.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -966,7 +1002,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>GitHub</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/GitHub.png</normaloff>:/resources/resources/GitHub.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1064,7 +1100,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    <string>Hide Sub-Menus   </string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                   <iconset resource="resources.qrc">
                     <normaloff>:/resources/resources/DropMenuLeft.png</normaloff>:/resources/resources/DropMenuLeft.png</iconset>
                   </property>
                   <property name="iconSize">
@@ -1090,7 +1126,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="Spikeling_SubMenu_page">
                 <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1157,7 +1193,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Neuron Interface</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1189,10 +1225,10 @@ centerMenuSubContainer_menu_stackedwidget{
                        </font>
                       </property>
                       <property name="text">
-                       <string>Neuron Simulator</string>
+                       <string>Neuron Emulator</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1217,18 +1253,18 @@ centerMenuSubContainer_menu_stackedwidget{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="NeuronTutorial_pushButton">
+                     <widget class="QPushButton" name="NeuronDataAnalysis_pushButton">
                       <property name="font">
                        <font>
                         <pointsize>12</pointsize>
                        </font>
                       </property>
                       <property name="text">
-                       <string>Tutorial</string>
+                       <string>Data Analysis</string>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/resources/resources/DataAnalysis.png</normaloff>:/resources/resources/DataAnalysis.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1252,18 +1288,18 @@ centerMenuSubContainer_menu_stackedwidget{
                      </spacer>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="NeuronDataAnalysis_pushButton">
+                     <widget class="QPushButton" name="NeuronTutorial_pushButton">
                       <property name="font">
                        <font>
                         <pointsize>12</pointsize>
                        </font>
                       </property>
                       <property name="text">
-                       <string>Data Analysis</string>
+                       <string>Tutorial</string>
                       </property>
                       <property name="icon">
-                       <iconset>
-                        <normaloff>:/resources/resources/DataAnalysis.png</normaloff>:/resources/resources/DataAnalysis.png</iconset>
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1338,10 +1374,10 @@ centerMenuSubContainer_menu_stackedwidget{
                        </font>
                       </property>
                       <property name="text">
-                       <string>Imaging Stimulation</string>
+                       <string>Imaging Simulation</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1376,7 +1412,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Multiple Imaging</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1411,7 +1447,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Tutorial</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/Tutorial.png</normaloff>:/resources/resources/Tutorial.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1446,7 +1482,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string>Data Analysis</string>
                       </property>
                       <property name="icon">
-                       <iconset>
+                       <iconset resource="resources.qrc">
                         <normaloff>:/resources/resources/DataAnalysis.png</normaloff>:/resources/resources/DataAnalysis.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -1555,7 +1591,7 @@ centerMenuSubContainer_menu_stackedwidget{
                     <item>
                      <widget class="QToolBox" name="toolBox">
                       <property name="currentIndex">
-                       <number>7</number>
+                       <number>2</number>
                       </property>
                       <property name="tabSpacing">
                        <number>10</number>
@@ -1565,8 +1601,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>118</height>
+                         <width>163</width>
+                         <height>111</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1626,8 +1662,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>77</height>
+                         <width>83</width>
+                         <height>71</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1670,8 +1706,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>65</width>
+                         <height>16</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1683,8 +1719,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>100</width>
+                         <height>30</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1696,8 +1732,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>100</width>
+                         <height>30</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1709,8 +1745,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>100</width>
+                         <height>30</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1722,8 +1758,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>100</width>
+                         <height>30</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1735,8 +1771,8 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
-                         <width>216</width>
-                         <height>69</height>
+                         <width>100</width>
+                         <height>30</height>
                         </rect>
                        </property>
                        <attribute name="label">
@@ -1972,7 +2008,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>9</number>
+                <number>5</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -2033,7 +2069,7 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/SpikyLogo.png</pixmap>
+                       <pixmap resource="resources.qrc">:/resources/resources/SpikyLogo.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -2050,6 +2086,7 @@ centerMenuSubContainer_menu_stackedwidget{
                       </property>
                       <property name="font">
                        <font>
+                        <weight>50</weight>
                         <bold>false</bold>
                        </font>
                       </property>
@@ -2057,14 +2094,14 @@ centerMenuSubContainer_menu_stackedwidget{
                        <string notr="true"/>
                       </property>
                       <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt; color:#93a1a1;&quot;&gt;Spikeling &lt;/span&gt;&lt;span style=&quot; font-size:16pt; color:#93a1a1;&quot;&gt;v2.2&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;A hardware implementation of spiking neurons for neursocience teaching and outreach&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:700;&quot;&gt;Conceived and developed by M.J.Y. Zimmermann, A.M. Chagas, T. Baden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt; color:#93a1a1;&quot;&gt;Spikeling &lt;/span&gt;&lt;span style=&quot; font-size:16pt; color:#93a1a1;&quot;&gt;v2.2&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;A hardware implementation of spiking neurons for neursocience teaching and outreach&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-weight:696;&quot;&gt;Conceived and developed by M.J.Y. Zimmermann&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-weight:696;&quot;&gt;Based on an original idea from T. Baden&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
                      </widget>
                     </item>
                    </layout>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignVCenter">
+                 <item>
                   <widget class="QFrame" name="mainbody_content_frame">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -2080,7 +2117,7 @@ centerMenuSubContainer_menu_stackedwidget{
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_76">
                     <property name="spacing">
-                     <number>10</number>
+                     <number>5</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -2092,7 +2129,7 @@ centerMenuSubContainer_menu_stackedwidget{
                      <number>0</number>
                     </property>
                     <property name="bottomMargin">
-                     <number>0</number>
+                     <number>10</number>
                     </property>
                     <item>
                      <widget class="QFrame" name="mainbody_content_text_frame">
@@ -2110,7 +2147,7 @@ centerMenuSubContainer_menu_stackedwidget{
                         <number>0</number>
                        </property>
                        <property name="topMargin">
-                        <number>0</number>
+                        <number>10</number>
                        </property>
                        <property name="rightMargin">
                         <number>0</number>
@@ -2128,17 +2165,12 @@ centerMenuSubContainer_menu_stackedwidget{
                          </property>
                          <property name="text">
                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Spikeling&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; is an educational tool for neuroscience students and enthusiasts!&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;It is an artificial neuron that can receive different inputs, integrate them and outputs its computation, just like a spiking neuron would!&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Technically, it consists on a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#268bd2;&quot;&gt;This project is licensed under the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; color:#268bd2;&quot;&gt;GNU General Public License v3.0&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#268bd2;&quot;&gt;The hardware is licensed under the &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; color:#268bd2;&quot;&gt;CERN OHL v1.2&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:700; color:#268bd2;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#268bd2;&quot;&gt;https://github.com/OpenSourceNeuro/Spikeling-V2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;Spikeling&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt;&quot;&gt; is an educational tool for neuroscience students and enthusiasts!&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt;&quot;&gt;It is an artificial neuron that can receive different inputs, integrate them and outputs its computation, just like a spiking neuron would!&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt;&quot;&gt;It consists of a microcontroller (an ESP32) running the computationally efficient Izhikevich model of a spiking neuron.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -2151,27 +2183,134 @@ p, li { white-space: pre-wrap; }
                       </layout>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QFrame" name="mainbody_content_SpikelingGif_frame">
-                      <property name="minimumSize">
-                       <size>
-                        <width>480</width>
-                        <height>540</height>
-                       </size>
-                      </property>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_22">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_104">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QLabel" name="label_98">
                       <property name="maximumSize">
                        <size>
-                        <width>480</width>
-                        <height>540</height>
+                        <width>442</width>
+                        <height>300</height>
                        </size>
                       </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap resource="resources.qrc">:/resources/resources/SpikelingLayout.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="mainbody_footer_frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_419">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>10</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>10</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_21">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_114">
+                      <layout class="QHBoxLayout" name="horizontalLayout_420">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item alignment="Qt::AlignBottom">
+                        <widget class="QLabel" name="label_97">
+                         <property name="text">
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; color:#268bd2;&quot;&gt;This project is licensed under the &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696; color:#268bd2;&quot;&gt;GNU General Public License v3.0&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; color:#268bd2;&quot;&gt;The hardware is licensed under the &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696; color:#268bd2;&quot;&gt;CERN OHL v1.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignBottom">
+                     <widget class="QFrame" name="frame_20">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_421">
                        <property name="spacing">
                         <number>0</number>
                        </property>
@@ -2188,36 +2327,9 @@ p, li { white-space: pre-wrap; }
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="mainbody_content_SpikelingGif">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="minimumSize">
-                          <size>
-                           <width>480</width>
-                           <height>540</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>480</width>
-                           <height>540</height>
-                          </size>
-                         </property>
-                         <property name="autoFillBackground">
-                          <bool>false</bool>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true"/>
-                         </property>
+                        <widget class="QLabel" name="label_9">
                          <property name="text">
-                          <string/>
-                         </property>
-                         <property name="scaledContents">
-                          <bool>true</bool>
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:600; color:#268bd2;&quot;&gt;https://github.com/OpenSourceNeuro/Spikeling-V2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                          </property>
                         </widget>
                        </item>
@@ -2494,7 +2606,7 @@ border-radius:10px;</string>
                                       <string>LED On   </string>
                                      </property>
                                      <property name="icon">
-                                      <iconset>
+                                      <iconset resource="resources.qrc">
                                        <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                                      </property>
                                      <property name="iconSize">
@@ -2561,7 +2673,7 @@ border-radius:10px;</string>
                                       <string>Buzzer On   </string>
                                      </property>
                                      <property name="icon">
-                                      <iconset>
+                                      <iconset resource="resources.qrc">
                                        <normaloff>:/resources/resources/SoundON.png</normaloff>:/resources/resources/SoundON.png</iconset>
                                      </property>
                                      <property name="iconSize">
@@ -3235,6 +3347,7 @@ border-radius:10px;</string>
                                      <property name="font">
                                       <font>
                                        <pointsize>10</pointsize>
+                                       <weight>75</weight>
                                        <bold>true</bold>
                                       </font>
                                      </property>
@@ -3303,6 +3416,7 @@ border-radius:10px;</string>
                                      <property name="font">
                                       <font>
                                        <pointsize>12</pointsize>
+                                       <weight>75</weight>
                                        <bold>true</bold>
                                       </font>
                                      </property>
@@ -3418,7 +3532,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                          <iconset resource="resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -3848,7 +3962,7 @@ background-color: rgb(220, 50, 47);</string>
                                  <string/>
                                 </property>
                                 <property name="pixmap">
-                                 <pixmap>:/resources/resources/StimFrequency.png</pixmap>
+                                 <pixmap resource="resources.qrc">:/resources/resources/StimFrequency.png</pixmap>
                                 </property>
                                 <property name="scaledContents">
                                  <bool>true</bool>
@@ -4186,7 +4300,7 @@ background-color: rgb(220, 50, 47);</string>
                                  <string/>
                                 </property>
                                 <property name="pixmap">
-                                 <pixmap>:/resources/resources/StimStrenght.png</pixmap>
+                                 <pixmap resource="resources.qrc">:/resources/resources/StimStrenght.png</pixmap>
                                 </property>
                                 <property name="scaledContents">
                                  <bool>true</bool>
@@ -7392,7 +7506,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7441,7 +7555,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Stimulus Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7463,7 +7577,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Neuron Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -7542,7 +7656,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -9996,7 +10110,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string notr="true"/>
                       </property>
                       <property name="currentIndex">
-                       <number>1</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="DataAnalysis_SquareStim">
                        <layout class="QVBoxLayout" name="verticalLayout_34">
@@ -10133,6 +10247,7 @@ background-color: rgb(220, 50, 47);</string>
                              <property name="font">
                               <font>
                                <pointsize>10</pointsize>
+                               <weight>75</weight>
                                <bold>true</bold>
                               </font>
                              </property>
@@ -10224,6 +10339,7 @@ background-color: rgb(220, 50, 47);</string>
                              <property name="font">
                               <font>
                                <pointsize>10</pointsize>
+                               <weight>75</weight>
                                <bold>true</bold>
                               </font>
                              </property>
@@ -10304,6 +10420,7 @@ background-color: rgb(220, 50, 47);</string>
                              <property name="font">
                               <font>
                                <pointsize>10</pointsize>
+                               <weight>75</weight>
                                <bold>true</bold>
                               </font>
                              </property>
@@ -10323,6 +10440,7 @@ background-color: rgb(220, 50, 47);</string>
                              <property name="font">
                               <font>
                                <pointsize>10</pointsize>
+                               <weight>75</weight>
                                <bold>true</bold>
                               </font>
                              </property>
@@ -10544,197 +10662,6 @@ background-color: rgb(220, 50, 47);</string>
                       </widget>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QFrame" name="DataAnalysis_RightMenu_Container">
-                      <property name="minimumSize">
-                       <size>
-                        <width>40</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>40</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_415">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QFrame" name="DataAnalysis_RightMenu_Frame">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_101">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>5</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item alignment="Qt::AlignTop">
-                           <widget class="QFrame" name="DataAnalysis_Menu_Frame">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_103">
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QPushButton" name="DataAnalysis_Menu_pushButton">
-                               <property name="text">
-                                <string>Hide Stimuli Menu</string>
-                               </property>
-                               <property name="icon">
-                                <iconset>
-                                 <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
-                               </property>
-                               <property name="iconSize">
-                                <size>
-                                 <width>30</width>
-                                 <height>30</height>
-                                </size>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="DataAnalysis_StimuliMenu_Frame">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                            <layout class="QVBoxLayout" name="verticalLayout_102">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QPushButton" name="DataAnalysis_SquareStim_pushButton">
-                               <property name="font">
-                                <font>
-                                 <pointsize>12</pointsize>
-                                </font>
-                               </property>
-                               <property name="text">
-                                <string>Square Stimulus</string>
-                               </property>
-                               <property name="icon">
-                                <iconset>
-                                 <normaloff>:/resources/resources/SqaureStim.png</normaloff>:/resources/resources/SqaureStim.png</iconset>
-                               </property>
-                               <property name="iconSize">
-                                <size>
-                                 <width>30</width>
-                                 <height>30</height>
-                                </size>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QPushButton" name="DataAnalysis_StepStim_pushButton">
-                               <property name="font">
-                                <font>
-                                 <pointsize>12</pointsize>
-                                </font>
-                               </property>
-                               <property name="layoutDirection">
-                                <enum>Qt::LeftToRight</enum>
-                               </property>
-                               <property name="text">
-                                <string>Custom Stimulus</string>
-                               </property>
-                               <property name="icon">
-                                <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
-                                 <normaloff>:/resources/resources/Stimulus.png</normaloff>:/resources/resources/Stimulus.png</iconset>
-                               </property>
-                               <property name="iconSize">
-                                <size>
-                                 <width>30</width>
-                                 <height>30</height>
-                                </size>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QFrame" name="frame_5">
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -10881,6 +10808,12 @@ background-color: rgb(220, 50, 47);</string>
                     </item>
                     <item>
                      <widget class="QFrame" name="Imaging_Oscilloscope_frame">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777200</height>
+                       </size>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -11063,6 +10996,269 @@ background-color: rgb(220, 50, 47);</string>
                       </layout>
                      </widget>
                     </item>
+                    <item>
+                     <widget class="QGroupBox" name="Imaging_DataRecording_box">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Data Recording</string>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_114">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QFrame" name="Imaging_DataRecording_left_frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_105">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="Imaging_DataRecording_recordingMode_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_422">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="Imaging_DataRecording_right_frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_106">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="Imaging_DataRecording_directory_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_423">
+                             <property name="spacing">
+                              <number>10</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QLabel" name="Imaging_DataRecording_SelectRecordFolder_label_">
+                               <property name="text">
+                                <string>Data Logging: Filename</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="Imaging_DataRecording_RecordFolder_value">
+                               <property name="enabled">
+                                <bool>false</bool>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="Imaging_DataRecording_RecordFolderDir_pushButton">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>150</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>10</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Browse directory</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="Imaging_DataRecording_record_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_424" stretch="0,0">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QLabel" name="Imaging_SelectedFolderLabel">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="Imaging_DataRecording_Record_pushButton">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>150</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(250, 250, 250);
+background-color: rgb(220, 50, 47);</string>
+                               </property>
+                               <property name="text">
+                                <string>Record</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -11148,7 +11344,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                          <iconset resource="resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -11171,7 +11367,7 @@ background-color: rgb(220, 50, 47);</string>
                        </size>
                       </property>
                       <property name="currentIndex">
-                       <number>2</number>
+                       <number>0</number>
                       </property>
                       <widget class="QWidget" name="Imaging_ImagingParameter_page">
                        <layout class="QVBoxLayout" name="verticalLayout_131">
@@ -14410,6 +14606,7 @@ background-color: rgb(220, 50, 47);</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -15387,7 +15584,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -15439,7 +15636,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Imaging Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -15461,7 +15658,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Calcium Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Calcium.png</normaloff>:/resources/resources/Calcium.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -15483,7 +15680,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Fluorescence Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -15991,6 +16188,269 @@ background-color: rgb(220, 50, 47);</string>
                       </layout>
                      </widget>
                     </item>
+                    <item>
+                     <widget class="QGroupBox" name="MultipleImaging_DataRecording_box">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Data Recording</string>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_415">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <item>
+                        <widget class="QFrame" name="MultipleImaging_DataRecording_left_frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_107">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="MultipleImaging_DataRecording_recordingMode_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_425">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="MultipleImaging_DataRecording_right_frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_108">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="MultipleImaging_DataRecording_directory_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_426">
+                             <property name="spacing">
+                              <number>10</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QLabel" name="MultipleImaging_DataRecording_SelectRecordFolder_label">
+                               <property name="text">
+                                <string>Data Logging: Filename</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="MultipleImaging_DataRecording_RecordFolder_value">
+                               <property name="enabled">
+                                <bool>false</bool>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="MultipleImaging_DataRecording_RecordFolderDir_pushButton">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>150</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>10</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>Browse directory</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="MultipleImaging_DataRecording_record_frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_427" stretch="0,0">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QLabel" name="MultipleImaging_SelectedFolderLabel">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="MultipleImaging_DataRecording_Record_pushButton">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>150</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <pointsize>12</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">color: rgb(250, 250, 250);
+background-color: rgb(220, 50, 47);</string>
+                               </property>
+                               <property name="text">
+                                <string>Record</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -16066,7 +16526,7 @@ background-color: rgb(220, 50, 47);</string>
                           <string>   Hide Parameters</string>
                          </property>
                          <property name="icon">
-                          <iconset resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">
+                          <iconset resource="resources.qrc">
                            <normaloff>:/resources/resources/DropMenuRight.png</normaloff>:/resources/resources/DropMenuRight.png</iconset>
                          </property>
                          <property name="iconSize">
@@ -19328,6 +19788,7 @@ background-color: rgb(220, 50, 47);</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>10</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -20305,7 +20766,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Hide Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/MenuRight.png</normaloff>:/resources/resources/MenuRight.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -20357,7 +20818,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Imaging Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Imaging.png</normaloff>:/resources/resources/Imaging.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -20379,7 +20840,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Calcium Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/Calcium.png</normaloff>:/resources/resources/Calcium.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -20401,7 +20862,7 @@ background-color: rgb(220, 50, 47);</string>
                              <string>Fluorescence Parameters</string>
                             </property>
                             <property name="icon">
-                             <iconset>
+                             <iconset resource="resources.qrc">
                               <normaloff>:/resources/resources/LEDON.png</normaloff>:/resources/resources/LEDON.png</iconset>
                             </property>
                             <property name="iconSize">
@@ -20480,7 +20941,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -20539,7 +21000,7 @@ background-color: rgb(220, 50, 47);</string>
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                       <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -20765,17 +21226,17 @@ background-color: rgb(220, 50, 47);</string>
                                   </property>
                                   <property name="html">
                                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;v' = 0.04v&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt; + 5v + 140 - u + I                    &lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;                    u' = a(bv - u)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;with the auxiliary after-spike resetting:   if &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;v &amp;gt;= 30 mV&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, then &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;v = c&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;u = u + d&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:696;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Here, &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; are dimensionless variables, and &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; are dimensionless parameters, and &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;'= d/dt&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, where &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; is the time. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;The variable v represents the membrane potential of the neuron and &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Synaptic currents or injected DC-currents are delivered via the variable&lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:696;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:696;&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v' = 0.04v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt; + 5v + 140 - u + I                    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;                    u' = a(bv - u)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;with the auxiliary after-spike resetting:   if &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v &amp;gt;= 30 mV&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, then &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v = c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u = u + d&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Here, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless variables, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless parameters, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;'= d/dt&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, where &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; is the time. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;The variable v represents the membrane potential of the neuron and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Synaptic currents or injected DC-currents are delivered via the variable&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:696;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                   </property>
                                  </widget>
                                 </item>
@@ -21012,6 +21473,7 @@ p, li { white-space: pre-wrap; }
                                      <property name="font">
                                       <font>
                                        <pointsize>12</pointsize>
+                                       <weight>75</weight>
                                        <bold>true</bold>
                                       </font>
                                      </property>
@@ -21234,7 +21696,7 @@ p, li { white-space: pre-wrap; }
                                 <string/>
                                </property>
                                <property name="pixmap">
-                                <pixmap>:/resources/resources/izhik.png</pixmap>
+                                <pixmap resource="resources.qrc">:/resources/resources/izhik.png</pixmap>
                                </property>
                                <property name="scaledContents">
                                 <bool>true</bool>
@@ -21322,6 +21784,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>12</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -21472,6 +21935,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>12</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -21616,6 +22080,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>12</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -21760,6 +22225,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>12</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -21889,6 +22355,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>10</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -21950,6 +22417,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>10</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                     <strikeout>false</strikeout>
                                    </font>
@@ -21973,6 +22441,7 @@ p, li { white-space: pre-wrap; }
                                <property name="font">
                                 <font>
                                  <pointsize>9</pointsize>
+                                 <weight>75</weight>
                                  <bold>true</bold>
                                 </font>
                                </property>
@@ -22003,6 +22472,7 @@ p, li { white-space: pre-wrap; }
                                   <property name="font">
                                    <font>
                                     <pointsize>10</pointsize>
+                                    <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
@@ -22722,6 +23192,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -22861,6 +23332,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23000,6 +23472,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23139,6 +23612,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23278,6 +23752,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23404,6 +23879,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23553,6 +24029,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23692,6 +24169,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -23853,6 +24331,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24007,6 +24486,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24161,6 +24641,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24300,6 +24781,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24443,6 +24925,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24582,6 +25065,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24704,6 +25188,7 @@ p, li { white-space: pre-wrap; }
                                 <property name="font">
                                  <font>
                                   <pointsize>12</pointsize>
+                                  <weight>75</weight>
                                   <bold>true</bold>
                                  </font>
                                 </property>
@@ -24746,6 +25231,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -24879,6 +25365,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25006,6 +25493,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25133,6 +25621,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25270,6 +25759,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25397,6 +25887,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25582,6 +26073,7 @@ p, li { white-space: pre-wrap; }
                                 <property name="font">
                                  <font>
                                   <pointsize>12</pointsize>
+                                  <weight>75</weight>
                                   <bold>true</bold>
                                  </font>
                                 </property>
@@ -25624,6 +26116,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25775,6 +26268,7 @@ p, li { white-space: pre-wrap; }
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -25924,6 +26418,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26080,6 +26575,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26216,6 +26712,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26386,6 +26883,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26447,6 +26945,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26592,6 +27091,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26647,6 +27147,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26795,6 +27296,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -26856,6 +27358,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -27005,6 +27508,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -27144,6 +27648,7 @@ border : none;</string>
                                    <property name="font">
                                     <font>
                                      <pointsize>12</pointsize>
+                                     <weight>75</weight>
                                      <bold>true</bold>
                                     </font>
                                    </property>
@@ -27912,7 +28417,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -27942,7 +28447,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -28044,7 +28549,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -28074,7 +28579,7 @@ border : none;</string>
                      <string/>
                     </property>
                     <property name="pixmap">
-                     <pixmap>:/resources/resources/under_construction.svg</pixmap>
+                     <pixmap resource="resources.qrc">:/resources/resources/under_construction.svg</pixmap>
                     </property>
                    </widget>
                   </item>
@@ -28208,83 +28713,24 @@ border : none;</string>
               <number>0</number>
              </property>
              <item>
-              <widget class="QLabel" name="badenlab_logo">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>30</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/Baden-Logo2.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-               <property name="wordWrap">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="ON_logo">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>135</width>
-                 <height>15</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>135</width>
-                 <height>15</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap>:/resources/resources/ON-Logo.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="sussex_logo">
                <property name="minimumSize">
                 <size>
-                 <width>95</width>
-                 <height>30</height>
+                 <width>85</width>
+                 <height>25</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>95</width>
-                 <height>30</height>
+                 <width>85</width>
+                 <height>25</height>
                 </size>
                </property>
                <property name="text">
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>:/resources/resources/SN-Logo.png</pixmap>
+                <pixmap resource="resources.qrc">:/resources/resources/SN-Logo.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -28301,13 +28747,47 @@ border : none;</string>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>40</width>
+                 <width>34</width>
                  <height>30</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>40</width>
+                 <width>34</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="toolTipDuration">
+                <number>-1</number>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap resource="resources.qrc">:/resources/resources/CaMinA.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="OSN_logo">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>48</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>48</width>
                  <height>30</height>
                 </size>
                </property>
@@ -28315,10 +28795,13 @@ border : none;</string>
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>:/resources/resources/TReND-Logo.png</pixmap>
+                <pixmap resource="resources.qrc">:/resources/resources/SpikyLogo.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
                </property>
               </widget>
              </item>
@@ -28367,7 +28850,7 @@ border : none;</string>
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc">:/resources/resources/SizeGrip.png</pixmap>
+                <pixmap resource="resources.qrc">:/resources/resources/SizeGrip.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -28396,10 +28879,7 @@ border : none;</string>
  </customwidgets>
  <resources>
   <include location="resources.qrc"/>
-  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
-  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
-  <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
-  <include location="../../../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
+  <include location="../../../../../.designer/backup/resources.qrc"/>
  </resources>
  <connections/>
 </ui>
