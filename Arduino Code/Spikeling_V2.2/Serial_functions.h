@@ -82,6 +82,10 @@ void StimCus_off(){
   StimCus_Flag = true;
 }
 
+void Serial_Trigger(){
+  SerialTrigger_Flag = true;
+}
+
 void PDGain_on(){
   PDGain_Flag = false;
   char *arg;
@@ -222,13 +226,14 @@ void LED_off(){
 
 
 void SerialFunctions(){
-  SCmd.addCommand("NEUR",NeuronMode);
+  SCmd.addCommand("NEU",NeuronMode);
   SCmd.addCommand("FR1",StimFre_on);
   SCmd.addCommand("FR0",StimFre_off);
   SCmd.addCommand("ST1",StimStr_on);
   SCmd.addCommand("ST0",StimStr_off);
   SCmd.addCommand("SC1",StimCus_on);
   SCmd.addCommand("SC0",StimCus_off);
+  SCmd.addCommand("TR",Serial_Trigger);
   SCmd.addCommand("PG1",PDGain_on);
   SCmd.addCommand("PG0",PDGain_off);
   SCmd.addCommand("PD1",PDDecay_on);

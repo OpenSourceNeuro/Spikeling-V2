@@ -161,6 +161,11 @@ int I_Stim = 0;                  // Patch Current-In current
 
 
 // // // // // // // // // // // // // // // // // // // // // // // //
+/*                        Trigger parameters                         */
+int Trigger = 0;
+
+
+// // // // // // // // // // // // // // // // // // // // // // // //
 /*                         Noise parameters                          */
 int   Noise_Gain;                // Noise potentiometer value
 int   NoiseScaling = 25;         // Noise gain scaling - The lower, the stronger the impact of the Noise_Potentiometer.  Default = 1000
@@ -186,6 +191,8 @@ boolean Syn2Decay_Flag = true;
 boolean Buzzer_Flag = true;
 boolean LED_Flag = true;
 boolean SerialFlag = true;
+boolean TriggerFlag = false;
+boolean SerialTrigger_Flag = false;
 
 String   OutputStr;
 

@@ -233,23 +233,35 @@ void loop() {
       Stim_val_D = (StimStrD * StimLED_scaling);                            // The stimulus digital output is proportional to the potentiometer reading and scaled from parameters
     }
     Stim_val_A = abs(StimStrA) * Stim_CurrentScaling;                       // The stimulus analog output absolute value is proportional to the potentiometer reading and scaled to parameters
-  }
+  
 
-  if ( Stim_counter < Stim_steps/2 ){                                     // If the number of void loops has not reached half the stimulus duty cycle:
-    analogWrite(pinStim_D, Stim_val_D);                                     // Sends the stimulus digital output value to the stimulating LED
-    dacWrite(pinStim_A, Stim_val_A);                                        // Sends the stimulus analog output value to the Current in
-    Stim_State = StimStrA;                                                  // Register stimulus ON
-  }
-  if ( Stim_counter > Stim_steps/2 ){                                     // If number of void loops has exceeded half the stimulus duty cycle period:
-    analogWrite(pinStim_D, 0);                                              // Nothing is sent throught the digital output
-    dacWrite(pinStim_A, 0);                                                 // Nothing is sent throught the analog output
-    Stim_State = 0;                                                         // Register stimulus OFF
-  }
+    if ( Stim_counter < Stim_steps/2 ){                                     // If the number of void loops has not reached half the stimulus duty cycle:
+      analogWrite(pinStim_D, Stim_val_D);                                     // Sends the stimulus digital output value to the stimulating LED
+      dacWrite(pinStim_A, Stim_val_A);                                        // Sends the stimulus analog output value to the Current in
+      Stim_State = StimStrA;                                                  // Register stimulus ON
+    }
+    if ( Stim_counter > Stim_steps/2 ){                                     // If number of void loops has exceeded half the stimulus duty cycle period:
+      analogWrite(pinStim_D, 0);                                              // Nothing is sent throught the digital output
+      dacWrite(pinStim_A, 0);                                                 // Nothing is sent throught the analog output
+      Stim_State = 0;                                                         // Register stimulus OFF
+    }
 
-  Stim_counter += 1;                                                      // Increment the void loop counter by 1
-  if ( Stim_counter >= Stim_steps ){                                      // If the void loop counter has reached the stimulus duty cycle period:
-    Stim_counter = 0;                                                       // Reset the void loop counter
-    Stim_steps = round (Stim_DutyCycle + ((StimFre * Stim_DutyCycle) / 100)) + Stim_minDutyCycle;  // Define the stimulus duty cycle period proportional to the stimulus frequency potentiometer value
+    Stim_counter += 1;                                                      // Increment the void loop counter by 1
+    
+    if ( TriggerFlag == false ){
+      Trigger = 0;  
+    }
+
+    if ( TriggerFlag == true ){
+      Trigger = 1;
+      TriggerFlag = false;
+    }
+
+    if ( Stim_counter >= Stim_steps ){                                      // If the void loop counter has reached the stimulus duty cycle period:
+      Stim_counter = 0;                                                       // Reset the void loop counter
+      TriggerFlag = true;
+      Stim_steps = round (Stim_DutyCycle + ((StimFre * Stim_DutyCycle) / 100)) + Stim_minDutyCycle;  // Define the stimulus duty cycle period proportional to the stimulus frequency potentiometer value
+    }
   }
   
 
@@ -257,6 +269,11 @@ void loop() {
   /*                                  GUI Custom Stimulus Button ON                                  */
 
   if (StimCus_Flag == false){                                             // If GUI "Custom Stimulus" button IS ticked:
+    Trigger = 0; 
+    if ( SerialTrigger_Flag == true ){
+      Trigger = 1;  
+      SerialTrigger_Flag = false;
+    }
     if (StimCus_val > 0){                                                   // If the Custom Stimulus value is aobve 0:
       Stim_val_D = (StimCus_val * StimLED_scaling);                           // Applies the serial received stimulus value to the stimulating LED and scales from parameters
     }
@@ -386,8 +403,9 @@ void loop() {
   Serial.print(I_Total);      Serial.print(',');
   Serial.print(Syn1_Vm);      Serial.print(',');
   Serial.print(I_Synapse1);   Serial.print(',');
-  Serial.print(Syn2_Vm);    Serial.print(',');
-  Serial.println(I_Synapse2); 
+  Serial.print(Syn2_Vm);      Serial.print(',');
+  Serial.print(I_Synapse2);   Serial.print(',');
+  Serial.println(Trigger);
 
-  delay(5);
+  delay(3);
 }
