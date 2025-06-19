@@ -2008,7 +2008,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>5</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -11141,7 +11141,7 @@ background-color: rgb(220, 50, 47);</string>
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLabel" name="Imaging_DataRecording_SelectRecordFolder_label_">
+                              <widget class="QLabel" name="Imaging_DataRecording_SelectRecordFolder_label">
                                <property name="text">
                                 <string>Data Logging: Filename</string>
                                </property>

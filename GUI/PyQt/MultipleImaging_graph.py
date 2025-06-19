@@ -2,8 +2,8 @@
 ########################################################################
 #                          Libraries import                            #
 
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import QIODevice, QTimer
+from PySide6.QtCore import QTimer
+from PySide6.QtGui import QPen
 import pyqtgraph as pg
 
 import numpy as np
@@ -52,13 +52,13 @@ def MultipleImagingPlot(self):
 
     if self.ui.MultipleImaging_pushButton.isChecked():
         self.MultipleImagingConnectionFlag = True
-        self.Multipleimagingtimer = QtCore.QTimer()
+        self.Multipleimagingtimer = QTimer()
         self.Multipleimagingtimer.timeout.connect(lambda: UpdateMultipleImagingPlot(self))
         self.Multipleimagingtimer.start()
     else:
         self.Multipleimagingtimer.stop()
-        self.MultipleCurrentImagingPlots.clear()
-        self.MultipleCurrentImagingPlots.removeItem(self.Stimcurve)
+        self.CurrentMultipleImagingPlots.clear()
+        self.CurrentMultipleImagingPlots.removeItem(self.MultipleStimcurve)
         self.ui.MultipleImaging_Oscilloscope_widget.clear()
 
 
@@ -88,6 +88,7 @@ def MultipleImagingPlot(self):
         self.MultipleVmData1 = self.MultipleImagingData[0]
         self.MultipleVmData2 = self.MultipleImagingData[3]
         self.MultipleVmData3 = self.MultipleImagingData[5]
+        self.MultipleTriggerData = self.MultipleImagingData[7]
         self.MultipleStimData = self.MultipleImagingData[1]
 
         if float(self.MultipleVmdatabuffer1[-1]) >= self.MultipleSpikeThreshold and float(self.MultipleVmdatabuffer1[-2]) <= self.MultipleSpikeThreshold:
@@ -141,16 +142,22 @@ def MultipleImagingPlot(self):
             self.MultipleSatNoise3 = np.sqrt(self.MultiplePhotoShotNoise * self.MultipleCalciumData3**self.MultipleHillCoef / (self.MultipleCalciumData3**self.MultipleHillCoef + self.MultipleDissociationConstant) + self.MultipleFluoNoiseScale)*self.MultipleFluoGaussianNoise3
             self.MultipleFluoData3 = self.MultipleDissociationConstant * (self.MultipleLaser*self.MultiplePMT*self.MultipleFluoScale*(self.MultipleCalciumData3**self.MultipleHillCoef/(self.MultipleCalciumData3**self.MultipleHillCoef+self.MultipleDissociationConstant)) + self.MultipleSatNoise3) + self.MultipleFluoOffset
 
-        self.MultipleCalciumdatabuffer1.append(self.MultipleCalciumData1)
-        self.MultipleCalciumdatabuffer2.append(self.MultipleCalciumData2)
-        self.MultipleCalciumdatabuffer3.append(self.MultipleCalciumData3)
-        self.MultipleFluodatabuffer1.append(self.MultipleFluoData1)
-        self.MultipleFluodatabuffer2.append(self.MultipleFluoData2)
-        self.MultipleFluodatabuffer3.append(self.MultipleFluoData3)
+
         self.MultipleStimdatabuffer.append(self.MultipleStimData)
+        self.MultipleTriggerdatabuffer.append(self.MultipleTriggerData)
+
+        self.MultipleFluodatabuffer1.append(self.MultipleFluoData1)
+        self.MultipleCalciumdatabuffer1.append(self.MultipleCalciumData1)
         self.MultipleVmdatabuffer1.append(self.MultipleVmData1)
+
+        self.MultipleFluodatabuffer2.append(self.MultipleFluoData2)
+        self.MultipleCalciumdatabuffer2.append(self.MultipleCalciumData2)
         self.MultipleVmdatabuffer2.append(self.MultipleVmData2)
+
+        self.MultipleFluodatabuffer3.append(self.MultipleFluoData3)
+        self.MultipleCalciumdatabuffer3.append(self.MultipleCalciumData3)
         self.MultipleVmdatabuffer3.append(self.MultipleVmData3)
+
 
     # If checked, plot latest buffer data points
     def PlotMultipleImagingCurve(self):
@@ -218,27 +225,29 @@ def MultipleImagingPlot(self):
             self.MultipleVmcurve3.clear()
 
 
-
 def SaveMultipleImagingPlotData(self):                              # Save latest buffer data and export them as csv
     if self.ui.MultipleImaging_DataRecording_Record_pushButton.isChecked() == False and self.MultipleImagingrecordflag == True:
-        self.Dataset = np.empty([11, len(self.DataSet[1])], dtype=float)
-        for i in range(len(self.DataSet[1])):
-            self.Dataset[0][i] = i * 0.1
-            self.Dataset[1][i] = self.DataSet[1][i]
-            self.Dataset[2][i] = self.DataSet[2][i]
-            self.Dataset[3][i] = self.DataSet[3][i]
-            self.Dataset[4][i] = self.DataSet[4][i]
-            self.Dataset[5][i] = self.DataSet[5][i]
-            self.Dataset[6][i] = self.DataSet[6][i]
-            self.Dataset[7][i] = self.DataSet[7][i]
-            self.Dataset[8][i] = self.DataSet[8][i]
-            self.Dataset[9][i] = self.DataSet[9][i]
-            self.Dataset[10][i] = self.DataSet[10][i]
+        MultipleImagingDataset = np.empty([12, len(self.DataSet[1])], dtype=float)
 
-        dict = {'Time (ms)': self.Dataset[0], 'Spikeling Fluorescence': self.Dataset[1], 'Spikeling Calcium': self.Dataset[2], 'Spikeling Vm (mV)': self.Dataset[3],
-                'Neuron Aux1 Fluorescence': self.Dataset[4], 'Neuron Aux1 Calcium': self.Dataset[5], 'Neuron Aux1 Vm (mV)': self.Dataset[6],
-                'Neuron Aux2 Fluorescence': self.Dataset[7], 'Neuron Aux2 Calcium': self.Dataset[8], 'Neuron Aux2 Vm (mV)': self.Dataset[9],
-                'Trigger': self.Dataset[10]}
+        for i in range(len(self.DataSet[1])):
+            MultipleImagingDataset[0][i] = i * 0.1
+            MultipleImagingDataset[1][i] = self.DataSet[1][i]
+            MultipleImagingDataset[2][i] = self.DataSet[2][i]
+            MultipleImagingDataset[3][i] = self.DataSet[3][i]
+            MultipleImagingDataset[4][i] = self.DataSet[4][i]
+            MultipleImagingDataset[5][i] = self.DataSet[5][i]
+            MultipleImagingDataset[6][i] = self.DataSet[6][i]
+            MultipleImagingDataset[7][i] = self.DataSet[7][i]
+            MultipleImagingDataset[8][i] = self.DataSet[8][i]
+            MultipleImagingDataset[9][i] = self.DataSet[9][i]
+            MultipleImagingDataset[10][i] = self.DataSet[10][i]
+            MultipleImagingDataset[11][i] = self.DataSet[11][i]
+
+        dict = {'Time (ms)': MultipleImagingDataset[0], 'Stimulus (%)': MultipleImagingDataset[1], 'Trigger': MultipleImagingDataset[2],
+                'Spikeling Fluorescence': MultipleImagingDataset[3], 'Spikeling Calcium': MultipleImagingDataset[4], 'Spikeling Vm (mV)': MultipleImagingDataset[5],
+                'Neuron Aux1 Fluorescence': MultipleImagingDataset[6], 'Neuron Aux1 Calcium': MultipleImagingDataset[7], 'Neuron Aux1 Vm (mV)': MultipleImagingDataset[8],
+                'Neuron Aux2 Fluorescence': MultipleImagingDataset[9], 'Neuron Aux2 Calcium': MultipleImagingDataset[10], 'Neuron Aux2 Vm (mV)': MultipleImagingDataset[11]
+                }
         df = pd.DataFrame(dict)
         self.RecordingFileName = str(self.ui.MultipleImaging_SelectedFolderLabel.text())
         df.to_csv(self.RecordingFileName + '.csv', index=False)
@@ -254,21 +263,24 @@ def SaveMultipleImagingPlotData(self):                              # Save lates
         self.DataSet[8].clear()
         self.DataSet[9].clear()
         self.DataSet[10].clear()
+        self.DataSet[11].clear()
 
 
     if self.ui.MultipleImaging_DataRecording_Record_pushButton.isChecked() == True:
         self.MultipleImagingrecordflag = True
 
-        self.DataSet[1].append(self.MultipleFluodatabuffer1[-1])
-        self.DataSet[2].append(self.MultipleCalciumdatabuffer1[-1])
-        self.DataSet[3].append(self.MultipleVmdatabuffer1[-1])
-        self.DataSet[4].append(self.MultipleFluodatabuffer2[-1])
-        self.DataSet[5].append(self.MultipleCalciumdatabuffer2[-1])
-        self.DataSet[6].append(self.MultipleVmdatabuffer2[-1])
-        self.DataSet[7].append(self.MultipleFluodatabuffer3[-1])
-        self.DataSet[8].append(self.MultipleCalciumdatabuffer3[-1])
-        self.DataSet[9].append(self.MultipleVmdatabuffer3[-1])
-        self.DataSet[10].append(self.MultipleTriggerbuffer[-1])
+        self.DataSet[1].append(self.MultipleStimdatabuffer[-1])
+        self.DataSet[2].append(self.MultipleTriggerdatabuffer[-1])
+        self.DataSet[3].append(self.MultipleFluodatabuffer1[-1])
+        self.DataSet[4].append(self.MultipleCalciumdatabuffer1[-1])
+        self.DataSet[5].append(self.MultipleVmdatabuffer1[-1])
+        self.DataSet[6].append(self.MultipleFluodatabuffer2[-1])
+        self.DataSet[7].append(self.MultipleCalciumdatabuffer2[-1])
+        self.DataSet[8].append(self.MultipleVmdatabuffer2[-1])
+        self.DataSet[9].append(self.MultipleFluodatabuffer3[-1])
+        self.DataSet[10].append(self.MultipleCalciumdatabuffer3[-1])
+        self.DataSet[11].append(self.MultipleVmdatabuffer3[-1])
+
 
 
 def SetMultipleImagingInitParameters(self):
@@ -294,32 +306,36 @@ def SetMultipleImagingInitParameters(self):
 def SetMultipleImagingPlotCurve(self):
     self._MultipleImaging_bufsize = int(self.MultipleImaging_timewindow / self.MultipleImaging_sampleinterval)
 
-    self.MultipleCalciumdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleCalciumdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleCalciumdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer1    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer2    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleFluodatabuffer3    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleStimdatabuffer     = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer1      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer2      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleVmdatabuffer3      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
-    self.MultipleTriggerbuffer      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleStimdatabuffer     = collections.deque([0.0] * self._MultipleImaging_bufsize,self._MultipleImaging_bufsize)
+    self.MultipleTriggerdatabuffer  = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
 
-    self.MultipleImagingx = np.linspace(-self.MultipleImaging_timewindow, 0.0, self._MultipleImaging_bufsize)            # Create arrays of self._Imaging_bufsize length
+    self.MultipleFluodatabuffer1    = collections.deque([0.0] * self._MultipleImaging_bufsize,self._MultipleImaging_bufsize)
+    self.MultipleCalciumdatabuffer1 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer1      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+
+    self.MultipleFluodatabuffer2    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleCalciumdatabuffer2 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer2      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+
+    self.MultipleFluodatabuffer3    = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleCalciumdatabuffer3 = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+    self.MultipleVmdatabuffer3      = collections.deque([0.0] * self._MultipleImaging_bufsize, self._MultipleImaging_bufsize)
+
+
+    self.MultipleImagingx  = np.linspace(-self.MultipleImaging_timewindow, 0.0, self._MultipleImaging_bufsize)            # Create arrays of self._Imaging_bufsize length
     self.yMultipleCalcium1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
     self.yMultipleCalcium2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
     self.yMultipleCalcium3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleFluo1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleFluo2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleFluo3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleStim = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleVm1 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleVm2 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
-    self.yMultipleVm3 = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo1    = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo2    = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleFluo3    = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleStim     = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm1      = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm2      = np.zeros(self._MultipleImaging_bufsize, dtype=float)
+    self.yMultipleVm3      = np.zeros(self._MultipleImaging_bufsize, dtype=float)
 
     self.DataSet = []
-    for _ in range(11):
+    for _ in range(12):
         self.DataSet.append([])
 
 def SetMultipleImagingPlot(self):
@@ -340,7 +356,7 @@ def SetMultipleImagingPlot(self):
     self.MultipleCalciumcurve2 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleCalcium2, pen=pg.mkPen(Settings.DarkSolarized[9], width=self.MultipleImaging_penwidth))
     self.MultipleCalciumcurve2.clear()
     self.MultipleCalciumcurve3 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleCalcium3, pen=pg.mkPen(Settings.DarkSolarized[7], width=self.MultipleImaging_penwidth))
-    self.MultipleCalciumcurve1.clear()
+    self.MultipleCalciumcurve3.clear()
     self.MultipleFluocurve1 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleFluo1, pen=pg.mkPen(Settings.DarkSolarized[4], width=self.MultipleImaging_penwidth))
     self.MultipleFluocurve1.clear()
     self.MultipleFluocurve2 = self.ui.MultipleImaging_Oscilloscope_widget.plot(self.MultipleImagingx, self.yMultipleFluo2, pen=pg.mkPen([0,255,133], width=self.MultipleImaging_penwidth))

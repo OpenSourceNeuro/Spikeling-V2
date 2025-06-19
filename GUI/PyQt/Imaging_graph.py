@@ -2,17 +2,15 @@
 ########################################################################
 #                          Libraries import                            #
 
-from PySide6 import QtCore
-from PySide6.QtCore import  QTimer
+from PySide6.QtCore import QTimer
+from PySide6.QtGui import QPen
 import pyqtgraph as pg
 
 import numpy as np
 import pandas as pd
+import collections
+
 import Settings
-import time
-
-
-
 
 
 
@@ -21,61 +19,62 @@ def ImagingPlot(self):
     self.Imaging_sampleinterval = 0.1
     self.Imaging_timewindow = 250
     self.Imaging_penwidth = 1
-    self.FrameRate = self.ui.Imaging_FrameRate_Slider.value()
-    self.ImagingDelta = 1 / self.FrameRate * 10000  # imaging resolution in ms
-    self.PMT = self.ui.Imaging_PMT_Slider.value()/100
-    self.Laser = self.ui.Imaging_Laser_Slider.value()/100
+    self.ImagingFrameRate = self.ui.Imaging_FrameRate_Slider.value()
+    self.ImagingDelta = 1 / self.ImagingFrameRate * 10000  # imaging resolution in ms
+    self.ImagingPMT = self.ui.Imaging_PMT_Slider.value()/100
+    self.ImagingLaser = self.ui.Imaging_Laser_Slider.value()/100
 
     # Calcium parameters
-    self.CalciumDecay = self.ui.Imaging_CalciumDecay_Slider.value()/10000#Indicator decay constant in ms
-    self.SpikeOccurence = 0 #number of spike at t
-    self.SpikeConcentrationRise = self.ui.Imaging_CalciumJump_Slider.value()#calcicum concentration rise for each spike in micromolar
-    self.CalciumBaseline = self.ui.Imaging_CalciumBaseline_Slider.value()/100 #in micromolar
-    self.NoiseScale = self.ui.Imaging_CalciumNoise_Slider.value()/10# sigmac
-    self.SpikeThreshold = -30.0
-    self.imaging_downsampling = 5
+    self.ImagingCalciumDecay = self.ui.Imaging_CalciumDecay_Slider.value()/10000#Indicator decay constant in ms
+    self.ImagingSpikeOccurence = 0 #number of spike at t
+    self.ImagingSpikeConcentrationRise = self.ui.Imaging_CalciumJump_Slider.value()#calcicum concentration rise for each spike in micromolar
+    self.ImagingCalciumBaseline = self.ui.Imaging_CalciumBaseline_Slider.value()/100 #in micromolar
+    self.ImagingNoiseScale = self.ui.Imaging_CalciumNoise_Slider.value()/10# sigmac
+    self.ImagingSpikeThreshold = -30.0
+    self.Imaging_downsampling = 5
 
     # Fluorescence parameters
-    self.FluoScale = self.ui.Imaging_FluoScale_Slider.value()/10
-    self.FluoOffset = self.ui.Imaging_FluoOffset_Slider.value()
-    self.FluoNoiseScale = self.ui.Imaging_FluoNoise_Slider.value()/10
-    self.HillCoef = self.ui.Imaging_Hill_Slider.value()/100
-    self.PhotoShotNoise = self.ui.Imaging_PhotoShotNoise_Slider.value() / 10000 / 100
-    self.DissociationConstant = self.ui.Imaging_kd_Slider.value()*10 #micromolar
+    self.ImagingFluoScale = self.ui.Imaging_FluoScale_Slider.value()/10
+    self.ImagingFluoOffset = self.ui.Imaging_FluoOffset_Slider.value()
+    self.ImagingFluoNoiseScale = self.ui.Imaging_FluoNoise_Slider.value()/10
+    self.ImagingHillCoef = self.ui.Imaging_Hill_Slider.value()/100
+    self.ImagingPhotoShotNoise = self.ui.Imaging_PhotoShotNoise_Slider.value() / 10000 / 100
+    self.ImagingDissociationConstant = self.ui.Imaging_kd_Slider.value()*10 #micromolar
 
     SetImagingInitParameters(self)
     SetImagingPlotCurve(self)
     SetImagingPlot(self)
 
-    self.CalciumData = self.CalciumBaseline
+    self.ImagingCalciumData = self.ImagingCalciumBaseline
+
 
     if self.ui.Imaging_pushButton.isChecked():
         self.ImagingConnectionFlag = True
-        self.imagingtimer = QtCore.QTimer()
-        self.imagingtimer.timeout.connect(lambda: UpdateImagingPlot(self))
-        self.imagingtimer.start()
+        self.Imagingtimer = QTimer()
+        self.Imagingtimer.timeout.connect(lambda: UpdateImagingPlot(self))
+        self.Imagingtimer.start()
     else:
-        self.imagingtimer.stop()
+        self.Imagingtimer.stop()
         self.CurrentImagingPlots.clear()
-        self.CurrentImagingPlots.removeItem(self.Stimcurve)
+        self.CurrentImagingPlots.removeItem(self.ImagingStimcurve)
         self.ui.Imaging_Oscilloscope_widget.clear()
 
 
 
     def UpdateImagingPlot(self):
         self.ui.Imaging_Oscilloscope_widget.getViewBox().sigResized.connect(UpdateImagingViews(self))
-        self.ImagingData = GetData(self)
+        self.ImagingData = GetImagingData(self)
         BuffImagingData(self)                              # Append latest data into buffer deque
-        #SaveImagingPlotData(self)                          # Create data array to be exported in .csv
-        if self.i_imaging_downsampling == 0:               # Plot Data once every "downsampling" time
+        SaveImagingPlotData(self)                          # Create data array to be exported in .csv
+        if self.i_Imaging_downsampling == 0:               # Plot Data once every "downsampling" time
             PlotImagingCurve(self)
-        self.i_imaging_downsampling += 1
-        if self.i_imaging_downsampling == self.imaging_downsampling - 1:
-            self.i_imaging_downsampling = 0
+        self.i_Imaging_downsampling += 1
+        if self.i_Imaging_downsampling == self.Imaging_downsampling - 1:
+            self.i_Imaging_downsampling = 0
 
 
     # Read Serial and return data
-    def GetData(self):
+    def GetImagingData(self):
         self.rx = self.serial_port.readline()
         self.rx_serial = str(self.rx, 'utf8').strip()
         self.data = self.rx_serial.split(',')
@@ -84,130 +83,149 @@ def ImagingPlot(self):
 
     # Append latest serial data point into buffer deque
     def BuffImagingData(self):
-        self.VmData = self.ImagingData[0]
-        self.StimData = self.ImagingData[1]
-        if float(self.Vmdatabuffer[-1]) >= self.SpikeThreshold and float(self.Vmdatabuffer[-2]) <= self.SpikeThreshold:
-             self.SpikeOccurence = 1
+        self.ImagingVmData = self.ImagingData[0]
+        self.ImagingTriggerData = self.ImagingData[7]
+        self.ImagingStimData = self.ImagingData[1]
+
+        if float(self.ImagingVmdatabuffer[-1]) >= self.ImagingSpikeThreshold and float(self.ImagingVmdatabuffer[-2]) <= self.ImagingSpikeThreshold:
+             self.ImagingSpikeOccurence = 1
         else:
-             self.SpikeOccurence = 0
+             self.ImagingSpikeOccurence = 0
 
-        self.CalciumGaussianNoise = np.random.normal(0,1)
-        self.CalciumData = self.CalciumData - self.CalciumDecay*self.CalciumData + self.CalciumBaseline + self.SpikeConcentrationRise*self.SpikeOccurence + self.NoiseScale*np.sqrt(self.ImagingDelta/10000)*self.CalciumGaussianNoise
+        self.ImagingCalciumGaussianNoise = np.random.normal(0,1)
+        self.ImagingCalciumData = self.ImagingCalciumData - self.ImagingCalciumDecay*self.ImagingCalciumData + self.ImagingCalciumBaseline + self.ImagingSpikeConcentrationRise*self.ImagingSpikeOccurence + self.ImagingNoiseScale*np.sqrt(self.ImagingDelta/10000)*self.ImagingCalciumGaussianNoise
 
-        if self.SaturationFlag == False:
-            self.FluoGaussianNoise = np.random.normal(0, 1)
-            self.FluoData = self.Laser*self.PMT*self.FluoScale*self.CalciumData + self.FluoOffset + self.FluoNoiseScale*self.FluoGaussianNoise
 
-        if self.SaturationFlag == True:
-            self.FluoGaussianNoise = np.random.normal(0, 1)
-            self.FluoNoiseScale = self.FluoNoiseScale/10000
-            self.SatNoise = np.sqrt(self.PhotoShotNoise * self.CalciumData**self.HillCoef / (self.CalciumData**self.HillCoef + self.DissociationConstant) + self.FluoNoiseScale)*self.FluoGaussianNoise
-            self.FluoData = self.DissociationConstant * (self.Laser*self.PMT*self.FluoScale*(self.CalciumData**self.HillCoef/(self.CalciumData**self.HillCoef+self.DissociationConstant))  + self.SatNoise) + self.FluoOffset
+        if self.ImagingSaturationFlag == False:
+            self.ImagingFluoGaussianNoise = np.random.normal(0, 1)
+            self.ImagingFluoData = self.ImagingLaser*self.ImagingPMT*self.ImagingFluoScale*self.ImagingCalciumData + self.ImagingFluoOffset + self.ImagingFluoNoiseScale*self.ImagingFluoGaussianNoise
 
-        self.Calciumdatabuffer.append(self.CalciumData)
-        self.Fluodatabuffer.append(self.FluoData)
-        self.Stimdatabuffer.append(self.StimData)
-        self.Vmdatabuffer.append(self.VmData)
+
+        if self.ImagingSaturationFlag == True:
+            self.ImagingFluoNoiseScale = self.ImagingFluoNoiseScale/10000
+
+            self.ImagingFluoGaussianNoise = np.random.normal(0, 1)
+            self.ImagingSatNoise = np.sqrt(self.ImagingPhotoShotNoise * self.ImagingCalciumData**self.ImagingHillCoef / (self.ImagingCalciumData**self.ImagingHillCoef + self.ImagingDissociationConstant) + self.ImagingFluoNoiseScale)*self.ImagingFluoGaussianNoise1
+            self.ImagingFluoData = self.ImagingDissociationConstant * (self.ImagingLaser*self.ImagingPMT*self.ImagingFluoScale*(self.ImagingCalciumData**self.ImagingHillCoef/(self.ImagingCalciumData**self.ImagingHillCoef+self.ImagingDissociationConstant)) + self.ImagingSatNoise) + self.ImagingFluoOffset
+
+
+        self.ImagingStimdatabuffer.append(self.ImagingStimData)
+        self.ImagingTriggerdatabuffer.append(self.ImagingTriggerData)
+
+        self.ImagingFluodatabuffer.append(self.ImagingFluoData)
+        self.ImagingCalciumdatabuffer.append(self.ImagingCalciumData)
+        self.ImagingVmdatabuffer.append(self.ImagingVmData)
+
 
     # If checked, plot latest buffer data points
     def PlotImagingCurve(self):
         if self.ui.Imaging_Calcium_Checkbox.isChecked():
             self.yCalcium[:] = self.Calciumdatabuffer
-            self.Calciumcurve.setData(self.Imagingx, self.yCalcium)
+            self.Calciumcurve.setData(self.Imagingx, self.yImagingCalcium)
         else:
-            self.Calciumcurve.clear()
+            self.ImagingCalciumcurve.clear()
 
         if self.ui.Imaging_Fluorescence_Checkbox.isChecked():
-            self.yFluo[:] = self.Fluodatabuffer
-            self.Fluocurve.setData(self.Imagingx, self.yFluo)
+            self.yImagingFluo[:] = self.ImagingFluodatabuffer
+            self.ImagingFluocurve.setData(self.Imagingx, self.yImagingFluo)
         else:
-            self.Fluocurve.clear()
+            self.ImagingFluocurve.clear()
+
 
         if self.ui.Imaging_Stimulus_Checkbox.isChecked():
-            self.yStim[:] = self.Stimdatabuffer
-            self.Stimcurve.setData(self.Imagingx, self.yStim)
+            self.yImagingStim[:] = self.ImagingStimdatabuffer
+            self.ImagingStimcurve.setData(self.Imagingx, self.yImagingStim)
         else:
-            self.Stimcurve.clear()
+            self.ImagingStimcurve.clear()
+
 
         if self.ui.Imaging_Vm_Checkbox.isChecked():
-            self.yVm[:] = self.Vmdatabuffer
-            self.Vmcurve.setData(self.Imagingx, self.yVm)
+            self.yImagingVm[:] = self.ImagingVmdatabuffer
+            self.ImagingVmcurve.setData(self.Imagingx, self.yImagingVm)
         else:
-            self.Vmcurve.clear()
+            self.ImagingVmcurve.clear()
 
 
 
-# def SaveImaginPlotData(self):                              # Save latest buffer data and export them as csv
-#     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False and self.recordflag == True:
-#         self.Dataset = np.empty([7, len(self.Dataset0)], dtype=float)
-#         for i in range(len(self.Dataset0)):
-#             self.Dataset[0][i] = self.Dataset0[i]
-#             self.Dataset[1][i] = self.Dataset1[i]
-#             self.Dataset[2][i] = self.Dataset2[i]
-#             self.Dataset[3][i] = self.Dataset3[i]
-#             self.Dataset[4][i] = self.Dataset4[i]
-#             self.Dataset[5][i] = self.Dataset5[i]
-#             self.Dataset[6][i] = self.Dataset6[i]
-#
-#         dict = {'Spikeling Vm': self.Dataset[0], 'Stimulus': self.Dataset[1], 'Total Current Input': self.Dataset[2],
-#                 'Synapse 1 Vm': self.Dataset[3], 'Synapse 1 Input': self.Dataset[4],
-#                 'Synapse 2 Vm': self.Dataset[5], 'Synapse 2 Input': self.Dataset[6]}
-#         df = pd.DataFrame(dict)
-#         self.RecordingFileName = str(self.ui.Spikeling_SelectedFolderLabel.text())
-#         df.to_csv(self.RecordingFileName + '.csv', index=False)
-#         self.recordflag = False
-#
-#     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == True:
-#         self.recordflag = True
-#
-#         self.Dataset0.append(self.databuffer0[-1])
-#         self.Dataset1.append(self.databuffer1[-1])
-#         self.Dataset2.append(self.databuffer2[-1])
-#         self.Dataset3.append(self.databuffer3[-1])
-#         self.Dataset4.append(self.databuffer4[-1])
-#         self.Dataset5.append(self.databuffer5[-1])
-#         self.Dataset6.append(self.databuffer6[-1])
+def SaveImagingPlotData(self):                              # Save latest buffer data and export them as csv
+    if self.ui.Imaging_DataRecording_Record_pushButton.isChecked() == False and self.Imagingrecordflag == True:
+        ImagingDataset = np.empty([6, len(self.DataSet[1])], dtype=float)
+
+        for i in range(len(self.DataSet[1])):
+            ImagingDataset[0][i] = i * 0.1
+            ImagingDataset[1][i] = self.DataSet[1][i]
+            ImagingDataset[2][i] = self.DataSet[2][i]
+            ImagingDataset[3][i] = self.DataSet[3][i]
+            ImagingDataset[4][i] = self.DataSet[4][i]
+            ImagingDataset[5][i] = self.DataSet[5][i]
+
+
+        dict = {'Time (ms)': ImagingDataset[0], 'Stimulus (%)': ImagingDataset[1], 'Trigger': ImagingDataset[2],
+                'Spikeling Fluorescence': ImagingDataset[3], 'Spikeling Calcium': ImagingDataset[4], 'Spikeling Vm (mV)': ImagingDataset[5]
+                }
+        df = pd.DataFrame(dict)
+        self.RecordingFileName = str(self.ui.Imaging_SelectedFolderLabel.text())
+        df.to_csv(self.RecordingFileName + '.csv', index=False)
+        self.Imagingrecordflag = False
+        self.DataSet[0].clear()
+        self.DataSet[1].clear()
+        self.DataSet[2].clear()
+        self.DataSet[3].clear()
+        self.DataSet[4].clear()
+        self.DataSet[5].clear()
+
+
+    if self.ui.Imaging_DataRecording_Record_pushButton.isChecked() == True:
+        self.Imagingrecordflag = True
+
+        self.DataSet[1].append(self.ImagingStimdatabuffer[-1])
+        self.DataSet[2].append(self.ImagingTriggerdatabuffer[-1])
+        self.DataSet[3].append(self.ImagingFluodatabuffer[-1])
+        self.DataSet[4].append(self.ImagingCalciumdatabuffer[-1])
+        self.DataSet[5].append(self.ImagingVmdatabuffer[-1])
+
 
 
 def SetImagingInitParameters(self):
-    self.i_imaging_downsampling = 0
-    self.recordflag = False
-    self.SaturationFlag = False
+    self.i_Imaging_downsampling = 0
+    self.Imagingrecordflag = False
+    self.ImagingSaturationFlag = False
     self.ui.Imaging_Oscilloscope_widget.clear()
     if self.ui.Imaging_pushButton.isChecked():
         self.ui.Imaging_pushButton.setText("Connected")
         self.ui.Imaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[3])) + ";\n"
-                                                "background-color: rgb" + str(tuple(Settings.DarkSolarized[11])) + ";\n"
-                                                "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "border-radius: 10px;"
-                                                )
+                                                 "background-color: rgb" + str(tuple(Settings.DarkSolarized[11])) + ";\n"
+                                                 "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                 "border-radius: 10px;"
+                                                 )
     else:
         self.ui.Imaging_pushButton.setText("Connect Imaging screen to Spikeling screen")
         self.ui.Imaging_pushButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
-                                                "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
-                                                "border-radius: 10px;"
-                                                )
+                                                 "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                 "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                 "border-radius: 10px;"
+                                                 )
 
 def SetImagingPlotCurve(self):
     self._Imaging_bufsize = int(self.Imaging_timewindow / self.Imaging_sampleinterval)
 
-    self.Calciumdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Fluodatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Stimdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
-    self.Vmdatabuffer = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
+    self.ImagingStimdatabuffer     = collections.deque([0.0] * self._Imaging_bufsize,self._Imaging_bufsize)
+    self.ImagingTriggerdatabuffer  = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
 
-    self.Imagingx = np.linspace(-self.Imaging_timewindow, 0.0, self._Imaging_bufsize)            # Create arrays of self._Imaging_bufsize length
-    self.yCalcium = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yFluo = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yStim = np.zeros(self._Imaging_bufsize, dtype=float)
-    self.yVm = np.zeros(self._Imaging_bufsize, dtype=float)
+    self.ImagingFluodatabuffer     = collections.deque([0.0] * self._Imaging_bufsize,self._Imaging_bufsize)
+    self.ImagingCalciumdatabuffer  = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
+    self.ImagingVmdatabuffer       = collections.deque([0.0] * self._Imaging_bufsize, self._Imaging_bufsize)
 
-    self.CalciumDataset = Data_recording.DynamicArray()
-    self.FluoDataset = Data_recording.DynamicArray()
-    self.StimDataset = Data_recording.DynamicArray()
-    self.VmDataset = Data_recording.DynamicArray()
 
+    self.Imagingx  = np.linspace(-self.Imaging_timewindow, 0.0, self._Imaging_bufsize)            # Create arrays of self._Imaging_bufsize length
+    self.yImagingCalcium = np.zeros(self._Imaging_bufsize, dtype=float)
+    self.yImagingFluo    = np.zeros(self._Imaging_bufsize, dtype=float)
+    self.yImagingStim     = np.zeros(self._Imaging_bufsize, dtype=float)
+    self.yImagingVm      = np.zeros(self._Imaging_bufsize, dtype=float)
+
+    self.DataSet = []
+    for _ in range(6):
+        self.DataSet.append([])
 
 def SetImagingPlot(self):
     self.ui.Imaging_Oscilloscope_widget.showGrid(x=True, y=True)
@@ -222,18 +240,17 @@ def SetImagingPlot(self):
     self.CurrentImagingPlots.setRange(yRange=[-100, 100])
     self.ui.Imaging_Oscilloscope_widget.getAxis("right").linkToView(self.CurrentImagingPlots)
 
-    self.Calciumcurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yCalcium, pen=pg.mkPen(Settings.DarkSolarized[10], width=self.Imaging_penwidth))
-    self.Calciumcurve.clear()
-    self.Fluocurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yFluo, pen=pg.mkPen(Settings.DarkSolarized[4], width=self.Imaging_penwidth))
-    self.Fluocurve.clear()
-    self.Stimcurve = pg.PlotCurveItem(self.Imagingx, self.yStim, pen=pg.mkPen(Settings.DarkSolarized[5], width=self.Imaging_penwidth))
-    self.Stimcurve.clear()
-    self.Vmcurve = pg.PlotCurveItem(self.Imagingx, self.yVm, pen=pg.mkPen(Settings.DarkSolarized[3], width=self.Imaging_penwidth))
-    self.Vmcurve.clear()
+    self.ImagingCalciumcurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yImagingCalcium, pen=pg.mkPen(Settings.DarkSolarized[10], width=self.Imaging_penwidth))
+    self.ImagingCalciumcurve.clear()
+    self.ImagingFluocurve = self.ui.Imaging_Oscilloscope_widget.plot(self.Imagingx, self.yImagingFluo, pen=pg.mkPen(Settings.DarkSolarized[4], width=self.Imaging_penwidth))
+    self.ImagingFluocurve.clear()
+    self.ImagingStimcurve = pg.PlotCurveItem(self.Imagingx, self.yImagingStim, pen=pg.mkPen(Settings.DarkSolarized[5], width=self.Imaging_penwidth))
+    self.ImagingStimcurve.clear()
+    self.ImagingVmcurve = pg.PlotCurveItem(self.Imagingx, self.yImagingVm, pen=pg.mkPen(Settings.DarkSolarized[3], width=self.Imaging_penwidth))
+    self.ImagingVmcurve.clear()
 
-    self.CurrentImagingPlots.addItem(self.Stimcurve)
-    self.CurrentImagingPlots.addItem(self.Vmcurve)
-
+    self.CurrentImagingPlots.addItem(self.ImagingStimcurve)
+    self.CurrentImagingPlots.addItem(self.ImagingVmcurve)
 
 def UpdateImagingViews(self):
     self.CurrentImagingPlots.setGeometry(self.ui.Imaging_Oscilloscope_widget.getViewBox().sceneBoundingRect())

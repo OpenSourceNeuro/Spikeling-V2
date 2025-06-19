@@ -2,8 +2,8 @@
 ########################################################################
 #                          Libraries import                            #
 
-from PySide6 import QtCore, QtGui, QtWidgets, QtSerialPort
-from PySide6.QtCore import QIODevice, QTimer
+from PySide6.QtCore import QTimer
+from PySide6.QtGui import QPen
 import pyqtgraph as pg
 import collections
 import serial
@@ -27,7 +27,7 @@ def SpikelingPlot(self):
 
     self.SerialFlag = True
 
-    self.timer = QtCore.QTimer()
+    self.timer = QTimer()
     self.timer.timeout.connect(lambda: UpdatePlot(self))
     self.timer.start()
 
@@ -127,47 +127,47 @@ def SpikelingPlot(self):
 
 def SavePlotData(self):                              # Save latest buffer data and export them as csv
     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False and self.recordflag == True:
-        self.Dataset = np.empty([9, len(self.DataSet[1])], dtype=float)
-        for i in range(len(self.DataSet[1])):
-            self.Dataset[0][i] = i * 0.1
-            self.Dataset[1][i] = self.DataSet[1][i]
-            self.Dataset[2][i] = self.DataSet[2][i]
-            self.Dataset[3][i] = self.DataSet[3][i]
-            self.Dataset[4][i] = self.DataSet[4][i]
-            self.Dataset[5][i] = self.DataSet[5][i]
-            self.Dataset[6][i] = self.DataSet[6][i]
-            self.Dataset[7][i] = self.DataSet[7][i]
-            self.Dataset[8][i] = self.DataSet[8][i]
+        Dataset = np.empty([9, len(self.SpikelingData[0])], dtype=float)
+        for i in range(len(self.SpikelingData[0])):
+            Dataset[0][i] = i * 0.1
+            Dataset[1][i] = self.SpikelingData[1][i]
+            Dataset[2][i] = self.SpikelingData[2][i]
+            Dataset[3][i] = self.SpikelingData[3][i]
+            Dataset[4][i] = self.SpikelingData[4][i]
+            Dataset[5][i] = self.SpikelingData[5][i]
+            Dataset[6][i] = self.SpikelingData[6][i]
+            Dataset[7][i] = self.SpikelingData[7][i]
+            Dataset[8][i] = self.SpikelingData[8][i]
 
-        dict = {'Time (ms)': self.Dataset[0], 'Spikeling Vm (mV)': self.Dataset[1], 'Stimulus (%)': self.Dataset[2], 'Total Current Input (a.u.)': self.Dataset[3],
-                'Synapse 1 Vm (mV)': self.Dataset[4], 'Synapse 1 Input (a.u.)': self.Dataset[5],
-                'Synapse 2 Vm (mV)': self.Dataset[6], 'Synapse 2 Input (a.u.)': self.Dataset[7],
-                'Trigger': self.Dataset[8]}
+        dict = {'Time (ms)': Dataset[0], 'Spikeling Vm (mV)': Dataset[1], 'Stimulus (%)': Dataset[2], 'Total Current Input (a.u.)': Dataset[3],
+                'Synapse 1 Vm (mV)': Dataset[4], 'Synapse 1 Input (a.u.)': Dataset[5],
+                'Synapse 2 Vm (mV)': Dataset[6], 'Synapse 2 Input (a.u.)': Dataset[7],
+                'Trigger': Dataset[8]}
         df = pd.DataFrame(dict)
         self.RecordingFileName = str(self.ui.Spikeling_SelectedFolderLabel.text())
         df.to_csv(self.RecordingFileName + '.csv', index=False)
         self.recordflag = False
-        self.DataSet[0].clear()
-        self.DataSet[1].clear()
-        self.DataSet[2].clear()
-        self.DataSet[3].clear()
-        self.DataSet[4].clear()
-        self.DataSet[5].clear()
-        self.DataSet[6].clear()
-        self.DataSet[7].clear()
-        self.DataSet[8].clear()
+        self.SpikelingData[0].clear()
+        self.SpikelingData[1].clear()
+        self.SpikelingData[2].clear()
+        self.SpikelingData[3].clear()
+        self.SpikelingData[4].clear()
+        self.SpikelingData[5].clear()
+        self.SpikelingData[6].clear()
+        self.SpikelingData[7].clear()
+        self.SpikelingData[8].clear()
 
     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == True:
         self.recordflag = True
 
-        self.DataSet[1].append(self.databuffer0[-1])
-        self.DataSet[2].append(self.databuffer1[-1])
-        self.DataSet[3].append(self.databuffer2[-1])
-        self.DataSet[4].append(self.databuffer3[-1])
-        self.DataSet[5].append(self.databuffer4[-1])
-        self.DataSet[6].append(self.databuffer5[-1])
-        self.DataSet[7].append(self.databuffer6[-1])
-        self.DataSet[8].append(self.databuffer7[-1])
+        self.SpikelingData[1].append(self.databuffer0[-1])
+        self.SpikelingData[2].append(self.databuffer1[-1])
+        self.SpikelingData[3].append(self.databuffer2[-1])
+        self.SpikelingData[4].append(self.databuffer3[-1])
+        self.SpikelingData[5].append(self.databuffer4[-1])
+        self.SpikelingData[6].append(self.databuffer5[-1])
+        self.SpikelingData[7].append(self.databuffer6[-1])
+        self.SpikelingData[8].append(self.databuffer7[-1])
 
 
 def SetInitParameters(self):
@@ -221,9 +221,9 @@ def SetPlotCurve(self):
     self.y6 = np.zeros(self._bufsize, dtype=float)
 
 
-    self.DataSet = []
+    self.SpikelingData = []
     for _ in range(9):
-        self.DataSet.append([])
+        self.SpikelingData.append([])
 
 
 def SetPlot(self):

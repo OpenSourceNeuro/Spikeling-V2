@@ -1,11 +1,10 @@
-from PySide6.QtWidgets import QFileDialog, QWidget
-import numpy as np
-import pandas as pd
+from PySide6.QtWidgets import QFileDialog
 import pyqtgraph as pg
-from pyqtgraph.Qt import QtGui, QtCore
-from pyqtgraph import MultiPlotWidget
 from pyqtgraph.metaarray import *
 import pyqtgraph.exporters
+
+import pandas as pd
+
 import Settings
 
 
