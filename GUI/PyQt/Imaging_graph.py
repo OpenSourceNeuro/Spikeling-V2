@@ -55,7 +55,7 @@ def ImagingPlot(self):
         self.Imagingtimer.start()
     else:
         self.Imagingtimer.stop()
-        self.CurrentImagingPlots.clear()
+        self.clear()
         self.CurrentImagingPlots.removeItem(self.ImagingStimcurve)
         self.ui.Imaging_Oscilloscope_widget.clear()
 

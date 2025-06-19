@@ -2,7 +2,7 @@
 ########################################################################
 #                          Libraries import                            #
 
-from PySide6.QtCore import (Qt)
+from PySide6.QtCore import Qt
 from py_toggle import PyToggle
 import Settings
 import Page201,Page202

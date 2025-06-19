@@ -1,9 +1,15 @@
+
+########################################################################
+#                          Libraries import                            #
+
+from PySide6.QtWidgets import QFileDialog
+
 import numpy as np
 import pandas as pd
 from scipy import signal
-import pyqtgraph
+
 import Settings
-from PySide6.QtWidgets import QFileDialog, QWidget
+
 
 
 def ShowPage(self):

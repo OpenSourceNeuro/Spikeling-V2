@@ -1,3 +1,7 @@
+
+########################################################################
+#                          Libraries import                            #
+
 from PySide6.QtWidgets import QFileDialog
 import pyqtgraph as pg
 from pyqtgraph.metaarray import *

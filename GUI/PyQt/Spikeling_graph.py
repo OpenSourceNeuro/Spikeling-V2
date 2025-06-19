@@ -5,10 +5,12 @@
 from PySide6.QtCore import QTimer
 from PySide6.QtGui import QPen
 import pyqtgraph as pg
+
 import collections
 import serial
 import numpy as np
 import pandas as pd
+
 import Settings
 
 
