@@ -1090,7 +1090,11 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
+<<<<<<< Updated upstream
                 <number>4</number>
+=======
+                <number>0</number>
+>>>>>>> Stashed changes
                </property>
                <widget class="QWidget" name="Spikeling_SubMenu_page">
                 <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1670,8 +1674,13 @@ centerMenuSubContainer_menu_stackedwidget{
                         <rect>
                          <x>0</x>
                          <y>0</y>
+<<<<<<< Updated upstream
                          <width>216</width>
                          <height>69</height>
+=======
+                         <width>100</width>
+                         <height>30</height>
+>>>>>>> Stashed changes
                         </rect>
                        </property>
                        <attribute name="label">
@@ -28396,10 +28405,13 @@ border : none;</string>
  </customwidgets>
  <resources>
   <include location="resources.qrc"/>
+<<<<<<< Updated upstream
   <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
   <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
   <include location="../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
   <include location="../../../../../../../Desktop/LED Zappelin V2 - Project/GUI/resources.qrc"/>
+=======
+>>>>>>> Stashed changes
  </resources>
  <connections/>
 </ui>
