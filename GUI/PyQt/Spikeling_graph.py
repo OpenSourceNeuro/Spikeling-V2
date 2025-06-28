@@ -21,17 +21,29 @@ timewindowdisplay = 125
 penwidth = 1
 
 def SpikelingPlot(self):
+    if self.ui.Spikeling_ConnectButton.isChecked():
+        SetSerial(self)
+        SetInitParameters(self)
+        SetPlotCurve(self)
+        SetPlot(self)
 
-    SetSerial(self)
-    SetInitParameters(self)
-    SetPlotCurve(self)
-    SetPlot(self)
+        self.SerialFlag = True
 
-    self.SerialFlag = True
+        self.timer = QTimer()
+        self.timer.timeout.connect(lambda: UpdatePlot(self))
+        self.timer.start()
 
-    self.timer = QTimer()
-    self.timer.timeout.connect(lambda: UpdatePlot(self))
-    self.timer.start()
+    else:
+        self.ui.Spikeling_ConnectButton.setText("Connect Spikeling Screen")
+        self.ui.Spikeling_ConnectButton.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                      "background-color: rgb" + str(tuple(Settings.DarkSolarized[2])) + ";\n"
+                                                      "border: 1px solid rgb" + str(tuple(Settings.DarkSolarized[14])) + ";\n"
+                                                      "border-radius: 10px;"
+                                                      )
+        self.timer.stop()
+        self.ui.Spikeling_Oscilloscope_widget.clear()
+        self.Spikeling_CurrentPlots.clear()
+        self.ui.SpikelingConnectedFlag = False
 
 
     def UpdatePlot(self):
@@ -129,8 +141,8 @@ def SpikelingPlot(self):
 
 def SavePlotData(self):                              # Save latest buffer data and export them as csv
     if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False and self.recordflag == True:
-        Dataset = np.empty([9, len(self.SpikelingData[0])], dtype=float)
-        for i in range(len(self.SpikelingData[0])):
+        Dataset = np.empty([9, len(self.SpikelingData[1])], dtype=float)
+        for i in range(len(self.SpikelingData[1])):
             Dataset[0][i] = i * 0.1
             Dataset[1][i] = self.SpikelingData[1][i]
             Dataset[2][i] = self.SpikelingData[2][i]
@@ -171,8 +183,8 @@ def SavePlotData(self):                              # Save latest buffer data a
         self.SpikelingData[7].append(self.databuffer6[-1])
         self.SpikelingData[8].append(self.databuffer7[-1])
 
-
 def SetInitParameters(self):
+    self.ui.SpikelingConnectedFlag = True
     self.i_downsampling = 0
     self.recordflag = False
     self.Trigger = 0

@@ -30,7 +30,7 @@ class Imaging202():
     def RecordFolderText(self):
         FolderName = self.ui.MultipleImaging_DataRecording_SelectRecordFolder_label.text()
         FileName = self.ui.MultipleImaging_DataRecording_RecordFolder_value.text()
-        self.ui.MultipleImaging_SelectedFolderLabel.setText(FolderName + '/' + FileName + '   ')
+        self.ui.MultipleImaging_SelectedFolderLabel.setText(FolderName + '/' + FileName)
 
 
     def RecordButton(self):

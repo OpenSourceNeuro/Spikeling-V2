@@ -202,8 +202,8 @@ class Spikeling103():
         self.ui.DataAnalysis_Oscilloscope_widget2_2_3.setBackground(Settings.DarkSolarized[1])
 
         self.spike_points0Plot = np.zeros(self.n_spikes0)
-        self.spike_points1Plot = np.zeros(self.n_spikes0)
-        self.spike_points2Plot = np.zeros(self.n_spikes0)
+        self.spike_points1Plot = np.zeros(self.n_spikes1)
+        self.spike_points2Plot = np.zeros(self.n_spikes2)
 
         for i in range (self.n_spikes0):
             self.spike_points0Plot[i] = self.spike_points0[i] /10

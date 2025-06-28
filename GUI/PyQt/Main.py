@@ -162,6 +162,12 @@ class MainWindow(QMainWindow):
 
         self.SerialFlag = False
         self.ui.NeuronRecordFolderFlag = False
+        self.ui.SpikelingConnectedFlag = False
+
+        self.EmulatorConnectionFlag = False
+        self.ui.EmulatorRecordFolderFlag = False
+        self.ui.StimCus_Flag = False
+        self.ui.EmulatorConnectedFlag = False
 
         self.ImagingConnectionFlag = False
         self.ui.ImagingRecordFolderFlag = False

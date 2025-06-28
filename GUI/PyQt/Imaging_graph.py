@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 import collections
 
+import Emulator_graph
 import Settings
 
 
@@ -17,7 +18,7 @@ import Settings
 def ImagingPlot(self):
     #Imaging parameters
     self.Imaging_sampleinterval = 0.1
-    self.Imaging_timewindow = 250
+    self.Imaging_timewindow = 1000
     self.Imaging_penwidth = 1
     self.ImagingFrameRate = self.ui.Imaging_FrameRate_Slider.value()
     self.ImagingDelta = 1 / self.ImagingFrameRate * 10000  # imaging resolution in ms
@@ -75,10 +76,14 @@ def ImagingPlot(self):
 
     # Read Serial and return data
     def GetImagingData(self):
-        self.rx = self.serial_port.readline()
-        self.rx_serial = str(self.rx, 'utf8').strip()
-        self.data = self.rx_serial.split(',')
-        return self.data
+        if self.ui.SpikelingConnectedFlag == True:
+            self.rx = self.serial_port.readline()
+            self.rx_serial = str(self.rx, 'utf8').strip()
+            self.data = self.rx_serial.split(',')
+            return self.data
+        if self.ui.EmulatorConnectedFlag == True:
+            self.data = self.ui.Emulator_data
+            return self.data
 
 
     # Append latest serial data point into buffer deque
@@ -120,8 +125,8 @@ def ImagingPlot(self):
     # If checked, plot latest buffer data points
     def PlotImagingCurve(self):
         if self.ui.Imaging_Calcium_Checkbox.isChecked():
-            self.yCalcium[:] = self.Calciumdatabuffer
-            self.Calciumcurve.setData(self.Imagingx, self.yImagingCalcium)
+            self.yImagingCalcium[:] = self.ImagingCalciumdatabuffer
+            self.ImagingCalciumcurve.setData(self.Imagingx, self.yImagingCalcium)
         else:
             self.ImagingCalciumcurve.clear()
 

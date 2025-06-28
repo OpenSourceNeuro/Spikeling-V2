@@ -40,6 +40,10 @@ class Ui_MainWindow(object):
 "	color: rgb(147,161,161);    \n"
 "}\n"
 "\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "#app_ID_frame QPushButton:hover{\n"
 "	background-color: rgb(0, 43, 54);\n"
 "}\n"
@@ -75,9 +79,9 @@ class Ui_MainWindow(object):
 "centerMenuSubContainer_menu_stackedwidget{\n"
 "}\n"
 "#centerMenuSubContainer_menu_stackedwidget QPushButton{\n"
-"	text-align: center;\n"
-"	padding: 10"
-                        "px 0px;\n"
+"	text-align: cent"
+                        "er;\n"
+"	padding: 10px 0px;\n"
 "	border-radius:20px;\n"
 "	background-color: rgb(7, 54, 66);\n"
 "}\n"
@@ -93,6 +97,10 @@ class Ui_MainWindow(object):
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "\n"
+"\n"
+"\n"
+"\n"
+"\n"
 "#Connection_frame QPushButton{\n"
 "	background-color: rgb(7, 54, 66);\n"
 "    border: 1px solid rgb(147,161,161);\n"
@@ -100,44 +108,15 @@ class Ui_MainWindow(object):
 "    padding: 0px 10px;\n"
 "}\n"
 "\n"
+"\n"
+"#Spikeling_CenterMenuContainer{\n"
+"	background-color: rgb(7, 54, 66)\n"
+"}\n"
+"\n"
+"\n"
 "#Spikeling_rightMenuSubContainer{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#Spikeling_parameter_stackedwidget{\n"
-"	background-color: rgb(0, 43, 54);\n"
-"}\n"
-"\n"
-"\n"
-"#StimulusParameter_page QComboBox{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"	background-color: rgb(0, 30, 38);\n"
-"	padding: 2px;\n"
-"}\n"
-"#Spikeling_CustomStimulus_Selection_frame QPushButton{\n"
-"	padding: 4px 0px;\n"
-"	border-radius:10px;\n"
-"	background-color: rgb(0, 30, 38);\n"
-"}\n"
-"\n"
-"\n"
-"#Spikeling_DataRecord"
-                        "ing_box{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"}\n"
-"#Spikeling_DataRecording_box QLineEdit{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"    background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#Spikeling_DataRecording_box QComboBox{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#Spikeling_bottom_subframe QPushButton{\n"
-"	padding: 5px 5px;\n"
-"	border-radius:10px;\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
-"\n"
 "#Spikeling_rightMenuSubContainer QPushButton{\n"
 "	text-align: left;\n"
 "	padding: 20px 0px;\n"
@@ -145,22 +124,162 @@ class Ui_MainWindow(object):
 "	border-bottom-right-radius: 20px;\n"
 "	background-color: rgb(0, 43, 54);\n"
 "}\n"
+"#Spikeling_rightMenuSubContainer_frame QPushButton{\n"
+"	background-col"
+                        "or: rgb(0, 43, 54);\n"
+"}\n"
 "#Spikeling_rightMenuSubContainer QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#Spikeling_rightMenuSubContainer_frame QPushButton{\n"
-"	background-color: rgb(0, 43, 54);\n"
-"}\n"
+"\n"
 "#Spikeling_rightMenuSubContainer_frame QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#Spikeling_CenterMenuContainer{\n"
-""
-                        "	background-color: rgb(7, 54, 66)\n"
+"\n"
+"\n"
+"#Spikeling_parameter_stackedwidget{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#StimulusParameter_page QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(0, 30, 38);\n"
+"	padding: 2px;\n"
 "}\n"
 "#Spikeling_parameter_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
+"\n"
+"\n"
+"#Spikeling_CustomStimulus_Selection_frame QPushButton{\n"
+"	padding: 4px 0px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
+"\n"
+"#Spikeling_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#Spikeling_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#Spikeling_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,"
+                        "161);\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"#Spikeling_bottom_subframe QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"#Emulator_top_subframe1 QPushButton{\n"
+"	background-color: rgb(7, 54, 66);\n"
+"    border: 1px solid rgb(147,161,161);\n"
+"	border-radius: 10px;\n"
+"    padding: 3px 10px;\n"
+"}\n"
+"#Emulator_top_subframe1 QPushButton:hover{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"\n"
+"#Emulator_CenterMenuContainer{\n"
+"	background-color: rgb(7, 54, 66)\n"
+"}\n"
+"#Emulator_CenterMenuContainer QPushButton:hover{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"\n"
+"#Emulator_rightMenuSubContainer{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"#Emulator_rightMenuSubContainer QPushButton{\n"
+"	text-align: left;\n"
+"	padding: 20px 0px;\n"
+"	border-top-right-radius:20px;\n"
+"	border-bottom-right-radius: 20px;\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#Emulator_rightMenuSubCo"
+                        "ntainer_frame QPushButton{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#Emulator_rightMenuSubContainer QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
+"#Emulator_rightMenuSubContainer_frame QPushButton:hover{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
+"\n"
+"#Emulator_parameter_stackedwidget{\n"
+"	background-color: rgb(0, 43, 54);\n"
+"}\n"
+"#EmulatorStimulusParameter_page QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(0, 30, 38);\n"
+"	padding: 2px;\n"
+"}\n"
+"#Emulator_parameter_exit_frame{\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
+"\n"
+"#Emulator_CustomStimulus_Selection_frame QPushButton{\n"
+"	padding: 4px 0px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(0, 30, 38);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"#Emulator_Synapse1Parameter_page QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"#Emulator_Synapse2Parameter_page QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-r"
+                        "adius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"#Emulator_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#Emulator_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#Emulator_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"#Emulator_bottom_subframe QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -179,7 +298,8 @@ class Ui_MainWindow(object):
 "	background-color: rgb(0, 43, 54);\n"
 "}\n"
 "#Imaging_rightMenuSubContainer QPushButton:hover{\n"
-"	background-color: rgb(0, 30, 38);\n"
+"	back"
+                        "ground-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Imaging_rightMenuSubContainer_frame QPushButton{\n"
 "	background-color: rgb(0, 43, 54);\n"
@@ -194,8 +314,7 @@ class Ui_MainWindow(object):
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#Imaging_pushButton_frame QPushButton{\n"
-""
-                        "	background-color: rgb(7, 54, 66);\n"
+"	background-color: rgb(7, 54, 66);\n"
 "    border: 1px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "    padding: 0px 10px;\n"
@@ -204,6 +323,28 @@ class Ui_MainWindow(object):
 "	background-color: rgb(7, 54, 66);\n"
 "	padding: 2px 2px;\n"
 "}\n"
+"\n"
+"\n"
+"#Imaging_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#Imaging_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#Imaging_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb("
+                        "7, 54, 66);\n"
+"}\n"
+"#Imaging_DataRecording_box QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -230,11 +371,11 @@ class Ui_MainWindow(object):
 "#MultipleImaging_rightMenuSubContainer_frame QPushButton:hover{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#MultipleImaging_Cente"
-                        "rMenuContainer{\n"
+"#MultipleImaging_CenterMenuContainer{\n"
 "	background-color: rgb(7, 54, 66)\n"
 "}\n"
-"#MultipleImaging_parameter_exit_frame{\n"
+"#MultipleImaging"
+                        "_parameter_exit_frame{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
 "#MultipleImaging_pushButton_frame QPushButton{\n"
@@ -248,12 +389,32 @@ class Ui_MainWindow(object):
 "	padding: 2px 2px;\n"
 "}\n"
 "\n"
+"#MultipleImaging_DataRecording_box{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QLineEdit{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"    background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QComboBox{\n"
+"	border: 2px solid rgb(147,161,161);\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"#MultipleImaging_DataRecording_box QPushButton{\n"
+"	padding: 5px 5px;\n"
+"	border-radius:10px;\n"
+"	background-color: rgb(7, 54, 66);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
 "\n"
 "\n"
 "\n"
 "#NeuronGenerator_subframe1_middle_frame QLineEdit{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2px solid rgb(147,161,161);\n"
+"	bor"
+                        "der: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#NeuronGenerator_subframe2 QLineEdit{\n"
 "	background-color: rgb(7, 54, 66);\n"
@@ -267,8 +428,7 @@ class Ui_MainWindow(object):
 "}\n"
 "#NeuronGenerator_subframe2 QComboBox{\n"
 "	background-color: rgb(7, 54, 66);\n"
-"	border: 2p"
-                        "x solid rgb(147,161,161);\n"
+"	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 5px 5px;\n"
 "	margin: 5px\n"
@@ -293,7 +453,8 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
 "}\n"
-"#DataAnalysis_stackedWidget QLineEdit{\n"
+"#DataAnalysi"
+                        "s_stackedWidget QLineEdit{\n"
 "    border: 2px solid rgb(147,161,161);\n"
 "}\n"
 "#DataAnalysis_stackedWidget Line{\n"
@@ -310,8 +471,7 @@ class Ui_MainWindow(object):
 "#DataAnalysis_RightMenu_Container{\n"
 "	background-color: rgb(0, 30, 38);\n"
 "}\n"
-"#Data"
-                        "Analysis_RightMenu_Container QPushButton{\n"
+"#DataAnalysis_RightMenu_Container QPushButton{\n"
 "	text-align: left;\n"
 "	padding: 20px 0px;\n"
 "	border-top-right-radius:20px;\n"
@@ -331,47 +491,14 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "\n"
-"#Imaging_DataRecording_box{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"}\n"
-"#Imaging_DataRecording_box QLineEdit{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"    background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#Imaging_DataRecording_box QComboBox{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#Imaging_DataRecording_box QPushButton{\n"
-"	padding: 5px 5px;\n"
-"	border-radius:10px;\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
 "\n"
 "\n"
-"\n"
-"#MultipleIm"
-                        "aging_DataRecording_box{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"}\n"
-"#MultipleImaging_DataRecording_box QLineEdit{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"    background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#MultipleImaging_DataRecording_box QComboBox{\n"
-"	border: 2px solid rgb(147,161,161);\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
-"#MultipleImaging_DataRecording_box QPushButton{\n"
-"	padding: 5px 5px;\n"
-"	border-radius:10px;\n"
-"	background-color: rgb(7, 54, 66);\n"
-"}\n"
 "\n"
 "\n"
 "\n"
 "#page_401 QPushButton{\n"
-"	background-color: rgb(7,54,66);\n"
+"	backgr"
+                        "ound-color: rgb(7,54,66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
 "	padding: 2px;\n"
@@ -391,8 +518,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "\n"
-"#Exercise101"
-                        "_Button_frame QPushButton{\n"
+"#Exercise101_Button_frame QPushButton{\n"
 "	background-color: rgb(7,54,66);\n"
 "	border: 2px solid rgb(147,161,161);\n"
 "	border-radius: 10px;\n"
@@ -742,13 +868,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_19.addItem(self.verticalSpacer_8)
 
-        self.NeuronSimulation_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
-        self.NeuronSimulation_pushButton.setObjectName(u"NeuronSimulation_pushButton")
-        self.NeuronSimulation_pushButton.setFont(font1)
-        self.NeuronSimulation_pushButton.setIcon(icon5)
-        self.NeuronSimulation_pushButton.setIconSize(QSize(30, 30))
+        self.NeuronEmulator_pushButton = QPushButton(self.Spikeling_SubMenu_button_frame)
+        self.NeuronEmulator_pushButton.setObjectName(u"NeuronEmulator_pushButton")
+        self.NeuronEmulator_pushButton.setFont(font1)
+        self.NeuronEmulator_pushButton.setIcon(icon5)
+        self.NeuronEmulator_pushButton.setIconSize(QSize(30, 30))
 
-        self.verticalLayout_19.addWidget(self.NeuronSimulation_pushButton)
+        self.verticalLayout_19.addWidget(self.NeuronEmulator_pushButton)
 
         self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
@@ -3498,23 +3624,4135 @@ class Ui_MainWindow(object):
         self.horizontalLayout_66.setSpacing(0)
         self.horizontalLayout_66.setObjectName(u"horizontalLayout_66")
         self.horizontalLayout_66.setContentsMargins(0, 0, 0, 0)
-        self.frame_42 = QFrame(self.page_102)
-        self.frame_42.setObjectName(u"frame_42")
-        self.frame_42.setFrameShape(QFrame.StyledPanel)
-        self.frame_42.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_67 = QHBoxLayout(self.frame_42)
+        self.Emulator_widget = QWidget(self.page_102)
+        self.Emulator_widget.setObjectName(u"Emulator_widget")
+        sizePolicy3.setHeightForWidth(self.Emulator_widget.sizePolicy().hasHeightForWidth())
+        self.Emulator_widget.setSizePolicy(sizePolicy3)
+        self.horizontalLayout_67 = QHBoxLayout(self.Emulator_widget)
         self.horizontalLayout_67.setSpacing(0)
         self.horizontalLayout_67.setObjectName(u"horizontalLayout_67")
         self.horizontalLayout_67.setContentsMargins(0, 0, 0, 0)
-        self.label_2 = QLabel(self.frame_42)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setPixmap(QPixmap(u":/resources/resources/under_construction.svg"))
-        self.label_2.setScaledContents(True)
+        self.Emulator_frame = QFrame(self.Emulator_widget)
+        self.Emulator_frame.setObjectName(u"Emulator_frame")
+        self.Emulator_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_190 = QVBoxLayout(self.Emulator_frame)
+        self.verticalLayout_190.setSpacing(0)
+        self.verticalLayout_190.setObjectName(u"verticalLayout_190")
+        self.verticalLayout_190.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_top_subframe1 = QFrame(self.Emulator_frame)
+        self.Emulator_top_subframe1.setObjectName(u"Emulator_top_subframe1")
+        sizePolicy5.setHeightForWidth(self.Emulator_top_subframe1.sizePolicy().hasHeightForWidth())
+        self.Emulator_top_subframe1.setSizePolicy(sizePolicy5)
+        self.Emulator_top_subframe1.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_top_subframe1.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_484 = QHBoxLayout(self.Emulator_top_subframe1)
+        self.horizontalLayout_484.setSpacing(20)
+        self.horizontalLayout_484.setObjectName(u"horizontalLayout_484")
+        self.horizontalLayout_484.setContentsMargins(10, 5, 10, 5)
+        self.Emulator_Connect_pushButton_frame = QFrame(self.Emulator_top_subframe1)
+        self.Emulator_Connect_pushButton_frame.setObjectName(u"Emulator_Connect_pushButton_frame")
+        self.Emulator_Connect_pushButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Connect_pushButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_483 = QHBoxLayout(self.Emulator_Connect_pushButton_frame)
+        self.horizontalLayout_483.setSpacing(10)
+        self.horizontalLayout_483.setObjectName(u"horizontalLayout_483")
+        self.horizontalLayout_483.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Connect_pushButton = QPushButton(self.Emulator_Connect_pushButton_frame)
+        self.Emulator_Connect_pushButton.setObjectName(u"Emulator_Connect_pushButton")
+        self.Emulator_Connect_pushButton.setFont(font1)
+        self.Emulator_Connect_pushButton.setCheckable(True)
 
-        self.horizontalLayout_67.addWidget(self.label_2)
+        self.horizontalLayout_483.addWidget(self.Emulator_Connect_pushButton)
+
+        self.Emulator_SpeedUp_pushButton = QPushButton(self.Emulator_Connect_pushButton_frame)
+        self.Emulator_SpeedUp_pushButton.setObjectName(u"Emulator_SpeedUp_pushButton")
+        self.Emulator_SpeedUp_pushButton.setCheckable(True)
+
+        self.horizontalLayout_483.addWidget(self.Emulator_SpeedUp_pushButton)
 
 
-        self.horizontalLayout_66.addWidget(self.frame_42)
+        self.horizontalLayout_484.addWidget(self.Emulator_Connect_pushButton_frame)
+
+        self.Emulator_top_subframe2 = QFrame(self.Emulator_top_subframe1)
+        self.Emulator_top_subframe2.setObjectName(u"Emulator_top_subframe2")
+        self.Emulator_top_subframe2.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_top_subframe2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_487 = QHBoxLayout(self.Emulator_top_subframe2)
+        self.horizontalLayout_487.setSpacing(10)
+        self.horizontalLayout_487.setObjectName(u"horizontalLayout_487")
+        self.horizontalLayout_487.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_NeuronModeLabel = QLabel(self.Emulator_top_subframe2)
+        self.Emulator_NeuronModeLabel.setObjectName(u"Emulator_NeuronModeLabel")
+        font6 = QFont()
+        font6.setPointSize(14)
+        font6.setBold(True)
+        self.Emulator_NeuronModeLabel.setFont(font6)
+        self.Emulator_NeuronModeLabel.setStyleSheet(u"")
+
+        self.horizontalLayout_487.addWidget(self.Emulator_NeuronModeLabel)
+
+        self.Emulator_NeuronModeComboBox = QComboBox(self.Emulator_top_subframe2)
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.addItem("")
+        self.Emulator_NeuronModeComboBox.setObjectName(u"Emulator_NeuronModeComboBox")
+        self.Emulator_NeuronModeComboBox.setStyleSheet(u"font: 12pt \"Segoe UI\";")
+
+        self.horizontalLayout_487.addWidget(self.Emulator_NeuronModeComboBox)
+
+        self.Emulator_NeuronBrowse_pushButton = QPushButton(self.Emulator_top_subframe2)
+        self.Emulator_NeuronBrowse_pushButton.setObjectName(u"Emulator_NeuronBrowse_pushButton")
+        self.Emulator_NeuronBrowse_pushButton.setStyleSheet(u"")
+
+        self.horizontalLayout_487.addWidget(self.Emulator_NeuronBrowse_pushButton)
+
+        self.Emulator_NeuronApplyMode_pushButton = QPushButton(self.Emulator_top_subframe2)
+        self.Emulator_NeuronApplyMode_pushButton.setObjectName(u"Emulator_NeuronApplyMode_pushButton")
+        self.Emulator_NeuronApplyMode_pushButton.setStyleSheet(u"")
+
+        self.horizontalLayout_487.addWidget(self.Emulator_NeuronApplyMode_pushButton)
+
+
+        self.horizontalLayout_484.addWidget(self.Emulator_top_subframe2)
+
+
+        self.verticalLayout_190.addWidget(self.Emulator_top_subframe1)
+
+        self.Emulator_Oscilloscope_frame = QFrame(self.Emulator_frame)
+        self.Emulator_Oscilloscope_frame.setObjectName(u"Emulator_Oscilloscope_frame")
+        self.Emulator_Oscilloscope_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Oscilloscope_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_488 = QHBoxLayout(self.Emulator_Oscilloscope_frame)
+        self.horizontalLayout_488.setSpacing(0)
+        self.horizontalLayout_488.setObjectName(u"horizontalLayout_488")
+        self.horizontalLayout_488.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Oscilloscope_widget = PlotWidget(self.Emulator_Oscilloscope_frame)
+        self.Emulator_Oscilloscope_widget.setObjectName(u"Emulator_Oscilloscope_widget")
+        sizePolicy4.setHeightForWidth(self.Emulator_Oscilloscope_widget.sizePolicy().hasHeightForWidth())
+        self.Emulator_Oscilloscope_widget.setSizePolicy(sizePolicy4)
+        self.Emulator_Oscilloscope_widget.setAutoFillBackground(False)
+        self.Emulator_Oscilloscope_widget.setStyleSheet(u"")
+        self.horizontalLayout_489 = QHBoxLayout(self.Emulator_Oscilloscope_widget)
+        self.horizontalLayout_489.setSpacing(0)
+        self.horizontalLayout_489.setObjectName(u"horizontalLayout_489")
+        self.horizontalLayout_489.setContentsMargins(5, 5, 5, 0)
+        self.Emulator_Oscilloscope_Traces_frame = QFrame(self.Emulator_Oscilloscope_widget)
+        self.Emulator_Oscilloscope_Traces_frame.setObjectName(u"Emulator_Oscilloscope_Traces_frame")
+        self.Emulator_Oscilloscope_Traces_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Oscilloscope_Traces_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_490 = QHBoxLayout(self.Emulator_Oscilloscope_Traces_frame)
+        self.horizontalLayout_490.setSpacing(50)
+        self.horizontalLayout_490.setObjectName(u"horizontalLayout_490")
+        self.horizontalLayout_490.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Oscilloscope_FirstTraces_frame = QFrame(self.Emulator_Oscilloscope_Traces_frame)
+        self.Emulator_Oscilloscope_FirstTraces_frame.setObjectName(u"Emulator_Oscilloscope_FirstTraces_frame")
+        self.Emulator_Oscilloscope_FirstTraces_frame.setMaximumSize(QSize(250, 16777215))
+        self.Emulator_Oscilloscope_FirstTraces_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Oscilloscope_FirstTraces_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_491 = QHBoxLayout(self.Emulator_Oscilloscope_FirstTraces_frame)
+        self.horizontalLayout_491.setSpacing(5)
+        self.horizontalLayout_491.setObjectName(u"horizontalLayout_491")
+        self.horizontalLayout_491.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_VmCheckbox = QCheckBox(self.Emulator_Oscilloscope_FirstTraces_frame)
+        self.Emulator_VmCheckbox.setObjectName(u"Emulator_VmCheckbox")
+        self.Emulator_VmCheckbox.setEnabled(True)
+        self.Emulator_VmCheckbox.setAutoFillBackground(False)
+        self.Emulator_VmCheckbox.setStyleSheet(u"color: rgb(220, 50, 47);")
+        self.Emulator_VmCheckbox.setChecked(True)
+
+        self.horizontalLayout_491.addWidget(self.Emulator_VmCheckbox, 0, Qt.AlignTop)
+
+        self.Emulator_InputCurrentCheckbox = QCheckBox(self.Emulator_Oscilloscope_FirstTraces_frame)
+        self.Emulator_InputCurrentCheckbox.setObjectName(u"Emulator_InputCurrentCheckbox")
+        self.Emulator_InputCurrentCheckbox.setEnabled(True)
+        self.Emulator_InputCurrentCheckbox.setAutoFillBackground(False)
+        self.Emulator_InputCurrentCheckbox.setStyleSheet(u"color: rgb(133, 153, 0);")
+        self.Emulator_InputCurrentCheckbox.setChecked(True)
+
+        self.horizontalLayout_491.addWidget(self.Emulator_InputCurrentCheckbox, 0, Qt.AlignTop)
+
+        self.Emulator_StimulusCheckbox = QCheckBox(self.Emulator_Oscilloscope_FirstTraces_frame)
+        self.Emulator_StimulusCheckbox.setObjectName(u"Emulator_StimulusCheckbox")
+        self.Emulator_StimulusCheckbox.setEnabled(True)
+        self.Emulator_StimulusCheckbox.setAutoFillBackground(False)
+        self.Emulator_StimulusCheckbox.setStyleSheet(u"color: rgb(38, 139, 210);")
+        self.Emulator_StimulusCheckbox.setChecked(True)
+
+        self.horizontalLayout_491.addWidget(self.Emulator_StimulusCheckbox, 0, Qt.AlignTop)
+
+
+        self.horizontalLayout_490.addWidget(self.Emulator_Oscilloscope_FirstTraces_frame)
+
+        self.Emulator_Oscilloscope_SecondTraces_frame = QFrame(self.Emulator_Oscilloscope_Traces_frame)
+        self.Emulator_Oscilloscope_SecondTraces_frame.setObjectName(u"Emulator_Oscilloscope_SecondTraces_frame")
+        self.Emulator_Oscilloscope_SecondTraces_frame.setMaximumSize(QSize(250, 16777215))
+        self.Emulator_Oscilloscope_SecondTraces_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Oscilloscope_SecondTraces_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_492 = QHBoxLayout(self.Emulator_Oscilloscope_SecondTraces_frame)
+        self.horizontalLayout_492.setSpacing(0)
+        self.horizontalLayout_492.setObjectName(u"horizontalLayout_492")
+        self.horizontalLayout_492.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1VmCheckbox = QCheckBox(self.Emulator_Oscilloscope_SecondTraces_frame)
+        self.Emulator_Syn1VmCheckbox.setObjectName(u"Emulator_Syn1VmCheckbox")
+        self.Emulator_Syn1VmCheckbox.setEnabled(True)
+        self.Emulator_Syn1VmCheckbox.setAutoFillBackground(False)
+        self.Emulator_Syn1VmCheckbox.setStyleSheet(u"color: rgb(203, 75, 22);")
+        self.Emulator_Syn1VmCheckbox.setChecked(False)
+
+        self.horizontalLayout_492.addWidget(self.Emulator_Syn1VmCheckbox, 0, Qt.AlignTop)
+
+        self.Emulator_Syn1InputCheckbox = QCheckBox(self.Emulator_Oscilloscope_SecondTraces_frame)
+        self.Emulator_Syn1InputCheckbox.setObjectName(u"Emulator_Syn1InputCheckbox")
+        self.Emulator_Syn1InputCheckbox.setEnabled(True)
+        self.Emulator_Syn1InputCheckbox.setAutoFillBackground(False)
+        self.Emulator_Syn1InputCheckbox.setStyleSheet(u"color: rgb(42, 161, 152);")
+        self.Emulator_Syn1InputCheckbox.setChecked(False)
+
+        self.horizontalLayout_492.addWidget(self.Emulator_Syn1InputCheckbox, 0, Qt.AlignTop)
+
+
+        self.horizontalLayout_490.addWidget(self.Emulator_Oscilloscope_SecondTraces_frame)
+
+        self.Emulator_Oscilloscope_ThirdTraces_frame = QFrame(self.Emulator_Oscilloscope_Traces_frame)
+        self.Emulator_Oscilloscope_ThirdTraces_frame.setObjectName(u"Emulator_Oscilloscope_ThirdTraces_frame")
+        self.Emulator_Oscilloscope_ThirdTraces_frame.setMaximumSize(QSize(250, 16777215))
+        self.Emulator_Oscilloscope_ThirdTraces_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Oscilloscope_ThirdTraces_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_493 = QHBoxLayout(self.Emulator_Oscilloscope_ThirdTraces_frame)
+        self.horizontalLayout_493.setSpacing(0)
+        self.horizontalLayout_493.setObjectName(u"horizontalLayout_493")
+        self.horizontalLayout_493.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2VmCheckbox = QCheckBox(self.Emulator_Oscilloscope_ThirdTraces_frame)
+        self.Emulator_Syn2VmCheckbox.setObjectName(u"Emulator_Syn2VmCheckbox")
+        self.Emulator_Syn2VmCheckbox.setEnabled(True)
+        self.Emulator_Syn2VmCheckbox.setAutoFillBackground(False)
+        self.Emulator_Syn2VmCheckbox.setStyleSheet(u"color: rgb(181, 137, 0);")
+        self.Emulator_Syn2VmCheckbox.setChecked(False)
+
+        self.horizontalLayout_493.addWidget(self.Emulator_Syn2VmCheckbox, 0, Qt.AlignTop)
+
+        self.Emulator_Syn2InputCheckbox = QCheckBox(self.Emulator_Oscilloscope_ThirdTraces_frame)
+        self.Emulator_Syn2InputCheckbox.setObjectName(u"Emulator_Syn2InputCheckbox")
+        self.Emulator_Syn2InputCheckbox.setEnabled(True)
+        self.Emulator_Syn2InputCheckbox.setAutoFillBackground(False)
+        self.Emulator_Syn2InputCheckbox.setStyleSheet(u"color: rgb(211, 54, 130);")
+        self.Emulator_Syn2InputCheckbox.setChecked(False)
+
+        self.horizontalLayout_493.addWidget(self.Emulator_Syn2InputCheckbox, 0, Qt.AlignTop)
+
+
+        self.horizontalLayout_490.addWidget(self.Emulator_Oscilloscope_ThirdTraces_frame)
+
+
+        self.horizontalLayout_489.addWidget(self.Emulator_Oscilloscope_Traces_frame)
+
+
+        self.horizontalLayout_488.addWidget(self.Emulator_Oscilloscope_widget)
+
+
+        self.verticalLayout_190.addWidget(self.Emulator_Oscilloscope_frame)
+
+        self.Emulator_bottom_subframe = QFrame(self.Emulator_frame)
+        self.Emulator_bottom_subframe.setObjectName(u"Emulator_bottom_subframe")
+        self.Emulator_bottom_subframe.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_bottom_subframe.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_494 = QHBoxLayout(self.Emulator_bottom_subframe)
+        self.horizontalLayout_494.setSpacing(0)
+        self.horizontalLayout_494.setObjectName(u"horizontalLayout_494")
+        self.horizontalLayout_494.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_DataRecording_box = QGroupBox(self.Emulator_bottom_subframe)
+        self.Emulator_DataRecording_box.setObjectName(u"Emulator_DataRecording_box")
+        sizePolicy5.setHeightForWidth(self.Emulator_DataRecording_box.sizePolicy().hasHeightForWidth())
+        self.Emulator_DataRecording_box.setSizePolicy(sizePolicy5)
+        self.Emulator_DataRecording_box.setMinimumSize(QSize(0, 100))
+        self.Emulator_DataRecording_box.setMaximumSize(QSize(16777215, 100))
+        self.Emulator_DataRecording_box.setStyleSheet(u"")
+        self.horizontalLayout_495 = QHBoxLayout(self.Emulator_DataRecording_box)
+        self.horizontalLayout_495.setSpacing(0)
+        self.horizontalLayout_495.setObjectName(u"horizontalLayout_495")
+        self.horizontalLayout_495.setContentsMargins(5, 5, 5, 5)
+        self.Emulator_DataRecording_left_frame = QFrame(self.Emulator_DataRecording_box)
+        self.Emulator_DataRecording_left_frame.setObjectName(u"Emulator_DataRecording_left_frame")
+        self.Emulator_DataRecording_left_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_DataRecording_left_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_192 = QVBoxLayout(self.Emulator_DataRecording_left_frame)
+        self.verticalLayout_192.setSpacing(0)
+        self.verticalLayout_192.setObjectName(u"verticalLayout_192")
+        self.verticalLayout_192.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_DataRecording_recordingMode_frame = QFrame(self.Emulator_DataRecording_left_frame)
+        self.Emulator_DataRecording_recordingMode_frame.setObjectName(u"Emulator_DataRecording_recordingMode_frame")
+        self.Emulator_DataRecording_recordingMode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_DataRecording_recordingMode_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_496 = QHBoxLayout(self.Emulator_DataRecording_recordingMode_frame)
+        self.horizontalLayout_496.setSpacing(0)
+        self.horizontalLayout_496.setObjectName(u"horizontalLayout_496")
+        self.horizontalLayout_496.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_192.addWidget(self.Emulator_DataRecording_recordingMode_frame)
+
+
+        self.horizontalLayout_495.addWidget(self.Emulator_DataRecording_left_frame)
+
+        self.Emulator_DataRecording_right_frame = QFrame(self.Emulator_DataRecording_box)
+        self.Emulator_DataRecording_right_frame.setObjectName(u"Emulator_DataRecording_right_frame")
+        self.Emulator_DataRecording_right_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_DataRecording_right_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_193 = QVBoxLayout(self.Emulator_DataRecording_right_frame)
+        self.verticalLayout_193.setSpacing(0)
+        self.verticalLayout_193.setObjectName(u"verticalLayout_193")
+        self.verticalLayout_193.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_DataRecording_directory_frame = QFrame(self.Emulator_DataRecording_right_frame)
+        self.Emulator_DataRecording_directory_frame.setObjectName(u"Emulator_DataRecording_directory_frame")
+        self.Emulator_DataRecording_directory_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_DataRecording_directory_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_497 = QHBoxLayout(self.Emulator_DataRecording_directory_frame)
+        self.horizontalLayout_497.setSpacing(10)
+        self.horizontalLayout_497.setObjectName(u"horizontalLayout_497")
+        self.horizontalLayout_497.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_DataRecording_SelectRecordFolder_label = QLabel(self.Emulator_DataRecording_directory_frame)
+        self.Emulator_DataRecording_SelectRecordFolder_label.setObjectName(u"Emulator_DataRecording_SelectRecordFolder_label")
+
+        self.horizontalLayout_497.addWidget(self.Emulator_DataRecording_SelectRecordFolder_label)
+
+        self.Emulator_DataRecording_RecordFolder_value = QLineEdit(self.Emulator_DataRecording_directory_frame)
+        self.Emulator_DataRecording_RecordFolder_value.setObjectName(u"Emulator_DataRecording_RecordFolder_value")
+        self.Emulator_DataRecording_RecordFolder_value.setEnabled(False)
+
+        self.horizontalLayout_497.addWidget(self.Emulator_DataRecording_RecordFolder_value)
+
+        self.Emulator_DataRecording_RecordFolderDir_pushButton = QPushButton(self.Emulator_DataRecording_directory_frame)
+        self.Emulator_DataRecording_RecordFolderDir_pushButton.setObjectName(u"Emulator_DataRecording_RecordFolderDir_pushButton")
+        self.Emulator_DataRecording_RecordFolderDir_pushButton.setMinimumSize(QSize(150, 0))
+        self.Emulator_DataRecording_RecordFolderDir_pushButton.setFont(font4)
+
+        self.horizontalLayout_497.addWidget(self.Emulator_DataRecording_RecordFolderDir_pushButton)
+
+
+        self.verticalLayout_193.addWidget(self.Emulator_DataRecording_directory_frame)
+
+        self.Emulator_DataRecording_record_frame = QFrame(self.Emulator_DataRecording_right_frame)
+        self.Emulator_DataRecording_record_frame.setObjectName(u"Emulator_DataRecording_record_frame")
+        self.Emulator_DataRecording_record_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_DataRecording_record_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_498 = QHBoxLayout(self.Emulator_DataRecording_record_frame)
+        self.horizontalLayout_498.setSpacing(0)
+        self.horizontalLayout_498.setObjectName(u"horizontalLayout_498")
+        self.horizontalLayout_498.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_SelectedFolderLabel = QLabel(self.Emulator_DataRecording_record_frame)
+        self.Emulator_SelectedFolderLabel.setObjectName(u"Emulator_SelectedFolderLabel")
+        sizePolicy3.setHeightForWidth(self.Emulator_SelectedFolderLabel.sizePolicy().hasHeightForWidth())
+        self.Emulator_SelectedFolderLabel.setSizePolicy(sizePolicy3)
+        self.Emulator_SelectedFolderLabel.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_498.addWidget(self.Emulator_SelectedFolderLabel)
+
+        self.Emulator_DataRecording_Record_pushButton = QPushButton(self.Emulator_DataRecording_record_frame)
+        self.Emulator_DataRecording_Record_pushButton.setObjectName(u"Emulator_DataRecording_Record_pushButton")
+        sizePolicy6.setHeightForWidth(self.Emulator_DataRecording_Record_pushButton.sizePolicy().hasHeightForWidth())
+        self.Emulator_DataRecording_Record_pushButton.setSizePolicy(sizePolicy6)
+        self.Emulator_DataRecording_Record_pushButton.setMinimumSize(QSize(150, 0))
+        self.Emulator_DataRecording_Record_pushButton.setFont(font5)
+        self.Emulator_DataRecording_Record_pushButton.setStyleSheet(u"color: rgb(250, 250, 250);\n"
+"background-color: rgb(220, 50, 47);")
+
+        self.horizontalLayout_498.addWidget(self.Emulator_DataRecording_Record_pushButton)
+
+
+        self.verticalLayout_193.addWidget(self.Emulator_DataRecording_record_frame)
+
+
+        self.horizontalLayout_495.addWidget(self.Emulator_DataRecording_right_frame)
+
+
+        self.horizontalLayout_494.addWidget(self.Emulator_DataRecording_box)
+
+
+        self.verticalLayout_190.addWidget(self.Emulator_bottom_subframe)
+
+
+        self.horizontalLayout_67.addWidget(self.Emulator_frame)
+
+
+        self.horizontalLayout_66.addWidget(self.Emulator_widget)
+
+        self.Emulator_CenterMenuContainer = QWidget(self.page_102)
+        self.Emulator_CenterMenuContainer.setObjectName(u"Emulator_CenterMenuContainer")
+        self.Emulator_CenterMenuContainer.setMinimumSize(QSize(0, 0))
+        self.Emulator_CenterMenuContainer.setMaximumSize(QSize(200, 16777215))
+        self.verticalLayout_101 = QVBoxLayout(self.Emulator_CenterMenuContainer)
+        self.verticalLayout_101.setSpacing(0)
+        self.verticalLayout_101.setObjectName(u"verticalLayout_101")
+        self.verticalLayout_101.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_parameter_exit_frame = QFrame(self.Emulator_CenterMenuContainer)
+        self.Emulator_parameter_exit_frame.setObjectName(u"Emulator_parameter_exit_frame")
+        self.Emulator_parameter_exit_frame.setMinimumSize(QSize(200, 0))
+        self.Emulator_parameter_exit_frame.setMaximumSize(QSize(200, 16777215))
+        self.Emulator_parameter_exit_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_parameter_exit_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_428 = QHBoxLayout(self.Emulator_parameter_exit_frame)
+        self.horizontalLayout_428.setSpacing(0)
+        self.horizontalLayout_428.setObjectName(u"horizontalLayout_428")
+        self.horizontalLayout_428.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_parameter_exit_pushButton = QPushButton(self.Emulator_parameter_exit_frame)
+        self.Emulator_parameter_exit_pushButton.setObjectName(u"Emulator_parameter_exit_pushButton")
+        self.Emulator_parameter_exit_pushButton.setIcon(icon18)
+        self.Emulator_parameter_exit_pushButton.setIconSize(QSize(20, 20))
+
+        self.horizontalLayout_428.addWidget(self.Emulator_parameter_exit_pushButton)
+
+
+        self.verticalLayout_101.addWidget(self.Emulator_parameter_exit_frame)
+
+        self.Emulator_parameter_stackedwidget = QStackedWidget(self.Emulator_CenterMenuContainer)
+        self.Emulator_parameter_stackedwidget.setObjectName(u"Emulator_parameter_stackedwidget")
+        self.Emulator_parameter_stackedwidget.setMinimumSize(QSize(200, 0))
+        self.Emulator_parameter_stackedwidget.setMaximumSize(QSize(200, 16777215))
+        self.Emulator_StimulusParameter_page = QWidget()
+        self.Emulator_StimulusParameter_page.setObjectName(u"Emulator_StimulusParameter_page")
+        self.Emulator_StimulusParameter_page.setMinimumSize(QSize(200, 0))
+        self.Emulator_StimulusParameter_page.setMaximumSize(QSize(175, 16777215))
+        self.verticalLayout_102 = QVBoxLayout(self.Emulator_StimulusParameter_page)
+        self.verticalLayout_102.setSpacing(0)
+        self.verticalLayout_102.setObjectName(u"verticalLayout_102")
+        self.verticalLayout_102.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Stimulus_label_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_Stimulus_label_frame.setObjectName(u"Emulator_Stimulus_label_frame")
+        self.Emulator_Stimulus_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Stimulus_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_429 = QHBoxLayout(self.Emulator_Stimulus_label_frame)
+        self.horizontalLayout_429.setSpacing(0)
+        self.horizontalLayout_429.setObjectName(u"horizontalLayout_429")
+        self.horizontalLayout_429.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimulusLabel_ = QLabel(self.Emulator_Stimulus_label_frame)
+        self.Emulator_StimulusLabel_.setObjectName(u"Emulator_StimulusLabel_")
+        self.Emulator_StimulusLabel_.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_429.addWidget(self.Emulator_StimulusLabel_, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_Stimulus_label_frame)
+
+        self.Emulator_SimChoice_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_SimChoice_frame.setObjectName(u"Emulator_SimChoice_frame")
+        self.Emulator_SimChoice_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_SimChoice_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_485 = QHBoxLayout(self.Emulator_SimChoice_frame)
+        self.horizontalLayout_485.setSpacing(0)
+        self.horizontalLayout_485.setObjectName(u"horizontalLayout_485")
+        self.horizontalLayout_485.setContentsMargins(0, 5, 0, 5)
+        self.Emulator_StimChoice_Current_frame = QFrame(self.Emulator_SimChoice_frame)
+        self.Emulator_StimChoice_Current_frame.setObjectName(u"Emulator_StimChoice_Current_frame")
+        self.Emulator_StimChoice_Current_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimChoice_Current_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_486 = QHBoxLayout(self.Emulator_StimChoice_Current_frame)
+        self.horizontalLayout_486.setSpacing(0)
+        self.horizontalLayout_486.setObjectName(u"horizontalLayout_486")
+        self.horizontalLayout_486.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimChoice_Current_toggle_frame = QFrame(self.Emulator_StimChoice_Current_frame)
+        self.Emulator_StimChoice_Current_toggle_frame.setObjectName(u"Emulator_StimChoice_Current_toggle_frame")
+        self.Emulator_StimChoice_Current_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimChoice_Current_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_StimChoice_Current_layout = QHBoxLayout(self.Emulator_StimChoice_Current_toggle_frame)
+        self.Emulator_StimChoice_Current_layout.setSpacing(0)
+        self.Emulator_StimChoice_Current_layout.setObjectName(u"Emulator_StimChoice_Current_layout")
+        self.Emulator_StimChoice_Current_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_486.addWidget(self.Emulator_StimChoice_Current_toggle_frame)
+
+        self.Emulator_StimChoice_Current_label = QLabel(self.Emulator_StimChoice_Current_frame)
+        self.Emulator_StimChoice_Current_label.setObjectName(u"Emulator_StimChoice_Current_label")
+        self.Emulator_StimChoice_Current_label.setFont(font4)
+        self.Emulator_StimChoice_Current_label.setStyleSheet(u"color: rgb(38, 139, 210);")
+
+        self.horizontalLayout_486.addWidget(self.Emulator_StimChoice_Current_label)
+
+
+        self.horizontalLayout_485.addWidget(self.Emulator_StimChoice_Current_frame)
+
+        self.Emulator_StimChoice_Light_frame = QFrame(self.Emulator_SimChoice_frame)
+        self.Emulator_StimChoice_Light_frame.setObjectName(u"Emulator_StimChoice_Light_frame")
+        self.Emulator_StimChoice_Light_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimChoice_Light_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_499 = QHBoxLayout(self.Emulator_StimChoice_Light_frame)
+        self.horizontalLayout_499.setSpacing(0)
+        self.horizontalLayout_499.setObjectName(u"horizontalLayout_499")
+        self.horizontalLayout_499.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimChoice_Light_toggle_frame = QFrame(self.Emulator_StimChoice_Light_frame)
+        self.Emulator_StimChoice_Light_toggle_frame.setObjectName(u"Emulator_StimChoice_Light_toggle_frame")
+        self.Emulator_StimChoice_Light_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimChoice_Light_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_StimChoice_Light_layout = QHBoxLayout(self.Emulator_StimChoice_Light_toggle_frame)
+        self.Emulator_StimChoice_Light_layout.setSpacing(0)
+        self.Emulator_StimChoice_Light_layout.setObjectName(u"Emulator_StimChoice_Light_layout")
+        self.Emulator_StimChoice_Light_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_499.addWidget(self.Emulator_StimChoice_Light_toggle_frame)
+
+        self.Emulator_StimChoice_Light_label = QLabel(self.Emulator_StimChoice_Light_frame)
+        self.Emulator_StimChoice_Light_label.setObjectName(u"Emulator_StimChoice_Light_label")
+        self.Emulator_StimChoice_Light_label.setFont(font4)
+        self.Emulator_StimChoice_Light_label.setStyleSheet(u"color: rgb(133, 153, 0);")
+
+        self.horizontalLayout_499.addWidget(self.Emulator_StimChoice_Light_label)
+
+
+        self.horizontalLayout_485.addWidget(self.Emulator_StimChoice_Light_frame)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_SimChoice_frame)
+
+        self.line_74 = QFrame(self.Emulator_StimulusParameter_page)
+        self.line_74.setObjectName(u"line_74")
+        self.line_74.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_74.setFrameShape(QFrame.Shape.HLine)
+        self.line_74.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_102.addWidget(self.line_74)
+
+        self.Emulator_StimFre_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_StimFre_frame.setObjectName(u"Emulator_StimFre_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_StimFre_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_StimFre_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_StimFre_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_103 = QVBoxLayout(self.Emulator_StimFre_frame)
+        self.verticalLayout_103.setSpacing(0)
+        self.verticalLayout_103.setObjectName(u"verticalLayout_103")
+        self.verticalLayout_103.setContentsMargins(5, 0, 5, 5)
+        self.Emulator_StimFre_Title_frame = QFrame(self.Emulator_StimFre_frame)
+        self.Emulator_StimFre_Title_frame.setObjectName(u"Emulator_StimFre_Title_frame")
+        self.Emulator_StimFre_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_430 = QHBoxLayout(self.Emulator_StimFre_Title_frame)
+        self.horizontalLayout_430.setSpacing(0)
+        self.horizontalLayout_430.setObjectName(u"horizontalLayout_430")
+        self.horizontalLayout_430.setContentsMargins(0, 5, 0, 0)
+        self.Emulator_StimFre_toggle_frame = QFrame(self.Emulator_StimFre_Title_frame)
+        self.Emulator_StimFre_toggle_frame.setObjectName(u"Emulator_StimFre_toggle_frame")
+        sizePolicy2.setHeightForWidth(self.Emulator_StimFre_toggle_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_StimFre_toggle_frame.setSizePolicy(sizePolicy2)
+        self.Emulator_StimFre_toggle_frame.setMaximumSize(QSize(45, 16777215))
+        self.Emulator_StimFre_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_StimFre_toggle_layout = QHBoxLayout(self.Emulator_StimFre_toggle_frame)
+        self.Emulator_StimFre_toggle_layout.setSpacing(0)
+        self.Emulator_StimFre_toggle_layout.setObjectName(u"Emulator_StimFre_toggle_layout")
+        self.Emulator_StimFre_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_430.addWidget(self.Emulator_StimFre_toggle_frame)
+
+        self.Emulator_StimFre_Label_frame = QFrame(self.Emulator_StimFre_Title_frame)
+        self.Emulator_StimFre_Label_frame.setObjectName(u"Emulator_StimFre_Label_frame")
+        self.Emulator_StimFre_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_Label_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_StimFre_Layout_2 = QHBoxLayout(self.Emulator_StimFre_Label_frame)
+        self.Spikeling_StimFre_Layout_2.setSpacing(0)
+        self.Spikeling_StimFre_Layout_2.setObjectName(u"Spikeling_StimFre_Layout_2")
+        self.Spikeling_StimFre_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimFre_Label = QLabel(self.Emulator_StimFre_Label_frame)
+        self.Emulator_StimFre_Label.setObjectName(u"Emulator_StimFre_Label")
+
+        self.Spikeling_StimFre_Layout_2.addWidget(self.Emulator_StimFre_Label, 0, Qt.AlignLeft)
+
+
+        self.horizontalLayout_430.addWidget(self.Emulator_StimFre_Label_frame, 0, Qt.AlignLeft)
+
+
+        self.verticalLayout_103.addWidget(self.Emulator_StimFre_Title_frame)
+
+        self.Emulator_StimFre_readings_frame = QFrame(self.Emulator_StimFre_frame)
+        self.Emulator_StimFre_readings_frame.setObjectName(u"Emulator_StimFre_readings_frame")
+        self.Emulator_StimFre_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_163 = QVBoxLayout(self.Emulator_StimFre_readings_frame)
+        self.verticalLayout_163.setSpacing(0)
+        self.verticalLayout_163.setObjectName(u"verticalLayout_163")
+        self.verticalLayout_163.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimFre_readings = QLabel(self.Emulator_StimFre_readings_frame)
+        self.Emulator_StimFre_readings.setObjectName(u"Emulator_StimFre_readings")
+        self.Emulator_StimFre_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_163.addWidget(self.Emulator_StimFre_readings)
+
+
+        self.verticalLayout_103.addWidget(self.Emulator_StimFre_readings_frame)
+
+        self.Emulator_StimFre_slider_frame = QFrame(self.Emulator_StimFre_frame)
+        self.Emulator_StimFre_slider_frame.setObjectName(u"Emulator_StimFre_slider_frame")
+        self.Emulator_StimFre_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_431 = QHBoxLayout(self.Emulator_StimFre_slider_frame)
+        self.horizontalLayout_431.setSpacing(0)
+        self.horizontalLayout_431.setObjectName(u"horizontalLayout_431")
+        self.horizontalLayout_431.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimFre_slider = QSlider(self.Emulator_StimFre_slider_frame)
+        self.Emulator_StimFre_slider.setObjectName(u"Emulator_StimFre_slider")
+        self.Emulator_StimFre_slider.setEnabled(False)
+        self.Emulator_StimFre_slider.setStyleSheet(u"")
+        self.Emulator_StimFre_slider.setMinimum(-100)
+        self.Emulator_StimFre_slider.setMaximum(100)
+        self.Emulator_StimFre_slider.setSingleStep(1)
+        self.Emulator_StimFre_slider.setPageStep(10)
+        self.Emulator_StimFre_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_StimFre_slider.setInvertedAppearance(False)
+        self.Emulator_StimFre_slider.setInvertedControls(False)
+        self.Emulator_StimFre_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_StimFre_slider.setTickInterval(20)
+
+        self.horizontalLayout_431.addWidget(self.Emulator_StimFre_slider)
+
+
+        self.verticalLayout_103.addWidget(self.Emulator_StimFre_slider_frame)
+
+        self.Emulator_StimFre_values_frames = QFrame(self.Emulator_StimFre_frame)
+        self.Emulator_StimFre_values_frames.setObjectName(u"Emulator_StimFre_values_frames")
+        self.Emulator_StimFre_values_frames.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_values_frames.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_432 = QHBoxLayout(self.Emulator_StimFre_values_frames)
+        self.horizontalLayout_432.setSpacing(0)
+        self.horizontalLayout_432.setObjectName(u"horizontalLayout_432")
+        self.horizontalLayout_432.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimFre_values_min = QLabel(self.Emulator_StimFre_values_frames)
+        self.Emulator_StimFre_values_min.setObjectName(u"Emulator_StimFre_values_min")
+
+        self.horizontalLayout_432.addWidget(self.Emulator_StimFre_values_min)
+
+        self.Emulator_StimFre_values = QLabel(self.Emulator_StimFre_values_frames)
+        self.Emulator_StimFre_values.setObjectName(u"Emulator_StimFre_values")
+        self.Emulator_StimFre_values.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_432.addWidget(self.Emulator_StimFre_values)
+
+        self.Emulator_StimFre_values_max = QLabel(self.Emulator_StimFre_values_frames)
+        self.Emulator_StimFre_values_max.setObjectName(u"Emulator_StimFre_values_max")
+        self.Emulator_StimFre_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_432.addWidget(self.Emulator_StimFre_values_max)
+
+
+        self.verticalLayout_103.addWidget(self.Emulator_StimFre_values_frames, 0, Qt.AlignTop)
+
+        self.Emulator_StimFre_image_frame = QFrame(self.Emulator_StimFre_frame)
+        self.Emulator_StimFre_image_frame.setObjectName(u"Emulator_StimFre_image_frame")
+        self.Emulator_StimFre_image_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimFre_image_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_433 = QHBoxLayout(self.Emulator_StimFre_image_frame)
+        self.horizontalLayout_433.setSpacing(0)
+        self.horizontalLayout_433.setObjectName(u"horizontalLayout_433")
+        self.horizontalLayout_433.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimFre_image = QLabel(self.Emulator_StimFre_image_frame)
+        self.Emulator_StimFre_image.setObjectName(u"Emulator_StimFre_image")
+        sizePolicy.setHeightForWidth(self.Emulator_StimFre_image.sizePolicy().hasHeightForWidth())
+        self.Emulator_StimFre_image.setSizePolicy(sizePolicy)
+        self.Emulator_StimFre_image.setMinimumSize(QSize(0, 20))
+        self.Emulator_StimFre_image.setMaximumSize(QSize(16777215, 20))
+        self.Emulator_StimFre_image.setPixmap(QPixmap(u":/resources/resources/StimFrequency.png"))
+        self.Emulator_StimFre_image.setScaledContents(True)
+
+        self.horizontalLayout_433.addWidget(self.Emulator_StimFre_image)
+
+
+        self.verticalLayout_103.addWidget(self.Emulator_StimFre_image_frame)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_StimFre_frame)
+
+        self.Emulator_parameter_top_line = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_parameter_top_line.setObjectName(u"Emulator_parameter_top_line")
+        self.Emulator_parameter_top_line.setAutoFillBackground(False)
+        self.Emulator_parameter_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_parameter_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_parameter_top_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_102.addWidget(self.Emulator_parameter_top_line)
+
+        self.Emulator_StimStr_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_StimStr_frame.setObjectName(u"Emulator_StimStr_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_StimStr_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_StimStr_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_StimStr_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_164 = QVBoxLayout(self.Emulator_StimStr_frame)
+        self.verticalLayout_164.setSpacing(0)
+        self.verticalLayout_164.setObjectName(u"verticalLayout_164")
+        self.verticalLayout_164.setContentsMargins(5, 5, 5, 5)
+        self.Emulator_StimStr_Title_frame = QFrame(self.Emulator_StimStr_frame)
+        self.Emulator_StimStr_Title_frame.setObjectName(u"Emulator_StimStr_Title_frame")
+        self.Emulator_StimStr_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_434 = QHBoxLayout(self.Emulator_StimStr_Title_frame)
+        self.horizontalLayout_434.setSpacing(0)
+        self.horizontalLayout_434.setObjectName(u"horizontalLayout_434")
+        self.horizontalLayout_434.setContentsMargins(0, 5, 0, 0)
+        self.Emulator_StimStr_toggle_frame = QFrame(self.Emulator_StimStr_Title_frame)
+        self.Emulator_StimStr_toggle_frame.setObjectName(u"Emulator_StimStr_toggle_frame")
+        self.Emulator_StimStr_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_StimStr_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_StimStr_toggle_layout = QHBoxLayout(self.Emulator_StimStr_toggle_frame)
+        self.Emulator_StimStr_toggle_layout.setSpacing(0)
+        self.Emulator_StimStr_toggle_layout.setObjectName(u"Emulator_StimStr_toggle_layout")
+        self.Emulator_StimStr_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_434.addWidget(self.Emulator_StimStr_toggle_frame)
+
+        self.Emulator_StimStr_Label_frame = QFrame(self.Emulator_StimStr_Title_frame)
+        self.Emulator_StimStr_Label_frame.setObjectName(u"Emulator_StimStr_Label_frame")
+        self.Emulator_StimStr_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_435 = QHBoxLayout(self.Emulator_StimStr_Label_frame)
+        self.horizontalLayout_435.setSpacing(0)
+        self.horizontalLayout_435.setObjectName(u"horizontalLayout_435")
+        self.horizontalLayout_435.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimStr_Label = QLabel(self.Emulator_StimStr_Label_frame)
+        self.Emulator_StimStr_Label.setObjectName(u"Emulator_StimStr_Label")
+
+        self.horizontalLayout_435.addWidget(self.Emulator_StimStr_Label)
+
+
+        self.horizontalLayout_434.addWidget(self.Emulator_StimStr_Label_frame)
+
+
+        self.verticalLayout_164.addWidget(self.Emulator_StimStr_Title_frame)
+
+        self.Emulator_StimStr_readings_frame = QFrame(self.Emulator_StimStr_frame)
+        self.Emulator_StimStr_readings_frame.setObjectName(u"Emulator_StimStr_readings_frame")
+        self.Emulator_StimStr_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_StimStr_Layout_2 = QHBoxLayout(self.Emulator_StimStr_readings_frame)
+        self.Spikeling_StimStr_Layout_2.setSpacing(0)
+        self.Spikeling_StimStr_Layout_2.setObjectName(u"Spikeling_StimStr_Layout_2")
+        self.Spikeling_StimStr_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimStr_readings = QLabel(self.Emulator_StimStr_readings_frame)
+        self.Emulator_StimStr_readings.setObjectName(u"Emulator_StimStr_readings")
+        self.Emulator_StimStr_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_StimStr_Layout_2.addWidget(self.Emulator_StimStr_readings)
+
+
+        self.verticalLayout_164.addWidget(self.Emulator_StimStr_readings_frame)
+
+        self.Emulator_StimStr_Slider_frame = QFrame(self.Emulator_StimStr_frame)
+        self.Emulator_StimStr_Slider_frame.setObjectName(u"Emulator_StimStr_Slider_frame")
+        self.Emulator_StimStr_Slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_Slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_436 = QHBoxLayout(self.Emulator_StimStr_Slider_frame)
+        self.horizontalLayout_436.setSpacing(0)
+        self.horizontalLayout_436.setObjectName(u"horizontalLayout_436")
+        self.horizontalLayout_436.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimStrSlider = QSlider(self.Emulator_StimStr_Slider_frame)
+        self.Emulator_StimStrSlider.setObjectName(u"Emulator_StimStrSlider")
+        self.Emulator_StimStrSlider.setEnabled(False)
+        self.Emulator_StimStrSlider.setMinimum(-100)
+        self.Emulator_StimStrSlider.setMaximum(100)
+        self.Emulator_StimStrSlider.setOrientation(Qt.Horizontal)
+        self.Emulator_StimStrSlider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_StimStrSlider.setTickInterval(20)
+
+        self.horizontalLayout_436.addWidget(self.Emulator_StimStrSlider)
+
+
+        self.verticalLayout_164.addWidget(self.Emulator_StimStr_Slider_frame)
+
+        self.Emulator_StimStr_values_frame = QFrame(self.Emulator_StimStr_frame)
+        self.Emulator_StimStr_values_frame.setObjectName(u"Emulator_StimStr_values_frame")
+        self.Emulator_StimStr_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_437 = QHBoxLayout(self.Emulator_StimStr_values_frame)
+        self.horizontalLayout_437.setSpacing(0)
+        self.horizontalLayout_437.setObjectName(u"horizontalLayout_437")
+        self.horizontalLayout_437.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_StimStr_values_min = QLabel(self.Emulator_StimStr_values_frame)
+        self.Emulator_StimStr_values_min.setObjectName(u"Emulator_StimStr_values_min")
+
+        self.horizontalLayout_437.addWidget(self.Emulator_StimStr_values_min)
+
+        self.Emulator_StimStr_values = QLabel(self.Emulator_StimStr_values_frame)
+        self.Emulator_StimStr_values.setObjectName(u"Emulator_StimStr_values")
+        self.Emulator_StimStr_values.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_437.addWidget(self.Emulator_StimStr_values)
+
+        self.Emulator_StimStr_values_max = QLabel(self.Emulator_StimStr_values_frame)
+        self.Emulator_StimStr_values_max.setObjectName(u"Emulator_StimStr_values_max")
+        self.Emulator_StimStr_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_437.addWidget(self.Emulator_StimStr_values_max)
+
+
+        self.verticalLayout_164.addWidget(self.Emulator_StimStr_values_frame, 0, Qt.AlignTop)
+
+        self.Emulator_StimStr_image_frame = QFrame(self.Emulator_StimStr_frame)
+        self.Emulator_StimStr_image_frame.setObjectName(u"Emulator_StimStr_image_frame")
+        self.Emulator_StimStr_image_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_StimStr_image_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_438 = QHBoxLayout(self.Emulator_StimStr_image_frame)
+        self.horizontalLayout_438.setSpacing(0)
+        self.horizontalLayout_438.setObjectName(u"horizontalLayout_438")
+        self.horizontalLayout_438.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_StimStr_image = QLabel(self.Emulator_StimStr_image_frame)
+        self.Emulator_StimStr_image.setObjectName(u"Emulator_StimStr_image")
+        sizePolicy5.setHeightForWidth(self.Emulator_StimStr_image.sizePolicy().hasHeightForWidth())
+        self.Emulator_StimStr_image.setSizePolicy(sizePolicy5)
+        self.Emulator_StimStr_image.setMinimumSize(QSize(40, 0))
+        self.Emulator_StimStr_image.setMaximumSize(QSize(16777215, 40))
+        self.Emulator_StimStr_image.setPixmap(QPixmap(u":/resources/resources/StimStrenght.png"))
+        self.Emulator_StimStr_image.setScaledContents(True)
+
+        self.horizontalLayout_438.addWidget(self.Emulator_StimStr_image)
+
+
+        self.verticalLayout_164.addWidget(self.Emulator_StimStr_image_frame)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_StimStr_frame)
+
+        self.Emulator_parameter_middle_line = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_parameter_middle_line.setObjectName(u"Emulator_parameter_middle_line")
+        self.Emulator_parameter_middle_line.setAutoFillBackground(False)
+        self.Emulator_parameter_middle_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_parameter_middle_line.setLineWidth(4)
+        self.Emulator_parameter_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_parameter_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_102.addWidget(self.Emulator_parameter_middle_line)
+
+        self.Emulator_CustomStimulus_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_CustomStimulus_frame.setObjectName(u"Emulator_CustomStimulus_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_CustomStimulus_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_CustomStimulus_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_CustomStimulus_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_165 = QVBoxLayout(self.Emulator_CustomStimulus_frame)
+        self.verticalLayout_165.setSpacing(0)
+        self.verticalLayout_165.setObjectName(u"verticalLayout_165")
+        self.verticalLayout_165.setContentsMargins(5, 0, 5, 2)
+        self.Emulator_CustomStimulus_Title_frame = QFrame(self.Emulator_CustomStimulus_frame)
+        self.Emulator_CustomStimulus_Title_frame.setObjectName(u"Emulator_CustomStimulus_Title_frame")
+        self.Emulator_CustomStimulus_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_Title_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_StimCus_Layout_2 = QHBoxLayout(self.Emulator_CustomStimulus_Title_frame)
+        self.Spikeling_StimCus_Layout_2.setSpacing(0)
+        self.Spikeling_StimCus_Layout_2.setObjectName(u"Spikeling_StimCus_Layout_2")
+        self.Spikeling_StimCus_Layout_2.setContentsMargins(0, 5, 0, 0)
+        self.Emulator_CustomStimulus_toggle_frame = QFrame(self.Emulator_CustomStimulus_Title_frame)
+        self.Emulator_CustomStimulus_toggle_frame.setObjectName(u"Emulator_CustomStimulus_toggle_frame")
+        self.Emulator_CustomStimulus_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_CustomStimulus_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_CustomStimulus_toggle_layout = QHBoxLayout(self.Emulator_CustomStimulus_toggle_frame)
+        self.Emulator_CustomStimulus_toggle_layout.setSpacing(0)
+        self.Emulator_CustomStimulus_toggle_layout.setObjectName(u"Emulator_CustomStimulus_toggle_layout")
+        self.Emulator_CustomStimulus_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.Spikeling_StimCus_Layout_2.addWidget(self.Emulator_CustomStimulus_toggle_frame)
+
+        self.Emulator_CustomStimulus_Label_frame = QFrame(self.Emulator_CustomStimulus_Title_frame)
+        self.Emulator_CustomStimulus_Label_frame.setObjectName(u"Emulator_CustomStimulus_Label_frame")
+        self.Emulator_CustomStimulus_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_439 = QHBoxLayout(self.Emulator_CustomStimulus_Label_frame)
+        self.horizontalLayout_439.setSpacing(0)
+        self.horizontalLayout_439.setObjectName(u"horizontalLayout_439")
+        self.horizontalLayout_439.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_CustomStimulus_Label = QLabel(self.Emulator_CustomStimulus_Label_frame)
+        self.Emulator_CustomStimulus_Label.setObjectName(u"Emulator_CustomStimulus_Label")
+
+        self.horizontalLayout_439.addWidget(self.Emulator_CustomStimulus_Label)
+
+
+        self.Spikeling_StimCus_Layout_2.addWidget(self.Emulator_CustomStimulus_Label_frame)
+
+
+        self.verticalLayout_165.addWidget(self.Emulator_CustomStimulus_Title_frame)
+
+        self.Emulator_CustomStimulus_Selection_frame = QFrame(self.Emulator_CustomStimulus_frame)
+        self.Emulator_CustomStimulus_Selection_frame.setObjectName(u"Emulator_CustomStimulus_Selection_frame")
+        self.Emulator_CustomStimulus_Selection_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_Selection_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_440 = QHBoxLayout(self.Emulator_CustomStimulus_Selection_frame)
+        self.horizontalLayout_440.setSpacing(5)
+        self.horizontalLayout_440.setObjectName(u"horizontalLayout_440")
+        self.horizontalLayout_440.setContentsMargins(0, 0, 5, 0)
+        self.Emulator_CustomStimulus_StimLabel_frame = QFrame(self.Emulator_CustomStimulus_Selection_frame)
+        self.Emulator_CustomStimulus_StimLabel_frame.setObjectName(u"Emulator_CustomStimulus_StimLabel_frame")
+        self.Emulator_CustomStimulus_StimLabel_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_StimLabel_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_441 = QHBoxLayout(self.Emulator_CustomStimulus_StimLabel_frame)
+        self.horizontalLayout_441.setSpacing(0)
+        self.horizontalLayout_441.setObjectName(u"horizontalLayout_441")
+        self.horizontalLayout_441.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_CustomStimulus_StimLabel = QLabel(self.Emulator_CustomStimulus_StimLabel_frame)
+        self.Emulator_CustomStimulus_StimLabel.setObjectName(u"Emulator_CustomStimulus_StimLabel")
+        self.Emulator_CustomStimulus_StimLabel.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_441.addWidget(self.Emulator_CustomStimulus_StimLabel)
+
+
+        self.horizontalLayout_440.addWidget(self.Emulator_CustomStimulus_StimLabel_frame)
+
+        self.Emulator_CustomStimulus_Load_frame = QFrame(self.Emulator_CustomStimulus_Selection_frame)
+        self.Emulator_CustomStimulus_Load_frame.setObjectName(u"Emulator_CustomStimulus_Load_frame")
+        sizePolicy2.setHeightForWidth(self.Emulator_CustomStimulus_Load_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_CustomStimulus_Load_frame.setSizePolicy(sizePolicy2)
+        self.Emulator_CustomStimulus_Load_frame.setMinimumSize(QSize(50, 0))
+        self.Emulator_CustomStimulus_Load_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_CustomStimulus_Load_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_Load_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_442 = QHBoxLayout(self.Emulator_CustomStimulus_Load_frame)
+        self.horizontalLayout_442.setSpacing(0)
+        self.horizontalLayout_442.setObjectName(u"horizontalLayout_442")
+        self.horizontalLayout_442.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_CustomStimulus_Load_pushButton = QPushButton(self.Emulator_CustomStimulus_Load_frame)
+        self.Emulator_CustomStimulus_Load_pushButton.setObjectName(u"Emulator_CustomStimulus_Load_pushButton")
+        self.Emulator_CustomStimulus_Load_pushButton.setMinimumSize(QSize(50, 0))
+        self.Emulator_CustomStimulus_Load_pushButton.setMaximumSize(QSize(50, 16777215))
+
+        self.horizontalLayout_442.addWidget(self.Emulator_CustomStimulus_Load_pushButton)
+
+
+        self.horizontalLayout_440.addWidget(self.Emulator_CustomStimulus_Load_frame)
+
+
+        self.verticalLayout_165.addWidget(self.Emulator_CustomStimulus_Selection_frame)
+
+        self.Emulator_CustomStimulus_display_frame = QFrame(self.Emulator_CustomStimulus_frame)
+        self.Emulator_CustomStimulus_display_frame.setObjectName(u"Emulator_CustomStimulus_display_frame")
+        self.Emulator_CustomStimulus_display_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_CustomStimulus_display_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_443 = QHBoxLayout(self.Emulator_CustomStimulus_display_frame)
+        self.horizontalLayout_443.setSpacing(0)
+        self.horizontalLayout_443.setObjectName(u"horizontalLayout_443")
+        self.horizontalLayout_443.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_CustomStimulus_display = PlotWidget(self.Emulator_CustomStimulus_display_frame)
+        self.Emulator_CustomStimulus_display.setObjectName(u"Emulator_CustomStimulus_display")
+        self.Emulator_CustomStimulus_display.setEnabled(False)
+        sizePolicy5.setHeightForWidth(self.Emulator_CustomStimulus_display.sizePolicy().hasHeightForWidth())
+        self.Emulator_CustomStimulus_display.setSizePolicy(sizePolicy5)
+        self.Emulator_CustomStimulus_display.setMinimumSize(QSize(0, 40))
+        self.Emulator_CustomStimulus_display.setMaximumSize(QSize(16777215, 50))
+        self.Emulator_CustomStimulus_display.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+
+        self.horizontalLayout_443.addWidget(self.Emulator_CustomStimulus_display)
+
+
+        self.verticalLayout_165.addWidget(self.Emulator_CustomStimulus_display_frame)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_CustomStimulus_frame)
+
+        self.Emulator_parameter_bottom_line = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_parameter_bottom_line.setObjectName(u"Emulator_parameter_bottom_line")
+        self.Emulator_parameter_bottom_line.setAutoFillBackground(False)
+        self.Emulator_parameter_bottom_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_parameter_bottom_line.setLineWidth(10)
+        self.Emulator_parameter_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_parameter_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_102.addWidget(self.Emulator_parameter_bottom_line)
+
+        self.Emulator_PR_frame = QFrame(self.Emulator_StimulusParameter_page)
+        self.Emulator_PR_frame.setObjectName(u"Emulator_PR_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_PR_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_PR_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_PR_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_166 = QVBoxLayout(self.Emulator_PR_frame)
+        self.verticalLayout_166.setSpacing(1)
+        self.verticalLayout_166.setObjectName(u"verticalLayout_166")
+        self.verticalLayout_166.setContentsMargins(5, 0, 5, 1)
+        self.Emulator_PR_label_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_label_frame.setObjectName(u"Emulator_PR_label_frame")
+        self.Emulator_PR_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_167 = QVBoxLayout(self.Emulator_PR_label_frame)
+        self.verticalLayout_167.setSpacing(0)
+        self.verticalLayout_167.setObjectName(u"verticalLayout_167")
+        self.verticalLayout_167.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_PR_label = QLabel(self.Emulator_PR_label_frame)
+        self.Emulator_PR_label.setObjectName(u"Emulator_PR_label")
+        self.Emulator_PR_label.setStyleSheet(u"")
+
+        self.verticalLayout_167.addWidget(self.Emulator_PR_label)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_label_frame)
+
+        self.Emulator_PR_Title_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Title_frame.setObjectName(u"Emulator_PR_Title_frame")
+        self.Emulator_PR_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_444 = QHBoxLayout(self.Emulator_PR_Title_frame)
+        self.horizontalLayout_444.setSpacing(0)
+        self.horizontalLayout_444.setObjectName(u"horizontalLayout_444")
+        self.horizontalLayout_444.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_toggle_frame = QFrame(self.Emulator_PR_Title_frame)
+        self.Emulator_PR_toggle_frame.setObjectName(u"Emulator_PR_toggle_frame")
+        self.Emulator_PR_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_PR_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_PR_toggle_layout = QHBoxLayout(self.Emulator_PR_toggle_frame)
+        self.Emulator_PR_toggle_layout.setSpacing(0)
+        self.Emulator_PR_toggle_layout.setObjectName(u"Emulator_PR_toggle_layout")
+        self.Emulator_PR_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_444.addWidget(self.Emulator_PR_toggle_frame)
+
+        self.Emulator_PR_Label_frame = QFrame(self.Emulator_PR_Title_frame)
+        self.Emulator_PR_Label_frame.setObjectName(u"Emulator_PR_Label_frame")
+        self.Emulator_PR_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_445 = QHBoxLayout(self.Emulator_PR_Label_frame)
+        self.horizontalLayout_445.setSpacing(0)
+        self.horizontalLayout_445.setObjectName(u"horizontalLayout_445")
+        self.horizontalLayout_445.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Label = QLabel(self.Emulator_PR_Label_frame)
+        self.Emulator_PR_Label.setObjectName(u"Emulator_PR_Label")
+
+        self.horizontalLayout_445.addWidget(self.Emulator_PR_Label)
+
+
+        self.horizontalLayout_444.addWidget(self.Emulator_PR_Label_frame)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Title_frame)
+
+        self.Emulator_PR_Photogain_readings_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Photogain_readings_frame.setObjectName(u"Emulator_PR_Photogain_readings_frame")
+        self.Emulator_PR_Photogain_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Photogain_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_PhotoGain_Layout_2 = QHBoxLayout(self.Emulator_PR_Photogain_readings_frame)
+        self.Spikeling_PR_PhotoGain_Layout_2.setSpacing(0)
+        self.Spikeling_PR_PhotoGain_Layout_2.setObjectName(u"Spikeling_PR_PhotoGain_Layout_2")
+        self.Spikeling_PR_PhotoGain_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Photogain_readings = QLabel(self.Emulator_PR_Photogain_readings_frame)
+        self.Emulator_PR_Photogain_readings.setObjectName(u"Emulator_PR_Photogain_readings")
+        self.Emulator_PR_Photogain_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_PhotoGain_Layout_2.addWidget(self.Emulator_PR_Photogain_readings)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Photogain_readings_frame)
+
+        self.Emulator_PR_PhotoGain_slider_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_PhotoGain_slider_frame.setObjectName(u"Emulator_PR_PhotoGain_slider_frame")
+        self.Emulator_PR_PhotoGain_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_PhotoGain_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_446 = QHBoxLayout(self.Emulator_PR_PhotoGain_slider_frame)
+        self.horizontalLayout_446.setSpacing(0)
+        self.horizontalLayout_446.setObjectName(u"horizontalLayout_446")
+        self.horizontalLayout_446.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_PhotoGain_slider = QSlider(self.Emulator_PR_PhotoGain_slider_frame)
+        self.Emulator_PR_PhotoGain_slider.setObjectName(u"Emulator_PR_PhotoGain_slider")
+        self.Emulator_PR_PhotoGain_slider.setEnabled(False)
+        self.Emulator_PR_PhotoGain_slider.setMinimum(-100)
+        self.Emulator_PR_PhotoGain_slider.setMaximum(100)
+        self.Emulator_PR_PhotoGain_slider.setSingleStep(1)
+        self.Emulator_PR_PhotoGain_slider.setPageStep(10)
+        self.Emulator_PR_PhotoGain_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_PR_PhotoGain_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_PR_PhotoGain_slider.setTickInterval(20)
+
+        self.horizontalLayout_446.addWidget(self.Emulator_PR_PhotoGain_slider)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_PhotoGain_slider_frame)
+
+        self.Emulator_PR_PhotoGain_values_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_PhotoGain_values_frame.setObjectName(u"Emulator_PR_PhotoGain_values_frame")
+        self.Emulator_PR_PhotoGain_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_PhotoGain_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_447 = QHBoxLayout(self.Emulator_PR_PhotoGain_values_frame)
+        self.horizontalLayout_447.setSpacing(0)
+        self.horizontalLayout_447.setObjectName(u"horizontalLayout_447")
+        self.horizontalLayout_447.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_PhotoGain_values_min = QLabel(self.Emulator_PR_PhotoGain_values_frame)
+        self.Emulator_PR_PhotoGain_values_min.setObjectName(u"Emulator_PR_PhotoGain_values_min")
+
+        self.horizontalLayout_447.addWidget(self.Emulator_PR_PhotoGain_values_min)
+
+        self.Emulator_PR_PhotoGain_values = QLabel(self.Emulator_PR_PhotoGain_values_frame)
+        self.Emulator_PR_PhotoGain_values.setObjectName(u"Emulator_PR_PhotoGain_values")
+
+        self.horizontalLayout_447.addWidget(self.Emulator_PR_PhotoGain_values, 0, Qt.AlignHCenter)
+
+        self.Emulator_PR_PhotoGain_values_max = QLabel(self.Emulator_PR_PhotoGain_values_frame)
+        self.Emulator_PR_PhotoGain_values_max.setObjectName(u"Emulator_PR_PhotoGain_values_max")
+        self.Emulator_PR_PhotoGain_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_447.addWidget(self.Emulator_PR_PhotoGain_values_max)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_PhotoGain_values_frame, 0, Qt.AlignTop)
+
+        self.Emulator_PRDecay_Title = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PRDecay_Title.setObjectName(u"Emulator_PRDecay_Title")
+        self.Emulator_PRDecay_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PRDecay_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_448 = QHBoxLayout(self.Emulator_PRDecay_Title)
+        self.horizontalLayout_448.setSpacing(0)
+        self.horizontalLayout_448.setObjectName(u"horizontalLayout_448")
+        self.horizontalLayout_448.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PRDecay_Toggle_frame = QFrame(self.Emulator_PRDecay_Title)
+        self.Emulator_PRDecay_Toggle_frame.setObjectName(u"Emulator_PRDecay_Toggle_frame")
+        self.Emulator_PRDecay_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_PRDecay_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PRDecay_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_PRDecay_Toggle_layout = QHBoxLayout(self.Emulator_PRDecay_Toggle_frame)
+        self.Emulator_PRDecay_Toggle_layout.setSpacing(0)
+        self.Emulator_PRDecay_Toggle_layout.setObjectName(u"Emulator_PRDecay_Toggle_layout")
+        self.Emulator_PRDecay_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_448.addWidget(self.Emulator_PRDecay_Toggle_frame)
+
+        self.Emulator_PRDecay_Label_frame = QFrame(self.Emulator_PRDecay_Title)
+        self.Emulator_PRDecay_Label_frame.setObjectName(u"Emulator_PRDecay_Label_frame")
+        self.Emulator_PRDecay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PRDecay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_449 = QHBoxLayout(self.Emulator_PRDecay_Label_frame)
+        self.horizontalLayout_449.setSpacing(0)
+        self.horizontalLayout_449.setObjectName(u"horizontalLayout_449")
+        self.horizontalLayout_449.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PRDecay_Label = QLabel(self.Emulator_PRDecay_Label_frame)
+        self.Emulator_PRDecay_Label.setObjectName(u"Emulator_PRDecay_Label")
+
+        self.horizontalLayout_449.addWidget(self.Emulator_PRDecay_Label)
+
+
+        self.horizontalLayout_448.addWidget(self.Emulator_PRDecay_Label_frame)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PRDecay_Title)
+
+        self.Emulator_PR_Decay_readings_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Decay_readings_frame.setObjectName(u"Emulator_PR_Decay_readings_frame")
+        self.Emulator_PR_Decay_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Decay_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Decay_Layout_2 = QHBoxLayout(self.Emulator_PR_Decay_readings_frame)
+        self.Spikeling_PR_Decay_Layout_2.setSpacing(0)
+        self.Spikeling_PR_Decay_Layout_2.setObjectName(u"Spikeling_PR_Decay_Layout_2")
+        self.Spikeling_PR_Decay_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Decay_readings = QLabel(self.Emulator_PR_Decay_readings_frame)
+        self.Emulator_PR_Decay_readings.setObjectName(u"Emulator_PR_Decay_readings")
+        self.Emulator_PR_Decay_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_Decay_Layout_2.addWidget(self.Emulator_PR_Decay_readings)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Decay_readings_frame)
+
+        self.Emulator_PR_Decay_slider_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Decay_slider_frame.setObjectName(u"Emulator_PR_Decay_slider_frame")
+        self.Emulator_PR_Decay_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Decay_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_168 = QVBoxLayout(self.Emulator_PR_Decay_slider_frame)
+        self.verticalLayout_168.setSpacing(0)
+        self.verticalLayout_168.setObjectName(u"verticalLayout_168")
+        self.verticalLayout_168.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Decay_slider = QSlider(self.Emulator_PR_Decay_slider_frame)
+        self.Emulator_PR_Decay_slider.setObjectName(u"Emulator_PR_Decay_slider")
+        self.Emulator_PR_Decay_slider.setEnabled(False)
+        self.Emulator_PR_Decay_slider.setMinimum(10)
+        self.Emulator_PR_Decay_slider.setMaximum(125)
+        self.Emulator_PR_Decay_slider.setSingleStep(1)
+        self.Emulator_PR_Decay_slider.setPageStep(10)
+        self.Emulator_PR_Decay_slider.setValue(100)
+        self.Emulator_PR_Decay_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_PR_Decay_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_PR_Decay_slider.setTickInterval(10)
+
+        self.verticalLayout_168.addWidget(self.Emulator_PR_Decay_slider)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Decay_slider_frame)
+
+        self.Emulator_PR_Decay_values_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Decay_values_frame.setObjectName(u"Emulator_PR_Decay_values_frame")
+        self.Emulator_PR_Decay_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Decay_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_450 = QHBoxLayout(self.Emulator_PR_Decay_values_frame)
+        self.horizontalLayout_450.setSpacing(0)
+        self.horizontalLayout_450.setObjectName(u"horizontalLayout_450")
+        self.horizontalLayout_450.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Decay_values_slow = QLabel(self.Emulator_PR_Decay_values_frame)
+        self.Emulator_PR_Decay_values_slow.setObjectName(u"Emulator_PR_Decay_values_slow")
+        self.Emulator_PR_Decay_values_slow.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_450.addWidget(self.Emulator_PR_Decay_values_slow)
+
+        self.Emulator_PR_Decay_values_fast = QLabel(self.Emulator_PR_Decay_values_frame)
+        self.Emulator_PR_Decay_values_fast.setObjectName(u"Emulator_PR_Decay_values_fast")
+        self.Emulator_PR_Decay_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_450.addWidget(self.Emulator_PR_Decay_values_fast)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Decay_values_frame)
+
+        self.Emulator_PRRecovery_Title = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PRRecovery_Title.setObjectName(u"Emulator_PRRecovery_Title")
+        self.Emulator_PRRecovery_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PRRecovery_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_451 = QHBoxLayout(self.Emulator_PRRecovery_Title)
+        self.horizontalLayout_451.setSpacing(0)
+        self.horizontalLayout_451.setObjectName(u"horizontalLayout_451")
+        self.horizontalLayout_451.setContentsMargins(0, 0, 0, 0)
+        self.EmulatorPRRecovery_toggle_frame = QFrame(self.Emulator_PRRecovery_Title)
+        self.EmulatorPRRecovery_toggle_frame.setObjectName(u"EmulatorPRRecovery_toggle_frame")
+        self.EmulatorPRRecovery_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.EmulatorPRRecovery_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.EmulatorPRRecovery_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.EmulatorPRRecovery_toggle_layout = QHBoxLayout(self.EmulatorPRRecovery_toggle_frame)
+        self.EmulatorPRRecovery_toggle_layout.setSpacing(0)
+        self.EmulatorPRRecovery_toggle_layout.setObjectName(u"EmulatorPRRecovery_toggle_layout")
+        self.EmulatorPRRecovery_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_451.addWidget(self.EmulatorPRRecovery_toggle_frame)
+
+        self.EmulatorPRRecovery_Label_frame = QFrame(self.Emulator_PRRecovery_Title)
+        self.EmulatorPRRecovery_Label_frame.setObjectName(u"EmulatorPRRecovery_Label_frame")
+        self.EmulatorPRRecovery_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.EmulatorPRRecovery_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_452 = QHBoxLayout(self.EmulatorPRRecovery_Label_frame)
+        self.horizontalLayout_452.setSpacing(0)
+        self.horizontalLayout_452.setObjectName(u"horizontalLayout_452")
+        self.horizontalLayout_452.setContentsMargins(0, 0, 0, 0)
+        self.EmulatorPRRecovery_Label = QLabel(self.EmulatorPRRecovery_Label_frame)
+        self.EmulatorPRRecovery_Label.setObjectName(u"EmulatorPRRecovery_Label")
+
+        self.horizontalLayout_452.addWidget(self.EmulatorPRRecovery_Label)
+
+
+        self.horizontalLayout_451.addWidget(self.EmulatorPRRecovery_Label_frame)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PRRecovery_Title)
+
+        self.Emulator_PR_Recovery_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Recovery_frame.setObjectName(u"Emulator_PR_Recovery_frame")
+        self.Emulator_PR_Recovery_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Recovery_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Recovery_Layout_2 = QHBoxLayout(self.Emulator_PR_Recovery_frame)
+        self.Spikeling_PR_Recovery_Layout_2.setSpacing(0)
+        self.Spikeling_PR_Recovery_Layout_2.setObjectName(u"Spikeling_PR_Recovery_Layout_2")
+        self.Spikeling_PR_Recovery_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Recovery_readings_frame = QFrame(self.Emulator_PR_Recovery_frame)
+        self.Emulator_PR_Recovery_readings_frame.setObjectName(u"Emulator_PR_Recovery_readings_frame")
+        self.Emulator_PR_Recovery_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Recovery_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_169 = QVBoxLayout(self.Emulator_PR_Recovery_readings_frame)
+        self.verticalLayout_169.setSpacing(0)
+        self.verticalLayout_169.setObjectName(u"verticalLayout_169")
+        self.verticalLayout_169.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Recovery_readings = QLabel(self.Emulator_PR_Recovery_readings_frame)
+        self.Emulator_PR_Recovery_readings.setObjectName(u"Emulator_PR_Recovery_readings")
+        self.Emulator_PR_Recovery_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_169.addWidget(self.Emulator_PR_Recovery_readings)
+
+
+        self.Spikeling_PR_Recovery_Layout_2.addWidget(self.Emulator_PR_Recovery_readings_frame)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Recovery_frame)
+
+        self.Emulator_PR_Recovery_slider_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Recovery_slider_frame.setObjectName(u"Emulator_PR_Recovery_slider_frame")
+        self.Emulator_PR_Recovery_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Recovery_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_170 = QVBoxLayout(self.Emulator_PR_Recovery_slider_frame)
+        self.verticalLayout_170.setSpacing(0)
+        self.verticalLayout_170.setObjectName(u"verticalLayout_170")
+        self.verticalLayout_170.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Recovery_slider = QSlider(self.Emulator_PR_Recovery_slider_frame)
+        self.Emulator_PR_Recovery_slider.setObjectName(u"Emulator_PR_Recovery_slider")
+        self.Emulator_PR_Recovery_slider.setEnabled(False)
+        self.Emulator_PR_Recovery_slider.setMinimum(1)
+        self.Emulator_PR_Recovery_slider.setMaximum(100)
+        self.Emulator_PR_Recovery_slider.setSingleStep(1)
+        self.Emulator_PR_Recovery_slider.setPageStep(10)
+        self.Emulator_PR_Recovery_slider.setValue(25)
+        self.Emulator_PR_Recovery_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_PR_Recovery_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_PR_Recovery_slider.setTickInterval(10)
+
+        self.verticalLayout_170.addWidget(self.Emulator_PR_Recovery_slider)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Recovery_slider_frame)
+
+        self.Emulator_PR_Recovery_values_frame = QFrame(self.Emulator_PR_frame)
+        self.Emulator_PR_Recovery_values_frame.setObjectName(u"Emulator_PR_Recovery_values_frame")
+        self.Emulator_PR_Recovery_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PR_Recovery_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_453 = QHBoxLayout(self.Emulator_PR_Recovery_values_frame)
+        self.horizontalLayout_453.setSpacing(0)
+        self.horizontalLayout_453.setObjectName(u"horizontalLayout_453")
+        self.horizontalLayout_453.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PR_Recovery_values_slow = QLabel(self.Emulator_PR_Recovery_values_frame)
+        self.Emulator_PR_Recovery_values_slow.setObjectName(u"Emulator_PR_Recovery_values_slow")
+
+        self.horizontalLayout_453.addWidget(self.Emulator_PR_Recovery_values_slow)
+
+        self.Emulator_PR_Recovery_values_fast = QLabel(self.Emulator_PR_Recovery_values_frame)
+        self.Emulator_PR_Recovery_values_fast.setObjectName(u"Emulator_PR_Recovery_values_fast")
+        self.Emulator_PR_Recovery_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_453.addWidget(self.Emulator_PR_Recovery_values_fast)
+
+
+        self.verticalLayout_166.addWidget(self.Emulator_PR_Recovery_values_frame)
+
+
+        self.verticalLayout_102.addWidget(self.Emulator_PR_frame)
+
+        self.Emulator_parameter_stackedwidget.addWidget(self.Emulator_StimulusParameter_page)
+        self.Emulator_NeuronParameter_page = QWidget()
+        self.Emulator_NeuronParameter_page.setObjectName(u"Emulator_NeuronParameter_page")
+        self.Emulator_NeuronParameter_page.setMinimumSize(QSize(200, 0))
+        self.Emulator_NeuronParameter_page.setMaximumSize(QSize(175, 16777215))
+        self.verticalLayout_171 = QVBoxLayout(self.Emulator_NeuronParameter_page)
+        self.verticalLayout_171.setSpacing(0)
+        self.verticalLayout_171.setObjectName(u"verticalLayout_171")
+        self.verticalLayout_171.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_NeuronParameter_frame = QFrame(self.Emulator_NeuronParameter_page)
+        self.Emulator_NeuronParameter_frame.setObjectName(u"Emulator_NeuronParameter_frame")
+        sizePolicy2.setHeightForWidth(self.Emulator_NeuronParameter_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_NeuronParameter_frame.setSizePolicy(sizePolicy2)
+        self.Emulator_NeuronParameter_frame.setMinimumSize(QSize(200, 0))
+        self.Emulator_NeuronParameter_frame.setMaximumSize(QSize(175, 16777215))
+        self.Emulator_NeuronParameter_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_NeuronParameter_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_172 = QVBoxLayout(self.Emulator_NeuronParameter_frame)
+        self.verticalLayout_172.setSpacing(2)
+        self.verticalLayout_172.setObjectName(u"verticalLayout_172")
+        self.verticalLayout_172.setContentsMargins(0, 5, 0, 5)
+        self.Emulator_PatchClamp_frame = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_PatchClamp_frame.setObjectName(u"Emulator_PatchClamp_frame")
+        self.Emulator_PatchClamp_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_173 = QVBoxLayout(self.Emulator_PatchClamp_frame)
+        self.verticalLayout_173.setSpacing(0)
+        self.verticalLayout_173.setObjectName(u"verticalLayout_173")
+        self.verticalLayout_173.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_PatchClamp_label_frame = QFrame(self.Emulator_PatchClamp_frame)
+        self.Emulator_PatchClamp_label_frame.setObjectName(u"Emulator_PatchClamp_label_frame")
+        self.Emulator_PatchClamp_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_454 = QHBoxLayout(self.Emulator_PatchClamp_label_frame)
+        self.horizontalLayout_454.setSpacing(0)
+        self.horizontalLayout_454.setObjectName(u"horizontalLayout_454")
+        self.horizontalLayout_454.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_PatchClamp_label = QLabel(self.Emulator_PatchClamp_label_frame)
+        self.Emulator_PatchClamp_label.setObjectName(u"Emulator_PatchClamp_label")
+        self.Emulator_PatchClamp_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_454.addWidget(self.Emulator_PatchClamp_label)
+
+
+        self.verticalLayout_173.addWidget(self.Emulator_PatchClamp_label_frame)
+
+        self.Emulator_PatchClamp_checkBox_frame = QFrame(self.Emulator_PatchClamp_frame)
+        self.Emulator_PatchClamp_checkBox_frame.setObjectName(u"Emulator_PatchClamp_checkBox_frame")
+        self.Emulator_PatchClamp_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_174 = QVBoxLayout(self.Emulator_PatchClamp_checkBox_frame)
+        self.verticalLayout_174.setSpacing(0)
+        self.verticalLayout_174.setObjectName(u"verticalLayout_174")
+        self.verticalLayout_174.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_Title = QFrame(self.Emulator_PatchClamp_checkBox_frame)
+        self.Emulator_PatchClamp_Title.setObjectName(u"Emulator_PatchClamp_Title")
+        self.Emulator_PatchClamp_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_455 = QHBoxLayout(self.Emulator_PatchClamp_Title)
+        self.horizontalLayout_455.setSpacing(0)
+        self.horizontalLayout_455.setObjectName(u"horizontalLayout_455")
+        self.horizontalLayout_455.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_toggle_frame = QFrame(self.Emulator_PatchClamp_Title)
+        self.Emulator_PatchClamp_toggle_frame.setObjectName(u"Emulator_PatchClamp_toggle_frame")
+        self.Emulator_PatchClamp_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_PatchClamp_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_PatchClamp_toggle_layout = QHBoxLayout(self.Emulator_PatchClamp_toggle_frame)
+        self.Emulator_PatchClamp_toggle_layout.setSpacing(0)
+        self.Emulator_PatchClamp_toggle_layout.setObjectName(u"Emulator_PatchClamp_toggle_layout")
+        self.Emulator_PatchClamp_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_455.addWidget(self.Emulator_PatchClamp_toggle_frame)
+
+        self.Emulator_PatchClamp_Label_frame = QFrame(self.Emulator_PatchClamp_Title)
+        self.Emulator_PatchClamp_Label_frame.setObjectName(u"Emulator_PatchClamp_Label_frame")
+        self.Emulator_PatchClamp_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_456 = QHBoxLayout(self.Emulator_PatchClamp_Label_frame)
+        self.horizontalLayout_456.setSpacing(0)
+        self.horizontalLayout_456.setObjectName(u"horizontalLayout_456")
+        self.horizontalLayout_456.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_Label = QLabel(self.Emulator_PatchClamp_Label_frame)
+        self.Emulator_PatchClamp_Label.setObjectName(u"Emulator_PatchClamp_Label")
+
+        self.horizontalLayout_456.addWidget(self.Emulator_PatchClamp_Label)
+
+
+        self.horizontalLayout_455.addWidget(self.Emulator_PatchClamp_Label_frame)
+
+
+        self.verticalLayout_174.addWidget(self.Emulator_PatchClamp_Title)
+
+        self.Emulator_PatchClamp_reading_frame = QFrame(self.Emulator_PatchClamp_checkBox_frame)
+        self.Emulator_PatchClamp_reading_frame.setObjectName(u"Emulator_PatchClamp_reading_frame")
+        self.Emulator_PatchClamp_reading_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_reading_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_175 = QVBoxLayout(self.Emulator_PatchClamp_reading_frame)
+        self.verticalLayout_175.setSpacing(0)
+        self.verticalLayout_175.setObjectName(u"verticalLayout_175")
+        self.verticalLayout_175.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_reading = QLabel(self.Emulator_PatchClamp_reading_frame)
+        self.Emulator_PatchClamp_reading.setObjectName(u"Emulator_PatchClamp_reading")
+        self.Emulator_PatchClamp_reading.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_175.addWidget(self.Emulator_PatchClamp_reading)
+
+
+        self.verticalLayout_174.addWidget(self.Emulator_PatchClamp_reading_frame)
+
+
+        self.verticalLayout_173.addWidget(self.Emulator_PatchClamp_checkBox_frame)
+
+        self.Emulator_PatchClamp_slider_frame = QFrame(self.Emulator_PatchClamp_frame)
+        self.Emulator_PatchClamp_slider_frame.setObjectName(u"Emulator_PatchClamp_slider_frame")
+        self.Emulator_PatchClamp_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_457 = QHBoxLayout(self.Emulator_PatchClamp_slider_frame)
+        self.horizontalLayout_457.setSpacing(0)
+        self.horizontalLayout_457.setObjectName(u"horizontalLayout_457")
+        self.horizontalLayout_457.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_slider = QSlider(self.Emulator_PatchClamp_slider_frame)
+        self.Emulator_PatchClamp_slider.setObjectName(u"Emulator_PatchClamp_slider")
+        self.Emulator_PatchClamp_slider.setEnabled(False)
+        self.Emulator_PatchClamp_slider.setMinimum(-100)
+        self.Emulator_PatchClamp_slider.setMaximum(100)
+        self.Emulator_PatchClamp_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_PatchClamp_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_PatchClamp_slider.setTickInterval(20)
+
+        self.horizontalLayout_457.addWidget(self.Emulator_PatchClamp_slider)
+
+
+        self.verticalLayout_173.addWidget(self.Emulator_PatchClamp_slider_frame)
+
+        self.Emulator_PatchClamp_values_frame = QFrame(self.Emulator_PatchClamp_frame)
+        self.Emulator_PatchClamp_values_frame.setObjectName(u"Emulator_PatchClamp_values_frame")
+        self.Emulator_PatchClamp_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_PatchClamp_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_458 = QHBoxLayout(self.Emulator_PatchClamp_values_frame)
+        self.horizontalLayout_458.setSpacing(0)
+        self.horizontalLayout_458.setObjectName(u"horizontalLayout_458")
+        self.horizontalLayout_458.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_PatchClamp_values_min = QLabel(self.Emulator_PatchClamp_values_frame)
+        self.Emulator_PatchClamp_values_min.setObjectName(u"Emulator_PatchClamp_values_min")
+
+        self.horizontalLayout_458.addWidget(self.Emulator_PatchClamp_values_min)
+
+        self.Emulator_PatchClamp_values = QLabel(self.Emulator_PatchClamp_values_frame)
+        self.Emulator_PatchClamp_values.setObjectName(u"Emulator_PatchClamp_values")
+        self.Emulator_PatchClamp_values.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_458.addWidget(self.Emulator_PatchClamp_values)
+
+        self.Emulator_PatchClamp_values_max = QLabel(self.Emulator_PatchClamp_values_frame)
+        self.Emulator_PatchClamp_values_max.setObjectName(u"Emulator_PatchClamp_values_max")
+        self.Emulator_PatchClamp_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_458.addWidget(self.Emulator_PatchClamp_values_max)
+
+
+        self.verticalLayout_173.addWidget(self.Emulator_PatchClamp_values_frame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_172.addWidget(self.Emulator_PatchClamp_frame)
+
+        self.Emulator_neuronparameters_top_line = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_neuronparameters_top_line.setObjectName(u"Emulator_neuronparameters_top_line")
+        self.Emulator_neuronparameters_top_line.setAutoFillBackground(False)
+        self.Emulator_neuronparameters_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_neuronparameters_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_neuronparameters_top_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_172.addWidget(self.Emulator_neuronparameters_top_line)
+
+        self.Emulator_Noise_frame = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_Noise_frame.setObjectName(u"Emulator_Noise_frame")
+        self.Emulator_Noise_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_176 = QVBoxLayout(self.Emulator_Noise_frame)
+        self.verticalLayout_176.setSpacing(0)
+        self.verticalLayout_176.setObjectName(u"verticalLayout_176")
+        self.verticalLayout_176.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Noise_label_frame = QFrame(self.Emulator_Noise_frame)
+        self.Emulator_Noise_label_frame.setObjectName(u"Emulator_Noise_label_frame")
+        self.Emulator_Noise_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_459 = QHBoxLayout(self.Emulator_Noise_label_frame)
+        self.horizontalLayout_459.setSpacing(0)
+        self.horizontalLayout_459.setObjectName(u"horizontalLayout_459")
+        self.horizontalLayout_459.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_label = QLabel(self.Emulator_Noise_label_frame)
+        self.Emulator_Noise_label.setObjectName(u"Emulator_Noise_label")
+        self.Emulator_Noise_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_459.addWidget(self.Emulator_Noise_label)
+
+
+        self.verticalLayout_176.addWidget(self.Emulator_Noise_label_frame)
+
+        self.Emulator_Noise_checkBox_frame = QFrame(self.Emulator_Noise_frame)
+        self.Emulator_Noise_checkBox_frame.setObjectName(u"Emulator_Noise_checkBox_frame")
+        self.Emulator_Noise_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_177 = QVBoxLayout(self.Emulator_Noise_checkBox_frame)
+        self.verticalLayout_177.setSpacing(0)
+        self.verticalLayout_177.setObjectName(u"verticalLayout_177")
+        self.verticalLayout_177.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_Title_frame = QFrame(self.Emulator_Noise_checkBox_frame)
+        self.Emulator_Noise_Title_frame.setObjectName(u"Emulator_Noise_Title_frame")
+        self.Emulator_Noise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_460 = QHBoxLayout(self.Emulator_Noise_Title_frame)
+        self.horizontalLayout_460.setSpacing(0)
+        self.horizontalLayout_460.setObjectName(u"horizontalLayout_460")
+        self.horizontalLayout_460.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_toggle_frame = QFrame(self.Emulator_Noise_Title_frame)
+        self.Emulator_Noise_toggle_frame.setObjectName(u"Emulator_Noise_toggle_frame")
+        self.Emulator_Noise_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Noise_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Noise_toggle_layout = QHBoxLayout(self.Emulator_Noise_toggle_frame)
+        self.Emulator_Noise_toggle_layout.setSpacing(0)
+        self.Emulator_Noise_toggle_layout.setObjectName(u"Emulator_Noise_toggle_layout")
+        self.Emulator_Noise_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_460.addWidget(self.Emulator_Noise_toggle_frame)
+
+        self.Emulator_Noise_Label_frame = QFrame(self.Emulator_Noise_Title_frame)
+        self.Emulator_Noise_Label_frame.setObjectName(u"Emulator_Noise_Label_frame")
+        self.Emulator_Noise_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_461 = QHBoxLayout(self.Emulator_Noise_Label_frame)
+        self.horizontalLayout_461.setSpacing(0)
+        self.horizontalLayout_461.setObjectName(u"horizontalLayout_461")
+        self.horizontalLayout_461.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_Label = QLabel(self.Emulator_Noise_Label_frame)
+        self.Emulator_Noise_Label.setObjectName(u"Emulator_Noise_Label")
+
+        self.horizontalLayout_461.addWidget(self.Emulator_Noise_Label)
+
+
+        self.horizontalLayout_460.addWidget(self.Emulator_Noise_Label_frame)
+
+
+        self.verticalLayout_177.addWidget(self.Emulator_Noise_Title_frame)
+
+        self.Emulator_Noise_readings_frame = QFrame(self.Emulator_Noise_checkBox_frame)
+        self.Emulator_Noise_readings_frame.setObjectName(u"Emulator_Noise_readings_frame")
+        self.Emulator_Noise_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticaLayout_75 = QVBoxLayout(self.Emulator_Noise_readings_frame)
+        self.verticaLayout_75.setSpacing(0)
+        self.verticaLayout_75.setObjectName(u"verticaLayout_75")
+        self.verticaLayout_75.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_readings = QLabel(self.Emulator_Noise_readings_frame)
+        self.Emulator_Noise_readings.setObjectName(u"Emulator_Noise_readings")
+        self.Emulator_Noise_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticaLayout_75.addWidget(self.Emulator_Noise_readings)
+
+
+        self.verticalLayout_177.addWidget(self.Emulator_Noise_readings_frame)
+
+
+        self.verticalLayout_176.addWidget(self.Emulator_Noise_checkBox_frame)
+
+        self.Emulator_Noise_slider_frame = QFrame(self.Emulator_Noise_frame)
+        self.Emulator_Noise_slider_frame.setObjectName(u"Emulator_Noise_slider_frame")
+        self.Emulator_Noise_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_462 = QHBoxLayout(self.Emulator_Noise_slider_frame)
+        self.horizontalLayout_462.setSpacing(0)
+        self.horizontalLayout_462.setObjectName(u"horizontalLayout_462")
+        self.horizontalLayout_462.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_slider = QSlider(self.Emulator_Noise_slider_frame)
+        self.Emulator_Noise_slider.setObjectName(u"Emulator_Noise_slider")
+        self.Emulator_Noise_slider.setEnabled(False)
+        self.Emulator_Noise_slider.setMaximum(100)
+        self.Emulator_Noise_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Noise_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Noise_slider.setTickInterval(10)
+
+        self.horizontalLayout_462.addWidget(self.Emulator_Noise_slider)
+
+
+        self.verticalLayout_176.addWidget(self.Emulator_Noise_slider_frame)
+
+        self.Emulator_Noise_value_frame = QFrame(self.Emulator_Noise_frame)
+        self.Emulator_Noise_value_frame.setObjectName(u"Emulator_Noise_value_frame")
+        self.Emulator_Noise_value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Noise_value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_463 = QHBoxLayout(self.Emulator_Noise_value_frame)
+        self.horizontalLayout_463.setSpacing(0)
+        self.horizontalLayout_463.setObjectName(u"horizontalLayout_463")
+        self.horizontalLayout_463.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Noise_0_value = QLabel(self.Emulator_Noise_value_frame)
+        self.Emulator_Noise_0_value.setObjectName(u"Emulator_Noise_0_value")
+        self.Emulator_Noise_0_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_463.addWidget(self.Emulator_Noise_0_value, 0, Qt.AlignLeft)
+
+        self.Emulator_Noise_max_value = QLabel(self.Emulator_Noise_value_frame)
+        self.Emulator_Noise_max_value.setObjectName(u"Emulator_Noise_max_value")
+        self.Emulator_Noise_max_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_463.addWidget(self.Emulator_Noise_max_value, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_176.addWidget(self.Emulator_Noise_value_frame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_172.addWidget(self.Emulator_Noise_frame)
+
+        self.Emulator_neuronparameters_middle_line = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_neuronparameters_middle_line.setObjectName(u"Emulator_neuronparameters_middle_line")
+        self.Emulator_neuronparameters_middle_line.setAutoFillBackground(False)
+        self.Emulator_neuronparameters_middle_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_neuronparameters_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_neuronparameters_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_172.addWidget(self.Emulator_neuronparameters_middle_line)
+
+        self.Emulator_Synapse1_frame = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_Synapse1_frame.setObjectName(u"Emulator_Synapse1_frame")
+        self.Emulator_Synapse1_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_178 = QVBoxLayout(self.Emulator_Synapse1_frame)
+        self.verticalLayout_178.setSpacing(0)
+        self.verticalLayout_178.setObjectName(u"verticalLayout_178")
+        self.verticalLayout_178.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Synapse1_label_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_label_frame.setObjectName(u"Emulator_Synapse1_label_frame")
+        self.Emulator_Synapse1_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_464 = QHBoxLayout(self.Emulator_Synapse1_label_frame)
+        self.horizontalLayout_464.setSpacing(0)
+        self.horizontalLayout_464.setObjectName(u"horizontalLayout_464")
+        self.horizontalLayout_464.setContentsMargins(0, 0, 0, 10)
+        self.Emulator_Synapse1_label = QLabel(self.Emulator_Synapse1_label_frame)
+        self.Emulator_Synapse1_label.setObjectName(u"Emulator_Synapse1_label")
+        self.Emulator_Synapse1_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_464.addWidget(self.Emulator_Synapse1_label)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_label_frame)
+
+        self.Emulator_Synapse1_checkBox_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_checkBox_frame.setObjectName(u"Emulator_Synapse1_checkBox_frame")
+        self.Emulator_Synapse1_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_179 = QVBoxLayout(self.Emulator_Synapse1_checkBox_frame)
+        self.verticalLayout_179.setSpacing(0)
+        self.verticalLayout_179.setObjectName(u"verticalLayout_179")
+        self.verticalLayout_179.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Title = QFrame(self.Emulator_Synapse1_checkBox_frame)
+        self.Emulator_Synapse1_Title.setObjectName(u"Emulator_Synapse1_Title")
+        self.Emulator_Synapse1_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_465 = QHBoxLayout(self.Emulator_Synapse1_Title)
+        self.horizontalLayout_465.setSpacing(0)
+        self.horizontalLayout_465.setObjectName(u"horizontalLayout_465")
+        self.horizontalLayout_465.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_toggle_frame = QFrame(self.Emulator_Synapse1_Title)
+        self.Emulator_Synapse1_toggle_frame.setObjectName(u"Emulator_Synapse1_toggle_frame")
+        self.Emulator_Synapse1_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Synapse1_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Synapse1_toggle_layout = QHBoxLayout(self.Emulator_Synapse1_toggle_frame)
+        self.Emulator_Synapse1_toggle_layout.setSpacing(0)
+        self.Emulator_Synapse1_toggle_layout.setObjectName(u"Emulator_Synapse1_toggle_layout")
+        self.Emulator_Synapse1_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_465.addWidget(self.Emulator_Synapse1_toggle_frame)
+
+        self.Emulator_Synapse1_Label_frame = QFrame(self.Emulator_Synapse1_Title)
+        self.Emulator_Synapse1_Label_frame.setObjectName(u"Emulator_Synapse1_Label_frame")
+        self.Emulator_Synapse1_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_466 = QHBoxLayout(self.Emulator_Synapse1_Label_frame)
+        self.horizontalLayout_466.setSpacing(0)
+        self.horizontalLayout_466.setObjectName(u"horizontalLayout_466")
+        self.horizontalLayout_466.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Label = QLabel(self.Emulator_Synapse1_Label_frame)
+        self.Emulator_Synapse1_Label.setObjectName(u"Emulator_Synapse1_Label")
+
+        self.horizontalLayout_466.addWidget(self.Emulator_Synapse1_Label)
+
+
+        self.horizontalLayout_465.addWidget(self.Emulator_Synapse1_Label_frame)
+
+
+        self.verticalLayout_179.addWidget(self.Emulator_Synapse1_Title)
+
+        self.Emulator_Synapse1_readings_frame = QFrame(self.Emulator_Synapse1_checkBox_frame)
+        self.Emulator_Synapse1_readings_frame.setObjectName(u"Emulator_Synapse1_readings_frame")
+        self.Emulator_Synapse1_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_180 = QVBoxLayout(self.Emulator_Synapse1_readings_frame)
+        self.verticalLayout_180.setSpacing(0)
+        self.verticalLayout_180.setObjectName(u"verticalLayout_180")
+        self.verticalLayout_180.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_readings = QLabel(self.Emulator_Synapse1_readings_frame)
+        self.Emulator_Synapse1_readings.setObjectName(u"Emulator_Synapse1_readings")
+        self.Emulator_Synapse1_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_180.addWidget(self.Emulator_Synapse1_readings)
+
+
+        self.verticalLayout_179.addWidget(self.Emulator_Synapse1_readings_frame)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_checkBox_frame)
+
+        self.Emulator_Synapse1_slider_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_slider_frame.setObjectName(u"Emulator_Synapse1_slider_frame")
+        self.Emulator_Synapse1_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_467 = QHBoxLayout(self.Emulator_Synapse1_slider_frame)
+        self.horizontalLayout_467.setSpacing(0)
+        self.horizontalLayout_467.setObjectName(u"horizontalLayout_467")
+        self.horizontalLayout_467.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_slider = QSlider(self.Emulator_Synapse1_slider_frame)
+        self.Emulator_Synapse1_slider.setObjectName(u"Emulator_Synapse1_slider")
+        self.Emulator_Synapse1_slider.setEnabled(False)
+        self.Emulator_Synapse1_slider.setMinimum(-100)
+        self.Emulator_Synapse1_slider.setMaximum(100)
+        self.Emulator_Synapse1_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Synapse1_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Synapse1_slider.setTickInterval(20)
+
+        self.horizontalLayout_467.addWidget(self.Emulator_Synapse1_slider)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_slider_frame)
+
+        self.Emulator_Synapse1_values_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_values_frame.setObjectName(u"Emulator_Synapse1_values_frame")
+        self.Emulator_Synapse1_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_468 = QHBoxLayout(self.Emulator_Synapse1_values_frame)
+        self.horizontalLayout_468.setSpacing(0)
+        self.horizontalLayout_468.setObjectName(u"horizontalLayout_468")
+        self.horizontalLayout_468.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Synapse1_min = QLabel(self.Emulator_Synapse1_values_frame)
+        self.Emulator_Synapse1_min.setObjectName(u"Emulator_Synapse1_min")
+
+        self.horizontalLayout_468.addWidget(self.Emulator_Synapse1_min)
+
+        self.Emulator_Synapse1 = QLabel(self.Emulator_Synapse1_values_frame)
+        self.Emulator_Synapse1.setObjectName(u"Emulator_Synapse1")
+
+        self.horizontalLayout_468.addWidget(self.Emulator_Synapse1, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.Emulator_Synapse1_max = QLabel(self.Emulator_Synapse1_values_frame)
+        self.Emulator_Synapse1_max.setObjectName(u"Emulator_Synapse1_max")
+        self.Emulator_Synapse1_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_468.addWidget(self.Emulator_Synapse1_max)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_values_frame)
+
+        self.Emulator_Synapse1_Decay_checkBox_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_Decay_checkBox_frame.setObjectName(u"Emulator_Synapse1_Decay_checkBox_frame")
+        self.Emulator_Synapse1_Decay_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_181 = QVBoxLayout(self.Emulator_Synapse1_Decay_checkBox_frame)
+        self.verticalLayout_181.setSpacing(0)
+        self.verticalLayout_181.setObjectName(u"verticalLayout_181")
+        self.verticalLayout_181.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_Title = QFrame(self.Emulator_Synapse1_Decay_checkBox_frame)
+        self.Emulator_Synapse1_Decay_Title.setObjectName(u"Emulator_Synapse1_Decay_Title")
+        self.Emulator_Synapse1_Decay_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_469 = QHBoxLayout(self.Emulator_Synapse1_Decay_Title)
+        self.horizontalLayout_469.setSpacing(0)
+        self.horizontalLayout_469.setObjectName(u"horizontalLayout_469")
+        self.horizontalLayout_469.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_toggle_frame = QFrame(self.Emulator_Synapse1_Decay_Title)
+        self.Emulator_Synapse1_Decay_toggle_frame.setObjectName(u"Emulator_Synapse1_Decay_toggle_frame")
+        self.Emulator_Synapse1_Decay_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Synapse1_Decay_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Synapse1_Decay_toggle_layout = QHBoxLayout(self.Emulator_Synapse1_Decay_toggle_frame)
+        self.Emulator_Synapse1_Decay_toggle_layout.setSpacing(0)
+        self.Emulator_Synapse1_Decay_toggle_layout.setObjectName(u"Emulator_Synapse1_Decay_toggle_layout")
+        self.Emulator_Synapse1_Decay_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_469.addWidget(self.Emulator_Synapse1_Decay_toggle_frame)
+
+        self.Emulator_Synapse1_Decay_Label_frame = QFrame(self.Emulator_Synapse1_Decay_Title)
+        self.Emulator_Synapse1_Decay_Label_frame.setObjectName(u"Emulator_Synapse1_Decay_Label_frame")
+        self.Emulator_Synapse1_Decay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_470 = QHBoxLayout(self.Emulator_Synapse1_Decay_Label_frame)
+        self.horizontalLayout_470.setSpacing(0)
+        self.horizontalLayout_470.setObjectName(u"horizontalLayout_470")
+        self.horizontalLayout_470.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_Label = QLabel(self.Emulator_Synapse1_Decay_Label_frame)
+        self.Emulator_Synapse1_Decay_Label.setObjectName(u"Emulator_Synapse1_Decay_Label")
+
+        self.horizontalLayout_470.addWidget(self.Emulator_Synapse1_Decay_Label)
+
+
+        self.horizontalLayout_469.addWidget(self.Emulator_Synapse1_Decay_Label_frame)
+
+
+        self.verticalLayout_181.addWidget(self.Emulator_Synapse1_Decay_Title)
+
+        self.Emulator_Synapse1_Decay_readings_frame = QFrame(self.Emulator_Synapse1_Decay_checkBox_frame)
+        self.Emulator_Synapse1_Decay_readings_frame.setObjectName(u"Emulator_Synapse1_Decay_readings_frame")
+        self.Emulator_Synapse1_Decay_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_182 = QVBoxLayout(self.Emulator_Synapse1_Decay_readings_frame)
+        self.verticalLayout_182.setSpacing(0)
+        self.verticalLayout_182.setObjectName(u"verticalLayout_182")
+        self.verticalLayout_182.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_readings = QLabel(self.Emulator_Synapse1_Decay_readings_frame)
+        self.Emulator_Synapse1_Decay_readings.setObjectName(u"Emulator_Synapse1_Decay_readings")
+        self.Emulator_Synapse1_Decay_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_182.addWidget(self.Emulator_Synapse1_Decay_readings)
+
+
+        self.verticalLayout_181.addWidget(self.Emulator_Synapse1_Decay_readings_frame)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_Decay_checkBox_frame)
+
+        self.Emulator_Synapse1_Decay_slider_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_Decay_slider_frame.setObjectName(u"Emulator_Synapse1_Decay_slider_frame")
+        self.Emulator_Synapse1_Decay_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_183 = QVBoxLayout(self.Emulator_Synapse1_Decay_slider_frame)
+        self.verticalLayout_183.setSpacing(0)
+        self.verticalLayout_183.setObjectName(u"verticalLayout_183")
+        self.verticalLayout_183.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_slider = QSlider(self.Emulator_Synapse1_Decay_slider_frame)
+        self.Emulator_Synapse1_Decay_slider.setObjectName(u"Emulator_Synapse1_Decay_slider")
+        self.Emulator_Synapse1_Decay_slider.setEnabled(False)
+        self.Emulator_Synapse1_Decay_slider.setMinimum(975)
+        self.Emulator_Synapse1_Decay_slider.setMaximum(1000)
+        self.Emulator_Synapse1_Decay_slider.setSliderPosition(995)
+        self.Emulator_Synapse1_Decay_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Synapse1_Decay_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Synapse1_Decay_slider.setTickInterval(2)
+
+        self.verticalLayout_183.addWidget(self.Emulator_Synapse1_Decay_slider)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_Decay_slider_frame)
+
+        self.Emulator_Synapse1_Decay_values_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_Decay_values_frame.setObjectName(u"Emulator_Synapse1_Decay_values_frame")
+        self.Emulator_Synapse1_Decay_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_471 = QHBoxLayout(self.Emulator_Synapse1_Decay_values_frame)
+        self.horizontalLayout_471.setSpacing(0)
+        self.horizontalLayout_471.setObjectName(u"horizontalLayout_471")
+        self.horizontalLayout_471.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse1_Decay_values_slow = QLabel(self.Emulator_Synapse1_Decay_values_frame)
+        self.Emulator_Synapse1_Decay_values_slow.setObjectName(u"Emulator_Synapse1_Decay_values_slow")
+
+        self.horizontalLayout_471.addWidget(self.Emulator_Synapse1_Decay_values_slow)
+
+        self.Emulator_Synapse1_Decay_values_fast = QLabel(self.Emulator_Synapse1_Decay_values_frame)
+        self.Emulator_Synapse1_Decay_values_fast.setObjectName(u"Emulator_Synapse1_Decay_values_fast")
+        self.Emulator_Synapse1_Decay_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_471.addWidget(self.Emulator_Synapse1_Decay_values_fast)
+
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_Decay_values_frame)
+
+        self.Emulator_Synapse1_Decay_frame = QFrame(self.Emulator_Synapse1_frame)
+        self.Emulator_Synapse1_Decay_frame.setObjectName(u"Emulator_Synapse1_Decay_frame")
+        self.Emulator_Synapse1_Decay_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse1_Decay_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_472 = QHBoxLayout(self.Emulator_Synapse1_Decay_frame)
+        self.horizontalLayout_472.setSpacing(0)
+        self.horizontalLayout_472.setObjectName(u"horizontalLayout_472")
+        self.horizontalLayout_472.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_178.addWidget(self.Emulator_Synapse1_Decay_frame)
+
+
+        self.verticalLayout_172.addWidget(self.Emulator_Synapse1_frame)
+
+        self.Emulator_neuronparameters_bottom_line = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_neuronparameters_bottom_line.setObjectName(u"Emulator_neuronparameters_bottom_line")
+        self.Emulator_neuronparameters_bottom_line.setAutoFillBackground(False)
+        self.Emulator_neuronparameters_bottom_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_neuronparameters_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_neuronparameters_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_172.addWidget(self.Emulator_neuronparameters_bottom_line)
+
+        self.Emulator_Synapse2_frame = QFrame(self.Emulator_NeuronParameter_frame)
+        self.Emulator_Synapse2_frame.setObjectName(u"Emulator_Synapse2_frame")
+        self.Emulator_Synapse2_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_184 = QVBoxLayout(self.Emulator_Synapse2_frame)
+        self.verticalLayout_184.setSpacing(0)
+        self.verticalLayout_184.setObjectName(u"verticalLayout_184")
+        self.verticalLayout_184.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Synapse2_label_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_label_frame.setObjectName(u"Emulator_Synapse2_label_frame")
+        self.Emulator_Synapse2_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_473 = QHBoxLayout(self.Emulator_Synapse2_label_frame)
+        self.horizontalLayout_473.setSpacing(0)
+        self.horizontalLayout_473.setObjectName(u"horizontalLayout_473")
+        self.horizontalLayout_473.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Synapse2_label = QLabel(self.Emulator_Synapse2_label_frame)
+        self.Emulator_Synapse2_label.setObjectName(u"Emulator_Synapse2_label")
+        self.Emulator_Synapse2_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_473.addWidget(self.Emulator_Synapse2_label)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_label_frame)
+
+        self.Emulator_Synapse2_Title = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Title.setObjectName(u"Emulator_Synapse2_Title")
+        self.Emulator_Synapse2_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_474 = QHBoxLayout(self.Emulator_Synapse2_Title)
+        self.horizontalLayout_474.setSpacing(0)
+        self.horizontalLayout_474.setObjectName(u"horizontalLayout_474")
+        self.horizontalLayout_474.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_toggle_frame = QFrame(self.Emulator_Synapse2_Title)
+        self.Emulator_Synapse2_toggle_frame.setObjectName(u"Emulator_Synapse2_toggle_frame")
+        self.Emulator_Synapse2_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Synapse2_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Synapse2_toggle_layout = QHBoxLayout(self.Emulator_Synapse2_toggle_frame)
+        self.Emulator_Synapse2_toggle_layout.setSpacing(0)
+        self.Emulator_Synapse2_toggle_layout.setObjectName(u"Emulator_Synapse2_toggle_layout")
+        self.Emulator_Synapse2_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_474.addWidget(self.Emulator_Synapse2_toggle_frame)
+
+        self.Emulator_Synapse2_Label_frame = QFrame(self.Emulator_Synapse2_Title)
+        self.Emulator_Synapse2_Label_frame.setObjectName(u"Emulator_Synapse2_Label_frame")
+        self.Emulator_Synapse2_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_475 = QHBoxLayout(self.Emulator_Synapse2_Label_frame)
+        self.horizontalLayout_475.setSpacing(0)
+        self.horizontalLayout_475.setObjectName(u"horizontalLayout_475")
+        self.horizontalLayout_475.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Label = QLabel(self.Emulator_Synapse2_Label_frame)
+        self.Emulator_Synapse2_Label.setObjectName(u"Emulator_Synapse2_Label")
+
+        self.horizontalLayout_475.addWidget(self.Emulator_Synapse2_Label)
+
+
+        self.horizontalLayout_474.addWidget(self.Emulator_Synapse2_Label_frame)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Title)
+
+        self.Emulator_Synapse2_readings_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_readings_frame.setObjectName(u"Emulator_Synapse2_readings_frame")
+        self.Emulator_Synapse2_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_readings_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_476 = QHBoxLayout(self.Emulator_Synapse2_readings_frame)
+        self.horizontalLayout_476.setSpacing(0)
+        self.horizontalLayout_476.setObjectName(u"horizontalLayout_476")
+        self.horizontalLayout_476.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_readings = QLabel(self.Emulator_Synapse2_readings_frame)
+        self.Emulator_Synapse2_readings.setObjectName(u"Emulator_Synapse2_readings")
+        self.Emulator_Synapse2_readings.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_476.addWidget(self.Emulator_Synapse2_readings)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_readings_frame)
+
+        self.Emulator_Synapse2_checkBox_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_checkBox_frame.setObjectName(u"Emulator_Synapse2_checkBox_frame")
+        self.Emulator_Synapse2_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_Synapse2_Layout_2 = QHBoxLayout(self.Emulator_Synapse2_checkBox_frame)
+        self.Spikeling_Synapse2_Layout_2.setSpacing(0)
+        self.Spikeling_Synapse2_Layout_2.setObjectName(u"Spikeling_Synapse2_Layout_2")
+        self.Spikeling_Synapse2_Layout_2.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_checkBox_frame)
+
+        self.Emulator_Synapse2_slider_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_slider_frame.setObjectName(u"Emulator_Synapse2_slider_frame")
+        self.Emulator_Synapse2_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_477 = QHBoxLayout(self.Emulator_Synapse2_slider_frame)
+        self.horizontalLayout_477.setSpacing(0)
+        self.horizontalLayout_477.setObjectName(u"horizontalLayout_477")
+        self.horizontalLayout_477.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_slider = QSlider(self.Emulator_Synapse2_slider_frame)
+        self.Emulator_Synapse2_slider.setObjectName(u"Emulator_Synapse2_slider")
+        self.Emulator_Synapse2_slider.setEnabled(False)
+        self.Emulator_Synapse2_slider.setMinimum(-100)
+        self.Emulator_Synapse2_slider.setMaximum(100)
+        self.Emulator_Synapse2_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Synapse2_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Synapse2_slider.setTickInterval(20)
+
+        self.horizontalLayout_477.addWidget(self.Emulator_Synapse2_slider)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_slider_frame)
+
+        self.Emulator_Synapse2_values_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_values_frame.setObjectName(u"Emulator_Synapse2_values_frame")
+        self.Emulator_Synapse2_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_478 = QHBoxLayout(self.Emulator_Synapse2_values_frame)
+        self.horizontalLayout_478.setSpacing(0)
+        self.horizontalLayout_478.setObjectName(u"horizontalLayout_478")
+        self.horizontalLayout_478.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Synapse2_min = QLabel(self.Emulator_Synapse2_values_frame)
+        self.Emulator_Synapse2_min.setObjectName(u"Emulator_Synapse2_min")
+
+        self.horizontalLayout_478.addWidget(self.Emulator_Synapse2_min)
+
+        self.Emulator_Synapse2 = QLabel(self.Emulator_Synapse2_values_frame)
+        self.Emulator_Synapse2.setObjectName(u"Emulator_Synapse2")
+        self.Emulator_Synapse2.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_478.addWidget(self.Emulator_Synapse2)
+
+        self.Emulator_Synapse2_max = QLabel(self.Emulator_Synapse2_values_frame)
+        self.Emulator_Synapse2_max.setObjectName(u"Emulator_Synapse2_max")
+        self.Emulator_Synapse2_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_478.addWidget(self.Emulator_Synapse2_max)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_values_frame, 0, Qt.AlignTop)
+
+        self.Emulator_Synapse2_Decay_Title = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Decay_Title.setObjectName(u"Emulator_Synapse2_Decay_Title")
+        self.Emulator_Synapse2_Decay_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_479 = QHBoxLayout(self.Emulator_Synapse2_Decay_Title)
+        self.horizontalLayout_479.setSpacing(0)
+        self.horizontalLayout_479.setObjectName(u"horizontalLayout_479")
+        self.horizontalLayout_479.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Decay_toggle_frame = QFrame(self.Emulator_Synapse2_Decay_Title)
+        self.Emulator_Synapse2_Decay_toggle_frame.setObjectName(u"Emulator_Synapse2_Decay_toggle_frame")
+        self.Emulator_Synapse2_Decay_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Synapse2_Decay_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Synapse2_Decay_toggle_layout = QHBoxLayout(self.Emulator_Synapse2_Decay_toggle_frame)
+        self.Emulator_Synapse2_Decay_toggle_layout.setSpacing(0)
+        self.Emulator_Synapse2_Decay_toggle_layout.setObjectName(u"Emulator_Synapse2_Decay_toggle_layout")
+        self.Emulator_Synapse2_Decay_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_479.addWidget(self.Emulator_Synapse2_Decay_toggle_frame)
+
+        self.Emulator_Synapse2_Decay_Label_frame = QFrame(self.Emulator_Synapse2_Decay_Title)
+        self.Emulator_Synapse2_Decay_Label_frame.setObjectName(u"Emulator_Synapse2_Decay_Label_frame")
+        self.Emulator_Synapse2_Decay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_480 = QHBoxLayout(self.Emulator_Synapse2_Decay_Label_frame)
+        self.horizontalLayout_480.setSpacing(0)
+        self.horizontalLayout_480.setObjectName(u"horizontalLayout_480")
+        self.horizontalLayout_480.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Decay_Label = QLabel(self.Emulator_Synapse2_Decay_Label_frame)
+        self.Emulator_Synapse2_Decay_Label.setObjectName(u"Emulator_Synapse2_Decay_Label")
+
+        self.horizontalLayout_480.addWidget(self.Emulator_Synapse2_Decay_Label)
+
+
+        self.horizontalLayout_479.addWidget(self.Emulator_Synapse2_Decay_Label_frame)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Decay_Title)
+
+        self.Emulator_Synapse2_Decay_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Decay_frame.setObjectName(u"Emulator_Synapse2_Decay_frame")
+        sizePolicy3.setHeightForWidth(self.Emulator_Synapse2_Decay_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_Synapse2_Decay_frame.setSizePolicy(sizePolicy3)
+        self.Emulator_Synapse2_Decay_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_Synapse2_Decay_Layout_2 = QHBoxLayout(self.Emulator_Synapse2_Decay_frame)
+        self.Spikeling_Synapse2_Decay_Layout_2.setSpacing(0)
+        self.Spikeling_Synapse2_Decay_Layout_2.setObjectName(u"Spikeling_Synapse2_Decay_Layout_2")
+        self.Spikeling_Synapse2_Decay_Layout_2.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Decay_readings = QLabel(self.Emulator_Synapse2_Decay_frame)
+        self.Emulator_Synapse2_Decay_readings.setObjectName(u"Emulator_Synapse2_Decay_readings")
+        self.Emulator_Synapse2_Decay_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_Synapse2_Decay_Layout_2.addWidget(self.Emulator_Synapse2_Decay_readings)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Decay_frame)
+
+        self.Emulator_Synapse2_Decay_readings_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Decay_readings_frame.setObjectName(u"Emulator_Synapse2_Decay_readings_frame")
+        self.Emulator_Synapse2_Decay_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_185 = QVBoxLayout(self.Emulator_Synapse2_Decay_readings_frame)
+        self.verticalLayout_185.setSpacing(0)
+        self.verticalLayout_185.setObjectName(u"verticalLayout_185")
+        self.verticalLayout_185.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Decay_readings_frame)
+
+        self.Emulator_Synapse2_Decay_slider_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Decay_slider_frame.setObjectName(u"Emulator_Synapse2_Decay_slider_frame")
+        self.Emulator_Synapse2_Decay_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_186 = QVBoxLayout(self.Emulator_Synapse2_Decay_slider_frame)
+        self.verticalLayout_186.setSpacing(0)
+        self.verticalLayout_186.setObjectName(u"verticalLayout_186")
+        self.verticalLayout_186.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Decay_slider = QSlider(self.Emulator_Synapse2_Decay_slider_frame)
+        self.Emulator_Synapse2_Decay_slider.setObjectName(u"Emulator_Synapse2_Decay_slider")
+        self.Emulator_Synapse2_Decay_slider.setEnabled(False)
+        self.Emulator_Synapse2_Decay_slider.setMinimum(975)
+        self.Emulator_Synapse2_Decay_slider.setMaximum(1000)
+        self.Emulator_Synapse2_Decay_slider.setPageStep(10)
+        self.Emulator_Synapse2_Decay_slider.setValue(995)
+        self.Emulator_Synapse2_Decay_slider.setSliderPosition(995)
+        self.Emulator_Synapse2_Decay_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Synapse2_Decay_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Synapse2_Decay_slider.setTickInterval(2)
+
+        self.verticalLayout_186.addWidget(self.Emulator_Synapse2_Decay_slider)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Decay_slider_frame)
+
+        self.Emulator_Synapse2_Decay_values_frame = QFrame(self.Emulator_Synapse2_frame)
+        self.Emulator_Synapse2_Decay_values_frame.setObjectName(u"Emulator_Synapse2_Decay_values_frame")
+        self.Emulator_Synapse2_Decay_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Synapse2_Decay_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_481 = QHBoxLayout(self.Emulator_Synapse2_Decay_values_frame)
+        self.horizontalLayout_481.setSpacing(0)
+        self.horizontalLayout_481.setObjectName(u"horizontalLayout_481")
+        self.horizontalLayout_481.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Synapse2_Decay_values_slow = QLabel(self.Emulator_Synapse2_Decay_values_frame)
+        self.Emulator_Synapse2_Decay_values_slow.setObjectName(u"Emulator_Synapse2_Decay_values_slow")
+
+        self.horizontalLayout_481.addWidget(self.Emulator_Synapse2_Decay_values_slow)
+
+        self.Emulator_Synapse2_Decay_values_fast = QLabel(self.Emulator_Synapse2_Decay_values_frame)
+        self.Emulator_Synapse2_Decay_values_fast.setObjectName(u"Emulator_Synapse2_Decay_values_fast")
+        self.Emulator_Synapse2_Decay_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_481.addWidget(self.Emulator_Synapse2_Decay_values_fast)
+
+
+        self.verticalLayout_184.addWidget(self.Emulator_Synapse2_Decay_values_frame)
+
+
+        self.verticalLayout_172.addWidget(self.Emulator_Synapse2_frame)
+
+
+        self.verticalLayout_171.addWidget(self.Emulator_NeuronParameter_frame)
+
+        self.Emulator_parameter_stackedwidget.addWidget(self.Emulator_NeuronParameter_page)
+        self.Emulator_Synapse1Parameter_page = QWidget()
+        self.Emulator_Synapse1Parameter_page.setObjectName(u"Emulator_Synapse1Parameter_page")
+        self.verticalLayout_208 = QVBoxLayout(self.Emulator_Synapse1Parameter_page)
+        self.verticalLayout_208.setSpacing(0)
+        self.verticalLayout_208.setObjectName(u"verticalLayout_208")
+        self.verticalLayout_208.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Parameter_frame = QFrame(self.Emulator_Synapse1Parameter_page)
+        self.Emulator_Syn1_Parameter_frame.setObjectName(u"Emulator_Syn1_Parameter_frame")
+        sizePolicy2.setHeightForWidth(self.Emulator_Syn1_Parameter_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_Syn1_Parameter_frame.setSizePolicy(sizePolicy2)
+        self.Emulator_Syn1_Parameter_frame.setMinimumSize(QSize(200, 0))
+        self.Emulator_Syn1_Parameter_frame.setMaximumSize(QSize(175, 16777215))
+        self.Emulator_Syn1_Parameter_frame.setStyleSheet(u"")
+        self.Emulator_Syn1_Parameter_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Parameter_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_218 = QVBoxLayout(self.Emulator_Syn1_Parameter_frame)
+        self.verticalLayout_218.setSpacing(0)
+        self.verticalLayout_218.setObjectName(u"verticalLayout_218")
+        self.verticalLayout_218.setContentsMargins(0, 5, 0, 0)
+        self.Emulator_Syn1_MainTitle_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_MainTitle_frame.setObjectName(u"Emulator_Syn1_MainTitle_frame")
+        self.Emulator_Syn1_MainTitle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_MainTitle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_529 = QHBoxLayout(self.Emulator_Syn1_MainTitle_frame)
+        self.horizontalLayout_529.setSpacing(0)
+        self.horizontalLayout_529.setObjectName(u"horizontalLayout_529")
+        self.horizontalLayout_529.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_PatchClamp_label_4 = QLabel(self.Emulator_Syn1_MainTitle_frame)
+        self.Emulator_PatchClamp_label_4.setObjectName(u"Emulator_PatchClamp_label_4")
+        self.Emulator_PatchClamp_label_4.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.horizontalLayout_529.addWidget(self.Emulator_PatchClamp_label_4)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_MainTitle_frame)
+
+        self.line_73 = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.line_73.setObjectName(u"line_73")
+        self.line_73.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_73.setFrameShape(QFrame.Shape.HLine)
+        self.line_73.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_218.addWidget(self.line_73)
+
+        self.Emulator_Syn1_NeuronMode_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_NeuronMode_frame.setObjectName(u"Emulator_Syn1_NeuronMode_frame")
+        self.Emulator_Syn1_NeuronMode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_NeuronMode_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_220 = QVBoxLayout(self.Emulator_Syn1_NeuronMode_frame)
+        self.verticalLayout_220.setSpacing(0)
+        self.verticalLayout_220.setObjectName(u"verticalLayout_220")
+        self.verticalLayout_220.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn1_Mode_label_frame = QFrame(self.Emulator_Syn1_NeuronMode_frame)
+        self.Emulator_Syn1_Mode_label_frame.setObjectName(u"Emulator_Syn1_Mode_label_frame")
+        self.Emulator_Syn1_Mode_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Mode_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_223 = QVBoxLayout(self.Emulator_Syn1_Mode_label_frame)
+        self.verticalLayout_223.setSpacing(0)
+        self.verticalLayout_223.setObjectName(u"verticalLayout_223")
+        self.verticalLayout_223.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Mode_label_frame_2 = QLabel(self.Emulator_Syn1_Mode_label_frame)
+        self.Emulator_Syn1_Mode_label_frame_2.setObjectName(u"Emulator_Syn1_Mode_label_frame_2")
+        font7 = QFont()
+        font7.setPointSize(14)
+        self.Emulator_Syn1_Mode_label_frame_2.setFont(font7)
+        self.Emulator_Syn1_Mode_label_frame_2.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.verticalLayout_223.addWidget(self.Emulator_Syn1_Mode_label_frame_2, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_220.addWidget(self.Emulator_Syn1_Mode_label_frame)
+
+        self.Emulator_Syn1_Mode_comboBox_frame = QFrame(self.Emulator_Syn1_NeuronMode_frame)
+        self.Emulator_Syn1_Mode_comboBox_frame.setObjectName(u"Emulator_Syn1_Mode_comboBox_frame")
+        self.Emulator_Syn1_Mode_comboBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Mode_comboBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_225 = QVBoxLayout(self.Emulator_Syn1_Mode_comboBox_frame)
+        self.verticalLayout_225.setSpacing(0)
+        self.verticalLayout_225.setObjectName(u"verticalLayout_225")
+        self.verticalLayout_225.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Mode_comboBox = QComboBox(self.Emulator_Syn1_Mode_comboBox_frame)
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.addItem("")
+        self.Emulator_Syn1_Mode_comboBox.setObjectName(u"Emulator_Syn1_Mode_comboBox")
+        self.Emulator_Syn1_Mode_comboBox.setFont(font1)
+        self.Emulator_Syn1_Mode_comboBox.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.verticalLayout_225.addWidget(self.Emulator_Syn1_Mode_comboBox)
+
+
+        self.verticalLayout_220.addWidget(self.Emulator_Syn1_Mode_comboBox_frame)
+
+        self.Emulator_Syn1_Mode_pushButton_frame = QFrame(self.Emulator_Syn1_NeuronMode_frame)
+        self.Emulator_Syn1_Mode_pushButton_frame.setObjectName(u"Emulator_Syn1_Mode_pushButton_frame")
+        self.Emulator_Syn1_Mode_pushButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Mode_pushButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_540 = QHBoxLayout(self.Emulator_Syn1_Mode_pushButton_frame)
+        self.horizontalLayout_540.setSpacing(5)
+        self.horizontalLayout_540.setObjectName(u"horizontalLayout_540")
+        self.horizontalLayout_540.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Mode_Browse_pushButton = QPushButton(self.Emulator_Syn1_Mode_pushButton_frame)
+        self.Emulator_Syn1_Mode_Browse_pushButton.setObjectName(u"Emulator_Syn1_Mode_Browse_pushButton")
+        font8 = QFont()
+        font8.setPointSize(10)
+        self.Emulator_Syn1_Mode_Browse_pushButton.setFont(font8)
+        self.Emulator_Syn1_Mode_Browse_pushButton.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.horizontalLayout_540.addWidget(self.Emulator_Syn1_Mode_Browse_pushButton)
+
+        self.Emulator_Syn1_Mode_Apply_pushButton = QPushButton(self.Emulator_Syn1_Mode_pushButton_frame)
+        self.Emulator_Syn1_Mode_Apply_pushButton.setObjectName(u"Emulator_Syn1_Mode_Apply_pushButton")
+        self.Emulator_Syn1_Mode_Apply_pushButton.setFont(font8)
+        self.Emulator_Syn1_Mode_Apply_pushButton.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.horizontalLayout_540.addWidget(self.Emulator_Syn1_Mode_Apply_pushButton)
+
+
+        self.verticalLayout_220.addWidget(self.Emulator_Syn1_Mode_pushButton_frame)
+
+        self.Emulator_Syn1_Mode_Toggle_frame = QFrame(self.Emulator_Syn1_NeuronMode_frame)
+        self.Emulator_Syn1_Mode_Toggle_frame.setObjectName(u"Emulator_Syn1_Mode_Toggle_frame")
+        self.Emulator_Syn1_Mode_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Mode_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_541 = QHBoxLayout(self.Emulator_Syn1_Mode_Toggle_frame)
+        self.horizontalLayout_541.setSpacing(0)
+        self.horizontalLayout_541.setObjectName(u"horizontalLayout_541")
+        self.horizontalLayout_541.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Mode_ToggleButton_frame = QFrame(self.Emulator_Syn1_Mode_Toggle_frame)
+        self.Emulator_Syn1_Mode_ToggleButton_frame.setObjectName(u"Emulator_Syn1_Mode_ToggleButton_frame")
+        self.Emulator_Syn1_Mode_ToggleButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Mode_ToggleButton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_Mode_Toggle_layout = QVBoxLayout(self.Emulator_Syn1_Mode_ToggleButton_frame)
+        self.Emulator_Syn1_Mode_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_Mode_Toggle_layout.setObjectName(u"Emulator_Syn1_Mode_Toggle_layout")
+        self.Emulator_Syn1_Mode_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_541.addWidget(self.Emulator_Syn1_Mode_ToggleButton_frame)
+
+        self.Emulator_Syn1_Mode_Toggle_label = QLabel(self.Emulator_Syn1_Mode_Toggle_frame)
+        self.Emulator_Syn1_Mode_Toggle_label.setObjectName(u"Emulator_Syn1_Mode_Toggle_label")
+        self.Emulator_Syn1_Mode_Toggle_label.setFont(font8)
+        self.Emulator_Syn1_Mode_Toggle_label.setStyleSheet(u"color: rgb(203, 75, 22);")
+
+        self.horizontalLayout_541.addWidget(self.Emulator_Syn1_Mode_Toggle_label)
+
+
+        self.verticalLayout_220.addWidget(self.Emulator_Syn1_Mode_Toggle_frame)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_NeuronMode_frame)
+
+        self.Emulator_Syn1_top_line = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_top_line.setObjectName(u"Emulator_Syn1_top_line")
+        self.Emulator_Syn1_top_line.setAutoFillBackground(False)
+        self.Emulator_Syn1_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_Syn1_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn1_top_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_top_line)
+
+        self.Emulator_Syn1_PatchClamp_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_PatchClamp_frame.setObjectName(u"Emulator_Syn1_PatchClamp_frame")
+        self.Emulator_Syn1_PatchClamp_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_PatchClamp_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_226 = QVBoxLayout(self.Emulator_Syn1_PatchClamp_frame)
+        self.verticalLayout_226.setSpacing(0)
+        self.verticalLayout_226.setObjectName(u"verticalLayout_226")
+        self.verticalLayout_226.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn1_PatchClamp_Title_label_frame = QFrame(self.Emulator_Syn1_PatchClamp_frame)
+        self.Emulator_Syn1_PatchClamp_Title_label_frame.setObjectName(u"Emulator_Syn1_PatchClamp_Title_label_frame")
+        self.Emulator_Syn1_PatchClamp_Title_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_Title_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_542 = QHBoxLayout(self.Emulator_Syn1_PatchClamp_Title_label_frame)
+        self.horizontalLayout_542.setSpacing(0)
+        self.horizontalLayout_542.setObjectName(u"horizontalLayout_542")
+        self.horizontalLayout_542.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_Title_label = QLabel(self.Emulator_Syn1_PatchClamp_Title_label_frame)
+        self.Emulator_Syn1_PatchClamp_Title_label.setObjectName(u"Emulator_Syn1_PatchClamp_Title_label")
+        self.Emulator_Syn1_PatchClamp_Title_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_542.addWidget(self.Emulator_Syn1_PatchClamp_Title_label)
+
+
+        self.verticalLayout_226.addWidget(self.Emulator_Syn1_PatchClamp_Title_label_frame)
+
+        self.Emulator_Syn1_PatchClamp_Toggle_frame = QFrame(self.Emulator_Syn1_PatchClamp_frame)
+        self.Emulator_Syn1_PatchClamp_Toggle_frame.setObjectName(u"Emulator_Syn1_PatchClamp_Toggle_frame")
+        self.Emulator_Syn1_PatchClamp_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_227 = QVBoxLayout(self.Emulator_Syn1_PatchClamp_Toggle_frame)
+        self.verticalLayout_227.setSpacing(0)
+        self.verticalLayout_227.setObjectName(u"verticalLayout_227")
+        self.verticalLayout_227.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_Toggle_frame_2 = QFrame(self.Emulator_Syn1_PatchClamp_Toggle_frame)
+        self.Emulator_Syn1_PatchClamp_Toggle_frame_2.setObjectName(u"Emulator_Syn1_PatchClamp_Toggle_frame_2")
+        self.Emulator_Syn1_PatchClamp_Toggle_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_Toggle_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_543 = QHBoxLayout(self.Emulator_Syn1_PatchClamp_Toggle_frame_2)
+        self.horizontalLayout_543.setSpacing(0)
+        self.horizontalLayout_543.setObjectName(u"horizontalLayout_543")
+        self.horizontalLayout_543.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_ToggleButton_frame = QFrame(self.Emulator_Syn1_PatchClamp_Toggle_frame_2)
+        self.Emulator_Syn1_PatchClamp_ToggleButton_frame.setObjectName(u"Emulator_Syn1_PatchClamp_ToggleButton_frame")
+        self.Emulator_Syn1_PatchClamp_ToggleButton_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn1_PatchClamp_ToggleButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_ToggleButton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_PatchClamp_Toggle_layout = QHBoxLayout(self.Emulator_Syn1_PatchClamp_ToggleButton_frame)
+        self.Emulator_Syn1_PatchClamp_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_PatchClamp_Toggle_layout.setObjectName(u"Emulator_Syn1_PatchClamp_Toggle_layout")
+        self.Emulator_Syn1_PatchClamp_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_543.addWidget(self.Emulator_Syn1_PatchClamp_ToggleButton_frame)
+
+        self.Emulator_Syn1_PatchClamp_label_frame = QFrame(self.Emulator_Syn1_PatchClamp_Toggle_frame_2)
+        self.Emulator_Syn1_PatchClamp_label_frame.setObjectName(u"Emulator_Syn1_PatchClamp_label_frame")
+        self.Emulator_Syn1_PatchClamp_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_545 = QHBoxLayout(self.Emulator_Syn1_PatchClamp_label_frame)
+        self.horizontalLayout_545.setSpacing(0)
+        self.horizontalLayout_545.setObjectName(u"horizontalLayout_545")
+        self.horizontalLayout_545.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_label = QLabel(self.Emulator_Syn1_PatchClamp_label_frame)
+        self.Emulator_Syn1_PatchClamp_label.setObjectName(u"Emulator_Syn1_PatchClamp_label")
+        self.Emulator_Syn1_PatchClamp_label.setStyleSheet(u"")
+
+        self.horizontalLayout_545.addWidget(self.Emulator_Syn1_PatchClamp_label)
+
+
+        self.horizontalLayout_543.addWidget(self.Emulator_Syn1_PatchClamp_label_frame)
+
+
+        self.verticalLayout_227.addWidget(self.Emulator_Syn1_PatchClamp_Toggle_frame_2)
+
+        self.Emulator_Syn1_PatchClamp_readings_frame = QFrame(self.Emulator_Syn1_PatchClamp_Toggle_frame)
+        self.Emulator_Syn1_PatchClamp_readings_frame.setObjectName(u"Emulator_Syn1_PatchClamp_readings_frame")
+        self.Emulator_Syn1_PatchClamp_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticaLayout_78 = QVBoxLayout(self.Emulator_Syn1_PatchClamp_readings_frame)
+        self.verticaLayout_78.setSpacing(0)
+        self.verticaLayout_78.setObjectName(u"verticaLayout_78")
+        self.verticaLayout_78.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_readings = QLabel(self.Emulator_Syn1_PatchClamp_readings_frame)
+        self.Emulator_Syn1_PatchClamp_readings.setObjectName(u"Emulator_Syn1_PatchClamp_readings")
+        self.Emulator_Syn1_PatchClamp_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticaLayout_78.addWidget(self.Emulator_Syn1_PatchClamp_readings)
+
+
+        self.verticalLayout_227.addWidget(self.Emulator_Syn1_PatchClamp_readings_frame)
+
+
+        self.verticalLayout_226.addWidget(self.Emulator_Syn1_PatchClamp_Toggle_frame)
+
+        self.Emulator_Syn1_PatchClamp_slider_frame = QFrame(self.Emulator_Syn1_PatchClamp_frame)
+        self.Emulator_Syn1_PatchClamp_slider_frame.setObjectName(u"Emulator_Syn1_PatchClamp_slider_frame")
+        self.Emulator_Syn1_PatchClamp_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_546 = QHBoxLayout(self.Emulator_Syn1_PatchClamp_slider_frame)
+        self.horizontalLayout_546.setSpacing(0)
+        self.horizontalLayout_546.setObjectName(u"horizontalLayout_546")
+        self.horizontalLayout_546.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_slider = QSlider(self.Emulator_Syn1_PatchClamp_slider_frame)
+        self.Emulator_Syn1_PatchClamp_slider.setObjectName(u"Emulator_Syn1_PatchClamp_slider")
+        self.Emulator_Syn1_PatchClamp_slider.setEnabled(False)
+        self.Emulator_Syn1_PatchClamp_slider.setMaximum(100)
+        self.Emulator_Syn1_PatchClamp_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn1_PatchClamp_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn1_PatchClamp_slider.setTickInterval(10)
+
+        self.horizontalLayout_546.addWidget(self.Emulator_Syn1_PatchClamp_slider)
+
+
+        self.verticalLayout_226.addWidget(self.Emulator_Syn1_PatchClamp_slider_frame)
+
+        self.Emulator_Syn1_PatchClamp_value_frame = QFrame(self.Emulator_Syn1_PatchClamp_frame)
+        self.Emulator_Syn1_PatchClamp_value_frame.setObjectName(u"Emulator_Syn1_PatchClamp_value_frame")
+        self.Emulator_Syn1_PatchClamp_value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PatchClamp_value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_547 = QHBoxLayout(self.Emulator_Syn1_PatchClamp_value_frame)
+        self.horizontalLayout_547.setSpacing(0)
+        self.horizontalLayout_547.setObjectName(u"horizontalLayout_547")
+        self.horizontalLayout_547.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PatchClamp_min_value = QLabel(self.Emulator_Syn1_PatchClamp_value_frame)
+        self.Emulator_Syn1_PatchClamp_min_value.setObjectName(u"Emulator_Syn1_PatchClamp_min_value")
+        self.Emulator_Syn1_PatchClamp_min_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_547.addWidget(self.Emulator_Syn1_PatchClamp_min_value, 0, Qt.AlignLeft)
+
+        self.Emulator_Syn1_PatchClamp_0_value = QLabel(self.Emulator_Syn1_PatchClamp_value_frame)
+        self.Emulator_Syn1_PatchClamp_0_value.setObjectName(u"Emulator_Syn1_PatchClamp_0_value")
+
+        self.horizontalLayout_547.addWidget(self.Emulator_Syn1_PatchClamp_0_value, 0, Qt.AlignHCenter)
+
+        self.Emulator_Syn1_PatchClamp_max_value = QLabel(self.Emulator_Syn1_PatchClamp_value_frame)
+        self.Emulator_Syn1_PatchClamp_max_value.setObjectName(u"Emulator_Syn1_PatchClamp_max_value")
+        self.Emulator_Syn1_PatchClamp_max_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_547.addWidget(self.Emulator_Syn1_PatchClamp_max_value, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_226.addWidget(self.Emulator_Syn1_PatchClamp_value_frame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_PatchClamp_frame)
+
+        self.Emulator_Syn1_middle_line = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_middle_line.setObjectName(u"Emulator_Syn1_middle_line")
+        self.Emulator_Syn1_middle_line.setAutoFillBackground(False)
+        self.Emulator_Syn1_middle_line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn1_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_middle_line)
+
+        self.Emulator_Syn1_Noise_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_Noise_frame.setObjectName(u"Emulator_Syn1_Noise_frame")
+        self.Emulator_Syn1_Noise_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_Noise_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_228 = QVBoxLayout(self.Emulator_Syn1_Noise_frame)
+        self.verticalLayout_228.setSpacing(0)
+        self.verticalLayout_228.setObjectName(u"verticalLayout_228")
+        self.verticalLayout_228.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn1_Noise_Title_frame = QFrame(self.Emulator_Syn1_Noise_frame)
+        self.Emulator_Syn1_Noise_Title_frame.setObjectName(u"Emulator_Syn1_Noise_Title_frame")
+        self.Emulator_Syn1_Noise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_549 = QHBoxLayout(self.Emulator_Syn1_Noise_Title_frame)
+        self.horizontalLayout_549.setSpacing(0)
+        self.horizontalLayout_549.setObjectName(u"horizontalLayout_549")
+        self.horizontalLayout_549.setContentsMargins(0, 0, 0, 10)
+        self.Emulator_Syn1_Noise_Title = QLabel(self.Emulator_Syn1_Noise_Title_frame)
+        self.Emulator_Syn1_Noise_Title.setObjectName(u"Emulator_Syn1_Noise_Title")
+        self.Emulator_Syn1_Noise_Title.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_549.addWidget(self.Emulator_Syn1_Noise_Title)
+
+
+        self.verticalLayout_228.addWidget(self.Emulator_Syn1_Noise_Title_frame)
+
+        self.Emulator_Syn1_Noise_checkBox_frame = QFrame(self.Emulator_Syn1_Noise_frame)
+        self.Emulator_Syn1_Noise_checkBox_frame.setObjectName(u"Emulator_Syn1_Noise_checkBox_frame")
+        self.Emulator_Syn1_Noise_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_229 = QVBoxLayout(self.Emulator_Syn1_Noise_checkBox_frame)
+        self.verticalLayout_229.setSpacing(0)
+        self.verticalLayout_229.setObjectName(u"verticalLayout_229")
+        self.verticalLayout_229.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Noise_Toggle_frame = QFrame(self.Emulator_Syn1_Noise_checkBox_frame)
+        self.Emulator_Syn1_Noise_Toggle_frame.setObjectName(u"Emulator_Syn1_Noise_Toggle_frame")
+        self.Emulator_Syn1_Noise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_550 = QHBoxLayout(self.Emulator_Syn1_Noise_Toggle_frame)
+        self.horizontalLayout_550.setSpacing(0)
+        self.horizontalLayout_550.setObjectName(u"horizontalLayout_550")
+        self.horizontalLayout_550.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Noise_Togglebutton_frame = QFrame(self.Emulator_Syn1_Noise_Toggle_frame)
+        self.Emulator_Syn1_Noise_Togglebutton_frame.setObjectName(u"Emulator_Syn1_Noise_Togglebutton_frame")
+        self.Emulator_Syn1_Noise_Togglebutton_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn1_Noise_Togglebutton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_Togglebutton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_Noise_Toggle_layout = QHBoxLayout(self.Emulator_Syn1_Noise_Togglebutton_frame)
+        self.Emulator_Syn1_Noise_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_Noise_Toggle_layout.setObjectName(u"Emulator_Syn1_Noise_Toggle_layout")
+        self.Emulator_Syn1_Noise_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_550.addWidget(self.Emulator_Syn1_Noise_Togglebutton_frame)
+
+        self.Emulator_Syn1_Noise_Toggle_label_frame = QFrame(self.Emulator_Syn1_Noise_Toggle_frame)
+        self.Emulator_Syn1_Noise_Toggle_label_frame.setObjectName(u"Emulator_Syn1_Noise_Toggle_label_frame")
+        self.Emulator_Syn1_Noise_Toggle_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_Toggle_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_551 = QHBoxLayout(self.Emulator_Syn1_Noise_Toggle_label_frame)
+        self.horizontalLayout_551.setSpacing(0)
+        self.horizontalLayout_551.setObjectName(u"horizontalLayout_551")
+        self.horizontalLayout_551.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Noise_Toggle_label = QLabel(self.Emulator_Syn1_Noise_Toggle_label_frame)
+        self.Emulator_Syn1_Noise_Toggle_label.setObjectName(u"Emulator_Syn1_Noise_Toggle_label")
+
+        self.horizontalLayout_551.addWidget(self.Emulator_Syn1_Noise_Toggle_label)
+
+
+        self.horizontalLayout_550.addWidget(self.Emulator_Syn1_Noise_Toggle_label_frame)
+
+
+        self.verticalLayout_229.addWidget(self.Emulator_Syn1_Noise_Toggle_frame)
+
+        self.Emulator_Syn1_Noise_readings_frame = QFrame(self.Emulator_Syn1_Noise_checkBox_frame)
+        self.Emulator_Syn1_Noise_readings_frame.setObjectName(u"Emulator_Syn1_Noise_readings_frame")
+        self.Emulator_Syn1_Noise_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_230 = QVBoxLayout(self.Emulator_Syn1_Noise_readings_frame)
+        self.verticalLayout_230.setSpacing(0)
+        self.verticalLayout_230.setObjectName(u"verticalLayout_230")
+        self.verticalLayout_230.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Noise_readings = QLabel(self.Emulator_Syn1_Noise_readings_frame)
+        self.Emulator_Syn1_Noise_readings.setObjectName(u"Emulator_Syn1_Noise_readings")
+        self.Emulator_Syn1_Noise_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_230.addWidget(self.Emulator_Syn1_Noise_readings)
+
+
+        self.verticalLayout_229.addWidget(self.Emulator_Syn1_Noise_readings_frame)
+
+
+        self.verticalLayout_228.addWidget(self.Emulator_Syn1_Noise_checkBox_frame)
+
+        self.Emulator_Syn1_Noise_slider_frame = QFrame(self.Emulator_Syn1_Noise_frame)
+        self.Emulator_Syn1_Noise_slider_frame.setObjectName(u"Emulator_Syn1_Noise_slider_frame")
+        self.Emulator_Syn1_Noise_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_552 = QHBoxLayout(self.Emulator_Syn1_Noise_slider_frame)
+        self.horizontalLayout_552.setSpacing(0)
+        self.horizontalLayout_552.setObjectName(u"horizontalLayout_552")
+        self.horizontalLayout_552.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Noise_slider = QSlider(self.Emulator_Syn1_Noise_slider_frame)
+        self.Emulator_Syn1_Noise_slider.setObjectName(u"Emulator_Syn1_Noise_slider")
+        self.Emulator_Syn1_Noise_slider.setEnabled(False)
+        self.Emulator_Syn1_Noise_slider.setMinimum(0)
+        self.Emulator_Syn1_Noise_slider.setMaximum(100)
+        self.Emulator_Syn1_Noise_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn1_Noise_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn1_Noise_slider.setTickInterval(10)
+
+        self.horizontalLayout_552.addWidget(self.Emulator_Syn1_Noise_slider)
+
+
+        self.verticalLayout_228.addWidget(self.Emulator_Syn1_Noise_slider_frame)
+
+        self.Emulator_Syn1_Noise_values_frame = QFrame(self.Emulator_Syn1_Noise_frame)
+        self.Emulator_Syn1_Noise_values_frame.setObjectName(u"Emulator_Syn1_Noise_values_frame")
+        self.Emulator_Syn1_Noise_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Noise_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_553 = QHBoxLayout(self.Emulator_Syn1_Noise_values_frame)
+        self.horizontalLayout_553.setSpacing(0)
+        self.horizontalLayout_553.setObjectName(u"horizontalLayout_553")
+        self.horizontalLayout_553.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Syn1_Noise_values_0 = QLabel(self.Emulator_Syn1_Noise_values_frame)
+        self.Emulator_Syn1_Noise_values_0.setObjectName(u"Emulator_Syn1_Noise_values_0")
+
+        self.horizontalLayout_553.addWidget(self.Emulator_Syn1_Noise_values_0)
+
+        self.Emulator_Syn1_Noise_values_max = QLabel(self.Emulator_Syn1_Noise_values_frame)
+        self.Emulator_Syn1_Noise_values_max.setObjectName(u"Emulator_Syn1_Noise_values_max")
+        self.Emulator_Syn1_Noise_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_553.addWidget(self.Emulator_Syn1_Noise_values_max)
+
+
+        self.verticalLayout_228.addWidget(self.Emulator_Syn1_Noise_values_frame)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_Noise_frame)
+
+        self.Emulator_Syn1_bottom_line = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_bottom_line.setObjectName(u"Emulator_Syn1_bottom_line")
+        self.Emulator_Syn1_bottom_line.setAutoFillBackground(False)
+        self.Emulator_Syn1_bottom_line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn1_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_bottom_line)
+
+        self.Emulator_Syn1_Stimulus_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_Stimulus_frame.setObjectName(u"Emulator_Syn1_Stimulus_frame")
+        self.Emulator_Syn1_Stimulus_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_Stimulus_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_231 = QVBoxLayout(self.Emulator_Syn1_Stimulus_frame)
+        self.verticalLayout_231.setSpacing(5)
+        self.verticalLayout_231.setObjectName(u"verticalLayout_231")
+        self.verticalLayout_231.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn1_Stimulus_label_frame = QFrame(self.Emulator_Syn1_Stimulus_frame)
+        self.Emulator_Syn1_Stimulus_label_frame.setObjectName(u"Emulator_Syn1_Stimulus_label_frame")
+        self.Emulator_Syn1_Stimulus_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_554 = QHBoxLayout(self.Emulator_Syn1_Stimulus_label_frame)
+        self.horizontalLayout_554.setSpacing(0)
+        self.horizontalLayout_554.setObjectName(u"horizontalLayout_554")
+        self.horizontalLayout_554.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Syn1_Stimulus_label = QLabel(self.Emulator_Syn1_Stimulus_label_frame)
+        self.Emulator_Syn1_Stimulus_label.setObjectName(u"Emulator_Syn1_Stimulus_label")
+        self.Emulator_Syn1_Stimulus_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_554.addWidget(self.Emulator_Syn1_Stimulus_label)
+
+
+        self.verticalLayout_231.addWidget(self.Emulator_Syn1_Stimulus_label_frame)
+
+        self.Emulator_Syn1_Stimulus_DC_frame = QFrame(self.Emulator_Syn1_Stimulus_frame)
+        self.Emulator_Syn1_Stimulus_DC_frame.setObjectName(u"Emulator_Syn1_Stimulus_DC_frame")
+        self.Emulator_Syn1_Stimulus_DC_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_DC_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_555 = QHBoxLayout(self.Emulator_Syn1_Stimulus_DC_frame)
+        self.horizontalLayout_555.setSpacing(0)
+        self.horizontalLayout_555.setObjectName(u"horizontalLayout_555")
+        self.horizontalLayout_555.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_frame = QFrame(self.Emulator_Syn1_Stimulus_DC_frame)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_frame.setObjectName(u"Emulator_Syn1_Stimulus_DC_Toggle_frame")
+        self.Emulator_Syn1_Stimulus_DC_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_layout = QVBoxLayout(self.Emulator_Syn1_Stimulus_DC_Toggle_frame)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_Stimulus_DC_Toggle_layout.setObjectName(u"Emulator_Syn1_Stimulus_DC_Toggle_layout")
+        self.Emulator_Syn1_Stimulus_DC_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_555.addWidget(self.Emulator_Syn1_Stimulus_DC_Toggle_frame)
+
+        self.Emulator_Syn1_Stimulus_DC_label_frame = QFrame(self.Emulator_Syn1_Stimulus_DC_frame)
+        self.Emulator_Syn1_Stimulus_DC_label_frame.setObjectName(u"Emulator_Syn1_Stimulus_DC_label_frame")
+        self.Emulator_Syn1_Stimulus_DC_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_DC_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_232 = QVBoxLayout(self.Emulator_Syn1_Stimulus_DC_label_frame)
+        self.verticalLayout_232.setSpacing(0)
+        self.verticalLayout_232.setObjectName(u"verticalLayout_232")
+        self.verticalLayout_232.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Stimulus_DC_label = QLabel(self.Emulator_Syn1_Stimulus_DC_label_frame)
+        self.Emulator_Syn1_Stimulus_DC_label.setObjectName(u"Emulator_Syn1_Stimulus_DC_label")
+        self.Emulator_Syn1_Stimulus_DC_label.setWordWrap(True)
+
+        self.verticalLayout_232.addWidget(self.Emulator_Syn1_Stimulus_DC_label)
+
+
+        self.horizontalLayout_555.addWidget(self.Emulator_Syn1_Stimulus_DC_label_frame)
+
+
+        self.verticalLayout_231.addWidget(self.Emulator_Syn1_Stimulus_DC_frame)
+
+        self.Emulator_Syn1_Stimulus_Light_frame = QFrame(self.Emulator_Syn1_Stimulus_frame)
+        self.Emulator_Syn1_Stimulus_Light_frame.setObjectName(u"Emulator_Syn1_Stimulus_Light_frame")
+        self.Emulator_Syn1_Stimulus_Light_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_Light_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_556 = QHBoxLayout(self.Emulator_Syn1_Stimulus_Light_frame)
+        self.horizontalLayout_556.setSpacing(0)
+        self.horizontalLayout_556.setObjectName(u"horizontalLayout_556")
+        self.horizontalLayout_556.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_frame = QFrame(self.Emulator_Syn1_Stimulus_Light_frame)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_frame.setObjectName(u"Emulator_Syn1_Stimulus_Light_Toggle_frame")
+        self.Emulator_Syn1_Stimulus_Light_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_layout = QVBoxLayout(self.Emulator_Syn1_Stimulus_Light_Toggle_frame)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_Stimulus_Light_Toggle_layout.setObjectName(u"Emulator_Syn1_Stimulus_Light_Toggle_layout")
+        self.Emulator_Syn1_Stimulus_Light_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_556.addWidget(self.Emulator_Syn1_Stimulus_Light_Toggle_frame)
+
+        self.Emulator_Syn1_Stimulus_Light_label_frame = QFrame(self.Emulator_Syn1_Stimulus_Light_frame)
+        self.Emulator_Syn1_Stimulus_Light_label_frame.setObjectName(u"Emulator_Syn1_Stimulus_Light_label_frame")
+        self.Emulator_Syn1_Stimulus_Light_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_Stimulus_Light_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_233 = QVBoxLayout(self.Emulator_Syn1_Stimulus_Light_label_frame)
+        self.verticalLayout_233.setSpacing(0)
+        self.verticalLayout_233.setObjectName(u"verticalLayout_233")
+        self.verticalLayout_233.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_Stimulus_Light_label = QLabel(self.Emulator_Syn1_Stimulus_Light_label_frame)
+        self.Emulator_Syn1_Stimulus_Light_label.setObjectName(u"Emulator_Syn1_Stimulus_Light_label")
+
+        self.verticalLayout_233.addWidget(self.Emulator_Syn1_Stimulus_Light_label)
+
+
+        self.horizontalLayout_556.addWidget(self.Emulator_Syn1_Stimulus_Light_label_frame)
+
+
+        self.verticalLayout_231.addWidget(self.Emulator_Syn1_Stimulus_Light_frame)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_Stimulus_frame)
+
+        self.Emulator_Syn1_PhotoDiode_frame = QFrame(self.Emulator_Syn1_Parameter_frame)
+        self.Emulator_Syn1_PhotoDiode_frame.setObjectName(u"Emulator_Syn1_PhotoDiode_frame")
+        self.Emulator_Syn1_PhotoDiode_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn1_PhotoDiode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PhotoDiode_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_191 = QVBoxLayout(self.Emulator_Syn1_PhotoDiode_frame)
+        self.verticalLayout_191.setSpacing(0)
+        self.verticalLayout_191.setObjectName(u"verticalLayout_191")
+        self.verticalLayout_191.setContentsMargins(0, 0, 0, 0)
+        self.frame_24 = QFrame(self.Emulator_Syn1_PhotoDiode_frame)
+        self.frame_24.setObjectName(u"frame_24")
+        self.frame_24.setFrameShape(QFrame.StyledPanel)
+        self.frame_24.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_202 = QVBoxLayout(self.frame_24)
+        self.verticalLayout_202.setSpacing(0)
+        self.verticalLayout_202.setObjectName(u"verticalLayout_202")
+        self.verticalLayout_202.setContentsMargins(0, 5, 0, 5)
+
+        self.verticalLayout_191.addWidget(self.frame_24)
+
+        self.Emulator_Syn1_PR_frame = QFrame(self.Emulator_Syn1_PhotoDiode_frame)
+        self.Emulator_Syn1_PR_frame.setObjectName(u"Emulator_Syn1_PR_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_Syn1_PR_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_Syn1_PR_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_Syn1_PR_frame.setStyleSheet(u"")
+        self.Emulator_Syn1_PR_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_194 = QVBoxLayout(self.Emulator_Syn1_PR_frame)
+        self.verticalLayout_194.setSpacing(0)
+        self.verticalLayout_194.setObjectName(u"verticalLayout_194")
+        self.verticalLayout_194.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn1_PR_Title_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Title_frame.setObjectName(u"Emulator_Syn1_PR_Title_frame")
+        self.Emulator_Syn1_PR_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_500 = QHBoxLayout(self.Emulator_Syn1_PR_Title_frame)
+        self.horizontalLayout_500.setSpacing(0)
+        self.horizontalLayout_500.setObjectName(u"horizontalLayout_500")
+        self.horizontalLayout_500.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_toggle_frame = QFrame(self.Emulator_Syn1_PR_Title_frame)
+        self.Emulator_Syn1_PR_toggle_frame.setObjectName(u"Emulator_Syn1_PR_toggle_frame")
+        self.Emulator_Syn1_PR_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn1_PR_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_PhotoGain_toggle_layout = QHBoxLayout(self.Emulator_Syn1_PR_toggle_frame)
+        self.Emulator_Syn1_PhotoGain_toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_PhotoGain_toggle_layout.setObjectName(u"Emulator_Syn1_PhotoGain_toggle_layout")
+        self.Emulator_Syn1_PhotoGain_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_500.addWidget(self.Emulator_Syn1_PR_toggle_frame)
+
+        self.Emulator_Syn1_PR_Label_frame = QFrame(self.Emulator_Syn1_PR_Title_frame)
+        self.Emulator_Syn1_PR_Label_frame.setObjectName(u"Emulator_Syn1_PR_Label_frame")
+        self.Emulator_Syn1_PR_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_501 = QHBoxLayout(self.Emulator_Syn1_PR_Label_frame)
+        self.horizontalLayout_501.setSpacing(0)
+        self.horizontalLayout_501.setObjectName(u"horizontalLayout_501")
+        self.horizontalLayout_501.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Label = QLabel(self.Emulator_Syn1_PR_Label_frame)
+        self.Emulator_Syn1_PR_Label.setObjectName(u"Emulator_Syn1_PR_Label")
+
+        self.horizontalLayout_501.addWidget(self.Emulator_Syn1_PR_Label)
+
+
+        self.horizontalLayout_500.addWidget(self.Emulator_Syn1_PR_Label_frame)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Title_frame)
+
+        self.Emulator_Syn1_PR_Photogain_readings_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Photogain_readings_frame.setObjectName(u"Emulator_Syn1_PR_Photogain_readings_frame")
+        self.Emulator_Syn1_PR_Photogain_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Photogain_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_PhotoGain_Layout_3 = QHBoxLayout(self.Emulator_Syn1_PR_Photogain_readings_frame)
+        self.Spikeling_PR_PhotoGain_Layout_3.setSpacing(0)
+        self.Spikeling_PR_PhotoGain_Layout_3.setObjectName(u"Spikeling_PR_PhotoGain_Layout_3")
+        self.Spikeling_PR_PhotoGain_Layout_3.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Photogain_readings = QLabel(self.Emulator_Syn1_PR_Photogain_readings_frame)
+        self.Emulator_Syn1_PR_Photogain_readings.setObjectName(u"Emulator_Syn1_PR_Photogain_readings")
+        self.Emulator_Syn1_PR_Photogain_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_PhotoGain_Layout_3.addWidget(self.Emulator_Syn1_PR_Photogain_readings)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Photogain_readings_frame)
+
+        self.Emulator_Syn1_PR_PhotoGain_slider_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_PhotoGain_slider_frame.setObjectName(u"Emulator_Syn1_PR_PhotoGain_slider_frame")
+        self.Emulator_Syn1_PR_PhotoGain_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_PhotoGain_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_502 = QHBoxLayout(self.Emulator_Syn1_PR_PhotoGain_slider_frame)
+        self.horizontalLayout_502.setSpacing(0)
+        self.horizontalLayout_502.setObjectName(u"horizontalLayout_502")
+        self.horizontalLayout_502.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_PhotoGain_slider = QSlider(self.Emulator_Syn1_PR_PhotoGain_slider_frame)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setObjectName(u"Emulator_Syn1_PR_PhotoGain_slider")
+        self.Emulator_Syn1_PR_PhotoGain_slider.setEnabled(False)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setMinimum(-100)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setMaximum(100)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setSingleStep(1)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setPageStep(10)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn1_PR_PhotoGain_slider.setTickInterval(20)
+
+        self.horizontalLayout_502.addWidget(self.Emulator_Syn1_PR_PhotoGain_slider)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_PhotoGain_slider_frame)
+
+        self.Emulator_Syn1_PR_PhotoGain_values_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_PhotoGain_values_frame.setObjectName(u"Emulator_Syn1_PR_PhotoGain_values_frame")
+        self.Emulator_Syn1_PR_PhotoGain_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_PhotoGain_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_503 = QHBoxLayout(self.Emulator_Syn1_PR_PhotoGain_values_frame)
+        self.horizontalLayout_503.setSpacing(0)
+        self.horizontalLayout_503.setObjectName(u"horizontalLayout_503")
+        self.horizontalLayout_503.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_PhotoGain_values_min = QLabel(self.Emulator_Syn1_PR_PhotoGain_values_frame)
+        self.Emulator_Syn1_PR_PhotoGain_values_min.setObjectName(u"Emulator_Syn1_PR_PhotoGain_values_min")
+
+        self.horizontalLayout_503.addWidget(self.Emulator_Syn1_PR_PhotoGain_values_min)
+
+        self.Emulator_Syn1_PR_PhotoGain_values = QLabel(self.Emulator_Syn1_PR_PhotoGain_values_frame)
+        self.Emulator_Syn1_PR_PhotoGain_values.setObjectName(u"Emulator_Syn1_PR_PhotoGain_values")
+
+        self.horizontalLayout_503.addWidget(self.Emulator_Syn1_PR_PhotoGain_values, 0, Qt.AlignHCenter)
+
+        self.Emulator_Syn1_PR_PhotoGain_values_max = QLabel(self.Emulator_Syn1_PR_PhotoGain_values_frame)
+        self.Emulator_Syn1_PR_PhotoGain_values_max.setObjectName(u"Emulator_Syn1_PR_PhotoGain_values_max")
+        self.Emulator_Syn1_PR_PhotoGain_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_503.addWidget(self.Emulator_Syn1_PR_PhotoGain_values_max)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_PhotoGain_values_frame, 0, Qt.AlignTop)
+
+        self.Emulator_Syn1_PRDecay_Title = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PRDecay_Title.setObjectName(u"Emulator_Syn1_PRDecay_Title")
+        self.Emulator_Syn1_PRDecay_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRDecay_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_504 = QHBoxLayout(self.Emulator_Syn1_PRDecay_Title)
+        self.horizontalLayout_504.setSpacing(0)
+        self.horizontalLayout_504.setObjectName(u"horizontalLayout_504")
+        self.horizontalLayout_504.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PRDecay_Toggle_frame = QFrame(self.Emulator_Syn1_PRDecay_Title)
+        self.Emulator_Syn1_PRDecay_Toggle_frame.setObjectName(u"Emulator_Syn1_PRDecay_Toggle_frame")
+        self.Emulator_Syn1_PRDecay_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn1_PRDecay_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRDecay_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_PhotoDecay_toggle_layout = QHBoxLayout(self.Emulator_Syn1_PRDecay_Toggle_frame)
+        self.Emulator_Syn1_PhotoDecay_toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_PhotoDecay_toggle_layout.setObjectName(u"Emulator_Syn1_PhotoDecay_toggle_layout")
+        self.Emulator_Syn1_PhotoDecay_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_504.addWidget(self.Emulator_Syn1_PRDecay_Toggle_frame)
+
+        self.Emulator_Syn1_PRDecay_Label_frame = QFrame(self.Emulator_Syn1_PRDecay_Title)
+        self.Emulator_Syn1_PRDecay_Label_frame.setObjectName(u"Emulator_Syn1_PRDecay_Label_frame")
+        self.Emulator_Syn1_PRDecay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRDecay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_505 = QHBoxLayout(self.Emulator_Syn1_PRDecay_Label_frame)
+        self.horizontalLayout_505.setSpacing(0)
+        self.horizontalLayout_505.setObjectName(u"horizontalLayout_505")
+        self.horizontalLayout_505.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PRDecay_Label = QLabel(self.Emulator_Syn1_PRDecay_Label_frame)
+        self.Emulator_Syn1_PRDecay_Label.setObjectName(u"Emulator_Syn1_PRDecay_Label")
+
+        self.horizontalLayout_505.addWidget(self.Emulator_Syn1_PRDecay_Label)
+
+
+        self.horizontalLayout_504.addWidget(self.Emulator_Syn1_PRDecay_Label_frame)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PRDecay_Title)
+
+        self.Emulator_Syn1_PR_Decay_readings_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Decay_readings_frame.setObjectName(u"Emulator_Syn1_PR_Decay_readings_frame")
+        self.Emulator_Syn1_PR_Decay_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Decay_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Decay_Layout_3 = QHBoxLayout(self.Emulator_Syn1_PR_Decay_readings_frame)
+        self.Spikeling_PR_Decay_Layout_3.setSpacing(0)
+        self.Spikeling_PR_Decay_Layout_3.setObjectName(u"Spikeling_PR_Decay_Layout_3")
+        self.Spikeling_PR_Decay_Layout_3.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Decay_readings = QLabel(self.Emulator_Syn1_PR_Decay_readings_frame)
+        self.Emulator_Syn1_PR_Decay_readings.setObjectName(u"Emulator_Syn1_PR_Decay_readings")
+        self.Emulator_Syn1_PR_Decay_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_Decay_Layout_3.addWidget(self.Emulator_Syn1_PR_Decay_readings)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Decay_readings_frame)
+
+        self.Emulator_Syn1_PR_Decay_slider_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Decay_slider_frame.setObjectName(u"Emulator_Syn1_PR_Decay_slider_frame")
+        self.Emulator_Syn1_PR_Decay_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Decay_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_196 = QVBoxLayout(self.Emulator_Syn1_PR_Decay_slider_frame)
+        self.verticalLayout_196.setSpacing(0)
+        self.verticalLayout_196.setObjectName(u"verticalLayout_196")
+        self.verticalLayout_196.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Decay_slider = QSlider(self.Emulator_Syn1_PR_Decay_slider_frame)
+        self.Emulator_Syn1_PR_Decay_slider.setObjectName(u"Emulator_Syn1_PR_Decay_slider")
+        self.Emulator_Syn1_PR_Decay_slider.setEnabled(False)
+        self.Emulator_Syn1_PR_Decay_slider.setMinimum(10)
+        self.Emulator_Syn1_PR_Decay_slider.setMaximum(125)
+        self.Emulator_Syn1_PR_Decay_slider.setSingleStep(1)
+        self.Emulator_Syn1_PR_Decay_slider.setPageStep(10)
+        self.Emulator_Syn1_PR_Decay_slider.setValue(100)
+        self.Emulator_Syn1_PR_Decay_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn1_PR_Decay_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn1_PR_Decay_slider.setTickInterval(10)
+
+        self.verticalLayout_196.addWidget(self.Emulator_Syn1_PR_Decay_slider)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Decay_slider_frame)
+
+        self.Emulator_Syn1_PR_Decay_values_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Decay_values_frame.setObjectName(u"Emulator_Syn1_PR_Decay_values_frame")
+        self.Emulator_Syn1_PR_Decay_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Decay_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_506 = QHBoxLayout(self.Emulator_Syn1_PR_Decay_values_frame)
+        self.horizontalLayout_506.setSpacing(0)
+        self.horizontalLayout_506.setObjectName(u"horizontalLayout_506")
+        self.horizontalLayout_506.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Decay_values_slow = QLabel(self.Emulator_Syn1_PR_Decay_values_frame)
+        self.Emulator_Syn1_PR_Decay_values_slow.setObjectName(u"Emulator_Syn1_PR_Decay_values_slow")
+        self.Emulator_Syn1_PR_Decay_values_slow.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_506.addWidget(self.Emulator_Syn1_PR_Decay_values_slow)
+
+        self.Emulator_Syn1_PR_Decay_values_fast = QLabel(self.Emulator_Syn1_PR_Decay_values_frame)
+        self.Emulator_Syn1_PR_Decay_values_fast.setObjectName(u"Emulator_Syn1_PR_Decay_values_fast")
+        self.Emulator_Syn1_PR_Decay_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_506.addWidget(self.Emulator_Syn1_PR_Decay_values_fast)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Decay_values_frame)
+
+        self.Emulator_Syn1_PRRecovery_Title = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PRRecovery_Title.setObjectName(u"Emulator_Syn1_PRRecovery_Title")
+        self.Emulator_Syn1_PRRecovery_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRRecovery_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_507 = QHBoxLayout(self.Emulator_Syn1_PRRecovery_Title)
+        self.horizontalLayout_507.setSpacing(0)
+        self.horizontalLayout_507.setObjectName(u"horizontalLayout_507")
+        self.horizontalLayout_507.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PRRecovery_toggle_frame = QFrame(self.Emulator_Syn1_PRRecovery_Title)
+        self.Emulator_Syn1_PRRecovery_toggle_frame.setObjectName(u"Emulator_Syn1_PRRecovery_toggle_frame")
+        self.Emulator_Syn1_PRRecovery_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn1_PRRecovery_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRRecovery_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn1_PhotoRecovery_toggle_layout = QHBoxLayout(self.Emulator_Syn1_PRRecovery_toggle_frame)
+        self.Emulator_Syn1_PhotoRecovery_toggle_layout.setSpacing(0)
+        self.Emulator_Syn1_PhotoRecovery_toggle_layout.setObjectName(u"Emulator_Syn1_PhotoRecovery_toggle_layout")
+        self.Emulator_Syn1_PhotoRecovery_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_507.addWidget(self.Emulator_Syn1_PRRecovery_toggle_frame)
+
+        self.Emulator_Syn1_PRRecovery_Label_frame = QFrame(self.Emulator_Syn1_PRRecovery_Title)
+        self.Emulator_Syn1_PRRecovery_Label_frame.setObjectName(u"Emulator_Syn1_PRRecovery_Label_frame")
+        self.Emulator_Syn1_PRRecovery_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PRRecovery_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_508 = QHBoxLayout(self.Emulator_Syn1_PRRecovery_Label_frame)
+        self.horizontalLayout_508.setSpacing(0)
+        self.horizontalLayout_508.setObjectName(u"horizontalLayout_508")
+        self.horizontalLayout_508.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PRRecovery_Label = QLabel(self.Emulator_Syn1_PRRecovery_Label_frame)
+        self.Emulator_Syn1_PRRecovery_Label.setObjectName(u"Emulator_Syn1_PRRecovery_Label")
+
+        self.horizontalLayout_508.addWidget(self.Emulator_Syn1_PRRecovery_Label)
+
+
+        self.horizontalLayout_507.addWidget(self.Emulator_Syn1_PRRecovery_Label_frame)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PRRecovery_Title)
+
+        self.Emulator_Syn1_PR_Recovery_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Recovery_frame.setObjectName(u"Emulator_Syn1_PR_Recovery_frame")
+        self.Emulator_Syn1_PR_Recovery_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Recovery_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Recovery_Layout_3 = QHBoxLayout(self.Emulator_Syn1_PR_Recovery_frame)
+        self.Spikeling_PR_Recovery_Layout_3.setSpacing(0)
+        self.Spikeling_PR_Recovery_Layout_3.setObjectName(u"Spikeling_PR_Recovery_Layout_3")
+        self.Spikeling_PR_Recovery_Layout_3.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Recovery_readings_frame = QFrame(self.Emulator_Syn1_PR_Recovery_frame)
+        self.Emulator_Syn1_PR_Recovery_readings_frame.setObjectName(u"Emulator_Syn1_PR_Recovery_readings_frame")
+        self.Emulator_Syn1_PR_Recovery_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Recovery_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_197 = QVBoxLayout(self.Emulator_Syn1_PR_Recovery_readings_frame)
+        self.verticalLayout_197.setSpacing(0)
+        self.verticalLayout_197.setObjectName(u"verticalLayout_197")
+        self.verticalLayout_197.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Recovery_readings = QLabel(self.Emulator_Syn1_PR_Recovery_readings_frame)
+        self.Emulator_Syn1_PR_Recovery_readings.setObjectName(u"Emulator_Syn1_PR_Recovery_readings")
+        self.Emulator_Syn1_PR_Recovery_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_197.addWidget(self.Emulator_Syn1_PR_Recovery_readings)
+
+
+        self.Spikeling_PR_Recovery_Layout_3.addWidget(self.Emulator_Syn1_PR_Recovery_readings_frame)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Recovery_frame)
+
+        self.Emulator_Syn1_PR_Recovery_slider_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Recovery_slider_frame.setObjectName(u"Emulator_Syn1_PR_Recovery_slider_frame")
+        self.Emulator_Syn1_PR_Recovery_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Recovery_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_198 = QVBoxLayout(self.Emulator_Syn1_PR_Recovery_slider_frame)
+        self.verticalLayout_198.setSpacing(0)
+        self.verticalLayout_198.setObjectName(u"verticalLayout_198")
+        self.verticalLayout_198.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Recovery_slider = QSlider(self.Emulator_Syn1_PR_Recovery_slider_frame)
+        self.Emulator_Syn1_PR_Recovery_slider.setObjectName(u"Emulator_Syn1_PR_Recovery_slider")
+        self.Emulator_Syn1_PR_Recovery_slider.setEnabled(False)
+        self.Emulator_Syn1_PR_Recovery_slider.setMinimum(1)
+        self.Emulator_Syn1_PR_Recovery_slider.setMaximum(100)
+        self.Emulator_Syn1_PR_Recovery_slider.setSingleStep(1)
+        self.Emulator_Syn1_PR_Recovery_slider.setPageStep(10)
+        self.Emulator_Syn1_PR_Recovery_slider.setValue(25)
+        self.Emulator_Syn1_PR_Recovery_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn1_PR_Recovery_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn1_PR_Recovery_slider.setTickInterval(10)
+
+        self.verticalLayout_198.addWidget(self.Emulator_Syn1_PR_Recovery_slider)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Recovery_slider_frame)
+
+        self.Emulator_Syn1_PR_Recovery_values_frame = QFrame(self.Emulator_Syn1_PR_frame)
+        self.Emulator_Syn1_PR_Recovery_values_frame.setObjectName(u"Emulator_Syn1_PR_Recovery_values_frame")
+        self.Emulator_Syn1_PR_Recovery_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn1_PR_Recovery_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_509 = QHBoxLayout(self.Emulator_Syn1_PR_Recovery_values_frame)
+        self.horizontalLayout_509.setSpacing(0)
+        self.horizontalLayout_509.setObjectName(u"horizontalLayout_509")
+        self.horizontalLayout_509.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn1_PR_Recovery_values_slow = QLabel(self.Emulator_Syn1_PR_Recovery_values_frame)
+        self.Emulator_Syn1_PR_Recovery_values_slow.setObjectName(u"Emulator_Syn1_PR_Recovery_values_slow")
+
+        self.horizontalLayout_509.addWidget(self.Emulator_Syn1_PR_Recovery_values_slow)
+
+        self.Emulator_Syn1_PR_Recovery_values_fast = QLabel(self.Emulator_Syn1_PR_Recovery_values_frame)
+        self.Emulator_Syn1_PR_Recovery_values_fast.setObjectName(u"Emulator_Syn1_PR_Recovery_values_fast")
+        self.Emulator_Syn1_PR_Recovery_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_509.addWidget(self.Emulator_Syn1_PR_Recovery_values_fast)
+
+
+        self.verticalLayout_194.addWidget(self.Emulator_Syn1_PR_Recovery_values_frame)
+
+
+        self.verticalLayout_191.addWidget(self.Emulator_Syn1_PR_frame)
+
+
+        self.verticalLayout_218.addWidget(self.Emulator_Syn1_PhotoDiode_frame)
+
+
+        self.verticalLayout_208.addWidget(self.Emulator_Syn1_Parameter_frame)
+
+        self.Emulator_parameter_stackedwidget.addWidget(self.Emulator_Synapse1Parameter_page)
+        self.Emulator_Synapse2Parameter_page = QWidget()
+        self.Emulator_Synapse2Parameter_page.setObjectName(u"Emulator_Synapse2Parameter_page")
+        self.verticalLayout_224 = QVBoxLayout(self.Emulator_Synapse2Parameter_page)
+        self.verticalLayout_224.setSpacing(0)
+        self.verticalLayout_224.setObjectName(u"verticalLayout_224")
+        self.verticalLayout_224.setContentsMargins(0, 0, -1, 0)
+        self.Emulator_Syn2_Parameter_frame = QFrame(self.Emulator_Synapse2Parameter_page)
+        self.Emulator_Syn2_Parameter_frame.setObjectName(u"Emulator_Syn2_Parameter_frame")
+        sizePolicy2.setHeightForWidth(self.Emulator_Syn2_Parameter_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_Syn2_Parameter_frame.setSizePolicy(sizePolicy2)
+        self.Emulator_Syn2_Parameter_frame.setMinimumSize(QSize(200, 0))
+        self.Emulator_Syn2_Parameter_frame.setMaximumSize(QSize(175, 16777215))
+        self.Emulator_Syn2_Parameter_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Parameter_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_209 = QVBoxLayout(self.Emulator_Syn2_Parameter_frame)
+        self.verticalLayout_209.setSpacing(0)
+        self.verticalLayout_209.setObjectName(u"verticalLayout_209")
+        self.verticalLayout_209.setContentsMargins(0, 5, 0, 0)
+        self.Emulator_Syn2_MainTitle_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_MainTitle_frame.setObjectName(u"Emulator_Syn2_MainTitle_frame")
+        self.Emulator_Syn2_MainTitle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_MainTitle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_525 = QHBoxLayout(self.Emulator_Syn2_MainTitle_frame)
+        self.horizontalLayout_525.setSpacing(0)
+        self.horizontalLayout_525.setObjectName(u"horizontalLayout_525")
+        self.horizontalLayout_525.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_PatchClamp_label_3 = QLabel(self.Emulator_Syn2_MainTitle_frame)
+        self.Emulator_PatchClamp_label_3.setObjectName(u"Emulator_PatchClamp_label_3")
+        self.Emulator_PatchClamp_label_3.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.horizontalLayout_525.addWidget(self.Emulator_PatchClamp_label_3)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_MainTitle_frame)
+
+        self.line_72 = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.line_72.setObjectName(u"line_72")
+        self.line_72.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.line_72.setFrameShape(QFrame.Shape.HLine)
+        self.line_72.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_209.addWidget(self.line_72)
+
+        self.Emulator_Syn2_NeuronMode_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_NeuronMode_frame.setObjectName(u"Emulator_Syn2_NeuronMode_frame")
+        self.Emulator_Syn2_NeuronMode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_NeuronMode_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_210 = QVBoxLayout(self.Emulator_Syn2_NeuronMode_frame)
+        self.verticalLayout_210.setSpacing(0)
+        self.verticalLayout_210.setObjectName(u"verticalLayout_210")
+        self.verticalLayout_210.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn2_Mode_label_frame = QFrame(self.Emulator_Syn2_NeuronMode_frame)
+        self.Emulator_Syn2_Mode_label_frame.setObjectName(u"Emulator_Syn2_Mode_label_frame")
+        self.Emulator_Syn2_Mode_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Mode_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_211 = QVBoxLayout(self.Emulator_Syn2_Mode_label_frame)
+        self.verticalLayout_211.setSpacing(0)
+        self.verticalLayout_211.setObjectName(u"verticalLayout_211")
+        self.verticalLayout_211.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Mode_label_frame_2 = QLabel(self.Emulator_Syn2_Mode_label_frame)
+        self.Emulator_Syn2_Mode_label_frame_2.setObjectName(u"Emulator_Syn2_Mode_label_frame_2")
+        self.Emulator_Syn2_Mode_label_frame_2.setFont(font7)
+        self.Emulator_Syn2_Mode_label_frame_2.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.verticalLayout_211.addWidget(self.Emulator_Syn2_Mode_label_frame_2, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_210.addWidget(self.Emulator_Syn2_Mode_label_frame)
+
+        self.Emulator_Syn2_Mode_comboBox_frame = QFrame(self.Emulator_Syn2_NeuronMode_frame)
+        self.Emulator_Syn2_Mode_comboBox_frame.setObjectName(u"Emulator_Syn2_Mode_comboBox_frame")
+        self.Emulator_Syn2_Mode_comboBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Mode_comboBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_212 = QVBoxLayout(self.Emulator_Syn2_Mode_comboBox_frame)
+        self.verticalLayout_212.setSpacing(0)
+        self.verticalLayout_212.setObjectName(u"verticalLayout_212")
+        self.verticalLayout_212.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Mode_comboBox = QComboBox(self.Emulator_Syn2_Mode_comboBox_frame)
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.addItem("")
+        self.Emulator_Syn2_Mode_comboBox.setObjectName(u"Emulator_Syn2_Mode_comboBox")
+        self.Emulator_Syn2_Mode_comboBox.setFont(font1)
+        self.Emulator_Syn2_Mode_comboBox.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.verticalLayout_212.addWidget(self.Emulator_Syn2_Mode_comboBox)
+
+
+        self.verticalLayout_210.addWidget(self.Emulator_Syn2_Mode_comboBox_frame)
+
+        self.Emulator_Syn2_Mode_pushButton_frame = QFrame(self.Emulator_Syn2_NeuronMode_frame)
+        self.Emulator_Syn2_Mode_pushButton_frame.setObjectName(u"Emulator_Syn2_Mode_pushButton_frame")
+        self.Emulator_Syn2_Mode_pushButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Mode_pushButton_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_526 = QHBoxLayout(self.Emulator_Syn2_Mode_pushButton_frame)
+        self.horizontalLayout_526.setSpacing(5)
+        self.horizontalLayout_526.setObjectName(u"horizontalLayout_526")
+        self.horizontalLayout_526.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Mode_Browse_pushButton = QPushButton(self.Emulator_Syn2_Mode_pushButton_frame)
+        self.Emulator_Syn2_Mode_Browse_pushButton.setObjectName(u"Emulator_Syn2_Mode_Browse_pushButton")
+        self.Emulator_Syn2_Mode_Browse_pushButton.setFont(font8)
+        self.Emulator_Syn2_Mode_Browse_pushButton.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.horizontalLayout_526.addWidget(self.Emulator_Syn2_Mode_Browse_pushButton)
+
+        self.Emulator_Syn2_Mode_Apply_pushButton = QPushButton(self.Emulator_Syn2_Mode_pushButton_frame)
+        self.Emulator_Syn2_Mode_Apply_pushButton.setObjectName(u"Emulator_Syn2_Mode_Apply_pushButton")
+        self.Emulator_Syn2_Mode_Apply_pushButton.setFont(font8)
+        self.Emulator_Syn2_Mode_Apply_pushButton.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.horizontalLayout_526.addWidget(self.Emulator_Syn2_Mode_Apply_pushButton)
+
+
+        self.verticalLayout_210.addWidget(self.Emulator_Syn2_Mode_pushButton_frame)
+
+        self.Emulator_Syn2_Mode_Toggle_frame = QFrame(self.Emulator_Syn2_NeuronMode_frame)
+        self.Emulator_Syn2_Mode_Toggle_frame.setObjectName(u"Emulator_Syn2_Mode_Toggle_frame")
+        self.Emulator_Syn2_Mode_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Mode_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_527 = QHBoxLayout(self.Emulator_Syn2_Mode_Toggle_frame)
+        self.horizontalLayout_527.setSpacing(0)
+        self.horizontalLayout_527.setObjectName(u"horizontalLayout_527")
+        self.horizontalLayout_527.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Mode_ToggleButton_frame = QFrame(self.Emulator_Syn2_Mode_Toggle_frame)
+        self.Emulator_Syn2_Mode_ToggleButton_frame.setObjectName(u"Emulator_Syn2_Mode_ToggleButton_frame")
+        self.Emulator_Syn2_Mode_ToggleButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Mode_ToggleButton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_Mode_Toggle_layout = QVBoxLayout(self.Emulator_Syn2_Mode_ToggleButton_frame)
+        self.Emulator_Syn2_Mode_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_Mode_Toggle_layout.setObjectName(u"Emulator_Syn2_Mode_Toggle_layout")
+        self.Emulator_Syn2_Mode_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_527.addWidget(self.Emulator_Syn2_Mode_ToggleButton_frame)
+
+        self.Emulator_Syn2_Mode_Toggle_label = QLabel(self.Emulator_Syn2_Mode_Toggle_frame)
+        self.Emulator_Syn2_Mode_Toggle_label.setObjectName(u"Emulator_Syn2_Mode_Toggle_label")
+        self.Emulator_Syn2_Mode_Toggle_label.setFont(font8)
+        self.Emulator_Syn2_Mode_Toggle_label.setStyleSheet(u"color: rgb(181, 137, 0);")
+
+        self.horizontalLayout_527.addWidget(self.Emulator_Syn2_Mode_Toggle_label)
+
+
+        self.verticalLayout_210.addWidget(self.Emulator_Syn2_Mode_Toggle_frame)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_NeuronMode_frame)
+
+        self.Emulator_Syn2_top_line = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_top_line.setObjectName(u"Emulator_Syn2_top_line")
+        self.Emulator_Syn2_top_line.setAutoFillBackground(False)
+        self.Emulator_Syn2_top_line.setStyleSheet(u"background-color: rgb(0, 30, 38);")
+        self.Emulator_Syn2_top_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn2_top_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_top_line)
+
+        self.Emulator_Syn2_PatchClamp_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_PatchClamp_frame.setObjectName(u"Emulator_Syn2_PatchClamp_frame")
+        self.Emulator_Syn2_PatchClamp_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_PatchClamp_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_213 = QVBoxLayout(self.Emulator_Syn2_PatchClamp_frame)
+        self.verticalLayout_213.setSpacing(0)
+        self.verticalLayout_213.setObjectName(u"verticalLayout_213")
+        self.verticalLayout_213.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn2_PatchClamp_Title_label_frame = QFrame(self.Emulator_Syn2_PatchClamp_frame)
+        self.Emulator_Syn2_PatchClamp_Title_label_frame.setObjectName(u"Emulator_Syn2_PatchClamp_Title_label_frame")
+        self.Emulator_Syn2_PatchClamp_Title_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_Title_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_530 = QHBoxLayout(self.Emulator_Syn2_PatchClamp_Title_label_frame)
+        self.horizontalLayout_530.setSpacing(0)
+        self.horizontalLayout_530.setObjectName(u"horizontalLayout_530")
+        self.horizontalLayout_530.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_Title_label = QLabel(self.Emulator_Syn2_PatchClamp_Title_label_frame)
+        self.Emulator_Syn2_PatchClamp_Title_label.setObjectName(u"Emulator_Syn2_PatchClamp_Title_label")
+        self.Emulator_Syn2_PatchClamp_Title_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_530.addWidget(self.Emulator_Syn2_PatchClamp_Title_label)
+
+
+        self.verticalLayout_213.addWidget(self.Emulator_Syn2_PatchClamp_Title_label_frame)
+
+        self.Emulator_Syn2_PatchClamp_Toggle_frame = QFrame(self.Emulator_Syn2_PatchClamp_frame)
+        self.Emulator_Syn2_PatchClamp_Toggle_frame.setObjectName(u"Emulator_Syn2_PatchClamp_Toggle_frame")
+        self.Emulator_Syn2_PatchClamp_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_214 = QVBoxLayout(self.Emulator_Syn2_PatchClamp_Toggle_frame)
+        self.verticalLayout_214.setSpacing(0)
+        self.verticalLayout_214.setObjectName(u"verticalLayout_214")
+        self.verticalLayout_214.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_Toggle_frame_2 = QFrame(self.Emulator_Syn2_PatchClamp_Toggle_frame)
+        self.Emulator_Syn2_PatchClamp_Toggle_frame_2.setObjectName(u"Emulator_Syn2_PatchClamp_Toggle_frame_2")
+        self.Emulator_Syn2_PatchClamp_Toggle_frame_2.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_Toggle_frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_531 = QHBoxLayout(self.Emulator_Syn2_PatchClamp_Toggle_frame_2)
+        self.horizontalLayout_531.setSpacing(0)
+        self.horizontalLayout_531.setObjectName(u"horizontalLayout_531")
+        self.horizontalLayout_531.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_ToggleButton_frame = QFrame(self.Emulator_Syn2_PatchClamp_Toggle_frame_2)
+        self.Emulator_Syn2_PatchClamp_ToggleButton_frame.setObjectName(u"Emulator_Syn2_PatchClamp_ToggleButton_frame")
+        self.Emulator_Syn2_PatchClamp_ToggleButton_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn2_PatchClamp_ToggleButton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_ToggleButton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_PatchClamp_Toggle_layout = QHBoxLayout(self.Emulator_Syn2_PatchClamp_ToggleButton_frame)
+        self.Emulator_Syn2_PatchClamp_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_PatchClamp_Toggle_layout.setObjectName(u"Emulator_Syn2_PatchClamp_Toggle_layout")
+        self.Emulator_Syn2_PatchClamp_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_531.addWidget(self.Emulator_Syn2_PatchClamp_ToggleButton_frame)
+
+        self.Emulator_Syn2_PatchClamp_label_frame = QFrame(self.Emulator_Syn2_PatchClamp_Toggle_frame_2)
+        self.Emulator_Syn2_PatchClamp_label_frame.setObjectName(u"Emulator_Syn2_PatchClamp_label_frame")
+        self.Emulator_Syn2_PatchClamp_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_532 = QHBoxLayout(self.Emulator_Syn2_PatchClamp_label_frame)
+        self.horizontalLayout_532.setSpacing(0)
+        self.horizontalLayout_532.setObjectName(u"horizontalLayout_532")
+        self.horizontalLayout_532.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_label = QLabel(self.Emulator_Syn2_PatchClamp_label_frame)
+        self.Emulator_Syn2_PatchClamp_label.setObjectName(u"Emulator_Syn2_PatchClamp_label")
+
+        self.horizontalLayout_532.addWidget(self.Emulator_Syn2_PatchClamp_label)
+
+
+        self.horizontalLayout_531.addWidget(self.Emulator_Syn2_PatchClamp_label_frame)
+
+
+        self.verticalLayout_214.addWidget(self.Emulator_Syn2_PatchClamp_Toggle_frame_2)
+
+        self.Emulator_Syn2_PatchClamp_readings_frame = QFrame(self.Emulator_Syn2_PatchClamp_Toggle_frame)
+        self.Emulator_Syn2_PatchClamp_readings_frame.setObjectName(u"Emulator_Syn2_PatchClamp_readings_frame")
+        self.Emulator_Syn2_PatchClamp_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticaLayout_77 = QVBoxLayout(self.Emulator_Syn2_PatchClamp_readings_frame)
+        self.verticaLayout_77.setSpacing(0)
+        self.verticaLayout_77.setObjectName(u"verticaLayout_77")
+        self.verticaLayout_77.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_readings = QLabel(self.Emulator_Syn2_PatchClamp_readings_frame)
+        self.Emulator_Syn2_PatchClamp_readings.setObjectName(u"Emulator_Syn2_PatchClamp_readings")
+        self.Emulator_Syn2_PatchClamp_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticaLayout_77.addWidget(self.Emulator_Syn2_PatchClamp_readings)
+
+
+        self.verticalLayout_214.addWidget(self.Emulator_Syn2_PatchClamp_readings_frame)
+
+
+        self.verticalLayout_213.addWidget(self.Emulator_Syn2_PatchClamp_Toggle_frame)
+
+        self.Emulator_Syn2_PatchClamp_slider_frame = QFrame(self.Emulator_Syn2_PatchClamp_frame)
+        self.Emulator_Syn2_PatchClamp_slider_frame.setObjectName(u"Emulator_Syn2_PatchClamp_slider_frame")
+        self.Emulator_Syn2_PatchClamp_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_533 = QHBoxLayout(self.Emulator_Syn2_PatchClamp_slider_frame)
+        self.horizontalLayout_533.setSpacing(0)
+        self.horizontalLayout_533.setObjectName(u"horizontalLayout_533")
+        self.horizontalLayout_533.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_slider = QSlider(self.Emulator_Syn2_PatchClamp_slider_frame)
+        self.Emulator_Syn2_PatchClamp_slider.setObjectName(u"Emulator_Syn2_PatchClamp_slider")
+        self.Emulator_Syn2_PatchClamp_slider.setEnabled(False)
+        self.Emulator_Syn2_PatchClamp_slider.setMaximum(100)
+        self.Emulator_Syn2_PatchClamp_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn2_PatchClamp_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn2_PatchClamp_slider.setTickInterval(10)
+
+        self.horizontalLayout_533.addWidget(self.Emulator_Syn2_PatchClamp_slider)
+
+
+        self.verticalLayout_213.addWidget(self.Emulator_Syn2_PatchClamp_slider_frame)
+
+        self.Emulator_Syn2_PatchClamp_value_frame = QFrame(self.Emulator_Syn2_PatchClamp_frame)
+        self.Emulator_Syn2_PatchClamp_value_frame.setObjectName(u"Emulator_Syn2_PatchClamp_value_frame")
+        self.Emulator_Syn2_PatchClamp_value_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PatchClamp_value_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_534 = QHBoxLayout(self.Emulator_Syn2_PatchClamp_value_frame)
+        self.horizontalLayout_534.setSpacing(0)
+        self.horizontalLayout_534.setObjectName(u"horizontalLayout_534")
+        self.horizontalLayout_534.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PatchClamp_min_value = QLabel(self.Emulator_Syn2_PatchClamp_value_frame)
+        self.Emulator_Syn2_PatchClamp_min_value.setObjectName(u"Emulator_Syn2_PatchClamp_min_value")
+        self.Emulator_Syn2_PatchClamp_min_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_534.addWidget(self.Emulator_Syn2_PatchClamp_min_value, 0, Qt.AlignLeft)
+
+        self.Emulator_Syn2_PatchClamp_0_value = QLabel(self.Emulator_Syn2_PatchClamp_value_frame)
+        self.Emulator_Syn2_PatchClamp_0_value.setObjectName(u"Emulator_Syn2_PatchClamp_0_value")
+
+        self.horizontalLayout_534.addWidget(self.Emulator_Syn2_PatchClamp_0_value, 0, Qt.AlignHCenter)
+
+        self.Emulator_Syn2_PatchClamp_max_value = QLabel(self.Emulator_Syn2_PatchClamp_value_frame)
+        self.Emulator_Syn2_PatchClamp_max_value.setObjectName(u"Emulator_Syn2_PatchClamp_max_value")
+        self.Emulator_Syn2_PatchClamp_max_value.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_534.addWidget(self.Emulator_Syn2_PatchClamp_max_value, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_213.addWidget(self.Emulator_Syn2_PatchClamp_value_frame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_PatchClamp_frame)
+
+        self.Emulator_Syn2_middle_line = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_middle_line.setObjectName(u"Emulator_Syn2_middle_line")
+        self.Emulator_Syn2_middle_line.setAutoFillBackground(False)
+        self.Emulator_Syn2_middle_line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_middle_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn2_middle_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_middle_line)
+
+        self.Emulator_Syn2_Noise_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_Noise_frame.setObjectName(u"Emulator_Syn2_Noise_frame")
+        self.Emulator_Syn2_Noise_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_Noise_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_215 = QVBoxLayout(self.Emulator_Syn2_Noise_frame)
+        self.verticalLayout_215.setSpacing(0)
+        self.verticalLayout_215.setObjectName(u"verticalLayout_215")
+        self.verticalLayout_215.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn2_Noise_Title_frame = QFrame(self.Emulator_Syn2_Noise_frame)
+        self.Emulator_Syn2_Noise_Title_frame.setObjectName(u"Emulator_Syn2_Noise_Title_frame")
+        self.Emulator_Syn2_Noise_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_535 = QHBoxLayout(self.Emulator_Syn2_Noise_Title_frame)
+        self.horizontalLayout_535.setSpacing(0)
+        self.horizontalLayout_535.setObjectName(u"horizontalLayout_535")
+        self.horizontalLayout_535.setContentsMargins(0, 0, 0, 10)
+        self.Emulator_Syn2_Noise_Title = QLabel(self.Emulator_Syn2_Noise_Title_frame)
+        self.Emulator_Syn2_Noise_Title.setObjectName(u"Emulator_Syn2_Noise_Title")
+        self.Emulator_Syn2_Noise_Title.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_535.addWidget(self.Emulator_Syn2_Noise_Title)
+
+
+        self.verticalLayout_215.addWidget(self.Emulator_Syn2_Noise_Title_frame)
+
+        self.Emulator_Syn2_Noise_checkBox_frame = QFrame(self.Emulator_Syn2_Noise_frame)
+        self.Emulator_Syn2_Noise_checkBox_frame.setObjectName(u"Emulator_Syn2_Noise_checkBox_frame")
+        self.Emulator_Syn2_Noise_checkBox_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_checkBox_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_216 = QVBoxLayout(self.Emulator_Syn2_Noise_checkBox_frame)
+        self.verticalLayout_216.setSpacing(0)
+        self.verticalLayout_216.setObjectName(u"verticalLayout_216")
+        self.verticalLayout_216.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Noise_Toggle_frame = QFrame(self.Emulator_Syn2_Noise_checkBox_frame)
+        self.Emulator_Syn2_Noise_Toggle_frame.setObjectName(u"Emulator_Syn2_Noise_Toggle_frame")
+        self.Emulator_Syn2_Noise_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_536 = QHBoxLayout(self.Emulator_Syn2_Noise_Toggle_frame)
+        self.horizontalLayout_536.setSpacing(0)
+        self.horizontalLayout_536.setObjectName(u"horizontalLayout_536")
+        self.horizontalLayout_536.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Noise_Togglebutton_frame = QFrame(self.Emulator_Syn2_Noise_Toggle_frame)
+        self.Emulator_Syn2_Noise_Togglebutton_frame.setObjectName(u"Emulator_Syn2_Noise_Togglebutton_frame")
+        self.Emulator_Syn2_Noise_Togglebutton_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn2_Noise_Togglebutton_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_Togglebutton_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_Noise_Toggle_layout = QHBoxLayout(self.Emulator_Syn2_Noise_Togglebutton_frame)
+        self.Emulator_Syn2_Noise_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_Noise_Toggle_layout.setObjectName(u"Emulator_Syn2_Noise_Toggle_layout")
+        self.Emulator_Syn2_Noise_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_536.addWidget(self.Emulator_Syn2_Noise_Togglebutton_frame)
+
+        self.Emulator_Syn2_Noise_Toggle_label_frame = QFrame(self.Emulator_Syn2_Noise_Toggle_frame)
+        self.Emulator_Syn2_Noise_Toggle_label_frame.setObjectName(u"Emulator_Syn2_Noise_Toggle_label_frame")
+        self.Emulator_Syn2_Noise_Toggle_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_Toggle_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_537 = QHBoxLayout(self.Emulator_Syn2_Noise_Toggle_label_frame)
+        self.horizontalLayout_537.setSpacing(0)
+        self.horizontalLayout_537.setObjectName(u"horizontalLayout_537")
+        self.horizontalLayout_537.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Noise_Toggle_label = QLabel(self.Emulator_Syn2_Noise_Toggle_label_frame)
+        self.Emulator_Syn2_Noise_Toggle_label.setObjectName(u"Emulator_Syn2_Noise_Toggle_label")
+
+        self.horizontalLayout_537.addWidget(self.Emulator_Syn2_Noise_Toggle_label)
+
+
+        self.horizontalLayout_536.addWidget(self.Emulator_Syn2_Noise_Toggle_label_frame)
+
+
+        self.verticalLayout_216.addWidget(self.Emulator_Syn2_Noise_Toggle_frame)
+
+        self.Emulator_Syn2_Noise_readings_frame = QFrame(self.Emulator_Syn2_Noise_checkBox_frame)
+        self.Emulator_Syn2_Noise_readings_frame.setObjectName(u"Emulator_Syn2_Noise_readings_frame")
+        self.Emulator_Syn2_Noise_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_readings_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_217 = QVBoxLayout(self.Emulator_Syn2_Noise_readings_frame)
+        self.verticalLayout_217.setSpacing(0)
+        self.verticalLayout_217.setObjectName(u"verticalLayout_217")
+        self.verticalLayout_217.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Noise_readings = QLabel(self.Emulator_Syn2_Noise_readings_frame)
+        self.Emulator_Syn2_Noise_readings.setObjectName(u"Emulator_Syn2_Noise_readings")
+        self.Emulator_Syn2_Noise_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_217.addWidget(self.Emulator_Syn2_Noise_readings)
+
+
+        self.verticalLayout_216.addWidget(self.Emulator_Syn2_Noise_readings_frame)
+
+
+        self.verticalLayout_215.addWidget(self.Emulator_Syn2_Noise_checkBox_frame)
+
+        self.Emulator_Syn2_Noise_slider_frame = QFrame(self.Emulator_Syn2_Noise_frame)
+        self.Emulator_Syn2_Noise_slider_frame.setObjectName(u"Emulator_Syn2_Noise_slider_frame")
+        self.Emulator_Syn2_Noise_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_538 = QHBoxLayout(self.Emulator_Syn2_Noise_slider_frame)
+        self.horizontalLayout_538.setSpacing(0)
+        self.horizontalLayout_538.setObjectName(u"horizontalLayout_538")
+        self.horizontalLayout_538.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Noise_slider = QSlider(self.Emulator_Syn2_Noise_slider_frame)
+        self.Emulator_Syn2_Noise_slider.setObjectName(u"Emulator_Syn2_Noise_slider")
+        self.Emulator_Syn2_Noise_slider.setEnabled(False)
+        self.Emulator_Syn2_Noise_slider.setMinimum(0)
+        self.Emulator_Syn2_Noise_slider.setMaximum(100)
+        self.Emulator_Syn2_Noise_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn2_Noise_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn2_Noise_slider.setTickInterval(10)
+
+        self.horizontalLayout_538.addWidget(self.Emulator_Syn2_Noise_slider)
+
+
+        self.verticalLayout_215.addWidget(self.Emulator_Syn2_Noise_slider_frame)
+
+        self.Emulator_Syn2_Noise_values_frame = QFrame(self.Emulator_Syn2_Noise_frame)
+        self.Emulator_Syn2_Noise_values_frame.setObjectName(u"Emulator_Syn2_Noise_values_frame")
+        self.Emulator_Syn2_Noise_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Noise_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_539 = QHBoxLayout(self.Emulator_Syn2_Noise_values_frame)
+        self.horizontalLayout_539.setSpacing(0)
+        self.horizontalLayout_539.setObjectName(u"horizontalLayout_539")
+        self.horizontalLayout_539.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Syn2_Noise_values_0 = QLabel(self.Emulator_Syn2_Noise_values_frame)
+        self.Emulator_Syn2_Noise_values_0.setObjectName(u"Emulator_Syn2_Noise_values_0")
+
+        self.horizontalLayout_539.addWidget(self.Emulator_Syn2_Noise_values_0)
+
+        self.Emulator_Syn2_Noise_values_max = QLabel(self.Emulator_Syn2_Noise_values_frame)
+        self.Emulator_Syn2_Noise_values_max.setObjectName(u"Emulator_Syn2_Noise_values_max")
+        self.Emulator_Syn2_Noise_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_539.addWidget(self.Emulator_Syn2_Noise_values_max)
+
+
+        self.verticalLayout_215.addWidget(self.Emulator_Syn2_Noise_values_frame)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_Noise_frame)
+
+        self.Emulator_Syn2_bottom_line = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_bottom_line.setObjectName(u"Emulator_Syn2_bottom_line")
+        self.Emulator_Syn2_bottom_line.setAutoFillBackground(False)
+        self.Emulator_Syn2_bottom_line.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_bottom_line.setFrameShape(QFrame.Shape.HLine)
+        self.Emulator_Syn2_bottom_line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_bottom_line)
+
+        self.Emulator_Syn2_Stimulus_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_Stimulus_frame.setObjectName(u"Emulator_Syn2_Stimulus_frame")
+        self.Emulator_Syn2_Stimulus_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_Stimulus_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_221 = QVBoxLayout(self.Emulator_Syn2_Stimulus_frame)
+        self.verticalLayout_221.setSpacing(5)
+        self.verticalLayout_221.setObjectName(u"verticalLayout_221")
+        self.verticalLayout_221.setContentsMargins(5, 0, 5, 0)
+        self.Emulator_Syn2_Stimulus_label_frame = QFrame(self.Emulator_Syn2_Stimulus_frame)
+        self.Emulator_Syn2_Stimulus_label_frame.setObjectName(u"Emulator_Syn2_Stimulus_label_frame")
+        self.Emulator_Syn2_Stimulus_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_544 = QHBoxLayout(self.Emulator_Syn2_Stimulus_label_frame)
+        self.horizontalLayout_544.setSpacing(0)
+        self.horizontalLayout_544.setObjectName(u"horizontalLayout_544")
+        self.horizontalLayout_544.setContentsMargins(0, 0, 0, 5)
+        self.Emulator_Syn2_Stimulus_label = QLabel(self.Emulator_Syn2_Stimulus_label_frame)
+        self.Emulator_Syn2_Stimulus_label.setObjectName(u"Emulator_Syn2_Stimulus_label")
+        self.Emulator_Syn2_Stimulus_label.setStyleSheet(u"color: rgb(147, 161, 161);")
+
+        self.horizontalLayout_544.addWidget(self.Emulator_Syn2_Stimulus_label)
+
+
+        self.verticalLayout_221.addWidget(self.Emulator_Syn2_Stimulus_label_frame)
+
+        self.Emulator_Syn2_Stimulus_DC_frame = QFrame(self.Emulator_Syn2_Stimulus_frame)
+        self.Emulator_Syn2_Stimulus_DC_frame.setObjectName(u"Emulator_Syn2_Stimulus_DC_frame")
+        self.Emulator_Syn2_Stimulus_DC_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_DC_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_548 = QHBoxLayout(self.Emulator_Syn2_Stimulus_DC_frame)
+        self.horizontalLayout_548.setSpacing(0)
+        self.horizontalLayout_548.setObjectName(u"horizontalLayout_548")
+        self.horizontalLayout_548.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_frame = QFrame(self.Emulator_Syn2_Stimulus_DC_frame)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_frame.setObjectName(u"Emulator_Syn2_Stimulus_DC_Toggle_frame")
+        self.Emulator_Syn2_Stimulus_DC_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_layout = QVBoxLayout(self.Emulator_Syn2_Stimulus_DC_Toggle_frame)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_Stimulus_DC_Toggle_layout.setObjectName(u"Emulator_Syn2_Stimulus_DC_Toggle_layout")
+        self.Emulator_Syn2_Stimulus_DC_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_548.addWidget(self.Emulator_Syn2_Stimulus_DC_Toggle_frame)
+
+        self.Emulator_Syn2_Stimulus_DC_label_frame = QFrame(self.Emulator_Syn2_Stimulus_DC_frame)
+        self.Emulator_Syn2_Stimulus_DC_label_frame.setObjectName(u"Emulator_Syn2_Stimulus_DC_label_frame")
+        self.Emulator_Syn2_Stimulus_DC_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_DC_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_219 = QVBoxLayout(self.Emulator_Syn2_Stimulus_DC_label_frame)
+        self.verticalLayout_219.setSpacing(0)
+        self.verticalLayout_219.setObjectName(u"verticalLayout_219")
+        self.verticalLayout_219.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Stimulus_DC_label = QLabel(self.Emulator_Syn2_Stimulus_DC_label_frame)
+        self.Emulator_Syn2_Stimulus_DC_label.setObjectName(u"Emulator_Syn2_Stimulus_DC_label")
+        self.Emulator_Syn2_Stimulus_DC_label.setWordWrap(True)
+
+        self.verticalLayout_219.addWidget(self.Emulator_Syn2_Stimulus_DC_label)
+
+
+        self.horizontalLayout_548.addWidget(self.Emulator_Syn2_Stimulus_DC_label_frame)
+
+
+        self.verticalLayout_221.addWidget(self.Emulator_Syn2_Stimulus_DC_frame)
+
+        self.Emulator_Syn2_Stimulus_Light_frame = QFrame(self.Emulator_Syn2_Stimulus_frame)
+        self.Emulator_Syn2_Stimulus_Light_frame.setObjectName(u"Emulator_Syn2_Stimulus_Light_frame")
+        self.Emulator_Syn2_Stimulus_Light_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_Light_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_528 = QHBoxLayout(self.Emulator_Syn2_Stimulus_Light_frame)
+        self.horizontalLayout_528.setSpacing(0)
+        self.horizontalLayout_528.setObjectName(u"horizontalLayout_528")
+        self.horizontalLayout_528.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_frame = QFrame(self.Emulator_Syn2_Stimulus_Light_frame)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_frame.setObjectName(u"Emulator_Syn2_Stimulus_Light_Toggle_frame")
+        self.Emulator_Syn2_Stimulus_Light_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_layout = QVBoxLayout(self.Emulator_Syn2_Stimulus_Light_Toggle_frame)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_Stimulus_Light_Toggle_layout.setObjectName(u"Emulator_Syn2_Stimulus_Light_Toggle_layout")
+        self.Emulator_Syn2_Stimulus_Light_Toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_528.addWidget(self.Emulator_Syn2_Stimulus_Light_Toggle_frame)
+
+        self.Emulator_Syn2_Stimulus_Light_label_frame = QFrame(self.Emulator_Syn2_Stimulus_Light_frame)
+        self.Emulator_Syn2_Stimulus_Light_label_frame.setObjectName(u"Emulator_Syn2_Stimulus_Light_label_frame")
+        self.Emulator_Syn2_Stimulus_Light_label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_Stimulus_Light_label_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_222 = QVBoxLayout(self.Emulator_Syn2_Stimulus_Light_label_frame)
+        self.verticalLayout_222.setSpacing(0)
+        self.verticalLayout_222.setObjectName(u"verticalLayout_222")
+        self.verticalLayout_222.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_Stimulus_Light_label = QLabel(self.Emulator_Syn2_Stimulus_Light_label_frame)
+        self.Emulator_Syn2_Stimulus_Light_label.setObjectName(u"Emulator_Syn2_Stimulus_Light_label")
+
+        self.verticalLayout_222.addWidget(self.Emulator_Syn2_Stimulus_Light_label)
+
+
+        self.horizontalLayout_528.addWidget(self.Emulator_Syn2_Stimulus_Light_label_frame)
+
+
+        self.verticalLayout_221.addWidget(self.Emulator_Syn2_Stimulus_Light_frame)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_Stimulus_frame)
+
+        self.Emulator_Syn2_PhotoDiode_frame = QFrame(self.Emulator_Syn2_Parameter_frame)
+        self.Emulator_Syn2_PhotoDiode_frame.setObjectName(u"Emulator_Syn2_PhotoDiode_frame")
+        sizePolicy1.setHeightForWidth(self.Emulator_Syn2_PhotoDiode_frame.sizePolicy().hasHeightForWidth())
+        self.Emulator_Syn2_PhotoDiode_frame.setSizePolicy(sizePolicy1)
+        self.Emulator_Syn2_PhotoDiode_frame.setStyleSheet(u"background-color: rgb(80, 110, 117);")
+        self.Emulator_Syn2_PhotoDiode_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PhotoDiode_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_195 = QVBoxLayout(self.Emulator_Syn2_PhotoDiode_frame)
+        self.verticalLayout_195.setSpacing(0)
+        self.verticalLayout_195.setObjectName(u"verticalLayout_195")
+        self.verticalLayout_195.setContentsMargins(5, 0, 5, 0)
+        self.frame_25 = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.frame_25.setObjectName(u"frame_25")
+        self.frame_25.setFrameShape(QFrame.StyledPanel)
+        self.frame_25.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_203 = QVBoxLayout(self.frame_25)
+        self.verticalLayout_203.setSpacing(0)
+        self.verticalLayout_203.setObjectName(u"verticalLayout_203")
+        self.verticalLayout_203.setContentsMargins(0, 5, 0, 5)
+
+        self.verticalLayout_195.addWidget(self.frame_25)
+
+        self.Emulator_Syn2_PR_Title_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Title_frame.setObjectName(u"Emulator_Syn2_PR_Title_frame")
+        self.Emulator_Syn2_PR_Title_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Title_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_510 = QHBoxLayout(self.Emulator_Syn2_PR_Title_frame)
+        self.horizontalLayout_510.setSpacing(0)
+        self.horizontalLayout_510.setObjectName(u"horizontalLayout_510")
+        self.horizontalLayout_510.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_toggle_frame = QFrame(self.Emulator_Syn2_PR_Title_frame)
+        self.Emulator_Syn2_PR_toggle_frame.setObjectName(u"Emulator_Syn2_PR_toggle_frame")
+        self.Emulator_Syn2_PR_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn2_PR_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_PhotoGain_toggle_layout = QHBoxLayout(self.Emulator_Syn2_PR_toggle_frame)
+        self.Emulator_Syn2_PhotoGain_toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_PhotoGain_toggle_layout.setObjectName(u"Emulator_Syn2_PhotoGain_toggle_layout")
+        self.Emulator_Syn2_PhotoGain_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_510.addWidget(self.Emulator_Syn2_PR_toggle_frame)
+
+        self.Emulator_Syn2_PR_Label_frame = QFrame(self.Emulator_Syn2_PR_Title_frame)
+        self.Emulator_Syn2_PR_Label_frame.setObjectName(u"Emulator_Syn2_PR_Label_frame")
+        self.Emulator_Syn2_PR_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_511 = QHBoxLayout(self.Emulator_Syn2_PR_Label_frame)
+        self.horizontalLayout_511.setSpacing(0)
+        self.horizontalLayout_511.setObjectName(u"horizontalLayout_511")
+        self.horizontalLayout_511.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Label = QLabel(self.Emulator_Syn2_PR_Label_frame)
+        self.Emulator_Syn2_PR_Label.setObjectName(u"Emulator_Syn2_PR_Label")
+
+        self.horizontalLayout_511.addWidget(self.Emulator_Syn2_PR_Label)
+
+
+        self.horizontalLayout_510.addWidget(self.Emulator_Syn2_PR_Label_frame)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Title_frame)
+
+        self.Emulator_Syn2_PR_Photogain_readings_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Photogain_readings_frame.setObjectName(u"Emulator_Syn2_PR_Photogain_readings_frame")
+        self.Emulator_Syn2_PR_Photogain_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Photogain_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_PhotoGain_Layout_4 = QHBoxLayout(self.Emulator_Syn2_PR_Photogain_readings_frame)
+        self.Spikeling_PR_PhotoGain_Layout_4.setSpacing(0)
+        self.Spikeling_PR_PhotoGain_Layout_4.setObjectName(u"Spikeling_PR_PhotoGain_Layout_4")
+        self.Spikeling_PR_PhotoGain_Layout_4.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Photogain_readings = QLabel(self.Emulator_Syn2_PR_Photogain_readings_frame)
+        self.Emulator_Syn2_PR_Photogain_readings.setObjectName(u"Emulator_Syn2_PR_Photogain_readings")
+        self.Emulator_Syn2_PR_Photogain_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_PhotoGain_Layout_4.addWidget(self.Emulator_Syn2_PR_Photogain_readings)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Photogain_readings_frame)
+
+        self.Emulator_Syn2_PR_PhotoGain_slider_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_PhotoGain_slider_frame.setObjectName(u"Emulator_Syn2_PR_PhotoGain_slider_frame")
+        self.Emulator_Syn2_PR_PhotoGain_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_PhotoGain_slider_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_512 = QHBoxLayout(self.Emulator_Syn2_PR_PhotoGain_slider_frame)
+        self.horizontalLayout_512.setSpacing(0)
+        self.horizontalLayout_512.setObjectName(u"horizontalLayout_512")
+        self.horizontalLayout_512.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_PhotoGain_slider = QSlider(self.Emulator_Syn2_PR_PhotoGain_slider_frame)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setObjectName(u"Emulator_Syn2_PR_PhotoGain_slider")
+        self.Emulator_Syn2_PR_PhotoGain_slider.setEnabled(False)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setMinimum(-100)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setMaximum(100)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setSingleStep(1)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setPageStep(10)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn2_PR_PhotoGain_slider.setTickInterval(20)
+
+        self.horizontalLayout_512.addWidget(self.Emulator_Syn2_PR_PhotoGain_slider)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_PhotoGain_slider_frame)
+
+        self.Emulator_Syn2_PR_PhotoGain_values_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_PhotoGain_values_frame.setObjectName(u"Emulator_Syn2_PR_PhotoGain_values_frame")
+        self.Emulator_Syn2_PR_PhotoGain_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_PhotoGain_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_513 = QHBoxLayout(self.Emulator_Syn2_PR_PhotoGain_values_frame)
+        self.horizontalLayout_513.setSpacing(0)
+        self.horizontalLayout_513.setObjectName(u"horizontalLayout_513")
+        self.horizontalLayout_513.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_PhotoGain_values_min = QLabel(self.Emulator_Syn2_PR_PhotoGain_values_frame)
+        self.Emulator_Syn2_PR_PhotoGain_values_min.setObjectName(u"Emulator_Syn2_PR_PhotoGain_values_min")
+
+        self.horizontalLayout_513.addWidget(self.Emulator_Syn2_PR_PhotoGain_values_min)
+
+        self.Emulator_Syn2_PR_PhotoGain_values = QLabel(self.Emulator_Syn2_PR_PhotoGain_values_frame)
+        self.Emulator_Syn2_PR_PhotoGain_values.setObjectName(u"Emulator_Syn2_PR_PhotoGain_values")
+
+        self.horizontalLayout_513.addWidget(self.Emulator_Syn2_PR_PhotoGain_values, 0, Qt.AlignHCenter)
+
+        self.Emulator_Syn2_PR_PhotoGain_values_max = QLabel(self.Emulator_Syn2_PR_PhotoGain_values_frame)
+        self.Emulator_Syn2_PR_PhotoGain_values_max.setObjectName(u"Emulator_Syn2_PR_PhotoGain_values_max")
+        self.Emulator_Syn2_PR_PhotoGain_values_max.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_513.addWidget(self.Emulator_Syn2_PR_PhotoGain_values_max)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_PhotoGain_values_frame, 0, Qt.AlignTop)
+
+        self.Emulator_Syn2_PRDecay_Title = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PRDecay_Title.setObjectName(u"Emulator_Syn2_PRDecay_Title")
+        self.Emulator_Syn2_PRDecay_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRDecay_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_514 = QHBoxLayout(self.Emulator_Syn2_PRDecay_Title)
+        self.horizontalLayout_514.setSpacing(0)
+        self.horizontalLayout_514.setObjectName(u"horizontalLayout_514")
+        self.horizontalLayout_514.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PRDecay_Toggle_frame = QFrame(self.Emulator_Syn2_PRDecay_Title)
+        self.Emulator_Syn2_PRDecay_Toggle_frame.setObjectName(u"Emulator_Syn2_PRDecay_Toggle_frame")
+        self.Emulator_Syn2_PRDecay_Toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn2_PRDecay_Toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRDecay_Toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_PhotoDecay_toggle_layout = QHBoxLayout(self.Emulator_Syn2_PRDecay_Toggle_frame)
+        self.Emulator_Syn2_PhotoDecay_toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_PhotoDecay_toggle_layout.setObjectName(u"Emulator_Syn2_PhotoDecay_toggle_layout")
+        self.Emulator_Syn2_PhotoDecay_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_514.addWidget(self.Emulator_Syn2_PRDecay_Toggle_frame)
+
+        self.Emulator_Syn2_PRDecay_Label_frame = QFrame(self.Emulator_Syn2_PRDecay_Title)
+        self.Emulator_Syn2_PRDecay_Label_frame.setObjectName(u"Emulator_Syn2_PRDecay_Label_frame")
+        self.Emulator_Syn2_PRDecay_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRDecay_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_515 = QHBoxLayout(self.Emulator_Syn2_PRDecay_Label_frame)
+        self.horizontalLayout_515.setSpacing(0)
+        self.horizontalLayout_515.setObjectName(u"horizontalLayout_515")
+        self.horizontalLayout_515.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PRDecay_Label = QLabel(self.Emulator_Syn2_PRDecay_Label_frame)
+        self.Emulator_Syn2_PRDecay_Label.setObjectName(u"Emulator_Syn2_PRDecay_Label")
+
+        self.horizontalLayout_515.addWidget(self.Emulator_Syn2_PRDecay_Label)
+
+
+        self.horizontalLayout_514.addWidget(self.Emulator_Syn2_PRDecay_Label_frame)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PRDecay_Title)
+
+        self.Emulator_Syn2_PR_Decay_readings_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Decay_readings_frame.setObjectName(u"Emulator_Syn2_PR_Decay_readings_frame")
+        self.Emulator_Syn2_PR_Decay_readings_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Decay_readings_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Decay_Layout_4 = QHBoxLayout(self.Emulator_Syn2_PR_Decay_readings_frame)
+        self.Spikeling_PR_Decay_Layout_4.setSpacing(0)
+        self.Spikeling_PR_Decay_Layout_4.setObjectName(u"Spikeling_PR_Decay_Layout_4")
+        self.Spikeling_PR_Decay_Layout_4.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Decay_readings = QLabel(self.Emulator_Syn2_PR_Decay_readings_frame)
+        self.Emulator_Syn2_PR_Decay_readings.setObjectName(u"Emulator_Syn2_PR_Decay_readings")
+        self.Emulator_Syn2_PR_Decay_readings.setAlignment(Qt.AlignCenter)
+
+        self.Spikeling_PR_Decay_Layout_4.addWidget(self.Emulator_Syn2_PR_Decay_readings)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Decay_readings_frame)
+
+        self.Emulator_Syn2_PR_Decay_slider_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Decay_slider_frame.setObjectName(u"Emulator_Syn2_PR_Decay_slider_frame")
+        self.Emulator_Syn2_PR_Decay_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Decay_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_199 = QVBoxLayout(self.Emulator_Syn2_PR_Decay_slider_frame)
+        self.verticalLayout_199.setSpacing(0)
+        self.verticalLayout_199.setObjectName(u"verticalLayout_199")
+        self.verticalLayout_199.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Decay_slider = QSlider(self.Emulator_Syn2_PR_Decay_slider_frame)
+        self.Emulator_Syn2_PR_Decay_slider.setObjectName(u"Emulator_Syn2_PR_Decay_slider")
+        self.Emulator_Syn2_PR_Decay_slider.setEnabled(False)
+        self.Emulator_Syn2_PR_Decay_slider.setMinimum(10)
+        self.Emulator_Syn2_PR_Decay_slider.setMaximum(125)
+        self.Emulator_Syn2_PR_Decay_slider.setSingleStep(1)
+        self.Emulator_Syn2_PR_Decay_slider.setPageStep(10)
+        self.Emulator_Syn2_PR_Decay_slider.setValue(100)
+        self.Emulator_Syn2_PR_Decay_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn2_PR_Decay_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn2_PR_Decay_slider.setTickInterval(10)
+
+        self.verticalLayout_199.addWidget(self.Emulator_Syn2_PR_Decay_slider)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Decay_slider_frame)
+
+        self.Emulator_Syn2_PR_Decay_values_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Decay_values_frame.setObjectName(u"Emulator_Syn2_PR_Decay_values_frame")
+        self.Emulator_Syn2_PR_Decay_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Decay_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_516 = QHBoxLayout(self.Emulator_Syn2_PR_Decay_values_frame)
+        self.horizontalLayout_516.setSpacing(0)
+        self.horizontalLayout_516.setObjectName(u"horizontalLayout_516")
+        self.horizontalLayout_516.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Decay_values_slow = QLabel(self.Emulator_Syn2_PR_Decay_values_frame)
+        self.Emulator_Syn2_PR_Decay_values_slow.setObjectName(u"Emulator_Syn2_PR_Decay_values_slow")
+        self.Emulator_Syn2_PR_Decay_values_slow.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout_516.addWidget(self.Emulator_Syn2_PR_Decay_values_slow)
+
+        self.Emulator_Syn2_PR_Decay_values_fast = QLabel(self.Emulator_Syn2_PR_Decay_values_frame)
+        self.Emulator_Syn2_PR_Decay_values_fast.setObjectName(u"Emulator_Syn2_PR_Decay_values_fast")
+        self.Emulator_Syn2_PR_Decay_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_516.addWidget(self.Emulator_Syn2_PR_Decay_values_fast)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Decay_values_frame)
+
+        self.Emulator_Syn2_PRRecovery_Title = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PRRecovery_Title.setObjectName(u"Emulator_Syn2_PRRecovery_Title")
+        self.Emulator_Syn2_PRRecovery_Title.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRRecovery_Title.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_517 = QHBoxLayout(self.Emulator_Syn2_PRRecovery_Title)
+        self.horizontalLayout_517.setSpacing(0)
+        self.horizontalLayout_517.setObjectName(u"horizontalLayout_517")
+        self.horizontalLayout_517.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PRRecovery_toggle_frame = QFrame(self.Emulator_Syn2_PRRecovery_Title)
+        self.Emulator_Syn2_PRRecovery_toggle_frame.setObjectName(u"Emulator_Syn2_PRRecovery_toggle_frame")
+        self.Emulator_Syn2_PRRecovery_toggle_frame.setMaximumSize(QSize(50, 16777215))
+        self.Emulator_Syn2_PRRecovery_toggle_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRRecovery_toggle_frame.setFrameShadow(QFrame.Raised)
+        self.Emulator_Syn2_PhotoRecovery_toggle_layout = QHBoxLayout(self.Emulator_Syn2_PRRecovery_toggle_frame)
+        self.Emulator_Syn2_PhotoRecovery_toggle_layout.setSpacing(0)
+        self.Emulator_Syn2_PhotoRecovery_toggle_layout.setObjectName(u"Emulator_Syn2_PhotoRecovery_toggle_layout")
+        self.Emulator_Syn2_PhotoRecovery_toggle_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.horizontalLayout_517.addWidget(self.Emulator_Syn2_PRRecovery_toggle_frame)
+
+        self.Emulator_Syn2_PRRecovery_Label_frame = QFrame(self.Emulator_Syn2_PRRecovery_Title)
+        self.Emulator_Syn2_PRRecovery_Label_frame.setObjectName(u"Emulator_Syn2_PRRecovery_Label_frame")
+        self.Emulator_Syn2_PRRecovery_Label_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PRRecovery_Label_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_518 = QHBoxLayout(self.Emulator_Syn2_PRRecovery_Label_frame)
+        self.horizontalLayout_518.setSpacing(0)
+        self.horizontalLayout_518.setObjectName(u"horizontalLayout_518")
+        self.horizontalLayout_518.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PRRecovery_Label = QLabel(self.Emulator_Syn2_PRRecovery_Label_frame)
+        self.Emulator_Syn2_PRRecovery_Label.setObjectName(u"Emulator_Syn2_PRRecovery_Label")
+
+        self.horizontalLayout_518.addWidget(self.Emulator_Syn2_PRRecovery_Label)
+
+
+        self.horizontalLayout_517.addWidget(self.Emulator_Syn2_PRRecovery_Label_frame)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PRRecovery_Title)
+
+        self.Emulator_Syn2_PR_Recovery_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Recovery_frame.setObjectName(u"Emulator_Syn2_PR_Recovery_frame")
+        self.Emulator_Syn2_PR_Recovery_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Recovery_frame.setFrameShadow(QFrame.Raised)
+        self.Spikeling_PR_Recovery_Layout_4 = QHBoxLayout(self.Emulator_Syn2_PR_Recovery_frame)
+        self.Spikeling_PR_Recovery_Layout_4.setSpacing(0)
+        self.Spikeling_PR_Recovery_Layout_4.setObjectName(u"Spikeling_PR_Recovery_Layout_4")
+        self.Spikeling_PR_Recovery_Layout_4.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Recovery_readings_frame_ = QFrame(self.Emulator_Syn2_PR_Recovery_frame)
+        self.Emulator_Syn2_PR_Recovery_readings_frame_.setObjectName(u"Emulator_Syn2_PR_Recovery_readings_frame_")
+        self.Emulator_Syn2_PR_Recovery_readings_frame_.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Recovery_readings_frame_.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_200 = QVBoxLayout(self.Emulator_Syn2_PR_Recovery_readings_frame_)
+        self.verticalLayout_200.setSpacing(0)
+        self.verticalLayout_200.setObjectName(u"verticalLayout_200")
+        self.verticalLayout_200.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Recovery_readings = QLabel(self.Emulator_Syn2_PR_Recovery_readings_frame_)
+        self.Emulator_Syn2_PR_Recovery_readings.setObjectName(u"Emulator_Syn2_PR_Recovery_readings")
+        self.Emulator_Syn2_PR_Recovery_readings.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_200.addWidget(self.Emulator_Syn2_PR_Recovery_readings)
+
+
+        self.Spikeling_PR_Recovery_Layout_4.addWidget(self.Emulator_Syn2_PR_Recovery_readings_frame_)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Recovery_frame)
+
+        self.Emulator_Syn2_PR_Recovery_slider_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Recovery_slider_frame.setObjectName(u"Emulator_Syn2_PR_Recovery_slider_frame")
+        self.Emulator_Syn2_PR_Recovery_slider_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Recovery_slider_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_201 = QVBoxLayout(self.Emulator_Syn2_PR_Recovery_slider_frame)
+        self.verticalLayout_201.setSpacing(0)
+        self.verticalLayout_201.setObjectName(u"verticalLayout_201")
+        self.verticalLayout_201.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Recovery_slider = QSlider(self.Emulator_Syn2_PR_Recovery_slider_frame)
+        self.Emulator_Syn2_PR_Recovery_slider.setObjectName(u"Emulator_Syn2_PR_Recovery_slider")
+        self.Emulator_Syn2_PR_Recovery_slider.setEnabled(False)
+        self.Emulator_Syn2_PR_Recovery_slider.setMinimum(1)
+        self.Emulator_Syn2_PR_Recovery_slider.setMaximum(100)
+        self.Emulator_Syn2_PR_Recovery_slider.setSingleStep(1)
+        self.Emulator_Syn2_PR_Recovery_slider.setPageStep(10)
+        self.Emulator_Syn2_PR_Recovery_slider.setValue(25)
+        self.Emulator_Syn2_PR_Recovery_slider.setOrientation(Qt.Horizontal)
+        self.Emulator_Syn2_PR_Recovery_slider.setTickPosition(QSlider.TicksBelow)
+        self.Emulator_Syn2_PR_Recovery_slider.setTickInterval(10)
+
+        self.verticalLayout_201.addWidget(self.Emulator_Syn2_PR_Recovery_slider)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Recovery_slider_frame)
+
+        self.Emulator_Syn2_PR_Recovery_values_frame = QFrame(self.Emulator_Syn2_PhotoDiode_frame)
+        self.Emulator_Syn2_PR_Recovery_values_frame.setObjectName(u"Emulator_Syn2_PR_Recovery_values_frame")
+        self.Emulator_Syn2_PR_Recovery_values_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_Syn2_PR_Recovery_values_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_519 = QHBoxLayout(self.Emulator_Syn2_PR_Recovery_values_frame)
+        self.horizontalLayout_519.setSpacing(0)
+        self.horizontalLayout_519.setObjectName(u"horizontalLayout_519")
+        self.horizontalLayout_519.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_Syn2_PR_Recovery_values_slow = QLabel(self.Emulator_Syn2_PR_Recovery_values_frame)
+        self.Emulator_Syn2_PR_Recovery_values_slow.setObjectName(u"Emulator_Syn2_PR_Recovery_values_slow")
+
+        self.horizontalLayout_519.addWidget(self.Emulator_Syn2_PR_Recovery_values_slow)
+
+        self.Emulator_Syn2_PR_Recovery_values_fast = QLabel(self.Emulator_Syn2_PR_Recovery_values_frame)
+        self.Emulator_Syn2_PR_Recovery_values_fast.setObjectName(u"Emulator_Syn2_PR_Recovery_values_fast")
+        self.Emulator_Syn2_PR_Recovery_values_fast.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.horizontalLayout_519.addWidget(self.Emulator_Syn2_PR_Recovery_values_fast)
+
+
+        self.verticalLayout_195.addWidget(self.Emulator_Syn2_PR_Recovery_values_frame)
+
+
+        self.verticalLayout_209.addWidget(self.Emulator_Syn2_PhotoDiode_frame)
+
+
+        self.verticalLayout_224.addWidget(self.Emulator_Syn2_Parameter_frame)
+
+        self.Emulator_parameter_stackedwidget.addWidget(self.Emulator_Synapse2Parameter_page)
+
+        self.verticalLayout_101.addWidget(self.Emulator_parameter_stackedwidget)
+
+
+        self.horizontalLayout_66.addWidget(self.Emulator_CenterMenuContainer)
+
+        self.Emulator_rightMenuContainer = QWidget(self.page_102)
+        self.Emulator_rightMenuContainer.setObjectName(u"Emulator_rightMenuContainer")
+        self.Emulator_rightMenuContainer.setMinimumSize(QSize(40, 0))
+        self.Emulator_rightMenuContainer.setMaximumSize(QSize(40, 16777215))
+        self.verticalLayout_187 = QVBoxLayout(self.Emulator_rightMenuContainer)
+        self.verticalLayout_187.setSpacing(0)
+        self.verticalLayout_187.setObjectName(u"verticalLayout_187")
+        self.verticalLayout_187.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_rightMenuSubContainer = QWidget(self.Emulator_rightMenuContainer)
+        self.Emulator_rightMenuSubContainer.setObjectName(u"Emulator_rightMenuSubContainer")
+        self.verticalLayout_188 = QVBoxLayout(self.Emulator_rightMenuSubContainer)
+        self.verticalLayout_188.setSpacing(0)
+        self.verticalLayout_188.setObjectName(u"verticalLayout_188")
+        self.verticalLayout_188.setContentsMargins(0, 0, 5, 0)
+        self.Emulator_rightMenuSubContainer_frame = QFrame(self.Emulator_rightMenuSubContainer)
+        self.Emulator_rightMenuSubContainer_frame.setObjectName(u"Emulator_rightMenuSubContainer_frame")
+        self.Emulator_rightMenuSubContainer_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_rightMenuSubContainer_frame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_482 = QHBoxLayout(self.Emulator_rightMenuSubContainer_frame)
+        self.horizontalLayout_482.setSpacing(0)
+        self.horizontalLayout_482.setObjectName(u"horizontalLayout_482")
+        self.horizontalLayout_482.setContentsMargins(0, 20, 0, 0)
+        self.Emulator_rightMenuSubContainer_pushButton = QPushButton(self.Emulator_rightMenuSubContainer_frame)
+        self.Emulator_rightMenuSubContainer_pushButton.setObjectName(u"Emulator_rightMenuSubContainer_pushButton")
+        self.Emulator_rightMenuSubContainer_pushButton.setMinimumSize(QSize(0, 0))
+        self.Emulator_rightMenuSubContainer_pushButton.setFont(font1)
+        self.Emulator_rightMenuSubContainer_pushButton.setStyleSheet(u"")
+        self.Emulator_rightMenuSubContainer_pushButton.setIcon(icon19)
+        self.Emulator_rightMenuSubContainer_pushButton.setIconSize(QSize(30, 30))
+
+        self.horizontalLayout_482.addWidget(self.Emulator_rightMenuSubContainer_pushButton)
+
+
+        self.verticalLayout_188.addWidget(self.Emulator_rightMenuSubContainer_frame, 0, Qt.AlignTop)
+
+        self.Emulator_rightMenuParameterContainer_frame = QFrame(self.Emulator_rightMenuSubContainer)
+        self.Emulator_rightMenuParameterContainer_frame.setObjectName(u"Emulator_rightMenuParameterContainer_frame")
+        self.Emulator_rightMenuParameterContainer_frame.setFrameShape(QFrame.StyledPanel)
+        self.Emulator_rightMenuParameterContainer_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_189 = QVBoxLayout(self.Emulator_rightMenuParameterContainer_frame)
+        self.verticalLayout_189.setSpacing(50)
+        self.verticalLayout_189.setObjectName(u"verticalLayout_189")
+        self.verticalLayout_189.setContentsMargins(0, 0, 0, 0)
+        self.Emulator_NeuronParameter_pushButton = QPushButton(self.Emulator_rightMenuParameterContainer_frame)
+        self.Emulator_NeuronParameter_pushButton.setObjectName(u"Emulator_NeuronParameter_pushButton")
+        self.Emulator_NeuronParameter_pushButton.setFont(font1)
+        self.Emulator_NeuronParameter_pushButton.setIcon(icon5)
+        self.Emulator_NeuronParameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_189.addWidget(self.Emulator_NeuronParameter_pushButton)
+
+        self.Emulator_StimulusParameter_pushButton = QPushButton(self.Emulator_rightMenuParameterContainer_frame)
+        self.Emulator_StimulusParameter_pushButton.setObjectName(u"Emulator_StimulusParameter_pushButton")
+        self.Emulator_StimulusParameter_pushButton.setFont(font1)
+        self.Emulator_StimulusParameter_pushButton.setIcon(icon8)
+        self.Emulator_StimulusParameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_189.addWidget(self.Emulator_StimulusParameter_pushButton)
+
+        self.Emulator_Synapse1_Parameter_pushButton = QPushButton(self.Emulator_rightMenuParameterContainer_frame)
+        self.Emulator_Synapse1_Parameter_pushButton.setObjectName(u"Emulator_Synapse1_Parameter_pushButton")
+        self.Emulator_Synapse1_Parameter_pushButton.setFont(font1)
+        self.Emulator_Synapse1_Parameter_pushButton.setIcon(icon5)
+        self.Emulator_Synapse1_Parameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_189.addWidget(self.Emulator_Synapse1_Parameter_pushButton)
+
+        self.Emulator_Synapse2_Parameter_pushButton = QPushButton(self.Emulator_rightMenuParameterContainer_frame)
+        self.Emulator_Synapse2_Parameter_pushButton.setObjectName(u"Emulator_Synapse2_Parameter_pushButton")
+        self.Emulator_Synapse2_Parameter_pushButton.setFont(font1)
+        self.Emulator_Synapse2_Parameter_pushButton.setIcon(icon5)
+        self.Emulator_Synapse2_Parameter_pushButton.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_189.addWidget(self.Emulator_Synapse2_Parameter_pushButton)
+
+
+        self.verticalLayout_188.addWidget(self.Emulator_rightMenuParameterContainer_frame)
+
+        self.frame_23 = QFrame(self.Emulator_rightMenuSubContainer)
+        self.frame_23.setObjectName(u"frame_23")
+        self.frame_23.setFrameShape(QFrame.StyledPanel)
+        self.frame_23.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_188.addWidget(self.frame_23)
+
+
+        self.verticalLayout_187.addWidget(self.Emulator_rightMenuSubContainer)
+
+
+        self.horizontalLayout_66.addWidget(self.Emulator_rightMenuContainer)
 
         self.mainbody_stackedWidget.addWidget(self.page_102)
         self.page_103 = QWidget()
@@ -3626,9 +7864,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton10.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton10")
         self.DataAnalysis_Neuron0Vm_pushButton10.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        font6 = QFont()
-        font6.setPointSize(10)
-        self.DataAnalysis_Neuron0Vm_pushButton10.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton10.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton10.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron0Vm_pushButton10)
@@ -3637,7 +7873,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton10.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton10")
         self.DataAnalysis_Neuron1Vm_pushButton10.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton10.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton10.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton10.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron1Vm_pushButton10)
@@ -3651,7 +7887,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton10.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton10.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton10.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton10.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton10.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton10.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_80.addWidget(self.DataAnalysis_Neuron2Vm_pushButton10)
@@ -3728,7 +7964,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton11.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton11")
         self.DataAnalysis_Neuron0Vm_pushButton11.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton11.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton11.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton11.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron0Vm_pushButton11)
@@ -3737,7 +7973,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton11.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton11")
         self.DataAnalysis_Neuron1Vm_pushButton11.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton11.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton11.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton11.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron1Vm_pushButton11)
@@ -3748,7 +7984,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton11.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton11.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton11.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton11.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton11.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton11.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_101.addWidget(self.DataAnalysis_Neuron2Vm_pushButton11)
@@ -3801,9 +8037,9 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Oscilloscope_widget1_2_2.setSizePolicy(sizePolicy5)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMinimumSize(QSize(0, 150))
         self.DataAnalysis_Oscilloscope_widget1_2_2.setMaximumSize(QSize(16777215, 150))
-        font7 = QFont()
-        font7.setPointSize(11)
-        self.DataAnalysis_Oscilloscope_widget1_2_2.setFont(font7)
+        font9 = QFont()
+        font9.setPointSize(11)
+        self.DataAnalysis_Oscilloscope_widget1_2_2.setFont(font9)
         self.DataAnalysis_Oscilloscope_widget1_2_2.setStyleSheet(u"background-color: rgb(0, 30, 38);")
 
         self.verticalLayout_49.addWidget(self.DataAnalysis_Oscilloscope_widget1_2_2)
@@ -3830,7 +8066,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton12.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton12")
         self.DataAnalysis_Neuron0Vm_pushButton12.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton12.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton12.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton12.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron0Vm_pushButton12)
@@ -3839,7 +8075,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton12.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton12")
         self.DataAnalysis_Neuron1Vm_pushButton12.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton12.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton12.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton12.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron1Vm_pushButton12)
@@ -3850,7 +8086,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton12.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton12.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton12.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton12.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton12.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton12.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_103.addWidget(self.DataAnalysis_Neuron2Vm_pushButton12)
@@ -3943,7 +8179,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton20.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton20")
         self.DataAnalysis_Neuron0Vm_pushButton20.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton20.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton20.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton20.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron0Vm_pushButton20)
@@ -3952,7 +8188,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton20.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton20")
         self.DataAnalysis_Neuron1Vm_pushButton20.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton20.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton20.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton20.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron1Vm_pushButton20)
@@ -3963,7 +8199,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton20.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton20.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton20.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton20.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton20.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton20.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_105.addWidget(self.DataAnalysis_Neuron2Vm_pushButton20)
@@ -4056,7 +8292,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton21.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton21")
         self.DataAnalysis_Neuron0Vm_pushButton21.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton21.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton21.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton21.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron0Vm_pushButton21)
@@ -4065,7 +8301,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton21.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton21")
         self.DataAnalysis_Neuron1Vm_pushButton21.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton21.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton21.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton21.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron1Vm_pushButton21)
@@ -4076,7 +8312,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton21.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton21.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton21.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton21.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton21.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton21.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_107.addWidget(self.DataAnalysis_Neuron2Vm_pushButton21)
@@ -4168,7 +8404,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton22.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton22")
         self.DataAnalysis_Neuron0Vm_pushButton22.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton22.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton22.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton22.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron0Vm_pushButton22)
@@ -4177,7 +8413,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton22.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton22")
         self.DataAnalysis_Neuron1Vm_pushButton22.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton22.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton22.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton22.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron1Vm_pushButton22)
@@ -4188,7 +8424,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton22.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton22.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton22.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton22.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton22.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton22.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_108.addWidget(self.DataAnalysis_Neuron2Vm_pushButton22)
@@ -4280,7 +8516,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton30.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton30")
         self.DataAnalysis_Neuron0Vm_pushButton30.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton30.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton30.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton30.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron0Vm_pushButton30)
@@ -4289,7 +8525,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton30.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton30")
         self.DataAnalysis_Neuron1Vm_pushButton30.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton30.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton30.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton30.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron1Vm_pushButton30)
@@ -4300,7 +8536,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton30.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton30.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton30.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton30.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton30.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton30.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_109.addWidget(self.DataAnalysis_Neuron2Vm_pushButton30)
@@ -4392,7 +8628,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton31.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton31")
         self.DataAnalysis_Neuron0Vm_pushButton31.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton31.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton31.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton31.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron0Vm_pushButton31)
@@ -4401,7 +8637,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton31.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton31")
         self.DataAnalysis_Neuron1Vm_pushButton31.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton31.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton31.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton31.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron1Vm_pushButton31)
@@ -4412,7 +8648,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton31.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton31.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton31.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton31.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton31.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton31.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_110.addWidget(self.DataAnalysis_Neuron2Vm_pushButton31)
@@ -4504,7 +8740,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton32.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton32")
         self.DataAnalysis_Neuron0Vm_pushButton32.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton32.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton32.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton32.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron0Vm_pushButton32)
@@ -4513,7 +8749,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton32.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton32")
         self.DataAnalysis_Neuron1Vm_pushButton32.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton32.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton32.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton32.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron1Vm_pushButton32)
@@ -4524,7 +8760,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton32.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton32.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton32.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton32.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton32.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton32.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_111.addWidget(self.DataAnalysis_Neuron2Vm_pushButton32)
@@ -4609,7 +8845,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron0Vm_pushButton110.setObjectName(u"DataAnalysis_Neuron0Vm_pushButton110")
         self.DataAnalysis_Neuron0Vm_pushButton110.setMinimumSize(QSize(25, 0))
         self.DataAnalysis_Neuron0Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron0Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron0Vm_pushButton110.setFont(font8)
         self.DataAnalysis_Neuron0Vm_pushButton110.setStyleSheet(u"color: rgb(220, 50, 47);")
 
         self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron0Vm_pushButton110)
@@ -4618,7 +8854,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron1Vm_pushButton110.setObjectName(u"DataAnalysis_Neuron1Vm_pushButton110")
         self.DataAnalysis_Neuron1Vm_pushButton110.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron1Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron1Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron1Vm_pushButton110.setFont(font8)
         self.DataAnalysis_Neuron1Vm_pushButton110.setStyleSheet(u"color: rgb(203, 75, 22);")
 
         self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron1Vm_pushButton110)
@@ -4629,7 +8865,7 @@ class Ui_MainWindow(object):
         self.DataAnalysis_Neuron2Vm_pushButton110.setSizePolicy(sizePolicy7)
         self.DataAnalysis_Neuron2Vm_pushButton110.setMinimumSize(QSize(0, 25))
         self.DataAnalysis_Neuron2Vm_pushButton110.setMaximumSize(QSize(16777215, 25))
-        self.DataAnalysis_Neuron2Vm_pushButton110.setFont(font6)
+        self.DataAnalysis_Neuron2Vm_pushButton110.setFont(font8)
         self.DataAnalysis_Neuron2Vm_pushButton110.setStyleSheet(u"color: rgb(181, 137, 0);")
 
         self.horizontalLayout_417.addWidget(self.DataAnalysis_Neuron2Vm_pushButton110)
@@ -5283,15 +9519,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_121.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsAffinity_Label = QLabel(self.Imaging_GECI_ReadingsAffinity_frame)
         self.Imaging_GECI_ReadingsAffinity_Label.setObjectName(u"Imaging_GECI_ReadingsAffinity_Label")
-        font8 = QFont()
-        font8.setPointSize(8)
-        self.Imaging_GECI_ReadingsAffinity_Label.setFont(font8)
+        font10 = QFont()
+        font10.setPointSize(8)
+        self.Imaging_GECI_ReadingsAffinity_Label.setFont(font10)
 
         self.horizontalLayout_121.addWidget(self.Imaging_GECI_ReadingsAffinity_Label)
 
         self.Imaging_GECI_ReadingsAffinity_Value = QLabel(self.Imaging_GECI_ReadingsAffinity_frame)
         self.Imaging_GECI_ReadingsAffinity_Value.setObjectName(u"Imaging_GECI_ReadingsAffinity_Value")
-        self.Imaging_GECI_ReadingsAffinity_Value.setFont(font8)
+        self.Imaging_GECI_ReadingsAffinity_Value.setFont(font10)
         self.Imaging_GECI_ReadingsAffinity_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_121.addWidget(self.Imaging_GECI_ReadingsAffinity_Value)
@@ -5309,13 +9545,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_144.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsKd_Label = QLabel(self.Imaging_GECI_ReadingsKd_frame)
         self.Imaging_GECI_ReadingsKd_Label.setObjectName(u"Imaging_GECI_ReadingsKd_Label")
-        self.Imaging_GECI_ReadingsKd_Label.setFont(font8)
+        self.Imaging_GECI_ReadingsKd_Label.setFont(font10)
 
         self.horizontalLayout_144.addWidget(self.Imaging_GECI_ReadingsKd_Label)
 
         self.Imaging_GECI_ReadingsKd_Value = QLabel(self.Imaging_GECI_ReadingsKd_frame)
         self.Imaging_GECI_ReadingsKd_Value.setObjectName(u"Imaging_GECI_ReadingsKd_Value")
-        self.Imaging_GECI_ReadingsKd_Value.setFont(font8)
+        self.Imaging_GECI_ReadingsKd_Value.setFont(font10)
         self.Imaging_GECI_ReadingsKd_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_144.addWidget(self.Imaging_GECI_ReadingsKd_Value)
@@ -5333,13 +9569,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_140.setContentsMargins(0, 0, 0, 0)
         self.Imaging_GECI_ReadingsBrightness_Label = QLabel(self.Imaging_GECI_ReadingsBrightness_frame)
         self.Imaging_GECI_ReadingsBrightness_Label.setObjectName(u"Imaging_GECI_ReadingsBrightness_Label")
-        self.Imaging_GECI_ReadingsBrightness_Label.setFont(font8)
+        self.Imaging_GECI_ReadingsBrightness_Label.setFont(font10)
 
         self.horizontalLayout_140.addWidget(self.Imaging_GECI_ReadingsBrightness_Label)
 
         self.Imaging_GECI_ReadingsBrightness_Value = QLabel(self.Imaging_GECI_ReadingsBrightness_frame)
         self.Imaging_GECI_ReadingsBrightness_Value.setObjectName(u"Imaging_GECI_ReadingsBrightness_Value")
-        self.Imaging_GECI_ReadingsBrightness_Value.setFont(font8)
+        self.Imaging_GECI_ReadingsBrightness_Value.setFont(font10)
         self.Imaging_GECI_ReadingsBrightness_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_140.addWidget(self.Imaging_GECI_ReadingsBrightness_Value)
@@ -7585,13 +11821,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_310.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsAffinity_Label = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
         self.MultipleImaging_GECI_ReadingsAffinity_Label.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Label")
-        self.MultipleImaging_GECI_ReadingsAffinity_Label.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsAffinity_Label.setFont(font10)
 
         self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Label)
 
         self.MultipleImaging_GECI_ReadingsAffinity_Value = QLabel(self.MultipleImaging_GECI_ReadingsAffinity_frame)
         self.MultipleImaging_GECI_ReadingsAffinity_Value.setObjectName(u"MultipleImaging_GECI_ReadingsAffinity_Value")
-        self.MultipleImaging_GECI_ReadingsAffinity_Value.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsAffinity_Value.setFont(font10)
         self.MultipleImaging_GECI_ReadingsAffinity_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_310.addWidget(self.MultipleImaging_GECI_ReadingsAffinity_Value)
@@ -7609,13 +11845,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_312.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsKd_Label = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
         self.MultipleImaging_GECI_ReadingsKd_Label.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Label")
-        self.MultipleImaging_GECI_ReadingsKd_Label.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsKd_Label.setFont(font10)
 
         self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Label)
 
         self.MultipleImaging_GECI_ReadingsKd_Value = QLabel(self.MultipleImaging_GECI_ReadingsKd_frame)
         self.MultipleImaging_GECI_ReadingsKd_Value.setObjectName(u"MultipleImaging_GECI_ReadingsKd_Value")
-        self.MultipleImaging_GECI_ReadingsKd_Value.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsKd_Value.setFont(font10)
         self.MultipleImaging_GECI_ReadingsKd_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_312.addWidget(self.MultipleImaging_GECI_ReadingsKd_Value)
@@ -7633,13 +11869,13 @@ class Ui_MainWindow(object):
         self.horizontalLayout_313.setContentsMargins(0, 0, 0, 0)
         self.MultipleImaging_GECI_ReadingsBrightness_Label = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
         self.MultipleImaging_GECI_ReadingsBrightness_Label.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Label")
-        self.MultipleImaging_GECI_ReadingsBrightness_Label.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsBrightness_Label.setFont(font10)
 
         self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Label)
 
         self.MultipleImaging_GECI_ReadingsBrightness_Value = QLabel(self.MultipleImaging_GECI_ReadingsBrightness_frame)
         self.MultipleImaging_GECI_ReadingsBrightness_Value.setObjectName(u"MultipleImaging_GECI_ReadingsBrightness_Value")
-        self.MultipleImaging_GECI_ReadingsBrightness_Value.setFont(font8)
+        self.MultipleImaging_GECI_ReadingsBrightness_Value.setFont(font10)
         self.MultipleImaging_GECI_ReadingsBrightness_Value.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_313.addWidget(self.MultipleImaging_GECI_ReadingsBrightness_Value)
@@ -10068,11 +14304,11 @@ class Ui_MainWindow(object):
         self.SaveNeuronPushButton = QPushButton(self.SaveNeuron_frame)
         self.SaveNeuronPushButton.setObjectName(u"SaveNeuronPushButton")
         self.SaveNeuronPushButton.setEnabled(True)
-        font9 = QFont()
-        font9.setPointSize(10)
-        font9.setBold(True)
-        font9.setStrikeOut(False)
-        self.SaveNeuronPushButton.setFont(font9)
+        font11 = QFont()
+        font11.setPointSize(10)
+        font11.setBold(True)
+        font11.setStrikeOut(False)
+        self.SaveNeuronPushButton.setFont(font11)
         self.SaveNeuronPushButton.setStyleSheet(u"color: rgb(147, 161, 161);")
         self.SaveNeuronPushButton.setCheckable(False)
 
@@ -10083,10 +14319,10 @@ class Ui_MainWindow(object):
 
         self.LoadNeuron_frame = QFrame(self.Izhik_button_frame)
         self.LoadNeuron_frame.setObjectName(u"LoadNeuron_frame")
-        font10 = QFont()
-        font10.setPointSize(9)
-        font10.setBold(True)
-        self.LoadNeuron_frame.setFont(font10)
+        font12 = QFont()
+        font12.setPointSize(9)
+        font12.setBold(True)
+        self.LoadNeuron_frame.setFont(font12)
         self.LoadNeuron_frame.setFrameShape(QFrame.StyledPanel)
         self.LoadNeuron_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_187 = QHBoxLayout(self.LoadNeuron_frame)
@@ -12087,9 +16323,9 @@ class Ui_MainWindow(object):
         self.Vm_IntroTitle = QLabel(self.Vm_IntroTitle_frame)
         self.Vm_IntroTitle.setObjectName(u"Vm_IntroTitle")
         self.Vm_IntroTitle.setMaximumSize(QSize(16777215, 50))
-        font11 = QFont()
-        font11.setPointSize(18)
-        self.Vm_IntroTitle.setFont(font11)
+        font13 = QFont()
+        font13.setPointSize(18)
+        self.Vm_IntroTitle.setFont(font13)
         self.Vm_IntroTitle.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_193.addWidget(self.Vm_IntroTitle)
@@ -12137,9 +16373,7 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.Vm_Task01_Title_frame.sizePolicy().hasHeightForWidth())
         self.Vm_Task01_Title_frame.setSizePolicy(sizePolicy2)
         self.Vm_Task01_Title_frame.setMaximumSize(QSize(16777215, 50))
-        font12 = QFont()
-        font12.setPointSize(14)
-        self.Vm_Task01_Title_frame.setFont(font12)
+        self.Vm_Task01_Title_frame.setFont(font7)
         self.Vm_Task01_Title_frame.setFrameShape(QFrame.StyledPanel)
         self.Vm_Task01_Title_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_194 = QHBoxLayout(self.Vm_Task01_Title_frame)
@@ -12149,7 +16383,7 @@ class Ui_MainWindow(object):
         self.Vm_Task01_Title = QLabel(self.Vm_Task01_Title_frame)
         self.Vm_Task01_Title.setObjectName(u"Vm_Task01_Title")
         self.Vm_Task01_Title.setMaximumSize(QSize(16777215, 50))
-        self.Vm_Task01_Title.setFont(font11)
+        self.Vm_Task01_Title.setFont(font13)
         self.Vm_Task01_Title.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_194.addWidget(self.Vm_Task01_Title)
@@ -12204,7 +16438,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_196.setContentsMargins(0, 0, 0, 0)
         self.Vm_Task02_Text = QLabel(self.Vm_Task02_Text_frame)
         self.Vm_Task02_Text.setObjectName(u"Vm_Task02_Text")
-        self.Vm_Task02_Text.setFont(font11)
+        self.Vm_Task02_Text.setFont(font13)
         self.Vm_Task02_Text.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_196.addWidget(self.Vm_Task02_Text)
@@ -12259,7 +16493,7 @@ class Ui_MainWindow(object):
         self.Vm_Task03_Title = QLabel(self.Vm_Task03_Title_frame)
         self.Vm_Task03_Title.setObjectName(u"Vm_Task03_Title")
         self.Vm_Task03_Title.setMaximumSize(QSize(16777215, 50))
-        self.Vm_Task03_Title.setFont(font11)
+        self.Vm_Task03_Title.setFont(font13)
         self.Vm_Task03_Title.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_198.addWidget(self.Vm_Task03_Title)
@@ -12556,14 +16790,15 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(1)
+        self.centerMenuSubContainer_menu_stackedwidget.setCurrentIndex(0)
         self.toolBox.setCurrentIndex(2)
         self.toolBox.layout().setSpacing(10)
-        self.mainbody_stackedWidget.setCurrentIndex(4)
+        self.mainbody_stackedWidget.setCurrentIndex(1)
         self.Spikeling_parameter_stackedwidget.setCurrentIndex(0)
+        self.Emulator_parameter_stackedwidget.setCurrentIndex(3)
         self.DataAnalysis_Display_StackedWidget.setCurrentIndex(6)
         self.DataAnalysis_stackedWidget.setCurrentIndex(0)
-        self.Imaging_parameter_stackedWidget.setCurrentIndex(0)
+        self.Imaging_parameter_stackedWidget.setCurrentIndex(2)
         self.MultipleImaging_parameter_stackedWidget.setCurrentIndex(2)
         self.StimulusGenerator_Parameter_stackedWidget.setCurrentIndex(3)
         self.Exercise101_stackedWidget.setCurrentIndex(0)
@@ -12590,7 +16825,7 @@ class Ui_MainWindow(object):
         self.GitHubMenu_pushButton.setText(QCoreApplication.translate("MainWindow", u"GitHub", None))
         self.centerMenuSubContainer_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Sub-Menus   ", None))
         self.Neuron_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Interface", None))
-        self.NeuronSimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Emulator", None))
+        self.NeuronEmulator_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Emulator", None))
         self.NeuronDataAnalysis_pushButton.setText(QCoreApplication.translate("MainWindow", u"Data Analysis", None))
         self.NeuronTutorial_pushButton.setText(QCoreApplication.translate("MainWindow", u"Tutorial", None))
         self.ImagingStimulation_pushButton.setText(QCoreApplication.translate("MainWindow", u"Imaging Simulation", None))
@@ -12730,9 +16965,201 @@ class Ui_MainWindow(object):
         self.Spikeling_Synapse2_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
         self.Spikeling_Synapse2_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
         self.Spikeling_rightMenuSubContainer_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Parameters", None))
-        self.Spikeling_StimulusParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Stimulus Parameters", None))
-        self.Spikeling_NeuronParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u"Neuron Parameters", None))
-        self.label_2.setText("")
+        self.Spikeling_StimulusParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Stimulus Parameters", None))
+        self.Spikeling_NeuronParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Neuron Parameters", None))
+        self.Emulator_Connect_pushButton.setText(QCoreApplication.translate("MainWindow", u"Start Spikeling Emulator", None))
+        self.Emulator_SpeedUp_pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.Emulator_NeuronModeLabel.setText(QCoreApplication.translate("MainWindow", u"Neuron Mode:", None))
+        self.Emulator_NeuronModeComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Neuron Mode", None))
+        self.Emulator_NeuronModeComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Tonic Spiking", None))
+        self.Emulator_NeuronModeComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Phasic Spiking", None))
+        self.Emulator_NeuronModeComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Tonic Bursting", None))
+        self.Emulator_NeuronModeComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phasic Bursting", None))
+        self.Emulator_NeuronModeComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Mixed Mode", None))
+        self.Emulator_NeuronModeComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Spike Frequency Adaptation", None))
+        self.Emulator_NeuronModeComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Class 1 Excitable", None))
+        self.Emulator_NeuronModeComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Class 2 Excitable", None))
+        self.Emulator_NeuronModeComboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Spike Latency", None))
+        self.Emulator_NeuronModeComboBox.setItemText(10, QCoreApplication.translate("MainWindow", u"Subthreshold Oscillations", None))
+        self.Emulator_NeuronModeComboBox.setItemText(11, QCoreApplication.translate("MainWindow", u"Resonator", None))
+        self.Emulator_NeuronModeComboBox.setItemText(12, QCoreApplication.translate("MainWindow", u"Integrator", None))
+
+        self.Emulator_NeuronBrowse_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+        self.Emulator_NeuronApplyMode_pushButton.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.Emulator_VmCheckbox.setText(QCoreApplication.translate("MainWindow", u"Vm", None))
+        self.Emulator_InputCurrentCheckbox.setText(QCoreApplication.translate("MainWindow", u"Input Current", None))
+        self.Emulator_StimulusCheckbox.setText(QCoreApplication.translate("MainWindow", u"Stimulus", None))
+        self.Emulator_Syn1VmCheckbox.setText(QCoreApplication.translate("MainWindow", u"Synapse 1 Vm", None))
+        self.Emulator_Syn1InputCheckbox.setText(QCoreApplication.translate("MainWindow", u"Synapse 1 Input", None))
+        self.Emulator_Syn2VmCheckbox.setText(QCoreApplication.translate("MainWindow", u"Synapse 2 Vm", None))
+        self.Emulator_Syn2InputCheckbox.setText(QCoreApplication.translate("MainWindow", u"Synapse 2 Input", None))
+        self.Emulator_DataRecording_box.setTitle(QCoreApplication.translate("MainWindow", u"Data Recording", None))
+        self.Emulator_DataRecording_SelectRecordFolder_label.setText(QCoreApplication.translate("MainWindow", u"Data Logging: Filename", None))
+        self.Emulator_DataRecording_RecordFolder_value.setText("")
+        self.Emulator_DataRecording_RecordFolderDir_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse directory", None))
+        self.Emulator_SelectedFolderLabel.setText("")
+        self.Emulator_DataRecording_Record_pushButton.setText(QCoreApplication.translate("MainWindow", u"Record", None))
+        self.Emulator_parameter_exit_pushButton.setText(QCoreApplication.translate("MainWindow", u"   Hide Parameters", None))
+        self.Emulator_StimulusLabel_.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Stimulus</span></p></body></html>", None))
+        self.Emulator_StimChoice_Current_label.setText(QCoreApplication.translate("MainWindow", u"Current", None))
+        self.Emulator_StimChoice_Light_label.setText(QCoreApplication.translate("MainWindow", u"Light", None))
+        self.Emulator_StimFre_Label.setText(QCoreApplication.translate("MainWindow", u"Stimulus Frequency (Hz)", None))
+        self.Emulator_StimFre_readings.setText("")
+        self.Emulator_StimFre_values_min.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.Emulator_StimFre_values.setText(QCoreApplication.translate("MainWindow", u"20", None))
+        self.Emulator_StimFre_values_max.setText(QCoreApplication.translate("MainWindow", u"1000", None))
+        self.Emulator_StimFre_image.setText("")
+        self.Emulator_StimStr_Label.setText(QCoreApplication.translate("MainWindow", u"Stimulus Strength (%)", None))
+        self.Emulator_StimStr_readings.setText("")
+        self.Emulator_StimStr_values_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_StimStr_values.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_StimStr_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_StimStr_image.setText("")
+        self.Emulator_CustomStimulus_Label.setText(QCoreApplication.translate("MainWindow", u"Custom Stimulus", None))
+        self.Emulator_CustomStimulus_StimLabel.setText(QCoreApplication.translate("MainWindow", u"Select a stimulus:", None))
+        self.Emulator_CustomStimulus_Load_pushButton.setText(QCoreApplication.translate("MainWindow", u"Load", None))
+        self.Emulator_PR_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Photo-Receptor</span></p></body></html>", None))
+        self.Emulator_PR_Label.setText(QCoreApplication.translate("MainWindow", u"Photo-Gain (%)", None))
+        self.Emulator_PR_Photogain_readings.setText("")
+        self.Emulator_PR_PhotoGain_values_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_PR_PhotoGain_values.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_PR_PhotoGain_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_PRDecay_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Decay: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_PR_Decay_readings.setText("")
+        self.Emulator_PR_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_PR_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.EmulatorPRRecovery_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Recovery: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_PR_Recovery_readings.setText("")
+        self.Emulator_PR_Recovery_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_PR_Recovery_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_PatchClamp_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Patch Clamp</span></p></body></html>", None))
+        self.Emulator_PatchClamp_Label.setText(QCoreApplication.translate("MainWindow", u"Injected Current (a.u.)", None))
+        self.Emulator_PatchClamp_reading.setText("")
+        self.Emulator_PatchClamp_values_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_PatchClamp_values.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_PatchClamp_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_Noise_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Noise</span></p></body></html>", None))
+        self.Emulator_Noise_Label.setText(QCoreApplication.translate("MainWindow", u"Noise Level (%)", None))
+        self.Emulator_Noise_readings.setText("")
+        self.Emulator_Noise_0_value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Noise_max_value.setText(QCoreApplication.translate("MainWindow", u"max", None))
+        self.Emulator_Synapse1_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Synapse 1</span></p></body></html>", None))
+        self.Emulator_Synapse1_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Gain (%)", None))
+        self.Emulator_Synapse1_readings.setText("")
+        self.Emulator_Synapse1_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_Synapse1.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Synapse1_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_Synapse1_Decay_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Decay: \u03bb (ms\u05bf \u00b9) ", None))
+        self.Emulator_Synapse1_Decay_readings.setText("")
+        self.Emulator_Synapse1_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_Synapse1_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_Synapse2_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Synapse 2</span></p></body></html>", None))
+        self.Emulator_Synapse2_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Gain (%)", None))
+        self.Emulator_Synapse2_readings.setText("")
+        self.Emulator_Synapse2_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_Synapse2.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Synapse2_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_Synapse2_Decay_Label.setText(QCoreApplication.translate("MainWindow", u"Synaptic Decay: \u03bb (ms\u05bf \u00b9) ", None))
+        self.Emulator_Synapse2_Decay_readings.setText("")
+        self.Emulator_Synapse2_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_Synapse2_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_PatchClamp_label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Auxiliary Neuron 1</span></p></body></html>", None))
+        self.Emulator_Syn1_Mode_label_frame_2.setText(QCoreApplication.translate("MainWindow", u"Neuron Mode", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Neuron Mode", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Tonic Spiking", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Phasic Spiking", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Tonic Bursting", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phasic Bursting", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Mixed Mode", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Spike Latency Adaptation", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Class 1 Excitable", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Class 2 Excitable", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Spike Latency", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(10, QCoreApplication.translate("MainWindow", u"Subthreshold Oscillations", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(11, QCoreApplication.translate("MainWindow", u"Resonator", None))
+        self.Emulator_Syn1_Mode_comboBox.setItemText(12, QCoreApplication.translate("MainWindow", u"Integrator", None))
+
+        self.Emulator_Syn1_Mode_Browse_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+        self.Emulator_Syn1_Mode_Apply_pushButton.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.Emulator_Syn1_Mode_Toggle_label.setText(QCoreApplication.translate("MainWindow", u"Synapse main neuron", None))
+        self.Emulator_Syn1_PatchClamp_Title_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Patch Clamp</span></p></body></html>", None))
+        self.Emulator_Syn1_PatchClamp_label.setText(QCoreApplication.translate("MainWindow", u"Injected Current (a.u.)", None))
+        self.Emulator_Syn1_PatchClamp_readings.setText("")
+        self.Emulator_Syn1_PatchClamp_min_value.setText(QCoreApplication.translate("MainWindow", u"-50", None))
+        self.Emulator_Syn1_PatchClamp_0_value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn1_PatchClamp_max_value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Emulator_Syn1_Noise_Title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Noise</span></p></body></html>", None))
+        self.Emulator_Syn1_Noise_Toggle_label.setText(QCoreApplication.translate("MainWindow", u"Noise Level (%)", None))
+        self.Emulator_Syn1_Noise_readings.setText("")
+        self.Emulator_Syn1_Noise_values_0.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn1_Noise_values_max.setText(QCoreApplication.translate("MainWindow", u"max", None))
+        self.Emulator_Syn1_Stimulus_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Stimulus</span></p></body></html>", None))
+        self.Emulator_Syn1_Stimulus_DC_label.setText(QCoreApplication.translate("MainWindow", u"Apply Direct Current Stimulus", None))
+        self.Emulator_Syn1_Stimulus_Light_label.setText(QCoreApplication.translate("MainWindow", u"Apply Light Stimulus", None))
+        self.Emulator_Syn1_PR_Label.setText(QCoreApplication.translate("MainWindow", u"Photo-Gain (%)", None))
+        self.Emulator_Syn1_PR_Photogain_readings.setText("")
+        self.Emulator_Syn1_PR_PhotoGain_values_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_Syn1_PR_PhotoGain_values.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn1_PR_PhotoGain_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_Syn1_PRDecay_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Decay: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_Syn1_PR_Decay_readings.setText("")
+        self.Emulator_Syn1_PR_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_Syn1_PR_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_Syn1_PRRecovery_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Recovery: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_Syn1_PR_Recovery_readings.setText("")
+        self.Emulator_Syn1_PR_Recovery_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_Syn1_PR_Recovery_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_PatchClamp_label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Auxiliary Neuron 2</span></p></body></html>", None))
+        self.Emulator_Syn2_Mode_label_frame_2.setText(QCoreApplication.translate("MainWindow", u"Neuron Mode", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Select Neuron Mode", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Tonic Spiking", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Phasic Spiking", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Tonic Bursting", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Phasic Bursting", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Mixed Mode", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Spike Frequency Adaptation", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Class 1 Excitable", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Class 2 Excitable", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Spike Latency", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(10, QCoreApplication.translate("MainWindow", u"Subthreshold Oscillations", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(11, QCoreApplication.translate("MainWindow", u"Resonator", None))
+        self.Emulator_Syn2_Mode_comboBox.setItemText(12, QCoreApplication.translate("MainWindow", u"Integrator", None))
+
+        self.Emulator_Syn2_Mode_Browse_pushButton.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
+        self.Emulator_Syn2_Mode_Apply_pushButton.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.Emulator_Syn2_Mode_Toggle_label.setText(QCoreApplication.translate("MainWindow", u"Synapse main neuron", None))
+        self.Emulator_Syn2_PatchClamp_Title_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Patch Clamp</span></p></body></html>", None))
+        self.Emulator_Syn2_PatchClamp_label.setText(QCoreApplication.translate("MainWindow", u"Injected Current (a.u.)", None))
+        self.Emulator_Syn2_PatchClamp_readings.setText("")
+        self.Emulator_Syn2_PatchClamp_min_value.setText(QCoreApplication.translate("MainWindow", u"-50", None))
+        self.Emulator_Syn2_PatchClamp_0_value.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn2_PatchClamp_max_value.setText(QCoreApplication.translate("MainWindow", u"50", None))
+        self.Emulator_Syn2_Noise_Title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Noise</span></p></body></html>", None))
+        self.Emulator_Syn2_Noise_Toggle_label.setText(QCoreApplication.translate("MainWindow", u"Noise Level (%)", None))
+        self.Emulator_Syn2_Noise_readings.setText("")
+        self.Emulator_Syn2_Noise_values_0.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn2_Noise_values_max.setText(QCoreApplication.translate("MainWindow", u"max", None))
+        self.Emulator_Syn2_Stimulus_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:696;\">Stimulus</span></p></body></html>", None))
+        self.Emulator_Syn2_Stimulus_DC_label.setText(QCoreApplication.translate("MainWindow", u"Apply Direct Current Stimulus", None))
+        self.Emulator_Syn2_Stimulus_Light_label.setText(QCoreApplication.translate("MainWindow", u"Apply Light Stimulus", None))
+        self.Emulator_Syn2_PR_Label.setText(QCoreApplication.translate("MainWindow", u"Photo-Gain (%)", None))
+        self.Emulator_Syn2_PR_Photogain_readings.setText("")
+        self.Emulator_Syn2_PR_PhotoGain_values_min.setText(QCoreApplication.translate("MainWindow", u"-100", None))
+        self.Emulator_Syn2_PR_PhotoGain_values.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Emulator_Syn2_PR_PhotoGain_values_max.setText(QCoreApplication.translate("MainWindow", u"100", None))
+        self.Emulator_Syn2_PRDecay_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Decay: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_Syn2_PR_Decay_readings.setText("")
+        self.Emulator_Syn2_PR_Decay_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_Syn2_PR_Decay_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_Syn2_PRRecovery_Label.setText(QCoreApplication.translate("MainWindow", u"Photo Recovery: \u03bb (ms\u05bf \u00b9)", None))
+        self.Emulator_Syn2_PR_Recovery_readings.setText("")
+        self.Emulator_Syn2_PR_Recovery_values_slow.setText(QCoreApplication.translate("MainWindow", u"Slow", None))
+        self.Emulator_Syn2_PR_Recovery_values_fast.setText(QCoreApplication.translate("MainWindow", u"Fast", None))
+        self.Emulator_rightMenuSubContainer_pushButton.setText(QCoreApplication.translate("MainWindow", u"Hide Parameters", None))
+        self.Emulator_NeuronParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Neuron Parameters", None))
+        self.Emulator_StimulusParameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Stimulus Parameters", None))
+        self.Emulator_Synapse1_Parameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Synapse 1", None))
+        self.Emulator_Synapse2_Parameter_pushButton.setText(QCoreApplication.translate("MainWindow", u" Synapse 2", None))
         self.DataAnalysis_Neuron0Vm_pushButton10.setText(QCoreApplication.translate("MainWindow", u"Spikeling Neuron", None))
         self.DataAnalysis_Neuron1Vm_pushButton10.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 1", None))
         self.DataAnalysis_Neuron2Vm_pushButton10.setText(QCoreApplication.translate("MainWindow", u"Aux Neuron 2", None))

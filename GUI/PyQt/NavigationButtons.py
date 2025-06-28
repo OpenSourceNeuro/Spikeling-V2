@@ -9,7 +9,7 @@ from PySide6.QtSerialPort import QSerialPortInfo
 
 
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
-import Spikeling_graph, Imaging_graph, MultipleImaging_graph
+import Spikeling_graph, Emulator_graph, Imaging_graph, MultipleImaging_graph
 
 
 ########################################################################
@@ -90,6 +90,14 @@ def collapseMenu(self, menu, standard, maxWidth, duration, enable):
 ########################################################################
 def Buttons(self):
 
+        # Navigation buttons
+        self.icon_SpikelingDropMenuRight = QIcon()
+        self.icon_SpikelingDropMenuRight.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Normal,
+                                                 QIcon.Off)
+        self.icon_SpikelingMenuRight = QIcon()
+        self.icon_SpikelingMenuRight.addFile(u":/resources/resources/MenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
+
+
         # Main Menu Container
         self.icon_DropMenuLeft = QIcon()
         self.icon_DropMenuLeft.addFile(u":/resources/resources/DropMenuLeft.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -98,62 +106,76 @@ def Buttons(self):
         self.ui.centerMenuContainer.setMaximumSize(QSize(0, 16777215))
         self.ui.leftMenuContainer.setMinimumSize(QSize(leftMenu_max, 16777215))
         self.ui.menu_pushButton.clicked.connect(lambda: toggleMenu(self, self.ui.leftMenuContainer, leftMenu_min, leftMenu_max, animation_speed,
-                                                                               self.ui.menu_pushButton, self.icon_MenuLeft, self.icon_DropMenuLeft, True))
+                                                                self.ui.menu_pushButton, self.icon_MenuLeft, self.icon_DropMenuLeft, True))
 
 
         # Left Menu Container
         self.ui.SpikelingMenu_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.SpikelingMenu_pushButton.clicked.connect(lambda: self.ui.centerMenuSubContainer_menu_stackedwidget.setCurrentWidget(self.ui.Spikeling_SubMenu_page))
+
         self.ui.ImagingMenu_pushButton.clicked.connect(lambda:  expandMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.ImagingMenu_pushButton.clicked.connect(lambda: self.ui.centerMenuSubContainer_menu_stackedwidget.setCurrentWidget(self.ui.Imaging_SubMenu_page))
+
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: Page301.ShowPage(self))
+
         self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: Page401.ShowPage(self))
         self.ui.StimuluGeneratorMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
+
         self.ui.ExercisesMenu_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
         self.ui.ExercisesMenu_pushButton.clicked.connect(lambda: self.ui.centerMenuSubContainer_menu_stackedwidget.setCurrentWidget(self.ui.Exercises_SubMenu_page))
+
         self.ui.centerMenuSubContainer_exit_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
+
         self.ui.SettingsMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
+
         self.ui.AboutMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
+
         self.ui.HelpMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
+
         self.ui.GitHubMenu_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.centerMenuContainer, centerMenu_min, centerMenu_max, animation_speed, True))
 
 
-        # Navigation buttons
-        self.icon_SpikelingDropMenuRight = QIcon()
-        self.icon_SpikelingDropMenuRight.addFile(u":/resources/resources/DropMenuRight.png", QSize(), QIcon.Normal,QIcon.Off)
-        self.icon_SpikelingMenuRight = QIcon()
-        self.icon_SpikelingMenuRight.addFile(u":/resources/resources/MenuRight.png", QSize(), QIcon.Normal, QIcon.Off)
-
-        # Spikeling 101 parameters navigation button
+        # Right Menu Container
+        # Spikeling parameters navigation button
         self.ui.Spikeling_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
         self.ui.Spikeling_rightMenuContainer.setMinimumSize(QSize(spikerightMenu_max, 16777215))
         self.ui.Spikeling_rightMenuSubContainer_pushButton.clicked.connect(lambda: toggleMenu(self, self.ui.Spikeling_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
-                                                                                                          self.ui.Spikeling_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+                                                                                              self.ui.Spikeling_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
         self.ui.Spikeling_StimulusParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Spikeling_NeuronParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Spikeling_parameter_exit_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.Spikeling_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
 
 
-        # Spikeling 103 Data Analysis navigation buttons
-        #self.ui.DataAnalysis_stackedWidget.setMaximumSize(QSize(0, 16777215))
+        # Emulator parameters navigation button
+        self.ui.Emulator_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
+        self.ui.Emulator_rightMenuContainer.setMinimumSize(QSize(spikerightMenu_max, 16777215))
+        self.ui.Emulator_rightMenuSubContainer_pushButton.clicked.connect(lambda: toggleMenu(self, self.ui.Emulator_rightMenuContainer, spikerightMenu_min, spikerightMenu_max,animation_speed,
+                                                                                             self.ui.Emulator_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+        self.ui.Emulator_StimulusParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Emulator_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Emulator_NeuronParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Emulator_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Emulator_Synapse1_Parameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Emulator_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Emulator_Synapse2_Parameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Emulator_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
+        self.ui.Emulator_parameter_exit_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.Emulator_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
 
-        # Imaging 201 parameters navigation button
+
+
+        # Imaging  parameters navigation button
         self.ui.Imaging_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
         self.ui.Imaging_rightMenuContainer.setMinimumSize(QSize(0, 16777215))
         self.ui.Imaging_rightMenuSubContainer_pushButton.clicked.connect(lambda: toggleMenu(self, self.ui.Imaging_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
-                                                                                                          self.ui.Imaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+                                                                                            self.ui.Imaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
         self.ui.Imaging_ImagingParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_CalciumParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_FluoParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.Imaging_parameter_exit_pushButton.clicked.connect(lambda: collapseMenu(self, self.ui.Imaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
 
 
-        # Imaging 202 parameters navigation button
+        # Multiple Imaging parameters navigation button
         self.ui.MultipleImaging_CenterMenuContainer.setMaximumSize(QSize(0, 16777215))
         self.ui.MultipleImaging_rightMenuContainer.setMinimumSize(QSize(0, 16777215))
         self.ui.MultipleImaging_rightMenuSubContainer_pushButton.clicked.connect(lambda: toggleMenu(self, self.ui.MultipleImaging_rightMenuContainer, spikerightMenu_min, spikerightMenu_max, animation_speed,
-                                                                                                          self.ui.MultipleImaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
+                                                                                                    self.ui.MultipleImaging_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True))
         self.ui.MultipleImaging_ImagingParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.MultipleImaging_CalciumParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
         self.ui.MultipleImaging_FluoParameter_pushButton.clicked.connect(lambda: expandMenu(self, self.ui.MultipleImaging_CenterMenuContainer, spikecenterMenu_min, spikecenterMenu_max, animation_speed, True))
@@ -170,7 +192,7 @@ def Buttons(self):
     # Spikeling Page - page101
 
         # Display page101 when spikeling button is clicked
-        self.ui.Neuron_pushButton.clicked.connect(lambda: Page101.Spikeling101.ShowPage(self))
+        self.ui.Neuron_pushButton.clicked.connect(lambda: Page101.Spikeling.ShowPage(self))
 
         # Update connected port COM and append them
         for i in range(len(ports)):
@@ -178,72 +200,184 @@ def Buttons(self):
         for i in range(len(ports)):
             self.ui.Spikeling_SelectPortComboBox.setItemText(i + 1, str(portList[i]))
         # COM port connections
-        self.ui.Spikeling_SelectPortComboBox.currentIndexChanged.connect(lambda: Page101.Spikeling101.ChangePort(self))
+        self.ui.Spikeling_SelectPortComboBox.currentIndexChanged.connect(lambda: Page101.Spikeling.ChangePort(self))
 
         # Start reading serial when connect button is clicked and plot the reading on the oscilloscope
         self.ui.Spikeling_ConnectButton.clicked.connect(lambda: Spikeling_graph.SpikelingPlot(self))
 
         # Load previously conceived neurons
-        self.ui.Spikeling_NeuronBrowsePushButton.clicked.connect(lambda: Page101.Spikeling101.BrowseNeuron(self))
+        self.ui.Spikeling_NeuronBrowsePushButton.clicked.connect(lambda: Page101.Spikeling.BrowseNeuron(self))
 
         # Select Neuron Mode from the list and applied Izhikevich parameters:
         self.ui.ImportNeuron = []
-        self.ui.Spikeling_NeuronMode_pushButton.clicked.connect(lambda: Page101.Spikeling101.SelectNeuronMode(self))
+        self.ui.Spikeling_NeuronMode_pushButton.clicked.connect(lambda: Page101.Spikeling.SelectNeuronMode(self))
 
         # Deactivate buzzer sound
-        self.ui.Sound_pushButton.clicked.connect(lambda: Page101.Spikeling101.ControlBuzzer(self))
+        self.ui.Sound_pushButton.clicked.connect(lambda: Page101.Spikeling.ControlBuzzer(self))
 
         # Deactivate LED light
-        self.ui.LED_pushButton.clicked.connect(lambda: Page101.Spikeling101.ControlLED(self))
+        self.ui.LED_pushButton.clicked.connect(lambda: Page101.Spikeling.ControlLED(self))
 
         # Create buffer data record folder
         self.ui.Spikeling_FolderNameLabel = QtWidgets.QLabel(self.ui.Spikeling_DataRecording_box)
         self.ui.Spikeling_FolderNameLabel.setObjectName("FolderNameLabel")
 
         # Data Recording
-        self.ui.Spikeling_DataRecording_RecordFolder_value.textChanged.connect(lambda: Page101.Spikeling101.RecordFolderText(self))
-        self.ui.Spikeling_DataRecording_RecordFolderDir_pushButton.clicked.connect(lambda: Page101.Spikeling101.BrowseRecordFolder(self.ui))
+        self.ui.Spikeling_DataRecording_RecordFolder_value.textChanged.connect(lambda: Page101.Spikeling.RecordFolderText(self))
+        self.ui.Spikeling_DataRecording_RecordFolderDir_pushButton.clicked.connect(lambda: Page101.Spikeling.BrowseRecordFolder(self.ui))
         self.ui.Spikeling_DataRecording_Record_pushButton.setCheckable(True)
-        self.ui.Spikeling_DataRecording_Record_pushButton.clicked.connect(lambda: Page101.Spikeling101.RecordButton(self))
+        self.ui.Spikeling_DataRecording_Record_pushButton.clicked.connect(lambda: Page101.Spikeling.RecordButton(self))
 
         # Stimulation parameters
         # Display stimulation parameter page when StimulusParameter button is clicked
         self.ui.Spikeling_StimulusParameter_pushButton.clicked.connect(lambda: self.ui.Spikeling_parameter_stackedwidget.setCurrentWidget(self.ui.StimulusParameter_page))
-        self.ui.StimFre_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateStimFre(self))
-        self.ui.Spikeling_StimFre_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetStimFreSliderValue(self))
-        self.ui.StimStr_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateStimStr(self))
-        self.ui.Spikeling_StimStrSlider.valueChanged.connect(lambda: Page101.Spikeling101.GetStimStrSliderValue(self))
-        self.ui.StimCus_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateCustomStimulus(self))
+        self.ui.StimFre_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateStimFre(self))
+        self.ui.Spikeling_StimFre_slider.valueChanged.connect(lambda: Page101.Spikeling.GetStimFreSliderValue(self))
+        self.ui.StimStr_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateStimStr(self))
+        self.ui.Spikeling_StimStrSlider.valueChanged.connect(lambda: Page101.Spikeling.GetStimStrSliderValue(self))
+        self.ui.StimCus_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateCustomStimulus(self))
 
-        self.ui.Spikeling_CustomStimulus_Load_pushButton.clicked.connect(lambda: Page101.Spikeling101.LoadStimulus(self))
-        self.ui.PhotoGain_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePhotoGain(self))
-        self.ui.Spikeling_PR_PhotoGain_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetPhotoGain(self))
-        self.ui.PhotoDecay_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePRDecay(self))
-        self.ui.Spikeling_PR_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetPRDecay(self))
-        self.ui.PhotoRecovery_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivatePRRecovery(self))
-        self.ui.Spikeling_PR_Recovery_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetPRRecovery(self))
+        self.ui.Spikeling_CustomStimulus_Load_pushButton.clicked.connect(lambda: Page101.Spikeling.LoadStimulus(self))
+        self.ui.PhotoGain_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivatePhotoGain(self))
+        self.ui.Spikeling_PR_PhotoGain_slider.valueChanged.connect(lambda: Page101.Spikeling.GetPhotoGain(self))
+        self.ui.PhotoDecay_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivatePRDecay(self))
+        self.ui.Spikeling_PR_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling.GetPRDecay(self))
+        self.ui.PhotoRecovery_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivatePRRecovery(self))
+        self.ui.Spikeling_PR_Recovery_slider.valueChanged.connect(lambda: Page101.Spikeling.GetPRRecovery(self))
 
         # Neuron parameters
         # Display neuron parameter page when NeuronParameter button is clicked
         self.ui.Spikeling_NeuronParameter_pushButton.clicked.connect(lambda: self.ui.Spikeling_parameter_stackedwidget.setCurrentWidget(self.ui.NeuronParameter_page))
-        self.ui.PatchClamp_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateInjectedCurrent(self))
-        self.ui.Spikeling_PatchClamp_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetInjectedCurrent(self))
-        self.ui.Noise_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateNoiseLevel(self))
-        self.ui.Spikeling_Noise_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetNoiseLevel(self))
-        self.ui.Synapse1_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateSynapticGain1(self))
-        self.ui.Spikeling_Synapse1_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetSynapticGain1(self))
-        self.ui.Synapse1Decay_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateSynapseDecay1(self))
-        self.ui.Spikeling_Synapse1_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetSynapticDecay1(self))
-        self.ui.Synapse2_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateSynapticGain2(self))
-        self.ui.Spikeling_Synapse2_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetSynapticGain2(self))
-        self.ui.Synapse2Decay_toggleButton.toggled.connect(lambda: Page101.Spikeling101.ActivateSynapseDecay2(self))
-        self.ui.Spikeling_Synapse2_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling101.GetSynapticDecay2(self))
+        self.ui.PatchClamp_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateInjectedCurrent(self))
+        self.ui.Spikeling_PatchClamp_slider.valueChanged.connect(lambda: Page101.Spikeling.GetInjectedCurrent(self))
+        self.ui.Noise_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateNoiseLevel(self))
+        self.ui.Spikeling_Noise_slider.valueChanged.connect(lambda: Page101.Spikeling.GetNoiseLevel(self))
+        self.ui.Synapse1_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateSynapticGain1(self))
+        self.ui.Spikeling_Synapse1_slider.valueChanged.connect(lambda: Page101.Spikeling.GetSynapticGain1(self))
+        self.ui.Synapse1Decay_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateSynapseDecay1(self))
+        self.ui.Spikeling_Synapse1_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling.GetSynapticDecay1(self))
+        self.ui.Synapse2_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateSynapticGain2(self))
+        self.ui.Spikeling_Synapse2_slider.valueChanged.connect(lambda: Page101.Spikeling.GetSynapticGain2(self))
+        self.ui.Synapse2Decay_toggleButton.toggled.connect(lambda: Page101.Spikeling.ActivateSynapseDecay2(self))
+        self.ui.Spikeling_Synapse2_Decay_slider.valueChanged.connect(lambda: Page101.Spikeling.GetSynapticDecay2(self))
 
 
     ########################################################################
-    # Spikeling Tutorial - page 102
-        # Display page102 when tutorial button is clicked
-        self.ui.NeuronTutorial_pushButton.clicked.connect(lambda: Page102.Spikeling102.ShowPage(self))
+    # Emulator - page 102
+
+        # Display page102 when emulator button is clicked
+        self.ui.NeuronEmulator_pushButton.clicked.connect(lambda: Page102.Emulator.ShowPage(self))
+
+
+        # Start the Emulator
+        self.ui.Emulator_Connect_pushButton.clicked.connect(lambda: Emulator_graph.EmulatorPlot(self))
+
+
+        # Load previously conceived neurons
+        self.ui.Emulator_NeuronBrowse_pushButton.clicked.connect(lambda: Page102.Emulator.BrowseNeuron(self))
+
+
+        # Select Neuron Mode from the list and applied Izhikevich parameters:
+        self.ui.EmulatorImportNeuron = []
+        self.ui.Emulator_NeuronApplyMode_pushButton.clicked.connect(lambda: Page102.Emulator.SelectNeuronMode(self))
+
+
+        # Create buffer data record folder
+        self.ui.Emulator_FolderNameLabel = QtWidgets.QLabel(self.ui.Emulator_DataRecording_box)
+        self.ui.Emulator_FolderNameLabel.setObjectName("FolderNameLabel")
+
+
+        # Data Recording
+        self.ui.Emulator_DataRecording_RecordFolder_value.textChanged.connect(lambda: Page102.Emulator.RecordFolderText(self))
+        self.ui.Emulator_DataRecording_RecordFolderDir_pushButton.clicked.connect(lambda: Page102.Emulator.BrowseRecordFolder(self.ui))
+        self.ui.Emulator_DataRecording_Record_pushButton.setCheckable(True)
+        self.ui.Emulator_DataRecording_Record_pushButton.clicked.connect(lambda: Page102.Emulator.RecordButton(self))
+
+
+        # Stimulation parameters
+        self.ui.Emulator_StimulusParameter_pushButton.clicked.connect(lambda: self.ui.Emulator_parameter_stackedwidget.setCurrentWidget(self.ui.Emulator_StimulusParameter_page))
+        self.ui.EmulatorStimFre_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateStimFre(self))
+        self.ui.Emulator_StimFre_slider.valueChanged.connect(lambda: Page102.Emulator.GetStimFreSliderValue(self))
+        self.ui.EmulatorStimStr_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateStimStr(self))
+        self.ui.Emulator_StimStrSlider.valueChanged.connect(lambda: Page102.Emulator.GetStimStrSliderValue(self))
+        self.ui.EmulatorStimCus_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateCustomStimulus(self))
+
+        self.ui.Emulator_CustomStimulus_Load_pushButton.clicked.connect(lambda: Page102.Emulator.LoadStimulus(self))
+        self.ui.EmulatorPhotoGain_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivatePhotoGain(self))
+        self.ui.Emulator_PR_PhotoGain_slider.valueChanged.connect(lambda: Page102.Emulator.GetPhotoGain(self))
+        self.ui.EmulatorPhotoDecay_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivatePRDecay(self))
+        self.ui.Emulator_PR_Decay_slider.valueChanged.connect(lambda: Page102.Emulator.GetPRDecay(self))
+        self.ui.EmulatorPhotoRecovery_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivatePRRecovery(self))
+        self.ui.Emulator_PR_Recovery_slider.valueChanged.connect(lambda: Page102.Emulator.GetPRRecovery(self))
+
+
+        # Neuron parameters
+        self.ui.Emulator_NeuronParameter_pushButton.clicked.connect(lambda: self.ui.Emulator_parameter_stackedwidget.setCurrentWidget(self.ui.Emulator_NeuronParameter_page))
+        self.ui.EmulatorPatchClamp_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateInjectedCurrent(self))
+        self.ui.Emulator_PatchClamp_slider.valueChanged.connect(lambda: Page102.Emulator.GetInjectedCurrent(self))
+        self.ui.EmulatorNoise_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateNoiseLevel(self))
+        self.ui.Emulator_Noise_slider.valueChanged.connect(lambda: Page102.Emulator.GetNoiseLevel(self))
+        self.ui.EmulatorSynapse1_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateSynapticGain1(self))
+        self.ui.Emulator_Synapse1_slider.valueChanged.connect(lambda: Page102.Emulator.GetSynapticGain1(self))
+        self.ui.EmulatorSynapse1Decay_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateSynapseDecay1(self))
+        self.ui.Emulator_Synapse1_Decay_slider.valueChanged.connect(lambda: Page102.Emulator.GetSynapticDecay1(self))
+        self.ui.EmulatorSynapse2_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateSynapticGain2(self))
+        self.ui.Emulator_Synapse2_slider.valueChanged.connect(lambda: Page102.Emulator.GetSynapticGain2(self))
+        self.ui.EmulatorSynapse2Decay_toggleButton.toggled.connect(lambda: Page102.Emulator.ActivateSynapseDecay2(self))
+        self.ui.Emulator_Synapse2_Decay_slider.valueChanged.connect(lambda: Page102.Emulator.GetSynapticDecay2(self))
+
+
+        # Auxiliary Neuron 1 parameters
+        self.ui.Emulator_Synapse1_Parameter_pushButton.clicked.connect(lambda: self.ui.Emulator_parameter_stackedwidget.setCurrentWidget(self.ui.Emulator_Synapse1Parameter_page))
+
+        # Load previously conceived neurons
+        self.ui.Emulator_Syn1_Mode_Browse_pushButton.clicked.connect(lambda: Page102.EmulatorSyn1.BrowseNeuron(self))
+
+        # Select Neuron Mode from the list and applied Izhikevich parameters:
+        self.ui.EmulatorSyn1_ImportNeuron = []
+        self.ui.Emulator_Syn1_Mode_Apply_pushButton.clicked.connect(lambda: Page102.EmulatorSyn1.SelectNeuronMode(self))
+
+        self.ui.EmulatorSyn1_Synapse_toggleButton.clicked.connect(lambda: Page102.EmulatorSyn1.ActivateSynapse(self))
+        self.ui.EmulatorSyn1_StimLight_toggleButton.clicked.connect(lambda: Page102.EmulatorSyn1.ActivatePhotoParameters(self))
+
+        self.ui.EmulatorSyn1_PatchClamp_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn1.ActivateInjectedCurrent(self))
+        self.ui.Emulator_Syn1_PatchClamp_slider.valueChanged.connect(lambda: Page102.EmulatorSyn1.GetInjectedCurrent(self))
+        self.ui.EmulatorSyn1_Noise_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn1.ActivateNoiseLevel(self))
+        self.ui.Emulator_Syn1_Noise_slider.valueChanged.connect(lambda: Page102.EmulatorSyn1.GetNoiseLevel(self))
+
+        self.ui.EmulatorSyn1_PhotoGain_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn1.ActivatePhotoGain(self))
+        self.ui.Emulator_Syn1_PR_PhotoGain_slider.valueChanged.connect(lambda: Page102.EmulatorSyn1.GetPhotoGain(self))
+        self.ui.EmulatorSyn1_PhotoDecay_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn1.ActivatePRDecay(self))
+        self.ui.Emulator_Syn1_PR_Decay_slider.valueChanged.connect(lambda: Page102.EmulatorSyn1.GetPRDecay(self))
+        self.ui.EmulatorSyn1_PhotoRecovery_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn1.ActivatePRRecovery(self))
+        self.ui.Emulator_Syn1_PR_Recovery_slider.valueChanged.connect(lambda: Page102.EmulatorSyn1.GetPRRecovery(self))
+
+
+        # Auxiliary Neuron 2 parameters
+        self.ui.Emulator_Synapse2_Parameter_pushButton.clicked.connect( lambda: self.ui.Emulator_parameter_stackedwidget.setCurrentWidget(self.ui.Emulator_Synapse2Parameter_page))
+
+        # Load previously conceived neurons
+        self.ui.Emulator_Syn2_Mode_Browse_pushButton.clicked.connect(lambda: Page102.EmulatorSyn2.BrowseNeuron(self))
+
+        # Select Neuron Mode from the list and applied Izhikevich parameters:
+        self.ui.EmulatorSyn2_ImportNeuron = []
+        self.ui.Emulator_Syn2_Mode_Apply_pushButton.clicked.connect(lambda: Page102.EmulatorSyn2.SelectNeuronMode(self))
+
+        self.ui.EmulatorSyn2_Synapse_toggleButton.clicked.connect(lambda: Page102.EmulatorSyn2.ActivateSynapse(self))
+        self.ui.EmulatorSyn2_StimLight_toggleButton.clicked.connect(lambda: Page102.EmulatorSyn2.ActivatePhotoParameters(self))
+
+        self.ui.EmulatorSyn2_PatchClamp_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn2.ActivateInjectedCurrent(self))
+        self.ui.Emulator_Syn2_PatchClamp_slider.valueChanged.connect(lambda: Page102.EmulatorSyn2.GetInjectedCurrent(self))
+        self.ui.EmulatorSyn2_Noise_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn2.ActivateNoiseLevel(self))
+        self.ui.Emulator_Syn2_Noise_slider.valueChanged.connect(lambda: Page102.EmulatorSyn2.GetNoiseLevel(self))
+
+        self.ui.EmulatorSyn2_PhotoGain_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn2.ActivatePhotoGain(self))
+        self.ui.Emulator_Syn2_PR_PhotoGain_slider.valueChanged.connect(lambda: Page102.EmulatorSyn2.GetPhotoGain(self))
+        self.ui.EmulatorSyn2_PhotoDecay_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn2.ActivatePRDecay(self))
+        self.ui.Emulator_Syn2_PR_Decay_slider.valueChanged.connect(lambda: Page102.EmulatorSyn2.GetPRDecay(self))
+        self.ui.EmulatorSyn2_PhotoRecovery_toggleButton.toggled.connect(lambda: Page102.EmulatorSyn2.ActivatePRRecovery(self))
+        self.ui.Emulator_Syn2_PR_Recovery_slider.valueChanged.connect(lambda: Page102.EmulatorSyn2.GetPRRecovery(self))
+
 
 
     ########################################################################

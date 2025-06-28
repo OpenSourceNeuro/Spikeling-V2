@@ -2,7 +2,6 @@
 ########################################################################
 #                          Libraries import                            #
 
-from PySide6.QtSerialPort import  QSerialPortInfo
 from PySide6.QtWidgets import QFileDialog
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import QSize, QFileInfo
@@ -12,23 +11,23 @@ import os
 import numpy as np
 import pandas as pd
 
-import Settings
+import Settings, NavigationButtons
 from Izhikevich_parameters import IzhikevichNeurons
-
-import Settings
 
 
 serial_port = None
 
 
 
-class Spikeling101():
+class Spikeling():
 
     def ShowPage(self):
-        self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_101)
+        self.ui.Spikeling_rightMenuContainer.setMinimumSize(QSize(NavigationButtons.spikerightMenu_max, 16777215))
         self.ui.Spikeling_Oscilloscope_widget.setBackground(Settings.DarkSolarized[0])
         self.ui.Spikeling_CustomStimulus_display.setBackground(Settings.DarkSolarized[0])
-
+        self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_101)
+        NavigationButtons.toggleMenu(self, self.ui.Spikeling_rightMenuContainer, NavigationButtons.spikerightMenu_min, NavigationButtons.spikerightMenu_max, NavigationButtons.animation_speed,
+                                     self.ui.Spikeling_rightMenuSubContainer_pushButton, self.icon_SpikelingMenuRight, self.icon_SpikelingDropMenuRight, True)
 
     # Serial Port Functions
     def ChangePort(self):
@@ -96,44 +95,47 @@ class Spikeling101():
         FolderFlag = False
         FileFlag = False
 
-        if self.SerialFlag == False:
-            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
-            Settings.show_popup(self,
-                                Title = "Error: Spikeling not connected",
-                                Text = "Spikeling first needs to be connected, then a COM port has to be selected and finally press the - Connect Spikeling Screen - button" )
-        else:
-            SerialPortFlag = True
+        if self.Spikeling_DataRecording_Record_pushButton.isChecked():
+
+            if self.SerialFlag == False:
+                self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+                Settings.show_popup(self,
+                                    Title = "Error: Spikeling not connected",
+                                    Text = "Spikeling first needs to be connected, then a COM port has to be selected and finally press the - Connect Spikeling Screen - button" )
+            else:
+                SerialPortFlag = True
 
 
-        if self.ui.NeuronRecordFolderFlag == True:
-            FolderFlag = True
-        else:
-            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
-            Settings.show_popup(self,
-                                Title = "Error: no folder selected",
-                                Text = "Select a folder where to record your data by clicking on the - browse directory - button")
+            if self.ui.NeuronRecordFolderFlag == True:
+                FolderFlag = True
+
+            else:
+                self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+                Settings.show_popup(self,
+                                    Title = "Error: no folder selected",
+                                    Text = "Select a folder where to record your data by clicking on the - browse directory - button")
 
 
-        if self.ui.Spikeling_DataRecording_RecordFolder_value.text():
-            FileFlag = True
-        else:
-            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
-            Settings.show_popup(self,
-                                Title="Error: no file selected",
-                                Text="Select a file where to record your data by clicking on the - browse directory - button")
+            if self.ui.Spikeling_DataRecording_RecordFolder_value.text():
+                FileFlag = True
+
+            else:
+                self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
+                Settings.show_popup(self,
+                                    Title="Error: no file selected",
+                                    Text="Select a file where to record your data by clicking on the - browse directory - button")
 
 
-        if SerialPortFlag == True and FolderFlag == True and FileFlag == True:
-            if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked():
-                self.ui.Spikeling_DataRecording_Record_pushButton.setText("Stop Recording")
+            if SerialPortFlag == True and FolderFlag == True and FileFlag == True:
+                if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked():
+                    self.ui.Spikeling_DataRecording_Record_pushButton.setText("Stop Recording")
+                    self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
+                                                                                    "background-color: rgb(50, 220, 47);")
+
+            else:
+                self.ui.Spikeling_DataRecording_Record_pushButton.setText("Record")
                 self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
-                                                                                "background-color: rgb(50, 220, 47);")
-
-        else:
-            self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
-            self.ui.Spikeling_DataRecording_Record_pushButton.setText("Record")
-            self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
-                                                                            "background-color: rgb(220, 50, 47);")
+                                                                                "background-color: rgb(220, 50, 47);")
 
 
     # Stimulus Frequency
@@ -327,8 +329,9 @@ class Spikeling101():
     def ActivateNoiseLevel(self):
             if self.ui.Noise_toggleButton.isChecked():
                     self.ui.Spikeling_Noise_slider.setEnabled(True)
-                    self.Noise = self.ui.Spikeling_Noise_slider.value()
-                    self.ui.Spikeling_Noise_readings.setText(str(self.Noise))
+                    self.NoiseValue = self.ui.Spikeling_Noise_slider.value()
+                    self.Noise = np.random.normal(0, self.NoiseValue/2)
+                    self.ui.Spikeling_Noise_readings.setText(str(self.NoiseValue))
                     self.ui.Spikeling_Noise_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
                     if self.serial_port.is_open:
                         self.serial_port.write(str('NO1 ' + str(self.Noise) + '\n').encode('utf-8'))
@@ -340,8 +343,9 @@ class Spikeling101():
                             self.serial_port.write(str('NO0' + '\n').encode('utf-8'))
 
     def GetNoiseLevel(self):
-            self.Noise = self.ui.Spikeling_Noise_slider.value()
-            self.ui.Spikeling_Noise_readings.setText(str(self.Noise))
+            self.NoiseValue = self.ui.Spikeling_Noise_slider.value()
+            self.Noise = np.random.normal(0, self.NoiseValue / 2)
+            self.ui.Spikeling_Noise_readings.setText(str(self.NoiseValue))
             self.ui.Spikeling_Noise_readings.setStyleSheet("color: rgb" + str(tuple(Settings.DarkSolarized[4])) + "; font: 700 10pt;")
             if self.serial_port.is_open:
                 self.serial_port.write(str('NO1 ' + str(self.Noise) + '\n').encode('utf-8'))
