@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Spikeling</class>
+ <widget class="QMainWindow" name="Spikeling">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -2132,7 +2132,7 @@ centerMenuSubContainer_menu_stackedwidget{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>5</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="page_000">
                 <layout class="QVBoxLayout" name="verticalLayout_30">
@@ -7870,7 +7870,7 @@ background-color: rgb(220, 50, 47);</string>
                              <item>
                               <widget class="QPushButton" name="Emulator_SpeedUp_pushButton">
                                <property name="text">
-                                <string>PushButton</string>
+                                <string>Speed Up</string>
                                </property>
                                <property name="checkable">
                                 <bool>true</bool>
@@ -17254,7 +17254,7 @@ background-color: rgb(220, 50, 47);</string>
                             </property>
                             <property name="icon">
                              <iconset resource="resources.qrc">
-                              <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
+                              <normaloff>:/resources/resources/Synapse1.png</normaloff>:/resources/resources/Synapse1.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -17276,7 +17276,7 @@ background-color: rgb(220, 50, 47);</string>
                             </property>
                             <property name="icon">
                              <iconset resource="resources.qrc">
-                              <normaloff>:/resources/resources/Neuron.png</normaloff>:/resources/resources/Neuron.png</iconset>
+                              <normaloff>:/resources/resources/Synapse2.png</normaloff>:/resources/resources/Synapse2.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -30746,6 +30746,9 @@ background-color: rgb(220, 50, 47);</string>
                              <property name="spacing">
                               <number>0</number>
                              </property>
+                             <property name="leftMargin">
+                              <number>10</number>
+                             </property>
                              <property name="topMargin">
                               <number>0</number>
                              </property>
@@ -30753,7 +30756,7 @@ background-color: rgb(220, 50, 47);</string>
                               <number>0</number>
                              </property>
                              <property name="bottomMargin">
-                              <number>0</number>
+                              <number>5</number>
                              </property>
                              <item alignment="Qt::AlignLeft">
                               <widget class="QLabel" name="NeuronGenerator_subframe1_title_label">
@@ -30791,7 +30794,7 @@ background-color: rgb(220, 50, 47);</string>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>240</height>
+                              <height>16777215</height>
                              </size>
                             </property>
                             <property name="frameShape">
@@ -30808,105 +30811,25 @@ background-color: rgb(220, 50, 47);</string>
                               <number>0</number>
                              </property>
                              <property name="topMargin">
-                              <number>0</number>
+                              <number>10</number>
                              </property>
                              <property name="rightMargin">
                               <number>0</number>
                              </property>
                              <property name="bottomMargin">
-                              <number>0</number>
+                              <number>10</number>
                              </property>
-                             <item alignment="Qt::AlignTop">
-                              <widget class="QFrame" name="NeuronGenerator_subframe1_Izhik_subframe1">
-                               <property name="frameShape">
-                                <enum>QFrame::StyledPanel</enum>
+                             <item>
+                              <widget class="QLabel" name="NeuronGenerator_subframe1_Izhik_label">
+                               <property name="whatsThis">
+                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v' = 0.04v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt; + 5v + 140 - u + I                    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;                    u' = a(bv - u)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;with the auxiliary after-spike resetting:   if &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v &amp;gt;= 30 mV&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, then &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v = c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;/&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u = u + d&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Here, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless variables, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless parameters, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;'= d/dt&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, where &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; is the time. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;The variable v represents the membrane potential of the neuron and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Synaptic currents or injected DC-currents are delivered via the variable&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:696;&quot;/&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                </property>
-                               <property name="frameShadow">
-                                <enum>QFrame::Raised</enum>
+                               <property name="text">
+                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Bifurcation methodologies enable the reduction of many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;v' = 0.04v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt; + 5v + 140 - u + I &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;u' = a(bv - u)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;with the auxiliary after-spike resetting: if&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;v &amp;gt;= 30 mV&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;then &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;v = c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;u = u + d&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Here, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;v &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;u &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;are dimensionless variables, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:600;&quot;&gt;c,&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;d &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;are dimensionless parameters&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;'= d/dt&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; where &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;t &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;is the time (0.1ms). &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;The variable v represents the membrane potential of the neuron and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;u &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;represents the membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Synaptic currents or injected DC-currents are delivered via the variable &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:696;&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                                </property>
-                               <layout class="QHBoxLayout" name="horizontalLayout_16">
-                                <property name="spacing">
-                                 <number>0</number>
-                                </property>
-                                <property name="leftMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="topMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="rightMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="bottomMargin">
-                                 <number>0</number>
-                                </property>
-                                <item alignment="Qt::AlignTop">
-                                 <widget class="QTextBrowser" name="NeuronGenerator_subframe1_Izhik_textbrowser">
-                                  <property name="sizePolicy">
-                                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                   </sizepolicy>
-                                  </property>
-                                  <property name="minimumSize">
-                                   <size>
-                                    <width>0</width>
-                                    <height>240</height>
-                                   </size>
-                                  </property>
-                                  <property name="maximumSize">
-                                   <size>
-                                    <width>16777215</width>
-                                    <height>200</height>
-                                   </size>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true"/>
-                                  </property>
-                                  <property name="html">
-                                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Bifurcation methodologies enable us to reduce many biophysically accurate Hodgkin–Huxley-type neuronal models to a two-dimensional (2-D) system of ordinary differential equations of the form:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v' = 0.04v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt; + 5v + 140 - u + I                    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;                    u' = a(bv - u)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;with the auxiliary after-spike resetting:   if &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v &amp;gt;= 30 mV&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, then &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v = c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u = u + d&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Here, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless variables, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;b&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;d&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; are dimensionless parameters, and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;'= d/dt&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;, where &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; is the time. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;The variable v represents the membrane potential of the neuron and &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;u&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt; represents a membrane recovery variable, which accounts for the activation of K+ ionic currents and inactivation of Na+ ionic currents, and it provides negative feedback to &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;v&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;After the spike reaches its apex (+30 mV), the membrane voltage and the recovery variable are reset. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;Synaptic currents or injected DC-currents are delivered via the variable&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt; font-weight:696;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:696;&quot;&gt;I&lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:10pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                                  </property>
-                                 </widget>
-                                </item>
-                               </layout>
-                              </widget>
-                             </item>
-                             <item alignment="Qt::AlignRight|Qt::AlignVCenter">
-                              <widget class="QFrame" name="NeuronGenerator_subframe1_Izhik_subframe2">
-                               <property name="frameShape">
-                                <enum>QFrame::StyledPanel</enum>
+                               <property name="wordWrap">
+                                <bool>true</bool>
                                </property>
-                               <property name="frameShadow">
-                                <enum>QFrame::Raised</enum>
-                               </property>
-                               <layout class="QHBoxLayout" name="horizontalLayout_15">
-                                <property name="spacing">
-                                 <number>0</number>
-                                </property>
-                                <property name="leftMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="topMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="rightMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="bottomMargin">
-                                 <number>0</number>
-                                </property>
-                               </layout>
                               </widget>
                              </item>
                             </layout>
@@ -31201,7 +31124,7 @@ p, li { white-space: pre-wrap; }
                      </widget>
                     </item>
                     <item>
-                     <widget class="QGroupBox" name="NeuronGenerator_subgroupBox2">
+                     <widget class="QFrame" name="NeuronGenerator_subframe2">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -31228,7 +31151,7 @@ p, li { white-space: pre-wrap; }
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_9">
                        <property name="spacing">
-                        <number>0</number>
+                        <number>10</number>
                        </property>
                        <property name="leftMargin">
                         <number>0</number>
@@ -31243,9 +31166,24 @@ p, li { white-space: pre-wrap; }
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="NeuronGenerator_subframe2">
-                         <property name="enabled">
-                          <bool>true</bool>
+                        <widget class="QFrame" name="NeuronGenerator_Izhik_Image_frame">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>150</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>200</height>
+                          </size>
                          </property>
                          <property name="frameShape">
                           <enum>QFrame::StyledPanel</enum>
@@ -31253,7 +31191,7 @@ p, li { white-space: pre-wrap; }
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_14">
+                         <layout class="QHBoxLayout" name="horizontalLayout_17">
                           <property name="spacing">
                            <number>0</number>
                           </property>
@@ -31269,89 +31207,64 @@ p, li { white-space: pre-wrap; }
                           <property name="bottomMargin">
                            <number>0</number>
                           </property>
-                          <item>
-                           <widget class="QFrame" name="izhik_image">
+                          <item alignment="Qt::AlignTop">
+                           <widget class="QLabel" name="NeuronGenerator_Izhik_image">
                             <property name="sizePolicy">
-                             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                               <horstretch>0</horstretch>
                               <verstretch>0</verstretch>
                              </sizepolicy>
                             </property>
                             <property name="minimumSize">
                              <size>
-                              <width>0</width>
+                              <width>225</width>
                               <height>150</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
-                              <width>16777215</width>
-                              <height>200</height>
+                              <width>225</width>
+                              <height>140</height>
                              </size>
                             </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
+                            <property name="text">
+                             <string/>
                             </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Raised</enum>
+                            <property name="pixmap">
+                             <pixmap resource="resources.qrc">:/resources/resources/izhik.png</pixmap>
                             </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_17">
-                             <property name="spacing">
-                              <number>0</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item alignment="Qt::AlignTop">
-                              <widget class="QLabel" name="NeuronGenerator_subframe1_Izhik_image">
-                               <property name="sizePolicy">
-                                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                 <horstretch>0</horstretch>
-                                 <verstretch>0</verstretch>
-                                </sizepolicy>
-                               </property>
-                               <property name="minimumSize">
-                                <size>
-                                 <width>225</width>
-                                 <height>150</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>225</width>
-                                 <height>140</height>
-                                </size>
-                               </property>
-                               <property name="text">
-                                <string/>
-                               </property>
-                               <property name="pixmap">
-                                <pixmap resource="resources.qrc">:/resources/resources/izhik.png</pixmap>
-                               </property>
-                               <property name="scaledContents">
-                                <bool>true</bool>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="Line" name="line">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
+                            <property name="scaledContents">
+                             <bool>true</bool>
                             </property>
                            </widget>
                           </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="NeuronGenerator_Izhik_frame">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_206">
+                          <property name="spacing">
+                           <number>20</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>20</number>
+                          </property>
                           <item>
                            <widget class="QFrame" name="a_Izhik_frame">
                             <property name="frameShape">
@@ -31497,13 +31410,6 @@ p, li { white-space: pre-wrap; }
                            </widget>
                           </item>
                           <item>
-                           <widget class="Line" name="line_2">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QFrame" name="b_Izhik_frame">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -31639,13 +31545,6 @@ p, li { white-space: pre-wrap; }
                               </widget>
                              </item>
                             </layout>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="Line" name="line_3">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
                            </widget>
                           </item>
                           <item>
@@ -31787,13 +31686,6 @@ p, li { white-space: pre-wrap; }
                            </widget>
                           </item>
                           <item>
-                           <widget class="Line" name="line_4">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QFrame" name="d_Izhik_frame">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
@@ -31931,24 +31823,47 @@ p, li { white-space: pre-wrap; }
                             </layout>
                            </widget>
                           </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="NeuronGenerator_Button_frame">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_14">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
                           <item>
-                           <widget class="Line" name="line_5">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                           </widget>
-                          </item>
-                          <item alignment="Qt::AlignVCenter">
-                           <widget class="QFrame" name="Izhik_button_frame">
+                           <widget class="QFrame" name="AdvancedParameter_frame">
                             <property name="frameShape">
                              <enum>QFrame::StyledPanel</enum>
                             </property>
                             <property name="frameShadow">
                              <enum>QFrame::Raised</enum>
                             </property>
-                            <layout class="QHBoxLayout" name="horizontalLayout_30">
+                            <layout class="QVBoxLayout" name="verticalLayout_204">
                              <property name="spacing">
-                              <number>10</number>
+                              <number>0</number>
                              </property>
                              <property name="leftMargin">
                               <number>0</number>
@@ -31963,136 +31878,30 @@ p, li { white-space: pre-wrap; }
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QFrame" name="DisplayNeuron_frame">
-                               <property name="frameShape">
-                                <enum>QFrame::StyledPanel</enum>
-                               </property>
-                               <property name="frameShadow">
-                                <enum>QFrame::Raised</enum>
-                               </property>
-                               <layout class="QHBoxLayout" name="horizontalLayout_31">
-                                <property name="spacing">
-                                 <number>0</number>
-                                </property>
-                                <property name="leftMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="topMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="rightMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="bottomMargin">
-                                 <number>0</number>
-                                </property>
-                                <item>
-                                 <widget class="QPushButton" name="DisplayNeuronPushButton">
-                                  <property name="enabled">
-                                   <bool>true</bool>
-                                  </property>
-                                  <property name="font">
-                                   <font>
-                                    <pointsize>10</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
-                                   </font>
-                                  </property>
-                                  <property name="mouseTracking">
-                                   <bool>true</bool>
-                                  </property>
-                                  <property name="focusPolicy">
-                                   <enum>Qt::NoFocus</enum>
-                                  </property>
-                                  <property name="autoFillBackground">
-                                   <bool>false</bool>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">color: rgb(147, 161, 161);</string>
-                                  </property>
-                                  <property name="text">
-                                   <string>Display Neuron</string>
-                                  </property>
-                                  <property name="checkable">
-                                   <bool>false</bool>
-                                  </property>
-                                  <property name="autoRepeat">
-                                   <bool>false</bool>
-                                  </property>
-                                 </widget>
-                                </item>
-                               </layout>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QFrame" name="SaveNeuron_frame">
-                               <property name="frameShape">
-                                <enum>QFrame::StyledPanel</enum>
-                               </property>
-                               <property name="frameShadow">
-                                <enum>QFrame::Raised</enum>
-                               </property>
-                               <layout class="QHBoxLayout" name="horizontalLayout_32">
-                                <property name="spacing">
-                                 <number>0</number>
-                                </property>
-                                <property name="leftMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="topMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="rightMargin">
-                                 <number>0</number>
-                                </property>
-                                <property name="bottomMargin">
-                                 <number>0</number>
-                                </property>
-                                <item>
-                                 <widget class="QPushButton" name="SaveNeuronPushButton">
-                                  <property name="enabled">
-                                   <bool>true</bool>
-                                  </property>
-                                  <property name="font">
-                                   <font>
-                                    <pointsize>10</pointsize>
-                                    <weight>75</weight>
-                                    <bold>true</bold>
-                                    <strikeout>false</strikeout>
-                                   </font>
-                                  </property>
-                                  <property name="styleSheet">
-                                   <string notr="true">color: rgb(147, 161, 161);</string>
-                                  </property>
-                                  <property name="text">
-                                   <string>Save Neuron</string>
-                                  </property>
-                                  <property name="checkable">
-                                   <bool>false</bool>
-                                  </property>
-                                 </widget>
-                                </item>
-                               </layout>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QFrame" name="LoadNeuron_frame">
+                              <widget class="QPushButton" name="AdvancedParameter_pushButton">
                                <property name="font">
                                 <font>
-                                 <pointsize>9</pointsize>
+                                 <pointsize>10</pointsize>
                                  <weight>75</weight>
                                  <bold>true</bold>
                                 </font>
                                </property>
+                               <property name="text">
+                                <string>Advanced Parameters</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="Izhik_button_frame">
                                <property name="frameShape">
                                 <enum>QFrame::StyledPanel</enum>
                                </property>
                                <property name="frameShadow">
                                 <enum>QFrame::Raised</enum>
                                </property>
-                               <layout class="QHBoxLayout" name="horizontalLayout_187">
+                               <layout class="QHBoxLayout" name="horizontalLayout_30">
                                 <property name="spacing">
-                                 <number>0</number>
+                                 <number>10</number>
                                 </property>
                                 <property name="leftMargin">
                                  <number>0</number>
@@ -32107,79 +31916,226 @@ p, li { white-space: pre-wrap; }
                                  <number>0</number>
                                 </property>
                                 <item>
-                                 <widget class="QComboBox" name="LoadNeuron_comboBox">
+                                 <widget class="QFrame" name="DisplayNeuron_frame">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_31">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QPushButton" name="DisplayNeuron_pushButton">
+                                     <property name="enabled">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="font">
+                                      <font>
+                                       <pointsize>10</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <property name="mouseTracking">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="focusPolicy">
+                                      <enum>Qt::NoFocus</enum>
+                                     </property>
+                                     <property name="autoFillBackground">
+                                      <bool>false</bool>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: rgb(147, 161, 161);</string>
+                                     </property>
+                                     <property name="text">
+                                      <string>Display Neuron</string>
+                                     </property>
+                                     <property name="checkable">
+                                      <bool>false</bool>
+                                     </property>
+                                     <property name="autoRepeat">
+                                      <bool>false</bool>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="SaveNeuron_frame">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_32">
+                                   <property name="spacing">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QPushButton" name="SaveNeuronPushButton">
+                                     <property name="enabled">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="font">
+                                      <font>
+                                       <pointsize>10</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                       <strikeout>false</strikeout>
+                                      </font>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: rgb(147, 161, 161);</string>
+                                     </property>
+                                     <property name="text">
+                                      <string>Save Neuron</string>
+                                     </property>
+                                     <property name="checkable">
+                                      <bool>false</bool>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="LoadNeuron_frame">
                                   <property name="font">
                                    <font>
-                                    <pointsize>10</pointsize>
+                                    <pointsize>9</pointsize>
                                     <weight>75</weight>
                                     <bold>true</bold>
                                    </font>
                                   </property>
-                                  <item>
-                                   <property name="text">
-                                    <string>Load Neuron</string>
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_187">
+                                   <property name="spacing">
+                                    <number>0</number>
                                    </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Tonic Spiking</string>
+                                   <property name="leftMargin">
+                                    <number>0</number>
                                    </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Phasic Spiking</string>
+                                   <property name="topMargin">
+                                    <number>0</number>
                                    </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Tonic Bursting</string>
+                                   <property name="rightMargin">
+                                    <number>0</number>
                                    </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Phasic Bursting</string>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
                                    </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Mixed Mode</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Spike Frequency Adaptation</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Class1 Excitable</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Class2 Excitable</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Spike Latency</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Sub-threshold Oscillations</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Resonator</string>
-                                   </property>
-                                  </item>
-                                  <item>
-                                   <property name="text">
-                                    <string>Integrator</string>
-                                   </property>
-                                  </item>
+                                   <item>
+                                    <widget class="QComboBox" name="LoadNeuron_comboBox">
+                                     <property name="font">
+                                      <font>
+                                       <pointsize>10</pointsize>
+                                       <weight>75</weight>
+                                       <bold>true</bold>
+                                      </font>
+                                     </property>
+                                     <item>
+                                      <property name="text">
+                                       <string>Load Neuron</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Tonic Spiking</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Phasic Spiking</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Tonic Bursting</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Phasic Bursting</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Mixed Mode</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Spike Frequency Adaptation</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Class1 Excitable</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Class2 Excitable</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Spike Latency</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Sub-threshold Oscillations</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Resonator</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Integrator</string>
+                                      </property>
+                                     </item>
+                                    </widget>
+                                   </item>
+                                  </layout>
                                  </widget>
                                 </item>
                                </layout>
@@ -38517,7 +38473,6 @@ border : none;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="resources.qrc"/>
   <include location="resources.qrc"/>
  </resources>
  <connections/>

@@ -41,7 +41,7 @@ class Emulator():
     def RecordFolderText(self):
         FolderName = self.ui.Emulator_DataRecording_SelectRecordFolder_label.text()
         FileName = self.ui.Emulator_DataRecording_RecordFolder_value.text()
-        self.ui.Emulator_SelectedFolderLabel.setText(FolderName + '/' + FileName + '   ')
+        self.ui.Emulator_SelectedFolderLabel.setText(FolderName + '/' + FileName)
 
 
     def RecordButton(self):

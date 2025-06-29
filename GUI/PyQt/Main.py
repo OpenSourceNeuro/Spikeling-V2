@@ -3,14 +3,16 @@
 #                          Libraries import                            #
 
 import sys
-from PySide6 import QtCore, QtGui
-from PySide6.QtCore import QSize, Qt
+
+from PySide6 import QtWidgets
+from PySide6.QtCore import QSize, Qt, QTimer
 from PySide6.QtGui import QColor,QIcon
 from PySide6.QtWidgets import QMainWindow, QGraphicsDropShadowEffect, QApplication, QSizeGrip
 
 # Import GUI .ui file
-from Spikeling_UI import Ui_MainWindow
+from Spikeling_UI import Ui_Spikeling
 from Spikeling_SplashScreen import Ui_SplashScreen
+from Neuron_Parameters import Ui_AdvancedParameters
 
 # Import Functions and navigation buttons
 import ToggleButtons, NavigationButtons
@@ -31,8 +33,8 @@ class SplashScreen(QMainWindow):
         self.ui.setupUi(self)
 
         # Remove title bar
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
         # Drop shadow effect
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -43,19 +45,20 @@ class SplashScreen(QMainWindow):
         self.ui.SplashFrame.setGraphicsEffect(self.shadow)
 
         # QTimer - Start
-        self.timer = QtCore.QTimer()
+        self.timer = QTimer()
         self.timer.timeout.connect(self.progress)
         # Timer in milliseconds
         self.timer.start(20)
 
 
         # Change Texts
-        QtCore.QTimer.singleShot(1000, lambda: self.ui.Status_Label.setText("<strong>Loading</strong> Database"))
-        QtCore.QTimer.singleShot(2000, lambda: self.ui.Status_Label.setText("<strong>Loading</strong> User interface"))
+        QTimer.singleShot(1000, lambda: self.ui.Status_Label.setText("<strong>Loading</strong> Database"))
+        QTimer.singleShot(2000, lambda: self.ui.Status_Label.setText("<strong>Loading</strong> User interface"))
 
         ## Display
         ########################################################################
         self.show()
+
 
     def progress(self):
 
@@ -88,12 +91,16 @@ class SplashScreen(QMainWindow):
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_Spikeling()
         self.ui.setupUi(self)
 
+        self.aux_window = QtWidgets.QMainWindow()
+        self.ui_aux = Ui_AdvancedParameters()
+        self.ui_aux.setupUi(self.aux_window)
+
         # Remove title bar
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
         # Define Maximise/Restore function
         def maximise_restore(self):
@@ -175,6 +182,9 @@ class MainWindow(QMainWindow):
         self.MultipleImagingConnectionFlag = False
         self.ui.MultipleImagingFolderFlag = False
 
+
+
+
     # Display
         self.show()
 
@@ -190,7 +200,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon(u":/resources/resources/Neuron.png"))
+    app.setWindowIcon(QIcon(u":/resources/resources/Spikeling.ico"))
     window = SplashScreen()
     sys.exit(app.exec())
 

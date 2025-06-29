@@ -77,10 +77,14 @@ def MultipleImagingPlot(self):
 
     # Read Serial and return data
     def GetMultipleData(self):
-        self.rx = self.serial_port.readline()
-        self.rx_serial = str(self.rx, 'utf8').strip()
-        self.data = self.rx_serial.split(',')
-        return self.data
+        if self.ui.SpikelingConnectedFlag == True:
+            self.rx = self.serial_port.readline()
+            self.rx_serial = str(self.rx, 'utf8').strip()
+            self.data = self.rx_serial.split(',')
+            return self.data
+        if self.ui.EmulatorConnectedFlag == True:
+            self.data = self.ui.Emulator_data
+            return self.data
 
 
     # Append latest serial data point into buffer deque

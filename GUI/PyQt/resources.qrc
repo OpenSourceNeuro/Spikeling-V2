@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="resources">
+    <file>resources/Synapse1.png</file>
+    <file>resources/Synapse2.png</file>
     <file>resources/SpikelingLayout.png</file>
     <file>resources/SqaureStim.png</file>
     <file>resources/Calcium.png</file>

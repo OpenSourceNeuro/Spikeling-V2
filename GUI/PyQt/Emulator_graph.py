@@ -17,7 +17,7 @@ from Izhikevich_parameters import IzhikevichNeurons
 Emulator_downsampling = 6
 Emulator_sampleinterval = 0.1
 Emulator_timewindow = 500
-Emulator_timewindowdisplay = 300
+Emulator_timewindowdisplay = 500
 penwidth = 1
 
 def EmulatorPlot(self):
@@ -57,6 +57,10 @@ def EmulatorPlot(self):
 
         if self.ui.Emulator_SpeedUp_pushButton.isChecked() == False:
             QTimer.singleShot(1, lambda: PlotCurve(self))
+            self.ui.Emulator_SpeedUp_pushButton.setText("Speed Up")
+        else:
+            self.ui.Emulator_SpeedUp_pushButton.setText("Normal Speed")
+
 
 
 

@@ -147,22 +147,11 @@ class StimulusGenerator():
         self.nTrigger = np.zeros(self.StimDur)
         self.nTrigger[0] = 1
 
-        FileName = QFileDialog.getSaveFileName(self.ui,
-                                               caption='Save Stimulus on screen',
+        FileName = QFileDialog.getSaveFileName(caption='Save Stimulus on screen',
                                                dir="./Stimuli",
                                                filter='csv files (*.csv)')
 
-        self.dict_SineStim = {'Stim': self.nStim,
-                              'Trigger': self.nTrigger,
-                              'Number of Steps': self.nStep,
-                              'Intensity Increment': self.Increment,
-                              'First Step Intensity': self.FirstStep,
-                              'Step Length': self.StepOn,
-                              'Inter-step Length': self.StepOff,
-                              'Inter-step Intensity': self.iStepOff,
-                              'Inter-Stimulus Length': self.tInter,
-                              'Inter-Stimulus Intensity': self.iInter
-                              }
+        self.dict_SineStim = { 'Stim': self.nStim, 'Trigger': self.nTrigger }
         self.df_SineStim = pd.DataFrame(self.dict_SineStim)
 
         self.df_SineStim.to_csv(FileName[0], index=False)
@@ -215,12 +204,11 @@ class StimulusGenerator():
         self.nTrigger[0] = 1
 
 
-        FileName = QFileDialog.getSaveFileName(self.ui,
-                                                      caption='Save Stimulus on screen',
-                                                      dir="./Stimuli",
-                                                      filter='csv files (*.csv)')
+        FileName = QFileDialog.getSaveFileName(caption='Save Stimulus on screen',
+                                               dir="./Stimuli",
+                                               filter='csv files (*.csv)')
 
-        self.dict_SineStim = {'Stim': self.nStim, 'Trigger': self.nTrigger}
+        self.dict_SineStim = { 'Stim': self.nStim, 'Trigger': self.nTrigger }
         self.df_SineStim = pd.DataFrame(self.dict_SineStim)
 
         self.df_SineStim.to_csv(FileName[0], index = False)
@@ -275,12 +263,11 @@ class StimulusGenerator():
         self.nTrigger = np.zeros(self.StimDur)
         self.nTrigger[0] = 1
 
-        FileName = QFileDialog.getSaveFileName(self.ui,
-                                               caption='Save Stimulus on screen',
+        FileName = QFileDialog.getSaveFileName(caption='Save Stimulus on screen',
                                                dir="./Stimuli",
                                                filter='csv files (*.csv)')
 
-        self.dict_TriangleStim = {'Stim': self.nStim, 'Trigger': self.nTrigger}
+        self.dict_TriangleStim = { 'Stim': self.nStim, 'Trigger': self.nTrigger }
         self.df_TriangleStim = pd.DataFrame(self.dict_TriangleStim)
 
         self.df_TriangleStim.to_csv(FileName[0], index=False)

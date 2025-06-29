@@ -12,6 +12,16 @@ def ShowPage(self):
     self.ui.NeuronGenerator_Oscilloscope_widget.clear()
     NeuronGenerator.SetGraph(self)
 
+    self.ui.NeuronParameter_PRGain = 0
+    self.ui.NeuronParameter_PRDecay = 0.001
+    self.ui.NeuronParameter_PRRecovery = 0.025
+
+    self.ui.NeuronParameter_Syn1Gain = 0
+    self.ui.NeuronParameter_Syn1Decay = 0.995
+
+    self.ui.NeuronParameter_Syn2Gain = 0
+    self.ui.NeuronParameter_Syn2Decay = 0.995
+
 class NeuronGenerator():
 
     def DrawNeuron(self):
@@ -166,6 +176,14 @@ class NeuronGenerator():
             self.b = IzhikevichNeurons[11][1]
             self.c = IzhikevichNeurons[11][2]
             self.d = IzhikevichNeurons[11][3]
+        if self.load_neuron_index <= 12:
+            self.ui.NeuronParameter_PRGain = 0
+            self.ui.NeuronParameter_PRDecay = 0.001
+            self.ui.NeuronParameter_PRRecovery = 0.025
+            self.ui.NeuronParameter_Syn1Gain = 0
+            self.ui.NeuronParameter_Syn1Decay = 0.995
+            self.ui.NeuronParameter_Syn2Gain = 0
+            self.ui.NeuronParameter_Syn2Decay = 0.995
 
         self.ui.a_value.setText(str(self.a))
         self.ui.b_value.setText(str(self.b))
@@ -181,13 +199,19 @@ class NeuronGenerator():
             'a': a,
             'b': b,
             'c': c,
-            'd': d
-                }
+            'd': d,
+            'PhotoGain( %)': self.ui.NeuronParameter_PRGain,
+            'PhotoDecay(1 / ms)': self.ui.NeuronParameter_PRDecay,
+            'PhotoRecovery(1 / ms)': self.ui.NeuronParameter_PRRecovery,
+            'Syn1 Gain( %)': self.ui.NeuronParameter_Syn1Gain,
+            'Syn1 Decay(1 / ms)': self.ui.NeuronParameter_Syn1Decay,
+            'Syn2 Gain( %)': self.ui.NeuronParameter_Syn2Gain,
+            'Syn2 Decay(1 / ms)': self.ui.NeuronParameter_Syn2Decay
+            }
 
         IzhikNeuron = pd.DataFrame(dict, index=[0])
 
-        FileName = QFileDialog.getSaveFileName(self.ui,
-                                               caption='Save current neuron parameters',
+        FileName = QFileDialog.getSaveFileName(caption='Save current neuron parameters',
                                                dir="./Neurons",
                                                filter='csv files (*.csv)')
         IzhikNeuron.to_csv(FileName[0], index = False)

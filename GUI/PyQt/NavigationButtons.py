@@ -7,7 +7,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtCore import QSize, QPropertyAnimation
 from PySide6.QtSerialPort import QSerialPortInfo
 
-
+from Neuron_Parameters import Ui_AdvancedParameters
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
 import Spikeling_graph, Emulator_graph, Imaging_graph, MultipleImaging_graph
 
@@ -86,8 +86,34 @@ def collapseMenu(self, menu, standard, maxWidth, duration, enable):
 
 
 ########################################################################
+#                      Opening auxilliary windows                      #
+########################################################################
+
+def openWindow(self):
+        self.aux_window.show()
+
+
+def GetNeuronParameters(self):
+        self.ui.NeuronParameter_PRGain = float(self.ui_aux.AdvancedParameters_PRGain_lineEdit.text())
+        self.ui.NeuronParameter_PRDecay = float(self.ui_aux.AdvancedParameters_PRDecay_lineEdit.text())
+        self.ui.NeuronParameter_PRRecovery = float(self.ui_aux.AdvancedParameters_PRRecovery_lineEdit.text())
+
+        self.ui.NeuronParameter_Syn1Gain = float(self.ui_aux.AdvancedParameters_Syn1Gain_lineEdit.text())
+        self.ui.NeuronParameter_Syn1Decay = float(self.ui_aux.AdvancedParameters_Syn1Decay_lineEdit.text())
+
+        self.ui.NeuronParameter_Syn2Gain = float(self.ui_aux.AdvancedParameters_Syn2Gain_lineEdit.text())
+        self.ui.NeuronParameter_Syn2Decay = float(self.ui_aux.AdvancedParameters_Syn2Decay_lineEdit.text())
+
+        self.aux_window.close()
+
+def CloseNeuronParameters(self):
+        self.aux_window.close()
+
+
+########################################################################
 #                           Button Functions                           #
 ########################################################################
+
 def Buttons(self):
 
         # Navigation buttons
@@ -542,26 +568,42 @@ def Buttons(self):
         self.ui.MultipleImaging_Saturation_toggleButton.toggled.connect(lambda: Page202.Imaging202.ActivateMultipleFluoSat(self))
 
 
+
         ########################################################################
     # Imaging Data Analysis- page203
         # Display page201 when imaging button is clicked
         self.ui.ImagingTutorial_pushButton.clicked.connect(lambda: Page203.Imaging203.ShowPage(self))
+
+
+
 
     ########################################################################
     # Imaging Data Analysis- page204
         # Display page201 when imaging button is clicked
         self.ui.ImagingDataAnalysis_pushButton.clicked.connect(lambda: Page204.Imaging204.ShowPage(self))
 
+
+
+
         ########################################################################
     # Neuron Generator Page - page301
         # Display page301 when neuron button is clicked
         self.ui.NeuronGeneratorMenu_pushButton.clicked.connect(lambda: Page301.ShowPage(self))
+
         # Draw Neuron model based on parameters a, b, c & d
-        self.ui.DisplayNeuronPushButton.clicked.connect(lambda: Page301.NeuronGenerator.DrawNeuron(self))
+        self.ui.DisplayNeuron_pushButton.clicked.connect(lambda: Page301.NeuronGenerator.DrawNeuron(self))
+
+        # Display Advanced Neuron parameters window
+        self.ui.AdvancedParameter_pushButton.clicked.connect(lambda: openWindow(self))
+        self.ui_aux.AdvancedParameters_Button_Save_pushButton.clicked.connect(lambda: GetNeuronParameters(self))
+        self.ui_aux.AdvancedParameters_Button_Exit_pushButton.clicked.connect(lambda: CloseNeuronParameters(self))
+
         # Load Pre-selected neurons
         self.ui.LoadNeuron_comboBox.currentIndexChanged.connect(lambda: Page301.NeuronGenerator.LoadNeuron(self))
         # Save current neuron
         self.ui.SaveNeuronPushButton.clicked.connect(lambda: Page301.NeuronGenerator.SaveNeuron(self))
+
+
 
 
     ########################################################################
@@ -577,6 +619,9 @@ def Buttons(self):
         # Adapt Chirp page parameters to current selection
         self.ui.Chirp_comboBox.currentIndexChanged.connect(lambda: Page401.ChangeChirpParameter(self))
 
+
+
+
     ########################################################################
     # Exercise-101 - page501
         # Display page501
@@ -585,10 +630,14 @@ def Buttons(self):
         self.ui.Exercise101_AfterButton_pushButton.clicked.connect(lambda: Page501.After(self))
 
 
+
+
     ########################################################################
     # Exercise-102 - page502
         # Display page502
         self.ui.Exercice102_pushButton.clicked.connect(lambda: Page502.ShowPage(self))
+
+
 
 
     ########################################################################
@@ -597,16 +646,22 @@ def Buttons(self):
         self.ui.SettingsMenu_pushButton.clicked.connect(lambda: Page601.ShowPage(self))
 
 
+
+
     ########################################################################
     # About - page701
         # Display Info page
         self.ui.AboutMenu_pushButton.clicked.connect(lambda: Page701.ShowPage(self))
 
 
+
+
     ########################################################################
     # Help - page801
         # Display Help page
         self.ui.HelpMenu_pushButton.clicked.connect(lambda: Page801.ShowPage(self))
+
+
 
 
     ########################################################################
