@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.7'
+          python-version: '3.7.17'
 
       - name: Install system dependencies (Linux only)
         if: matrix.os == 'ubuntu-latest'
@@ -36,22 +36,3 @@ jobs:
       - name: Build executable using PyInstaller and spec file
         run: |
           pyinstaller --onefile Main.spec
-
-      - name: Rename executable for release
-        run: |
-          if [[ "${{ runner.os }}" == "Windows" ]]; then
-            mv dist/*.exe MyApp-Windows.exe
-          elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            mv dist/* MyApp-macOS
-          else
-            mv dist/* MyApp-Linux
-          fi
-        shell: bash
-
-      # - name: Upload build to GitHub release
-      #   uses: softprops/action-gh-release@v2
-      #   with:
-      #     files: |
-      #       MyApp-*
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
