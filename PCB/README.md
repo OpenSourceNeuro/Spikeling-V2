@@ -35,8 +35,8 @@ Users can find the "Gerber" files (zipped in the gerber folder) that companies (
 </p>
 
 <p >
-<img align="left" src="././PCB_v2.4.png" width="534" height="333">
-<img align="right" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PrintedCircuitBoard_v2.4.png" width="534" height="333">
+<img align="left" src="../../Images/PCB_v2.4.png" width="534" height="333">
+<img align="right" src="../../Images/PrintedCircuitBoard_v2.4.png" width="534" height="333">
 </p>
 
 
