@@ -39,6 +39,7 @@ Users can find the "Gerber" files (zipped in the gerber folder) that companies (
 <img align="right" src="./Images/PrintedCircuitBoard_v2.4.png" width="400" height="333">
 </p>
 
+<br></br>
 
 ## Assembly
 
