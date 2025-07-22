@@ -19,7 +19,7 @@ Instructions regarding the GUI and on how to design stimuli can be found <a href
 
 - [Ordering PCB](#Ordering-the-PCB)
 - [Assembling Spikeling](#Assembly)
-- [Acrylic Covers](#Acrylic Covers)
+- [Acrylic Covers](#Acrylic-Covers)
 
 
 
@@ -34,14 +34,15 @@ The PCB source files were designed on <a href="http://kicad.org/">KiCAD 9.0</a> 
 Users can find the "Gerber" files (zipped in the gerber folder) that companies (i.e. <a href="https://jlcpcb.com">JLCPCB</a>) will request to manufacture PCBs.
 </p>
 
-<p align="center">
-<img align="left" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PCB_v2.4.png" width="534" height="333">
+<p >
+<img align="left" src="././PCB_v2.4.png" width="534" height="333">
 <img align="right" src="https://github.com/OpenSourceNeuro/Spikeling-V2/blob/main/Images/PrintedCircuitBoard_v2.4.png" width="534" height="333">
 </p>
 
+
 <br></br>
 
-
+***
 ***
 
 
