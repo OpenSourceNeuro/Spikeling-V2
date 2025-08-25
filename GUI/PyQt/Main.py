@@ -182,6 +182,7 @@ class MainWindow(QMainWindow):
         self.MultipleImagingConnectionFlag = False
         self.ui.MultipleImagingFolderFlag = False
 
+        self.ui.Exercise_OpeningFlag = True
 
 
 

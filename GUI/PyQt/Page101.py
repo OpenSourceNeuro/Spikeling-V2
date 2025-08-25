@@ -95,7 +95,7 @@ class Spikeling():
         FolderFlag = False
         FileFlag = False
 
-        if self.Spikeling_DataRecording_Record_pushButton.isChecked():
+        if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked():
 
             if self.SerialFlag == False:
                 self.ui.Spikeling_DataRecording_Record_pushButton.setChecked(False)
@@ -132,10 +132,12 @@ class Spikeling():
                     self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
                                                                                     "background-color: rgb(50, 220, 47);")
 
-            else:
+        if self.ui.Spikeling_DataRecording_Record_pushButton.isChecked() == False:
                 self.ui.Spikeling_DataRecording_Record_pushButton.setText("Record")
                 self.ui.Spikeling_DataRecording_Record_pushButton.setStyleSheet("color: rgb(250, 250, 250);\n"
-                                                                                "background-color: rgb(220, 50, 47);")
+                                                                                    "background-color: rgb(220, 50, 47);")
+
+
 
 
     # Stimulus Frequency

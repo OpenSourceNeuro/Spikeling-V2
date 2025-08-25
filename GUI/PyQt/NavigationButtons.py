@@ -8,7 +8,7 @@ from PySide6.QtCore import QSize, QPropertyAnimation
 from PySide6.QtSerialPort import QSerialPortInfo
 
 from Neuron_Parameters import Ui_AdvancedParameters
-import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page601, Page701, Page801, Page901
+import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page503, Page601, Page701, Page801, Page901
 import Spikeling_graph, Emulator_graph, Imaging_graph, MultipleImaging_graph
 
 
@@ -629,18 +629,27 @@ def Buttons(self):
         self.ui.Exercise101_PreviousButton_pushButton.clicked.connect(lambda: Page501.Previous(self))
         self.ui.Exercise101_AfterButton_pushButton.clicked.connect(lambda: Page501.After(self))
 
-
+        self.ui.FI_Curve_pushButton.clicked.connect(lambda: Page501.FI.Plot_FI(self))
+        self.ui.FI_Curve_pushButton_2.clicked.connect(lambda: Page501.FI.Plot_FI2(self))
 
 
     ########################################################################
     # Exercise-102 - page502
         # Display page502
         self.ui.Exercice102_pushButton.clicked.connect(lambda: Page502.ShowPage(self))
-
-
+        self.ui.Exercise102_PreviousButton_pushButton.clicked.connect(lambda: Page502.Previous(self))
+        self.ui.Exercise102_AfterButton_pushButton.clicked.connect(lambda: Page502.After(self))
 
 
     ########################################################################
+    # Exercise-103 - page503
+        # Display page503
+        self.ui.Exercice103_pushButton.clicked.connect(lambda: Page503.ShowPage(self))
+        self.ui.Exercise103_PreviousButton_pushButton.clicked.connect(lambda: Page503.Previous(self))
+        self.ui.Exercise103_AfterButton_pushButton.clicked.connect(lambda: Page503.After(self))
+
+
+        ########################################################################
     # Settings - page601
         # Display Settings
         self.ui.SettingsMenu_pushButton.clicked.connect(lambda: Page601.ShowPage(self))

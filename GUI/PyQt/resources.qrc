@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="resources">
+    <file>resources/data01.png</file>
+    <file>resources/data02.png</file>
+    <file>resources/data03.png</file>
+    <file>resources/InstensitySteps.png</file>
     <file>resources/Synapse1.png</file>
     <file>resources/Synapse2.png</file>
     <file>resources/SpikelingLayout.png</file>
