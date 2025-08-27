@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - "v*.*.*"  # Trigger on version tags like v1.0.0
+      - "v*.*.*"
 
 jobs:
   build:
@@ -24,7 +24,6 @@ jobs:
         with:
           python-version: "3.13"
 
-      # Install system dependencies for Linux/macOS
       - name: Install system dependencies
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1
@@ -49,7 +48,6 @@ jobs:
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
-        #run: pyinstaller $SPEC_FILE
         run: pyinstaller --clean --log-level=DEBUG $SPEC_FILE
 
       - name: Verify executable
@@ -76,15 +74,13 @@ jobs:
             chmod +x release/Spikeling
           fi
 
-          # Copy additional folders
+          # Copy extra folders
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neuron release/
           cp -r GUI/PyQt/Stimuli release/
 
-          # Create OS-specific folder for zip
+          # Create OS-specific folder and remove old zip if exists
           mkdir -p GUI/${OS_NAME}
-
-          # Remove old zip if exists
           rm -f GUI/${OS_NAME}/${ZIP_NAME}
 
           # Create zip
