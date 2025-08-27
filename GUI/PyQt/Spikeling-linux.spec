@@ -6,7 +6,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Spikeling.png', '.')],
+    datas=[('Spikeling.png', '.'),('PySide6/Qt/plugins', 'PySide6/Qt/plugins')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

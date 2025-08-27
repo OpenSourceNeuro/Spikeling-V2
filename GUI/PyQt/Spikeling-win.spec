@@ -8,7 +8,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Spikeling.ico', '.')],
+    datas=[('Spikeling.ico', '.'),('PySide6/Qt/plugins', 'PySide6/Qt/plugins')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
