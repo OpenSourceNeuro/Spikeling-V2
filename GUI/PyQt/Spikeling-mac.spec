@@ -1,28 +1,33 @@
 # -*- mode: python ; coding: utf-8 -*-
-import sys
-from PySide6 import QtCore
 import os
-from PyInstaller.utils.hooks import collect_submodules, collect_data_files
+from PySide6 import QtCore
+from PyInstaller.utils.hooks import collect_data_files
 
 block_cipher = None
 
-# Qt plugins: only include essential types (platforms + imageformats)
+# Only include essential Qt plugins: platforms + imageformats
 qt_plugins = []
 plugin_path = QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath)
-
 for plugin_type in ['platforms', 'imageformats']:
     src = os.path.join(plugin_path, plugin_type)
     if os.path.exists(src):
         qt_plugins.append((src, os.path.join('PySide6/Qt/plugins', plugin_type)))
 
-# Collect essential PySide6 hidden imports
-hidden_imports = collect_submodules('PySide6')
+# Collect only PySide6 data files (excluding Python source)
+pyside6_data = collect_data_files('PySide6', include_py_files=False)
+
+# Minimal hidden imports based on actual usage
+hidden_imports = [
+    'PySide6.QtCore',
+    'PySide6.QtGui',
+    'PySide6.QtWidgets'
+]
 
 a = Analysis(
     ['main.py'],
-    pathex=[os.path.abspath('.')],  # explicit path to reduce scanning
+    pathex=[os.path.abspath('.')],  # project root
     binaries=[],
-    datas=[('Spikeling.icns', '.')] + qt_plugins,
+    datas=[('Spikeling.icns', '.')] + qt_plugins + pyside6_data,
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
@@ -68,7 +73,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,
-    noupx=True,                 # explicitly disable UPX for safety
+    noupx=True,                 # Disable UPX for PySide6 binaries
     runtime_tmpdir=None,
     console=False,
     icon='Spikeling.icns',
