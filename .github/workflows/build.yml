@@ -34,6 +34,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Debug macOS specifics
+        if: runner.os == 'macOS'
+        run: |
+          echo "=== PySide6 plugin path ==="
+          python -c "from PySide6 import QtCore; print(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))"
+
+          echo "=== Contents of GUI/PyQt ==="
+          ls -lah GUI/PyQt
+
+          echo "=== .icns file info ==="
+          ls -lh GUI/PyQt/Spikeling.icns
+
       - name: Select .spec file
         run: |
           if [ "${{ runner.os }}" = "Windows" ]; then
@@ -57,7 +69,6 @@ jobs:
           else
             chmod +x GUI/PyQt/dist/Spikeling
             GUI/PyQt/dist/Spikeling --help
-          fi
 
       - name: Package build with additional folders
         run: |
@@ -102,40 +113,3 @@ jobs:
         with:
           name: Spikeling-${{ matrix.os }}
           path: GUI/${{ env.OS_NAME }}/*.zip
-
-  release:
-    name: Create GitHub Release and Commit Builds
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-
-      - name: Move builds into GUI/<OS> folders
-        run: |
-          cp -r artifacts/* GUI/
-
-      - name: Commit release builds to repo
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add GUI
-          git commit -m "Update release builds for ${{ github.ref_name }}" || echo "No changes to commit"
-          git push origin main
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          name: Release ${{ github.ref_name }}
-          files: GUI/*/*.zip
-          overwrite: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
