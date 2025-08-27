@@ -2,11 +2,11 @@ import numpy as np
 import pyqtgraph
 import Settings
 
-nPages = 10
+nPages = 11
 
 
 def ShowPage(self):
-    if self.ui.Exercise_OpeningFlag == False:
+    if self.ui.Exercise1_OpeningFlag == False:
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_501)
         self.ui.Exercise101_stackedWidget.setCurrentIndex(self.Exercice101_CurrentIndex)
 
@@ -14,7 +14,7 @@ def ShowPage(self):
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_501)
         self.Exercice101_CurrentIndex = 0
         self.ui.Exercise101_stackedWidget.setCurrentIndex(self.Exercice101_CurrentIndex)
-        self.ui.Exercise_OpeningFlag = False
+        self.ui.Exercise1_OpeningFlag = False
 
 
     self.ui.Exercise101_PreviousButton_pushButton.setEnabled(False)

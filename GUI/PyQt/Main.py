@@ -93,6 +93,7 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_Spikeling()
         self.ui.setupUi(self)
+        self.setWindowIcon(QIcon("Spikeling.ico"))
 
         self.aux_window = QtWidgets.QMainWindow()
         self.ui_aux = Ui_AdvancedParameters()
@@ -182,7 +183,11 @@ class MainWindow(QMainWindow):
         self.MultipleImagingConnectionFlag = False
         self.ui.MultipleImagingFolderFlag = False
 
-        self.ui.Exercise_OpeningFlag = True
+        self.ui.Exercise1_OpeningFlag = True
+        self.ui.Exercise2_OpeningFlag = True
+        self.ui.Exercise3_OpeningFlag = True
+        self.ui.Exercise4_OpeningFlag = True
+        self.ui.Exercise5_OpeningFlag = True
 
 
 
@@ -201,7 +206,7 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon(u":/resources/resources/Spikeling.ico"))
+    app.setWindowIcon(QIcon("Spikeling.ico"))
     window = SplashScreen()
     sys.exit(app.exec())
 

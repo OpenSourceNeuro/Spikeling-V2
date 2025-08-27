@@ -3,7 +3,7 @@ import Settings
 nPages = 4
 
 def ShowPage(self):
-    if self.ui.Exercise_OpeningFlag == False:
+    if self.ui.Exercise2_OpeningFlag == False:
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_502)
         self.ui.Exercise102_stackedWidget.setCurrentIndex(self.Exercice102_CurrentIndex)
 
@@ -11,7 +11,7 @@ def ShowPage(self):
         self.ui.mainbody_stackedWidget.setCurrentWidget(self.ui.page_502)
         self.Exercice102_CurrentIndex = 0
         self.ui.Exercise102_stackedWidget.setCurrentIndex(self.Exercice102_CurrentIndex)
-        self.ui.Exercise_OpeningFlag = False
+        self.ui.Exercise2_OpeningFlag = False
 
 
     self.ui.Exercise102_PreviousButton_pushButton.setEnabled(False)

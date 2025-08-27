@@ -8,7 +8,7 @@ from PySide6.QtCore import QSize, QPropertyAnimation
 from PySide6.QtSerialPort import QSerialPortInfo
 
 from Neuron_Parameters import Ui_AdvancedParameters
-import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page503, Page601, Page701, Page801, Page901
+import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page503, Page504, Page505, Page601, Page701, Page801, Page901
 import Spikeling_graph, Emulator_graph, Imaging_graph, MultipleImaging_graph
 
 
@@ -647,6 +647,24 @@ def Buttons(self):
         self.ui.Exercice103_pushButton.clicked.connect(lambda: Page503.ShowPage(self))
         self.ui.Exercise103_PreviousButton_pushButton.clicked.connect(lambda: Page503.Previous(self))
         self.ui.Exercise103_AfterButton_pushButton.clicked.connect(lambda: Page503.After(self))
+
+        self.ui.FireRate_pushButton.clicked.connect(lambda: Page503.FiringRate.Plot(self))
+
+    ########################################################################
+    # Exercise-104 - page504
+        # Display page504
+        self.ui.Exercice104_pushButton.clicked.connect(lambda: Page504.ShowPage(self))
+        self.ui.Exercise104_PreviousButton_pushButton.clicked.connect(lambda: Page504.Previous(self))
+        self.ui.Exercise104_AfterButton_pushButton.clicked.connect(lambda: Page504.After(self))
+
+        self.ui.FI_Curve_pushButton_3.clicked.connect(lambda: Page504.FI.Plot(self))
+
+    ########################################################################
+    # Exercise-105 - page505
+        # Display page505
+        self.ui.Exercice105_pushButton.clicked.connect(lambda: Page505.ShowPage(self))
+        self.ui.Exercise105_PreviousButton_pushButton.clicked.connect(lambda: Page505.Previous(self))
+        self.ui.Exercise105_AfterButton_pushButton.clicked.connect(lambda: Page505.After(self))
 
 
         ########################################################################
