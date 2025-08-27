@@ -1,93 +1,128 @@
-name: Build
+name: Build and Release
 
 on:
   push:
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - "v*.*.*"   # Trigger on version tags like v1.0.0
 
 jobs:
-
-  createrelease:
-    name: Create Release
-    runs-on: [ubuntu-latest]
-    steps:
-    - name: Create Release
-      id: create_release
-      uses: actions/checkout@v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
-    - name: Output Release URL File
-      run: echo "${{ steps.create_release.outputs.upload_url }}" > release_url.txt
-    - name: Save Release URL File for publish
-      uses: actions/upload-artifact@v3
-      with:
-        name: release_url
-        path: release_url.txt
-
   build:
-    name: Build packages
-    needs: createrelease
+    name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        include:
-          #- os: macos-latest
-          #  TARGET: macos
-          #  CMD_BUILD: >
-          #      pyinstaller -F -w -n Spikeling -i GUI/PyQt/Spikeling.ico GUI/PyQt/Main.py &&
-          #      cd dist/ &&
-          #      zip -r9 Spikeling Spikeling.app/                
-          #  OUT_FILE_NAME: Spikeling.zip
-          #  ASSET_MIME: application/zip
-          - os: windows-latest
-            TARGET: windows
-            CMD_BUILD: >
-                pyinstaller -F -w -n Spikeling -i GUI/PyQt/Spikeling.ico GUI/PyQt/Main.py
-            OUT_FILE_NAME: Spikeling.exe
-            ASSET_MIME: application/vnd.microsoft.portable-executable
+        os: [windows-latest, macos-latest, ubuntu-latest]
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.8
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r GUI/PyQt/requirements.txt        
-    - name: Build with pyinstaller for ${{matrix.TARGET}}
-      run: ${{matrix.CMD_BUILD}}
-    
-    - name: Load Release URL File from release job
-      uses: actions/download-artifact@v3
-      id: download
-      with:
-        name: release_url
-        path: ~/download/
-    - name: Display structure of downloaded files
-      run: ls -R
-    - name: 'Echo download path'
-      run: echo ${{steps.download.outputs.download-path}}
-    
-    - name: Get Release File Name & Upload URL
-      id: get_release_info
-      shell: bash
-      run: |
-        value=`cat release_url/release_url.txt`
-        echo $value
-        echo "{name}={value}" >> upload_url        
-    #- name: Upload Release Asset
-    #  id: upload-release-asset
-    #  uses: actions/upload-release-asset@v1
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #  with:
-    #    upload_url: ${{ steps.download.outputs.download-path }}
-    #    asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
-    #    asset_name: ${{ matrix.OUT_FILE_NAME}}
-    #    asset_content_type: ${{ matrix.ASSET_MIME}}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Needed for committing later
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Select .spec file
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            echo "SPEC_FILE=Spikeling-win.spec" >> $GITHUB_ENV
+            echo "OS_NAME=Windows" >> $GITHUB_ENV
+          elif [ "${{ runner.os }}" = "macOS" ]; then
+            echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
+            echo "OS_NAME=macOS" >> $GITHUB_ENV
+          else
+            echo "SPEC_FILE=Spikeling-linux.spec" >> $GITHUB_ENV
+            echo "OS_NAME=Linux" >> $GITHUB_ENV
+
+      - name: Build with PyInstaller
+        run: pyinstaller $SPEC_FILE
+
+      - name: Package build with additional folders
+        run: |
+          VERSION=${GITHUB_REF_NAME}
+          ZIP_NAME=Spikeling-${VERSION}-${OS_NAME}.zip
+
+          # Create temporary release folder
+          mkdir -p release
+
+          # Copy executable
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            cp dist/Spikeling.exe release/
+            chmod +x release/Spikeling   # <- Ensure it is executable
+          else
+            cp dist/Spikeling release/
+          fi
+
+          # Copy additional folders
+          cp -r Recordings release/
+          cp -r Neuron release/
+          cp -r Stimuli release/
+
+          # Remove old zip if exists
+          rm -f GUI/${OS_NAME}/${ZIP_NAME}
+
+          # Create zip
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            powershell Compress-Archive -Path release/* -DestinationPath $ZIP_NAME
+          else
+            zip -r $ZIP_NAME release/*
+          fi
+
+          # Move zip into OS-specific folder
+          mkdir -p GUI/${OS_NAME}
+          mv $ZIP_NAME GUI/${OS_NAME}/
+
+      - name: Cleanup intermediate folders
+        run: |
+          rm -rf build dist __pycache__ release
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Spikeling-${{ matrix.os }}
+          path: GUI/${{ env.OS_NAME }}/*.zip
+
+  release:
+    name: Create GitHub Release and Commit Builds
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Move builds into GUI/
+        run: |
+          mkdir -p GUI
+          cp -r artifacts/* GUI/
+
+      - name: Commit release builds to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add GUI
+          git commit -m "Update release builds for ${{ github.ref_name }}" || echo "No changes to commit"
+          git push origin main
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          files: GUI/*/*.zip
+          overwrite: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
