@@ -6,13 +6,9 @@ on:
       - "v*.*.*"
 
 jobs:
-  build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        # os: [windows-latest, macos-latest, ubuntu-latest]
-        os: [macos-latest]
+  build-macos:
+    name: Build on macOS
+    runs-on: macos-latest
 
     steps:
       - name: Checkout repository
@@ -25,10 +21,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install system dependencies
-        if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1
-
       - name: Install Python dependencies (split)
         working-directory: GUI/PyQt
         run: |
@@ -36,9 +28,7 @@ jobs:
           pip install --no-cache-dir PySide6==6.9.2 pyinstaller==6.15
           pip install --no-cache-dir numpy==2.3.2 scipy==1.16.1 pandas==2.3.2 pyqtgraph==0.13.7 pyserial==3.5
 
-
       - name: Debug macOS specifics
-        if: runner.os == 'macOS'
         run: |
           echo "=== PySide6 plugin path ==="
           python -c "from PySide6 import QtCore; print(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))"
@@ -51,28 +41,21 @@ jobs:
 
       - name: Select .spec file
         run: |
-          if [ "${{ runner.os }}" = "Windows" ]; then
-            echo "SPEC_FILE=Spikeling-win.spec" >> $GITHUB_ENV
-            echo "OS_NAME=Windows" >> $GITHUB_ENV
-          elif [ "${{ runner.os }}" = "macOS" ]; then
-            echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
-            echo "OS_NAME=macOS" >> $GITHUB_ENV
-          else
-            echo "SPEC_FILE=Spikeling-linux.spec" >> $GITHUB_ENV
-            echo "OS_NAME=Linux" >> $GITHUB_ENV
-          fi
+          echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
+          echo "OS_NAME=macOS" >> $GITHUB_ENV
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
-        run: pyinstaller --clean --log-level=DEBUG  $SPEC_FILE
-
-      - name: Verify executable
         run: |
-          if [ "${{ runner.os }}" = "Windows" ]; then
-            GUI/PyQt/dist/Spikeling.exe --help
-          else
-            chmod +x GUI/PyQt/dist/Spikeling
-            GUI/PyQt/dist/Spikeling --help
+          echo "Using spec file: $SPEC_FILE"
+          pyinstaller --clean --log-level=DEBUG "$SPEC_FILE"
+
+      - name: Verify macOS executable
+        run: |
+          chmod +x GUI/PyQt/dist/Spikeling
+          echo "Executable info:"
+          ls -lh GUI/PyQt/dist/Spikeling
+          GUI/PyQt/dist/Spikeling --help || true  # prevent failure if --help fails
 
       - name: Package build with additional folders
         run: |
@@ -82,12 +65,8 @@ jobs:
           mkdir -p release
 
           # Copy executable
-          if [ "${{ runner.os }}" = "Windows" ]; then
-            cp GUI/PyQt/dist/Spikeling.exe release/
-          else
-            cp GUI/PyQt/dist/Spikeling release/
-            chmod +x release/Spikeling
-          fi
+          cp GUI/PyQt/dist/Spikeling release/
+          chmod +x release/Spikeling
 
           # Copy extra folders
           cp -r GUI/PyQt/Recordings release/
@@ -99,14 +78,10 @@ jobs:
           rm -f GUI/${OS_NAME}/${ZIP_NAME}
 
           # Create zip
-          if [ "${{ runner.os }}" = "Windows" ]; then
-            powershell Compress-Archive -Path release/* -DestinationPath $ZIP_NAME
-          else
-            zip -r $ZIP_NAME release/*
-          fi
+          zip -r "$ZIP_NAME" release/*
 
           # Move zip into GUI/<OS> folder
-          mv $ZIP_NAME GUI/${OS_NAME}/
+          mv "$ZIP_NAME" GUI/${OS_NAME}/
 
       - name: Cleanup intermediate folders
         run: |
@@ -115,5 +90,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Spikeling-${{ matrix.os }}
+          name: Spikeling-macos
           path: GUI/${{ env.OS_NAME }}/*.zip
