@@ -61,7 +61,7 @@ jobs:
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
-        run: pyinstaller --clean --log-level=DEBUG $SPEC_FILE
+        run: pyinstaller --clean --log-level=DEBUG  --noupx $SPEC_FILE
 
       - name: Verify executable
         run: |
