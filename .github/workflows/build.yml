@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.12"
 
       - name: Install system dependencies
         if: runner.os == 'Linux'
@@ -32,7 +32,9 @@ jobs:
         working-directory: GUI/PyQt
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          for i in 1 2 3; do
+            pip install --no-cache-dir -r requirements.txt && break || sleep 10
+          done
 
       - name: Debug macOS specifics
         if: runner.os == 'macOS'
