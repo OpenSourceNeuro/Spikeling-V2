@@ -57,6 +57,7 @@ jobs:
           else
             echo "SPEC_FILE=Spikeling-linux.spec" >> $GITHUB_ENV
             echo "OS_NAME=Linux" >> $GITHUB_ENV
+          fi
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
