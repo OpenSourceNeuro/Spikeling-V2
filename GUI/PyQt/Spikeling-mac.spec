@@ -1,33 +1,30 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
 from PySide6 import QtCore
-from PyInstaller.utils.hooks import collect_data_files
 
 block_cipher = None
 
 # Only include essential Qt plugins: platforms + imageformats
-qt_plugins = []
 plugin_path = QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath)
+qt_plugins = []
 for plugin_type in ['platforms', 'imageformats']:
     src = os.path.join(plugin_path, plugin_type)
     if os.path.exists(src):
         qt_plugins.append((src, os.path.join('PySide6/Qt/plugins', plugin_type)))
 
-# Collect only PySide6 data files (excluding Python source)
-pyside6_data = collect_data_files('PySide6', include_py_files=False)
-
-# Minimal hidden imports based on actual usage
+# Hidden imports based on your actual code usage
 hidden_imports = [
     'PySide6.QtCore',
     'PySide6.QtGui',
     'PySide6.QtWidgets'
 ]
 
+# Analysis
 a = Analysis(
     ['main.py'],
     pathex=[os.path.abspath('.')],  # project root
     binaries=[],
-    datas=[('Spikeling.icns', '.')] + qt_plugins + pyside6_data,
+    datas=[('Spikeling.icns', '.')] + qt_plugins,  # exclude sqldrivers entirely
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
@@ -45,7 +42,7 @@ a = Analysis(
         'PySide6.QtMultimedia',
         'PySide6.QtMultimediaWidgets',
         'PySide6.QtSensors',
-        'PySide6.QtSql',
+        'PySide6.QtSql',       # exclude SQL entirely
         'PySide6.QtSvg',
         'PySide6.QtUiTools',
         'PySide6.QtWebSockets',
@@ -59,8 +56,10 @@ a = Analysis(
     noarchive=False,
 )
 
+# PYZ
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
+# EXE
 exe = EXE(
     pyz,
     a.scripts,
@@ -73,7 +72,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=False,
-    noupx=True,                 # Disable UPX for PySide6 binaries
+    noupx=True,  # disable UPX for PySide6 binaries
     runtime_tmpdir=None,
     console=False,
     icon='Spikeling.icns',

@@ -50,18 +50,16 @@ jobs:
 
       - name: Select .spec file
         run: |
-          # if [ "${{ runner.os }}" = "Windows" ]; then
-          #   echo "SPEC_FILE=Spikeling-win.spec" >> $GITHUB_ENV
-          #   echo "OS_NAME=Windows" >> $GITHUB_ENV
-          # elif [ "${{ runner.os }}" = "macOS" ]; then
-          #   echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
-          #   echo "OS_NAME=macOS" >> $GITHUB_ENV
-          # else
-          #   echo "SPEC_FILE=Spikeling-linux.spec" >> $GITHUB_ENV
-          #   echo "OS_NAME=Linux" >> $GITHUB_ENV
-          # fi
-          echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
-          echo "OS_NAME=macOS" >> $GITHUB_ENV
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            echo "SPEC_FILE=Spikeling-win.spec" >> $GITHUB_ENV
+            echo "OS_NAME=Windows" >> $GITHUB_ENV
+          elif [ "${{ runner.os }}" = "macOS" ]; then
+            echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
+            echo "OS_NAME=macOS" >> $GITHUB_ENV
+          else
+            echo "SPEC_FILE=Spikeling-linux.spec" >> $GITHUB_ENV
+            echo "OS_NAME=Linux" >> $GITHUB_ENV
+          fi
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
