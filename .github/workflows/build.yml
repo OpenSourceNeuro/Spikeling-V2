@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - "v*.*.*"   # Trigger on version tags like v1.0.0
+      - "v*.*.*"  # Trigger on version tags like v1.0.0
 
 jobs:
   build:
@@ -17,14 +17,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # Needed for committing later
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
 
-      - name: Install dependencies
+      # Install system dependencies for Linux/macOS
+      - name: Install system dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1
+
+      - name: Install Python dependencies
+        working-directory: GUI/PyQt
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -42,28 +48,40 @@ jobs:
             echo "OS_NAME=Linux" >> $GITHUB_ENV
 
       - name: Build with PyInstaller
+        working-directory: GUI/PyQt
         run: pyinstaller $SPEC_FILE
+
+      - name: Verify executable
+        run: |
+          if [ "${{ runner.os }}" = "Windows" ]; then
+            GUI/PyQt/dist/Spikeling.exe --help
+          else
+            chmod +x GUI/PyQt/dist/Spikeling
+            GUI/PyQt/dist/Spikeling --help
+          fi
 
       - name: Package build with additional folders
         run: |
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-${OS_NAME}.zip
 
-          # Create temporary release folder
           mkdir -p release
 
           # Copy executable
           if [ "${{ runner.os }}" = "Windows" ]; then
-            cp dist/Spikeling.exe release/
-            chmod +x release/Spikeling   # <- Ensure it is executable
+            cp GUI/PyQt/dist/Spikeling.exe release/
           else
-            cp dist/Spikeling release/
+            cp GUI/PyQt/dist/Spikeling release/
+            chmod +x release/Spikeling
           fi
 
           # Copy additional folders
-          cp -r Recordings release/
-          cp -r Neuron release/
-          cp -r Stimuli release/
+          cp -r GUI/PyQt/Recordings release/
+          cp -r GUI/PyQt/Neuron release/
+          cp -r GUI/PyQt/Stimuli release/
+
+          # Create OS-specific folder for zip
+          mkdir -p GUI/${OS_NAME}
 
           # Remove old zip if exists
           rm -f GUI/${OS_NAME}/${ZIP_NAME}
@@ -75,13 +93,12 @@ jobs:
             zip -r $ZIP_NAME release/*
           fi
 
-          # Move zip into OS-specific folder
-          mkdir -p GUI/${OS_NAME}
+          # Move zip into GUI/<OS> folder
           mv $ZIP_NAME GUI/${OS_NAME}/
 
       - name: Cleanup intermediate folders
         run: |
-          rm -rf build dist __pycache__ release
+          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -94,7 +111,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -104,9 +121,8 @@ jobs:
         with:
           path: artifacts
 
-      - name: Move builds into GUI/
+      - name: Move builds into GUI/<OS> folders
         run: |
-          mkdir -p GUI
           cp -r artifacts/* GUI/
 
       - name: Commit release builds to repo
