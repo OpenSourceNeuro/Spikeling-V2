@@ -1,15 +1,20 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+from PySide6 import QtCore
+import os
 
 block_cipher = None
+
+# Dynamically find Qt plugin path (for PySide6)
+qt_plugins = os.path.join(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Spikeling.png', '.'),('PySide6/Qt/plugins', 'PySide6/Qt/plugins')],
+    datas=[('Spikeling.png', '.'), (qt_plugins, 'PySide6/Qt/plugins')],
     hiddenimports=[],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     win_no_prefer_redirects=False,
@@ -32,12 +37,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    upx_exclude=[],
     runtime_tmpdir=None,
     console=False,
-    disable_windowed_traceback=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    icon='Spikeling.png',  # Linux ignores exe icons, but you can keep it
+    icon='Spikeling.png',
 )

@@ -1,15 +1,21 @@
 # -*- mode: python ; coding: utf-8 -*-
+import sys
+from PySide6 import QtCore
+import os
+from PyInstaller.utils.hooks import collect_submodules, collect_data_files
 
 block_cipher = None
+
+# Dynamically find Qt plugin path
+qt_plugins = os.path.join(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('Spikeling.icns', '.'),('PySide6/Qt/plugins', 'PySide6/Qt/plugins')],
+    datas=[('Spikeling.icns', '.'), (qt_plugins, 'PySide6/Qt/plugins')],
     hiddenimports=[],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     win_no_prefer_redirects=False,
@@ -32,13 +38,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    upx_exclude=[],
     runtime_tmpdir=None,
     console=False,
-    disable_windowed_traceback=False,
-    argv_emulation=True,  # macOS requires argv_emulation for drag-and-drop files
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    icon='Spikeling.icns',  # macOS uses .icns
+    icon='Spikeling.icns',
 )
