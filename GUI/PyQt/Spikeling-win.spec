@@ -1,9 +1,11 @@
 # -*- mode: python ; coding: utf-8 -*-
-import os,sys
+import os, sys
 from PySide6 import QtCore
+from PyInstaller.utils.hooks import collect_data_files
 
 block_cipher = None
 
+# Qt plugins
 plugin_path = QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath)
 qt_plugins = []
 for plugin_type in ['platforms', 'imageformats', 'styles']:
@@ -11,20 +13,21 @@ for plugin_type in ['platforms', 'imageformats', 'styles']:
     if os.path.exists(src):
         qt_plugins.append((src, os.path.join('PySide6/Qt/plugins', plugin_type)))
 
+# Hidden imports
 hidden_imports = [
     'PySide6.QtCore',
     'PySide6.QtGui',
     'PySide6.QtWidgets'
 ]
 
-
+# Absolute path of the spec file
 spec_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 a = Analysis(
     [os.path.join(spec_dir, 'Main.py')],
     pathex=[spec_dir],
     binaries=[],
-    datas=[] + qt_plugins,   # remove or adjust depending on platform
+    datas=qt_plugins,
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
@@ -71,5 +74,5 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    icon='GUI/PyQt/Spikeling.ico',
+    icon=os.path.join(spec_dir, 'Spikeling.ico'),  # <-- absolute path fix
 )
