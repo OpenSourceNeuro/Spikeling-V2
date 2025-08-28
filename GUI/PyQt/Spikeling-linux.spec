@@ -1,5 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
-import os
+import os,sys
 from PySide6 import QtCore
 
 block_cipher = None
@@ -17,11 +17,13 @@ hidden_imports = [
     'PySide6.QtWidgets'
 ]
 
+spec_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+
 a = Analysis(
-    [os.path.join(os.path.dirname(__file__), 'main.py')],
-    pathex=[os.path.abspath(os.path.dirname(__file__))],  # project path = folder of spec
+    [os.path.join(spec_dir, 'main.py')],
+    pathex=[spec_dir],
     binaries=[],
-    datas=[('Spikeling.icns', '.')] + qt_plugins,  # macOS one still keeps the .icns
+    datas=[] + qt_plugins,   # remove or adjust depending on platform
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
@@ -52,6 +54,7 @@ a = Analysis(
     cipher=block_cipher,
     noarchive=False,
 )
+
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 
