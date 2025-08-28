@@ -71,7 +71,7 @@ jobs:
 
           # Copy extra folders
           cp -r GUI/PyQt/Recordings release/
-          cp -r GUI/PyQt/Neuron release/
+          cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
 
           # Create OS-specific folder and remove old zip if exists
