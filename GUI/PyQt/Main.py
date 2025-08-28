@@ -4,6 +4,10 @@
 
 import sys
 
+if "--help" in sys.argv:
+    print("Spikeling - GUI simulator while packaging with PyInstaller")
+    sys.exit(0)
+
 from PySide6 import QtWidgets
 from PySide6.QtCore import QSize, Qt, QTimer
 from PySide6.QtGui import QColor,QIcon
