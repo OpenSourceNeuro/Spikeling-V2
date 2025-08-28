@@ -1,14 +1,9 @@
-name: Build and Release
+name: Build and Release macOS
 
 on:
   push:
     tags:
-      - "v*.*.*"
-
-permissions:
-  contents: write   # allow pushing artifacts to repo
-  packages: write
-  actions: write
+      - "v*.*.*"  # Trigger on version tags like v2.5.19
 
 jobs:
   build-macos:
@@ -16,33 +11,39 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main branch
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install Python dependencies (split)
+      - name: Install Python dependencies
         working-directory: GUI/PyQt
         run: |
           python -m pip install --upgrade pip
           pip install --no-cache-dir PySide6==6.9.2 pyinstaller==6.15
           pip install --no-cache-dir numpy==2.3.2 scipy==1.16.1 pandas==2.3.2 pyqtgraph==0.13.7 pyserial==3.5
 
-      - name: Select .spec file
+      - name: Debug macOS specifics
         run: |
-          echo "SPEC_FILE=Spikeling-mac.spec" >> $GITHUB_ENV
-          echo "OS_NAME=macOS" >> $GITHUB_ENV
+          echo "=== PySide6 plugin path ==="
+          python -c "from PySide6 import QtCore; print(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))"
+
+          echo "=== Contents of GUI/PyQt ==="
+          ls -lah GUI/PyQt
+
+          echo "=== .icns file info ==="
+          ls -lh GUI/PyQt/Spikeling.icns
 
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
         run: |
-          echo "Using spec file: $SPEC_FILE"
-          pyinstaller --clean --log-level=DEBUG "$SPEC_FILE"
+          pyinstaller --clean --log-level=DEBUG Spikeling-mac.spec
 
       - name: Verify macOS executable
         run: |
@@ -54,35 +55,40 @@ jobs:
       - name: Package build with additional folders
         run: |
           VERSION=${GITHUB_REF_NAME}
-          ZIP_NAME=Spikeling-${VERSION}-${OS_NAME}.zip
+          ZIP_NAME=Spikeling-${VERSION}-macOS.zip
+          OS_NAME=macOS
 
           mkdir -p release
 
+          # Copy executable
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
 
+          # Copy additional folders
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
 
+          # Create OS-specific folder
           mkdir -p GUI/${OS_NAME}
-          rm -f GUI/${OS_NAME}/*.zip   # delete ALL previous zips
 
+          # Delete old zip(s)
+          rm -f GUI/${OS_NAME}/Spikeling-*.zip
+
+          # Create zip
           zip -r "$ZIP_NAME" release/*
+
+          # Move zip into GUI/macOS
           mv "$ZIP_NAME" GUI/${OS_NAME}/
 
-          echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
+      - name: Cleanup intermediate folders
+        run: |
+          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
 
       - name: Commit zip to repository
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add GUI/${OS_NAME}/Spikeling-*.zip
+          git add GUI/macOS/Spikeling-*.zip
           git commit -m "Add macOS build artifact for ${GITHUB_REF_NAME}" || echo "No changes to commit"
-          git push
-
-      - name: Upload release asset
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ github.ref_name }}
-          files: GUI/${{ env.OS_NAME }}/${{ env.ZIP_NAME }}
+          git push origin main
