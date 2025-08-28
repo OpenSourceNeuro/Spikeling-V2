@@ -4,7 +4,6 @@ from PySide6 import QtCore
 
 block_cipher = None
 
-# Only include essential Qt plugins
 plugin_path = QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath)
 qt_plugins = []
 for plugin_type in ['platforms', 'imageformats']:
@@ -19,36 +18,25 @@ hidden_imports = [
 ]
 
 a = Analysis(
-    ['main.py'],
+    ['GUI/PyQt/main.py'],   # fixed path
     pathex=[os.path.abspath('.')],
     binaries=[],
-    datas=[('Spikeling.png', '.')] + qt_plugins,  # optional icon
+    datas=qt_plugins,
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
     excludes=[
-        'PySide6.QtQml',
-        'PySide6.QtQuick',
-        'PySide6.QtQuickControls2',
-        'PySide6.QtQmlModels',
-        'PySide6.QtWebEngine',
-        'PySide6.QtWebEngineCore',
-        'PySide6.QtWebEngineWidgets',
-        'PySide6.QtBluetooth',
-        'PySide6.QtLocation',
-        'PySide6.QtPositioning',
-        'PySide6.QtMultimedia',
-        'PySide6.QtMultimediaWidgets',
-        'PySide6.QtSensors',
-        'PySide6.QtSql',
-        'PySide6.QtSvg',
-        'PySide6.QtUiTools',
-        'PySide6.QtWebSockets',
-        'PySide6.QtXml',
-        'PySide6.QtXmlPatterns',
-        'PySide6.QtTest'
+        'PySide6.QtQml', 'PySide6.QtQuick', 'PySide6.QtQuickControls2',
+        'PySide6.QtQmlModels', 'PySide6.QtWebEngine', 'PySide6.QtWebEngineCore',
+        'PySide6.QtWebEngineWidgets', 'PySide6.QtBluetooth', 'PySide6.QtLocation',
+        'PySide6.QtPositioning', 'PySide6.QtMultimedia', 'PySide6.QtMultimediaWidgets',
+        'PySide6.QtSensors', 'PySide6.QtSql', 'PySide6.QtSvg', 'PySide6.QtUiTools',
+        'PySide6.QtWebSockets', 'PySide6.QtXml', 'PySide6.QtXmlPatterns', 'PySide6.QtTest'
     ],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
     cipher=block_cipher,
+    noarchive=False,
 )
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
@@ -66,6 +54,5 @@ exe = EXE(
     strip=False,
     upx=False,
     noupx=True,
-    console=False,   # no terminal popup
-    # Linux doesn’t use exe icons, but you can supply a PNG in datas
+    console=False,
 )
