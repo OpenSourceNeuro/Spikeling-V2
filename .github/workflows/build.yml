@@ -1,4 +1,4 @@
-name: Build and Release macOS
+name: Build and Release Spikeling GUI
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-          persist-credentials: false  # <-- important
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,22 +35,9 @@ jobs:
           echo "=== PySide6 plugin path ==="
           python -c "from PySide6 import QtCore; print(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))"
 
-          echo "=== Contents of GUI/PyQt ==="
-          ls -lah GUI/PyQt
-
-          echo "=== .icns file info ==="
-          ls -lh GUI/PyQt/Spikeling.icns
-
       - name: Build with PyInstaller
         working-directory: GUI/PyQt
         run: pyinstaller --clean --log-level=DEBUG Spikeling-mac.spec
-
-      - name: Verify macOS executable
-        run: |
-          chmod +x GUI/PyQt/dist/Spikeling
-          echo "Executable info:"
-          ls -lh GUI/PyQt/dist/Spikeling
-          GUI/PyQt/dist/Spikeling --help || echo "Help check skipped"
 
       - name: Package build with additional folders
         run: |
@@ -59,31 +46,19 @@ jobs:
           OS_NAME=macOS
 
           mkdir -p release
-
-          # Copy executable
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
-
-          # Copy additional folders
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
 
-          # Create OS-specific folder
           mkdir -p GUI/${OS_NAME}
-
-          # Delete old zip(s)
           rm -f GUI/${OS_NAME}/Spikeling-*.zip
-
-          # Create zip
           zip -r "$ZIP_NAME" release/*
-
-          # Move zip into GUI/macOS
           mv "$ZIP_NAME" GUI/${OS_NAME}/
 
       - name: Cleanup intermediate folders
-        run: |
-          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
 
       - name: Commit zip to repository
         run: |
@@ -91,4 +66,120 @@ jobs:
           git config user.email "actions@github.com"
           git add GUI/macOS/Spikeling-*.zip
           git commit -m "Add macOS build artifact for ${GITHUB_REF_NAME}" || echo "No change to commit"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} main
+
+  build-linux:
+    name: Build on Linux
+    runs-on: ubuntu-latest
+    needs: build-macos   # run after macOS
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        working-directory: GUI/PyQt
+        run: |
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir PySide6==6.9.2 pyinstaller==6.15
+          pip install --no-cache-dir numpy==2.3.2 scipy==1.16.1 pandas==2.3.2 pyqtgraph==0.13.7 pyserial==3.5
+
+      - name: Build with PyInstaller
+        working-directory: GUI/PyQt
+        run: pyinstaller --clean --log-level=DEBUG Spikeling-linux.spec
+
+      - name: Package build with additional folders
+        run: |
+          VERSION=${GITHUB_REF_NAME}
+          ZIP_NAME=Spikeling-${VERSION}-Linux.zip
+          OS_NAME=Linux
+
+          mkdir -p release
+          cp GUI/PyQt/dist/Spikeling release/
+          chmod +x release/Spikeling
+          cp -r GUI/PyQt/Recordings release/
+          cp -r GUI/PyQt/Neurons release/
+          cp -r GUI/PyQt/Stimuli release/
+
+          mkdir -p GUI/${OS_NAME}
+          rm -f GUI/${OS_NAME}/Spikeling-*.zip
+          zip -r "$ZIP_NAME" release/*
+          mv "$ZIP_NAME" GUI/${OS_NAME}/
+
+      - name: Cleanup intermediate folders
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
+
+      - name: Commit zip to repository
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add GUI/Linux/Spikeling-*.zip
+          git commit -m "Add Linux build artifact for ${GITHUB_REF_NAME}" || echo "No change to commit"
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} main
+
+  build-windows:
+    name: Build on Windows
+    runs-on: windows-latest
+    needs: build-linux   # run after Linux (so after macOS too)
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        working-directory: GUI/PyQt
+        run: |
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir PySide6==6.9.2 pyinstaller==6.15
+          pip install --no-cache-dir numpy==2.3.2 scipy==1.16.1 pandas==2.3.2 pyqtgraph==0.13.7 pyserial==3.5
+
+      - name: Build with PyInstaller
+        working-directory: GUI/PyQt
+        run: pyinstaller --clean --log-level=DEBUG Spikeling-win.spec
+
+      - name: Package build with additional folders
+        shell: bash
+        run: |
+          VERSION=${GITHUB_REF_NAME}
+          ZIP_NAME=Spikeling-${VERSION}-Windows.zip
+          OS_NAME=Windows
+
+          mkdir -p release
+          cp GUI/PyQt/dist/Spikeling.exe release/
+          cp -r GUI/PyQt/Recordings release/
+          cp -r GUI/PyQt/Neurons release/
+          cp -r GUI/PyQt/Stimuli release/
+
+          mkdir -p GUI/${OS_NAME}
+          rm -f GUI/${OS_NAME}/Spikeling-*.zip
+          powershell Compress-Archive -Path release/* -DestinationPath "$ZIP_NAME"
+          mv "$ZIP_NAME" GUI/${OS_NAME}/
+
+      - name: Cleanup intermediate folders
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
+
+      - name: Commit zip to repository
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add GUI/Windows/Spikeling-*.zip
+          git commit -m "Add Windows build artifact for ${GITHUB_REF_NAME}" || echo "No change to commit"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} main
