@@ -86,8 +86,8 @@ jobs:
 
       - name: Commit zip to repository
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
           git add GUI/macOS/Spikeling-*.zip
           git commit -m "Add macOS build artifact for ${GITHUB_REF_NAME}" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} main
