@@ -48,24 +48,13 @@ jobs:
           mkdir -p GUI/macOS
           mv "$ZIP_NAME" GUI/macOS/
 
-      - name: Create GitHub release
-        id: release
+      - name: Upload macOS artifact to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
-          draft: false
-          prerelease: false
+          files: GUI/macOS/Spikeling-${{ github.ref_name }}-macOS.zip
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-
-      - name: Upload macOS artifact
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.release.outputs.upload_url }}
-          asset_path: GUI/macOS/Spikeling-${{ github.ref_name }}-macOS.zip
-          asset_name: Spikeling-${{ github.ref_name }}-macOS.zip
-          asset_content_type: application/zip
-          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
@@ -113,14 +102,13 @@ jobs:
           mkdir -p GUI/Linux
           mv "$ZIP_NAME" GUI/Linux/
 
-      - name: Upload Linux artifact
-        uses: actions/upload-release-asset@v1
+      - name: Upload Linux artifact to release
+        uses: softprops/action-gh-release@v1
         with:
-          upload_url: ${{ needs.build-macos.steps.release.outputs.upload_url }}
-          asset_path: GUI/Linux/Spikeling-${{ github.ref_name }}-Linux.zip
-          asset_name: Spikeling-${{ github.ref_name }}-Linux.zip
-          asset_content_type: application/zip
-          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
+          tag_name: ${{ github.ref_name }}
+          files: GUI/Linux/Spikeling-${{ github.ref_name }}-Linux.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
@@ -168,14 +156,13 @@ jobs:
           mkdir -p GUI/Windows
           mv "$ZIP_NAME" GUI/Windows/
 
-      - name: Upload Windows artifact
-        uses: actions/upload-release-asset@v1
+      - name: Upload Windows artifact to release
+        uses: softprops/action-gh-release@v1
         with:
-          upload_url: ${{ needs.build-macos.steps.release.outputs.upload_url }}
-          asset_path: GUI/Windows/Spikeling-${{ github.ref_name }}-Windows.zip
-          asset_name: Spikeling-${{ github.ref_name }}-Windows.zip
-          asset_content_type: application/zip
-          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
+          tag_name: ${{ github.ref_name }}
+          files: GUI/Windows/Spikeling-${{ github.ref_name }}-Windows.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
