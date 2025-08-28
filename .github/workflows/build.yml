@@ -55,7 +55,8 @@ jobs:
           chmod +x GUI/PyQt/dist/Spikeling
           echo "Executable info:"
           ls -lh GUI/PyQt/dist/Spikeling
-          GUI/PyQt/dist/Spikeling --help || true  # prevent failure if --help fails
+          # Run version/help safely
+          GUI/PyQt/dist/Spikeling --help || echo "Help check skipped"
 
       - name: Package build with additional folders
         run: |
