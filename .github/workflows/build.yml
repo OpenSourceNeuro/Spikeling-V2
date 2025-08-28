@@ -65,6 +65,7 @@ jobs:
           asset_path: GUI/macOS/Spikeling-${{ github.ref_name }}-macOS.zip
           asset_name: Spikeling-${{ github.ref_name }}-macOS.zip
           asset_content_type: application/zip
+          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
@@ -119,6 +120,7 @@ jobs:
           asset_path: GUI/Linux/Spikeling-${{ github.ref_name }}-Linux.zip
           asset_name: Spikeling-${{ github.ref_name }}-Linux.zip
           asset_content_type: application/zip
+          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
@@ -173,6 +175,7 @@ jobs:
           asset_path: GUI/Windows/Spikeling-${{ github.ref_name }}-Windows.zip
           asset_name: Spikeling-${{ github.ref_name }}-Windows.zip
           asset_content_type: application/zip
+          token: ${{ secrets.PAT_TOKEN }}   # <-- add this line
 
       - name: Cleanup
         run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
