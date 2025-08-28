@@ -170,4 +170,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Cleanup
-        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__
+        shell: powershell
+        run: |
+          Remove-Item -Recurse -Force GUI/PyQt/build
+          Remove-Item -Recurse -Force GUI/PyQt/dist
+          Remove-Item -Recurse -Force GUI/PyQt/__pycache__
