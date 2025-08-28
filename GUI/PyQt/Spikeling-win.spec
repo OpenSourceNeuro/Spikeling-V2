@@ -21,7 +21,7 @@ hidden_imports = [
 spec_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
 a = Analysis(
-    [os.path.join(spec_dir, 'main.py')],
+    [os.path.join(spec_dir, 'Main.py')],
     pathex=[spec_dir],
     binaries=[],
     datas=[] + qt_plugins,   # remove or adjust depending on platform
