@@ -37,7 +37,7 @@ jobs:
           ls -lah GUI/PyQt
 
           echo "=== .icns file info ==="
-          ls -lh GUI/PyQt/Spikeling.icns
+          ls -lh GUI/PyQt/Spikeling.icns || true
 
       - name: Select .spec file
         run: |
@@ -55,7 +55,6 @@ jobs:
           chmod +x GUI/PyQt/dist/Spikeling
           echo "Executable info:"
           ls -lh GUI/PyQt/dist/Spikeling
-          # Run version/help safely
           GUI/PyQt/dist/Spikeling --help || echo "Help check skipped"
 
       - name: Package build with additional folders
@@ -63,30 +62,33 @@ jobs:
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-${OS_NAME}.zip
 
-          mkdir -p release
+          mkdir -p Spikeling
 
           # Copy executable
-          cp GUI/PyQt/dist/Spikeling release/
-          chmod +x release/Spikeling
+          cp GUI/PyQt/dist/Spikeling Spikeling/
+          chmod +x Spikeling/Spikeling
 
-          # Copy extra folders
-          cp -r GUI/PyQt/Recordings release/
-          cp -r GUI/PyQt/Neurons release/
-          cp -r GUI/PyQt/Stimuli release/
+          # Copy extra folders if they exist
+          for dir in Recordings Neurons Stimuli; do
+            if [ -d "GUI/PyQt/$dir" ]; then
+              cp -r "GUI/PyQt/$dir" Spikeling/
+            else
+              echo "Skipping missing folder: $dir"
+            fi
+          done
 
-          # Create OS-specific folder and remove old zip if exists
+          # Ensure OS-specific folder exists
           mkdir -p GUI/${OS_NAME}
+
+          # Remove any old zip with same name
           rm -f GUI/${OS_NAME}/${ZIP_NAME}
 
-          # Create zip
-          zip -r "$ZIP_NAME" release/*
-
-          # Move zip into GUI/<OS> folder
-          mv "$ZIP_NAME" GUI/${OS_NAME}/
+          # Create zip directly inside GUI/${OS_NAME}
+          (cd Spikeling && zip -r ../GUI/${OS_NAME}/${ZIP_NAME} .)
 
       - name: Cleanup intermediate folders
         run: |
-          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ release
+          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ Spikeling
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
