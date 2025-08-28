@@ -34,11 +34,10 @@ jobs:
         working-directory: GUI/PyQt
         run: pyinstaller --clean --log-level=DEBUG Spikeling-mac.spec
 
-      - name: Package build
+      - name: Package macOS build
         run: |
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-macOS.zip
-          OS_NAME=macOS
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
@@ -46,20 +45,24 @@ jobs:
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
           zip -r "$ZIP_NAME" release/*
+          mkdir -p GUI/macOS
+          mv "$ZIP_NAME" GUI/macOS/
 
-      - name: Upload macOS build to release
-        id: upload_mac
+      - name: Create GitHub release
+        id: release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
-      - name: Attach macOS zip to release
+      - name: Upload macOS artifact
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ steps.upload_mac.outputs.upload_url }}
-          asset_path: Spikeling-${{ github.ref_name }}-macOS.zip
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: GUI/macOS/Spikeling-${{ github.ref_name }}-macOS.zip
           asset_name: Spikeling-${{ github.ref_name }}-macOS.zip
           asset_content_type: application/zip
 
@@ -95,11 +98,10 @@ jobs:
         working-directory: GUI/PyQt
         run: pyinstaller --clean --log-level=DEBUG Spikeling-linux.spec
 
-      - name: Package build
+      - name: Package Linux build
         run: |
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-Linux.zip
-          OS_NAME=Linux
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
@@ -107,20 +109,14 @@ jobs:
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
           zip -r "$ZIP_NAME" release/*
+          mkdir -p GUI/Linux
+          mv "$ZIP_NAME" GUI/Linux/
 
-      - name: Upload Linux build to release
-        id: upload_linux
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Attach Linux zip to release
+      - name: Upload Linux artifact
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ steps.upload_linux.outputs.upload_url }}
-          asset_path: Spikeling-${{ github.ref_name }}-Linux.zip
+          upload_url: ${{ needs.build-macos.steps.release.outputs.upload_url }}
+          asset_path: GUI/Linux/Spikeling-${{ github.ref_name }}-Linux.zip
           asset_name: Spikeling-${{ github.ref_name }}-Linux.zip
           asset_content_type: application/zip
 
@@ -156,32 +152,25 @@ jobs:
         working-directory: GUI/PyQt
         run: pyinstaller --clean --log-level=DEBUG Spikeling-win.spec
 
-      - name: Package build
+      - name: Package Windows build
         shell: bash
         run: |
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-Windows.zip
-          OS_NAME=Windows
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling.exe release/
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
           powershell Compress-Archive -Path release/* -DestinationPath "$ZIP_NAME"
+          mkdir -p GUI/Windows
+          mv "$ZIP_NAME" GUI/Windows/
 
-      - name: Upload Windows build to release
-        id: upload_win
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref_name }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Attach Windows zip to release
+      - name: Upload Windows artifact
         uses: actions/upload-release-asset@v1
         with:
-          upload_url: ${{ steps.upload_win.outputs.upload_url }}
-          asset_path: Spikeling-${{ github.ref_name }}-Windows.zip
+          upload_url: ${{ needs.build-macos.steps.release.outputs.upload_url }}
+          asset_path: GUI/Windows/Spikeling-${{ github.ref_name }}-Windows.zip
           asset_name: Spikeling-${{ github.ref_name }}-Windows.zip
           asset_content_type: application/zip
 
