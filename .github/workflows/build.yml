@@ -160,7 +160,7 @@ jobs:
           # Ensure output folder exists
           New-Item -ItemType Directory -Force -Path "GUI\Windows"
 
-          # Compress all contents of release folder
+          # Compress all contents of release folder at once
           Compress-Archive -Path release\* -DestinationPath "GUI\Windows\$zipName" -Force
 
           # Optional cleanup
