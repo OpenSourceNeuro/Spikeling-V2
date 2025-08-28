@@ -36,17 +36,17 @@ jobs:
 
       - name: Package macOS build
         run: |
-          VERSION=${GITHUB_REF_NAME}
-          ZIP_NAME=Spikeling-${VERSION}-macOS.zip
+          $version = "${{ github.ref_name }}"
+          $zipName = "Spikeling-$version-macOS.zip"
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
-          zip -r "$ZIP_NAME" release/*
+          zip -r "$zipName" release/*
           mkdir -p GUI/macOS
-          mv "$ZIP_NAME" GUI/macOS/
+          mv "$zipName" GUI/macOS/
 
       - name: Upload macOS artifact to release
         uses: softprops/action-gh-release@v1
@@ -143,18 +143,28 @@ jobs:
         run: pyinstaller --clean --log-level=DEBUG Spikeling-win.spec
 
       - name: Package Windows build
-        shell: bash
+        shell: powershell
         run: |
-          VERSION=${GITHUB_REF_NAME}
-          ZIP_NAME=Spikeling-${VERSION}-Windows.zip
-          mkdir -p release
-          cp GUI/PyQt/dist/Spikeling.exe release/
-          cp -r GUI/PyQt/Recordings release/
-          cp -r GUI/PyQt/Neurons release/
-          cp -r GUI/PyQt/Stimuli release/
-          powershell Compress-Archive -Path release/* -DestinationPath "$ZIP_NAME"
-          mkdir -p GUI/Windows
-          mv "$ZIP_NAME" GUI/Windows/
+          $version = "${{ github.ref_name }}"
+          $zipName = "Spikeling-$version-Windows.zip"
+
+          # Create release folder
+          New-Item -ItemType Directory -Force -Path release
+
+          # Copy executable and folders
+          Copy-Item -Path "GUI/PyQt/dist/Spikeling.exe" -Destination release/
+          Copy-Item -Path "GUI/PyQt/Recordings" -Destination release/ -Recurse
+          Copy-Item -Path "GUI/PyQt/Neurons" -Destination release/ -Recurse
+          Copy-Item -Path "GUI/PyQt/Stimuli" -Destination release/ -Recurse
+
+          # Ensure output folder exists
+          New-Item -ItemType Directory -Force -Path "GUI\Windows"
+
+          # Compress all contents of release folder
+          Compress-Archive -Path release\* -DestinationPath "GUI\Windows\$zipName" -Force
+
+          # Optional cleanup
+          Remove-Item -Recurse -Force release
 
       - name: Upload Windows artifact to release
         uses: softprops/action-gh-release@v1
