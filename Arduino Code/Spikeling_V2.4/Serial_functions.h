@@ -225,6 +225,11 @@ void LED_off(){
 }
 
 
+void Connected(){
+  Mode_opening();
+}
+
+
 void SerialFunctions(){
   SCmd.addCommand("NEU",NeuronMode);
   SCmd.addCommand("FR1",StimFre_on);
@@ -256,4 +261,5 @@ void SerialFunctions(){
   SCmd.addCommand("BZ0",Buzzer_off);
   SCmd.addCommand("LED1",LED_on);
   SCmd.addCommand("LED0",LED_off);
+  SCmd.addCommand("CON",Connected);
 }
