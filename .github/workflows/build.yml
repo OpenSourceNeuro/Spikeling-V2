@@ -36,8 +36,8 @@ jobs:
 
       - name: Package macOS build
         run: |
-          $version = "${{ github.ref_name }}"
-          $zipName = "Spikeling-$version-macOS.zip"
+          version=${GITHUB_REF_NAME}
+          zipName="Spikeling-${version}-macOS.zip"
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
@@ -47,15 +47,18 @@ jobs:
           zip -r "$zipName" release/*
           mkdir -p GUI/macOS
           mv "$zipName" GUI/macOS/
-          Remove-Item -Recurse -Force release
+          rm -rf release
 
-      - name: Upload macOS artifact
+      - name: Upload macOS artifact to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           files: GUI/macOS/Spikeling-${{ github.ref_name }}-macOS.zip
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: Cleanup
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__
 
   build-linux:
     name: Build on Linux
@@ -88,26 +91,29 @@ jobs:
 
       - name: Package Linux build
         run: |
-          VERSION=${GITHUB_REF_NAME}
-          ZIP_NAME=Spikeling-${VERSION}-Linux.zip
+          version=${GITHUB_REF_NAME}
+          zipName="Spikeling-${version}-Linux.zip"
           mkdir -p release
           cp GUI/PyQt/dist/Spikeling release/
           chmod +x release/Spikeling
           cp -r GUI/PyQt/Recordings release/
           cp -r GUI/PyQt/Neurons release/
           cp -r GUI/PyQt/Stimuli release/
-          zip -r "$ZIP_NAME" release/*
+          zip -r "$zipName" release/*
           mkdir -p GUI/Linux
-          mv "$ZIP_NAME" GUI/Linux/
+          mv "$zipName" GUI/Linux/
           rm -rf release
 
-      - name: Upload Linux artifact
+      - name: Upload Linux artifact to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           files: GUI/Linux/Spikeling-${{ github.ref_name }}-Linux.zip
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: Cleanup
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__
 
   build-windows:
     name: Build on Windows
@@ -144,26 +150,24 @@ jobs:
           $version = "${{ github.ref_name }}"
           $zipName = "Spikeling-$version-Windows.zip"
 
-          # Prepare release folder
           New-Item -ItemType Directory -Force -Path release
           Copy-Item -Path "GUI/PyQt/dist/Spikeling.exe" -Destination release/
           Copy-Item -Path "GUI/PyQt/Recordings" -Destination release/ -Recurse
           Copy-Item -Path "GUI/PyQt/Neurons" -Destination release/ -Recurse
           Copy-Item -Path "GUI/PyQt/Stimuli" -Destination release/ -Recurse
 
-          # Ensure output folder exists
           New-Item -ItemType Directory -Force -Path "GUI\Windows"
+          Compress-Archive -Path "release\*" -DestinationPath "GUI\Windows\$zipName" -Force
 
-          # Compress all contents in release folder at once
-          Compress-Archive -Path release\* -DestinationPath "GUI\Windows\$zipName" -Force
-
-          # Cleanup temporary release folder
           Remove-Item -Recurse -Force release
 
-      - name: Upload Windows artifact
+      - name: Upload Windows artifact to release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref_name }}
           files: GUI/Windows/Spikeling-${{ github.ref_name }}-Windows.zip
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: Cleanup
+        run: rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__
