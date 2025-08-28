@@ -5,6 +5,11 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write   # allow pushing artifacts to repo
+  packages: write
+  actions: write
+
 jobs:
   build-macos:
     name: Build on macOS
@@ -27,17 +32,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir PySide6==6.9.2 pyinstaller==6.15
           pip install --no-cache-dir numpy==2.3.2 scipy==1.16.1 pandas==2.3.2 pyqtgraph==0.13.7 pyserial==3.5
-
-      - name: Debug macOS specifics
-        run: |
-          echo "=== PySide6 plugin path ==="
-          python -c "from PySide6 import QtCore; print(QtCore.QLibraryInfo.location(QtCore.QLibraryInfo.PluginsPath))"
-
-          echo "=== Contents of GUI/PyQt ==="
-          ls -lah GUI/PyQt
-
-          echo "=== .icns file info ==="
-          ls -lh GUI/PyQt/Spikeling.icns || true
 
       - name: Select .spec file
         run: |
@@ -62,36 +56,33 @@ jobs:
           VERSION=${GITHUB_REF_NAME}
           ZIP_NAME=Spikeling-${VERSION}-${OS_NAME}.zip
 
-          mkdir -p Spikeling
+          mkdir -p release
 
-          # Copy executable
-          cp GUI/PyQt/dist/Spikeling Spikeling/
-          chmod +x Spikeling/Spikeling
+          cp GUI/PyQt/dist/Spikeling release/
+          chmod +x release/Spikeling
 
-          # Copy extra folders if they exist
-          for dir in Recordings Neurons Stimuli; do
-            if [ -d "GUI/PyQt/$dir" ]; then
-              cp -r "GUI/PyQt/$dir" Spikeling/
-            else
-              echo "Skipping missing folder: $dir"
-            fi
-          done
+          cp -r GUI/PyQt/Recordings release/
+          cp -r GUI/PyQt/Neurons release/
+          cp -r GUI/PyQt/Stimuli release/
 
-          # Ensure OS-specific folder exists
           mkdir -p GUI/${OS_NAME}
+          rm -f GUI/${OS_NAME}/*.zip   # delete ALL previous zips
 
-          # Remove any old zip with same name
-          rm -f GUI/${OS_NAME}/${ZIP_NAME}
+          zip -r "$ZIP_NAME" release/*
+          mv "$ZIP_NAME" GUI/${OS_NAME}/
 
-          # Create zip directly inside GUI/${OS_NAME}
-          (cd Spikeling && zip -r ../GUI/${OS_NAME}/${ZIP_NAME} .)
+          echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
 
-      - name: Cleanup intermediate folders
+      - name: Commit zip to repository
         run: |
-          rm -rf GUI/PyQt/build GUI/PyQt/dist GUI/PyQt/__pycache__ Spikeling
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add GUI/${OS_NAME}/Spikeling-*.zip
+          git commit -m "Add macOS build artifact for ${GITHUB_REF_NAME}" || echo "No changes to commit"
+          git push
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
         with:
-          name: Spikeling-macos
-          path: GUI/${{ env.OS_NAME }}/*.zip
+          tag_name: ${{ github.ref_name }}
+          files: GUI/${{ env.OS_NAME }}/${{ env.ZIP_NAME }}
