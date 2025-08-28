@@ -18,20 +18,34 @@ hidden_imports = [
 ]
 
 a = Analysis(
-    ['GUI/PyQt/main.py'],   # fixed path
-    pathex=[os.path.abspath('.')],
+    [os.path.join(os.path.dirname(__file__), 'main.py')],
+    pathex=[os.path.abspath(os.path.dirname(__file__))],  # project path = folder of spec
     binaries=[],
-    datas=qt_plugins,
+    datas=[('Spikeling.icns', '.')] + qt_plugins,  # macOS one still keeps the .icns
     hiddenimports=hidden_imports,
     hookspath=[],
     runtime_hooks=[],
     excludes=[
-        'PySide6.QtQml', 'PySide6.QtQuick', 'PySide6.QtQuickControls2',
-        'PySide6.QtQmlModels', 'PySide6.QtWebEngine', 'PySide6.QtWebEngineCore',
-        'PySide6.QtWebEngineWidgets', 'PySide6.QtBluetooth', 'PySide6.QtLocation',
-        'PySide6.QtPositioning', 'PySide6.QtMultimedia', 'PySide6.QtMultimediaWidgets',
-        'PySide6.QtSensors', 'PySide6.QtSql', 'PySide6.QtSvg', 'PySide6.QtUiTools',
-        'PySide6.QtWebSockets', 'PySide6.QtXml', 'PySide6.QtXmlPatterns', 'PySide6.QtTest'
+        'PySide6.QtQml',
+        'PySide6.QtQuick',
+        'PySide6.QtQuickControls2',
+        'PySide6.QtQmlModels',
+        'PySide6.QtWebEngine',
+        'PySide6.QtWebEngineCore',
+        'PySide6.QtWebEngineWidgets',
+        'PySide6.QtBluetooth',
+        'PySide6.QtLocation',
+        'PySide6.QtPositioning',
+        'PySide6.QtMultimedia',
+        'PySide6.QtMultimediaWidgets',
+        'PySide6.QtSensors',
+        'PySide6.QtSql',
+        'PySide6.QtSvg',
+        'PySide6.QtUiTools',
+        'PySide6.QtWebSockets',
+        'PySide6.QtXml',
+        'PySide6.QtXmlPatterns',
+        'PySide6.QtTest'
     ],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
