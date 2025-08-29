@@ -45,7 +45,7 @@ def EmulatorPlot(self):
         self.ui.EmulatorConnectedFlag = False
 
     def UpdatePlot(self):
-        self.ui.Emulator_Oscilloscope_widget.getViewBox().sigResized.connect(UpdateViews(self))
+        self.ui.Emulator_Oscilloscope_widget.getViewBox().sigResized.connect(lambda: UpdateViews(self))
         self.ui.Emulator_Data = GetData(self)
         BuffData(self)                              # Append latest serial data into buffer deque
         SavePlotData(self)                          # Create data array to be exported in .csv
@@ -687,5 +687,3 @@ def SetPlot(self):
 def UpdateViews(self):
     self.Emulator_CurrentPlots.setGeometry(self.ui.Emulator_Oscilloscope_widget.getViewBox().sceneBoundingRect())
     self.Emulator_CurrentPlots.linkedViewChanged(self.ui.Emulator_Oscilloscope_widget.getViewBox(), self.Emulator_CurrentPlots.XAxis)
-
-

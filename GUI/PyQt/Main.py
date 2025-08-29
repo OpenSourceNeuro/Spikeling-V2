@@ -107,6 +107,7 @@ class MainWindow(QMainWindow):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
+
         # Define Maximise/Restore function
         def maximise_restore(self):
             global GlobalState
@@ -213,4 +214,3 @@ if __name__ == "__main__":
     app.setWindowIcon(QIcon("Spikeling.ico"))
     window = SplashScreen()
     sys.exit(app.exec())
-

@@ -9,7 +9,9 @@ from PySide6.QtSerialPort import QSerialPortInfo
 
 from Neuron_Parameters import Ui_AdvancedParameters
 import Page000, Page101, Page102, Page103, Page201, Page202, Page203, Page204, Page301, Page401, Page501, Page502, Page503, Page504, Page505, Page601, Page701, Page801, Page901
-import Spikeling_graph, Emulator_graph, Imaging_graph, MultipleImaging_graph
+import Emulator_graph, Imaging_graph, MultipleImaging_graph
+from Spikeling_graph import SpikelingGraph
+from serial_manager import serial_manager
 
 
 ########################################################################
@@ -228,8 +230,11 @@ def Buttons(self):
         # COM port connections
         self.ui.Spikeling_SelectPortComboBox.currentIndexChanged.connect(lambda: Page101.Spikeling.ChangePort(self))
 
-        # Start reading serial when connect button is clicked and plot the reading on the oscilloscope
-        self.ui.Spikeling_ConnectButton.clicked.connect(lambda: Spikeling_graph.SpikelingPlot(self))
+        # Create an instance of SpikelingGraph
+        self.spikeling_graph = SpikelingGraph(self)
+
+        # Connect the button to the instance method
+        self.ui.Spikeling_ConnectButton.clicked.connect(self.spikeling_graph.spikeling_plot)
 
         # Load previously conceived neurons
         self.ui.Spikeling_NeuronBrowsePushButton.clicked.connect(lambda: Page101.Spikeling.BrowseNeuron(self))
@@ -697,6 +702,3 @@ def Buttons(self):
         self.ui.GitHubMenu_pushButton.clicked.connect(lambda: Page901.ShowPage(self))
 
         ########################################################################
-
-
-
